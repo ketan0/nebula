@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-15 Thu 22:29 -->
+<!-- 2021-04-16 Fri 00:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hello</title>
@@ -219,6 +219,41 @@
 <body>
 <div id="content">
 <h1 class="title">Hello</h1>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<svg></svg>
+<script>
+var svg = d3.select("svg").attr("width",960).style("height",600);
+
+
+var mycircle = svg.append("circle")
+	.attr("cx",100)
+	.attr("cy",100)
+	.style("fill","blue")
+	.attr("r",20)
+
+mycircle  // wait 2 seconds, then slowly change the circle's properties
+	.transition()
+	.duration(3000)
+	.delay(2000)
+	.attr("cx",600)
+	.attr("cy",150)
+	.style("fill","orange")
+	.attr("r",50);
+
+mycircle  // click the circle to set it properties at random
+	.on("click",function(){
+		d3.select(this)
+			.transition()
+			.duration(3000)
+			.attr("cx",Math.random()*700)
+			.attr("cy",Math.random()*300)
+			.style("fill",d3.rgb( Math.random()*255,Math.random()*255,Math.random()*255 ))
+			.attr("r",Math.random()*100);
+	});
+
+
+</script>
+
 <p>
 Welcome to my digital garden! 🌱
 </p>
@@ -229,7 +264,7 @@ You can see what I&rsquo;m thinking about in my <a href="starting_points.html">s
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ketan Agrawal</p>
-<p class="date">Created: 2021-04-15 Thu 22:29</p>
+<p class="date">Created: 2021-04-16 Fri 00:23</p>
 </div>
 </body>
 </html>
