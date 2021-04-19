@@ -2,7 +2,7 @@
          (org-roam-db-location . "./org-roam.db")))
  ;; TODO: move these to a publishing script with org-publish
  (org-mode . ((org-html-link-home . "https://garden.ketan.me/")
-              (org-html-preamble . "<h2>Ketan's Digital Laboratory</h2>")
+              (org-html-preamble . "<h2>Ketan's Digital Garden</h2>")
               (org-export-with-toc . nil)
               (org-export-with-section-numbers . nil)
               (org-export-preserve-breaks . t)
