@@ -2,8 +2,8 @@
 
 Go back to [[file:index.org][hello]] page
 
-- [[file:frames.org][frames]]
-- [[file:current.org][current things i'm doing]]
+- frames
+- current things I'm doing
 - Emacs
 - the structure of knowledge
 - consciousness
