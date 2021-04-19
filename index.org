@@ -19,4 +19,4 @@ plant  // click the circle to set it properties at random
 
 Welcome to my digital garden!
 
-You can see what I'm thinking about in my [[file:starting_points.org][starting points]] file.
+You can see what I'm thinking about on my [[file:starting_points.org][starting points]] page.
