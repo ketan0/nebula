@@ -1,0 +1,9 @@
+#+TITLE: starting points
+
+Go back to [[file:index.org][hello]] page
+
+- [[file:frames.org][frames]]
+- [[file:current.org][current things i'm doing]]
+- Emacs
+- the structure of knowledge
+- consciousness

@@ -1,0 +1,15 @@
+#+TITLE: decomposition
+
+Put one piece together, and then you have a building block. 
+
+Metacommentary on decomposition with org headings.
+
+I really want some visuals here...
+
+a good [[file:frames.org][frame]], if I've ever seen one
+
+* Examples
+** Body decomposes into organs. 
+* Counterexamples
+** Brain doesn't easily decompose into neatly packaged functions
+A lot of things depend circularly on each other, I think.

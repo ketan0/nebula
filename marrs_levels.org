@@ -1,0 +1,14 @@
+#+TITLE: Marr's Levels
+
+Stole this frame from various classes, most notably PSYCH 50: Cognitive Neuroscience neuroscience.
+
+* Computational
+  What is the goal?
+* Algorithmic
+  What are the representations/[[file:frames.org][frames]]/ways of thinking/procedures?
+Right now, I'm kind of using this as like the "middleware" between goals and concrete realizations. They are sort of the idea playground, the habit loops, the states of mind, etc.
+* Implementation
+  What are the physical mechanisms that bring about these changes? What are the [[file:current.org][current things I'm doing]]?
+  See: , [[file:frames.org][frames]]
+
+I feel like Input systems in the brain ascend Marr's Levels (from physical reality => representations => meaning / goal of perceiving), whereas Output (motor) systems descend them (prefrontal decides a lofty goal, and that gets translated into concrete movement/reality.)
