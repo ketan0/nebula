@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-19 Mon 11:42 -->
+<!-- 2021-04-19 Mon 15:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Marr&rsquo;s Levels</title>
+<title>Something</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Ketan Agrawal" />
 <style type="text/css">
@@ -193,7 +193,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel="stylesheet" type="text/css" href="styles.css" />
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
@@ -221,47 +220,143 @@
 <div id="org-div-home-and-up">
  <a accesskey="h" href=""> UP </a>
  |
- <a accesskey="H" href="/index.html"> HOME </a>
-</div><div id="content">
-<h1 class="title">Marr&rsquo;s Levels</h1>
-<p>
-Stole this frame from various classes, most notably PSYCH 50: Cognitive Neuroscience neuroscience.<br />
-</p>
+ <a accesskey="H" href="https://garden.ketan.me/"> HOME </a>
+</div><div id="preamble" class="status">
+<h2>Ketan's Digital Garden</h2>
+</div>
+<div id="content">
+<h1 class="title">Something</h1>
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
 
-<div id="outline-container-orgbb867fe" class="outline-2">
-<h2 id="orgbb867fe">Computational</h2>
-<div class="outline-text-2" id="text-orgbb867fe">
-<p>
-What is the goal?<br />
-</p>
-</div>
-</div>
-<div id="outline-container-orgcd9e6c4" class="outline-2">
-<h2 id="orgcd9e6c4">Algorithmic</h2>
-<div class="outline-text-2" id="text-orgcd9e6c4">
-<p>
-  What are the representations/<a href="frames.html">frames</a>/ways of thinking/procedures?<br />
-Right now, I&rsquo;m kind of using this as like the &ldquo;middleware&rdquo; between goals and concrete realizations. They are sort of the idea playground, the habit loops, the states of mind, etc.<br />
-</p>
-</div>
-</div>
-<div id="outline-container-org421fee8" class="outline-2">
-<h2 id="org421fee8">Implementation</h2>
-<div class="outline-text-2" id="text-org421fee8">
-<p>
-What are the physical mechanisms that bring about these changes? What are the <a href="current.html">current things I&rsquo;m doing</a>?<br />
-See: , <a href="frames.html">frames</a><br />
-</p>
+.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
 
-<p>
-I feel like Input systems in the brain ascend Marr&rsquo;s Levels (from physical reality =&gt; representations =&gt; meaning / goal of perceiving), whereas Output (motor) systems descend them (prefrontal decides a lofty goal, and that gets translated into concrete movement/reality.)<br />
-</p>
-</div>
-</div>
+.node circle {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
+var links = [
+  {source: "Microsoft", target: "Amazon", type: "licensing"},
+  {source: "Microsoft", target: "HTC", type: "licensing"},
+  {source: "Samsung", target: "Apple", type: "suit"},
+  {source: "Motorola", target: "Apple", type: "suit"},
+  {source: "Nokia", target: "Apple", type: "resolved"},
+  {source: "HTC", target: "Apple", type: "suit"},
+  {source: "Kodak", target: "Apple", type: "suit"},
+  {source: "Microsoft", target: "Barnes & Noble", type: "suit"},
+  {source: "Microsoft", target: "Foxconn", type: "suit"},
+  {source: "Oracle", target: "Google", type: "suit"},
+  {source: "Apple", target: "HTC", type: "suit"},
+  {source: "Microsoft", target: "Inventec", type: "suit"},
+  {source: "Samsung", target: "Kodak", type: "resolved"},
+  {source: "LG", target: "Kodak", type: "resolved"},
+  {source: "RIM", target: "Kodak", type: "suit"},
+  {source: "Sony", target: "LG", type: "suit"},
+  {source: "Kodak", target: "LG", type: "resolved"},
+  {source: "Apple", target: "Nokia", type: "resolved"},
+  {source: "Qualcomm", target: "Nokia", type: "resolved"},
+  {source: "Apple", target: "Motorola", type: "suit"},
+  {source: "Microsoft", target: "Motorola", type: "suit"},
+  {source: "Motorola", target: "Microsoft", type: "suit"},
+  {source: "Huawei", target: "ZTE", type: "suit"},
+  {source: "Ericsson", target: "ZTE", type: "suit"},
+  {source: "Kodak", target: "Samsung", type: "resolved"},
+  {source: "Apple", target: "Samsung", type: "suit"},
+  {source: "Kodak", target: "RIM", type: "suit"},
+  {source: "Nokia", target: "Qualcomm", type: "suit"}
+];
+
+var nodes = {};
+
+// Compute the distinct nodes from the links.
+links.forEach(function(link) {
+  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
+});
+
+var width = 960,
+    height = 500;
+
+var force = d3.layout.force()
+    .nodes(d3.values(nodes))
+    .links(links)
+    .size([width, height])
+    .linkDistance(60)
+    .charge(-300)
+    .on("tick", tick)
+    .start();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var link = svg.selectAll(".link")
+    .data(force.links())
+  .enter().append("line")
+    .attr("class", "link");
+
+var node = svg.selectAll(".node")
+    .data(force.nodes())
+  .enter().append("g")
+    .attr("class", "node")
+    .on("mouseover", mouseover)
+    .on("mouseout", mouseout)
+    .call(force.drag);
+
+node.append("circle")
+    .attr("r", 8);
+
+node.append("text")
+    .attr("x", 12)
+    .attr("dy", ".35em")
+    .text(function(d) { return d.name; });
+
+function tick() {
+  link
+      .attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
+
+  node
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+}
+
+function mouseover() {
+  d3.select(this).select("circle").transition()
+      .duration(750)
+      .attr("r", 16);
+}
+
+function mouseout() {
+  d3.select(this).select("circle").transition()
+      .duration(750)
+      .attr("r", 8);
+}
+
+</script>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ketan Agrawal</p>
-<p class="date">Created: 2021-04-19 Mon 11:42</p>
+<p class="date">Created: 2021-04-19 Mon 15:00</p>
 </div>
 </body>
 </html>

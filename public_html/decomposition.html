@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-19 Mon 10:44 -->
+<!-- 2021-04-19 Mon 15:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Something</title>
+<title>decomposition</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Ketan Agrawal" />
 <style type="text/css">
@@ -193,7 +193,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel="stylesheet" type="text/css" href="styles.css" />
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
@@ -221,140 +220,70 @@
 <div id="org-div-home-and-up">
  <a accesskey="h" href=""> UP </a>
  |
- <a accesskey="H" href="/index.html"> HOME </a>
-</div><div id="content">
-<h1 class="title">Something</h1>
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+ <a accesskey="H" href="https://garden.ketan.me/"> HOME </a>
+</div><div id="preamble" class="status">
+<h2>Ketan's Digital Garden</h2>
+</div>
+<div id="content">
+<h1 class="title">decomposition</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orga7fd881">Examples</a>
+<ul>
+<li><a href="#org13f68d8">Body decomposes into organs.</a></li>
+</ul>
+</li>
+<li><a href="#org4058138">Counterexamples</a>
+<ul>
+<li><a href="#org586bb72">Brain doesn&rsquo;t easily decompose into neatly packaged functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+Put one piece together, and then you have a building block.<br />
+</p>
 
-.link {
-  fill: none;
-  stroke: #666;
-  stroke-width: 1.5px;
-}
+<p>
+Metacommentary on decomposition with org headings.<br />
+</p>
 
-.node circle {
-  fill: #ccc;
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
+<p>
+I really want some visuals here&#x2026;<br />
+</p>
 
-text {
-  font: 10px sans-serif;
-  pointer-events: none;
-}
+<p>
+a good <a href="frames.html">frame</a>, if I&rsquo;ve ever seen one<br />
+</p>
 
-</style>
-<body>
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script>
-
-// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
-var links = [
-  {source: "Microsoft", target: "Amazon", type: "licensing"},
-  {source: "Microsoft", target: "HTC", type: "licensing"},
-  {source: "Samsung", target: "Apple", type: "suit"},
-  {source: "Motorola", target: "Apple", type: "suit"},
-  {source: "Nokia", target: "Apple", type: "resolved"},
-  {source: "HTC", target: "Apple", type: "suit"},
-  {source: "Kodak", target: "Apple", type: "suit"},
-  {source: "Microsoft", target: "Barnes & Noble", type: "suit"},
-  {source: "Microsoft", target: "Foxconn", type: "suit"},
-  {source: "Oracle", target: "Google", type: "suit"},
-  {source: "Apple", target: "HTC", type: "suit"},
-  {source: "Microsoft", target: "Inventec", type: "suit"},
-  {source: "Samsung", target: "Kodak", type: "resolved"},
-  {source: "LG", target: "Kodak", type: "resolved"},
-  {source: "RIM", target: "Kodak", type: "suit"},
-  {source: "Sony", target: "LG", type: "suit"},
-  {source: "Kodak", target: "LG", type: "resolved"},
-  {source: "Apple", target: "Nokia", type: "resolved"},
-  {source: "Qualcomm", target: "Nokia", type: "resolved"},
-  {source: "Apple", target: "Motorola", type: "suit"},
-  {source: "Microsoft", target: "Motorola", type: "suit"},
-  {source: "Motorola", target: "Microsoft", type: "suit"},
-  {source: "Huawei", target: "ZTE", type: "suit"},
-  {source: "Ericsson", target: "ZTE", type: "suit"},
-  {source: "Kodak", target: "Samsung", type: "resolved"},
-  {source: "Apple", target: "Samsung", type: "suit"},
-  {source: "Kodak", target: "RIM", type: "suit"},
-  {source: "Nokia", target: "Qualcomm", type: "suit"}
-];
-
-var nodes = {};
-
-// Compute the distinct nodes from the links.
-links.forEach(function(link) {
-  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
-  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
-});
-
-var width = 960,
-    height = 500;
-
-var force = d3.layout.force()
-    .nodes(d3.values(nodes))
-    .links(links)
-    .size([width, height])
-    .linkDistance(60)
-    .charge(-300)
-    .on("tick", tick)
-    .start();
-
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-var link = svg.selectAll(".link")
-    .data(force.links())
-  .enter().append("line")
-    .attr("class", "link");
-
-var node = svg.selectAll(".node")
-    .data(force.nodes())
-  .enter().append("g")
-    .attr("class", "node")
-    .on("mouseover", mouseover)
-    .on("mouseout", mouseout)
-    .call(force.drag);
-
-node.append("circle")
-    .attr("r", 8);
-
-node.append("text")
-    .attr("x", 12)
-    .attr("dy", ".35em")
-    .text(function(d) { return d.name; });
-
-function tick() {
-  link
-      .attr("x1", function(d) { return d.source.x; })
-      .attr("y1", function(d) { return d.source.y; })
-      .attr("x2", function(d) { return d.target.x; })
-      .attr("y2", function(d) { return d.target.y; });
-
-  node
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-}
-
-function mouseover() {
-  d3.select(this).select("circle").transition()
-      .duration(750)
-      .attr("r", 16);
-}
-
-function mouseout() {
-  d3.select(this).select("circle").transition()
-      .duration(750)
-      .attr("r", 8);
-}
-
-</script>
+<div id="outline-container-orga7fd881" class="outline-2">
+<h2 id="orga7fd881">Examples</h2>
+<div class="outline-text-2" id="text-orga7fd881">
+</div>
+<div id="outline-container-org13f68d8" class="outline-3">
+<h3 id="org13f68d8">Body decomposes into organs.</h3>
+</div>
+</div>
+<div id="outline-container-org4058138" class="outline-2">
+<h2 id="org4058138">Counterexamples</h2>
+<div class="outline-text-2" id="text-org4058138">
+</div>
+<div id="outline-container-org586bb72" class="outline-3">
+<h3 id="org586bb72">Brain doesn&rsquo;t easily decompose into neatly packaged functions</h3>
+<div class="outline-text-3" id="text-org586bb72">
+<p>
+A lot of things depend circularly on each other, I think.<br />
+</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ketan Agrawal</p>
-<p class="date">Created: 2021-04-19 Mon 10:44</p>
+<p class="date">Created: 2021-04-19 Mon 15:01</p>
 </div>
 </body>
 </html>
