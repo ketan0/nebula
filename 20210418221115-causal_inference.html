@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-18 Sun 22:14 -->
+<!-- 2021-04-19 Mon 11:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>causal inference</title>
@@ -240,33 +240,40 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href=""> UP </a>
+ |
+ <a accesskey="H" href="https://garden.ketan.me/"> HOME </a>
+</div><div id="preamble" class="status">
+<h3>Ketan's Digital Laboratory</h3>
+</div>
 <div id="content">
 <h1 class="title">causal inference</h1>
 <p>
-So I read the <a href="https://causalai.net/r60.pdf">On Pearl’s Hierarchy and the Foundations of Causal Inference</a> more deeply, and I think I get the mathematics of it now.
-So L1, L2, and L3 represent observational, interventional, and counterfactual layers, respectively.
-L2 inference requires more model specification than L1, and L3 requires more than L2.
+So I read the <a href="https://causalai.net/r60.pdf">On Pearl’s Hierarchy and the Foundations of Causal Inference</a> more deeply, and I think I get the mathematics of it now.<br />
+So L1, L2, and L3 represent observational, interventional, and counterfactual layers, respectively.<br />
+L2 inference requires more model specification than L1, and L3 requires more than L2.<br />
 </p>
 
 <p>
-\(\mathcal{L}_1\) supports terms like \(P(\mathbf{Y}=\mathbf{y})\)
-\(\mathcal{L}_2\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y})\)
-\(\mathcal{L}_3\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})\)
+\(\mathcal{L}_1\) supports terms like \(P(\mathbf{Y}=\mathbf{y})\)<br />
+\(\mathcal{L}_2\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y})\)<br />
+\(\mathcal{L}_3\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})\)<br />
 </p>
 
 <p>
-In other words,
+In other words,<br />
 </p>
 
 <p>
-\(\mathcal{L}_1\) supports no intervention (or the empty intervention, I guess.)
-\(\mathcal{L}_2\) supports only one intervention.
-\(\mathcal{L}_3\) supports multiple (potentially) inconsistent interventions.
+\(\mathcal{L}_1\) supports no intervention (or the empty intervention, I guess.)<br />
+\(\mathcal{L}_2\) supports only one intervention.<br />
+\(\mathcal{L}_3\) supports multiple (potentially) inconsistent interventions.<br />
 </p>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ketan Agrawal</p>
-<p class="date">Created: 2021-04-18 Sun 22:14</p>
+<p class="date">Created: 2021-04-19 Mon 11:11</p>
 </div>
 </body>
 </html>
