@@ -6,7 +6,7 @@
 <!-- 2021-04-18 Sun 22:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello</title>
+<title>causal inference</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Ketan Agrawal" />
 <style type="text/css">
@@ -216,51 +216,52 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">Hello</h1>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<svg></svg>
-<script>
-var svg = d3.select("svg").attr("width",960).style("height",600);
-
-
-var mycircle = svg.append("circle")
-	.attr("cx",100)
-	.attr("cy",100)
-	.style("fill","blue")
-	.attr("r",20)
-
-mycircle  // wait 2 seconds, then slowly change the circle's properties
-	.transition()
-	.duration(3000)
-	.delay(2000)
-	.attr("cx",600)
-	.attr("cy",150)
-	.style("fill","orange")
-	.attr("r",50);
-
-mycircle  // click the circle to set it properties at random
-	.on("click",function(){
-		d3.select(this)
-			.transition()
-			.duration(3000)
-			.attr("cx",Math.random()*700)
-			.attr("cy",Math.random()*300)
-			.style("fill",d3.rgb( Math.random()*255,Math.random()*255,Math.random()*255 ))
-			.attr("r",Math.random()*100);
-	});
-
-
-</script>
-
+<h1 class="title">causal inference</h1>
 <p>
-Welcome to my digital garden! 🌱
+So I read the <a href="file:///Users/ketanagrawal/Dropbox/Apps/GoodNotes 5/GoodNotes/HCI/On Pearl’s Hierarchy and the Foundations of Causal Inference.pdf#page=nil">On Pearl’s Hierarchy and the Foundations of Causal Inference</a> more deeply, and I think I get the mathematics of it now.
+So L1, L2, and L3 represent observational, interventional, and counterfactual layers, respectively.
+L2 inference requires more model specification than L1, and L3 requires more than L2.
 </p>
 
 <p>
-You can see what I&rsquo;m thinking about in my <a href="starting_points.html">starting points</a> file.
+\(\mathcal{L}_1\) supports terms like \(P(\mathbf{Y}=\mathbf{y})\)
+\(\mathcal{L}_2\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y})\)
+\(\mathcal{L}_3\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})\)
+</p>
+
+<p>
+In other words,
+</p>
+
+<p>
+\(\mathcal{L}_1\) supports no intervention (or the empty intervention, I guess.)
+\(\mathcal{L}_2\) supports only one intervention.
+\(\mathcal{L}_3\) supports multiple (potentially) inconsistent interventions.
 </p>
 </div>
 <div id="postamble" class="status">

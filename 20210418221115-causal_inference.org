@@ -1,0 +1,15 @@
+#+title: causal inference
+
+So I read the [[pdf:~/Dropbox/Apps/GoodNotes 5/GoodNotes/HCI/On Pearl’s Hierarchy and the Foundations of Causal Inference.pdf][On Pearl’s Hierarchy and the Foundations of Causal Inference]] more deeply, and I think I get the mathematics of it now.
+So L1, L2, and L3 represent observational, interventional, and counterfactual layers, respectively.
+L2 inference requires more model specification than L1, and L3 requires more than L2.
+
+$\mathcal{L}_1$ supports terms like $P(\mathbf{Y}=\mathbf{y})$
+$\mathcal{L}_2$ supports terms like $P(\mathbf{Y_x}=\mathbf{y})$
+$\mathcal{L}_3$ supports terms like $P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})$
+
+In other words,
+
+$\mathcal{L}_1$ supports no intervention (or the empty intervention, I guess.)
+$\mathcal{L}_2$ supports only one intervention.
+$\mathcal{L}_3$ supports multiple (potentially) inconsistent interventions.
