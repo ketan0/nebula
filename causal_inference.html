@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-19 Mon 15:01 -->
+<!-- 2021-04-19 Mon 15:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Marr&rsquo;s Levels</title>
+<title>causal inference</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Ketan Agrawal" />
 <style type="text/css">
@@ -193,6 +193,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
+<link rel="stylesheet" type="text/css" href="styles.css" />
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
@@ -215,6 +216,28 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -225,55 +248,32 @@
 <h2>Ketan's Digital Garden</h2>
 </div>
 <div id="content">
-<h1 class="title">Marr&rsquo;s Levels</h1>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org47a67be">Computational</a></li>
-<li><a href="#org9459997">Algorithmic</a></li>
-<li><a href="#org49be3d0">Implementation</a></li>
-</ul>
-</div>
-</div>
+<h1 class="title">causal inference</h1>
 <p>
-Stole this frame from various classes, most notably PSYCH 50: Cognitive Neuroscience neuroscience.<br />
-</p>
-
-<div id="outline-container-org47a67be" class="outline-2">
-<h2 id="org47a67be">Computational</h2>
-<div class="outline-text-2" id="text-org47a67be">
-<p>
-What is the goal?<br />
-</p>
-</div>
-</div>
-<div id="outline-container-org9459997" class="outline-2">
-<h2 id="org9459997">Algorithmic</h2>
-<div class="outline-text-2" id="text-org9459997">
-<p>
-  What are the representations/<a href="frames.html">frames</a>/ways of thinking/procedures?<br />
-Right now, I&rsquo;m kind of using this as like the &ldquo;middleware&rdquo; between goals and concrete realizations. They are sort of the idea playground, the habit loops, the states of mind, etc.<br />
-</p>
-</div>
-</div>
-<div id="outline-container-org49be3d0" class="outline-2">
-<h2 id="org49be3d0">Implementation</h2>
-<div class="outline-text-2" id="text-org49be3d0">
-<p>
-What are the physical mechanisms that bring about these changes? What are the <a href="current.html">current things I&rsquo;m doing</a>?<br />
-See: , <a href="frames.html">frames</a><br />
+So I read the <a href="https://causalai.net/r60.pdf">On Pearl’s Hierarchy and the Foundations of Causal Inference</a> more deeply, and I think I get the mathematics of it now.<br />
+So L1, L2, and L3 represent observational, interventional, and counterfactual layers, respectively.<br />
+L2 inference requires more model specification than L1, and L3 requires more than L2.<br />
 </p>
 
 <p>
-I feel like Input systems in the brain ascend Marr&rsquo;s Levels (from physical reality =&gt; representations =&gt; meaning / goal of perceiving), whereas Output (motor) systems descend them (prefrontal decides a lofty goal, and that gets translated into concrete movement/reality.)<br />
+\(\mathcal{L}_1\) supports terms like \(P(\mathbf{Y}=\mathbf{y})\)<br />
+\(\mathcal{L}_2\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y})\)<br />
+\(\mathcal{L}_3\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})\)<br />
 </p>
-</div>
-</div>
+
+<p>
+In other words,<br />
+</p>
+
+<p>
+\(\mathcal{L}_1\) supports no intervention (or the empty intervention, I guess.)<br />
+\(\mathcal{L}_2\) supports only one intervention.<br />
+\(\mathcal{L}_3\) supports multiple (potentially) inconsistent interventions.<br />
+</p>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ketan Agrawal</p>
-<p class="date">Created: 2021-04-19 Mon 15:01</p>
+<p class="date">Created: 2021-04-19 Mon 15:37</p>
 </div>
 </body>
 </html>
