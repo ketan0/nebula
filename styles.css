@@ -1,15 +1,15 @@
 @tailwind base;
 @tailwind components;
-@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', Georgia, serif;
+  font-family: 'Inter', Georgia, serif;
 }
 
 body {
+  background-color: #9EC5AB;
   font-family: Inter, system-ui, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 28px;
   margin: 0;
   padding: 0 8px;
