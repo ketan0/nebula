@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-19 Mon 15:39 -->
+<!-- 2021-04-21 Wed 09:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hello</title>
@@ -233,13 +233,14 @@
 </div>
 <script>
 var plant = d3.select("path");
-plant  // click the circle to set it properties at random
-	.on("mouseover",function(){
-		d3.select(this)
-			.transition()
-			.duration(2000)
-			.style("fill",d3.rgb( Math.random()*255,Math.random()*255,Math.random()*255 ))
-	});
+function repeat() {
+    plant
+    .transition()
+    .duration(3000)
+    .style("fill",d3.rgb( Math.random()*255,Math.random()*255,Math.random()*255 ))
+    .on("end", repeat);  // when the transition finishes start again
+};
+repeat();
 </script>
 
 <p>
@@ -252,7 +253,7 @@ You can see what I&rsquo;m thinking about on my <a href="starting_points.html">s
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ketan Agrawal</p>
-<p class="date">Created: 2021-04-19 Mon 15:39</p>
+<p class="date">Created: 2021-04-21 Wed 09:32</p>
 </div>
 </body>
 </html>
