@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-21 Wed 09:43 -->
+<!-- 2021-04-21 Wed 10:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hello</title>
@@ -229,18 +229,21 @@
 <h1 class="title">Hello</h1>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <div style="display: flex; align-items: center; justify-content: center;">
-<svg width="200" height="200" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="seedling" class="svg-inline--fa fa-seedling fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="rgba(68,136,49)" d="M64 96H0c0 123.7 100.3 224 224 224v144c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320C288 196.3 187.7 96 64 96zm384-64c-84.2 0-157.4 46.5-195.7 115.2 27.7 30.2 48.2 66.9 59 107.6C424 243.1 512 147.9 512 32h-64z"></path></svg>
+  <svg width="200" height="200" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="seedling" class="svg-inline--fa fa-seedling fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path fill="rgba(68,136,49)" d="M64 96H0c0 123.7 100.3 224 224 224v144c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320C288 196.3 187.7 96 64 96zm384-64c-84.2 0-157.4 46.5-195.7 115.2 27.7 30.2 48.2 66.9 59 107.6C424 243.1 512 147.9 512 32h-64z">
+    </path>
+  </svg>
 </div>
 <script>
-var plant = d3.select("path");
-function repeat() {
-    plant
-    .transition()
-    .duration(3000)
-    .style("fill",d3.rgb( Math.random()*255,Math.random()*255,Math.random()*255 ))
-    .on("end", repeat);  // when the transition finishes start again
-};
-repeat();
+  var plant = d3.select("path");
+  function repeat() {
+  plant
+  .transition()
+  .duration(3000)
+  .style("fill",d3.rgb( Math.random()*255,Math.random()*255,Math.random()*255 ))
+  .on("end", repeat);  // when the transition finishes start again
+  };
+  repeat();
 </script>
 
 <p>
@@ -253,7 +256,7 @@ You can see what I&rsquo;m thinking about on my <a href="starting_points.html">s
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ketan Agrawal</p>
-<p class="date">Created: 2021-04-21 Wed 09:43</p>
+<p class="date">Created: 2021-04-21 Wed 10:33</p>
 </div>
 </body>
 </html>
