@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Oswald&display=swap');
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-family: Oswald, Georgia, serif;
 }
 
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  max-width: 36rem;
+}
+
 body {
+  background-color: #fbfcdd;
   font-family: Lora, system-ui, sans-serif;
   font-size: 18px;
   line-height: 28px;
