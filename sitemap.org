@@ -1,4 +1,4 @@
-#+TITLE: Sitemap for project org
+#+TITLE: sitemap
 
 - [[file:index.org][Hello]]
 - [[file:sleep.org][sleep]]

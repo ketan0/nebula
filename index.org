@@ -24,3 +24,5 @@
 Welcome to my digital garden!
 
 You can see what I'm thinking about on my [[file:starting_points.org][starting points]] page.
+
+[[file:sitemap.org][sitemap]]
