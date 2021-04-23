@@ -1,6 +1,5 @@
 #+title: sleep
-
-Currently, I do /not/ sleep well 😞. I wake up many times during the night, my back is uncomfortable, and I'm often not calm by bedtime. So here I'm collecting some concrete steps to help me sleep better.
+Currently, I do /not/ sleep well 😞...I wake up many times during the night, my back is uncomfortable, and I'm often not calm by bedtime. So here I'm collecting some concrete actions to help me sleep better.
 
 * Principles
 ** Regularity
@@ -16,7 +15,7 @@ Currently, I do /not/ sleep well 😞. I wake up many times during the night, my
 ** Break out of Anxious Feedback Loops
 - Bedtime Ritual - Meditation / physical journal
 ** Good Sleep Conditions
-- window cracked open, less CO2
+- window cracked open, less CO_2
 - No clutter
 ** Sleep Posture
 - Sleep on Back: try methods that keep me from flipping during the night.
