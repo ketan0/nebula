@@ -5,8 +5,8 @@ Currently, I do /not/ sleep well 😞...I wake up many times during the night, m
 ** Regularity
 - No Naps
 - Bedtime Ritual - Meditation / physical journal
-- Wake time: 9-9:30
-- Earliest possible bedtime: 12
+- Earliest possible bedtime: 2
+- Wake time: 9
 
 ** Increase Sleep Drive
 - No Naps
@@ -20,3 +20,8 @@ Currently, I do /not/ sleep well 😞...I wake up many times during the night, m
 ** Sleep Posture
 - Sleep on Back: try methods that keep me from flipping during the night.
 - Sleep on Stomach: try pelvis/knee pillow
+* Sleep Log
+In order to quantitatively track my progress with sleep restriction, I'm keeping a sleep log that tracks my sleep efficiency, sleep/wake times, and general quality of sleep.
+| Date | T_{inbed}  | T_{asleep} | Bedtime | Wakeup | How I'm feeling                                                                                  |
+|------+------------+------------+---------+-------------+--------------------------------------------------------------------------------------------------|
+| 4/25 |            |            |         |             | Here's a whole long thing about how I'm feeling. I'm going to continue in this manner for a bit. |
