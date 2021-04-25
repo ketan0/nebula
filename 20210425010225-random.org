@@ -1,0 +1,21 @@
+#+title: random
+
+Here's some random python because I'm bored:
+#+begin_src python :results output
+for i in range(10):
+    print(f'hey, whats up {i}')
+#+end_src
+
+#+RESULTS:
+#+begin_example
+hey, whats up 0
+hey, whats up 1
+hey, whats up 2
+hey, whats up 3
+hey, whats up 4
+hey, whats up 5
+hey, whats up 6
+hey, whats up 7
+hey, whats up 8
+hey, whats up 9
+#+end_example
