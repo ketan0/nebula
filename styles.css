@@ -20,7 +20,11 @@ h1 {
 }
 
 #content > * {
-  max-width: 50rem;
+  max-width: 40rem;
+}
+
+div.outline-2 {
+  width: 100%;
 }
 
 body {
