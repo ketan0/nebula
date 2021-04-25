@@ -35,15 +35,15 @@ div.outline-2 h6 {
   width: 100%;
 }
 
+pre.src {
+  background-color: white;
+}
+
 /* Bunch code + result blocks together */
 /* Color result blocks light grey */
 div.org-src-container + pre.example {
   margin-top: -22px;
   background-color: #e3e3e3;
-}
-
-pre.src {
-  background-color: white;
 }
 
 

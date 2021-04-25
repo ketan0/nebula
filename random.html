@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-25 Sun 02:50 -->
+<!-- 2021-04-25 Sun 12:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>random</title>
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  /* pre.src:hover:before { display: inline;} */
+  pre.src:hover:before { display: inline;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -216,6 +216,28 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -238,11 +260,13 @@ And here&rsquo;s another paragraph!<br />
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #9d0006;">from</span> datetime <span style="color: #9d0006;">import</span> datetime
 <span style="color: #9d0006;">print</span>(datetime.now())
+<span style="color: #9d0006;">print</span>(<span style="color: #79740e;">'hello'</span>*<span style="color: #8f3f71; font-weight: bold;">100</span>)
 </pre>
 </div>
 
 <pre class="example">
-2021-04-25 02:01:35.622106
+2021-04-25 09:29:02.469199
+hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello
 </pre>
 
 
@@ -259,9 +283,83 @@ hi
 </pre>
 </div>
 </div>
+<div id="outline-container-org67482f6" class="outline-2">
+<h2 id="org67482f6">more</h2>
+<div class="outline-text-2" id="text-org67482f6">
+<p>
+\(x + 2\)<br />
+</p>
+
+<p>
+Random thought: I should write some python code to generate these squares.<br />
+🟧🟧🟧🟧🟧🟧🟧🟧🟩🟩🟩🟩🟩<br />
+🟧🟧🟧🟧🟧🟧🟧🟧🟩🟩🟩🟩🟩<br />
+🟧🟧🟧🟧🟧🟧🟧🟧🟩🟩🟩🟩🟩<br />
+🟧🟧🟧🟧🟧🟧🟧🟧🟩🟩🟩🟩🟩<br />
+🟧🟧🟧🟧🟧🟧🟧🟧🟩🟩🟩🟩🟩<br />
+🟧🟧🟧🟧🟧🟧🟧🟧🟥🟨🟦🟦🟦<br />
+🟧🟧🟧🟧🟧🟧🟧🟧🟪🟪🟦🟦🟦<br />
+🟧🟧🟧🟧🟧🟧🟧🟧🟪🟪🟦🟦🟦<br />
+</p>
+
+<p>
+&#x2026;lmao<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #9d0006;">import</span> numpy <span style="color: #9d0006;">as</span> np
+
+<span style="color: #9d0006;">def</span> <span style="color: #b57614;">fibonacci_squares_arr</span>(n):
+    <span style="color: #9d0006;">if</span> n &lt; <span style="color: #8f3f71; font-weight: bold;">0</span>:
+        <span style="color: #9d0006;">raise</span> <span style="color: #8f3f71;">Exception</span>(<span style="color: #79740e;">'nope.'</span>)
+    <span style="color: #9d0006;">if</span> n == <span style="color: #8f3f71; font-weight: bold;">0</span>:
+        <span style="color: #9d0006;">return</span> np.array([])
+    <span style="color: #9d0006;">if</span> n == <span style="color: #8f3f71; font-weight: bold;">1</span>:
+        <span style="color: #9d0006;">return</span> np.array([[n]])
+    <span style="color: #9d0006;">else</span>:
+        <span style="color: #076678;">old</span> = fibonacci_squares_arr(n - <span style="color: #8f3f71; font-weight: bold;">1</span>)
+        <span style="color: #076678;">side_len</span> = <span style="color: #af3a03;">max</span>(old.shape)
+        <span style="color: #076678;">nxt</span> = np.full((side_len, side_len), n)
+        <span style="color: #076678;">elems</span> = (old, nxt) <span style="color: #9d0006;">if</span> n // <span style="color: #8f3f71; font-weight: bold;">2</span> % <span style="color: #8f3f71; font-weight: bold;">2</span> == <span style="color: #8f3f71; font-weight: bold;">0</span> <span style="color: #9d0006;">else</span> (nxt, old)
+        <span style="color: #9d0006;">return</span> np.concatenate(elems, axis=<span style="color: #af3a03;">int</span>(n % <span style="color: #8f3f71; font-weight: bold;">2</span> == <span style="color: #8f3f71; font-weight: bold;">0</span>))
+
+<span style="color: #9d0006;">def</span> <span style="color: #b57614;">fibonacci_squares</span>(n):
+    <span style="color: #076678;">arr</span> = fibonacci_squares_arr(n)
+    <span style="color: #076678;">chars</span> = <span style="color: #af3a03;">list</span>(<span style="color: #79740e;">'&#128997;&#128998;&#128999;&#129000;&#129001;&#129002;&#129003;'</span>)
+    <span style="color: #076678;">fib_str</span> = <span style="color: #79740e;">'\n'</span>.join([<span style="color: #79740e;">''</span>.join([chars[(elem - <span style="color: #8f3f71; font-weight: bold;">1</span>) % <span style="color: #af3a03;">len</span>(chars)]
+                                  <span style="color: #9d0006;">for</span> elem <span style="color: #9d0006;">in</span> row]) <span style="color: #9d0006;">for</span> row <span style="color: #9d0006;">in</span> arr])
+    <span style="color: #9d0006;">return</span> fib_str
+<span style="color: #9d0006;">print</span>(fibonacci_squares(<span style="color: #8f3f71; font-weight: bold;">8</span>))
+</pre>
+</div>
+
+<pre class="example" id="org2817935">
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟧🟧🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟧🟧🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟦🟥🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+</pre>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
-<footer><p>Author: Ketan Agrawal</p><p>Last updated: 2021-04-25 Sun 02:50<p><footer>
+<footer><p>Author: Ketan Agrawal</p><p>Last updated: 2021-04-25 Sun 12:50<p><footer>
 </div>
 </body>
 </html>
