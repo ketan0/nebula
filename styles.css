@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Oswald&display=swap');
 
-h1 {
+.title {
   font-family: Oswald, Georgia, serif;
+  margin-bottom: 20px;
 }
 
 #content {
@@ -13,6 +14,7 @@ h1 {
 }
 
 #postamble {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,8 +25,13 @@ h1 {
   max-width: 40rem;
 }
 
-div.outline-2 {
+#content > p, div.outline-2 {
   width: 100%;
+}
+
+/* Bunch code + result blocks together */
+div.org-src-container + pre.example {
+  margin-top: 0px;
 }
 
 body {
