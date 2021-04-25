@@ -25,13 +25,31 @@
   max-width: 40rem;
 }
 
-#content > p, div.outline-2 {
+/* Stretch out text content so it aligns properly */
+#content p,
+div.outline-2 h2,
+div.outline-2 h3,
+div.outline-2 h4,
+div.outline-2 h5,
+div.outline-2 h6 {
   width: 100%;
 }
 
 /* Bunch code + result blocks together */
+/* Color result blocks light grey */
 div.org-src-container + pre.example {
-  margin-top: 0px;
+  margin-top: -22px;
+  background-color: #e3e3e3;
+}
+
+pre.src {
+  background-color: white;
+}
+
+
+/* Always display language of src block */
+pre.src:before {
+  display: inline;
 }
 
 body {
