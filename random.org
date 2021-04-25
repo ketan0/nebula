@@ -1,11 +1,18 @@
 #+title: random
 
 Here's some random python because I'm bored:
-#+begin_src python :results output :exports both
-print('hey')
-print('h')
-print('hellooooo')
+#+begin_src python :results output
+from datetime import datetime
+print(datetime.now())
 #+end_src
 
 #+RESULTS:
-: hey
+: 2021-04-25 02:01:35.622106
+
+And here's some elisp:
+#+begin_src emacs-lisp
+(message "hi")
+#+end_src
+
+#+RESULTS:
+: hi
