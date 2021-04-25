@@ -9,7 +9,7 @@ print(datetime.now())
 #+RESULTS:
 : 2021-04-25 02:01:35.622106
 
-And here's some elisp:
+And here's some elisp too:
 #+begin_src emacs-lisp
 (message "hi")
 #+end_src
