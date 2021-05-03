@@ -23,6 +23,14 @@ Currently, I do /not/ sleep well 😞...I wake up many times during the night, m
 - Sleep on Stomach: try pelvis/knee pillow
 * Sleep Log
 In order to quantitatively track my progress with sleep restriction, I'm keeping a sleep log that tracks my sleep efficiency, sleep/wake times, and general quality of sleep.
-| Date | T_{inbed}  | T_{asleep} | Bedtime | Wakeup | How I'm feeling                                                                                  |
-|------+------------+------------+---------+-------------+--------------------------------------------------------------------------------------------------|
-| 4/25 |            |            |         |             | Here's a whole long thing about how I'm feeling. I'm going to continue in this manner for a bit. |
+| Date | T_{inbed} | T_{asleep} | Bedtime | Wakeup | How I'm feeling                                                                                                                                                                         |
+|------+-----------+------------+---------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 4/25 |      5:50 |       5:20 |    3:10 |   9:00 | 6 - Surprisingly okay! Tired at wakeup, but run really invigorated me.                                                                                                                  |
+| 4/26 |      7:00 |       6:00 |    2:00 |   9:00 | 6 - but for different reasons than yesterday?? I guess I haven't exercised yet, that'll probably invigorate me.                                                                         |
+| 4/27 |      6:30 |       6:20 |    2:30 |   9:00 | 8 - actually felt rested for the first time in forever...                                                                                                                               |
+| 4/28 |      6:50 |       6:20 |    2:10 |   9:00 | 5 - Slept ok, not as good as last night.                                                                                                                                                |
+| 4/29 |      7:00 |       6:00 |    2:00 |   9:00 | 6 - Idk why I keep rating my sleep 6, but it felt like a 6 again.                                                                                                                       |
+| 4/30 |      7:00 |       6:30 |    2:00 |   9:00 | 6.5 - positive meh....                                                                                                                                                                  |
+| 5/1  |      7:00 |       6:00 |    2:00 |   9:00 | 5 - had some major disturbances (i.e. bathroom) during the night, so I think that disrupted my sleep a fair bit.                                                                        |
+| 5/2  |      7:30 |       7:20 |    1:30 |   9:00 | 7.5 - feel rested again! I think it may be time to try moving my sleep window back to 1:30 officially.                                                                                  |
+| 5/3  |      7:00 |       6:45 |    2:00 |   9:00 | 8 - I feel like this was my best sleep yet. Only one(?) wakeup afaik. Also, my body seems to be consistently anticipating my alarm now, as I wake up <10 minutes before it. Incredible. |
