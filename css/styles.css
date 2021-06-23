@@ -1,7 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+}
 
 .title {
-  font-family: Oswald, Georgia, serif;
+  font-family: Inter, Georgia, serif;
+	font-weight: 400;
   margin-bottom: 20px;
 }
 
@@ -25,7 +33,7 @@
   max-width: 40rem;
 }
 
-/* Stretch out text content so it aligns properly */
+Stretch out text content so it aligns properly
 #content p,
 div.outline-2 h2,
 div.outline-2 h3,
@@ -50,13 +58,4 @@ div.org-src-container + pre.example {
 /* Always display language of src block */
 pre.src:before {
   display: inline;
-}
-
-body {
-  background-color: #fbfcdd;
-  font-family: Lora, system-ui, sans-serif;
-  font-size: 18px;
-  line-height: 28px;
-  margin: 0;
-  padding: 0 8px;
 }

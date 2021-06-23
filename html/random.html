@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-25 Sun 12:50 -->
+<!-- 2021-06-22 Tue 22:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>random</title>
@@ -240,16 +240,15 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
-<div id="org-div-home-and-up">
- <a accesskey="h" href="/"> UP </a>
- |
- <a accesskey="H" href="/"> HOME </a>
-</div><div id="content">
+<div id="preamble" class="status">
+<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Digital Laboratory &#129514;</h2></a>
+</div>
+<div id="content">
 <h1 class="title">random</h1>
 
-<div id="outline-container-org72e39b3" class="outline-2">
-<h2 id="org72e39b3">test</h2>
-<div class="outline-text-2" id="text-org72e39b3">
+<div id="outline-container-orgb5294fa" class="outline-2">
+<h2 id="orgb5294fa">test</h2>
+<div class="outline-text-2" id="text-orgb5294fa">
 <p>
 Here&rsquo;s some random python because I&rsquo;m bored. Here&rsquo;s some more text to extend this paragraph to be longer, so I can see the effects of doing that.<br />
 </p>
@@ -258,9 +257,9 @@ Here&rsquo;s some random python because I&rsquo;m bored. Here&rsquo;s some more 
 And here&rsquo;s another paragraph!<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #9d0006;">from</span> datetime <span style="color: #9d0006;">import</span> datetime
-<span style="color: #9d0006;">print</span>(datetime.now())
-<span style="color: #9d0006;">print</span>(<span style="color: #79740e;">'hello'</span>*<span style="color: #8f3f71; font-weight: bold;">100</span>)
+<pre class="src src-python"><span style="font-weight: bold;">from</span> datetime <span style="font-weight: bold;">import</span> datetime
+<span style="font-weight: bold;">print</span>(datetime.now())
+<span style="font-weight: bold;">print</span>(<span style="font-style: italic;">'hello'</span>*<span style="font-weight: bold; text-decoration: underline;">100</span>)
 </pre>
 </div>
 
@@ -274,7 +273,7 @@ hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello
 And here&rsquo;s some elisp too:<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #076678;">(</span><span style="color: #8f3f71;">message</span> <span style="color: #79740e;">"hi"</span><span style="color: #076678;">)</span>
+<pre class="src src-emacs-lisp">(<span style="font-weight: bold; text-decoration: underline;">message</span> <span style="font-style: italic;">"hi"</span>)
 </pre>
 </div>
 
@@ -283,9 +282,9 @@ hi
 </pre>
 </div>
 </div>
-<div id="outline-container-org67482f6" class="outline-2">
-<h2 id="org67482f6">more</h2>
-<div class="outline-text-2" id="text-org67482f6">
+<div id="outline-container-orga433b5f" class="outline-2">
+<h2 id="orga433b5f">more</h2>
+<div class="outline-text-2" id="text-orga433b5f">
 <p>
 \(x + 2\)<br />
 </p>
@@ -306,33 +305,33 @@ Random thought: I should write some python code to generate these squares.<br />
 &#x2026;lmao<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #9d0006;">import</span> numpy <span style="color: #9d0006;">as</span> np
+<pre class="src src-python"><span style="font-weight: bold;">import</span> numpy <span style="font-weight: bold;">as</span> np
 
-<span style="color: #9d0006;">def</span> <span style="color: #b57614;">fibonacci_squares_arr</span>(n):
-    <span style="color: #9d0006;">if</span> n &lt; <span style="color: #8f3f71; font-weight: bold;">0</span>:
-        <span style="color: #9d0006;">raise</span> <span style="color: #8f3f71;">Exception</span>(<span style="color: #79740e;">'nope.'</span>)
-    <span style="color: #9d0006;">if</span> n == <span style="color: #8f3f71; font-weight: bold;">0</span>:
-        <span style="color: #9d0006;">return</span> np.array([])
-    <span style="color: #9d0006;">if</span> n == <span style="color: #8f3f71; font-weight: bold;">1</span>:
-        <span style="color: #9d0006;">return</span> np.array([[n]])
-    <span style="color: #9d0006;">else</span>:
-        <span style="color: #076678;">old</span> = fibonacci_squares_arr(n - <span style="color: #8f3f71; font-weight: bold;">1</span>)
-        <span style="color: #076678;">side_len</span> = <span style="color: #af3a03;">max</span>(old.shape)
-        <span style="color: #076678;">nxt</span> = np.full((side_len, side_len), n)
-        <span style="color: #076678;">elems</span> = (old, nxt) <span style="color: #9d0006;">if</span> n // <span style="color: #8f3f71; font-weight: bold;">2</span> % <span style="color: #8f3f71; font-weight: bold;">2</span> == <span style="color: #8f3f71; font-weight: bold;">0</span> <span style="color: #9d0006;">else</span> (nxt, old)
-        <span style="color: #9d0006;">return</span> np.concatenate(elems, axis=<span style="color: #af3a03;">int</span>(n % <span style="color: #8f3f71; font-weight: bold;">2</span> == <span style="color: #8f3f71; font-weight: bold;">0</span>))
+<span style="font-weight: bold;">def</span> <span style="font-weight: bold;">fibonacci_squares_arr</span>(n):
+    <span style="font-weight: bold;">if</span> n &lt; <span style="font-weight: bold; text-decoration: underline;">0</span>:
+        <span style="font-weight: bold;">raise</span> <span style="font-weight: bold; text-decoration: underline;">Exception</span>(<span style="font-style: italic;">'nope.'</span>)
+    <span style="font-weight: bold;">if</span> n == <span style="font-weight: bold; text-decoration: underline;">0</span>:
+        <span style="font-weight: bold;">return</span> np.array([])
+    <span style="font-weight: bold;">if</span> n == <span style="font-weight: bold; text-decoration: underline;">1</span>:
+        <span style="font-weight: bold;">return</span> np.array([[n]])
+    <span style="font-weight: bold;">else</span>:
+        <span style="font-weight: bold; font-style: italic;">old</span> = fibonacci_squares_arr(n - <span style="font-weight: bold; text-decoration: underline;">1</span>)
+        <span style="font-weight: bold; font-style: italic;">side_len</span> = <span style="font-weight: bold;">max</span>(old.shape)
+        <span style="font-weight: bold; font-style: italic;">nxt</span> = np.full((side_len, side_len), n)
+        <span style="font-weight: bold; font-style: italic;">elems</span> = (old, nxt) <span style="font-weight: bold;">if</span> n // <span style="font-weight: bold; text-decoration: underline;">2</span> % <span style="font-weight: bold; text-decoration: underline;">2</span> == <span style="font-weight: bold; text-decoration: underline;">0</span> <span style="font-weight: bold;">else</span> (nxt, old)
+        <span style="font-weight: bold;">return</span> np.concatenate(elems, axis=<span style="font-weight: bold;">int</span>(n % <span style="font-weight: bold; text-decoration: underline;">2</span> == <span style="font-weight: bold; text-decoration: underline;">0</span>))
 
-<span style="color: #9d0006;">def</span> <span style="color: #b57614;">fibonacci_squares</span>(n):
-    <span style="color: #076678;">arr</span> = fibonacci_squares_arr(n)
-    <span style="color: #076678;">chars</span> = <span style="color: #af3a03;">list</span>(<span style="color: #79740e;">'&#128997;&#128998;&#128999;&#129000;&#129001;&#129002;&#129003;'</span>)
-    <span style="color: #076678;">fib_str</span> = <span style="color: #79740e;">'\n'</span>.join([<span style="color: #79740e;">''</span>.join([chars[(elem - <span style="color: #8f3f71; font-weight: bold;">1</span>) % <span style="color: #af3a03;">len</span>(chars)]
-                                  <span style="color: #9d0006;">for</span> elem <span style="color: #9d0006;">in</span> row]) <span style="color: #9d0006;">for</span> row <span style="color: #9d0006;">in</span> arr])
-    <span style="color: #9d0006;">return</span> fib_str
-<span style="color: #9d0006;">print</span>(fibonacci_squares(<span style="color: #8f3f71; font-weight: bold;">8</span>))
+<span style="font-weight: bold;">def</span> <span style="font-weight: bold;">fibonacci_squares</span>(n):
+    <span style="font-weight: bold; font-style: italic;">arr</span> = fibonacci_squares_arr(n)
+    <span style="font-weight: bold; font-style: italic;">chars</span> = <span style="font-weight: bold;">list</span>(<span style="font-style: italic;">'&#128997;&#128998;&#128999;&#129000;&#129001;&#129002;&#129003;'</span>)
+    <span style="font-weight: bold; font-style: italic;">fib_str</span> = <span style="font-style: italic;">'\n'</span>.join([<span style="font-style: italic;">''</span>.join([chars[(elem - <span style="font-weight: bold; text-decoration: underline;">1</span>) % <span style="font-weight: bold;">len</span>(chars)]
+                                  <span style="font-weight: bold;">for</span> elem <span style="font-weight: bold;">in</span> row]) <span style="font-weight: bold;">for</span> row <span style="font-weight: bold;">in</span> arr])
+    <span style="font-weight: bold;">return</span> fib_str
+<span style="font-weight: bold;">print</span>(fibonacci_squares(<span style="font-weight: bold; text-decoration: underline;">8</span>))
 </pre>
 </div>
 
-<pre class="example" id="org2817935">
+<pre class="example" id="org34d3137">
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
@@ -359,7 +358,7 @@ Random thought: I should write some python code to generate these squares.<br />
 </div>
 </div>
 <div id="postamble" class="status">
-<footer><p>Author: Ketan Agrawal</p><p>Last updated: 2021-04-25 Sun 12:50<p><footer>
+<footer><p>Author: Ketan Agrawal</p><p>Last updated: 2021-06-22 Tue 22:49<p><footer>
 </div>
 </body>
 </html>

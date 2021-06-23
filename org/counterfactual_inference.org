@@ -1,0 +1,5 @@
+#+title: counterfactual inference in ML
+
+Notes on https://www.youtube.com/watch?v=yKs6msnw9m8&ab_channel=StevenVanVaerenbergh.
+
+causal inference: learn a model of how the world works.
