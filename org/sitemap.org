@@ -1,6 +1,7 @@
 #+TITLE: Sitemap for project digital laboratory
 
 - [[file:index.org][Hello]]
+- [[file:20210623024548-affordances.org][affordances]]
 - [[file:counterfactual_inference.org][counterfactual inference in ML]]
 - [[file:random.org][random]]
 - [[file:sleep.org][sleep]]
