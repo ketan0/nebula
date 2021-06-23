@@ -1,9 +1,5 @@
 #+TITLE: starting points
 
-So, what am I trying to do with my digital garden? Good question. Some possibilities are that I'm trying to record and connect the knowledge that I'm learning. That's valuable. Another possibility is that I want to create some original posts, synthesizing knowledge in new ways. Also seems valuable. Yet another possibility is me storing links and things like acorns for the winter. This...not so valuable.
+The inspiration for this space is owed to [[https://notes.andymatuschak.org/][Andy Matuschak's working notes]]. In that spirit, I aim to create a dense, conceptually-rich space for me to walk around in.
 
-- frames
-- current things I'm doing
-- Emacs
-- the structure of knowledge
-- consciousness
+More content here coming soon.
