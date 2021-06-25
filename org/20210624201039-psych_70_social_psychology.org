@@ -1,0 +1,35 @@
+#+title: PSYCH 70: Social Psychology
+
+* Introduction
+Think about a time you were happy / a time you were sad—were other people involved?. We often experience emotions as a result of someone else.
+
+** Social psychology is not new.
+#+begin_quote
+"Anybody can become angry - that is easy, but to be angry with the right person and to the right degree and at the right time and for the right purpose, and in the right way - that is not within everybody's power and is not easy." - Aristotle
+#+end_quote
+** Social psychology is not (always) intuitive.
+Example: introducing a fine for late-picker-uppers of kids at daycare actually /increases/ the number of late pick-ups. Explanation? The /motivation/ shifted from intrinsic to extrinsic.
+** What is social psychology?
+About understanding the "causal architecture" of the society that we're embedded in.
+
+Three parts of the class: social cognition, interpersonal processes, everyday life.
+*** Levels of organization:
+Societies <=> *Groups* <=> *Individual* <=> *Mind* <=> Neurons/Genes/Hormones
+^social psych is focused on the middle three levels.
+* Cognitive Biases: self-serving biases.
+** Motivated reasoning
+/Motivated reasoning/ is our tendency to come to conclusions that make us feel good.
+
+We don't like to admit when we're wrong! (Nor our sports heroes, family, political candidates, etc.)
+
+Group affiliation: "We crushed them!" when your team wins vs. "They were terrible" when your team loses.
+
+Above-average effect: people believe they are above average in valued domains (lol.) BUT in other domains that are seen as really hard (e.g. juggling or living past 100,) we see the below-average effect. The reason: we "anchor" to our initial estimate. E.g. for living to 100, we initially think it's very unlikely, then adjust the estimate upward as we get evidence.
+
+Dunning-Kruger Effect: Correlation between lower skills and greater Above-Average Effect. In other words, correlation between cognitive and metacognitive skills. (Also, those with the most skills underestimate a little!)
+** Why do we have these biases?
+One answer: self-esteem. (But why do we need self-esteem, evolutionarily?)
+Another answer: overconfidence gives social benefits?
+** ...is there another way?
+Hubristic pride = arrogant/conceited.
+Authentic pride = confident, high self-esteem.

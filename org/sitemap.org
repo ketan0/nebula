@@ -1,6 +1,7 @@
-#+TITLE: Sitemap for project digital laboratory
+#+TITLE: sitemap
 
 - [[file:index.org][Hello]]
+- [[file:20210624201039-psych_70_social_psychology.org][PSYCH 70: Social Psychology]]
 - [[file:20210623024548-affordances.org][affordances]]
 - [[file:counterfactual_inference.org][counterfactual inference in ML]]
 - [[file:random.org][random]]

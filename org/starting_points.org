@@ -2,4 +2,4 @@
 
 The inspiration for this space is owed to [[https://notes.andymatuschak.org/][Andy Matuschak's working notes]]. In that spirit, I aim to create a dense, conceptually-rich space for me to walk around in.
 
-More content here coming soon.
+[[file:20210623024548-affordances.org][affordances]]

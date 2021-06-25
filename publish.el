@@ -32,7 +32,47 @@
 
 (section! "Initialising")
 
+(require 'dash)
+(require 'htmlize)
+(require 'org-roam)
 (require 'ox-publish)
+(require 'ox-html)
+
+(setq project-dir "/Users/ketanagrawal/garden-simple/org")
+(setq org-roam-directory project-dir)
+;; to be able to find id links during publish
+(setq org-roam-db-location (concat project-dir "/org-roam.db"))
+
+(defun commonplace/org-roam--backlinks-list (file)
+  ;; (message "(org-roam--org-roam-file-p %s): %s" file (org-roam--org-roam-file-p file))
+  ;; (message "(org-roam--org-roam-file-p):" (org-roam--org-roam-file-p))
+  (if (org-roam--org-roam-file-p file)
+      ;; (org-roam-buffer--insert-backlinks)
+      (--reduce-from
+       (concat acc (format "- [[file:%s][%s]]\n"
+                           (file-relative-name (car it) org-roam-directory)
+                           (org-roam-db--get-title (car it))))
+       "" (org-roam-db-query [:select [source] :from links :where (= dest $s1)] file))
+    (progn (message "it's not a file!")
+           "")))
+
+(defun commonplace/org-export-preprocessor (backend)
+  ;; (message "buffer-file-name is \"%s\"" buffer-file-name)
+  (let ((links (commonplace/org-roam--backlinks-list (buffer-file-name))))
+    ;; (message "links is \"%s\"" links)
+    (unless (string= links "")
+      (save-excursion
+        (goto-char (point-max))
+        (insert (concat "
+* Links to this note
+:PROPERTIES:
+:CUSTOM_ID: backlinks
+:END:
+") links)))))
+
+
+
+(add-hook 'org-export-before-processing-hook 'commonplace/org-export-preprocessor)
 
 (setq org-publish-project-alist
 '(("digital laboratory"
@@ -40,6 +80,7 @@
         :publishing-function org-html-publish-to-html
         :publishing-directory "./html"
         :auto-sitemap t
+        :sitemap-title "sitemap"
         ;; :html-head-include-default-style nil
         :section-numbers nil
         :with-toc nil
