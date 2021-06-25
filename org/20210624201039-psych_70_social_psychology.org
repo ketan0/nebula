@@ -4,11 +4,12 @@
 Think about a time you were happy / a time you were sad—were other people involved?. We often experience emotions as a result of someone else.
 
 ** Social psychology is not new.
+Philosophers have been intuitively (if not quite scientifically) thinking about these ideas for centuries!
 #+begin_quote
 "Anybody can become angry - that is easy, but to be angry with the right person and to the right degree and at the right time and for the right purpose, and in the right way - that is not within everybody's power and is not easy." - Aristotle
 #+end_quote
 ** Social psychology is not (always) intuitive.
-Example: introducing a fine for late-picker-uppers of kids at daycare actually /increases/ the number of late pick-ups. Explanation? The /motivation/ shifted from intrinsic to extrinsic.
+Example: [[https://rady.ucsd.edu/faculty/directory/gneezy/pub/docs/fine.pdf][introducing a fine]] for late-picker-uppers of kids at daycare actually /increases/ the number of late pick-ups. Explanation? The /motivation/ shifted from intrinsic to extrinsic.
 ** What is social psychology?
 About understanding the "causal architecture" of the society that we're embedded in.
 
