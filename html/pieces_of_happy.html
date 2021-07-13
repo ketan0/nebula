@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-06-26 Sat 14:50 -->
+<!-- 2021-07-13 Tue 05:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>counterfactual inference in ML</title>
+<title>Pieces of Happy</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Ketan Agrawal" />
 <style type="text/css">
@@ -216,75 +216,122 @@
     /*]]>*///-->
 // @license-end
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="preamble" class="status">
 <a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Digital Laboratory &#129514;</h2></a>
 </div>
 <div id="content">
-<h1 class="title">counterfactual inference in ML</h1>
-
-<div id="outline-container-org7c244d4" class="outline-2">
-<h2 id="org7c244d4">Pearl&rsquo;s Causal Hierarchy</h2>
-<div class="outline-text-2" id="text-org7c244d4">
+<h1 class="title">Pieces of Happy</h1>
 <p>
-So I read the <a href="file:///Users/ketanagrawal/Dropbox/Apps/GoodNotes 5/GoodNotes/HCI/On Pearl’s Hierarchy and the Foundations of Causal Inference.pdf#page=nil">On Pearl’s Hierarchy and the Foundations of Causal Inference</a> more deeply, and I think I get the mathematics of it now.<br />
-So L1, L2, and L3 represent observational, interventional, and counterfactual layers, respectively.<br />
-L2 inference requires more model specification than L1, and L3 requires more than L2.<br />
+<a href="http://nickcammarata.com/writing/pieces-of-happy">http://nickcammarata.com/writing/pieces-of-happy</a><br />
 </p>
 
+<div id="outline-container-org5a1e030" class="outline-2">
+<h2 id="org5a1e030">Summary</h2>
+<div class="outline-text-2" id="text-org5a1e030">
 <p>
-\(\mathcal{L}_1\) supports terms like \(P(\mathbf{Y}=\mathbf{y})\)<br />
-\(\mathcal{L}_2\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y})\)<br />
-\(\mathcal{L}_3\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})\)<br />
+Essentially, recurring features of your environment have a compounding effect on your happiness over the course of your life. Life satisfaction research has revealed certain factors that reliably produce (and don&rsquo;t produce) happiness across all humans.<br />
 </p>
 
 <p>
-In other words,<br />
+Also, take advantage of your personality strengths, and possibly experiment with actions that could help shore up negative personality traits (e.g. cut caffeine to lower neuroticism.)<br />
 </p>
 
 <p>
-\(\mathcal{L}_1\) supports no intervention (or the empty intervention, I guess.)<br />
-\(\mathcal{L}_2\) supports only one intervention.<br />
-\(\mathcal{L}_3\) supports multiple (potentially) inconsistent interventions.<br />
+All of this should take place within a framework of personal experimentation. Try &ldquo;domain randomization&rdquo; on yourself &#x2013; that is, try messing with some of the parameters of your life that have been on default settings thus far. The following are sliders for some relatively meaningless parameters that probably won&rsquo;t affect your life that much&#x2013; because why not!<br />
+</p>
+
+<div>
+    <input type="range" id="size-slider" name="size-slider"
+            min="8" max="24" value="14">
+</div>
+<div>
+    <input type="range" id="font-slider" name="font-slider"
+    min="0" max="3" value="0" step="1">
+</div>
+<!--TODO: make this slider turn on some d3 particle thingy-->
+<div>
+    <input type="range" id="violin" name="violin"
+    min="0" max="100" value="30" step="10">
+</div>
+<script type="text/javascript">
+let sizeSlider = document.getElementById("size-slider");
+if (sizeSlider.addEventListener) {
+    sizeSlider.addEventListener("input", function () {
+        var div = document.getElementById("content");
+        div.style.fontSize = sizeSlider.value + "px";
+    })
+}
+
+let fontSlider = document.getElementById("font-slider");
+if (fontSlider.addEventListener) {
+    fontSlider.addEventListener("input", function () {
+        var div = document.getElementById("content");
+        var fontFamilies = {
+            "0" : "Inter",
+            "1" : "Georgia",
+            "2" : "Courier New",
+            "3" : "Brush Script MT"
+        }
+        div.style.fontFamily = fontFamilies[fontSlider.value]
+    })
+}
+</script>
+
+<p>
+Record your findings. The cost of experimentation is small, but the potential life-changing benefits of finding something that makes you happier are immense.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgffb52ff" class="outline-2">
-<h2 id="orgffb52ff">The difference between intervention and counterfactuals</h2>
-<div class="outline-text-2" id="text-orgffb52ff">
+<div id="outline-container-orge0246d2" class="outline-2">
+<h2 id="orge0246d2">Thoughts</h2>
+<div class="outline-text-2" id="text-orge0246d2">
 <p>
-Basically, in terms of the math, counterfactual is just an intervention where we have conditioned on past events. It&rsquo;s useful to visualize this in terms of sampling: in the drug example, we first restrict the &ldquo;pool&rdquo; to those where \(X=0,Y=0\). Then we ask &ldquo;out of these, how many, if we intervene and set \(X = 1\), change to \(Y_{X=1} = 1\)?&rdquo;<br />
+So&#x2026;what variables of my life could I try messing with?<br />
 </p>
-</div>
-</div>
-<div id="outline-container-orgd28b755" class="outline-2">
-<h2 id="orgd28b755">Random idea I had for counterfactuals</h2>
-<div class="outline-text-2" id="text-orgd28b755">
+
+<ul class="org-ul">
+<li>Social environment &#x2013; seems to be a really big one<br /></li>
+<li>What research I&rsquo;m doing<br /></li>
+<li>My physical room / work environment during the day<br /></li>
+<li>Meditation =&gt; mindfulness.<br /></li>
+<li>Changing my internet usage (takes up large chunk of my day, scrolling through algorithmic feeds)<br /></li>
+</ul>
+
 <p>
-Google Maps routes &#x2013; what happens if you min-edit-distance a certain part of the route?<br />
+Well, going back to the paragraph on life satisfaction:<br />
+</p>
+
+<blockquote>
+<p>
+most of the interesting degrees of freedom that life satisfaction research tends to explore, such as <b>diet</b>, <b>fitness</b>, <b>drugs</b>, <b>learning</b>, and <b>mindfulness</b> requires little or no competition.<br />
+</p>
+</blockquote>
+
+<p>
+I&rsquo;m sure there are other parameters, but for now, let&rsquo;s consider the set { diet, fitness, drugs, learning, and mindfulness }.<br />
+</p>
+
+<p>
+diet -&gt; Maybe I&rsquo;d feel better if I ate better. Especially at home, where I sort of just accept whatever&rsquo;s in the pantry.<br />
+</p>
+
+<p>
+fitness -&gt; let&rsquo;s be consistent about it!<br />
+</p>
+
+<p>
+Drugs &#x2013; well&#x2026;maybe strategic reintroduction of caffeine into my life could be beneficial. Earl grey tea in the morning is a pleasant experience.<br />
+Let&rsquo;s think about it.<br />
+</p>
+
+<p>
+Mindfulness &#x2013; for sure. It changes the experience of every moment of life &#x2013; quite the inner-loop modification. I think that intentional meditation practice every morning can verifiably change people&rsquo;s lives.<br />
+</p>
+
+<p>
+Learning &#x2013; having time to add content to my digital garden every day (and, like, hopefully by the time it gets rolling, I don&rsquo;t get so judgy about the content that&rsquo;s currently in it) would make me quite happy.<br />
 </p>
 </div>
 </div>
@@ -299,7 +346,7 @@ Google Maps routes &#x2013; what happens if you min-edit-distance a certain part
 </div>
 </div>
 <div id="postamble" class="status">
-<footer><p>Author: Ketan Agrawal</p><p>Last updated: 2021-06-26 Sat 14:50<p><footer>
+<footer><p>Author: Ketan Agrawal</p><p>Last updated: 2021-07-13 Tue 05:03<p><footer>
 </div>
 </body>
 </html>

@@ -1,0 +1,9 @@
+#+title: Zen and the Art of Motorcycle Maintenance
+
+People seem to be hurrying through stuff. They don't actually /care/ about what they are doing -- they are merely spectators. E.g. the mechanics -- they just hurried trying to fix the thing.
+
+Laws of science, money, government, etc. is all in our imaginations.
+
+"Groovy" (John) vs. scientific-analytical types (the author.) Two completely different ways of perceiving the world.
+
+[[file:20210629174828-lateral_drift.org][Lateral drift]]: "Moving across a problem, instead of attacking it directly. A change in perspective, can lead to new solutions." ([[https://conservance.wordpress.com/2011/01/16/lateral-drift/][source]])

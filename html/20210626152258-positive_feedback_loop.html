@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-06-26 Sat 14:50 -->
+<!-- 2021-06-26 Sat 15:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>counterfactual inference in ML</title>
+<title>positive feedback loop</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Ketan Agrawal" />
 <style type="text/css">
@@ -216,90 +216,25 @@
     /*]]>*///-->
 // @license-end
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="preamble" class="status">
 <a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Digital Laboratory &#129514;</h2></a>
 </div>
 <div id="content">
-<h1 class="title">counterfactual inference in ML</h1>
-
-<div id="outline-container-org7c244d4" class="outline-2">
-<h2 id="org7c244d4">Pearl&rsquo;s Causal Hierarchy</h2>
-<div class="outline-text-2" id="text-org7c244d4">
-<p>
-So I read the <a href="file:///Users/ketanagrawal/Dropbox/Apps/GoodNotes 5/GoodNotes/HCI/On Pearl’s Hierarchy and the Foundations of Causal Inference.pdf#page=nil">On Pearl’s Hierarchy and the Foundations of Causal Inference</a> more deeply, and I think I get the mathematics of it now.<br />
-So L1, L2, and L3 represent observational, interventional, and counterfactual layers, respectively.<br />
-L2 inference requires more model specification than L1, and L3 requires more than L2.<br />
-</p>
-
-<p>
-\(\mathcal{L}_1\) supports terms like \(P(\mathbf{Y}=\mathbf{y})\)<br />
-\(\mathcal{L}_2\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y})\)<br />
-\(\mathcal{L}_3\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})\)<br />
-</p>
-
-<p>
-In other words,<br />
-</p>
-
-<p>
-\(\mathcal{L}_1\) supports no intervention (or the empty intervention, I guess.)<br />
-\(\mathcal{L}_2\) supports only one intervention.<br />
-\(\mathcal{L}_3\) supports multiple (potentially) inconsistent interventions.<br />
-</p>
-</div>
-</div>
-<div id="outline-container-orgffb52ff" class="outline-2">
-<h2 id="orgffb52ff">The difference between intervention and counterfactuals</h2>
-<div class="outline-text-2" id="text-orgffb52ff">
-<p>
-Basically, in terms of the math, counterfactual is just an intervention where we have conditioned on past events. It&rsquo;s useful to visualize this in terms of sampling: in the drug example, we first restrict the &ldquo;pool&rdquo; to those where \(X=0,Y=0\). Then we ask &ldquo;out of these, how many, if we intervene and set \(X = 1\), change to \(Y_{X=1} = 1\)?&rdquo;<br />
-</p>
-</div>
-</div>
-<div id="outline-container-orgd28b755" class="outline-2">
-<h2 id="orgd28b755">Random idea I had for counterfactuals</h2>
-<div class="outline-text-2" id="text-orgd28b755">
-<p>
-Google Maps routes &#x2013; what happens if you min-edit-distance a certain part of the route?<br />
-</p>
-</div>
-</div>
+<h1 class="title">positive feedback loop</h1>
 
 <div id="outline-container-backlinks" class="outline-2">
 <h2 id="backlinks">Links to this note</h2>
 <div class="outline-text-2" id="text-backlinks">
 <ul class="org-ul">
-<li><a href="sitemap.html">sitemap</a><br /></li>
+<li><a href="20210624201039-psych_70_social_psychology.html">PSYCH 70: Social Psychology</a><br /></li>
 </ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<footer><p>Author: Ketan Agrawal</p><p>Last updated: 2021-06-26 Sat 14:50<p><footer>
+<footer><p>Author: Ketan Agrawal</p><p>Last updated: 2021-06-26 Sat 15:28<p><footer>
 </div>
 </body>
 </html>

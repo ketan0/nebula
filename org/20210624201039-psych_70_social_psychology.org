@@ -1,7 +1,7 @@
 #+title: PSYCH 70: Social Psychology
 
 * Introduction
-Think about a time you were happy / a time you were sad—were other people involved?. We often experience emotions as a result of someone else.
+Think about a time you were happy / a time you were sad—were other people involved? We often experience emotions as a result of someone else.
 
 ** Social psychology is not new.
 Philosophers have been intuitively (if not quite scientifically) thinking about these ideas for centuries!
@@ -17,7 +17,7 @@ Three parts of the class: social cognition, interpersonal processes, everyday li
 *** Levels of organization:
 Societies <=> *Groups* <=> *Individual* <=> *Mind* <=> Neurons/Genes/Hormones
 ^social psych is focused on the middle three levels.
-* Cognitive Biases: self-serving biases.
+* [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]: self-serving biases.
 ** Motivated reasoning
 /Motivated reasoning/ is our tendency to come to conclusions that make us feel good.
 
@@ -34,3 +34,58 @@ Another answer: overconfidence gives social benefits?
 ** ...is there another way?
 Hubristic pride = arrogant/conceited.
 Authentic pride = confident, high self-esteem.
+* Person Perception
+/Should I date this person? Is this person guilty? How competent is this person?/
+
+*Person perception* is forming impressions about other people.
+** Thin Slicing
+People can make predictive judgments "instantly" -- predicting future success, marriage success, sales performance, sexual orientation, etc. (Cue /Blink/ by Malcolm Gladwell, lol.)
+
+Women can predict hetero/homosexual at higher rates when ovulating
+
+These "thin slice" judgments can be surprisingly predictive, but also biased.
+
+*** Why?
+There is evolutionary value in swiftly identifying potential threats, mates, and leaders.
+** Universal Dimensions of Social Cognition: Warmth and Competence
+** Oh yeah, there's also the whole triangle and circe thing -- we immediately make judgments about what they're doing.
+(But she should've mentioned that autistic people don't see this the same way)
+** Confirmation bias:
+Tendency to want to verify our pre-existing beliefs.
+** Pygmalion Effect:
+kids whose teachers thought the kids were "late bloomers" -- it actually came true.
+
+Side note: whoa. Intuitively I feel like (and I'm of course enjoying that sweet confirmation bias) but it confirms my intuitions -- in cases where I've set high, clear expectations for myself, I've achieved them.
+** [[file:20210627180445-self_fulfilling_prophecy.org][Self-fulfilling prophecy]]
+You have expectations about someone => you behave accordingly towards them => they behave just how you expected => reinforces your expectations...
+
+This seems like a kind of [[file:20210626152258-positive_feedback_loop.org][positive feedback loop]] that can either go really well, or really badly. Parents have a huge role in establishing expectations for their children. (As a first-born son / grandson, I know this firsthand 😅)
+* [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]: cognitive dissonance theory
+Cognitive Dissonance Theory:
+- cognitive dissonance :: holding apparently incompatible / logically inconsistent thoughts about the world.
+** How to resolve dissonance between A and B?
+You can *disregard* one.
+You can *change* your belief in one.
+You can *distort* one.
+You can *add* C that resolves the conflict.
+
+Which one to choose? Will probably go with the path of least resistance.
+
+Chicago doomsday cult didn't see doomsday => rationalized by saying that the Guardians had stopped the flood
+
+1755 Lisbon earthquake => threatened belief in God and a just world.
+** Is dissonance reduction good?
+Good: it allows you to streamline cognition.
+Bad: it loses the inherent complexity / ambiguity in the world.
+
+#+begin_quote
+A foolish consistency is the hobgoblin of little minds. - Ralph Waldo Emerson
+#+end_quote
+** Motivated reasoning is a key element in cognitive dissonance.
+Severity of initiation: we have a deep-seated belief that we're not gullible etc. Motivated reasoning leads us to believe that the task was actually interesting, rather than that we're just gullible.
+** Behavior precedes thought
+Spreading of alternatives: we post-hoc try to "justify" our decisions in life to ourselves.
+
+Cognitive Behavioral Therapy: change behaviors in people's lives to change their psychology positively.
+
+Don't /think/ like you're the person you want to be, /act/ the way you want to be and become that person.

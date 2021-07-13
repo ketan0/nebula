@@ -1,9 +1,15 @@
 #+TITLE: sitemap
 
+- [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]
 - [[file:index.org][Hello]]
 - [[file:20210624201039-psych_70_social_psychology.org][PSYCH 70: Social Psychology]]
+- [[file:pieces_of_happy.org][Pieces of Happy]]
+- [[file:20210627180445-self_fulfilling_prophecy.org][Self-fulfilling prophecy]]
+- [[file:20210629174811-zen_and_the_art_of_motorcycle_maintenance.org][Zen and the Art of Motorcycle Maintenance]]
 - [[file:20210623024548-affordances.org][affordances]]
 - [[file:counterfactual_inference.org][counterfactual inference in ML]]
+- [[file:20210629174828-lateral_drift.org][lateral drift]]
+- [[file:20210626152258-positive_feedback_loop.org][positive feedback loop]]
 - [[file:random.org][random]]
 - [[file:sleep.org][sleep]]
 - [[file:starting_points.org][starting points]]
