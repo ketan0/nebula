@@ -28,8 +28,8 @@ h2, h3, h4, h5, h6 {
 
 
 #preamble {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgb(229, 231, 235);
 }
 
 #content {
