@@ -1,17 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
 body {
-  background-color: #eeeeee;
-  font-family: Inter, system-ui, sans-serif;
-  font-size: 18px;
+  background-color: #fff;
+  font-family: 'Roboto Mono', 'Courier', 'Helvetica', sans-serif;
+  /* -webkit-font-smoothing: antialiased; */
+  font-weight: 400;
+  font-size: 15px;
   line-height: 28px;
 }
 
 .title {
-  font-family: Inter, Georgia, serif;
-	font-weight: 400;
+  font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
+	font-weight: 300;
   margin-bottom: 20px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .org-dl {
@@ -20,18 +26,25 @@ body {
   border-radius: 25px;
 }
 
+
+#preamble {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 #content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: auto;
+  max-width: 50rem;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #outline-container-backlinks {
-  background-color: #dddddd;
-  padding: 0px 16px;
+  background-color: #eee;
+  padding: 8px 16px;
   border-radius: 25px;
+  max-width: 20rem;
+  margin: auto;
 }
 
 #postamble {
@@ -42,19 +55,6 @@ body {
   text-align: center;
 }
 
-#content > * {
-  max-width: 60rem;
-}
-
-Stretch out text content so it aligns properly
-#content p,
-div.outline-2 h2,
-div.outline-2 h3,
-div.outline-2 h4,
-div.outline-2 h5,
-div.outline-2 h6 {
-  width: 100%;
-}
 
 pre.src {
   background-color: white;
@@ -81,7 +81,7 @@ blockquote {
 }
 
 p {
-  color: rgba(31, 41, 55, 1);
+  color: #4B4B4B;
 }
 
 a {

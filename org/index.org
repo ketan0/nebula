@@ -1,6 +1,7 @@
 #+TITLE: Hello
+#+STARTUP: hideblocks
 
-#+begin_export html
+#+BEGIN_EXPORT html
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <div style="display: flex; align-items: center; justify-content: center;">
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="120" height="120" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
@@ -23,7 +24,7 @@
   }
   repeat();
 </script>
-#+end_export
+#+END_EXPORT
 
 Welcome to my digital laboratory!
 

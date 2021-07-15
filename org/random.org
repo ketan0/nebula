@@ -11,7 +11,7 @@ print('hello'*100)
 #+end_src
 
 #+RESULTS:
-: 2021-04-25 09:29:02.469199
+: 2021-07-15 12:33:26.814574
 : hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello
 
 And here's some elisp too:
@@ -21,9 +21,10 @@ And here's some elisp too:
 
 #+RESULTS:
 : hi
-* more
 
-$x + 2$
+Here's some mathjax-rendered LaTeX:
+$\sum_{i=0}^{10} x$
+* Fibonacci squares
 
 Random thought: I should write some python code to generate these squares.
 🟧🟧🟧🟧🟧🟧🟧🟧🟩🟩🟩🟩🟩
@@ -35,7 +36,6 @@ Random thought: I should write some python code to generate these squares.
 🟧🟧🟧🟧🟧🟧🟧🟧🟪🟪🟦🟦🟦
 🟧🟧🟧🟧🟧🟧🟧🟧🟪🟪🟦🟦🟦
 
-...lmao
 #+begin_src python :results output
 import numpy as np
 

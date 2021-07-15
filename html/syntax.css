@@ -1,0 +1,45 @@
+.org-builtin {
+  /* font-lock-builtin-face */
+  color: #29838d;
+}
+
+.org-constant {
+  /* font-lock-constant-face */
+  color: #97365b;
+}
+
+.org-function-name {
+  /* font-lock-function-name-face */
+  color: #29838d;
+}
+
+.org-highlight-numbers-number {
+  /* highlight-numbers-number */
+  color: #97365b;
+  font-weight: bold;
+}
+
+.org-keyword {
+  /* font-lock-keyword-face */
+  color: #3b6ea8;
+}
+
+.org-rainbow-delimiters-depth-1 {
+  /* rainbow-delimiters-depth-1-face */
+  color: #3b6ea8;
+}
+
+.org-string {
+  /* font-lock-string-face */
+  color: #4f894c;
+}
+
+.org-type {
+  /* font-lock-type-face */
+  color: #9a7500;
+}
+
+.org-variable-name {
+  /* font-lock-variable-name-face */
+  color: #cb9aad;
+}

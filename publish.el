@@ -16,6 +16,12 @@
   (doom-initialize)
   (load-theme 'doom-opera t))
 
+(require 'dash)
+(require 'htmlize)
+(require 'org-roam)
+(require 'ox-publish)
+(require 'ox-html)
+
 (advice-add 'undo-tree-mode :override #'ignore) ; Undo tree is a pain
 ;;; Silence uninformative noise
 
@@ -30,36 +36,32 @@
 (advice-add 'recentf-mode :override #'ignore)
 (advice-add 'recentf-cleanup :override #'ignore)
 
-(section! "Initialising")
+(section! "Initializing")
 
-(require 'dash)
-(require 'htmlize)
-(require 'org-roam)
-(require 'ox-publish)
-(require 'ox-html)
+(setq org-html-htmlize-output-type 'css)
 
 (setq project-dir "/Users/ketanagrawal/garden-simple/org")
 (setq org-roam-directory project-dir)
 ;; to be able to find id links during publish
 (setq org-roam-db-location (concat project-dir "/org-roam.db"))
-
-(defun commonplace/org-roam--backlinks-list (file)
-  ;; (message "(org-roam--org-roam-file-p %s): %s" file (org-roam--org-roam-file-p file))
-  ;; (message "(org-roam--org-roam-file-p):" (org-roam--org-roam-file-p))
+;; https://gitlab.com/ngm/commonplace/-/blob/master/publish.el
+(defun ketan0/org-roam--backlinks-list (file)
   (if (org-roam--org-roam-file-p file)
-      ;; (org-roam-buffer--insert-backlinks)
       (--reduce-from
-       (concat acc (format "- [[file:%s][%s]]\n"
-                           (file-relative-name (car it) org-roam-directory)
-                           (org-roam-db--get-title (car it))))
+       (let (
+             (note-title (org-roam-db--get-title (car it))))
+         (message "Got backlink \"%s\"" note-title)
+         (concat acc (if (or (string= note-title "sitemap") ;; exclude from backlinks
+                             (string= note-title "Hello"))
+                         ""
+                       (format "- [[file:%s][%s]]\n"
+                               (file-relative-name (car it) org-roam-directory)
+                               note-title))))
        "" (org-roam-db-query [:select [source] :from links :where (= dest $s1)] file))
-    (progn (message "it's not a file!")
-           "")))
+    (progn (message "it's not a file!") "")))
 
-(defun commonplace/org-export-preprocessor (backend)
-  ;; (message "buffer-file-name is \"%s\"" buffer-file-name)
-  (let ((links (commonplace/org-roam--backlinks-list (buffer-file-name))))
-    ;; (message "links is \"%s\"" links)
+(defun ketan0/org-export-preprocessor (backend)
+  (let ((links (ketan0/org-roam--backlinks-list (buffer-file-name))))
     (unless (string= links "")
       (save-excursion
         (goto-char (point-max))
@@ -70,9 +72,7 @@
 :END:
 ") links)))))
 
-
-
-(add-hook 'org-export-before-processing-hook 'commonplace/org-export-preprocessor)
+(add-hook 'org-export-before-processing-hook 'ketan0/org-export-preprocessor)
 
 (setq org-publish-project-alist
 '(("digital laboratory"
@@ -89,9 +89,10 @@
         :html-preamble-format (("en" "<a style=\"color: inherit; text-decoration: none\" href=\"/\"><h2>Ketan's Digital Laboratory &#129514;</h2></a>"))
         :html-postamble t
 
-        :html-postamble-format (("en" "<footer><p>Author: %a</p><p>Last updated: %T<p><footer>"))
+        :html-postamble-format (("en" "<p class=\"date\">Last updated: %T</p>"))
         :html-link-home ""
         :html-link-up ""
+        :html-head-extra "<link rel=\"stylesheet\" type=\"text/css\" href=\"syntax.css\" />"
         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\" />")))
 
 (section! "Publishing files")
@@ -101,9 +102,15 @@
 (when force
   (delete-directory "./html" t))
 
+
 (org-publish "digital laboratory" force)
 
 (let ((css-src (expand-file-name "css/styles.css"))
       (css-dest (expand-file-name "html/styles.css")))
+  (when (file-newer-than-file-p css-src css-dest)
+    (copy-file css-src css-dest t)))
+
+(let ((css-src (expand-file-name "css/syntax.css"))
+      (css-dest (expand-file-name "html/syntax.css")))
   (when (file-newer-than-file-p css-src css-dest)
     (copy-file css-src css-dest t)))

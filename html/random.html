@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-06-26 Sat 14:50 -->
+<!-- 2021-07-15 Thu 17:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>random</title>
@@ -194,6 +194,7 @@
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="stylesheet" type="text/css" href="syntax.css" />
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
@@ -257,14 +258,14 @@ Here&rsquo;s some random python because I&rsquo;m bored. Here&rsquo;s some more 
 And here&rsquo;s another paragraph!<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">from</span> datetime <span style="font-weight: bold;">import</span> datetime
-<span style="font-weight: bold;">print</span>(datetime.now())
-<span style="font-weight: bold;">print</span>(<span style="font-style: italic;">'hello'</span>*<span style="font-weight: bold; text-decoration: underline;">100</span>)
+<pre class="src src-python"><span class="org-keyword">from</span> datetime <span class="org-keyword">import</span> datetime
+<span class="org-keyword">print</span>(datetime.now())
+<span class="org-keyword">print</span>(<span class="org-string">'hello'</span>*<span class="org-highlight-numbers-number">100</span>)
 </pre>
 </div>
 
 <pre class="example">
-2021-04-25 09:29:02.469199
+2021-07-15 12:33:26.814574
 hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello
 </pre>
 
@@ -273,22 +274,24 @@ hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello
 And here&rsquo;s some elisp too:<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="font-weight: bold; text-decoration: underline;">message</span> <span style="font-style: italic;">"hi"</span>)
+<pre class="src src-emacs-lisp"><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-constant">message</span> <span class="org-string">"hi"</span><span class="org-rainbow-delimiters-depth-1">)</span>
 </pre>
 </div>
 
 <pre class="example">
 hi
 </pre>
-</div>
-</div>
-<div id="outline-container-orga433b5f" class="outline-2">
-<h2 id="orga433b5f">more</h2>
-<div class="outline-text-2" id="text-orga433b5f">
-<p>
-\(x + 2\)<br />
-</p>
 
+
+<p>
+Here&rsquo;s some mathjax-rendered LaTeX:<br />
+\(\sum_{i=0}^{10} x\)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org6b42423" class="outline-2">
+<h2 id="org6b42423">Fibonacci squares</h2>
+<div class="outline-text-2" id="text-org6b42423">
 <p>
 Random thought: I should write some python code to generate these squares.<br />
 🟧🟧🟧🟧🟧🟧🟧🟧🟩🟩🟩🟩🟩<br />
@@ -301,37 +304,34 @@ Random thought: I should write some python code to generate these squares.<br />
 🟧🟧🟧🟧🟧🟧🟧🟧🟪🟪🟦🟦🟦<br />
 </p>
 
-<p>
-&#x2026;lmao<br />
-</p>
 <div class="org-src-container">
-<pre class="src src-python"><span style="font-weight: bold;">import</span> numpy <span style="font-weight: bold;">as</span> np
+<pre class="src src-python"><span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
 
-<span style="font-weight: bold;">def</span> <span style="font-weight: bold;">fibonacci_squares_arr</span>(n):
-    <span style="font-weight: bold;">if</span> n &lt; <span style="font-weight: bold; text-decoration: underline;">0</span>:
-        <span style="font-weight: bold;">raise</span> <span style="font-weight: bold; text-decoration: underline;">Exception</span>(<span style="font-style: italic;">'nope.'</span>)
-    <span style="font-weight: bold;">if</span> n == <span style="font-weight: bold; text-decoration: underline;">0</span>:
-        <span style="font-weight: bold;">return</span> np.array([])
-    <span style="font-weight: bold;">if</span> n == <span style="font-weight: bold; text-decoration: underline;">1</span>:
-        <span style="font-weight: bold;">return</span> np.array([[n]])
-    <span style="font-weight: bold;">else</span>:
-        <span style="font-weight: bold; font-style: italic;">old</span> = fibonacci_squares_arr(n - <span style="font-weight: bold; text-decoration: underline;">1</span>)
-        <span style="font-weight: bold; font-style: italic;">side_len</span> = <span style="font-weight: bold;">max</span>(old.shape)
-        <span style="font-weight: bold; font-style: italic;">nxt</span> = np.full((side_len, side_len), n)
-        <span style="font-weight: bold; font-style: italic;">elems</span> = (old, nxt) <span style="font-weight: bold;">if</span> n // <span style="font-weight: bold; text-decoration: underline;">2</span> % <span style="font-weight: bold; text-decoration: underline;">2</span> == <span style="font-weight: bold; text-decoration: underline;">0</span> <span style="font-weight: bold;">else</span> (nxt, old)
-        <span style="font-weight: bold;">return</span> np.concatenate(elems, axis=<span style="font-weight: bold;">int</span>(n % <span style="font-weight: bold; text-decoration: underline;">2</span> == <span style="font-weight: bold; text-decoration: underline;">0</span>))
+<span class="org-keyword">def</span> <span class="org-function-name">fibonacci_squares_arr</span>(n):
+    <span class="org-keyword">if</span> n &lt; <span class="org-highlight-numbers-number">0</span>:
+        <span class="org-keyword">raise</span> <span class="org-type">Exception</span>(<span class="org-string">'nope.'</span>)
+    <span class="org-keyword">if</span> n == <span class="org-highlight-numbers-number">0</span>:
+        <span class="org-keyword">return</span> np.array([])
+    <span class="org-keyword">if</span> n == <span class="org-highlight-numbers-number">1</span>:
+        <span class="org-keyword">return</span> np.array([[n]])
+    <span class="org-keyword">else</span>:
+        <span class="org-variable-name">old</span> = fibonacci_squares_arr(n - <span class="org-highlight-numbers-number">1</span>)
+        <span class="org-variable-name">side_len</span> = <span class="org-builtin">max</span>(old.shape)
+        <span class="org-variable-name">nxt</span> = np.full((side_len, side_len), n)
+        <span class="org-variable-name">elems</span> = (old, nxt) <span class="org-keyword">if</span> n // <span class="org-highlight-numbers-number">2</span> % <span class="org-highlight-numbers-number">2</span> == <span class="org-highlight-numbers-number">0</span> <span class="org-keyword">else</span> (nxt, old)
+        <span class="org-keyword">return</span> np.concatenate(elems, axis=<span class="org-builtin">int</span>(n % <span class="org-highlight-numbers-number">2</span> == <span class="org-highlight-numbers-number">0</span>))
 
-<span style="font-weight: bold;">def</span> <span style="font-weight: bold;">fibonacci_squares</span>(n):
-    <span style="font-weight: bold; font-style: italic;">arr</span> = fibonacci_squares_arr(n)
-    <span style="font-weight: bold; font-style: italic;">chars</span> = <span style="font-weight: bold;">list</span>(<span style="font-style: italic;">'&#128997;&#128998;&#128999;&#129000;&#129001;&#129002;&#129003;'</span>)
-    <span style="font-weight: bold; font-style: italic;">fib_str</span> = <span style="font-style: italic;">'\n'</span>.join([<span style="font-style: italic;">''</span>.join([chars[(elem - <span style="font-weight: bold; text-decoration: underline;">1</span>) % <span style="font-weight: bold;">len</span>(chars)]
-                                  <span style="font-weight: bold;">for</span> elem <span style="font-weight: bold;">in</span> row]) <span style="font-weight: bold;">for</span> row <span style="font-weight: bold;">in</span> arr])
-    <span style="font-weight: bold;">return</span> fib_str
-<span style="font-weight: bold;">print</span>(fibonacci_squares(<span style="font-weight: bold; text-decoration: underline;">8</span>))
+<span class="org-keyword">def</span> <span class="org-function-name">fibonacci_squares</span>(n):
+    <span class="org-variable-name">arr</span> = fibonacci_squares_arr(n)
+    <span class="org-variable-name">chars</span> = <span class="org-builtin">list</span>(<span class="org-string">'&#128997;&#128998;&#128999;&#129000;&#129001;&#129002;&#129003;'</span>)
+    <span class="org-variable-name">fib_str</span> = <span class="org-string">'\n'</span>.join([<span class="org-string">''</span>.join([chars[(elem - <span class="org-highlight-numbers-number">1</span>) % <span class="org-builtin">len</span>(chars)]
+                                  <span class="org-keyword">for</span> elem <span class="org-keyword">in</span> row]) <span class="org-keyword">for</span> row <span class="org-keyword">in</span> arr])
+    <span class="org-keyword">return</span> fib_str
+<span class="org-keyword">print</span>(fibonacci_squares(<span class="org-highlight-numbers-number">8</span>))
 </pre>
 </div>
 
-<pre class="example" id="org76123cf">
+<pre class="example" id="org2d7000e">
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
@@ -356,18 +356,9 @@ Random thought: I should write some python code to generate these squares.<br />
 </pre>
 </div>
 </div>
-
-<div id="outline-container-backlinks" class="outline-2">
-<h2 id="backlinks">Links to this note</h2>
-<div class="outline-text-2" id="text-backlinks">
-<ul class="org-ul">
-<li><a href="sitemap.html">sitemap</a><br /></li>
-</ul>
-</div>
-</div>
 </div>
 <div id="postamble" class="status">
-<footer><p>Author: Ketan Agrawal</p><p>Last updated: 2021-06-26 Sat 14:50<p><footer>
+<p class="date">Last updated: 2021-07-15 Thu 17:02</p>
 </div>
 </body>
 </html>
