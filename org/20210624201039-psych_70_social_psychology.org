@@ -1,7 +1,7 @@
 #+title: PSYCH 70: Social Psychology
 
 * Introduction
-Think about a time you were happy / a time you were sad—were other people involved? We often experience emotions as a result of someone else.
+Think about a time you were happy / a time you were sad-- were other people involved? We often experience emotions as a result of someone else.
 
 ** Social psychology is not new.
 Philosophers have been intuitively (if not quite scientifically) thinking about these ideas for centuries!
@@ -59,7 +59,7 @@ Side note: whoa. Intuitively I feel like (and I'm of course enjoying that sweet 
 ** [[file:20210627180445-self_fulfilling_prophecy.org][Self-fulfilling prophecy]]
 You have expectations about someone => you behave accordingly towards them => they behave just how you expected => reinforces your expectations...
 
-This seems like a kind of [[file:20210626152258-positive_feedback_loop.org][positive feedback loop]] that can either go really well, or really badly. Parents have a huge role in establishing expectations for their children. (As a first-born son / grandson, I know this firsthand 😅)
+This seems like a kind of [[file:20210626152258-positive_feedback_loop.org][positive feedback loop]] that can either go really well, or really badly. Parents have a huge role in establishing expectations for their children. (As a first-born, I know this firsthand 😅)
 * [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]: cognitive dissonance theory
 Cognitive Dissonance Theory:
 - cognitive dissonance :: holding apparently incompatible / logically inconsistent thoughts about the world.
@@ -89,3 +89,67 @@ Spreading of alternatives: we post-hoc try to "justify" our decisions in life to
 Cognitive Behavioral Therapy: change behaviors in people's lives to change their psychology positively.
 
 Don't /think/ like you're the person you want to be, /act/ the way you want to be and become that person.
+* TODO [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]: attribution
+* [[file:20210716222804-norms.org][Norms]]
+- Norms :: Social "rules" that determine appropriate, acceptable behavior in a certain context.
+- Descriptive norms :: common patterns of behavior
+- Injunctive norms :: patterns of behavior that are commonly approved of / evaluated positively
+
+
+Injunctive (top) vs Descriptive? (left)
+|                  | Descriptive - Yes                       | Descriptive - No             |
+|------------------+-----------------------------------------+------------------------------|
+| /                | <                                       | <                            |
+| *Injunctive - Yes* | - driving on the right side of the road | - sharing cable accts        |
+|                  | - taking turns in conversation          | - culturally divisive issues |
+|                  | - standing in line                      | - solar panels               |
+|------------------+-----------------------------------------+------------------------------|
+| *Injunctive - No*  | - Fashionable clothes                   | - food choices               |
+|                  | - Manners of speaking                   | - name choice                |
+|                  | - Gender norms for asking out           |                              |
+
+
+These two types of norms are often overlapping signficantly -- injunctive rules become descriptive norms, (people strive to be normal in fear of judgment,) and then descriptive norms also become injunctive (people judge you for being abnormal.)
+
+Morals are injunctive norms about what is right or wrong.
+
+* Breaching Norms
+Breaching: the purposeful breaking of social norms (usu. descriptive, sometimes injunctive)
+
+E.g.: Stand in elevator facing the wrong way. Order pizza at McD's. Shake head while saying yes. Lol.
+
+You really only learn how strong a norm is when you try to break it. We're reaallllly socially programmed to not break them.
+
+(/Norm internalization/: people "self-sanction" for deviance) -- Panopticon -- feels like everyone is watching us, even when they're not watching us. We watch ourselves.
+
+Norm internalization / embarrassability associated with trustworthiness, monogamy, etc.
+
+Lots of the "sameness" we see in society actually has roots in the way they were socialized -- same initial conditions.
+** Reactions to breaches
+Common reactions to breaching of norms includes:
+
+- You are sanctioned
+  This is common for injunctive norms
+
+- Gently brought in line -- people want to maintain *fluidity of interaction*
+  breaching causes cognitive dissonance -- people seek to resolve it.
+
+  "Dramaturgical analysis" (Goffman): social order like a play. People read their lines, and if someone goes "off-script," they are gently guided back on
+
+  #+begin_quote
+And all the men and women merely players;
+They have their exits and their entrances;
+And one man in his time plays many parts. - Shakespeare
+  #+end_quote
+- You are imitated
+  This is (often but not always) common when the norm is privately unpopular. Can trigger a "cascade" effect...
+** Cascades
+Social influence is not just a stabilizing force -- can also create social change.
+
+Cascades have fascinating properties: "early movers" disproportionately influence. Unpredictable. Can destroy a norm, or create a new one.
+
+Random dance mob started at music festival = cascade. Emergent collective behavior
+
+Threshold model: People have "thresholds" = number of others who must join the collective behavior before individual will.
+
+Very sensitive to early movers: need people with 0- and low-thresholds. This makes it highly unpredictable (average threshold not necessarily telling the whole story.)
