@@ -1,6 +1,5 @@
 #+TITLE: sitemap
 
-- [[file:20210717185204-.org][20210717185204-]]
 - [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]
 - [[file:index.org][Hello]]
 - [[file:20210717175142-life_map.org][Life Map]]
