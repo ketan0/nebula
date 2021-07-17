@@ -1,0 +1,11 @@
+#+title: don't worry too much about constants.
+
+e.g. in the statement "I will read {x} papers," don't worry too much about what x is. The important part is that you have the statement.
+
+#+begin_src python :results output
+x = 100
+print(f'I will read {x} papers.')
+#+end_src
+
+#+RESULTS:
+: I will read 100 papers.

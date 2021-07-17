@@ -50,7 +50,6 @@
       (--reduce-from
        (let (
              (note-title (org-roam-db--get-title (car it))))
-         (message "Got backlink \"%s\"" note-title)
          (concat acc (if (or (string= note-title "sitemap") ;; exclude from backlinks
                              (string= note-title "Hello"))
                          ""
@@ -89,7 +88,7 @@
         :html-preamble-format (("en" "<a style=\"color: inherit; text-decoration: none\" href=\"/\"><h2>Ketan's Digital Laboratory &#129514;</h2></a>"))
         :html-postamble t
 
-        :html-postamble-format (("en" "<p class=\"date\">Last updated: %T</p>"))
+        :html-postamble-format (("en" "<p class=\"date\">Made with <span class=\"heart\">♥</span> using <a href=\"https://orgmode.org/\">org-mode</a>. Source code is available <a href=\"https://github.com/ketan0/digital-laboratory\">here</a></p>."))
         :html-link-home ""
         :html-link-up ""
         :html-head-extra "<link rel=\"stylesheet\" type=\"text/css\" href=\"syntax.css\" />"

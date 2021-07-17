@@ -1,0 +1,39 @@
+#+title: Life Map
+
+I normally don't like these kind of self-help guru tweets, but [[https://twitter.com/businessbarista/status/1415303812466814983][this]] seems like a useful framework to get me started. Some of the timelines might need to be adjusted, but hey, [[file:20210717184432-don_t_worry_too_much_about_constants.org][don't worry too much about constants.]]
+
+* Values
+- Live joyfully
+- Follow my curiosities deeply
+- Be honest
+- Be (actively) kind
+* 10 Year Plan (age 22 - 32)
+I will have a deep mastery of my field, and be extending it to new places. I will have built up a prolific body of work.
+I will have deep, meaningful relationships with my loved ones, friends, and colleagues.
+I will have inner peace, and have a 9/10 baseline happiness.
+* 3 Year Plan (age 22 - 25)
+(age 22) I will graduate from Stanford with my MS.
+
+(age 23) I will start a job in industry for a year (or two) that really allows me to grow as a person.
+
+(age 24/25) I will begin a PhD program with a research-active, friendly advisor whose research program fascinates me.
+* 1 Year Plan (age 22 - 23)
+I will establish solid habits of sleep, meditation, and exercise.
+
+I will get a job offer for a job that I am happy about.
+
+I will publish a paper at a top-tier conference, where I came up with the idea, and took it through to execution.
+
+I will narrow my focus + identify potential advisors for CS PhD.
+I will obtain recommendations from [redacted]
+
+I will deeply read and note 10 [[file:20210717185155-books.org][books]], and 100 papers by the end of the school year.
+* 90 Day Goals (age 22 - 22.25)
+I will finish [current project], and move on to a new project that will allow me to do independent research + publish.
+
+I will determine which path I want to pursue: (slow-term then PhD, job then PhD, direct to PhD)
+(assuming going for job) I will do interview prep for ML positions. I will start reaching out to more people in industry, as well as asking around in my current connections.
+
+I will deeply read and note 3 [[file:20210717185204-.org][books]]. I will deeply read and note 25 papers.
+* Weekly Review
+Check in for 1 hour to see how I'm progressing toward my 90-day goals. See if any issues have come up + address them. Modify goals if needed.

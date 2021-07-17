@@ -16,7 +16,11 @@ body {
   margin-bottom: 20px;
 }
 
-h2, h3, h4, h5, h6 {
+.heart{
+  color:#e25555;
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
   color: black;
 }
@@ -83,11 +87,15 @@ blockquote {
 }
 
 a {
-  color: color: rgba(37, 99, 235, 1);
+  color: color: rgb(37, 99, 235);
   text-decoration: none;
 }
 
+a:visited {
+  color: rgb(124, 58, 237);
+}
+
 a:hover {
-  color: color: rgba(30, 64, 175, 1);
+  color: color: rgb(30, 64, 175);
   text-decoration: underline;
 }
