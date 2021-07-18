@@ -1,7 +1,7 @@
 #+title: counterfactual inference in ML
 
 * Pearl's Causal Hierarchy
-So I read the [[pdf:~/Dropbox/Apps/GoodNotes 5/GoodNotes/HCI/On Pearl’s Hierarchy and the Foundations of Causal Inference.pdf][On Pearl’s Hierarchy and the Foundations of Causal Inference]] more deeply, and I think I get the mathematics of it now.
+So I read the [[https://causalai.net/r60.pdf][On Pearl’s Hierarchy and the Foundations of Causal Inference]] more deeply, and I think I get the mathematics of it now.
 So L1, L2, and L3 represent observational, interventional, and counterfactual layers, respectively.
 L2 inference requires more model specification than L1, and L3 requires more than L2.
 
