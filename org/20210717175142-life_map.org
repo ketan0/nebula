@@ -16,7 +16,7 @@ I will have inner peace, and have a 9/10 baseline happiness.
 
 (age 23) I will start a job in industry for a year (or two) that really allows me to grow as a person.
 
-(age 24/25) I will begin a PhD prog ram with a research-active, friendly advisor whose research program fascinates me.
+(age 24/25) I will begin a PhD program with a research-active, friendly advisor whose research program fascinates me.
 * 1 Year Plan (age 22 - 23)
 I will establish solid habits of sleep, meditation, and exercise.
 
@@ -34,6 +34,6 @@ I will finish [current project], and move on to a new project that will allow me
 I will determine which path I want to pursue: (slow-term then PhD, job then PhD, direct to PhD)
 (assuming going for job) I will do interview prep for ML positions. I will start reaching out to more people in industry, as well as asking around in my current connections.
 
-I will deeply read and note 3 [[file:20210717185204-.org][books]]. I will deeply read and note 25 papers.
+I will deeply read and note 3 [[file:20210717185155-books.org][books]] I will deeply read and note 25 papers.
 * Weekly Review
 Check in for 1 hour to see how I'm progressing toward my 90-day goals. See if any issues have come up + address them. Modify goals if needed.

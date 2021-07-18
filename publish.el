@@ -74,32 +74,40 @@
 (add-hook 'org-export-before-processing-hook 'ketan0/org-export-preprocessor)
 
 (setq org-publish-project-alist
-'(("digital laboratory"
-        :base-directory "./org"
-        :publishing-function org-html-publish-to-html
-        :publishing-directory "./html"
-        :auto-sitemap t
-        :sitemap-title "sitemap"
-        ;; :html-head-include-default-style nil
-        :section-numbers nil
-        :with-toc nil
-        :preserve-breaks t
-        :html-preamble t
-        :html-preamble-format (("en" "<a style=\"color: inherit; text-decoration: none\" href=\"/\"><h2>Ketan's Digital Laboratory &#129514;</h2></a>"))
-        :html-postamble t
+        '(("digital laboratory"
+           :base-directory "./org"
+           :publishing-function org-html-publish-to-html
+           :publishing-directory "./html"
+           :auto-sitemap t
+           :sitemap-title "sitemap"
+           ;; :html-head-include-default-style nil
+           :section-numbers nil
+           :with-toc nil
+           :preserve-breaks t
+           :html-preamble t
+           :html-preamble-format (("en" "<a style=\"color: inherit; text-decoration: none\" href=\"/\"><h2>Ketan's Digital Laboratory &#129514;</h2></a>"))
+           :html-postamble t
 
-        :html-postamble-format (("en" "<p>Made with <span class=\"heart\">♥</span> using <a href=\"https://orgmode.org/\">org-mode</a>. Source code is available <a href=\"https://github.com/ketan0/digital-laboratory\">here</a>.</p>"))
-        :html-link-home ""
-        :html-link-up ""
-        :html-head-extra "<link rel=\"stylesheet\" type=\"text/css\" href=\"syntax.css\" />"
-        :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\" />")))
+           :html-postamble-format (("en" "<p>Made with <span class=\"heart\">♥</span> using <a href=\"https://orgmode.org/\">org-mode</a>. Source code is available <a href=\"https://github.com/ketan0/digital-laboratory\">here</a>.</p>
+<script src=\"https://unpkg.com/axios/dist/axios.min.js\"></script>
+<script src=\"https://unpkg.com/@popperjs/core@2\"></script>
+<script src=\"https://unpkg.com/tippy.js@6\"></script>
+<script src=\"tooltips.js\"></script>"))
+           :html-link-home ""
+           :html-link-up ""
+           :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"syntax.css\" />
+<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\" />"
+           :html-head-extra "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\" />
+<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\" />
+<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\" />
+<link rel=\"manifest\" href=\"/site.webmanifest\" />")))
 
 (section! "Publishing files")
 (when force
   (warn! "Force flag set"))
 
 (when force
-  (delete-directory "./html" t))
+  (mapcar 'delete-file (file-expand-wildcards "./html/*.html")))
 
 
 (org-publish "digital laboratory" force)

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-07-17 Sat 19:26 -->
+<!-- 2021-07-18 Sun 03:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>random</title>
@@ -193,8 +193,12 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel="stylesheet" type="text/css" href="styles.css" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
@@ -246,16 +250,15 @@
 </div>
 <div id="content">
 <h1 class="title">random</h1>
-
-<div id="outline-container-orgb5294fa" class="outline-2">
-<h2 id="orgb5294fa">test</h2>
-<div class="outline-text-2" id="text-orgb5294fa">
 <p>
-Here&rsquo;s some random python because I&rsquo;m bored. Here&rsquo;s some more text to extend this paragraph to be longer, so I can see the effects of doing that.<br />
+Just random stuff, to test out various fun features of this hacked together org-mode blogging system.<br />
 </p>
 
+<div id="outline-container-org59312a0" class="outline-2">
+<h2 id="org59312a0">code blocks</h2>
+<div class="outline-text-2" id="text-org59312a0">
 <p>
-And here&rsquo;s another paragraph!<br />
+Here&rsquo;s some python:<br />
 </p>
 <div class="org-src-container">
 <pre class="src src-python"><span class="org-keyword">from</span> datetime <span class="org-keyword">import</span> datetime
@@ -281,14 +284,36 @@ And here&rsquo;s some elisp too:<br />
 <pre class="example">
 hi
 </pre>
-
-
+</div>
+</div>
+<div id="outline-container-orge8d1df5" class="outline-2">
+<h2 id="orge8d1df5">LaTeX</h2>
+<div class="outline-text-2" id="text-orge8d1df5">
 <p>
 Here&rsquo;s some mathjax-rendered LaTeX:<br />
-\(\sum_{i=0}^{10} x\)<br />
+\(h(x) = \theta_0 + \theta_1x_1 + \theta_2x_2\)<br />
 </p>
 </div>
 </div>
+<div id="outline-container-org645fef5" class="outline-2">
+<h2 id="org645fef5">Tippy</h2>
+<div class="outline-text-2" id="text-org645fef5">
+<p>
+Ok so on hover, we want to:<br />
+</p>
+
+<ol class="org-ol">
+<li>fetch the page<br /></li>
+<li>set <code>data-tippy-content</code> on the <code>&lt;a&gt;</code> element to the fetched data<br /></li>
+<li>call <code>tippy('[data-tippy-content]')</code><br /></li>
+</ol>
+
+<p>
+<a href="20210717175142-life_map.html">Life Map</a><br />
+</p>
+</div>
+</div>
+
 <div id="outline-container-org6b42423" class="outline-2">
 <h2 id="org6b42423">Fibonacci squares</h2>
 <div class="outline-text-2" id="text-org6b42423">
@@ -331,7 +356,7 @@ Random thought: I should write some python code to generate these squares.<br />
 </pre>
 </div>
 
-<pre class="example" id="org12dba82">
+<pre class="example" id="org7d34b1d">
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
@@ -359,6 +384,10 @@ Random thought: I should write some python code to generate these squares.<br />
 </div>
 <div id="postamble" class="status">
 <p>Made with <span class="heart">♥</span> using <a href="https://orgmode.org/">org-mode</a>. Source code is available <a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="tooltips.js"></script>
 </div>
 </body>
 </html>

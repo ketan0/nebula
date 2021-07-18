@@ -1,9 +1,9 @@
 #+title: random
 
-* test
-Here's some random python because I'm bored. Here's some more text to extend this paragraph to be longer, so I can see the effects of doing that.
+Just random stuff, to test out various fun features of this hacked together org-mode blogging system.
 
-And here's another paragraph!
+* code blocks
+Here's some python:
 #+begin_src python :results output
 from datetime import datetime
 print(datetime.now())
@@ -21,9 +21,18 @@ And here's some elisp too:
 
 #+RESULTS:
 : hi
-
+* LaTeX
 Here's some mathjax-rendered LaTeX:
-$\sum_{i=0}^{10} x$
+$h(x) = \theta_0 + \theta_1x_1 + \theta_2x_2$
+* Tippy
+Ok so on hover, we want to:
+
+1) fetch the page
+2) set =data-tippy-content= on the ~<a>~ element to the fetched data
+3) call ~tippy('[data-tippy-content]')~
+
+[[file:20210717175142-life_map.org][Life Map]]
+
 * Fibonacci squares
 
 Random thought: I should write some python code to generate these squares.

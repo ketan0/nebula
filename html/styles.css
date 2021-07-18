@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
   background-color: #fff;
   font-family: 'Roboto Mono', 'Courier', 'Helvetica', sans-serif;
@@ -20,7 +24,7 @@ body {
   color:#e25555;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
   color: black;
 }
@@ -98,4 +102,30 @@ a:visited {
 a:hover {
   color: color: rgb(30, 64, 175);
   text-decoration: underline;
+}
+
+.tippy-box {
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.tippy-box[data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: #ddd;
+}
+.tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: #ddd;
+}
+.tippy-box[data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: #ddd;
+}
+.tippy-box[data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: #ddd;
+}
+.tippy-content {
+  color: #2B2B2B;
+  max-height: 30rem;
+  overflow-y: auto;
+}
+
+code {
+  background-color: rgb(229, 231, 235);
 }

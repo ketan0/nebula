@@ -26,9 +26,7 @@
 </script>
 #+END_EXPORT
 
-Hey! I'm Ketan Agrawal, and this is my digital laboratory. It is in essence very similar to a [[https://maggieappleton.com/garden-history/][digital garden]], but with an additional emphasis on experimentation and interactivity.
-
-You can see what I'm thinking about on my [[file:starting_points.org][starting points]] page.
+Hey! I'm Ketan, and this is my digital laboratory. It is in essence very similar to a [[https://maggieappleton.com/garden-history/][digital garden]], but with an additional emphasis on experimentation and interactivity.
 
 [[file:sitemap.org][sitemap]]
 [[https://ketan.me/][main personal website]]
