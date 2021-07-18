@@ -9,7 +9,7 @@
 - [[file:20210629174811-zen_and_the_art_of_motorcycle_maintenance.org][Zen and the Art of Motorcycle Maintenance]]
 - [[file:20210623024548-affordances.org][affordances]]
 - [[file:20210717185155-books.org][books]]
-- [[file:counterfactual_inference.org][counterfactual inference in ML]]
+- [[file:counterfactual_inference.org][counterfactual inference]]
 - [[file:20210717184432-don_t_worry_too_much_about_constants.org][don't worry too much about constants.]]
 - [[file:20210629174828-lateral_drift.org][lateral drift]]
 - [[file:20210626152258-positive_feedback_loop.org][positive feedback loop]]

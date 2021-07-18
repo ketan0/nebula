@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-07-18 Sun 15:57 -->
+<!-- 2021-07-18 Sun 16:25 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>counterfactual inference in ML</title>
+<title>counterfactual inference</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Ketan Agrawal" />
 <style type="text/css">
@@ -249,47 +249,60 @@
 <a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Digital Laboratory &#129514;</h2></a>
 </div>
 <div id="content">
-<h1 class="title">counterfactual inference in ML</h1>
+<h1 class="title">counterfactual inference</h1>
 
 <div id="outline-container-org7c244d4" class="outline-2">
 <h2 id="org7c244d4">Pearl&rsquo;s Causal Hierarchy</h2>
 <div class="outline-text-2" id="text-org7c244d4">
 <p>
-So I read the <a href="https://causalai.net/r60.pdf">On Pearl’s Hierarchy and the Foundations of Causal Inference</a> more deeply, and I think I get the mathematics of it now.<br />
-So L1, L2, and L3 represent observational, interventional, and counterfactual layers, respectively.<br />
-L2 inference requires more model specification than L1, and L3 requires more than L2.<br />
+Based on my reading of <a href="https://causalai.net/r60.pdf">On Pearl’s Hierarchy and the Foundations of Causal Inference</a>:<br />
 </p>
 
+<p>
+Pearl lays out three &ldquo;layers&rdquo; of his causal hierarchy. Each successive layer requires more information than the last, and also allows you to make more sophisticated inferences than the last.<br />
+</p>
+</div>
+<div id="outline-container-orgda5b7fd" class="outline-3">
+<h3 id="orgda5b7fd">Observational layer (\(\mathcal{L}_1\))</h3>
+<div class="outline-text-3" id="text-orgda5b7fd">
 <p>
 \(\mathcal{L}_1\) supports terms like \(P(\mathbf{Y}=\mathbf{y})\)<br />
+In other words, \(\mathcal{L}_1\) supports no intervention (or the empty intervention, I guess.)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orge9f600e" class="outline-3">
+<h3 id="orge9f600e">Interventional layer (\(\mathcal{L}_2\))</h3>
+<div class="outline-text-3" id="text-orge9f600e">
+<p>
 \(\mathcal{L}_2\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y})\)<br />
+In other words, \(\mathcal{L}_2\) supports only one intervention.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org555f03d" class="outline-3">
+<h3 id="org555f03d">Counterfactual layer (\(\mathcal{L}_3\))</h3>
+<div class="outline-text-3" id="text-org555f03d">
+<p>
 \(\mathcal{L}_3\) supports terms like \(P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})\)<br />
+In other words, \(\mathcal{L}_3\) supports multiple (potentially) inconsistent interventions.<br />
 </p>
 
 <p>
-In other words,<br />
+\(\mathcal{L}_3\)  requires a fully specified structural causal model.<br />
 </p>
-
-<p>
-\(\mathcal{L}_1\) supports no intervention (or the empty intervention, I guess.)<br />
-\(\mathcal{L}_2\) supports only one intervention.<br />
-\(\mathcal{L}_3\) supports multiple (potentially) inconsistent interventions.<br />
-</p>
+</div>
 </div>
 </div>
 <div id="outline-container-orgffb52ff" class="outline-2">
 <h2 id="orgffb52ff">The difference between intervention and counterfactuals</h2>
 <div class="outline-text-2" id="text-orgffb52ff">
 <p>
-Basically, in terms of the math, counterfactual is just an intervention where we have conditioned on past events. It&rsquo;s useful to visualize this in terms of sampling: in the drug example, we first restrict the &ldquo;pool&rdquo; to those where \(X=0,Y=0\). Then we ask &ldquo;out of these, how many, if we intervene and set \(X = 1\), change to \(Y_{X=1} = 1\)?&rdquo;<br />
+A counterfactual is just an intervention where we have conditioned on the fact that past events happened (potentially contradictory to the intervention.) It&rsquo;s useful to visualize this in terms of sampling: in the drug example, we first restrict the &ldquo;pool&rdquo; by conditioning on \(X=0, Y=0\) &#x2013; that is, patients who didn&rsquo;t receive the treatment, and didn&rsquo;t survive. Then we ask &ldquo;out of these, how many, if we intervene and set \(X = 1\) (i.e., if we <i>had</i> given the patient the treatment), <i>would have</i> survived (i.e. \(Y=1\))?&rdquo; Altogether, we can express this as:<br />
 </p>
-</div>
-</div>
-<div id="outline-container-orgd28b755" class="outline-2">
-<h2 id="orgd28b755">Random idea I had for counterfactuals</h2>
-<div class="outline-text-2" id="text-orgd28b755">
+
 <p>
-Google Maps routes &#x2013; what happens if you min-edit-distance a certain part of the route?<br />
+\(P(Y_{X=1} = 1 |X=0,Y=0)\). This can be written as \(P(Y_{X=1}=1,X=0,Y=0) / P(X=0,Y=0)\) (Where the denominator is trivial to obtain from any observational data) &#x2013; and thus we can see the numerator matches the form of \(P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})\), with a joint distribution over multiple &ldquo;worlds&rdquo; that are inconsistent with each other. So, it&rsquo;s an \(\mathcal{L}_3\) expression.<br />
 </p>
 </div>
 </div>

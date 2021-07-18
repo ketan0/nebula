@@ -1,20 +1,21 @@
-#+title: counterfactual inference in ML
+#+title: counterfactual inference
 
 * Pearl's Causal Hierarchy
-So I read the [[https://causalai.net/r60.pdf][On Pearl’s Hierarchy and the Foundations of Causal Inference]] more deeply, and I think I get the mathematics of it now.
-So L1, L2, and L3 represent observational, interventional, and counterfactual layers, respectively.
-L2 inference requires more model specification than L1, and L3 requires more than L2.
+Based on my reading of [[https://causalai.net/r60.pdf][On Pearl’s Hierarchy and the Foundations of Causal Inference]]:
 
+Pearl lays out three "layers" of his causal hierarchy. Each successive layer requires more information than the last, and also allows you to make more sophisticated inferences than the last.
+** Observational layer ($\mathcal{L}_1$)
 $\mathcal{L}_1$ supports terms like $P(\mathbf{Y}=\mathbf{y})$
+In other words, $\mathcal{L}_1$ supports no intervention (or the empty intervention, I guess.)
+** Interventional layer ($\mathcal{L}_2$)
 $\mathcal{L}_2$ supports terms like $P(\mathbf{Y_x}=\mathbf{y})$
+In other words, $\mathcal{L}_2$ supports only one intervention.
+** Counterfactual layer ($\mathcal{L}_3$)
 $\mathcal{L}_3$ supports terms like $P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})$
+In other words, $\mathcal{L}_3$ supports multiple (potentially) inconsistent interventions.
 
-In other words,
-
-$\mathcal{L}_1$ supports no intervention (or the empty intervention, I guess.)
-$\mathcal{L}_2$ supports only one intervention.
-$\mathcal{L}_3$ supports multiple (potentially) inconsistent interventions.
+$\mathcal{L}_3$  requires a fully specified structural causal model.
 * The difference between intervention and counterfactuals
-Basically, in terms of the math, counterfactual is just an intervention where we have conditioned on past events. It's useful to visualize this in terms of sampling: in the drug example, we first restrict the "pool" to those where $X=0,Y=0$. Then we ask "out of these, how many, if we intervene and set $X = 1$, change to $Y_{X=1} = 1$?"
-* Random idea I had for counterfactuals
-Google Maps routes -- what happens if you min-edit-distance a certain part of the route?
+A counterfactual is just an intervention where we have conditioned on the fact that past events happened (potentially contradictory to the intervention.) It's useful to visualize this in terms of sampling: in the drug example, we first restrict the "pool" by conditioning on $X=0, Y=0$ -- that is, patients who didn't receive the treatment, and didn't survive. Then we ask "out of these, how many, if we intervene and set $X = 1$ (i.e., if we /had/ given the patient the treatment), /would have/ survived (i.e. $Y=1$)?" Altogether, we can express this as:
+
+$P(Y_{X=1} = 1 |X=0,Y=0)$. This can be written as $P(Y_{X=1}=1,X=0,Y=0) / P(X=0,Y=0)$ (Where the denominator is trivial to obtain from any observational data) -- and thus we can see the numerator matches the form of $P(\mathbf{Y_x}=\mathbf{y},...,\mathbf{Z_w}=\mathbf{z})$, with a joint distribution over multiple "worlds" that are inconsistent with each other. So, it's an $\mathcal{L}_3$ expression.
