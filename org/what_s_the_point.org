@@ -1,16 +1,16 @@
 :PROPERTIES:
 :ID:       e6aca40a-e418-4a55-b74e-dfb0109152aa
 :END:
-#+title: What's the point of a digital [garden / lab / whatever]?
+#+title: What's the point of a digital lab [/garden/whatever]?
 
 Isn't everything already on Wikipedia??
 
 Well, there's a couple things to say to that.
 
 * Original thinking
-My digital lab serves as a place for
-* Novel connections
+My digital lab serves as a place for me not to regurgitate information that I know, but rather to make sense of it, and maybe even synthesize it into something new.
+* Making connections
 #+begin_export html
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">perhaps adding new edges to our knowledge graph is more important than adding new nodes. That is, maybe discovering the isomorphisms/analogies between existing concepts is more powerful than learning new concepts</p>&mdash; Ketan Agrawal (@_ketan0) <a href="https://twitter.com/_ketan0/status/1095452380282249216?ref_src=twsrc%5Etfw">February 12, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 #+end_export
-I firmly believe that
+It seems like things gain more meaning when they are multiply-connected into the fabric of our reality.

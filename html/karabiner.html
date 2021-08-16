@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-08-16 Mon 06:19 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>goku (karabiner) config</title>
+<meta name="author" content="Ketan Agrawal" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="syntax.css" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+<div id="preamble" class="status">
+<a style="color: inherit; text-decoration: none" href="/">
+<h2>Ketan's Digital Laboratory &#129514;</h2>
+</a>
+</div>
+<div id="content" class="content">
+<h1 class="title">goku (karabiner) config</h1>
+<p>
+Created by Ketan Agrawal<br />
+</p>
+
+
+
+<p>
+inspiration taken from these goku configs:<br />
+</p>
+<ul class="org-ul">
+<li><a href="https://github.com/yqrashawn/yqdotfiles/blob/master/.config/karabiner.edn">yqrashawn</a><br /></li>
+<li><a href="https://github.com/nikitavoloboev/dotfiles/blob/master/karabiner/karabiner.edn">nikitavoloboev</a><br /></li>
+<li><a href="https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126">kaushikgopal</a><br /></li>
+</ul>
+
+<p>
+This is my literate config for <a href="https://github.com/yqrashawn/GokuRakuJoudo">goku</a>. It makes it easy to define keyboard shortcuts in a succinct and powerful way.<br />
+</p>
+
+<div id="outline-container-orge629072" class="outline-2">
+<h2 id="orge629072">Guide</h2>
+<div class="outline-text-2" id="text-orge629072">
+<p>
+For more info on configuring Goku, see the <a href="https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md">tutorial</a>.<br />
+Guide lifted from <a href="https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126">kaushikgopal</a>. To understand better how modifiers work in karabiner, see the karabiner definition of mandatory and optional: <a href="https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/#frommodifiersoptional%20%20%20">karabiner modifiers documentation</a><br />
+need to prefix C T O S F with ! or #<br />
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Modifier</th>
+<th scope="col" class="org-left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">!</td>
+<td class="org-left">mandatory (w/o modifier changes behavior)</td>
+</tr>
+
+<tr>
+<td class="org-left">#</td>
+<td class="org-left">optional (but at least one necessary)</td>
+</tr>
+
+<tr>
+<td class="org-left">C</td>
+<td class="org-left">left command</td>
+</tr>
+
+<tr>
+<td class="org-left">T</td>
+<td class="org-left">left control</td>
+</tr>
+
+<tr>
+<td class="org-left">O</td>
+<td class="org-left">left option</td>
+</tr>
+
+<tr>
+<td class="org-left">S</td>
+<td class="org-left">left shift</td>
+</tr>
+
+<tr>
+<td class="org-left">F</td>
+<td class="org-left">fn</td>
+</tr>
+
+<tr>
+<td class="org-left">Q</td>
+<td class="org-left">right command</td>
+</tr>
+
+<tr>
+<td class="org-left">W</td>
+<td class="org-left">right control</td>
+</tr>
+
+<tr>
+<td class="org-left">E</td>
+<td class="org-left">right option</td>
+</tr>
+
+<tr>
+<td class="org-left">R</td>
+<td class="org-left">right shift</td>
+</tr>
+
+<tr>
+<td class="org-left">##</td>
+<td class="org-left">optional any</td>
+</tr>
+
+<tr>
+<td class="org-left">!!</td>
+<td class="org-left">command + control + optional + shift (hyper)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgbc30432" class="outline-2">
+<h2 id="orgbc30432">Profiles</h2>
+<div class="outline-text-2" id="text-orgbc30432">
+<div class="org-src-container">
+<pre class="src src-clojure">{<span class="org-comment-delimiter">;;</span><span class="org-comment">beginning bracket for whole data structure -- don't delete!</span>
+
+ <span class="org-clojure-keyword">:profiles</span> {
+            <span class="org-clojure-keyword">:Ketan</span> {
+                    <span class="org-clojure-keyword">:default</span> <span class="org-constant">true</span>
+                    <span class="org-clojure-keyword">:sim</span>     500    <span class="org-comment-delimiter">;; </span><span class="org-comment">simultaneous_threshold_milliseconds (def: 50)</span>
+                    <span class="org-comment-delimiter">;; </span><span class="org-comment">keys need to be pressed within this threshold to be considered simultaneous</span>
+                    <span class="org-clojure-keyword">:delay</span>   80    <span class="org-comment-delimiter">;; </span><span class="org-comment">to_delayed_action_delay_milliseconds (def: 500)</span>
+                    <span class="org-comment-delimiter">;; </span><span class="org-comment">basically it means time after which the key press is count delayed</span>
+                    <span class="org-clojure-keyword">:alone</span>   500      <span class="org-comment-delimiter">;; </span><span class="org-comment">to_if_alone_timeout_milliseconds (def: 1000)</span>
+                    <span class="org-comment-delimiter">;; </span><span class="org-comment">hold for 995s and single tap registered; hold for 1005s and seen as modifier</span>
+                    <span class="org-clojure-keyword">:held</span>    1000   <span class="org-comment-delimiter">;; </span><span class="org-comment">to_if_held_down_threshold_milliseconds (def: 500)</span>
+                    <span class="org-comment-delimiter">;; </span><span class="org-comment">key is fired twice when 500 ms is elapsed (otherwise seen as a hold command)</span>
+                    }
+            } <span class="org-comment-delimiter">;; </span><span class="org-comment">profiles</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org48f5920" class="outline-2">
+<h2 id="org48f5920">Templates</h2>
+<div class="outline-text-2" id="text-org48f5920">
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:templates</span> {
+            <span class="org-clojure-keyword">:km</span> <span class="org-string">"osascript -e 'tell application </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">Keyboard Maestro Engine</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string"> to do script </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">%s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string"> with parameter </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">%s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">'"</span>
+            <span class="org-comment-delimiter">;; </span><span class="org-comment">Removed the quotes around %s because it makes it not able to open files too</span>
+            <span class="org-clojure-keyword">:open</span> <span class="org-string">"open '%s'"</span>
+            <span class="org-clojure-keyword">:smarturl</span> <span class="org-string">"osascript ~/.dotfiles/open_url_smart.scpt '%s'"</span>
+            <span class="org-clojure-keyword">:openwith</span> <span class="org-string">"open -a '%s' '%s'"</span>
+            <span class="org-clojure-keyword">:openhide</span> <span class="org-string">"open '%s' -gj"</span>
+            <span class="org-clojure-keyword">:withsecret</span> <span class="org-string">"source ~/.dotfiles/.secrets &amp;&amp; %s"</span>
+            <span class="org-clojure-keyword">:withsecretsmarturl</span> <span class="org-string">"source ~/.dotfiles/.secrets &amp;&amp; osascript ~/.dotfiles/open_url_smart.scpt %s"</span>
+            <span class="org-clojure-keyword">:alfred</span> <span class="org-string">"osascript -e 'tell application </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">Alfred 4</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string"> to run trigger </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">%s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string"> in workflow </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">%s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string"> with argument </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">%s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">'"</span>
+            <span class="org-clojure-keyword">:wallpaper</span> <span class="org-string">"osascript -e 'tell application </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">Finder</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string"> to set desktop picture to POSIX file </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">%s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">'"</span>
+            <span class="org-clojure-keyword">:elisp</span> <span class="org-string">"/usr/local/bin/emacsclient --eval '(progn (select-frame-set-input-focus (selected-frame))%s)'"</span>
+            } <span class="org-comment-delimiter">;; </span><span class="org-comment">templates</span>
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7b97e31" class="outline-2">
+<h2 id="org7b97e31">Layers &amp; Simlayers</h2>
+<div class="outline-text-2" id="text-org7b97e31">
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:layers</span> {
+
+         <span class="org-clojure-keyword">:tab-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:tab</span>
+                    <span class="org-clojure-keyword">:afterup</span> [{<span class="org-clojure-keyword">:set</span> [<span class="org-string">"yabai-move-mode"</span> 0]}
+                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"yabai-focus-mode"</span> 0]}
+                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"yabai-display-mode"</span> 0]}
+                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"chrome-movement-mode"</span> 0]}
+                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"chrome-rearrange-tab-mode"</span> 0]}]}
+
+         <span class="org-clojure-keyword">:yabai-move-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:w</span> <span class="org-clojure-keyword">:condi</span> <span class="org-clojure-keyword">:tab-mode</span>}
+         <span class="org-clojure-keyword">:yabai-focus-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:f</span> <span class="org-clojure-keyword">:condi</span> <span class="org-clojure-keyword">:tab-mode</span>}
+         <span class="org-clojure-keyword">:yabai-display-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:d</span> <span class="org-clojure-keyword">:condi</span> <span class="org-clojure-keyword">:tab-mode</span>}
+         <span class="org-clojure-keyword">:chrome-movement-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:t</span> <span class="org-clojure-keyword">:condi</span> <span class="org-clojure-keyword">:tab-mode</span>} <span class="org-comment-delimiter">;;</span><span class="org-comment">TODO make this work</span>
+         <span class="org-clojure-keyword">:chrome-history-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:g</span> <span class="org-clojure-keyword">:condi</span> <span class="org-clojure-keyword">:tab-mode</span>} <span class="org-comment-delimiter">;;</span><span class="org-comment">TODO make this work</span>
+         <span class="org-clojure-keyword">:chrome-rearrange-tab-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:r</span> <span class="org-clojure-keyword">:condi</span> <span class="org-clojure-keyword">:tab-mode</span>}
+         <span class="org-clojure-keyword">:vim-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:z</span>}
+         <span class="org-clojure-keyword">:tilde-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:grave_accent_and_tilde</span>}
+}
+
+<span class="org-clojure-keyword">:simlayers</span> {
+        <span class="org-clojure-keyword">:slash-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:slash</span>}
+        <span class="org-clojure-keyword">:q-key-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:q</span>}
+        <span class="org-clojure-keyword">:x-key-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:x</span>}
+        <span class="org-clojure-keyword">:jupyter-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:j</span>}
+        <span class="org-clojure-keyword">:o-key-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:o</span>}
+        <span class="org-clojure-keyword">:comma-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:comma</span>}
+        <span class="org-clojure-keyword">:wallpaper-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:w</span>}
+}
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1dbb7ce" class="outline-2">
+<h2 id="org1dbb7ce">Main</h2>
+<div class="outline-text-2" id="text-org1dbb7ce">
+</div>
+<div id="outline-container-org3a4beb7" class="outline-3">
+<h3 id="org3a4beb7">begin main</h3>
+<div class="outline-text-3" id="text-org3a4beb7">
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:main</span> [{
+        <span class="org-clojure-keyword">:des</span> <span class="org-string">"see karabiner.org for documentation."</span>,
+        <span class="org-clojure-keyword">:rules</span> [
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfedff5d" class="outline-3">
+<h3 id="orgfedff5d">right cmd/option =&gt; previous app</h3>
+<div class="outline-text-3" id="text-orgfedff5d">
+<p>
+Switch to the previous application with right command/option &#x2013; right command hides the current app, right option doesn't.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-clojure">[<span class="org-clojure-keyword">:right_command</span> <span class="org-clojure-keyword">:right_command</span> <span class="org-constant">nil</span> {<span class="org-clojure-keyword">:alone</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Previous Application"</span> <span class="org-string">"hide"</span>]}]
+[<span class="org-clojure-keyword">:right_option</span> <span class="org-clojure-keyword">:right_option</span> <span class="org-constant">nil</span> {<span class="org-clojure-keyword">:alone</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Previous Application"</span>]}]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb15d61a" class="outline-3">
+<h3 id="orgb15d61a">caps lock alone = escape, with other keys = ctrl</h3>
+<div class="outline-text-3" id="text-orgb15d61a">
+<div class="org-src-container">
+<pre class="src src-clojure">[<span class="org-clojure-keyword">:##caps_lock</span> <span class="org-clojure-keyword">:left_control</span> <span class="org-constant">nil</span> {<span class="org-clojure-keyword">:alone</span> <span class="org-clojure-keyword">:escape</span>}]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8a3fab0" class="outline-3">
+<h3 id="org8a3fab0">yabai-move-mode (tab + w + {hjkl})</h3>
+<div class="outline-text-3" id="text-org8a3fab0">
+<p>
+Move the current window directionally in the yabai tiling setup.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:yabai-move-mode</span>
+[<span class="org-clojure-keyword">:h</span> <span class="org-string">"/usr/local/bin/yabai -m window --warp west"</span>]
+[<span class="org-clojure-keyword">:j</span> <span class="org-string">"/usr/local/bin/yabai -m window --warp south"</span>]
+[<span class="org-clojure-keyword">:k</span> <span class="org-string">"/usr/local/bin/yabai -m window --warp north"</span>]
+[<span class="org-clojure-keyword">:l</span> <span class="org-string">"/usr/local/bin/yabai -m window --warp east"</span>]
+[<span class="org-clojure-keyword">:b</span> <span class="org-string">"/usr/local/bin/yabai -m space --balance"</span>]
+[:0 <span class="org-string">"/usr/local/bin/yabai -m window --opacity 0.0"</span>]
+[:1 <span class="org-string">"/usr/local/bin/yabai -m window --opacity 0.1"</span>]
+[:2 <span class="org-string">"/usr/local/bin/yabai -m window --opacity 0.2"</span>]
+[:3 <span class="org-string">"/usr/local/bin/yabai -m window --opacity 0.3"</span>]
+[:4 <span class="org-string">"/usr/local/bin/yabai -m window --opacity 0.4"</span>]
+[:5 <span class="org-string">"/usr/local/bin/yabai -m window --opacity 0.5"</span>]
+[:6 <span class="org-string">"/usr/local/bin/yabai -m window --opacity 0.6"</span>]
+[:7 <span class="org-string">"/usr/local/bin/yabai -m window --opacity 0.7"</span>]
+[:8 <span class="org-string">"/usr/local/bin/yabai -m window --opacity 0.8"</span>]
+[:9 <span class="org-string">"/usr/local/bin/yabai -m window --opacity 0.9"</span>]
+[<span class="org-clojure-keyword">:grave_accent_and_tilde</span> <span class="org-string">"/usr/local/bin/yabai -m window --opacity 1.0"</span>]
+[<span class="org-clojure-keyword">:s</span> <span class="org-string">"/usr/local/bin/yabai -m window --toggle split"</span>]
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf97e9a1" class="outline-3">
+<h3 id="orgf97e9a1">yabai-focus-mode (tab + f + {hjkl})</h3>
+<div class="outline-text-3" id="text-orgf97e9a1">
+<p>
+Move focus to the left/top/bottom/right of the current window.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:yabai-focus-mode</span>
+[<span class="org-clojure-keyword">:g</span> <span class="org-string">"/usr/local/bin/yabai -m space --focus prev"</span>]
+[<span class="org-clojure-keyword">:h</span> <span class="org-string">"/usr/local/bin/yabai -m window --focus west"</span>]
+[<span class="org-clojure-keyword">:j</span> <span class="org-string">"/usr/local/bin/yabai -m window --focus south"</span>]
+[<span class="org-clojure-keyword">:k</span> <span class="org-string">"/usr/local/bin/yabai -m window --focus north"</span>]
+[<span class="org-clojure-keyword">:l</span> <span class="org-string">"/usr/local/bin/yabai -m window --focus east"</span>]
+[<span class="org-clojure-keyword">:semicolon</span> <span class="org-string">"/usr/local/bin/yabai -m space --focus next"</span>]
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org23538eb" class="outline-3">
+<h3 id="org23538eb">yabai-display-mode (tab + d + {hjkl})</h3>
+<div class="outline-text-3" id="text-org23538eb">
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:yabai-display-mode</span>
+[<span class="org-clojure-keyword">:h</span> <span class="org-string">"/usr/local/bin/yabai -m display --focus prev"</span>]
+[<span class="org-clojure-keyword">:j</span> <span class="org-string">"/usr/local/bin/yabai -m window --display prev &amp;&amp; /usr/local/bin/yabai -m display --focus prev"</span>]
+[<span class="org-clojure-keyword">:k</span> <span class="org-string">"/usr/local/bin/yabai -m window --display next &amp;&amp; /usr/local/bin/yabai -m display --focus next"</span>]
+[<span class="org-clojure-keyword">:l</span> <span class="org-string">"/usr/local/bin/yabai -m display --focus next"</span>]
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc1e1072" class="outline-3">
+<h3 id="orgc1e1072">chrome-history-mode (tab + g + {hl})</h3>
+<div class="outline-text-3" id="text-orgc1e1072">
+<p>
+Move backward/forward in Chrome history.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:chrome-history-mode</span>
+[<span class="org-clojure-keyword">:h</span> <span class="org-clojure-keyword">:!Copen_bracket</span>]
+[<span class="org-clojure-keyword">:l</span> <span class="org-clojure-keyword">:!Cclose_bracket</span>]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge70cf9c" class="outline-3">
+<h3 id="orge70cf9c">chrome-movement-mode (tab + t + {hl})</h3>
+<div class="outline-text-3" id="text-orge70cf9c">
+<p>
+Move to the tab left/right of the current tab.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:chrome-movement-mode</span>
+[<span class="org-clojure-keyword">:h</span> <span class="org-clojure-keyword">:!TStab</span>]
+[<span class="org-clojure-keyword">:l</span> <span class="org-clojure-keyword">:!Ttab</span>]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2d3dd45" class="outline-3">
+<h3 id="org2d3dd45">chrome-rearrange-tab-mode (tab + r + {hl})</h3>
+<div class="outline-text-3" id="text-org2d3dd45">
+<p>
+Move current tab left/right. Need <a href="https://chrome.google.com/webstore/detail/rearrange-tabs/ccnnhhnmpoffieppjjkhdakcoejcpbga">this Chrome extension</a> for this to work.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:chrome-rearrange-tab-mode</span>
+[<span class="org-clojure-keyword">:h</span> <span class="org-clojure-keyword">:!TSleft_arrow</span>]
+[<span class="org-clojure-keyword">:l</span> <span class="org-clojure-keyword">:!TSright_arrow</span>]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5842188" class="outline-3">
+<h3 id="org5842188">tab-mode (tab)</h3>
+<div class="outline-text-3" id="text-org5842188">
+<p>
+Mostly for opening apps, and some other convenient shortcuts like toggling dark mode and emojis.<br />
+</p>
+
+<p>
+Toggle system dark mode, as well as the emacs theme. (See <a href="https://github.com/ketan0/dotfiles/blob/master/doom.d/config.el">ketan0/responsive-theme</a> for details)<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-apples"><span class="org-apples-statements">tell</span> <span class="org-apples-statements">application</span> <span class="org-string">"System Events"</span>
+    <span class="org-apples-statements">tell</span> appearance <span class="org-apples-standard-folders">preferences</span>
+        <span class="org-apples-commands">set</span> dark mode <span class="org-apples-reserved-words">to</span> <span class="org-apples-operators">not</span> dark mode
+        <span class="org-apples-commands">do shell script</span> <span class="org-string">"/usr/local/bin/emacsclient --eval '(load-theme (ketan0/responsive-theme) t)'"</span>
+    <span class="org-apples-statements">end</span> <span class="org-apples-statements">tell</span>
+<span class="org-apples-statements">end</span> <span class="org-apples-statements">tell</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:tab-mode</span>
+[<span class="org-clojure-keyword">:spacebar</span> <span class="org-clojure-keyword">:!CTspacebar</span>] <span class="org-comment-delimiter">;; </span><span class="org-comment">open emoji picker</span>
+[<span class="org-clojure-keyword">:return_or_enter</span>  <span class="org-string">"/usr/local/bin/yabai -m window --toggle float"</span>]
+[<span class="org-clojure-keyword">:comma</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Messenger"</span> <span class="org-string">"hide"</span>]]
+[:3 <span class="org-string">"osascript ~/.dotfiles/toggle_dark_mode.scpt"</span>]
+[:4 [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Finder"</span>]]
+[<span class="org-clojure-keyword">:a</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Safari"</span> <span class="org-string">"hide"</span>]]
+[<span class="org-clojure-keyword">:x</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Chrome"</span> <span class="org-string">"hide"</span>]]
+[<span class="org-clojure-keyword">:c</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Safari"</span> <span class="org-string">"hide"</span>]]
+[<span class="org-clojure-keyword">:k</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Keyboard Maestro"</span> <span class="org-string">"hide"</span>]]
+[<span class="org-clojure-keyword">:e</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Emacs"</span> <span class="org-string">"hide"</span>]]
+[<span class="org-clojure-keyword">:i</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open iTerm"</span> <span class="org-string">"hide"</span>]]
+[<span class="org-clojure-keyword">:m</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Messages"</span> <span class="org-string">"hide"</span>]]
+[<span class="org-clojure-keyword">:s</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Spotify"</span> <span class="org-string">"hide"</span>]]
+<span class="org-comment-delimiter">;; </span><span class="org-comment">[:n [:km "Open Neo4j" "hide"]]</span>
+[<span class="org-clojure-keyword">:v</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Zoom"</span> <span class="org-string">"hide"</span>]]
+<span class="org-comment-delimiter">;; </span><span class="org-comment">[:q [:km "Open Qutebrowser"]]</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">[:x [:km "Open Xcode"]]</span>
+<span class="org-comment-delimiter">;; </span><span class="org-comment">[:w [:km "Open Word"]]</span>
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgab3ef69" class="outline-3">
+<h3 id="orgab3ef69">q-key-mode (q)</h3>
+<div class="outline-text-3" id="text-orgab3ef69">
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:q-key-mode</span>
+[<span class="org-clojure-keyword">:grave_accent_and_tilde</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Stickies"</span>]]
+[<span class="org-clojure-keyword">:a</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Safari"</span>]]
+[<span class="org-clojure-keyword">:x</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Chrome"</span>]]
+[<span class="org-clojure-keyword">:s</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Spotify"</span>]]
+[<span class="org-clojure-keyword">:c</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Safari"</span>]]
+[<span class="org-clojure-keyword">:k</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Keyboard Maestro"</span>]]
+[<span class="org-clojure-keyword">:e</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Emacs"</span>]]
+[<span class="org-clojure-keyword">:i</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open iTerm"</span>]]
+[<span class="org-clojure-keyword">:m</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Messages"</span>]]
+[<span class="org-clojure-keyword">:comma</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Messenger"</span>]]
+[<span class="org-clojure-keyword">:n</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Neo4j"</span>]]
+[<span class="org-clojure-keyword">:v</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Zoom"</span>]]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org07103d1" class="outline-3">
+<h3 id="org07103d1">x-key-mode (x)</h3>
+<div class="outline-text-3" id="text-org07103d1">
+<div class="org-src-container">
+<pre class="src src-apples"><span class="org-apples-statements">tell</span> <span class="org-apples-statements">application</span> <span class="org-string">"Google Chrome"</span>
+    execute <span class="org-apples-reserved-words">front</span> window<span class="org-apples-reserved-words">'s</span> active tab javascript <span class="org-string">"javascript:location.href = 'org-protocol://roam-ref?template=r&amp;ref=' + encodeURIComponent(location.href) + '&amp;title=' + encodeURIComponent(document.title)"</span>
+<span class="org-apples-statements">end</span> <span class="org-apples-statements">tell</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:x-key-mode</span>
+[<span class="org-clojure-keyword">:a</span> [<span class="org-clojure-keyword">:elisp</span> <span class="org-string">"(ketan0/switch-to-main-agenda)"</span>]]
+[<span class="org-clojure-keyword">:s</span> [<span class="org-clojure-keyword">:elisp</span> <span class="org-string">"(+org-capture/open-frame nil </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">)"</span>]]
+[<span class="org-clojure-keyword">:t</span> [<span class="org-clojure-keyword">:elisp</span> <span class="org-string">"(+org-capture/open-frame nil </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">t</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">)"</span>]]
+[<span class="org-clojure-keyword">:d</span> [<span class="org-clojure-keyword">:elisp</span> <span class="org-string">"(+org-capture/open-frame nil </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">d</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">)"</span>]]
+[<span class="org-clojure-keyword">:i</span> [<span class="org-clojure-keyword">:elisp</span> <span class="org-string">"(+org-capture/open-frame nil </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">i</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">)"</span>]]
+[<span class="org-clojure-keyword">:g</span> <span class="org-string">"osascript ~/.dotfiles/org_roam_capture.scpt"</span>] <span class="org-comment-delimiter">;; </span><span class="org-comment">create new org-roam note</span>
+[<span class="org-clojure-keyword">:spacebar</span> [<span class="org-clojure-keyword">:elisp</span> <span class="org-string">"(+org-capture/open-frame)"</span>]]
+[<span class="org-clojure-keyword">:r</span> [<span class="org-clojure-keyword">:elisp</span> <span class="org-string">"(org-roam-node-random)"</span>]]
+[<span class="org-clojure-keyword">:j</span> [<span class="org-clojure-keyword">:elisp</span> <span class="org-string">"(org-journal-new-entry nil)"</span>]]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org555bbb1" class="outline-3">
+<h3 id="org555bbb1">tilde-mode</h3>
+<div class="outline-text-3" id="text-org555bbb1">
+<p>
+Using this mode to "focus" / "unfocus" with the <a href="https://heyfocus.com/">Focus</a> app for MacOS.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:tilde-mode</span>
+[<span class="org-clojure-keyword">:f</span> [<span class="org-clojure-keyword">:openhide</span> <span class="org-string">"focus://focus?minutes=60"</span>]]
+[<span class="org-clojure-keyword">:t</span> [<span class="org-clojure-keyword">:openhide</span> <span class="org-string">"focus://toggle"</span>]]
+[<span class="org-clojure-keyword">:u</span> [<span class="org-clojure-keyword">:openhide</span> <span class="org-string">"focus://unfocus"</span>]]
+[<span class="org-clojure-keyword">:comma</span> [<span class="org-clojure-keyword">:open</span> <span class="org-string">"focus://preferences"</span>]]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf776abe" class="outline-3">
+<h3 id="orgf776abe">comma-mode</h3>
+<div class="outline-text-3" id="text-orgf776abe">
+<p>
+Just some like random stuff. Open notes, zoom links, twitter, typing tests.<br />
+</p>
+
+<p>
+Open <a href="https://chrome.google.com/webstore/detail/history-trends-unlimited/pnmchffiealhkdloeffcdnbgdnedheme?hl=en">History Trends Unlimited</a> chrome extension<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-apples"><span class="org-apples-statements">tell</span> <span class="org-apples-statements">application</span> <span class="org-string">"Google Chrome"</span> <span class="org-apples-reserved-words">to</span> <span class="org-apples-commands">open location</span> <span class="org-string">"chrome-extension://pnmchffiealhkdloeffcdnbgdnedheme/search.html"</span>
+</pre>
+</div>
+
+<p>
+Open a URL, but only if it's not already a tab. If it's a tab, then go to that tab.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-apples"><span class="org-apples-statements">on</span> <span class="org-function-name">run</span> (clp)
+    <span class="org-apples-statements">tell</span> <span class="org-apples-statements">application</span> <span class="org-string">"Safari"</span>
+        <span class="org-apples-statements">repeat with</span> w <span class="org-apples-reserved-words">in</span> windows
+            <span class="org-apples-commands">set</span> <span class="org-variable-name">i</span> <span class="org-apples-reserved-words">to</span> 1
+            <span class="org-apples-statements">repeat with</span> t <span class="org-apples-reserved-words">in</span> tabs <span class="org-apples-reserved-words">of</span> w
+                <span class="org-apples-statements">if</span> URL <span class="org-apples-reserved-words">of</span> t <span class="org-apples-operators">starts with</span> clp<span class="org-apples-reserved-words">'s</span> item 1 <span class="org-apples-statements">then</span>
+                    <span class="org-apples-commands">set</span> current tab <span class="org-apples-reserved-words">of</span> w <span class="org-apples-reserved-words">to</span> t
+                    <span class="org-comment-delimiter">-- </span><span class="org-comment">set active tab index of w to i</span>
+                    <span class="org-apples-statements">tell</span> w
+                        <span class="org-apples-commands">set</span> <span class="org-variable-name">index</span> <span class="org-apples-reserved-words">to</span> 1
+                    <span class="org-apples-statements">end</span> <span class="org-apples-statements">tell</span>
+                    <span class="org-comment-delimiter">-- </span><span class="org-comment">delay 0.05</span>
+                    <span class="org-comment-delimiter">-- </span><span class="org-comment">do shell script "open -a Safari"</span>
+                    <span class="org-apples-statements">tell</span> <span class="org-apples-statements">application</span> <span class="org-string">"System Events"</span>
+                        perform action <span class="org-string">"AXRaise"</span> <span class="org-apples-reserved-words">of</span> <span class="org-apples-reserved-words">front</span> window <span class="org-apples-reserved-words">of</span> <span class="org-apples-statements">application</span> process <span class="org-string">"Safari"</span>
+                    <span class="org-apples-statements">end</span> <span class="org-apples-statements">tell</span>
+                    <span class="org-apples-commands">activate</span>
+                    <span class="org-apples-statements">return</span>
+                <span class="org-apples-statements">end</span> <span class="org-apples-statements">if</span>
+                <span class="org-apples-commands">set</span> <span class="org-variable-name">i</span> <span class="org-apples-reserved-words">to</span> i<span class="org-apples-operators"> + </span>1
+            <span class="org-apples-statements">end</span> <span class="org-apples-statements">repeat</span>
+        <span class="org-apples-statements">end</span> <span class="org-apples-statements">repeat</span>
+        <span class="org-apples-commands">open location</span> clp<span class="org-apples-reserved-words">'s</span> item 1
+        <span class="org-apples-commands">activate</span>
+    <span class="org-apples-statements">end</span> <span class="org-apples-statements">tell</span>
+<span class="org-apples-statements">end</span> <span class="org-apples-commands">run</span>
+</pre>
+</div>
+
+<p>
+Check my calendar; if there's an event with a zoom link, open the zoom link.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-apples">use <span class="org-apples-reserved-words">script</span> <span class="org-string">"CalendarLib EC"</span> version <span class="org-string">"1.1.5"</span>
+use <span class="org-apples-standard-folders">scripting additions</span>
+use framework <span class="org-string">"Foundation"</span>
+
+<span class="org-apples-reserved-words">property</span> NSRegularExpressionCaseInsensitive : <span class="org-apples-operators">a reference to</span> 1
+<span class="org-apples-reserved-words">property</span> NSRegularExpression : <span class="org-apples-operators">a reference to</span> current <span class="org-apples-statements">application</span><span class="org-apples-reserved-words">'s</span> NSRegularExpression
+
+<span class="org-comment-delimiter">-- </span><span class="org-comment">fetch properties of events for next week</span>
+<span class="org-apples-commands">set</span> <span class="org-variable-name">now</span> <span class="org-apples-reserved-words">to</span> <span class="org-apples-commands">current date</span>
+<span class="org-apples-commands">set</span> <span class="org-variable-name">theStore</span> <span class="org-apples-reserved-words">to</span> fetch store
+<span class="org-apples-commands">set</span> <span class="org-variable-name">theCal</span> <span class="org-apples-reserved-words">to</span> fetch calendar <span class="org-string">"Calendar"</span> cal type cal exchange event store theStore <span class="org-comment-delimiter">-- </span><span class="org-comment">change to suit</span>
+<span class="org-apples-commands">set</span> <span class="org-variable-name">theEvents</span> <span class="org-apples-reserved-words">to</span> fetch events starting date now ending date now searching cals {theCal} event store theStore <span class="org-comment-delimiter">-- </span><span class="org-comment">get events that are occurring currently</span>
+<span class="org-apples-statements">if</span> length <span class="org-apples-reserved-words">of</span> theEvents <span class="org-apples-reserved-words">is</span> 0
+    display notification <span class="org-string">"No events currently!"</span>
+    <span class="org-apples-statements">return</span>
+<span class="org-apples-statements">end</span> <span class="org-apples-statements">if</span>
+<span class="org-apples-commands">set</span> <span class="org-variable-name">theEvent</span> <span class="org-apples-reserved-words">to</span> (item 1 <span class="org-apples-reserved-words">of</span> theEvents)
+<span class="org-apples-commands">set</span> <span class="org-variable-name">theEventRecord</span> <span class="org-apples-reserved-words">to</span> event <span class="org-apples-commands">info for</span> event theEvent
+<span class="org-apples-commands">set</span> <span class="org-variable-name">theEventNotes</span> <span class="org-apples-reserved-words">to</span> (<span class="org-apples-commands">get</span> event_description <span class="org-apples-reserved-words">of</span> theEventRecord)
+<span class="org-apples-statements">if</span> theEventNotes <span class="org-apples-reserved-words">is</span> missing value
+    display notification <span class="org-string">"Couldn't find the zoom link. Opening calendar..."</span>
+    <span class="org-apples-statements">tell</span> <span class="org-apples-statements">application</span> <span class="org-string">"Calendar"</span> <span class="org-apples-reserved-words">to</span> <span class="org-apples-commands">activate</span>
+    <span class="org-apples-statements">return</span>
+<span class="org-apples-statements">end</span> <span class="org-apples-statements">if</span>
+<span class="org-apples-commands">set</span> <span class="org-variable-name">theNSStringSample</span> <span class="org-apples-reserved-words">to</span> current <span class="org-apples-statements">application</span><span class="org-apples-reserved-words">'s</span> NSString<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">stringWithString:</span>theEventNotes
+<span class="org-apples-commands">set</span> <span class="org-variable-name">passcodePattern</span> <span class="org-apples-reserved-words">to</span> <span class="org-string">"Password:(?:\\s|\\n)+(\\d{6})"</span>
+<span class="org-apples-commands">set</span> <span class="org-variable-name">thePasscodeRegEx</span> <span class="org-apples-reserved-words">to</span> NSRegularExpression<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">regularExpressionWithPattern:</span>passcodePattern <span class="org-apples-records">options:</span>NSRegularExpressionCaseInsensitive <span class="org-apples-records">|error|:</span>(missing value)
+<span class="org-apples-commands">set</span> <span class="org-variable-name">aMatch</span> <span class="org-apples-reserved-words">to</span> thePasscodeRegEx<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">firstMatchInString:</span>theNSStringSample <span class="org-apples-records">options:</span>0 <span class="org-apples-records">range:</span>[0, theNSStringSample<span class="org-apples-reserved-words">'s</span> |length|]
+<span class="org-apples-statements">if</span> aMatch <span class="org-apples-operators">is not</span> missing value <span class="org-apples-statements">then</span>
+    <span class="org-apples-commands">set</span> <span class="org-variable-name">partRange</span> <span class="org-apples-reserved-words">to</span> (aMatch<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">rangeAtIndex:</span>1) <span class="org-apples-operators">as</span> record
+    <span class="org-apples-commands">set</span> <span class="org-variable-name">passcode</span> <span class="org-apples-reserved-words">to</span> (theNSStringSample<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">substringWithRange:</span>partRange) <span class="org-apples-operators">as</span> text
+    <span class="org-apples-commands">set the clipboard to</span> passcode <span class="org-comment-delimiter">-- </span><span class="org-comment">copy the passcode in case zoom prompts for it</span>
+<span class="org-apples-statements">else</span>
+    display notification <span class="org-string">"Couldn't find the passcode."</span>
+<span class="org-apples-statements">end</span> <span class="org-apples-statements">if</span>
+
+<span class="org-apples-commands">set</span> <span class="org-variable-name">zoomLinkPattern</span> <span class="org-apples-reserved-words">to</span> <span class="org-string">"https:\\/\\/(?:.+\\.)?zoom\\.us\\/j\\/(\\d+)\\?pwd=([a-zA-Z0-9]+)"</span>
+<span class="org-apples-commands">set</span> <span class="org-variable-name">theZoomLinkRegEx</span> <span class="org-apples-reserved-words">to</span> NSRegularExpression<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">regularExpressionWithPattern:</span>zoomLinkPattern <span class="org-apples-records">options:</span>NSRegularExpressionCaseInsensitive <span class="org-apples-records">|error|:</span>(missing value)
+<span class="org-apples-commands">set</span> <span class="org-variable-name">aMatch</span> <span class="org-apples-reserved-words">to</span> theZoomLinkRegEx<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">firstMatchInString:</span>theNSStringSample <span class="org-apples-records">options:</span>0 <span class="org-apples-records">range:</span>[0, theNSStringSample<span class="org-apples-reserved-words">'s</span> |length|]
+<span class="org-apples-statements">if</span> aMatch <span class="org-apples-operators">is not</span> missing value <span class="org-apples-statements">then</span>
+    <span class="org-apples-commands">set</span> <span class="org-variable-name">partRange</span> <span class="org-apples-reserved-words">to</span> (aMatch<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">rangeAtIndex:</span>1) <span class="org-apples-operators">as</span> record
+    <span class="org-apples-commands">set</span> <span class="org-variable-name">zoomConfNo</span> <span class="org-apples-reserved-words">to</span> (theNSStringSample<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">substringWithRange:</span>partRange) <span class="org-apples-operators">as</span> text
+    <span class="org-apples-commands">set</span> <span class="org-variable-name">partRange</span> <span class="org-apples-reserved-words">to</span> (aMatch<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">rangeAtIndex:</span>2) <span class="org-apples-operators">as</span> record
+    <span class="org-apples-commands">set</span> <span class="org-variable-name">zoomPwd</span> <span class="org-apples-reserved-words">to</span> (theNSStringSample<span class="org-apples-reserved-words">'s</span> <span class="org-apples-records">substringWithRange:</span>partRange) <span class="org-apples-operators">as</span> text
+    display notification <span class="org-string">"Starting zoom..."</span>
+    <span class="org-apples-commands">open location</span> <span class="org-string">"zoommtg://zoom.us/join?confno="</span><span class="org-apples-operators"> &amp; </span>zoomConfno<span class="org-apples-operators"> &amp; </span><span class="org-string">"&amp;pwd="</span><span class="org-apples-operators"> &amp; </span>zoomPwd
+<span class="org-apples-statements">else</span>
+    display notification <span class="org-string">"Couldn't find the zoom link. Opening calendar..."</span>
+    <span class="org-apples-statements">tell</span> <span class="org-apples-statements">application</span> <span class="org-string">"Calendar"</span> <span class="org-apples-reserved-words">to</span> <span class="org-apples-commands">activate</span>
+<span class="org-apples-statements">end</span> <span class="org-apples-statements">if</span>
+</pre>
+</div>
+
+<p>
+I really like Safari, but sometimes need to use Chrome for various extensions etc. Solution: have Safari =&gt; Chrome shortcut.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-apples"><span class="org-apples-statements">tell</span> <span class="org-apples-statements">application</span> <span class="org-string">"Safari"</span>
+    <span class="org-apples-commands">set</span> <span class="org-variable-name">theURL</span> <span class="org-apples-reserved-words">to</span> URL <span class="org-apples-reserved-words">of</span> current tab <span class="org-apples-reserved-words">of</span> window 1
+    <span class="org-apples-statements">tell</span> <span class="org-apples-statements">application</span> <span class="org-string">"Google Chrome"</span> <span class="org-apples-reserved-words">to</span> <span class="org-apples-commands">open location</span> theURL
+<span class="org-apples-statements">end</span> <span class="org-apples-statements">tell</span>
+</pre>
+</div>
+
+
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:comma-mode</span>
+[:1 [<span class="org-clojure-keyword">:withsecretsmarturl</span> <span class="org-string">"$PSYCH_LECTURE_LINK"</span>]]
+[:3 [<span class="org-clojure-keyword">:withsecret</span> <span class="org-string">"open $PAC_PROJECT_ZOOM_LINK"</span>]]
+<span class="org-comment-delimiter">;; </span><span class="org-comment">add title bar to frame</span>
+[<span class="org-clojure-keyword">:a</span> [<span class="org-clojure-keyword">:elisp</span> <span class="org-string">"(setq mac-use-title-bar t)(setq ketan0/old-frame (selected-frame)) (make-frame)(delete-frame ketan0/old-frame)"</span>]]
+[<span class="org-clojure-keyword">:b</span> <span class="org-string">"osascript ~/.dotfiles/open_in_chrome.scpt"</span>]
+[<span class="org-clojure-keyword">:c</span> [<span class="org-clojure-keyword">:open</span> <span class="org-string">"/Users/ketanagrawal/org_private/capture.org"</span>]]
+[<span class="org-clojure-keyword">:d</span> [<span class="org-clojure-keyword">:open</span> <span class="org-string">"https://drive.google.com/drive/my-drive"</span>]]
+[<span class="org-clojure-keyword">:o</span> [<span class="org-clojure-keyword">:open</span> <span class="org-string">"http://doc.new"</span>]] <span class="org-comment-delimiter">;; </span><span class="org-comment">new google doc</span>
+[<span class="org-clojure-keyword">:e</span> [<span class="org-clojure-keyword">:open</span> <span class="org-string">"/Users/ketanagrawal/.dotfiles/doom.d/config.el"</span>]]
+[<span class="org-clojure-keyword">:f</span> [<span class="org-clojure-keyword">:smarturl</span> <span class="org-string">"https://www.keyhero.com/free-typing-test/"</span>]]
+<span class="org-comment-delimiter">;; </span><span class="org-comment">[:h [:km "Github =&gt; Emacs"]]</span>
+[<span class="org-clojure-keyword">:h</span> <span class="org-string">"osascript /Users/ketanagrawal/.dotfiles/open_chrome_history.scpt"</span>]
+
+[<span class="org-clojure-keyword">:i</span> [<span class="org-clojure-keyword">:smarturl</span> <span class="org-string">"https://www.keyhero.com/typing-instant-death/"</span>]]
+[<span class="org-clojure-keyword">:j</span> [<span class="org-clojure-keyword">:smarturl</span> <span class="org-string">"http://localhost:8888"</span>]]
+[<span class="org-clojure-keyword">:l</span> <span class="org-string">"osascript /Users/ketanagrawal/.dotfiles/open_current_zoom_link.scpt"</span>]
+[<span class="org-clojure-keyword">:m</span> [<span class="org-clojure-keyword">:smarturl</span> <span class="org-string">"https://outlook.office.com/"</span>]]
+[<span class="org-clojure-keyword">:n</span> [<span class="org-clojure-keyword">:openwith</span> <span class="org-string">"Google Chrome"</span> <span class="org-string">"https://www.netflix.com/title/80199128"</span>]]
+[<span class="org-clojure-keyword">:p</span> [<span class="org-clojure-keyword">:withsecretsmarturl</span> <span class="org-string">"$PAC_PROGRESS_DOC_LINK"</span>]]
+[<span class="org-clojure-keyword">:t</span> [<span class="org-clojure-keyword">:smarturl</span> <span class="org-string">"https://twitter.com/i/bookmarks"</span>]]
+[<span class="org-clojure-keyword">:r</span> [<span class="org-clojure-keyword">:open</span> <span class="org-string">"/Users/ketanagrawal/org_private/todos.org"</span>]]
+[<span class="org-clojure-keyword">:s</span> [<span class="org-clojure-keyword">:open</span> <span class="org-string">"/Users/ketanagrawal/.dotfiles/karabiner.org"</span>]]
+<span class="org-comment-delimiter">;; </span><span class="org-comment">[:v [:open "https://healthy.verily.com/"]] ;; covid testing</span>
+[<span class="org-clojure-keyword">:v</span> [<span class="org-clojure-keyword">:openwith</span> <span class="org-string">"Emacs"</span> <span class="org-string">"/Users/ketanagrawal/Dropbox/Apps/GoodNotes 5/GoodNotes/vision.pdf"</span>]]
+[<span class="org-clojure-keyword">:y</span> [<span class="org-clojure-keyword">:openwith</span> <span class="org-string">"Emacs"</span> <span class="org-string">"/Users/ketanagrawal/.dotfiles/yabairc"</span>]]
+[<span class="org-clojure-keyword">:z</span> [<span class="org-clojure-keyword">:withsecret</span> <span class="org-string">"open $MY_ZOOM_LINK"</span>]]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd05316d" class="outline-3">
+<h3 id="orgd05316d">o-key-mode</h3>
+<div class="outline-text-3" id="text-orgd05316d">
+<div class="org-src-container">
+<pre class="src src-clojure">
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb86eb1c" class="outline-3">
+<h3 id="orgb86eb1c">wallpaper-mode</h3>
+<div class="outline-text-3" id="text-orgb86eb1c">
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:wallpaper-mode</span>
+[<span class="org-clojure-keyword">:g</span> [<span class="org-clojure-keyword">:wallpaper</span> <span class="org-string">"/System/Library/Desktop Pictures/Solar Gradients.heic"</span>]]
+[<span class="org-clojure-keyword">:s</span> [<span class="org-clojure-keyword">:wallpaper</span> <span class="org-string">"/Users/ketanagrawal/Desktop/wallpapers/simple-subtle-abstract-dark-minimalism-4k-u9.jpg"</span>]]
+[<span class="org-clojure-keyword">:x</span> [<span class="org-clojure-keyword">:wallpaper</span> <span class="org-string">"/Users/ketanagrawal/Desktop/wallpapers/paint_colorful_overlay_139992_1440x900.jpg"</span>]]
+[<span class="org-clojure-keyword">:y</span> [<span class="org-clojure-keyword">:wallpaper</span> <span class="org-string">"/Users/ketanagrawal/Desktop/wallpapers/background_paint_stains_light_76087_1440x900.jpg"</span>]]
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcf02532" class="outline-3">
+<h3 id="orgcf02532">vim-mode (z)</h3>
+<div class="outline-text-3" id="text-orgcf02532">
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:vim-mode</span>
+[<span class="org-clojure-keyword">:#Sh</span> <span class="org-clojure-keyword">:left_arrow</span>] <span class="org-comment-delimiter">;; </span><span class="org-comment">hjkl navigation everywhere + Shift</span>
+[<span class="org-clojure-keyword">:#Sj</span> <span class="org-clojure-keyword">:down_arrow</span>]
+[<span class="org-clojure-keyword">:#Sk</span> <span class="org-clojure-keyword">:up_arrow</span>]
+[<span class="org-clojure-keyword">:#Sl</span> <span class="org-clojure-keyword">:right_arrow</span>]
+[<span class="org-clojure-keyword">:#Sb</span> <span class="org-clojure-keyword">:!Oleft_arrow</span>]
+[<span class="org-clojure-keyword">:#Sw</span> <span class="org-clojure-keyword">:!Oright_arrow</span>]
+[<span class="org-clojure-keyword">:delete_or_backspace</span> <span class="org-clojure-keyword">:!Odelete_or_backspace</span>]
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1ad1116" class="outline-3">
+<h3 id="org1ad1116">jupyter mode (j)</h3>
+<div class="outline-text-3" id="text-org1ad1116">
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:jupyter-mode</span>
+[<span class="org-clojure-keyword">:l</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Start or Go to Existing Jupyter Lab Server"</span>]]
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5dfac63" class="outline-3">
+<h3 id="org5dfac63">end main</h3>
+<div class="outline-text-3" id="text-org5dfac63">
+<div class="org-src-container">
+<pre class="src src-clojure">]}] <span class="org-comment-delimiter">;;</span><span class="org-comment">end main</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdd14a5d" class="outline-2">
+<h2 id="orgdd14a5d">Applications</h2>
+<div class="outline-text-2" id="text-orgdd14a5d">
+<div class="org-src-container">
+<pre class="src src-clojure"><span class="org-clojure-keyword">:applications</span> [
+
+               <span class="org-clojure-keyword">:Emacs</span> [<span class="org-string">"^org</span><span class="org-string"><span class="org-bold">\\</span></span><span class="org-string">.gnu</span><span class="org-string"><span class="org-bold">\\</span></span><span class="org-string">.Emacs$"</span>]
+               <span class="org-clojure-keyword">:Chrome</span> [<span class="org-string">"^com</span><span class="org-string"><span class="org-bold">\\</span></span><span class="org-string">.google</span><span class="org-string"><span class="org-bold">\\</span></span><span class="org-string">.Chrome$"</span>, <span class="org-string">"^org</span><span class="org-string"><span class="org-bold">\\</span></span><span class="org-string">.chromium</span><span class="org-string"><span class="org-bold">\\</span></span><span class="org-string">.Chromium$"</span>, <span class="org-string">"^com</span><span class="org-string"><span class="org-bold">\\</span></span><span class="org-string">.google</span><span class="org-string"><span class="org-bold">\\</span></span><span class="org-string">.Chrome</span><span class="org-string"><span class="org-bold">\\</span></span><span class="org-string">.canary$"</span>]
+
+               ]
+
+} <span class="org-comment-delimiter">;;</span><span class="org-comment">ending bracket for whole data structure -- don't delete!</span>
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgcbef48f" class="outline-2 references">
+<h2 id="orgcbef48f">References</h2>
+<div class="outline-text-2" id="text-orgcbef48f">
+<ul class="org-ul">
+<li><a href="./programming.html">programming</a>: connected to a lot of these things is my <a href="karabiner.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">goku (karabiner) config</a>.<br /></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p>Made with <span class="heart">♥</span> using
+<a href="https://orgmode.org/">org-mode</a>.
+Source code is available
+<a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<script src="popper.min.js"></script>
+<script src="tippy-bundle.umd.min.js"></script>
+<script src="tooltips.js"></script>
+</div>
+</body>
+</html>

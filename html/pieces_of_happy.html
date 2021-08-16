@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-08-16 Mon 06:19 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pieces of Happy</title>
+<meta name="author" content="Ketan Agrawal" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="syntax.css" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+<div id="preamble" class="status">
+<a style="color: inherit; text-decoration: none" href="/">
+<h2>Ketan's Digital Laboratory &#129514;</h2>
+</a>
+</div>
+<div id="content" class="content">
+<h1 class="title">Pieces of Happy</h1>
+<p>
+<a href="http://nickcammarata.com/writing/pieces-of-happy">http://nickcammarata.com/writing/pieces-of-happy</a><br />
+</p>
+
+<div id="outline-container-org54a36e6" class="outline-2">
+<h2 id="org54a36e6">Summary</h2>
+<div class="outline-text-2" id="text-org54a36e6">
+<p>
+Essentially, recurring features of your environment have a compounding effect on your happiness over the course of your life. Life satisfaction research has revealed certain factors that reliably produce (and don't produce) happiness across all humans.<br />
+</p>
+
+<p>
+Also, take advantage of your personality strengths, and possibly experiment with actions that could help shore up negative personality traits (e.g. cut caffeine to lower neuroticism.)<br />
+</p>
+
+<p>
+All of this should take place within a framework of personal experimentation. Try "domain randomization" on yourself &#x2013; that is, try messing with some of the parameters of your life that have been on default settings thus far. The following are sliders for some relatively meaningless parameters that probably won't affect your life that much&#x2013; because why not!<br />
+</p>
+
+<div>
+    <input type="range" id="size-slider" name="size-slider"
+            min="8" max="24" value="14">
+</div>
+<div>
+    <input type="range" id="font-slider" name="font-slider"
+    min="0" max="3" value="0" step="1">
+</div>
+<!--TODO: make this slider turn on some d3 particle thingy-->
+<div>
+    <input type="range" id="violin" name="violin"
+    min="0" max="100" value="30" step="10">
+</div>
+<script type="text/javascript">
+let sizeSlider = document.getElementById("size-slider");
+if (sizeSlider.addEventListener) {
+    sizeSlider.addEventListener("input", function () {
+        var div = document.getElementById("content");
+        div.style.fontSize = sizeSlider.value + "px";
+    })
+}
+
+let fontSlider = document.getElementById("font-slider");
+if (fontSlider.addEventListener) {
+    fontSlider.addEventListener("input", function () {
+        var div = document.getElementById("content");
+        var fontFamilies = {
+            "0" : "Inter",
+            "1" : "Georgia",
+            "2" : "Courier New",
+            "3" : "Brush Script MT"
+        }
+        div.style.fontFamily = fontFamilies[fontSlider.value]
+    })
+}
+</script>
+
+<p>
+Record your findings. The cost of experimentation is small, but the potential life-changing benefits of finding something that makes you happier are immense.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc9d388d" class="outline-2">
+<h2 id="orgc9d388d">Thoughts</h2>
+<div class="outline-text-2" id="text-orgc9d388d">
+<p>
+So&#x2026;what variables of my life could I try messing with?<br />
+</p>
+
+<ul class="org-ul">
+<li>Social environment &#x2013; seems to be a really big one<br /></li>
+<li>What research I'm doing<br /></li>
+<li>My physical room / work environment during the day<br /></li>
+<li>Meditation =&gt; mindfulness.<br /></li>
+<li>Changing my internet usage (takes up large chunk of my day, scrolling through algorithmic feeds)<br /></li>
+</ul>
+
+<p>
+Well, going back to the paragraph on life satisfaction:<br />
+</p>
+
+<blockquote>
+<p>
+most of the interesting degrees of freedom that life satisfaction research tends to explore, such as <b>diet</b>, <b>fitness</b>, <b>drugs</b>, <b>learning</b>, and <b>mindfulness</b> requires little or no competition.<br />
+</p>
+</blockquote>
+
+<p>
+I'm sure there are other parameters, but for now, let's consider the set { diet, fitness, drugs, learning, and mindfulness }.<br />
+</p>
+
+<p>
+diet -&gt; Maybe I'd feel better if I ate better. Especially at home, where I sort of just accept whatever's in the pantry.<br />
+</p>
+
+<p>
+fitness -&gt; let's be consistent about it!<br />
+</p>
+
+<p>
+Drugs &#x2013; well&#x2026;maybe strategic reintroduction of caffeine into my life could be beneficial. Earl grey tea in the morning is a pleasant experience.<br />
+Let's think about it.<br />
+</p>
+
+<p>
+Mindfulness &#x2013; for sure. It changes the experience of every moment of life &#x2013; quite the inner-loop modification. I think that intentional meditation practice every morning can verifiably change people's lives.<br />
+</p>
+
+<p>
+Learning &#x2013; having time to add content to my digital garden every day (and, like, hopefully by the time it gets rolling, I don't get so judgy about the content that's currently in it) would make me quite happy.<br />
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p>Made with <span class="heart">♥</span> using
+<a href="https://orgmode.org/">org-mode</a>.
+Source code is available
+<a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<script src="popper.min.js"></script>
+<script src="tippy-bundle.umd.min.js"></script>
+<script src="tooltips.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,444 @@
+:PROPERTIES:
+:ID:       058bef0b-aba6-4ac6-b4ae-b3c7b7e22040
+:END:
+#+TITLE: goku (karabiner) config
+#+AUTHOR: Ketan Agrawal
+Created by Ketan Agrawal
+
+
+
+inspiration taken from these goku configs:
+- [[https://github.com/yqrashawn/yqdotfiles/blob/master/.config/karabiner.edn][yqrashawn]]
+- [[https://github.com/nikitavoloboev/dotfiles/blob/master/karabiner/karabiner.edn][nikitavoloboev]]
+- [[https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126][kaushikgopal]]
+
+This is my literate config for [[https://github.com/yqrashawn/GokuRakuJoudo][goku]]. It makes it easy to define keyboard shortcuts in a succinct and powerful way.
+
+* Guide
+For more info on configuring Goku, see the [[https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md][tutorial]].
+Guide lifted from [[https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126][kaushikgopal]]. To understand better how modifiers work in karabiner, see the karabiner definition of mandatory and optional: [[https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/#frommodifiersoptional   ][karabiner modifiers documentation]]
+need to prefix C T O S F with ! or #
+| Modifier | Meaning                                      |
+|----------+----------------------------------------------|
+| !        | mandatory (w/o modifier changes behavior)    |
+| #        | optional (but at least one necessary)        |
+| C        | left command                                 |
+| T        | left control                                 |
+| O        | left option                                  |
+| S        | left shift                                   |
+| F        | fn                                           |
+| Q        | right command                                |
+| W        | right control                                |
+| E        | right option                                 |
+| R        | right shift                                  |
+| ##       | optional any                                 |
+| !!       | command + control + optional + shift (hyper) |
+* Profiles
+#+begin_src clojure
+{;;beginning bracket for whole data structure -- don't delete!
+
+ :profiles {
+            :Ketan {
+                    :default true
+                    :sim     500    ;; simultaneous_threshold_milliseconds (def: 50)
+                    ;; keys need to be pressed within this threshold to be considered simultaneous
+                    :delay   80    ;; to_delayed_action_delay_milliseconds (def: 500)
+                    ;; basically it means time after which the key press is count delayed
+                    :alone   500      ;; to_if_alone_timeout_milliseconds (def: 1000)
+                    ;; hold for 995s and single tap registered; hold for 1005s and seen as modifier
+                    :held    1000   ;; to_if_held_down_threshold_milliseconds (def: 500)
+                    ;; key is fired twice when 500 ms is elapsed (otherwise seen as a hold command)
+                    }
+            } ;; profiles
+#+end_src
+
+* Templates
+#+begin_src clojure
+:templates {
+            :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\" with parameter \"%s\"'"
+            ;; Removed the quotes around %s because it makes it not able to open files too
+            :open "open '%s'"
+            :smarturl "osascript ~/.dotfiles/open_url_smart.scpt '%s'"
+            :openwith "open -a '%s' '%s'"
+            :openhide "open '%s' -gj"
+            :withsecret "source ~/.dotfiles/.secrets && %s"
+            :withsecretsmarturl "source ~/.dotfiles/.secrets && osascript ~/.dotfiles/open_url_smart.scpt %s"
+            :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+            :wallpaper "osascript -e 'tell application \"Finder\" to set desktop picture to POSIX file \"%s\"'"
+            :elisp "/usr/local/bin/emacsclient --eval '(progn (select-frame-set-input-focus (selected-frame))%s)'"
+            } ;; templates
+
+#+end_src
+
+* Layers & Simlayers
+#+begin_src clojure
+:layers {
+
+         :tab-mode {:key :tab
+                    :afterup [{:set ["yabai-move-mode" 0]}
+                              {:set ["yabai-focus-mode" 0]}
+                              {:set ["yabai-display-mode" 0]}
+                              {:set ["chrome-movement-mode" 0]}
+                              {:set ["chrome-rearrange-tab-mode" 0]}]}
+
+         :yabai-move-mode {:key :w :condi :tab-mode}
+         :yabai-focus-mode {:key :f :condi :tab-mode}
+         :yabai-display-mode {:key :d :condi :tab-mode}
+         :chrome-movement-mode {:key :t :condi :tab-mode} ;;TODO make this work
+         :chrome-history-mode {:key :g :condi :tab-mode} ;;TODO make this work
+         :chrome-rearrange-tab-mode {:key :r :condi :tab-mode}
+         :vim-mode {:key :z}
+         :tilde-mode {:key :grave_accent_and_tilde}
+}
+
+:simlayers {
+        :slash-mode {:key :slash}
+        :q-key-mode {:key :q}
+        :x-key-mode {:key :x}
+        :jupyter-mode {:key :j}
+        :o-key-mode {:key :o}
+        :comma-mode {:key :comma}
+        :wallpaper-mode {:key :w}
+}
+
+#+end_src
+
+* Main
+** begin main
+#+begin_src clojure
+:main [{
+        :des "see karabiner.org for documentation.",
+        :rules [
+#+end_src
+** right cmd/option => previous app
+Switch to the previous application with right command/option -- right command hides the current app, right option doesn't.
+#+begin_src clojure
+[:right_command :right_command nil {:alone [:km "Previous Application" "hide"]}]
+[:right_option :right_option nil {:alone [:km "Previous Application"]}]
+#+end_src
+** caps lock alone = escape, with other keys = ctrl
+#+begin_src clojure
+[:##caps_lock :left_control nil {:alone :escape}]
+#+end_src
+** yabai-move-mode (tab + w + {hjkl})
+Move the current window directionally in the yabai tiling setup.
+#+begin_src clojure
+:yabai-move-mode
+[:h "/usr/local/bin/yabai -m window --warp west"]
+[:j "/usr/local/bin/yabai -m window --warp south"]
+[:k "/usr/local/bin/yabai -m window --warp north"]
+[:l "/usr/local/bin/yabai -m window --warp east"]
+[:b "/usr/local/bin/yabai -m space --balance"]
+[:0 "/usr/local/bin/yabai -m window --opacity 0.0"]
+[:1 "/usr/local/bin/yabai -m window --opacity 0.1"]
+[:2 "/usr/local/bin/yabai -m window --opacity 0.2"]
+[:3 "/usr/local/bin/yabai -m window --opacity 0.3"]
+[:4 "/usr/local/bin/yabai -m window --opacity 0.4"]
+[:5 "/usr/local/bin/yabai -m window --opacity 0.5"]
+[:6 "/usr/local/bin/yabai -m window --opacity 0.6"]
+[:7 "/usr/local/bin/yabai -m window --opacity 0.7"]
+[:8 "/usr/local/bin/yabai -m window --opacity 0.8"]
+[:9 "/usr/local/bin/yabai -m window --opacity 0.9"]
+[:grave_accent_and_tilde "/usr/local/bin/yabai -m window --opacity 1.0"]
+[:s "/usr/local/bin/yabai -m window --toggle split"]
+#+end_src
+
+** yabai-focus-mode (tab + f + {hjkl})
+Move focus to the left/top/bottom/right of the current window.
+#+begin_src clojure
+:yabai-focus-mode
+[:g "/usr/local/bin/yabai -m space --focus prev"]
+[:h "/usr/local/bin/yabai -m window --focus west"]
+[:j "/usr/local/bin/yabai -m window --focus south"]
+[:k "/usr/local/bin/yabai -m window --focus north"]
+[:l "/usr/local/bin/yabai -m window --focus east"]
+[:semicolon "/usr/local/bin/yabai -m space --focus next"]
+#+end_src
+
+** yabai-display-mode (tab + d + {hjkl})
+#+begin_src clojure
+:yabai-display-mode
+[:h "/usr/local/bin/yabai -m display --focus prev"]
+[:j "/usr/local/bin/yabai -m window --display prev && /usr/local/bin/yabai -m display --focus prev"]
+[:k "/usr/local/bin/yabai -m window --display next && /usr/local/bin/yabai -m display --focus next"]
+[:l "/usr/local/bin/yabai -m display --focus next"]
+#+end_src
+
+** chrome-history-mode (tab + g + {hl})
+Move backward/forward in Chrome history.
+#+begin_src clojure
+:chrome-history-mode
+[:h :!Copen_bracket]
+[:l :!Cclose_bracket]
+#+end_src
+** chrome-movement-mode (tab + t + {hl})
+Move to the tab left/right of the current tab.
+#+begin_src clojure
+:chrome-movement-mode
+[:h :!TStab]
+[:l :!Ttab]
+#+end_src
+** chrome-rearrange-tab-mode (tab + r + {hl})
+Move current tab left/right. Need [[https://chrome.google.com/webstore/detail/rearrange-tabs/ccnnhhnmpoffieppjjkhdakcoejcpbga][this Chrome extension]] for this to work.
+#+begin_src clojure
+:chrome-rearrange-tab-mode
+[:h :!TSleft_arrow]
+[:l :!TSright_arrow]
+#+end_src
+** tab-mode (tab)
+Mostly for opening apps, and some other convenient shortcuts like toggling dark mode and emojis.
+
+Toggle system dark mode, as well as the emacs theme. (See [[https://github.com/ketan0/dotfiles/blob/master/doom.d/config.el][ketan0/responsive-theme]] for details)
+#+begin_src apples
+tell application "System Events"
+    tell appearance preferences
+        set dark mode to not dark mode
+        do shell script "/usr/local/bin/emacsclient --eval '(load-theme (ketan0/responsive-theme) t)'"
+    end tell
+end tell
+#+end_src
+
+#+begin_src clojure
+:tab-mode
+[:spacebar :!CTspacebar] ;; open emoji picker
+[:return_or_enter  "/usr/local/bin/yabai -m window --toggle float"]
+[:comma [:km "Open Messenger" "hide"]]
+[:3 "osascript ~/.dotfiles/toggle_dark_mode.scpt"]
+[:4 [:km "Open Finder"]]
+[:a [:km "Open Safari" "hide"]]
+[:x [:km "Open Chrome" "hide"]]
+[:c [:km "Open Safari" "hide"]]
+[:k [:km "Open Keyboard Maestro" "hide"]]
+[:e [:km "Open Emacs" "hide"]]
+[:i [:km "Open iTerm" "hide"]]
+[:m [:km "Open Messages" "hide"]]
+[:s [:km "Open Spotify" "hide"]]
+;; [:n [:km "Open Neo4j" "hide"]]
+[:v [:km "Open Zoom" "hide"]]
+;; [:q [:km "Open Qutebrowser"]]
+;; [:x [:km "Open Xcode"]]
+;; [:w [:km "Open Word"]]
+
+#+end_src
+** q-key-mode (q)
+#+begin_src clojure
+:q-key-mode
+[:grave_accent_and_tilde [:km "Open Stickies"]]
+[:a [:km "Open Safari"]]
+[:x [:km "Open Chrome"]]
+[:s [:km "Open Spotify"]]
+[:c [:km "Open Safari"]]
+[:k [:km "Open Keyboard Maestro"]]
+[:e [:km "Open Emacs"]]
+[:i [:km "Open iTerm"]]
+[:m [:km "Open Messages"]]
+[:comma [:km "Open Messenger"]]
+[:n [:km "Open Neo4j"]]
+[:v [:km "Open Zoom"]]
+#+end_src
+** x-key-mode (x)
+#+begin_src apples
+tell application "Google Chrome"
+    execute front window's active tab javascript "javascript:location.href = 'org-protocol://roam-ref?template=r&ref=' + encodeURIComponent(location.href) + '&title=' + encodeURIComponent(document.title)"
+end tell
+#+end_src
+
+#+begin_src clojure
+:x-key-mode
+[:a [:elisp "(ketan0/switch-to-main-agenda)"]]
+[:s [:elisp "(+org-capture/open-frame nil \"s\")"]]
+[:t [:elisp "(+org-capture/open-frame nil \"t\")"]]
+[:d [:elisp "(+org-capture/open-frame nil \"d\")"]]
+[:i [:elisp "(+org-capture/open-frame nil \"i\")"]]
+[:g "osascript ~/.dotfiles/org_roam_capture.scpt"] ;; create new org-roam note
+[:spacebar [:elisp "(+org-capture/open-frame)"]]
+[:r [:elisp "(org-roam-node-random)"]]
+[:j [:elisp "(org-journal-new-entry nil)"]]
+#+end_src
+** tilde-mode
+Using this mode to "focus" / "unfocus" with the [[https://heyfocus.com/][Focus]] app for MacOS.
+#+begin_src clojure
+:tilde-mode
+[:f [:openhide "focus://focus?minutes=60"]]
+[:t [:openhide "focus://toggle"]]
+[:u [:openhide "focus://unfocus"]]
+[:comma [:open "focus://preferences"]]
+#+end_src
+** comma-mode
+Just some like random stuff. Open notes, zoom links, twitter, typing tests.
+
+Open [[https://chrome.google.com/webstore/detail/history-trends-unlimited/pnmchffiealhkdloeffcdnbgdnedheme?hl=en][History Trends Unlimited]] chrome extension
+#+begin_src apples
+tell application "Google Chrome" to open location "chrome-extension://pnmchffiealhkdloeffcdnbgdnedheme/search.html"
+#+end_src
+
+Open a URL, but only if it's not already a tab. If it's a tab, then go to that tab.
+#+begin_src apples
+on run (clp)
+    tell application "Safari"
+        repeat with w in windows
+            set i to 1
+            repeat with t in tabs of w
+                if URL of t starts with clp's item 1 then
+                    set current tab of w to t
+                    -- set active tab index of w to i
+                    tell w
+                        set index to 1
+                    end tell
+                    -- delay 0.05
+                    -- do shell script "open -a Safari"
+                    tell application "System Events"
+                        perform action "AXRaise" of front window of application process "Safari"
+                    end tell
+                    activate
+                    return
+                end if
+                set i to i + 1
+            end repeat
+        end repeat
+        open location clp's item 1
+        activate
+    end tell
+end run
+#+end_src
+
+Check my calendar; if there's an event with a zoom link, open the zoom link.
+#+begin_src apples
+use script "CalendarLib EC" version "1.1.5"
+use scripting additions
+use framework "Foundation"
+
+property NSRegularExpressionCaseInsensitive : a reference to 1
+property NSRegularExpression : a reference to current application's NSRegularExpression
+
+-- fetch properties of events for next week
+set now to current date
+set theStore to fetch store
+set theCal to fetch calendar "Calendar" cal type cal exchange event store theStore -- change to suit
+set theEvents to fetch events starting date now ending date now searching cals {theCal} event store theStore -- get events that are occurring currently
+if length of theEvents is 0
+    display notification "No events currently!"
+    return
+end if
+set theEvent to (item 1 of theEvents)
+set theEventRecord to event info for event theEvent
+set theEventNotes to (get event_description of theEventRecord)
+if theEventNotes is missing value
+    display notification "Couldn't find the zoom link. Opening calendar..."
+    tell application "Calendar" to activate
+    return
+end if
+set theNSStringSample to current application's NSString's stringWithString:theEventNotes
+set passcodePattern to "Password:(?:\\s|\\n)+(\\d{6})"
+set thePasscodeRegEx to NSRegularExpression's regularExpressionWithPattern:passcodePattern options:NSRegularExpressionCaseInsensitive |error|:(missing value)
+set aMatch to thePasscodeRegEx's firstMatchInString:theNSStringSample options:0 range:[0, theNSStringSample's |length|]
+if aMatch is not missing value then
+    set partRange to (aMatch's rangeAtIndex:1) as record
+    set passcode to (theNSStringSample's substringWithRange:partRange) as text
+    set the clipboard to passcode -- copy the passcode in case zoom prompts for it
+else
+    display notification "Couldn't find the passcode."
+end if
+
+set zoomLinkPattern to "https:\\/\\/(?:.+\\.)?zoom\\.us\\/j\\/(\\d+)\\?pwd=([a-zA-Z0-9]+)"
+set theZoomLinkRegEx to NSRegularExpression's regularExpressionWithPattern:zoomLinkPattern options:NSRegularExpressionCaseInsensitive |error|:(missing value)
+set aMatch to theZoomLinkRegEx's firstMatchInString:theNSStringSample options:0 range:[0, theNSStringSample's |length|]
+if aMatch is not missing value then
+    set partRange to (aMatch's rangeAtIndex:1) as record
+    set zoomConfNo to (theNSStringSample's substringWithRange:partRange) as text
+    set partRange to (aMatch's rangeAtIndex:2) as record
+    set zoomPwd to (theNSStringSample's substringWithRange:partRange) as text
+    display notification "Starting zoom..."
+    open location "zoommtg://zoom.us/join?confno=" & zoomConfno & "&pwd=" & zoomPwd
+else
+    display notification "Couldn't find the zoom link. Opening calendar..."
+    tell application "Calendar" to activate
+end if
+#+end_src
+
+#+RESULTS:
+
+I really like Safari, but sometimes need to use Chrome for various extensions etc. Solution: have Safari => Chrome shortcut.
+#+begin_src apples
+tell application "Safari"
+    set theURL to URL of current tab of window 1
+    tell application "Google Chrome" to open location theURL
+end tell
+#+end_src
+
+
+#+begin_src clojure
+:comma-mode
+[:1 [:withsecretsmarturl "$PSYCH_LECTURE_LINK"]]
+[:3 [:withsecret "open $PAC_PROJECT_ZOOM_LINK"]]
+;; add title bar to frame
+[:a [:elisp "(setq mac-use-title-bar t)(setq ketan0/old-frame (selected-frame)) (make-frame)(delete-frame ketan0/old-frame)"]]
+[:b "osascript ~/.dotfiles/open_in_chrome.scpt"]
+[:c [:open "/Users/ketanagrawal/org_private/capture.org"]]
+[:d [:open "https://drive.google.com/drive/my-drive"]]
+[:o [:open "http://doc.new"]] ;; new google doc
+[:e [:open "/Users/ketanagrawal/.dotfiles/doom.d/config.el"]]
+[:f [:smarturl "https://www.keyhero.com/free-typing-test/"]]
+;; [:h [:km "Github => Emacs"]]
+[:h "osascript /Users/ketanagrawal/.dotfiles/open_chrome_history.scpt"]
+
+[:i [:smarturl "https://www.keyhero.com/typing-instant-death/"]]
+[:j [:smarturl "http://localhost:8888"]]
+[:l "osascript /Users/ketanagrawal/.dotfiles/open_current_zoom_link.scpt"]
+[:m [:smarturl "https://outlook.office.com/"]]
+[:n [:openwith "Google Chrome" "https://www.netflix.com/title/80199128"]]
+[:p [:withsecretsmarturl "$PAC_PROGRESS_DOC_LINK"]]
+[:t [:smarturl "https://twitter.com/i/bookmarks"]]
+[:r [:open "/Users/ketanagrawal/org_private/todos.org"]]
+[:s [:open "/Users/ketanagrawal/.dotfiles/karabiner.org"]]
+;; [:v [:open "https://healthy.verily.com/"]] ;; covid testing
+[:v [:openwith "Emacs" "/Users/ketanagrawal/Dropbox/Apps/GoodNotes 5/GoodNotes/vision.pdf"]]
+[:y [:openwith "Emacs" "/Users/ketanagrawal/.dotfiles/yabairc"]]
+[:z [:withsecret "open $MY_ZOOM_LINK"]]
+#+end_src
+** o-key-mode
+#+begin_src clojure
+#+end_src
+** wallpaper-mode
+#+begin_src clojure
+:wallpaper-mode
+[:g [:wallpaper "/System/Library/Desktop Pictures/Solar Gradients.heic"]]
+[:s [:wallpaper "/Users/ketanagrawal/Desktop/wallpapers/simple-subtle-abstract-dark-minimalism-4k-u9.jpg"]]
+[:x [:wallpaper "/Users/ketanagrawal/Desktop/wallpapers/paint_colorful_overlay_139992_1440x900.jpg"]]
+[:y [:wallpaper "/Users/ketanagrawal/Desktop/wallpapers/background_paint_stains_light_76087_1440x900.jpg"]]
+
+#+end_src
+** vim-mode (z)
+#+begin_src clojure
+:vim-mode
+[:#Sh :left_arrow] ;; hjkl navigation everywhere + Shift
+[:#Sj :down_arrow]
+[:#Sk :up_arrow]
+[:#Sl :right_arrow]
+[:#Sb :!Oleft_arrow]
+[:#Sw :!Oright_arrow]
+[:delete_or_backspace :!Odelete_or_backspace]
+#+end_src
+
+** jupyter mode (j)
+#+begin_src clojure
+:jupyter-mode
+[:l [:km "Start or Go to Existing Jupyter Lab Server"]]
+#+end_src
+
+** end main
+#+begin_src clojure
+]}] ;;end main
+#+end_src
+
+* Applications
+#+begin_src clojure
+:applications [
+
+               :Emacs ["^org\\.gnu\\.Emacs$"]
+               :Chrome ["^com\\.google\\.Chrome$", "^org\\.chromium\\.Chromium$", "^com\\.google\\.Chrome\\.canary$"]
+
+               ]
+
+} ;;ending bracket for whole data structure -- don't delete!
+#+end_src

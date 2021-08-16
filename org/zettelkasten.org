@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       16db6da7-fbb6-4614-a23c-79ad58a43310
+:END:
+#+title: zettelkasten

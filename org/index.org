@@ -3,7 +3,9 @@
 :END:
 #+title: Hello
 
-Welcome to my digital laboratory! It is currently under construction.
+Welcome to my digital laboratory! This site (the public facing side of my [[id:16db6da7-fbb6-4614-a23c-79ad58a43310][zettelkasten]]) is currently under construction. 🚧
+
+[[id:e6aca40a-e418-4a55-b74e-dfb0109152aa][What's the point?]]
 
 * What you'll find in my laboratory
 :PROPERTIES:
