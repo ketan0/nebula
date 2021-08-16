@@ -13,7 +13,6 @@ body {
 
 .title {
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -24,18 +23,11 @@ body {
 
 .underline { text-decoration: underline; }
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   font-weight: 400;
   color: black;
 }
-
-.org-dl {
-  background-color: #c0fec0;
-  padding: 16px 16px;
-  border-radius: 25px;
-}
-
 
 #preamble {
   padding: 5px 10px;
@@ -69,7 +61,6 @@ h2, h3, h4, h5, h6 {
 
 pre {
   border: 1px solid #e6e6e6;
-  border-radius: 10px;
   background-color: #f2f2f2;
   padding: 8pt;
   font-family: monospace;
@@ -77,6 +68,8 @@ pre {
   margin: 1.2em;
 }
 pre.src {
+  border-radius: 10px;
+  border-radius: 10px;
   position: relative;
   overflow: auto;
 }
@@ -95,7 +88,10 @@ pre.src:before {
 /* Bunch code + result blocks together */
 /* Color result blocks light grey */
 div.org-src-container + pre.example {
-  margin-top: -22px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: -24px;
+  position: relative;
   background-color: #e3e3e3;
 }
 
@@ -133,6 +129,18 @@ a:hover {
 
 code {
   background-color: #eee;
+}
+
+.headlines-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.headlines-grid-container div h3 {
+  text-align: center;
+}
+.headlines-grid-container div h3 * {
+  text-align: left;
 }
 
 

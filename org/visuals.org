@@ -1,4 +1,4 @@
 :PROPERTIES:
 :ID:       b56d1847-4a25-47cf-a019-4d00319d0dd1
 :END:
-#+title: interactive visualizations
+#+title: visuals

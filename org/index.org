@@ -3,12 +3,13 @@
 :END:
 #+title: Hello
 
-Welcome to my digital laboratory!
+Welcome to my digital laboratory! It is currently under construction.
 
 * What you'll find in my laboratory
-Some stuff about [[id:0997b060-ee05-458e-beed-3494675c879d][programming]]
-Some stuff about [[id:b56d1847-4a25-47cf-a019-4d00319d0dd1][interactive visualizations]], too.
-* master the fundamentals.
 :PROPERTIES:
-:ID:       8398d103-12be-4cfb-9422-2a50daebb3bc
+:HTML_CONTAINER_CLASS: headlines-grid-container
 :END:
+** [[id:0997b060-ee05-458e-beed-3494675c879d][programming]]
+** [[id:b56d1847-4a25-47cf-a019-4d00319d0dd1][visuals]]
+** [[id:091329e5-7896-4975-b88b-99b30f4dd482][philosophy]]
+** [[id:e2ff4d71-a630-4a8d-94d4-66606f321bd4][musings]]

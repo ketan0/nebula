@@ -1,7 +1,9 @@
 #!/usr/bin/env sh
 ":"; exec emacs --quick --script "$0" -- "$@" # -*- mode: emacs-lisp; lexical-binding: t; -*-
 
-; Inspiration: https://github.com/tecosaur/this-month-in-org/blob/master/publish.el
+; Inspiration:
+; https://github.com/tecosaur/this-month-in-org/blob/master/publish.el
+; https://gitlab.com/ngm/commonplace/-/blob/master/publish.el
 
 (pop argv) ; $0
 (setq force (string= "-f" (pop argv)))
@@ -42,6 +44,7 @@
 
 (setq org-html-htmlize-output-type 'css)
 (setq org-roam-directory "/Users/ketanagrawal/garden-simple/org")
+(setq org-roam-db-location "/Users/ketanagrawal/garden-simple/org/org-roam.db")
 (defun collect-backlinks-string (backend)
   (when (org-roam-node-at-point)
     (let* ((source-node (org-roam-node-at-point))

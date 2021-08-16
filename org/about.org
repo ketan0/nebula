@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       c4d1d361-8663-400c-9ba0-146870b8a7da
+:END:
+#+TITLE: About this website
+
+My digital laboratory serves as a host to my thoughts, experiments, etc. Some stuff may be incomplete or wrong -- that is okay! It's meant to be a playground for my thoughts.

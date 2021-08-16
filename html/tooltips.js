@@ -19,7 +19,7 @@ function setupTooltips() {
                                        touch: ['hold', 500],
                                        maxWidth: '30rem',
                                        inlinePositioning: false,
-                                       placement: 'right',
+                                       placement: 'auto',
                                        theme: 'light-border',
                                    });
             instance.setContent(content);

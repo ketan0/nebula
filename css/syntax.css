@@ -1,7 +1,39 @@
+.org-apples-commands {
+  /* apples-commands */
+  color: #3b6ea8;
+  font-style: italic;
+}
+
+.org-apples-reserved-words {
+  /* apples-reserved-words */
+  color: #3b6ea8;
+  font-style: italic;
+}
+
+.org-apples-statements {
+  /* apples-statements */
+  color: #3b6ea8;
+}
+
+.org-function-name {
+  /* font-lock-function-name-face */
+  color: #29838d;
+}
+
 .org-highlight-numbers-number {
   /* highlight-numbers-number */
   color: #97365b;
   font-weight: bold;
+}
+
+.org-highlight-quoted-quote {
+  /* highlight-quoted-quote */
+  color: #3b6ea8;
+}
+
+.org-highlight-quoted-symbol {
+  /* highlight-quoted-symbol */
+  color: #9a7500;
 }
 
 .org-keyword {
@@ -13,6 +45,16 @@
   /* font-lock-preprocessor-face */
   color: #3b6ea8;
   font-weight: bold;
+}
+
+.org-rainbow-delimiters-depth-1 {
+  /* rainbow-delimiters-depth-1-face */
+  color: #3b6ea8;
+}
+
+.org-rainbow-delimiters-depth-2 {
+  /* rainbow-delimiters-depth-2-face */
+  color: #97365b;
 }
 
 .org-string {

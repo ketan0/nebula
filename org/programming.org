@@ -1,0 +1,79 @@
+:PROPERTIES:
+:ID:       0997b060-ee05-458e-beed-3494675c879d
+:END:
+#+title: programming
+
+Will make this an actual, substantive note at some point. In the meantime, enjoy some random-ish code snippets that I've encountered.
+
+In rust, you can create a tuple by =let tuple = (x0, x1, x2)= and access them by =tuple.0=, =tuple.1=, and =tuple.2=. For example:
+#+begin_src rust
+let tuple = (1, "hello");
+assert_eq!(tuple.0, 1);
+assert_eq!(tuple.1, "hello");
+#+end_src
+
+Applescript to switch the current tab from Safari => Chrome:
+#+begin_src apples
+tell application "Safari"
+    set theURL to URL of current tab of window 1
+    tell application "Google Chrome" to open location theURL
+end tell
+#+end_src
+
+#+begin_src elisp
+(message "hey")
+#+end_src
+
+#+RESULTS:
+: hey
+
+#+begin_src python :results output
+import numpy as np
+
+def fibonacci_squares_arr(n):
+    if n < 0:
+        raise Exception('nope.')
+    if n == 0:
+        return np.array([])
+    if n == 1:
+        return np.array([[n]])
+    else:
+        old = fibonacci_squares_arr(n - 1)
+        side_len = max(old.shape)
+        nxt = np.full((side_len, side_len), n)
+        elems = (old, nxt) if n // 2 % 2 == 0 else (nxt, old)
+        return np.concatenate(elems, axis=int(n % 2 == 0))
+
+def fibonacci_squares(n):
+    arr = fibonacci_squares_arr(n)
+    chars = list('🟥🟦🟧🟨🟩🟪🟫')
+    fib_str = '\n'.join([''.join([chars[(elem - 1) % len(chars)]
+                                  for elem in row]) for row in arr])
+    return fib_str
+print(fibonacci_squares(8))
+#+end_src
+
+#+RESULTS:
+#+begin_example
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟧🟧🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟧🟧🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟦🟥🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+#+end_example
