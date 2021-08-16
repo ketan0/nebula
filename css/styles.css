@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
-
 html {
     -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: #fff;
-  font-family: 'Roboto Mono', 'Courier', 'Helvetica', sans-serif;
+  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   color: #2B2B2B;
   font-weight: 400;
   font-size: 15px;
@@ -15,7 +12,7 @@ body {
 }
 
 .title {
-  font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 	font-weight: 300;
   margin-bottom: 20px;
 }
@@ -25,7 +22,7 @@ body {
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   color: black;
 }
 
@@ -48,7 +45,7 @@ h2, h3, h4, h5, h6 {
   padding-right: 10px;
 }
 
-#outline-container-backlinks {
+.references {
   background-color: #eee;
   padding: 8px 16px;
   border-radius: 25px;
@@ -127,5 +124,5 @@ a:hover {
 }
 
 code {
-  background-color: rgb(229, 231, 235);
+  background-color: #eee;
 }

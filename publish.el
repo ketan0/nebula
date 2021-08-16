@@ -16,7 +16,9 @@
   (doom-initialize)
   (load-theme 'doom-opera t))
 
+(require 'find-lisp)
 (require 'dash)
+(require 's)
 (require 'htmlize)
 (require 'org-roam)
 (require 'ox-publish)
@@ -39,39 +41,76 @@
 (section! "Initializing")
 
 (setq org-html-htmlize-output-type 'css)
+(setq org-roam-directory "/Users/ketanagrawal/garden-simple/org")
+(defun collect-backlinks-string (backend)
+  (when (org-roam-node-at-point)
+    (let* ((source-node (org-roam-node-at-point))
+           (source-file (org-roam-node-file source-node))
+           ;; Sort the nodes by the point to avoid errors when inserting the
+           ;; references
+           (nodes-in-file (--sort (< (org-roam-node-point it)
+                                     (org-roam-node-point other))
+                                  (-filter (lambda (node)
+                                             (s-equals?
+                                              (org-roam-node-file node)
+                                              source-file))
+                                           (org-roam-node-list))))
+           ;; Nodes don't store the last position so, get the next node position
+           ;; and subtract one character
+           (nodes-start-position (-map (lambda (node) (org-roam-node-point node))
+                                       nodes-in-file))
+           (nodes-end-position (-concat (-map (lambda (next-node-position)
+                                                (- next-node-position 1))
+                                              (-drop 1 nodes-start-position))
+                                        (list (point-max))))
+           ;; Keep track of the current-node index
+           (current-node 0)
+           ;; Keep track of the amount of text added
+           (character-count 0))
+      (dolist (node nodes-in-file)
+        (when (org-roam-backlinks-get node)
+          ;; Go to the end of the node and don't forget about previously inserted
+          ;; text
+          (goto-char (+ (nth current-node nodes-end-position) character-count))
+          ;; Add the references as a subtree of the node
+          (setq heading (format "\n\n%s References\n"
+                                (s-repeat (+ (org-roam-node-level node) 1) "*")))
+          ;; Count the characters and count the new lines (4)
+          (setq character-count (+ 3 character-count (string-width heading)))
+          (insert heading)
+          ;; Insert properties drawer
+          (setq properties-drawer ":PROPERTIES:\n:HTML_CONTAINER_CLASS: references\n:END:\n")
+          ;; Count the characters and count the new lines (3)
+          (setq character-count (+ 3 character-count (string-width properties-drawer)))
+          (insert properties-drawer)
+          (dolist (backlink (org-roam-backlinks-get node))
+            (let* ((source-node (org-roam-backlink-source-node backlink))
+                   (point (org-roam-backlink-point backlink))
+                   (text (s-replace "\n" " " (org-roam-preview-get-contents
+                                           (org-roam-node-file source-node)
+                                           point)))
+                   (references (format "- [[./%s][%s]]: %s\n\n"
+                                       (file-relative-name (org-roam-node-file source-node))
+                                       (org-roam-node-title source-node)
+                                       text)))
+              ;; Also count the new lines (2)
+              (setq character-count (+ 2 character-count (string-width references)))
+              (insert references))))
+        (setq current-node (+ current-node 1))))))
 
-(setq project-dir "/Users/ketanagrawal/garden-simple/org")
-(setq org-roam-directory project-dir)
-;; to be able to find id links during publish
-(setq org-roam-db-location (concat project-dir "/org-roam.db"))
-;; https://gitlab.com/ngm/commonplace/-/blob/master/publish.el
-(defun ketan0/org-roam--backlinks-list (file)
-  (if (org-roam--org-roam-file-p file)
-      (--reduce-from
-       (let (
-             (note-title (org-roam-db--get-title (car it))))
-         (concat acc (if (or (string= note-title "sitemap") ;; exclude from backlinks
-                             (string= note-title "Hello"))
-                         ""
-                       (format "- [[file:%s][%s]]\n"
-                               (file-relative-name (car it) org-roam-directory)
-                               note-title))))
-       "" (org-roam-db-query [:select [source] :from links :where (= dest $s1)] file))
-    (progn (message "it's not a file!") "")))
+;; (defun ketan0/org-export-preprocessor (backend)
+;;   (let ((links (ketan0/org-roam--backlinks-list (buffer-file-name))))
+;;     (unless (string= links "")
+;;       (save-excursion
+;;         (goto-char (point-max))
+;;         (insert (concat "
+;; * Links to this note
+;; :PROPERTIES:
+;; :CUSTOM_ID: backlinks
+;; :END:
+;; ") links)))))
 
-(defun ketan0/org-export-preprocessor (backend)
-  (let ((links (ketan0/org-roam--backlinks-list (buffer-file-name))))
-    (unless (string= links "")
-      (save-excursion
-        (goto-char (point-max))
-        (insert (concat "
-* Links to this note
-:PROPERTIES:
-:CUSTOM_ID: backlinks
-:END:
-") links)))))
-
-(add-hook 'org-export-before-processing-hook 'ketan0/org-export-preprocessor)
+(add-hook 'org-export-before-processing-hook 'collect-backlinks-string)
 
 (setq org-publish-project-alist
         '(("digital laboratory"
@@ -85,10 +124,14 @@
            :with-toc nil
            :preserve-breaks t
            :html-preamble t
-           :html-preamble-format (("en" "<a style=\"color: inherit; text-decoration: none\" href=\"/\"><h2>Ketan's Digital Laboratory &#129514;</h2></a>"))
+           :html-preamble-format (("en" "<a style=\"color: inherit; text-decoration: none\" href=\"/\">
+<h2>Ketan's Digital Laboratory &#129514;</h2>
+</a>"))
            :html-postamble t
-
-           :html-postamble-format (("en" "<p>Made with <span class=\"heart\">♥</span> using <a href=\"https://orgmode.org/\">org-mode</a>. Source code is available <a href=\"https://github.com/ketan0/digital-laboratory\">here</a>.</p>
+           :html-postamble-format (("en" "<p>Made with <span class=\"heart\">♥</span> using
+<a href=\"https://orgmode.org/\">org-mode</a>.
+Source code is available
+<a href=\"https://github.com/ketan0/digital-laboratory\">here</a>.</p>
 <script src=\"https://unpkg.com/axios/dist/axios.min.js\"></script>
 <script src=\"https://unpkg.com/@popperjs/core@2\"></script>
 <script src=\"https://unpkg.com/tippy.js@6\"></script>
@@ -109,15 +152,51 @@
 (when force
   (mapcar 'delete-file (file-expand-wildcards "./html/*.html")))
 
+;; patch from https://gist.github.com/jethrokuan/d6f80caaec7f49dedffac7c4fe41d132
+;; makes links to headlines work properly
+(defun org-html--reference (datum info &optional named-only)
+    "Return an appropriate reference for DATUM.
+DATUM is an element or a `target' type object.  INFO is the
+current export state, as a plist.
+When NAMED-ONLY is non-nil and DATUM has no NAME keyword, return
+nil.  This doesn't apply to headlines, inline tasks, radio
+targets and targets."
+    (let* ((type (org-element-type datum))
+           (user-label
+            (org-element-property
+             (pcase type
+               ((or `headline `inlinetask) :CUSTOM_ID)
+               ((or `radio-target `target) :value)
+               (_ :name))
+             datum))
+           (user-label (or user-label
+                           (when-let ((path (org-element-property :ID datum)))
+                             (concat "ID-" path)))))
+      (cond
+       ((and user-label
+             (or (plist-get info :html-prefer-user-labels)
+                 ;; Used CUSTOM_ID property unconditionally.
+                 (memq type '(headline inlinetask))))
+        user-label)
+       ((and named-only
+             (not (memq type '(headline inlinetask radio-target target)))
+             (not user-label))
+        nil)
+       (t
+        (org-export-get-reference datum info)))))
 
-(org-publish "digital laboratory" force)
+(let ((org-id-extra-files (find-lisp-find-files org-roam-directory "\.org$")))
+  (org-publish "digital laboratory" force))
+
 
 (let ((css-src (expand-file-name "css/styles.css"))
       (css-dest (expand-file-name "html/styles.css")))
   (when (file-newer-than-file-p css-src css-dest)
+    (message "Copying styles.css...")
     (copy-file css-src css-dest t)))
 
 (let ((css-src (expand-file-name "css/syntax.css"))
       (css-dest (expand-file-name "html/syntax.css")))
   (when (file-newer-than-file-p css-src css-dest)
+    (message "Copying syntax.css...")
     (copy-file css-src css-dest t)))

@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-07-18 Sun 16:25 -->
+<!-- 2021-08-15 Sun 20:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>sitemap</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="Ketan Agrawal" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,21 +42,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -191,7 +192,6 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -199,56 +199,26 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Digital Laboratory &#129514;</h2></a>
+<a style="color: inherit; text-decoration: none" href="/">
+<h2>Ketan's Digital Laboratory &#129514;</h2>
+</a>
 </div>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">sitemap</h1>
 <ul class="org-ul">
-<li><a href="20210704202541-cognitive_biases.html">Cognitive Biases</a><br /></li>
 <li><a href="index.html">Hello</a><br /></li>
-<li><a href="20210716222804-norms.html">Norms</a><br /></li>
-<li><a href="20210624201039-psych_70_social_psychology.html">PSYCH 70: Social Psychology</a><br /></li>
-<li><a href="pieces_of_happy.html">Pieces of Happy</a><br /></li>
-<li><a href="20210627180445-self_fulfilling_prophecy.html">Self-fulfilling prophecy</a><br /></li>
-<li><a href="20210629174811-zen_and_the_art_of_motorcycle_maintenance.html">Zen and the Art of Motorcycle Maintenance</a><br /></li>
-<li><a href="20210623024548-affordances.html">affordances</a><br /></li>
-<li><a href="20210717185155-books.html">books</a><br /></li>
-<li><a href="counterfactual_inference.html">counterfactual inference</a><br /></li>
-<li><a href="20210717184432-don_t_worry_too_much_about_constants.html">don&rsquo;t worry too much about constants.</a><br /></li>
-<li><a href="20210629174828-lateral_drift.html">lateral drift</a><br /></li>
-<li><a href="20210626152258-positive_feedback_loop.html">positive feedback loop</a><br /></li>
-<li><a href="random.html">random</a><br /></li>
-<li><a href="sleep.html">sleep</a><br /></li>
-<li><a href="starting_points.html">starting points</a><br /></li>
+<li><a href="20210807025821-interactive_visualizations.html">interactive visualizations</a><br /></li>
+<li><a href="20210807025506-programming.html">programming</a></li>
 </ul>
 </div>
 <div id="postamble" class="status">
-<p>Made with <span class="heart">♥</span> using <a href="https://orgmode.org/">org-mode</a>. Source code is available <a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<p>Made with <span class="heart">♥</span> using
+<a href="https://orgmode.org/">org-mode</a>.
+Source code is available
+<a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
