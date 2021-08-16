@@ -6,9 +6,8 @@
 Welcome to my digital laboratory!
 
 * What you'll find in my laboratory
-[[id:0997b060-ee05-458e-beed-3494675c879d][programming]]
-[[id:b56d1847-4a25-47cf-a019-4d00319d0dd1][interactive visualizations]]
-
+Some stuff about [[id:0997b060-ee05-458e-beed-3494675c879d][programming]]
+Some stuff about [[id:b56d1847-4a25-47cf-a019-4d00319d0dd1][interactive visualizations]], too.
 * master the fundamentals.
 :PROPERTIES:
 :ID:       8398d103-12be-4cfb-9422-2a50daebb3bc

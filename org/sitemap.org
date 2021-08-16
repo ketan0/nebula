@@ -1,5 +1,6 @@
 #+TITLE: sitemap
 
+- [[file:about.org][About this website]]
 - [[file:index.org][Hello]]
 - [[file:20210807025821-interactive_visualizations.org][interactive visualizations]]
 - [[file:20210807025506-programming.org][programming]]

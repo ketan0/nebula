@@ -2,5 +2,3 @@
 :ID:       0997b060-ee05-458e-beed-3494675c879d
 :END:
 #+title: programming
-
-In programming, it's important to [[id:8398d103-12be-4cfb-9422-2a50daebb3bc][master the fundamentals.]]
