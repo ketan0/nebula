@@ -132,12 +132,12 @@
 <a href=\"https://orgmode.org/\">org-mode</a>.
 Source code is available
 <a href=\"https://github.com/ketan0/digital-laboratory\">here</a>.</p>
-<script src=\"https://unpkg.com/axios/dist/axios.min.js\"></script>
-<script src=\"https://unpkg.com/@popperjs/core@2\"></script>
-<script src=\"https://unpkg.com/tippy.js@6\"></script>
+<script src=\"popper.min.js\"></script>
+<script src=\"tippy-bundle.umd.min.js\"></script>
 <script src=\"tooltips.js\"></script>"))
            :html-link-home ""
            :html-link-up ""
+           :html-head-include-default-style nil
            :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"syntax.css\" />
 <link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\" />"
            :html-head-extra "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\" />
