@@ -16,15 +16,22 @@
   (load (expand-file-name "core/core.el" user-emacs-directory) nil t)
   (require 'core-cli)
   (doom-initialize)
-  (load-theme 'doom-opera t))
+  (load-theme 'doom-opera-light t))
 
 (require 'find-lisp)
 (require 'dash)
 (require 's)
+(require 'rustic)
 (require 'htmlize)
 (require 'org-roam)
 (require 'ox-publish)
 (require 'ox-html)
+
+(setq org-babel-default-header-args
+  (cons '(:exports . "both") ;; export code and results by default
+  (cons '(:eval . "no-export") ;; don't evaluate src blocks when exporting
+  (assq-delete-all :exports
+  (assq-delete-all :eval org-babel-default-header-args)))))
 
 (advice-add 'undo-tree-mode :override #'ignore) ; Undo tree is a pain
 ;;; Silence uninformative noise

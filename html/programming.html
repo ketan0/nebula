@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-16 Mon 06:19 -->
+<!-- 2021-08-16 Mon 13:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>programming</title>
@@ -18,14 +18,12 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/">
-<h2>Ketan's Digital Laboratory &#129514;</h2>
-</a>
+<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Digital Laboratory &#129514;</h2></a>
 </div>
 <div id="content" class="content">
 <h1 class="title">programming</h1>
 <p>
-Will make this an actual, substantive note at some point. In the meantime, enjoy some random-ish code snippets that I've encountered.<br />
+I will make this an actual, substantive note at some point. In the meantime, enjoy some random-ish code snippets that I&rsquo;ve encountered.<br />
 </p>
 
 <p>
@@ -36,9 +34,9 @@ connected to a lot of these things is my <a href="karabiner.html#ID-058bef0b-aba
 In rust, you can create a tuple by <code>let tuple = (x0, x1, x2)</code> and access them by <code>tuple.0</code>, <code>tuple.1</code>, and <code>tuple.2</code>. For example:<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-rust">let tuple = (1, "hello");
-assert_eq!(tuple.0, 1);
-assert_eq!(tuple.1, "hello");
+<pre class="src src-rust"><span class="org-keyword">let</span> <span class="org-variable-name">tuple</span> = (<span class="org-highlight-numbers-number">1</span>, <span class="org-string">"hello"</span>);
+<span class="org-preprocessor">assert_eq!</span>(tuple.<span class="org-highlight-numbers-number">0</span>, <span class="org-highlight-numbers-number">1</span>);
+<span class="org-preprocessor">assert_eq!</span>(tuple.<span class="org-highlight-numbers-number">1</span>, <span class="org-string">"hello"</span>);
 </pre>
 </div>
 
@@ -54,41 +52,71 @@ Applescript to switch the current tab from Safari =&gt; Chrome:<br />
 </div>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(message <span class="org-string">"hey"</span>)
+<pre class="src src-elisp"><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-constant">message</span> <span class="org-string">"Lovely %s we're having, isn't it?"</span>
+    <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-constant">format-time-string</span> <span class="org-string">"%A"</span><span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
 </pre>
 </div>
+
+<pre class="example">
+Lovely Monday we’re having, isn’t it?
+</pre>
+
 
 <div class="org-src-container">
 <pre class="src src-python"><span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
 
 <span class="org-keyword">def</span> <span class="org-function-name">fibonacci_squares_arr</span>(n):
-    <span class="org-keyword">if</span> n &lt; 0:
+    <span class="org-keyword">if</span> n &lt; <span class="org-highlight-numbers-number">0</span>:
         <span class="org-keyword">raise</span> <span class="org-type">Exception</span>(<span class="org-string">'nope.'</span>)
-    <span class="org-keyword">if</span> n == 0:
+    <span class="org-keyword">if</span> n == <span class="org-highlight-numbers-number">0</span>:
         <span class="org-keyword">return</span> np.array([])
-    <span class="org-keyword">if</span> n == 1:
+    <span class="org-keyword">if</span> n == <span class="org-highlight-numbers-number">1</span>:
         <span class="org-keyword">return</span> np.array([[n]])
     <span class="org-keyword">else</span>:
-        <span class="org-variable-name">old</span> = fibonacci_squares_arr(n - 1)
+        <span class="org-variable-name">old</span> = fibonacci_squares_arr(n - <span class="org-highlight-numbers-number">1</span>)
         <span class="org-variable-name">side_len</span> = <span class="org-builtin">max</span>(old.shape)
         <span class="org-variable-name">nxt</span> = np.full((side_len, side_len), n)
-        <span class="org-variable-name">elems</span> = (old, nxt) <span class="org-keyword">if</span> n // 2 % 2 == 0 <span class="org-keyword">else</span> (nxt, old)
-        <span class="org-keyword">return</span> np.concatenate(elems, axis=<span class="org-builtin">int</span>(n % 2 == 0))
+        <span class="org-variable-name">elems</span> = (old, nxt) <span class="org-keyword">if</span> n // <span class="org-highlight-numbers-number">2</span> % <span class="org-highlight-numbers-number">2</span> == <span class="org-highlight-numbers-number">0</span> <span class="org-keyword">else</span> (nxt, old)
+        <span class="org-keyword">return</span> np.concatenate(elems, axis=<span class="org-builtin">int</span>(n % <span class="org-highlight-numbers-number">2</span> == <span class="org-highlight-numbers-number">0</span>))
 
 <span class="org-keyword">def</span> <span class="org-function-name">fibonacci_squares</span>(n):
     <span class="org-variable-name">arr</span> = fibonacci_squares_arr(n)
     <span class="org-variable-name">chars</span> = <span class="org-builtin">list</span>(<span class="org-string">'&#128997;&#128998;&#128999;&#129000;&#129001;&#129002;&#129003;'</span>)
-    <span class="org-variable-name">fib_str</span> = <span class="org-string">'\n'</span>.join([<span class="org-string">''</span>.join([chars[(elem - 1) % <span class="org-builtin">len</span>(chars)]
+    <span class="org-variable-name">fib_str</span> = <span class="org-string">'\n'</span>.join([<span class="org-string">''</span>.join([chars[(elem - <span class="org-highlight-numbers-number">1</span>) % <span class="org-builtin">len</span>(chars)]
                                   <span class="org-keyword">for</span> elem <span class="org-keyword">in</span> row]) <span class="org-keyword">for</span> row <span class="org-keyword">in</span> arr])
     <span class="org-keyword">return</span> fib_str
-<span class="org-keyword">print</span>(fibonacci_squares(8))
+<span class="org-keyword">print</span>(fibonacci_squares(<span class="org-highlight-numbers-number">8</span>))
 </pre>
 </div>
 
+<pre class="example" id="org87f47bf">
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟧🟧🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟧🟧🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟦🟥🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+</pre>
 
-<div id="outline-container-orga9d7e2e" class="outline-2 references">
-<h2 id="orga9d7e2e">References</h2>
-<div class="outline-text-2" id="text-orga9d7e2e">
+
+<div id="outline-container-org50fda17" class="outline-2 references">
+<h2 id="org50fda17">References</h2>
+<div class="outline-text-2" id="text-org50fda17">
 <ul class="org-ul">
 <li><a href="./index.html">Hello</a>:<br /></li>
 </ul>
