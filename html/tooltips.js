@@ -1,48 +1,31 @@
-async function setupTooltips() {
+// code to setup tippy.js tooltips
+function setupTooltips() {
     // hacky CSS for now to only match internal links, and not the homepage
     const links = document.querySelectorAll('a:not([href^="http"],[href="/"])');
     var parser = new DOMParser();
     for (let link of links) {
-        const { data } = await axios.get(link.getAttribute('href'));
-        var htmlDoc = parser.parseFromString(data, 'text/html');
-        const content = htmlDoc.getElementById('content').innerHTML;
-        // const title = htmlDoc.getElementsByClassName('title')[0].outerHTML;
-        // const descList = Array.from(htmlDoc.querySelectorAll('div#content > p'));
-        // const desc = descList.reduce((acc, curr) => acc + curr.outerHTML, '');
-        // link.setAttribute('data-tippy-content', title + desc)
-        link.setAttribute('data-tippy-content', content)
+        // when hover over a link, fetch its preview
+        link.addEventListener('mouseover', async (event) => {
+            if (event.target._tippy) {
+                return;
+            }
+            const response = await fetch(event.target.getAttribute('href'));
+            const htmlText = await response.text();
+            var htmlDoc = parser.parseFromString(htmlText, 'text/html');
+            const content = htmlDoc.getElementById('content').innerHTML;
+            const instance = tippy(event.target, {
+                                       allowHTML: true,
+                                       interactive: true,
+                                       touch: ['hold', 500],
+                                       maxWidth: '30rem',
+                                       inlinePositioning: false,
+                                       placement: 'right',
+                                       theme: 'light-border',
+                                   });
+            instance.setContent(content);
+            instance.show();
+        })
     }
-
-    tippy('[data-tippy-content]', {
-        allowHTML: true,
-        interactive: true,
-        // trigger: 'click',
-        // hideOnClick: false,
-        maxWidth: '30rem',
-        touch: false,
-        delay: 100,
-        // appendTo: document.body,
-        popperOptions: {
-            strategy: 'fixed',
-            modifiers: [
-                {
-                    name: 'preventOverflow',
-                    options: {
-                        // padding: { top: 64 },
-                        // mainAxis: true,
-                        altAxis: true,
-                    },
-                },
-                // {
-                //     name: 'flip',
-                //     options: {
-                //         padding: { top: 600 },
-                //         fallbackPlacements: ['bottom', 'right']
-                //     }
-                // },
-            ],
-        },
-    });
 }
 
 setupTooltips();
