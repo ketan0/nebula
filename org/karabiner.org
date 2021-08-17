@@ -3,16 +3,13 @@
 :END:
 #+TITLE: goku (karabiner) config
 #+AUTHOR: Ketan Agrawal
-Created by Ketan Agrawal
 
-
+This is my literate config for [[https://github.com/yqrashawn/GokuRakuJoudo][goku]]. It makes it easy to define keyboard shortcuts in a succinct and powerful way.
 
 inspiration taken from these goku configs:
 - [[https://github.com/yqrashawn/yqdotfiles/blob/master/.config/karabiner.edn][yqrashawn]]
 - [[https://github.com/nikitavoloboev/dotfiles/blob/master/karabiner/karabiner.edn][nikitavoloboev]]
 - [[https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126][kaushikgopal]]
-
-This is my literate config for [[https://github.com/yqrashawn/GokuRakuJoudo][goku]]. It makes it easy to define keyboard shortcuts in a succinct and powerful way.
 
 * Guide
 For more info on configuring Goku, see the [[https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md][tutorial]].
