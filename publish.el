@@ -144,11 +144,12 @@ Source code is available
 <a href=\"https://github.com/ketan0/digital-laboratory\">here</a>.</p>
 <script src=\"popper.min.js\"></script>
 <script src=\"tippy-bundle.umd.min.js\"></script>
-<script src=\"tooltips.js\"></script>"))
+<script src=\"tooltips.js\" async></script>"))
            :html-link-home ""
            :html-link-up ""
            :html-head-include-default-style nil
-           :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"syntax.css\" />
+           :html-head "<link rel=\"preload\" href=\"syntax.css\" as=\"style\" onload=\"this.onload=null;this.rel='stylesheet'\">
+<noscript><link rel=\"stylesheet\" href=\"syntax.css\"></noscript>
 <link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\" />"
            :html-head-extra "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\" />
 <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\" />
