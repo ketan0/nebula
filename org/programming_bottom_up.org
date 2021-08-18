@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       95ff3fb3-f886-41df-9f4f-5f9223b4ca4e
+:ROAM_REFS: http://www.paulgraham.com/progbot.html
+:END:
+#+title: Programming Bottom-Up
+
+There are two ways of [[id:0997b060-ee05-458e-beed-3494675c879d][programming]] in Lisp -- top-down, and bottom-up.
+
+Top-down = the classic paradigm of divide-and conquer, decomposing the problem hierarchically into smaller problems.
+
+Bottom-up = defining your own DSL in Lisp, and using those primitives to make something cool.
+
+Most programming is done top-down, but with the powers of macros you can go bottom-up, creating "little universes" in Lisp...
+
+Personally what comes to mind is the =rx= macro in emacs. It's like a nice little domain-specific language for writing regular expressions, embedded right into elisp.
+
+Regexp matching a block comment in C:
+#+begin_src emacs-lisp
+(rx "/*"                          ; Initial /*
+    (zero-or-more
+     (or (not (any "*"))          ;  Either non-*,
+         (seq "*"                 ;  or * followed by
+              (not (any "/")))))  ;  non-/
+    (one-or-more "*")             ; At least one star,
+    "/")                          ; and the final /
+#+end_src
+
+#+RESULTS:
+: /\*\(?:[^*]\|\*[^/]\)*\*+/
+
+you redefine /the language itself/ to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It's like "meeting in the middle," so you don't have to build up super complex primitives, and you don't have to decompose down to a super fine-grained level.
+
+I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there's an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.
+
+Also feel like [[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][emacs]] encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it's like, ok cool, what else can I build with these snippets?

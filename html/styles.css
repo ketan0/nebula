@@ -124,6 +124,7 @@ a:hover {
 
 code {
   background-color: #eee;
+  color: rgb(229, 126, 58)
 }
 
 
@@ -138,6 +139,7 @@ code {
   background-color:#fff;
   background-clip:padding-box;
   border:1px solid rgba(0,8,16,.15);
+  border-radius: 10px;
   color:#333;
   box-shadow:0 4px 14px -2px rgba(0,8,16,.08)
 }
@@ -230,6 +232,12 @@ code {
     background-color: #181818;
     color: #efefef;
   }
+  #preamble {
+    border-bottom: 1px solid #222;
+  }
+  #postamble {
+    border-top: 1px solid #222;
+  }
   code {
     background-color: #222;
   }
@@ -237,7 +245,7 @@ code {
     background-color: #181818;
   }
   pre {
-    border: 1px solid #91959a88;
+    border: 1px solid #91959a;
     background-color: #181818;
   }
   div.org-src-container + pre.example {

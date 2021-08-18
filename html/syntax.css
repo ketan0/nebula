@@ -4,15 +4,55 @@
   font-style: italic;
 }
 
+.org-apples-operators {
+  /* apples-operators */
+  color: #9a7500;
+}
+
+.org-apples-records {
+  /* apples-records */
+  color: #29838d;
+}
+
 .org-apples-reserved-words {
   /* apples-reserved-words */
   color: #3b6ea8;
   font-style: italic;
 }
 
+.org-apples-standard-folders {
+  /* apples-standard-folders */
+  color: #97365b;
+}
+
 .org-apples-statements {
   /* apples-statements */
   color: #3b6ea8;
+}
+
+.org-bold {
+  /* bold */
+  font-weight: bold;
+}
+
+.org-builtin {
+  /* font-lock-builtin-face */
+  color: #29838d;
+}
+
+.org-comment {
+  /* font-lock-comment-face */
+  color: #b1b1b1;
+}
+
+.org-comment-delimiter {
+  /* font-lock-comment-delimiter-face */
+  color: #b1b1b1;
+}
+
+.org-constant {
+  /* font-lock-constant-face */
+  color: #97365b;
 }
 
 .org-function-name {
@@ -24,16 +64,6 @@
   /* highlight-numbers-number */
   color: #97365b;
   font-weight: bold;
-}
-
-.org-highlight-quoted-quote {
-  /* highlight-quoted-quote */
-  color: #3b6ea8;
-}
-
-.org-highlight-quoted-symbol {
-  /* highlight-quoted-symbol */
-  color: #9a7500;
 }
 
 .org-keyword {
@@ -57,12 +87,38 @@
   color: #97365b;
 }
 
+.org-rainbow-delimiters-depth-3 {
+  /* rainbow-delimiters-depth-3-face */
+  color: #4f894c;
+}
+
+.org-rainbow-delimiters-depth-4 {
+  /* rainbow-delimiters-depth-4-face */
+  color: #842879;
+}
+
+.org-rainbow-delimiters-unmatched {
+  /* rainbow-delimiters-unmatched-face */
+  color: #99324b;
+  font-weight: bold;
+}
+
 .org-string {
   /* font-lock-string-face */
   color: #4f894c;
 }
 
+.org-type {
+  /* font-lock-type-face */
+  color: #9a7500;
+}
+
 .org-variable-name {
   /* font-lock-variable-name-face */
   color: #cb9aad;
+}
+
+.org-warning {
+  /* warning */
+  color: #9a7500;
 }
