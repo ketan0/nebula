@@ -56,57 +56,52 @@
   (when (org-roam-node-at-point)
     (let* ((source-node (org-roam-node-at-point))
            (source-file (org-roam-node-file source-node))
-           ;; Sort the nodes by the point to avoid errors when inserting the
-           ;; references
-           (nodes-in-file (--sort (< (org-roam-node-point it)
-                                     (org-roam-node-point other))
-                                  (-filter (lambda (node)
-                                             (s-equals?
-                                              (org-roam-node-file node)
-                                              source-file))
-                                           (org-roam-node-list))))
-           ;; Nodes don't store the last position so, get the next node position
-           ;; and subtract one character
-           (nodes-start-position (-map (lambda (node) (org-roam-node-point node))
-                                       nodes-in-file))
-           (nodes-end-position (-concat (-map (lambda (next-node-position)
-                                                (- next-node-position 1))
-                                              (-drop 1 nodes-start-position))
-                                        (list (point-max))))
-           ;; Keep track of the current-node index
-           (current-node 0)
-           ;; Keep track of the amount of text added
-           (character-count 0))
-      (dolist (node nodes-in-file)
-        (when (org-roam-backlinks-get node)
-          ;; Go to the end of the node and don't forget about previously inserted
-          ;; text
-          (goto-char (+ (nth current-node nodes-end-position) character-count))
-          ;; Add the references as a subtree of the node
-          (setq heading (format "\n\n%s References\n"
+           (nodes-in-file (--filter (s-equals? (org-roam-node-file it) source-file)
+                                    (org-roam-node-list)))
+           (nodes-start-position (-map 'org-roam-node-point nodes-in-file))
+           ;; Nodes don't store the last position, so get the next headline position
+           ;; and subtract one character (or do point-max)
+           (nodes-end-position (-map (lambda (nodes-start-position)
+                                       (goto-char nodes-start-position)
+                                       (if (org-before-first-heading-p) ;; file node
+                                           (point-max)
+                                           (call-interactively
+                                            'org-forward-heading-same-level)
+                                           (if (> (point) nodes-start-position)
+                                               (- (point) 1) ;; successfully found next
+                                             (point-max)))) ;; there was no next
+                                     nodes-start-position))
+           ;; sort in order of decreasing end position
+           (nodes-in-file-sorted (->> (-zip nodes-in-file nodes-end-position)
+                                      (--sort (> (cdr it) (cdr other))))))
+      (dolist (node-and-end nodes-in-file-sorted)
+        (-let (((node . end-position) node-and-end))
+          (when (org-roam-backlinks-get node)
+            (goto-char end-position)
+          (setq heading (format "\n\n%s Links to this node\n"
                                 (s-repeat (+ (org-roam-node-level node) 1) "*")))
-          ;; Count the characters and count the new lines (4)
-          (setq character-count (+ 3 character-count (string-width heading)))
           (insert heading)
-          ;; Insert properties drawer
           (setq properties-drawer ":PROPERTIES:\n:HTML_CONTAINER_CLASS: references\n:END:\n")
-          ;; Count the characters and count the new lines (3)
-          (setq character-count (+ 3 character-count (string-width properties-drawer)))
           (insert properties-drawer)
           (dolist (backlink (org-roam-backlinks-get node))
             (let* ((source-node (org-roam-backlink-source-node backlink))
+                   (properties (org-roam-backlink-properties backlink))
+                   (outline (when-let ((outline (plist-get properties :outline)))
+                                (mapconcat #'org-link-display-format outline " > ")))
                    (point (org-roam-backlink-point backlink))
                    (text (s-replace "\n" " " (org-roam-preview-get-contents
-                                           (org-roam-node-file source-node)
-                                           point)))
-                   (references (format "- [[./%s][%s]]: %s\n\n"
+                                              (org-roam-node-file source-node)
+                                              point)))
+                   (reference (format "%s [[./%s][%s]]\n%s\n%s\n\n"
+                                       (s-repeat (+ (org-roam-node-level node) 2) "*")
                                        (file-relative-name (org-roam-node-file source-node))
                                        (org-roam-node-title source-node)
+                                       (if outline
+                                           (format "%s (/%s/)"
+                                                   (s-repeat (+ (org-roam-node-level node) 3) "*")
+                                                   outline) "")
                                        text)))
-              ;; Also count the new lines (2)
-              (setq character-count (+ 2 character-count (string-width references)))
-              (insert references))))
-        (setq current-node (+ current-node 1))))))
+              (insert reference)))))))))
 
 ;; (defun ketan0/org-export-preprocessor (backend)
 ;;   (let ((links (ketan0/org-roam--backlinks-list (buffer-file-name))))
@@ -195,6 +190,45 @@ targets and targets."
         nil)
        (t
         (org-export-get-reference datum info)))))
+(defun org-html-src-block (src-block _contents info)
+    "Transcode a SRC-BLOCK element from Org to HTML.
+CONTENTS holds the contents of the item.  INFO is a plist holding
+contextual information."
+    (if (org-export-read-attribute :attr_html src-block :textarea)
+        (org-html--textarea-block src-block)
+      (let* ((lang (org-element-property :language src-block))
+             (code (org-html-format-code src-block info))
+             (label (let ((lbl (org-html--reference src-block info t)))
+                      (if lbl (format " id=\"%s\"" lbl) "")))
+             (klipsify  (and  (plist-get info :html-klipsify-src)
+                              (member lang '("javascript" "js"
+                                             "ruby" "scheme" "clojure" "php" "html")))))
+        (if (not lang) (format "<pre class=\"example\"%s>\n%s</pre>" label code)
+          (format "<div class=\"org-src-container\">\n%s%s\n</div>"
+                  ;; Build caption.
+                  (let ((caption (org-export-get-caption src-block)))
+                    (if (not caption) ""
+                      (let ((listing-number
+                             (format
+                              "<span class=\"listing-number\">%s </span>"
+                              (format
+                               (org-html--translate "Listing %d:" info)
+                               (org-export-get-ordinal
+                                src-block info nil #'org-html--has-caption-p)))))
+                        (format "<label class=\"org-src-name\">%s%s</label>"
+                                listing-number
+                                (org-trim (org-export-data caption info))))))
+                  ;; Contents.
+                  (if klipsify
+                      (format "<pre><code class=\"src src-%s\"%s%s>%s</code></pre>"
+                              lang
+                              label
+                              (if (string= lang "html")
+                                  " data-editor-type=\"html\""
+                                "")
+                              code)
+                    (format "<pre class=\"src src-%s\" data-language=\"%s\"%s>%s</pre>"
+                            lang lang label code)))))))
 
 (let ((org-id-extra-files (find-lisp-find-files org-roam-directory "\.org$")))
   (org-publish "digital laboratory" force))
