@@ -87,14 +87,15 @@
             (let* ((source-node (org-roam-backlink-source-node backlink))
                    (properties (org-roam-backlink-properties backlink))
                    (outline (when-let ((outline (plist-get properties :outline)))
-                                (mapconcat #'org-link-display-format outline " > ")))
+                              (when (> (length outline) 1)
+                               (mapconcat #'org-link-display-format outline " > "))))
                    (point (org-roam-backlink-point backlink))
                    (text (s-replace "\n" " " (org-roam-preview-get-contents
                                               (org-roam-node-file source-node)
                                               point)))
-                   (reference (format "%s [[./%s][%s]]\n%s\n%s\n\n"
+                   (reference (format "%s [[id:%s][%s]]\n%s\n%s\n\n"
                                        (s-repeat (+ (org-roam-node-level node) 2) "*")
-                                       (file-relative-name (org-roam-node-file source-node))
+                                       (org-roam-node-id source-node)
                                        (org-roam-node-title source-node)
                                        (if outline
                                            (format "%s (/%s/)"
