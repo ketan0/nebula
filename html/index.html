@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-19 Thu 05:53 -->
+<!-- 2021-08-19 Thu 16:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hello</title>
@@ -25,6 +25,35 @@
 </div>
 <div id="content" class="content">
 <h1 class="title">Hello</h1>
+<svg display="block" style="margin: auto;" width="240px" height="240px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="Gradient1">
+      <stop class="stop1" offset="0%"/>
+      <stop class="stop2" offset="100%"/>
+    </linearGradient>
+    <style type="text/css"><![CDATA[
+      .beaker { fill: url(#Gradient1); }
+      stop { transition: stop-color 4s ease-in-out; }
+    ]]></style>
+  </defs>
+  <path class="beaker" d="M8.99998 4.5V10.7382C8.99998 11.1132 8.90628 11.4822 8.72739 11.8117L7.53944 14H16.4605L15.2726 11.8117C15.0937 11.4822 15 11.1132 15 10.7382V4.5H16C16.4142 4.5 16.75 4.16421 16.75 3.75C16.75 3.33579 16.4142 3 16 3H8C7.58579 3 7.25 3.33579 7.25 3.75C7.25 4.16421 7.58579 4.5 8 4.5H8.99998Z" stroke-width="1"/>
+  <path class="beaker" d="M17.2748 15.5H6.72515L5.14269 18.415C4.50968 19.5811 5.35388 20.9999 6.68068 20.9999H17.3193C18.6461 20.9999 19.4903 19.5811 18.8573 18.415L17.2748 15.5Z" fill="#212121"/>
+</svg>
+<script>
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+  (function setRandomGradient () {
+    const stop1 = document.getElementsByClassName('stop1')[0];
+    const color1 = `rgb(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)})`
+    stop1.style.stopColor = color1
+    const stop2 = document.getElementsByClassName('stop2')[0];
+    const color2 = `rgb(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)})`
+    stop2.style.stopColor = color2
+    setInterval(setRandomGradient, 4000);
+  })();
+</script>
+
 <p>
 Welcome to my digital laboratory! This site (the public facing side of my <a href="zettelkasten.html#ID-16db6da7-fbb6-4614-a23c-79ad58a43310">zettelkasten</a>) is currently under construction. 🚧<br />
 </p>
@@ -33,14 +62,13 @@ Welcome to my digital laboratory! This site (the public facing side of my <a hre
 <a href="what_s_the_point.html#ID-e6aca40a-e418-4a55-b74e-dfb0109152aa">What's the point?</a><br />
 </p>
 
-<div id="outline-container-org10c7997" class="outline-2">
-<h2 id="org10c7997">Whoami</h2>
-<div class="outline-text-2" id="text-org10c7997">
+<div id="outline-container-org7716771" class="outline-2">
+<h2 id="org7716771">Who am i</h2>
+<div class="outline-text-2" id="text-org7716771">
 <div class="org-src-container">
 <pre class="src src-bash" data-language="bash">whoami
 </pre>
 </div>
-
 <pre class="example">
 ketanagrawal
 </pre>
@@ -53,19 +81,9 @@ ketanagrawal
 </div>
 <div id="outline-container-org095bfa4" class="outline-3">
 <h3 id="org095bfa4"><a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a></h3>
-<div class="outline-text-3" id="text-org095bfa4">
-<p>
-So, programming is a pretty interesting pursuit. In fact, programming is the very force that inhabits this blog.<br />
-</p>
-</div>
 </div>
 <div id="outline-container-org4984476" class="outline-3">
 <h3 id="org4984476"><a href="visuals.html#ID-b56d1847-4a25-47cf-a019-4d00319d0dd1">visuals</a></h3>
-<div class="outline-text-3" id="text-org4984476">
-<p>
-I like cool visuals.<br />
-</p>
-</div>
 </div>
 <div id="outline-container-orgfadc977" class="outline-3">
 <h3 id="orgfadc977"><a href="philosophy.html#ID-091329e5-7896-4975-b88b-99b30f4dd482">philosophy</a></h3>

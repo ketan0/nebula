@@ -23,8 +23,7 @@ function setupTooltips() {
         inlinePositioning: false,
         placement: 'auto',
         theme: 'light-border',
-        onMount(instance) {
-          // attempt to scroll the linked node to the top
+        onMount(instance) { // attempt to scroll to the anchor position
           const anchor = document.getElementById(`outline-container-${id}`)
           if (anchor) {
             anchor.parentElement.scrollTop = anchor.offsetTop;

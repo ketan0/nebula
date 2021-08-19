@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 ":"; exec emacs --quick --script "$0" -- "$@" # -*- mode: emacs-lisp; lexical-binding: t; -*-
 
-; Inspiration:
-; https://github.com/tecosaur/this-month-in-org/blob/master/publish.el
-; https://gitlab.com/ngm/commonplace/-/blob/master/publish.el
+;; Inspiration:
+;; https://github.com/tecosaur/this-month-in-org/blob/master/publish.el
+;; https://gitlab.com/ngm/commonplace/-/blob/master/publish.el
 
 (pop argv) ; $0
 (setq force (string= "-f" (pop argv)))
@@ -60,16 +60,16 @@
                                     (org-roam-node-list)))
            (nodes-start-position (-map 'org-roam-node-point nodes-in-file))
            ;; Nodes don't store the last position, so get the next headline position
-           ;; and subtract one character (or do point-max)
+           ;; and subtract one character (or, if no next headline, get point-max)
            (nodes-end-position (-map (lambda (nodes-start-position)
                                        (goto-char nodes-start-position)
                                        (if (org-before-first-heading-p) ;; file node
                                            (point-max)
-                                           (call-interactively
-                                            'org-forward-heading-same-level)
-                                           (if (> (point) nodes-start-position)
-                                               (- (point) 1) ;; successfully found next
-                                             (point-max)))) ;; there was no next
+                                         (call-interactively
+                                          'org-forward-heading-same-level)
+                                         (if (> (point) nodes-start-position)
+                                             (- (point) 1) ;; successfully found next
+                                           (point-max)))) ;; there was no next
                                      nodes-start-position))
            ;; sort in order of decreasing end position
            (nodes-in-file-sorted (->> (-zip nodes-in-file nodes-end-position)
@@ -78,43 +78,29 @@
         (-let (((node . end-position) node-and-end))
           (when (org-roam-backlinks-get node)
             (goto-char end-position)
-          (setq heading (format "\n\n%s Links to this node\n"
-                                (s-repeat (+ (org-roam-node-level node) 1) "*")))
-          (insert heading)
-          (setq properties-drawer ":PROPERTIES:\n:HTML_CONTAINER_CLASS: references\n:END:\n")
-          (insert properties-drawer)
-          (dolist (backlink (org-roam-backlinks-get node))
-            (let* ((source-node (org-roam-backlink-source-node backlink))
-                   (properties (org-roam-backlink-properties backlink))
-                   (outline (when-let ((outline (plist-get properties :outline)))
-                              (when (> (length outline) 1)
-                               (mapconcat #'org-link-display-format outline " > "))))
-                   (point (org-roam-backlink-point backlink))
-                   (text (s-replace "\n" " " (org-roam-preview-get-contents
-                                              (org-roam-node-file source-node)
-                                              point)))
-                   (reference (format "%s [[id:%s][%s]]\n%s\n%s\n\n"
-                                       (s-repeat (+ (org-roam-node-level node) 2) "*")
-                                       (org-roam-node-id source-node)
-                                       (org-roam-node-title source-node)
-                                       (if outline
-                                           (format "%s (/%s/)"
-                                                   (s-repeat (+ (org-roam-node-level node) 3) "*")
-                                                   outline) "")
-                                       text)))
-              (insert reference)))))))))
-
-;; (defun ketan0/org-export-preprocessor (backend)
-;;   (let ((links (ketan0/org-roam--backlinks-list (buffer-file-name))))
-;;     (unless (string= links "")
-;;       (save-excursion
-;;         (goto-char (point-max))
-;;         (insert (concat "
-;; * Links to this note
-;; :PROPERTIES:
-;; :CUSTOM_ID: backlinks
-;; :END:
-;; ") links)))))
+            (setq heading (format "\n\n%s Links to this node\n"
+                                  (s-repeat (+ (org-roam-node-level node) 1) "*")))
+            (insert heading)
+            (setq properties-drawer ":PROPERTIES:\n:HTML_CONTAINER_CLASS: references\n:END:\n")
+            (insert properties-drawer)
+            (dolist (backlink (org-roam-backlinks-get node))
+              (let* ((source-node (org-roam-backlink-source-node backlink))
+                     (properties (org-roam-backlink-properties backlink))
+                     (outline (when-let ((outline (plist-get properties :outline)))
+                                (when (> (length outline) 1)
+                                  (mapconcat #'org-link-display-format outline " > "))))
+                     (point (org-roam-backlink-point backlink))
+                     (text (s-replace "\n" " " (org-roam-preview-get-contents
+                                                (org-roam-node-file source-node)
+                                                point)))
+                     (reference (format "%s [[id:%s][%s]]\n%s\n%s\n\n"
+                                        (s-repeat (+ (org-roam-node-level node) 2) "*")
+                                        (org-roam-node-id source-node)
+                                        (org-roam-node-title source-node)
+                                        (if outline (format "%s (/%s/)"
+                                        (s-repeat (+ (org-roam-node-level node) 3) "*") outline) "")
+                                        text)))
+                (insert reference)))))))))
 
 (add-hook 'org-export-before-processing-hook 'collect-backlinks-string)
 
