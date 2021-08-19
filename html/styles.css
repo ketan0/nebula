@@ -55,7 +55,21 @@ h1, h2, h3, h4, h5, h6 {
   padding: 8px 16px;
   border-radius: 25px;
   max-width: 20rem;
-  margin: auto;
+}
+
+.references > div > h2,
+.references > div > h3,
+.references > div > h4,
+.references > div > h5,
+.references > div > h6 {
+  margin-block-end: 0;
+}
+.references > div > div > h3,
+.references > div > div > h4,
+.references > div > div > h5,
+.references > div > div > h6 {
+  font-size: 12px;
+  margin-block-start: 0;
 }
 
 #postamble {
@@ -83,12 +97,12 @@ pre.src {
   overflow: auto;
 }
 pre.src:before {
-  content: attr(class);
+  opacity: 0.5;
+  content: attr(data-language);
   display: inline;
   position: absolute;
-  top: -8px;
+  top: -2px;
   right: 12px;
-  padding: 3px;
   background-color: #f2f2f299;
 }
 /* Bunch code + result blocks together */
@@ -245,7 +259,7 @@ code {
     background-color: #181818;
   }
   pre {
-    border: 1px solid #91959a;
+    border: 1px solid #333;
     background-color: #181818;
   }
   div.org-src-container + pre.example {

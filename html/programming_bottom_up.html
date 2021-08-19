@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-18 Wed 19:22 -->
+<!-- 2021-08-19 Thu 05:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Programming Bottom-Up</title>
@@ -49,7 +49,7 @@ Personally what comes to mind is the <code>rx</code> macro in emacs. It's like a
 Regexp matching a block comment in C:<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
+<pre class="src src-emacs-lisp" data-language="emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
     (zero-or-more
      (<span class="org-keyword">or</span> (not (any <span class="org-string">"*"</span>))          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
          (seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
