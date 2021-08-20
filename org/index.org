@@ -12,7 +12,7 @@
     </linearGradient>
     <style type="text/css"><![CDATA[
       .beaker { fill: url(#Gradient1); }
-      stop { transition: stop-color 4s ease-in-out; }
+      stop { transition: stop-color 2s ease-in-out; }
     ]]></style>
   </defs>
   <path class="beaker" d="M8.99998 4.5V10.7382C8.99998 11.1132 8.90628 11.4822 8.72739 11.8117L7.53944 14H16.4605L15.2726 11.8117C15.0937 11.4822 15 11.1132 15 10.7382V4.5H16C16.4142 4.5 16.75 4.16421 16.75 3.75C16.75 3.33579 16.4142 3 16 3H8C7.58579 3 7.25 3.33579 7.25 3.75C7.25 4.16421 7.58579 4.5 8 4.5H8.99998Z" stroke-width="1"/>
