@@ -6,14 +6,20 @@
 I will make this an actual, substantive note at some point. In the meantime, enjoy some random-ish code snippets that I've encountered.
 
 connected to a lot of these things is my [[id:058bef0b-aba6-4ac6-b4ae-b3c7b7e22040][goku (karabiner) config]].
-
+* Who am i
+#+begin_src bash
+whoami
+#+end_src
+#+RESULTS:
+: ketanagrawal
+* Rust
 In rust, you can create a tuple by =let tuple = (x0, x1, x2)= and access them by =tuple.0=, =tuple.1=, and =tuple.2=. For example:
 #+begin_src rust
 let tuple = (1, "hello");
 assert_eq!(tuple.0, 1);
 assert_eq!(tuple.1, "hello");
 #+end_src
-
+* Applescript
 Applescript to switch the current tab from Safari => Chrome:
 #+begin_src apples
 tell application "Safari"
@@ -23,7 +29,7 @@ end tell
 #+end_src
 
 #+RESULTS:
-
+* Emacs Lisp
 #+begin_src elisp
 (message "Lovely %s we're having, isn't it?"
     (format-time-string "%A"))
@@ -32,6 +38,7 @@ end tell
 #+RESULTS:
 : Lovely Monday we’re having, isn’t it?
 
+* Python
 #+begin_src python :results output
 import numpy as np
 
@@ -51,7 +58,7 @@ def fibonacci_squares_arr(n):
 
 def fibonacci_squares(n):
     arr = fibonacci_squares_arr(n)
-    chars = list('🟥🟦🟧🟨🟩🟪🟫')
+    chars = list('🟥🟫🟦🟧🟨🟩🟪')
     fib_str = '\n'.join([''.join([chars[(elem - 1) % len(chars)]
                                   for elem in row]) for row in arr])
     return fib_str
@@ -60,25 +67,25 @@ print(fibonacci_squares(8))
 
 #+RESULTS:
 #+begin_example
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟫🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟧🟧🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟧🟧🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟦🟥🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟩🟩🟩🟩🟩🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟩🟩🟩🟩🟩🟩🟩🟩🟦🟦🟧🟧🟧🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟩🟩🟩🟩🟩🟩🟩🟩🟦🟦🟧🟧🟧🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟩🟩🟩🟩🟩🟩🟩🟩🟫🟥🟧🟧🟧🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 #+end_example

@@ -12,38 +12,18 @@
     </linearGradient>
     <style type="text/css"><![CDATA[
       .beaker { fill: url(#Gradient1); }
-      stop { transition: stop-color 2s ease-in-out; }
+      .stop1 { stop-color: #50cf42; }
+      .stop2 { stop-color: #4eb8ca; }
     ]]></style>
   </defs>
   <path class="beaker" d="M8.99998 4.5V10.7382C8.99998 11.1132 8.90628 11.4822 8.72739 11.8117L7.53944 14H16.4605L15.2726 11.8117C15.0937 11.4822 15 11.1132 15 10.7382V4.5H16C16.4142 4.5 16.75 4.16421 16.75 3.75C16.75 3.33579 16.4142 3 16 3H8C7.58579 3 7.25 3.33579 7.25 3.75C7.25 4.16421 7.58579 4.5 8 4.5H8.99998Z" stroke-width="1"/>
   <path class="beaker" d="M17.2748 15.5H6.72515L5.14269 18.415C4.50968 19.5811 5.35388 20.9999 6.68068 20.9999H17.3193C18.6461 20.9999 19.4903 19.5811 18.8573 18.415L17.2748 15.5Z" fill="#212121"/>
 </svg>
-<script>
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
-  (function setRandomGradient () {
-    const stop1 = document.getElementsByClassName('stop1')[0];
-    const color1 = `rgb(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)})`
-    stop1.style.stopColor = color1
-    const stop2 = document.getElementsByClassName('stop2')[0];
-    const color2 = `rgb(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)})`
-    stop2.style.stopColor = color2
-    setInterval(setRandomGradient, 4000);
-  })();
-</script>
 #+end_export
 
 Welcome to my digital laboratory! This site (the public facing side of my [[id:16db6da7-fbb6-4614-a23c-79ad58a43310][zettelkasten]]) is currently under construction. 🚧
 
 [[id:e6aca40a-e418-4a55-b74e-dfb0109152aa][What's the point?]]
-
-* Who am i
-#+begin_src bash
-whoami
-#+end_src
-#+RESULTS:
-: ketanagrawal
 
 * What you'll find in my laboratory
 :PROPERTIES:

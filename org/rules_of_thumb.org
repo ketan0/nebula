@@ -29,3 +29,8 @@ Simple life philosophy. Simple running routine. Simple self-reflection routine. 
 :ID:       50ffa84c-9659-4347-a03a-289ff063a738
 :END:
 This works shockingly well when I'm having a problem, in that it sort of forces me to be rational about things and fully express all the particulars involved (which I may not have actually done in my in-head frustration.) Like imagine sitting with someone very level-headed.
+* Just go to bed.
+:PROPERTIES:
+:ID:       89a13330-d380-4e34-a177-3aad510bc516
+:END:
+[[id:82af4da7-25b4-4584-ae1c-8110610d3cac][sleep]] is really important. There's no use in staying up until 6am twiddling with some random thing that is bothering me in a project -- it'll probably just be counterproductive, because I'm replacing time that I could've spent rested and productive in the morning with time that I'm spending tired and unproductive at night.

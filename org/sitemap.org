@@ -14,6 +14,7 @@
 - [[file:programming.org][programming]]
 - [[file:rules_of_thumb.org][rules of thumb]]
 - [[file:simplicity.org][simplicity]]
+- [[file:sleep.org][sleep]]
 - [[file:structure.org][structure]]
 - [[file:visuals.org][visuals]]
 - [[file:zettelkasten.org][zettelkasten]]
