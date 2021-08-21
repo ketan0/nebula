@@ -22,7 +22,7 @@ body {
   gap: 20px;
 }
 
-.headlines-grid-container div h3 {
+.headlines-grid-container > div > h3 {
   text-align: center;
 }
 
