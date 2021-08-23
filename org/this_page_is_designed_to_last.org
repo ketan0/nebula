@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       5f5340b3-50ec-4381-9061-d688add2eee3
+:ROAM_REFS: https://jeffhuang.com/designed_to_last/
+:END:
+#+title: This Page is Designed to Last: A Manifesto for Preserving Content on the Web
+
+* Is this site designed to last? [71%]
+** DONE vanilla HTML/CSS
+Yup. 100%. (static site generated from org files.) I usually try and check MDN to see if the CSS I'm using is kosher across browsers.
+** DONE Don't minimize HTML
+Yup.
+** TODO prefer one page over several
+Well....that would kind of defeat the purpose of a digital garden. So I haven't really done this one.
+** DONE End all forms of hotlinking
+
+On the rare occasion I insert a [[id:7b8a4962-28ca-48e5-95a7-d347292a6dca][math]] snippet, MathJax is used to render that, served from a Cloudflare CDN, as is default for org => html export. Also the occasional tweet embed. Other than that, downloaded all the necessary JS/CSS. (Minimal JS anyways; mainly used for tippy's).
+** DONE Stick with native fonts
+Switched to a [[https://systemfontstack.com/][system font stack.]]
+** DONE Obsessively compress your images
+I mean, I don't really have many images on the site right now, lol. I want to have more visual imagery though, so potentially I can come back to this later.
+** TODO Eliminate broken URL risk
+Meh. I mean, hopefully I should be active enough with this website that I shouldn't have to care too much. That being said...maybe I should think about this for future projects.

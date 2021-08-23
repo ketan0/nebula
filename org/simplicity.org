@@ -2,3 +2,9 @@
 :ID:       0dc3bc78-df96-4240-a6be-beb71e6074cc
 :END:
 #+title: simplicity
+
+#+begin_quote
+Simplicity is a great virtue, but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better. - Edsger W. Dijkstra.
+#+end_quote
+
+It seems like as life goes on, [[id:9648399a-daf3-44a0-8612-a3d84b99d0c1][complexity]] just kinda accumulates sometimes. In some cases it might be unavoidable -- we grow older and have more responsibilities, a codebase matures and takes on more functionality, etc. But it seems like simplicity is a good ideal to strive for, in certain ways.

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       7b8a4962-28ca-48e5-95a7-d347292a6dca
+:END:
+#+title: mathematics
+
+So, right now, I don't know what I want to say about mathematics. So in the meantime, here are some formulas I've encountered in various places:
+
+$$h(x) = \theta_0 + \theta_1x_1 + \theta_2x_2$$
