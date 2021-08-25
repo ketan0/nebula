@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       050ddd7d-0f23-4904-bb72-3f8dcd795354
+:END:
+#+title: metacognition
+
+Feels important.
+
+#+begin_quote
+Why do some people learn so much so well? The simplest hypothesis is
+that they've come across some better ways to learn! Perhaps such "gifts"
+are little more than tricks of "higher-order" expertise. Just as one child
+learns to re-arrange its building-blocks in clever ways, another child
+might learn to play, inside its head, at re-arranging how it learns! -- Marvin Minsky,  https://web.media.mit.edu/~minsky/papers/ComputersCantThink.txt
+#+end_quote

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       28ad325b-5438-4b37-aa60-607d54ee84c1
+:END:
+#+title: intentionality
+
+I don't wanna just go through life on "autopilot"...I want to actively, oftenly, pop out to the [[id:050ddd7d-0f23-4904-bb72-3f8dcd795354][meta]]- level and see where I'm going, and if that's a good path, and edit the path in various ways.

@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       7fd55afc-19d5-4f5c-918b-b90a2073b0f0
+:END:
+#+title: practice
+
+Things to talk about in the context of practice:
+
+- being [[id:28ad325b-5438-4b37-aa60-607d54ee84c1][intentional]] in your pursuits, e.g.
+  + violin
+  + programming
+  + typing on [[https://www.keyhero.com][keyhero]]
+  + having fun (yes, I'm serious, you can practice having fun)
