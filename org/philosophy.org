@@ -12,8 +12,8 @@ The aim of philosophy, abstractly formulated, is to understand how things in the
 Some things we can think about in a philosophical lens...
 
 - Do we have [[id:ed67aff3-34f7-461e-adc0-37d3fbb2a890][free will]] / agency? Are we just subservient to a deterministic universe? Or both??
-- How does the mind work? What do our mental [[id:c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff][representations]] of the outside world look like?
   #+ATTR_HTML: :alt A glider gun in Conway's Game of Life.
   [[file:glider_gun.gif]]
+- How does the [[id:162fdcaf-3b7f-4521-a4d2-9db33b231b4a][mind]] work? What do our mental [[id:c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff][representations]] of the outside world look like?
 - mind-body
 - science
