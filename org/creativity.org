@@ -2,3 +2,5 @@
 :ID:       7e73384c-4286-40e7-8d2a-e777d12c2bd1
 :END:
 #+title: creativity
+
+So...where does "exceptional" creativity come from?? Can it be manufactured, through [[id:1cda0670-c6d3-4d8a-b148-d58bc07c18ff][prolific]] [[id:7fd55afc-19d5-4f5c-918b-b90a2073b0f0][practice]]?

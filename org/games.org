@@ -5,4 +5,4 @@
 
 We can try to define a game. What do they all have in common?
 
-TODO: talk about Wittgenstein + can't give a final, essential definition of a 'game' -- not gonna be clear, logical rules. Same with [[id:34dcb2ae-efa0-4bcb-ab66-4da485cf311f][language]]. Words are defined by their /use/.
+TODO: talk about Wittgenstein + can't give a final, essential definition of a 'game' -- not gonna be clear, logical rules. Same with [[id:bfed4f36-ba45-4d82-8d61-d0a5fb04ca7b][language]]. Words are defined by their /use/.

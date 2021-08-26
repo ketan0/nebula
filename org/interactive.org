@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4afa048e-a9a9-4e0f-9e00-74cd9ca56393
+:END:
+#+title: interactive content
+
+Want to think about this in the context of [[id:4fbbc03b-e5d3-4e88-94d0-a7ea75ca2ab9][Reinventing Explanation]].

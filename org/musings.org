@@ -12,3 +12,5 @@ I also wonder if [[id:7fd55afc-19d5-4f5c-918b-b90a2073b0f0][practice]] is a more
 * Computation in brains must be deeply [[id:8d27adad-158b-4fa4-b31b-5f793d0b8341][context]]-aware.
 * The best approach to implementing anything this [[id:9648399a-daf3-44a0-8612-a3d84b99d0c1][complex]] is to invent a collection of milestones that advance you toward your final goal. --advice from Jerry Cain
 * Give yourself permission to fail.
+* I feel like we should make nodes in [[id:16db6da7-fbb6-4614-a23c-79ad58a43310][zettelkasten]] that express a complete thought, rather than just a subject.
+Andy Matuschak does a particularly good job of this in [[http://notes.andymatuschak.org][his digital notes]].

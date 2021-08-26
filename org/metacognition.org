@@ -12,3 +12,10 @@ are little more than tricks of "higher-order" expertise. Just as one child
 learns to re-arrange its building-blocks in clever ways, another child
 might learn to play, inside its head, at re-arranging how it learns! -- Marvin Minsky,  https://web.media.mit.edu/~minsky/papers/ComputersCantThink.txt
 #+end_quote
+
+
+* Spend less (or maybe more?) time on the meta level.
+:PROPERTIES:
+:ID:       2bd157f8-696e-434a-bd3c-86ea6b0496c5
+:END:
+Well actually, spend more time on the meta level. *but* spend less time worrying on the meta level. Meta level should be actually contentful, interesting thoughts, not worry.

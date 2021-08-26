@@ -2,3 +2,17 @@
 :ID:       b56d1847-4a25-47cf-a019-4d00319d0dd1
 :END:
 #+title: visuals
+
+#+begin_src
+                   , - ~ ~ ~ - ,
+               , '               ' ,
+             ,                       ,
+ multiple=> ,                         ,
+           ,                           ,
+concepts=> ,      THE SAME THING       ,
+           ,                           , <= referring
+            ,                         , <= to
+             ,                       ,
+               ,                  , '
+                 ' - , _ _ _ ,  '
+#+end_src

@@ -2,3 +2,13 @@
 :ID:       16db6da7-fbb6-4614-a23c-79ad58a43310
 :END:
 #+title: zettelkasten
+
+* Zettelkasten should value elaborative encoding.
+:PROPERTIES:
+:ID:       d9580092-1d64-4a66-b3df-a47253719e58
+:END:
+I believe that [[id:b56d1847-4a25-47cf-a019-4d00319d0dd1][visuals]] and [[id:4afa048e-a9a9-4e0f-9e00-74cd9ca56393][interactive content]] should help immensely with that. Making things "sticky."
+* Zettelkasten should be densely linked.
+:PROPERTIES:
+:ID:       2a0b0ad7-81c7-4737-a305-1ca39eafb66f
+:END:

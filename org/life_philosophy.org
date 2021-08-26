@@ -2,3 +2,12 @@
 :ID:       bc3b4ee4-b1b4-4b1c-a44b-c5785c5cafe5
 :END:
 #+title: life philosophy
+
+Thinking about the [[id:091329e5-7896-4975-b88b-99b30f4dd482][philosophy]] of how we should live our lives.
+
+Some guiding principles:
+
+- [[id:0dc3bc78-df96-4240-a6be-beb71e6074cc][simplicity]]
+- joy
+- following curiosities deeply
+- active/outward kindess
