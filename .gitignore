@@ -3,7 +3,7 @@
 *.log
 tmp/
 .orgids
-org_private
+private
 
 org-roam.db
 org-old
