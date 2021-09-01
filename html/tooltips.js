@@ -24,9 +24,19 @@ function setupTooltips() {
         placement: 'auto',
         theme: 'light-border',
         onMount(instance) { // attempt to scroll to the anchor position
-          const anchor = document.getElementById(`outline-container-${id}`)
+          const anchor = document.querySelector(`.tippy-content #outline-container-${id}`)
           if (anchor) {
-            anchor.parentElement.scrollTop = anchor.offsetTop;
+            const heading = anchor.querySelector(`#${id}`)
+            // HACK: make anchor links from the same page work properly
+            // because the tippy duplicates all the heading ids.
+            if (heading && heading.id && !heading.id.startsWith('TIPPY')) {
+              heading.id = 'TIPPY-' + heading.id
+            }
+            let parent = anchor.parentElement;
+            while (!parent.className.includes('tippy-content')) {
+              parent = parent.parentElement;
+            }
+            parent.scrollTop = anchor.offsetTop;
           }
         }
       });
