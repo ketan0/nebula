@@ -3,6 +3,7 @@
 :END:
 #+TITLE: goku (karabiner) config
 #+AUTHOR: Ketan Agrawal
+#+OPTIONS: -:nil
 
 This is my literate config for [[https://github.com/yqrashawn/GokuRakuJoudo][goku]]. It makes it easy to define keyboard shortcuts in a succinct and powerful way.
 
@@ -11,6 +12,24 @@ inspiration taken from these goku configs:
 - [[https://github.com/nikitavoloboev/dotfiles/blob/master/karabiner/karabiner.edn][nikitavoloboev]]
 - [[https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126][kaushikgopal]]
 
+
+* Layout
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: karabiner-keyboard-container
+:END:
+# ok so the reason that the anchor links aren't working is there's a DUPLICATE id because
+# the tippy replicates the nodes.
+,---,---,---,---,---,---,---,---,---,---,---,---,---,-------,
+❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ + ❘ ' ❘ <-    ❘
+❘---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----❘
+❘ ->❘ ❘ [[id:d9445d05-36b8-4435-ba52-b4dd28934160][Q]] ❘ W ❘ E ❘ R ❘ T ❘ Y ❘ U ❘ I ❘ O ❘ P ❘ ] ❘ ^ ❘     ❘
+❘-----',--',--',--',--',--',--',--',--',--',--',--',--'❘    ❘
+❘ Caps ❘ A ❘ S ❘ D ❘ F ❘ G ❘ H ❘ J ❘ K ❘ L ❘ \ ❘ [ ❘ * ❘    ❘
+❘----,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---'----❘
+❘    ❘ < ❘ [[id:94658b27-f223-405e-b637-1866e3a1dc0b][Z]] ❘ [[id:a89045f9-8744-4b59-9dd8-752d74148268][X]] ❘ C ❘ V ❘ B ❘ N ❘ M ❘ , ❘ . ❘ - ❘          ❘
+❘----'-,-',--'--,'---'---'---'---'---'---'-,-'---',--,------❘
+❘ ctrl ❘  ❘ alt ❘                          ❘ alt  ❘  ❘ ctrl ❘
+'------'  '-----'--------------------------'------'  '------'
 * Guide
 For more info on configuring Goku, see the [[https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md][tutorial]].
 Guide lifted from [[https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126][kaushikgopal]]. To understand better how modifiers work in karabiner, see the karabiner definition of mandatory and optional: [[https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/#frommodifiersoptional   ][karabiner modifiers documentation]]
@@ -218,6 +237,9 @@ end tell
 
 #+end_src
 ** q-key-mode (q)
+:PROPERTIES:
+:ID:       d9445d05-36b8-4435-ba52-b4dd28934160
+:END:
 #+begin_src clojure
 :q-key-mode
 [:grave_accent_and_tilde [:km "Open Stickies"]]
@@ -234,6 +256,9 @@ end tell
 [:v [:km "Open Zoom"]]
 #+end_src
 ** x-key-mode (x)
+:PROPERTIES:
+:ID:       a89045f9-8744-4b59-9dd8-752d74148268
+:END:
 #+begin_src apples
 tell application "Google Chrome"
     execute front window's active tab javascript "javascript:location.href = 'org-protocol://roam-ref?template=r&ref=' + encodeURIComponent(location.href) + '&title=' + encodeURIComponent(document.title)"
@@ -406,6 +431,9 @@ end tell
 
 #+end_src
 ** vim-mode (z)
+:PROPERTIES:
+:ID:       94658b27-f223-405e-b637-1866e3a1dc0b
+:END:
 #+begin_src clojure
 :vim-mode
 [:#Sh :left_arrow] ;; hjkl navigation everywhere + Shift

@@ -16,6 +16,12 @@ body {
   margin-bottom: 40px;
 }
 
+.karabiner-keyboard-container > div.outline-text-2 > p {
+  line-height: 9px;
+  white-space: pre;
+  font-family: monospace;
+}
+
 .headlines-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -148,6 +154,7 @@ code {
   overflow-y: auto;
 }
 .tippy-box[data-theme~=light-border]{
+  white-space: normal;
   font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   text-align: left;
   background-color:#fff;

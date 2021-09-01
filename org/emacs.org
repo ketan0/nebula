@@ -2,3 +2,11 @@
 :ID:       1999996d-b676-4fc4-894b-caf82f8dd7ff
 :END:
 #+title: emacs
+
+* Cool configs
+** [[https://gitlab.com/justinekizhak/dotfiles/blob/master/emacs/doom.d/config.org][justinekizhak]]
+I like the motivation he gives for why emacs is so damn cool. "Emacs changes how you /think/ about programming." I feel like this has been very true for me. It makes many other applications seem needlessly restrictive. It feels natural to have the entire OS be an introspectable operating system.
+** [[https://github.com/larstvei/dot-emacs][larstvei]]
+** [[https://github.com/danielmai/.emacs.d/blob/master/config.org][danielmai]]
+** [[https://tecosaur.github.io/emacs-config/config.html][tecosaur]]
+** [[https://github.com/jethrokuan/dots/blob/master/.doom.d/config.el][jethro]]

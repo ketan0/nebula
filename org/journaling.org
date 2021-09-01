@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       ded420be-9e33-4692-a9a8-070c80738ee8
+:END:
+#+title: journaling
