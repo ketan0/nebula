@@ -75,32 +75,36 @@
            (nodes-in-file-sorted (->> (-zip nodes-in-file nodes-end-position)
                                       (--sort (> (cdr it) (cdr other))))))
       (dolist (node-and-end nodes-in-file-sorted)
-        (-let (((node . end-position) node-and-end))
-          (when (org-roam-backlinks-get node)
-            (goto-char end-position)
-            (setq heading (format "\n\n%s Links to this node\n"
-                                  (s-repeat (+ (org-roam-node-level node) 1) "*")))
-            (insert heading)
-            (setq properties-drawer ":PROPERTIES:\n:HTML_CONTAINER_CLASS: references\n:END:\n")
-            (insert properties-drawer)
-            (dolist (backlink (org-roam-backlinks-get node))
-              (let* ((source-node (org-roam-backlink-source-node backlink))
-                     (properties (org-roam-backlink-properties backlink))
-                     (outline (when-let ((outline (plist-get properties :outline)))
-                                (when (> (length outline) 1)
-                                  (mapconcat #'org-link-display-format outline " > "))))
-                     (point (org-roam-backlink-point backlink))
-                     (text (s-replace "\n" " " (org-roam-preview-get-contents
-                                                (org-roam-node-file source-node)
-                                                point)))
-                     (reference (format "%s [[id:%s][%s]]\n%s\n%s\n\n"
-                                        (s-repeat (+ (org-roam-node-level node) 2) "*")
-                                        (org-roam-node-id source-node)
-                                        (org-roam-node-title source-node)
-                                        (if outline (format "%s (/%s/)"
-                                        (s-repeat (+ (org-roam-node-level node) 3) "*") outline) "")
-                                        text)))
-                (insert reference)))))))))
+        (-when-let* (((node . end-position) node-and-end)
+                     (backlinks (--filter (->> (org-roam-backlink-source-node it)
+                                               (org-roam-node-file)
+                                               (s-contains? "org_private/") (not))
+                                          (org-roam-backlinks-get node)))
+                     (heading (format "\n\n%s Links to this node\n"
+                                      (s-repeat (+ (org-roam-node-level node) 1) "*")))
+                     (properties-drawer ":PROPERTIES:\n:HTML_CONTAINER_CLASS: references\n:END:\n"))
+          (goto-char end-position)
+          (insert heading)
+          (insert properties-drawer)
+          (dolist (backlink backlinks)
+            (let* ((source-node (org-roam-backlink-source-node backlink))
+                   (source-file (org-roam-node-file source-node))
+                   (properties (org-roam-backlink-properties backlink))
+                   (outline (when-let ((outline (plist-get properties :outline)))
+                              (when (> (length outline) 1)
+                                (mapconcat #'org-link-display-format outline " > "))))
+                   (point (org-roam-backlink-point backlink))
+                   (text (s-replace "\n" " " (org-roam-preview-get-contents
+                                              source-file
+                                              point)))
+                   (reference (format "%s [[id:%s][%s]]\n%s\n%s\n\n"
+                                      (s-repeat (+ (org-roam-node-level node) 2) "*")
+                                      (org-roam-node-id source-node)
+                                      (org-roam-node-title source-node)
+                                      (if outline (format "%s (/%s/)"
+                                                          (s-repeat (+ (org-roam-node-level node) 3) "*") outline) "")
+                                      text)))
+              (insert reference))))))))
 
 (add-hook 'org-export-before-processing-hook 'collect-backlinks-string)
 
