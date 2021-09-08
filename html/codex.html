@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-09-08 Wed 04:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>codex</title>
+<meta name="author" content="Ketan Agrawal" />
+<meta name="generator" content="Org Mode" />
+<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+<div id="preamble" class="status">
+<a style="color: inherit; text-decoration: none" href="/">
+<h2>Ketan's Digital Laboratory &#129514;</h2>
+</a>
+</div>
+<div id="content" class="content">
+<h1 class="title">codex</h1>
+<p>
+Some cool (mostly) working examples I've been able to generate with <a href="https://openai.com/blog/openai-codex/">OpenAI Codex</a> so far! For context, Codex is a language model that can generate completions, given some initial prompt. For all of these Python examples, the initial prompt is the block comment at the top, and Codex's completion is the rest of the example. Each of these was syntactically correct and functional with very minimal modification, most none at all. I'm sure some of these examples are partly "memorized" from the training data, but the fact that it can substitute new things into those memorized "templates" is pretty amazing.<br />
+</p>
+
+<p>
+Haha, this one seemed to assume that it was already December. But it was cool that it did this much by itself.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
+<span class="org-doc">1. Print the date today.</span>
+<span class="org-doc">2. Print how many days until Christmas.</span>
+<span class="org-doc">"""</span>
+
+<span class="org-keyword">import</span> datetime
+
+<span class="org-variable-name">now</span> = datetime.datetime.now()
+
+<span class="org-keyword">print</span>(now.strftime(<span class="org-string">"%A, %B %d, %Y"</span>))
+
+<span class="org-variable-name">today</span> = now.strftime(<span class="org-string">"%m/%d"</span>)
+
+<span class="org-keyword">if</span> today == <span class="org-string">"12/25"</span>:
+    <span class="org-keyword">print</span>(<span class="org-string">"Merry Christmas!"</span>)
+<span class="org-keyword">else</span>:
+    <span class="org-keyword">print</span>(<span class="org-string">"There are "</span> + <span class="org-builtin">str</span>(25 - <span class="org-builtin">int</span>(today[3:])) + <span class="org-string">" days until Christmas!"</span>)
+</pre>
+</div>
+
+<pre class="example">
+Wednesday, September 08, 2021
+There are 17 days until Christmas!
+</pre>
+
+
+<p>
+This&#x2026;this is cool to be able to write math in natural language like this, and have it come to life. Wow.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
+<span class="org-doc">Print the reciprocal of the Hilbert matrix.</span>
+<span class="org-doc">"""</span>
+
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-keyword">from</span> scipy.linalg <span class="org-keyword">import</span> hilbert
+
+<span class="org-variable-name">n</span> = 5
+<span class="org-variable-name">a</span> = hilbert(n)
+<span class="org-variable-name">b</span> = 1.0 / a
+<span class="org-keyword">print</span>(b)
+</pre>
+</div>
+
+<pre class="example">
+[[1. 2. 3. 4. 5.]
+ [2. 3. 4. 5. 6.]
+ [3. 4. 5. 6. 7.]
+ [4. 5. 6. 7. 8.]
+ [5. 6. 7. 8. 9.]]
+</pre>
+
+
+<p>
+Hah, this is a cute one. I initially only put the first 4 lines in, and it proceeded to complete my pattern of stars, and even add a complementary pattern at the bottom.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
+<span class="org-doc">*</span>
+<span class="org-doc">**</span>
+<span class="org-doc">***</span>
+<span class="org-doc">****</span>
+<span class="org-doc">*****</span>
+<span class="org-doc">"""</span>
+
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(1,6):
+    <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(i):
+        <span class="org-keyword">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
+    <span class="org-keyword">print</span>()
+
+<span class="org-string">"""</span>
+<span class="org-string">*****</span>
+<span class="org-string">****</span>
+<span class="org-string">***</span>
+<span class="org-string">**</span>
+<span class="org-string">*</span>
+<span class="org-string">"""</span>
+
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(5,0,-1):
+    <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(i):
+        <span class="org-keyword">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
+    <span class="org-keyword">print</span>()
+</pre>
+</div>
+
+<pre class="example" id="org316335b">
+*
+**
+***
+****
+*****
+*****
+****
+***
+**
+*
+</pre>
+
+
+<p>
+Whoa. This would certainly make using matplotlib a lot easier.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
+<span class="org-doc">1. Plot the function `30cos(x) + 2x^2` using purple triangles for the markers.</span>
+<span class="org-doc">2. Save the figure.</span>
+<span class="org-doc">"""</span>
+
+<span class="org-comment-delimiter">#</span><span class="org-comment">%%</span>
+<span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+
+<span class="org-variable-name">x</span> = np.linspace(-2*np.pi, 2*np.pi, 100)
+<span class="org-variable-name">y</span> = 30*np.cos(x) + 2*x**2
+
+plt.plot(x, y, <span class="org-string">'purple'</span>, marker=<span class="org-string">'^'</span>, linestyle=<span class="org-string">'--'</span>)
+plt.savefig(<span class="org-string">'my_plot.png'</span>)
+
+<span class="org-comment-delimiter">#</span><span class="org-comment">%%</span>
+</pre>
+</div>
+
+
+<div id="orgdf9dbb4" class="figure">
+<p><img src="my_plot.png" alt="my_plot.png" /><br />
+</p>
+</div>
+
+<p>
+It honored my request to use requests!<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
+<span class="org-doc">Print the high temperature tomorrow in Stanford, California, using the requests library.</span>
+<span class="org-doc">"""</span>
+
+<span class="org-keyword">import</span> requests
+
+<span class="org-variable-name">r</span> = requests.get(<span class="org-string">'http://forecast.weather.gov/MapClick.php?lat=37.4275&amp;lon=-122.1670#.Wkwh8VQ-fVo'</span>)
+<span class="org-variable-name">content</span> = r.text
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">print(content)</span>
+
+<span class="org-keyword">from</span> bs4 <span class="org-keyword">import</span> BeautifulSoup
+<span class="org-variable-name">soup</span> = BeautifulSoup(content, <span class="org-string">'html.parser'</span>)
+<span class="org-variable-name">seven_day</span> = soup.find(<span class="org-builtin">id</span>=<span class="org-string">"seven-day-forecast"</span>)
+<span class="org-variable-name">forecast_items</span> = seven_day.find_all(class_=<span class="org-string">"tombstone-container"</span>)
+<span class="org-variable-name">tonight</span> = forecast_items[0]
+<span class="org-comment-delimiter"># </span><span class="org-comment">print(tonight.prettify())</span>
+
+<span class="org-variable-name">period</span> = tonight.find(class_=<span class="org-string">"period-name"</span>).get_text()
+<span class="org-variable-name">short_desc</span> = tonight.find(class_=<span class="org-string">"short-desc"</span>).get_text()
+<span class="org-variable-name">temp</span> = tonight.find(class_=<span class="org-string">"temp"</span>).get_text()
+
+<span class="org-keyword">print</span>(period)
+<span class="org-keyword">print</span>(short_desc)
+<span class="org-keyword">print</span>(temp)
+
+<span class="org-variable-name">img</span> = tonight.find(<span class="org-string">"img"</span>)
+<span class="org-variable-name">desc</span> = img[<span class="org-string">'title'</span>]
+<span class="org-keyword">print</span>(desc)
+
+<span class="org-variable-name">period_tags</span> = seven_day.select(<span class="org-string">".tombstone-container .period-name"</span>)
+<span class="org-variable-name">periods</span> = [pt.get_text() <span class="org-keyword">for</span> pt <span class="org-keyword">in</span> period_tags]
+<span class="org-comment-delimiter"># </span><span class="org-comment">print(periods)</span>
+</pre>
+</div>
+
+<pre class="example">
+Overnight
+Haze
+Low: 61 °F
+Overnight: Widespread haze. Partly cloudy, with a low around 61. Light west wind.
+['Overnight', 'Wednesday', 'WednesdayNight', 'Thursday', 'ThursdayNight', 'Friday', 'FridayNight', 'Saturday', 'SaturdayNight']
+</pre>
+</div>
+<div id="postamble" class="status">
+<p>Made with <span class="heart">♥</span> using
+<a href="https://orgmode.org/">org-mode</a>.
+Source code is available
+<a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<script src="popper.min.js"></script>
+<script src="tippy-bundle.umd.min.js"></script>
+<script src="tooltips.js" async></script>
+</div>
+</body>
+</html>

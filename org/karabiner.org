@@ -5,7 +5,7 @@
 #+AUTHOR: Ketan Agrawal
 #+OPTIONS: -:nil
 
-This is my literate config for [[https://github.com/yqrashawn/GokuRakuJoudo][goku]]. It makes it easy to define keyboard shortcuts in a succinct and powerful way.
+This is my literate config for [[https://github.com/yqrashawn/GokuRakuJoudo][goku]]. It is a succint, powerful way to define keyboard shortcuts in macOS.
 
 inspiration taken from these goku configs:
 - [[https://github.com/yqrashawn/yqdotfiles/blob/master/.config/karabiner.edn][yqrashawn]]
@@ -17,8 +17,6 @@ inspiration taken from these goku configs:
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: karabiner-keyboard-container
 :END:
-# ok so the reason that the anchor links aren't working is there's a DUPLICATE id because
-# the tippy replicates the nodes.
 ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------,
 ❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ + ❘ ' ❘ <-    ❘
 ❘---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----❘

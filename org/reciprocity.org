@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       38960021-8c27-428b-b0e2-00b6910880be
+:END:
+#+title: Reciprocity
+
+One of Cialdini's principles of [[id:51fc68e1-5963-4ef3-820e-feaff385b6d5][social influence]].

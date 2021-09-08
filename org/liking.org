@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       3935cd63-1d38-47bd-8510-d338a1fb4d17
+:END:
+#+title: Liking
+
+One of Cialdini's principles of [[id:51fc68e1-5963-4ef3-820e-feaff385b6d5][social influence]].

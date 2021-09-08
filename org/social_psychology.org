@@ -1,0 +1,517 @@
+#+title: Social Psychology
+
+Some (incomplete) notes from PSYCH 70: Social Psychology at Stanford.
+
+* Introduction
+Think about a time you were happy, and a time you were sad; very likely, there were other people involved. The people around us hold tremendous influence in our daily lives.
+
+** Social psychology is not new.
+Philosophers have been intuitively (if not quite scientifically) thinking about these ideas for centuries!
+#+begin_quote
+Anybody can become angry - that is easy, but to be angry with the right person and to the right degree and at the right time and for the right purpose, and in the right way - that is not within everybody's power and is not easy. - Aristotle
+#+end_quote
+** Social psychology is not (always) intuitive.
+Example: [[https://rady.ucsd.edu/faculty/directory/gneezy/pub/docs/fine.pdf][introducing a fine]] for late-picker-uppers of kids at daycare actually /increases/ the number of late pick-ups. Explanation? The /motivation/ shifted from intrinsic to extrinsic.
+** What is social psychology?
+About understanding the "causal architecture" of the society that we're embedded in.
+
+Three parts of the class: social cognition, interpersonal processes, everyday life.
+*** Levels of organization:
+Societies <=> *Groups* <=> *Individual* <=> *Mind* <=> Neurons/Genes/Hormones
+^social psych is focused on the middle three levels.
+* [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]: self-serving biases.
+** Motivated reasoning
+/Motivated reasoning/ is our tendency to come to conclusions that make us feel good.
+
+We don't like to admit when we're wrong! (Nor our sports heroes, family, political candidates, etc.)
+
+Group affiliation: "We crushed them!" when your team wins vs. "They were terrible" when your team loses.
+
+Above-average effect: people believe they are above average in valued domains (lol.) BUT in other domains that are seen as really hard (e.g. juggling or living past 100,) we see the below-average effect. The reason: we "anchor" to our initial estimate. E.g. for living to 100, we initially think it's very unlikely, then adjust the estimate upward as we get evidence.
+
+Dunning-Kruger Effect: Correlation between lower skills and greater Above-Average Effect. In other words, correlation between cognitive and metacognitive skills. (Also, those with the most skills underestimate a little!)
+** Why do we have these biases?
+One answer: self-esteem. (But why do we need self-esteem, evolutionarily?)
+Another answer: overconfidence gives social benefits?
+** ...is there another way?
+Hubristic pride = arrogant/conceited.
+Authentic pride = confident, high self-esteem.
+* Person Perception
+/Should I date this person? Is this person guilty? How competent is this person?/
+
+*Person perception* is forming impressions about other people.
+** Thin Slicing
+People can make predictive judgments "instantly" -- predicting future success, marriage success, sales performance, sexual orientation, etc. (Cue /Blink/ by Malcolm Gladwell, lol.)
+
+Women can predict hetero/homosexual at higher rates when ovulating
+
+These "thin slice" judgments can be surprisingly predictive, but also biased.
+
+*** Why?
+There is evolutionary value in swiftly identifying potential threats, mates, and leaders.
+** Universal Dimensions of Social Cognition: Warmth and Competence
+** Oh yeah, there's also the whole triangle and circe thing -- we immediately make judgments about what they're doing.
+(But she should've mentioned that autistic people don't see this the same way)
+** Confirmation bias:
+Tendency to want to verify our pre-existing beliefs.
+** Pygmalion Effect:
+kids whose teachers thought the kids were "late bloomers" -- it actually came true.
+
+Side note: whoa. Intuitively I feel like (and I'm of course enjoying that sweet confirmation bias) but it confirms my intuitions -- in cases where I've set high, clear expectations for myself, I've achieved them.
+** [[file:20210627180445-self_fulfilling_prophecy.org][Self-fulfilling prophecy]]
+You have expectations about someone => you behave accordingly towards them => they behave just how you expected => reinforces your expectations...
+
+This seems like a kind of [[file:20210626152258-positive_feedback_loop.org][positive feedback loop]] that can either go really well, or really badly. Parents have a huge role in establishing expectations for their children. (As a first-born, I know this firsthand 😅)
+* [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]: cognitive dissonance theory
+Cognitive Dissonance Theory:
+- cognitive dissonance :: holding apparently incompatible / logically inconsistent thoughts about the world.
+** How to resolve dissonance between A and B?
+You can *disregard* one.
+You can *change* your belief in one.
+You can *distort* one.
+You can *add* C that resolves the conflict.
+
+Which one to choose? Will probably go with the path of least resistance.
+
+Chicago doomsday cult didn't see doomsday => rationalized by saying that the Guardians had stopped the flood
+
+1755 Lisbon earthquake => threatened belief in God and a just world.
+** Is dissonance reduction good?
+Good: it allows you to streamline cognition.
+Bad: it loses the inherent complexity / ambiguity in the world.
+
+#+begin_quote
+A foolish consistency is the hobgoblin of little minds. - Ralph Waldo Emerson
+#+end_quote
+** Motivated reasoning is a key element in cognitive dissonance.
+Severity of initiation: we have a deep-seated belief that we're not gullible etc. Motivated reasoning leads us to believe that the task was actually interesting, rather than that we're just gullible.
+** Behavior precedes thought
+Spreading of alternatives: we post-hoc try to "justify" our decisions in life to ourselves.
+
+Cognitive Behavioral Therapy: change behaviors in people's lives to change their psychology positively.
+
+Don't /think/ like you're the person you want to be, /act/ the way you want to be and become that person.
+* TODO [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]: attribution
+* [[file:20210716222804-norms.org][Norms]]
+- Norms :: Social "rules" that determine appropriate, acceptable behavior in a certain context.
+- Descriptive norms :: common patterns of behavior
+- Injunctive norms :: patterns of behavior that are commonly approved of / evaluated positively
+
+
+Injunctive (top) vs Descriptive? (left)
+|                  | Descriptive - Yes                       | Descriptive - No             |
+|------------------+-----------------------------------------+------------------------------|
+| /                | <                                       | <                            |
+| *Injunctive - Yes* | - driving on the right side of the road | - sharing cable accts        |
+|                  | - taking turns in conversation          | - culturally divisive issues |
+|                  | - standing in line                      | - solar panels               |
+|------------------+-----------------------------------------+------------------------------|
+| *Injunctive - No*  | - Fashionable clothes                   | - food choices               |
+|                  | - Manners of speaking                   | - name choice                |
+|                  | - Gender norms for asking out           |                              |
+
+
+These two types of norms are often overlapping signficantly -- injunctive rules become descriptive norms, (people strive to be normal in fear of judgment,) and then descriptive norms also become injunctive (people judge you for being abnormal.)
+
+Morals are injunctive norms about what is right or wrong.
+
+* Breaching Norms
+Breaching: the purposeful breaking of social norms (usu. descriptive, sometimes injunctive)
+
+E.g.: Stand in elevator facing the wrong way. Order pizza at McD's. Shake head while saying yes. Lol.
+
+You really only learn how strong a norm is when you try to break it. We're reaallllly socially programmed to not break them.
+
+(/Norm internalization/: people "self-sanction" for deviance) -- Panopticon -- feels like everyone is watching us, even when they're not watching us. We watch ourselves.
+
+Norm internalization / embarrassability associated with trustworthiness, monogamy, etc.
+
+Lots of the "sameness" we see in society actually has roots in the way they were socialized -- same initial conditions.
+** Reactions to breaches
+Common reactions to breaching of norms includes:
+
+- You are sanctioned
+  This is common for injunctive norms
+
+- Gently brought in line -- people want to maintain *fluidity of interaction*
+  breaching causes cognitive dissonance -- people seek to resolve it.
+
+  "Dramaturgical analysis" (Goffman): social order like a play. People read their lines, and if someone goes "off-script," they are gently guided back on
+
+  #+begin_quote
+And all the men and women merely players;
+They have their exits and their entrances;
+And one man in his time plays many parts. - Shakespeare
+  #+end_quote
+- You are imitated
+  This is (often but not always) common when the norm is privately unpopular. Can trigger a "cascade" effect...
+* Cascades
+Social influence is not just a stabilizing force -- can also create social change.
+
+Cascades have fascinating properties: "early movers" disproportionately influence. Unpredictable. Can destroy a norm, or create a new one.
+
+Random dance mob started at music festival = cascade. Emergent collective behavior
+
+Threshold model: People have "thresholds" = number of others who must join the collective behavior before individual will.
+
+Very sensitive to early movers: need people with 0- and low-thresholds. This makes it highly unpredictable (average threshold not necessarily telling the whole story.)
+* [[id:51fc68e1-5963-4ef3-820e-feaff385b6d5][Social Influence]]
+View the following studies through these lenses:
+1) What is distinct about the particular type of influence studied?
+2) What would you have done in the study?
+3) How does this influence show up in real life? (Good/bad?)
+** First Conformity Experiment
+Rate pleasantness of odors, alone vs. in groups.
+
+In groups: participants avoided extremes. (Moderation effect)
+
+Instinctual/subconscious submission to the group
+** Sherif autokinetic experiments
+/Autokinetic effect/: When a white light is presented on a black background, it appears to be moving / fluttering.
+
+Show light on wall of dark room -- repeatedly ask "how much is it moving?"
+
+Conditions: Individuals vs. Groups
+
+Individuals: settle on a personal standard, then stick to those
+
+Groups: converge towards a shared answer. Constructed reality.
+
+Groups => Individuals: they stuck to the group's "answer." Social cohesion is strong.
+*** What is special about this?
+The stimulus is *ambiguous*. We use social information to make judgments, because we want to be right. When things are uncertain, we look to others for answers.
+*** What would I have done?
+I feel like I probably would have been convinced.
+*** How does this influence show up in "real life"?
+Yelp for deciding whether a restaurant is good. Carta for deciding whether classes are good. etc.
+
+Me looking up stuff on reddit, tryna see the "best" way to do [X].
+
+Things to consider:
+- people aren't always right
+- Conformity generates and preserves culture (even across generations)
+** Asch Conformity Experiments
+Perception of lengths of lines -- which one on the right is the same as the line on the left.
+
+Conditions: confederate says wrong answer vs. not.
+
+People conform to the /wrong answer/ despite the evidence in front of their own eyes.
+
+*** What is special about this influence?
+Stimulus is /not/ ambiguous
+
+*Normative influence*: using social norms to guide behavior
+
+We want to be liked.
+*** What would I have done?
+Hmmm...I feel like I would not have conformed, at least the vast majority of the time. (There is large individual variance on this trial.)
+*** Why did people conform?
+People said they questioned their own judgment -- reluctant to admit that they were distorting to be liked.
+*** How does this show up in "real life?"
+Well...it doesn't, really. Generally the group doesn't completely contradict what you believe. Lots of grey ar
+** Social influence at play
+1) How am I being influenced?
+   By my desire to be right, to be liked
+2) How am I influencing others?
+   Cialdini's 6 principles
+3) Are there places I want to change my behavior (given what I'm learning)?
+** Milgram - replicated Asch in Norway and France
+People being told to administer electric shocks to someone else.
+
+Factors influencing obedience: situational influence.
+*** What is special?
+Authority figure telling them what to do
+*** What would I have done?
+I feel like I'm honestly not sure. I hope I would've stopped but I can't tell. I feel fairly conforming.
+*** Real life?
+Hospital: nurses will blindly follow doctor orders
+
+when white participants were asked to "match the characteristics of their representative" they hired more white people
+
+(...terrible things like the Holocaust?)
+** Social influence in the 21st century
+*** focus on positive interventions
+You can publish data to correct misinformed norms.
+
+*Join Your Fellow Guests* in saving the environment => more people reuse towels
+
+Working Together -- people like to feel like they're part of something.
+
+Dynamic norms: people are /moving towards/ eating less meat. People were inspired to choose the meatless option.
+
+(Just realized: the media has huge influence here.)
+
+*** nuanced distinctions
+*** sophisticated measures
+** AquaCharge:
+fake product, drink alone vs. with confederate (congruent, incongruent.) Measure subjective response, physiological response, functional response, endorsement, follow-up => even with no confederate, they improved alertness, increased blood pressure, etc.
+*** What is special?
+Demonstrates "transformational influence" (actually changed physical measures!)
+** Conclusions
+No one is immune to the influence of others
+
+Influence can be informational (be right), normative (be liked), explicit (obedience) or subliminal (social roles), potentially destructive, transformational
+
+#+begin_quote
+...in the absence of social verification, experience is transitory, random, and ephemeral, like the flicker of a firefly. But once recognized by others and shared in an ongoing, dynamic process of social verification we term "shared reality", experience is no longer subjective, instead, it achieves the phenomenological status of objective reality. That is, experience is established as valid and reliable to the extent that it is shared with others.
+Hardin & Higgins, 1996
+#+end_quote
+* Social Identity Theory - Inter Group Conflict
+** Identity
+"selves" that individual takes on in interaction
+
+20 Statements Test:
+
+I am:
+- Indian American
+- introvert
+- male
+- 22 years old
+- Stanford student
+- CS student
+- nationality
+- older brother
+- firstborn son, grandson
+- not generous
+
+
+*** Personal
+{ inrovert, polite, optimistic, moody }
+*** Role
+{ student, friend, daughter, etc. }
+*** Social
+{ nationality, university, political party }
+** Social Identity Theory
+1) How people identify
+2) Consequences of group ID
+
+Principles
+- Need constrast to form categories
+- No group until there is an out-group
+
+(going to Japan: feel my identity sticking out like a sore thumb.)
+*** Accentutation effect
+same-group is really similar, diff-group is really different
+*** Consequences
+**** Out-group animosity
+**** In-group favoritism
+*** "Minimal group" experiments
+People prefer to stick it to the out-group, rather than get more money
+*** Overcoming group conflict
+Contact alone is insufficient
+
+Overarching identities => seeing a similarity, common goal, *common enemy* (lol)
+
+Group you're part of is pretty malleable.
+* TODO Stereotypes
+* Helping
+"37 who saw murder didn't call the police" -- people didn't wanna get involved.
+
+Boston marathon bombing -- people came together and helped.
+
+Good samaritan experiment -- people who /had time/ helped.
+
+Steps to helping:
+- *Notice* that something has happened
+- Interpret the event as an *emergency*
+  + Overcome pluralistic ignorance
+- Taking *responsibility* to provide help
+  + overcome bystander effect / diffusion of responsibility
+    (stronger when more people are there)
+  + overcome normative influence to not involve
+  + overcome bias toward people in need
+- *Decide* how to help
+  + Overcome "Collapse of compassion"
+    #+begin_quote
+If I look at the mass, I will never act. If I look at the one, I will. -Mother Teresa
+    #+end_quote
+  + feelings of incompetence
+- Actually *help*
+  + overestimate costs/risks of help
+
+Being a giver is good. Can create ripple effects!!
+* Replication + Open Science
+#+begin_quote
+But this long history of learning how to not fool ourselves - of having utter scientific integrity- -is, I'm sorry to say, something that we haven't specifically included in any particular course that I'd know of. We just hope you've caught on by osmosis. The first principle is that you must not fool yourself- and you are the easiest person to fool. So you have to be very careful about that. After you've not fooled yourself, it's easy not to fool other scientists. You just have to be honest in a conventional way after that. - Richard Feynman
+#+end_quote
+Reproducibility: you can conduct the study again
+Replication: you can conduct the study again and get the same results
+- Direct replication (redo study verbatim)
+- Conceptual replication (do study on same concept, maybe different domain / expt setup)
+- Verification (redo analyses)
+** Why does it fail to replicate?
+- Direct replication: The world changed (ex: stereotype threat of Tea Party -- no one cares about the Tea Party anymore!)
+- Conceptual replication: could indicate a boundary condition
+  + Above-average effect: doesn't /always/ happen...for example, below-average effect for juggling. This is good, b/c it allows us to form more general theories.
+- original study was poor
+** Replication problems
+The Open Science Collaboration found lots of replication issues.
+
+Direct replications are often impossible...can't get the exact same people, etc. People bring a lot of complexity to the equation.
+** Methodological problems
+p-values suck. everyone uses ~p < .05~. lol
+
+Multiple dependent variables
+
+Arbitrary data exclusions ("it's an outlier!!")
+
+Optional stopping -- stop the study once you get a significant finding
+
+p-hacking: people have motivated reasoning to find a positive result
+
+Small sample size
+
+Only publish positive results (~p < .05~)
+** Pre-registration
+Publicly post the research plan before conducting a study.
+Restricts "researcher degrees of freedom"
+** Registered reports
+Will publish the results, no matter the result. Fight bias against null results
+Researcher incentivized to run study very well
+** Open science
+Publicly post your data, code, etc.
+** Determining adequate sample size via power analysis
+* Political Psychology
+** Dimensions of polarization
+Affective: emotions
+Attitudinal: attitudes toward (x)
+Partisan sorting: people agree on everything, within their half, but disagree with everything in the other half
+** Levels of polarization: are they increasing?
+|                  | Mass Public | Politicians |
+| Affective        | *Yes*         | Yes*        |
+| Attitudinal      | Not much    | *Yuuup*       |
+| Partisan sorting | Yes         | *Yuuup*       |
+** Theories of Political Psychology
+Symmetric: psychology of liberals and conservatives basically the same
+
+
+Asymmetric: psychology of liberals and conservatives fundamentally different
+
+openness to experience (D), tolerance for ambiguity (D), need for cognitive closure (R), need for cognition (R)
+|
+|
+v
+social issues, especially
+
+OkCupid data shows that liberals tend to like complex people, conservatives like simple people.
+* Positive Psychology
+** What doesn't make people happy?
+Income - not ... really, beyond the poverty line.
+Success - meh to negative
+Possessions - meh
+** What does makes people happy?
+Fleeting:
+Food
+exercise
+backrubs (lol)
+
+Enduring:
+Relationships (strong, eduring, intimate, open, supportive)
+Exercise (as a habit)
+Generosity (charity, helping, gratitude)
+
+Flow...
+** Flow
+Becoming totally immersed in a challenging, stimulating task that suits your abilities
+
+dancing
+conversation
+engrossing coding session
+
+Flow = Active meditation.
+
+Find things that generate flow for you, and build them into the [[id:482ff6af-ddb3-42f4-9e20-85dc08ff1deb][habits]] of your life.
+** Gratitude
+Really strong effects in the literature.
+
+Verbal gratitude rituals
+** Meditation
++emotion regulation
+** Immune neglect
+We have an "affective immune system" that restores us to homeostasis.
+
+We overestimate how long a highly positive/negative(esp negative) feeling from an experience will last.
+** Affective immune system struggles to clean up without a clear /source/ of negative emotion
+:PROPERTIES:
+:ID:       f75219f6-0fd5-4503-b0af-d36059e7edf7
+:END:
+That's why introspective essay exercises are really good. Also a solid argument for [[id:ded420be-9e33-4692-a9a8-070c80738ee8][journaling]]
+
+Why?
+- ameliorate anxiety associated with repressing emotions
+- helps create a *narrative* for understanding negative events
+
+Also that's why therapy is really good -- makes you construct a narrative, dig up what happened, understand the causal structure of it all. See things more clearly.
+
+Type of therapy doesn't even matter that much! You just need a warm body (or a blank page) to talk to, to construct a narrative to. Can be a loved one.
+** What about [[id:3841138e-363a-4bc2-b1c4-f5abbf973a54][meaning]]?
+:PROPERTIES:
+:ID:       471cad6d-0d72-41d1-b4a6-b1a438a977ed
+:END:
+
+purpose => something greater
+values => act consistent with my right/wrong
+efficacy => make a difference
+self-worth => I am good, worthy
+
+Meaning-happiness disjuncture: high in meaning, low in happiness. E.g. revolutionaries, parents
+
+Sources: Relationships/Community, Authenticity, Significant Goals. Working on stuff that matters, that "moves the needle." Struggle/Adversity
+* Carpe Diem
+/carpe diem/: seize the day.
+
+** Why are we so bad at seizing the day?
+Enemy number one is *self-consciousness*. We are deluded into thinking that others are harshly judging us.
+
+/Illusion of transparency/: we overestimate others' access to our internal states.
+
+/Spotlight effect/: we overestimate others' noticing our actions/appearance.
+
+/Expectations of criticism/: we overestimate others' judgment of our blunders, failures
+
+Success and failure: people think success and failure are negatively related. But in many domains, those who lose the most also win the most. => celebrate /tries/, not just success. Seems like a good argument for being [[id:1cda0670-c6d3-4d8a-b148-d58bc07c18ff][prolific]].
+
+In the long term, people regret the things they *didn't* do more than the things that they did.
+
+"It's harder to get over the things you never do."
+
+#+begin_quote
+Be happy for this moment. This moment is your life. - Omar Khayyam
+#+end_quote
+* Conclusion
+:PROPERTIES:
+:ID:       08215b51-bf34-4679-8563-58cd91f07a4f
+:END:
+If you remember anything, remember this:
+
+** Others have tremendous [[id:51fc68e1-5963-4ef3-820e-feaff385b6d5][influence]] on us.
+#+begin_quote
+The paramount fact is that people come into the world not alone with the objects of nature but also with other people, and through this encounter they are transformed into human beings. The environment of others and the products of their labor become a powerful, comprehensive region of forces within which each moves and has being. -Solomon Asch
+#+end_quote
+** We often underestimate the power of the situation.
+#+begin_quote
+Do I contradict myself? Very well, then I contradict myself, I am large, I contain multitudes. -Walt Whitman
+#+end_quote
+
+We are less isolated individuals than nodes in a social graph. Moreso defined by our context than the explicit properties of our node itself.
+** Reality is constructed.
+:PROPERTIES:
+:ID:       d5bf441b-0106-4bc7-a818-8e150c58b2ab
+:END:
+#+begin_quote
+Reality is an illusion, albeit a very persistent one. -Albert Einstein
+#+end_quote
+
+#+begin_quote
+We don't see the world as it is, we see it as we are. -Anias Nin
+#+end_quote
+We see it through our assumptions, filters, biases...
+
+#+begin_quote
+Treat a [person] as he is and he will remain as he is. Treat a [person] as he can and should be and he shall become as he can and should be. -Johan Wolfgang von Goethe
+#+end_quote
+We can /create/ positive realities. You just need to have some [[id:6a13f10d-37e0-4eb3-af0a-99ab7965e14f][vision]] for the future.
+** Scientific inquiry enables us to pursue curiosities.
+#+begin_quote
+The unexamined life is not worth living -Socrates
+#+end_quote

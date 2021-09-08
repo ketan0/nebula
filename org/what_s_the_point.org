@@ -22,4 +22,4 @@ My digital lab serves as a place for me not to regurgitate information that I kn
 </script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 #+end_export
-It seems like things gain more meaning when they are multiply-connected into the fabric of our reality.
+It seems like things gain more [[id:3841138e-363a-4bc2-b1c4-f5abbf973a54][meaning]] when they are multiply-connected into the fabric of our reality.

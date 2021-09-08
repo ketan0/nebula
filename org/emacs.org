@@ -10,3 +10,11 @@ I like the motivation he gives for why emacs is so damn cool. "Emacs changes how
 ** [[https://github.com/danielmai/.emacs.d/blob/master/config.org][danielmai]]
 ** [[https://tecosaur.github.io/emacs-config/config.html][tecosaur]]
 ** [[https://github.com/jethrokuan/dots/blob/master/.doom.d/config.el][jethro]]
+* skills I am learning
+** become a master of [[id:2baa1991-e3c3-4b37-8703-296cda53a9a0][debugging]] in emacs
+:PROPERTIES:
+:ID:       d4ae4b67-706b-4977-9299-d3667eb940ed
+:END:
+Something crashing? Use [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Edebug.html][Edebug]] to debug it. Something slow? You can easily [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Profiling.html][profile]] it.
+** lisp macros
+Really powerful feature that allows one to define domain-specific syntax /within/ Emacs Lisp. Examples I really like include [[https://github.com/alphapapa/org-ql][org-ql]], [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Rx-Notation.html][rx notation]], and so many more that enable someone to write expressive, parsimonious code in a [[id:95ff3fb3-f886-41df-9f4f-5f9223b4ca4e][bottom-up]] fashion.

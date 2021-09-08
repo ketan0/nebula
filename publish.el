@@ -218,7 +218,9 @@ contextual information."
                                   " data-editor-type=\"html\""
                                 "")
                               code)
+                    ;; CHANGED LINE
                     (format "<pre class=\"src src-%s\" data-language=\"%s\"%s>%s</pre>"
+                    ;; END CHANGED LINE
                             lang lang label code)))))))
 
 (let ((org-id-extra-files (find-lisp-find-files org-roam-directory "\.org$")))
