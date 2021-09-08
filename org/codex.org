@@ -3,7 +3,11 @@
 :END:
 #+title: codex
 
-Some cool (mostly) working examples I've been able to generate with [[https://openai.com/blog/openai-codex/][OpenAI Codex]] so far! For context, Codex is a language model that can generate completions, given some initial prompt. For all of these Python examples, the initial prompt is the block comment at the top, and Codex's completion is the rest of the example. Each of these was syntactically correct and functional with very minimal modification, most none at all. I'm sure some of these examples are partly "memorized" from the training data, but the fact that it can substitute new things into those memorized "templates" is pretty amazing.
+Some cool (mostly) working examples I've been able to generate with [[https://openai.com/blog/openai-codex/][OpenAI Codex]] so far! For context, Codex is a language model that can generate completions for [[id:0997b060-ee05-458e-beed-3494675c879d][programming]] examples, given some initial prompt. For all of these Python examples, the initial prompt is the block comment at the top, and Codex's completion is the rest of the example.
+
+Each of these was syntactically correct and functional with very minimal modification, most none at all. I'm sure some of these examples are partly "memorized" from the training data, but the fact that it can substitute new parameters into those memorized templates is pretty amazing.
+
+--
 
 Haha, this one seemed to assume that it was already December. But it was cool that it did this much by itself.
 #+begin_src python :results output
