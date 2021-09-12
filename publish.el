@@ -78,7 +78,7 @@
         (-when-let* (((node . end-position) node-and-end)
                      (backlinks (--filter (->> (org-roam-backlink-source-node it)
                                                (org-roam-node-file)
-                                               (s-contains? "org_private/") (not))
+                                               (s-contains? "private/") (not))
                                           (org-roam-backlinks-get node)))
                      (heading (format "\n\n%s Links to this node\n"
                                       (s-repeat (+ (org-roam-node-level node) 1) "*")))
