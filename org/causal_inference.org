@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       3be29037-0fe2-468a-a962-5455f8361186
+:END:
+#+title: causal inference
+
+* observation
+:PROPERTIES:
+:ID:       d4b17339-7852-4eb6-a399-24e47b354a6c
+:END:
+* intervention
+:PROPERTIES:
+:ID:       d68c5093-d6d6-43b8-a48d-629ade9293b6
+:END:
+* counterfactual
+:PROPERTIES:
+:ID:       1f3f1a31-ff89-4c05-8c82-64888887f45e
+:END:

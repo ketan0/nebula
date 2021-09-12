@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       0cebd56a-9669-4ff0-b93e-8e35d05a2d81
+:END:
+#+title: affordances

@@ -42,7 +42,6 @@ Print the reciprocal of the Hilbert matrix.
 
 import numpy as np
 from scipy.linalg import hilbert
-
 n = 5
 a = hilbert(n)
 b = 1.0 / a
@@ -127,43 +126,25 @@ plt.savefig('my_plot.png')
 It honored my request to use requests!
 #+begin_src python :results output
 """
-Print the high temperature tomorrow in Stanford, California, using the requests library.
+Print the high and low temperatures for today in Stanford, California, using the requests library and the forecaster.weather.gov API.
 """
 
 import requests
 
-r = requests.get('http://forecast.weather.gov/MapClick.php?lat=37.4275&lon=-122.1670#.Wkwh8VQ-fVo')
-content = r.text
+r = requests.get('http://forecast.weather.gov/MapClick.php?lat=37.4&lon=-122.1&unit=0&lg=english&FcstType=json')
+data = r.json()
 
-# print(content)
+# Codex generated these lines, which seem well-intentioned, but incorrect...
+# (maybe the API changed??)
+# print(data['data']['temperature']['high'])
+# print(data['data']['temperature']['low'])
 
-from bs4 import BeautifulSoup
-soup = BeautifulSoup(content, 'html.parser')
-seven_day = soup.find(id="seven-day-forecast")
-forecast_items = seven_day.find_all(class_="tombstone-container")
-tonight = forecast_items[0]
-# print(tonight.prettify())
 
-period = tonight.find(class_="period-name").get_text()
-short_desc = tonight.find(class_="short-desc").get_text()
-temp = tonight.find(class_="temp").get_text()
-
-print(period)
-print(short_desc)
-print(temp)
-
-img = tonight.find("img")
-desc = img['title']
-print(desc)
-
-period_tags = seven_day.select(".tombstone-container .period-name")
-periods = [pt.get_text() for pt in period_tags]
-# print(periods)
+# I put these lines in
+print(data['data']['temperature'][0])
+print(data['data']['temperature'][1])
 #+end_src
 
     #+RESULTS:
-    : Overnight
-    : Haze
-    : Low: 61 °F
-    : Overnight: Widespread haze. Partly cloudy, with a low around 61. Light west wind.
-    : ['Overnight', 'Wednesday', 'WednesdayNight', 'Thursday', 'ThursdayNight', 'Friday', 'FridayNight', 'Saturday', 'SaturdayNight']
+    : 87
+    : 60

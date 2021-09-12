@@ -4,12 +4,15 @@
 http://nickcammarata.com/writing/pieces-of-happy
 
 * Summary
+:PROPERTIES:
+:ID:       e9a9835e-582d-4cb3-8f5e-72ad7bdaf003
+:END:
 
 Essentially, recurring features of your environment have a compounding effect on your happiness over the course of your life. Life satisfaction research has revealed certain factors that reliably produce (and don't produce) happiness across all humans.
 
 Also, take advantage of your personality strengths, and possibly experiment with actions that could help shore up negative personality traits (e.g. cut caffeine to lower neuroticism.)
 
-All of this should take place within a framework of personal experimentation. Try "domain randomization" on yourself -- that is, try messing with some of the parameters of your life that have been on default settings thus far. The following are sliders for some relatively meaningless parameters that probably won't affect your life that much-- because why not!
+All of this should take place within a framework of personal [[id:1096f874-fab2-4db1-88dc-b90740bf608a][experimentation]]. Try "domain randomization" on yourself -- that is, try messing with some of the parameters of your life that have been on default settings thus far. The following are sliders for some relatively meaningless parameters that probably won't affect your life that much-- because why not!
 
 #+begin_export html
 <div>

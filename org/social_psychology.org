@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       3db1ed04-4b29-46cf-9940-1afd30d5d25f
+:END:
 #+title: Social Psychology
 
 Some (incomplete) notes from PSYCH 70: Social Psychology at Stanford.
@@ -19,7 +22,10 @@ Three parts of the class: social cognition, interpersonal processes, everyday li
 *** Levels of organization:
 Societies <=> *Groups* <=> *Individual* <=> *Mind* <=> Neurons/Genes/Hormones
 ^social psych is focused on the middle three levels.
-* [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]: self-serving biases.
+* Cognitive Biases: self-serving biases.
+:PROPERTIES:
+:ID:       bb534a6b-c7cc-49de-b515-a5066242068b
+:END:
 ** Motivated reasoning
 /Motivated reasoning/ is our tendency to come to conclusions that make us feel good.
 
@@ -62,7 +68,10 @@ Side note: whoa. Intuitively I feel like (and I'm of course enjoying that sweet 
 You have expectations about someone => you behave accordingly towards them => they behave just how you expected => reinforces your expectations...
 
 This seems like a kind of [[file:20210626152258-positive_feedback_loop.org][positive feedback loop]] that can either go really well, or really badly. Parents have a huge role in establishing expectations for their children. (As a first-born, I know this firsthand 😅)
-* [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]: cognitive dissonance theory
+* Cognitive Biases: [[id:8fb8913e-bdd8-4ece-8386-2978b765d7bf][cognitive dissonance]] theory
+:PROPERTIES:
+:ID:       e7bba662-df57-4a87-a813-c2686d680dda
+:END:
 Cognitive Dissonance Theory:
 - cognitive dissonance :: holding apparently incompatible / logically inconsistent thoughts about the world.
 ** How to resolve dissonance between A and B?
@@ -91,8 +100,11 @@ Spreading of alternatives: we post-hoc try to "justify" our decisions in life to
 Cognitive Behavioral Therapy: change behaviors in people's lives to change their psychology positively.
 
 Don't /think/ like you're the person you want to be, /act/ the way you want to be and become that person.
-* TODO [[file:20210704202541-cognitive_biases.org][Cognitive Biases]]: attribution
-* [[file:20210716222804-norms.org][Norms]]
+* TODO Cognitive Biases: attribution
+:PROPERTIES:
+:ID:       400c2def-0d0e-40b3-ad7d-efaf745c5937
+:END:
+* Norms
 - Norms :: Social "rules" that determine appropriate, acceptable behavior in a certain context.
 - Descriptive norms :: common patterns of behavior
 - Injunctive norms :: patterns of behavior that are commonly approved of / evaluated positively
@@ -421,10 +433,15 @@ engrossing coding session
 Flow = Active meditation.
 
 Find things that generate flow for you, and build them into the [[id:482ff6af-ddb3-42f4-9e20-85dc08ff1deb][habits]] of your life.
-** Gratitude
+** [[id:ea86632a-c71d-473e-8041-267075f451e3][Gratitude]]
+:PROPERTIES:
+:ID:       38eb0870-2056-4219-b413-9e2bf1457989
+:END:
 Really strong effects in the literature.
 
 Verbal gratitude rituals
+
+Gratitude journaling
 ** Meditation
 +emotion regulation
 ** Immune neglect

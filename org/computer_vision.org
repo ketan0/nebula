@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       27d08270-d161-4bb1-8b39-50f28b1ab668
+:END:
+#+title: computer vision

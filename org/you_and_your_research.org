@@ -1,0 +1,56 @@
+:PROPERTIES:
+:ID:       bf582097-5570-40fc-bb76-cf377262a892
+:ROAM_REFS: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
+:END:
+#+title: You and Your Research
+
+related: [[id:283dc18a-8b0e-4d9a-94c8-898c5ff04437][research]]
+
+[[https://en.wikipedia.org/wiki/Richard_Hamming][Richard Hamming]] gave a talk that's gained an increasing cult following in recent years. Drawing on his experience from Bell Labs, he lists some the characteristics of the top researchers there (including himself.)
+
+* Work with the door open.
+:PROPERTIES:
+:ID:       db60164d-58a3-461b-bd87-ef0706ef8e69
+:END:
+Hamming noticed that working with the office door closed, while good for productivity in the short-term, ended up hurting researchers in the long run. If you don't "work with the door open," so to speak, you might miss the actual important problems.
+* Sometimes "faults," from another viewpoint, can actually be assets.
+:PROPERTIES:
+:ID:       53453a99-5ee4-448a-b6af-2ead2d644809
+:END:
+Back in the day when machines were painstakingly programmed in binary, Bell Labs wouldn't give Hamming the personnel required to do that; while this could be seen as a "fault," it actually made him become one of the earliest adopters of automatic programming. Similar drives led [[https://en.wikipedia.org/wiki/Grace_Hopper][Grace Hopper]] and others to invent high-level programming language.
+* Knowledge and productivity are like compound interest.
+:PROPERTIES:
+:ID:       a9bda1cb-cae4-4bbc-95dd-a7cdbc197e29
+:END:
+* Have courage to follow ideas.
+:PROPERTIES:
+:ID:       78cc0572-4853-483f-89c6-9ba20bd34c75
+:END:
+* Work on important (but also actionable) problems.
+:PROPERTIES:
+:ID:       c454058f-bb1c-4dc7-952a-4f7fae83e0d0
+:END:
+* Have a "web" of 10-20 important problems you work on.
+:PROPERTIES:
+:ID:       0289232f-10bb-4b17-9a41-feff6c98dff0
+:END:
+* You need contact hours with your work.
+:PROPERTIES:
+:ID:       230a6748-ab6b-44d0-9336-de0a4af55225
+:END:
+* Knowledge + productivity = compound interest.
+:PROPERTIES:
+:ID:       8a462063-27c7-4405-9714-39f22e388de8
+:END:
+* Tolerate ambiguity.
+:PROPERTIES:
+:ID:       1f27a891-eec3-4798-ac94-b8073283ad36
+:END:
+* Complete emotional commitment to your work => subconscious keeps churning
+:PROPERTIES:
+:ID:       267245a5-db4e-45ea-ab7f-9afc4e4ad6e0
+:END:
+* Don't get angry; instead be amused
+:PROPERTIES:
+:ID:       0c3d22ae-f83c-4aa7-a603-f593892d1217
+:END:

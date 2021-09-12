@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       ba1b5767-b88f-4024-91c8-ff21c89743b7
+:END:
+#+title: focus
+
+As usual, Andy Matuschak has some really striking [[https://notes.andymatuschak.org/z3ruCqbkUjU7U8MD5gaMjzmJV4GuENJ3ie1LP?stackedNotes=zrQz6Eqcnrf3QqEf4A92J5bMSwED9KtMZje&stackedNotes=z8BENejnm5iyqRUodaqyScehdgnuu9b1vn669][notes]] on this topic.
+
+In particular, I like his exhortations to get [[id:ef59c729-e9b5-4cca-a16c-7b8ec9d37bce][curious]] and get [[id:f8afdaff-9e8c-4a7e-adf5-84e76794d9c7][bored]]. Those two aren't mutually exclusive, and in fact seem to go hand in hand.
+
+Copying here some sane defaults that he lists (seems like a good support on my way to being [[id:28ad325b-5438-4b37-aa60-607d54ee84c1][intentional]]):
+* Partial list of practices meant to produce deliberateness, receptivity [16%]
+:PROPERTIES:
+:ID:       69b7c145-a701-4e5a-b504-b8486f203e4a
+:END:
+** TODO Wi-Fi defaults to off in the morning
+** TODO Consistency in My daily routine
+** TODO Meditation first thing in the morning
+** TODO Simple, familiar background music
+** TODO Lots of long walks, usually without audiobooks or podcasts
+** TODO My notes contain mostly my own words (Literature notes are secondary and separate)
+** TODO Weekly, monthly, quarterly, annual reflection and planning exercises
+** DONE Forest.app running on my phone while I work
+CLOSED: [2021-09-10 Fri 19:01]
+** DONE Twitter, Mail, etc are not installed on my phone
+CLOSED: [2021-09-09 Thu 14:47]
+** TODO Focus.app runs from 7AM to 5PM, blocking Mail, the Twitter timeline, distracting web sites, etc
+Andy says: "I’m not sure this is a great practice: A rigid fixation on “focus” can harm creative work. The block ends in the evenings, so I tend to do my meandering then, but I don’t know if that’s too rigid."
+** TODO Answer email in batches, usually in the evening or when feeling low-energy
+** TODO Usually accept at most one meeting per day, at 5PM, to keep daytime calendar totally open

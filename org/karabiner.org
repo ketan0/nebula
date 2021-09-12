@@ -394,7 +394,7 @@ end tell
 ;; add title bar to frame
 [:a [:elisp "(setq mac-use-title-bar t)(setq ketan0/old-frame (selected-frame)) (make-frame)(delete-frame ketan0/old-frame)"]]
 [:b "osascript ~/.dotfiles/open_in_chrome.scpt"]
-[:c [:open "/Users/ketanagrawal/org_private/capture.org"]]
+[:c [:open "/Users/ketanagrawal/capture.org"]]
 [:d [:open "https://drive.google.com/drive/my-drive"]]
 [:o [:open "http://doc.new"]] ;; new google doc
 [:e [:open "/Users/ketanagrawal/.dotfiles/doom.d/config.el"]]
@@ -409,7 +409,7 @@ end tell
 [:n [:openwith "Google Chrome" "https://www.netflix.com/title/80199128"]]
 [:p [:withsecretsmarturl "$PAC_PROGRESS_DOC_LINK"]]
 [:t [:smarturl "https://twitter.com/i/bookmarks"]]
-[:r [:open "/Users/ketanagrawal/org_private/todos.org"]]
+[:r [:open "/Users/ketanagrawal/private/todos.org"]]
 [:s [:open "/Users/ketanagrawal/.dotfiles/karabiner.org"]]
 ;; [:v [:open "https://healthy.verily.com/"]] ;; covid testing
 [:v [:openwith "Emacs" "/Users/ketanagrawal/Dropbox/Apps/GoodNotes 5/GoodNotes/vision.pdf"]]

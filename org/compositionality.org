@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       b6fafba6-8e57-400d-962c-bf7cc892a41f
+:END:
+#+title: compositionality
+
+You have a set of reusable pieces that can be combined to form different, interesting things.
+
+Decomposition of [[id:0997b060-ee05-458e-beed-3494675c879d][programs]] into modular, reusable unit is one example of this.
+
+#+ATTR_HTML: :alt Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.) :width 250
+[[file:decompoisition.jpg]]
+
+Some methodical activities, such as making breakfast, decompose well into modular activities as well:
+#+ATTR_HTML: :alt tree of the decomposition of making breakfast into "make toast," "make tea," etc.
+[[file:breakfast.png]]
+
+Another example of compositionaity is that a [[id:27d08270-d161-4bb1-8b39-50f28b1ab668][computer vision]] model's early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.
+
+#+ATTR_HTML: :alt progression from low-level to high-level features in a CNN.
+[[file:cnnlayers.jpg]]

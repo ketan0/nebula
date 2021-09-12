@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-08 Wed 04:11 -->
+<!-- 2021-09-12 Sun 04:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>codex</title>
@@ -77,7 +77,6 @@ This&#x2026;this is cool to be able to write math in natural language like this,
 
 <span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
 <span class="org-keyword">from</span> scipy.linalg <span class="org-keyword">import</span> hilbert
-
 <span class="org-variable-name">n</span> = 5
 <span class="org-variable-name">a</span> = hilbert(n)
 <span class="org-variable-name">b</span> = 1.0 / a
@@ -126,7 +125,7 @@ Hah, this is a cute one. I initially only put the first 4 lines in, and it proce
 </pre>
 </div>
 
-<pre class="example" id="org4985ab2">
+<pre class="example" id="orgfad9338">
 *
 **
 ***
@@ -164,7 +163,7 @@ plt.savefig(<span class="org-string">'my_plot.png'</span>)
 </div>
 
 
-<div id="orgfc98e90" class="figure">
+<div id="orgbce80c3" class="figure">
 <p><img src="my_plot.png" alt="my_plot.png" /><br />
 </p>
 </div>
@@ -174,47 +173,29 @@ It honored my request to use requests!<br />
 </p>
 <div class="org-src-container">
 <pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
-<span class="org-doc">Print the high temperature tomorrow in Stanford, California, using the requests library.</span>
+<span class="org-doc">Print the high and low temperatures for today in Stanford, California, using the requests library and the forecaster.weather.gov API.</span>
 <span class="org-doc">"""</span>
 
 <span class="org-keyword">import</span> requests
 
-<span class="org-variable-name">r</span> = requests.get(<span class="org-string">'http://forecast.weather.gov/MapClick.php?lat=37.4275&amp;lon=-122.1670#.Wkwh8VQ-fVo'</span>)
-<span class="org-variable-name">content</span> = r.text
+<span class="org-variable-name">r</span> = requests.get(<span class="org-string">'http://forecast.weather.gov/MapClick.php?lat=37.4&amp;lon=-122.1&amp;unit=0&amp;lg=english&amp;FcstType=json'</span>)
+<span class="org-variable-name">data</span> = r.json()
 
-<span class="org-comment-delimiter"># </span><span class="org-comment">print(content)</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Codex generated these lines, which seem well-intentioned, but incorrect...</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">(maybe the API changed??)</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">print(data['data']['temperature']['high'])</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">print(data['data']['temperature']['low'])</span>
 
-<span class="org-keyword">from</span> bs4 <span class="org-keyword">import</span> BeautifulSoup
-<span class="org-variable-name">soup</span> = BeautifulSoup(content, <span class="org-string">'html.parser'</span>)
-<span class="org-variable-name">seven_day</span> = soup.find(<span class="org-builtin">id</span>=<span class="org-string">"seven-day-forecast"</span>)
-<span class="org-variable-name">forecast_items</span> = seven_day.find_all(class_=<span class="org-string">"tombstone-container"</span>)
-<span class="org-variable-name">tonight</span> = forecast_items[0]
-<span class="org-comment-delimiter"># </span><span class="org-comment">print(tonight.prettify())</span>
 
-<span class="org-variable-name">period</span> = tonight.find(class_=<span class="org-string">"period-name"</span>).get_text()
-<span class="org-variable-name">short_desc</span> = tonight.find(class_=<span class="org-string">"short-desc"</span>).get_text()
-<span class="org-variable-name">temp</span> = tonight.find(class_=<span class="org-string">"temp"</span>).get_text()
-
-<span class="org-keyword">print</span>(period)
-<span class="org-keyword">print</span>(short_desc)
-<span class="org-keyword">print</span>(temp)
-
-<span class="org-variable-name">img</span> = tonight.find(<span class="org-string">"img"</span>)
-<span class="org-variable-name">desc</span> = img[<span class="org-string">'title'</span>]
-<span class="org-keyword">print</span>(desc)
-
-<span class="org-variable-name">period_tags</span> = seven_day.select(<span class="org-string">".tombstone-container .period-name"</span>)
-<span class="org-variable-name">periods</span> = [pt.get_text() <span class="org-keyword">for</span> pt <span class="org-keyword">in</span> period_tags]
-<span class="org-comment-delimiter"># </span><span class="org-comment">print(periods)</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">I put these lines in</span>
+<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][0])
+<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][1])
 </pre>
 </div>
 
 <pre class="example">
-Overnight
-Haze
-Low: 61 °F
-Overnight: Widespread haze. Partly cloudy, with a low around 61. Light west wind.
-['Overnight', 'Wednesday', 'WednesdayNight', 'Thursday', 'ThursdayNight', 'Friday', 'FridayNight', 'Saturday', 'SaturdayNight']
+87
+60
 </pre>
 </div>
 <div id="postamble" class="status">

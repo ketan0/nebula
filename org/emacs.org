@@ -3,6 +3,11 @@
 :END:
 #+title: emacs
 
+I started using Emacs in January 2020, and it has veritably changed the way I do work on my computer, and the way I think about computing in general.
+
+* Things I really like about emacs
+** Emacs enables a personal framework of [[id:1096f874-fab2-4db1-88dc-b90740bf608a][experimentation]].
+It's completely hackable, which easily leads to an "experimental" mindset. I feel like people don't really try tweaking the default settings of things in important ways. Granted, you can get lost in customization, and tweaking every little aesthetic and all that...but I believe that there have been several important ways that I've been able to customize my workflow due to Emacs and the OSS that has built many different extensions for it.
 * Cool configs
 ** [[https://gitlab.com/justinekizhak/dotfiles/blob/master/emacs/doom.d/config.org][justinekizhak]]
 I like the motivation he gives for why emacs is so damn cool. "Emacs changes how you /think/ about programming." I feel like this has been very true for me. It makes many other applications seem needlessly restrictive. It feels natural to have the entire OS be an introspectable operating system.

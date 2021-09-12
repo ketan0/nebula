@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       7e70ddaf-359e-4be2-9110-3a826d314cfb
+:END:
+#+title: Thinking Fast and Slow
+
+* System 1
+:PROPERTIES:
+:ID:       1a22fb9c-9bc4-4943-9e33-9f08f62409f3
+:END:
+* System 2
+:PROPERTIES:
+:ID:       62eeec64-5a77-45d2-b386-54fed57e72e0
+:END:

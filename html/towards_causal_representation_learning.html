@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-09-12 Sun 04:05 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Towards Causal Representation Learning</title>
+<meta name="author" content="Ketan Agrawal" />
+<meta name="generator" content="Org Mode" />
+<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+<div id="preamble" class="status">
+<a style="color: inherit; text-decoration: none" href="/">
+<h2>Ketan's Digital Laboratory &#129514;</h2>
+</a>
+</div>
+<div id="content" class="content">
+<h1 class="title">Towards Causal Representation Learning</h1>
+<p>
+Yoshua Bengio <a href="https://www.youtube.com/watch?v=rKZJ0TJWvTk">talk</a>.<br />
+</p>
+
+<p>
+causal representation learning: the discovery of high-level causal variables from low-level observations.<br />
+</p>
+
+<p>
+In practice, i.i.d. is a bad assumption. Things don't stay the same distribution as train. Current DL systems are brittle.<br />
+</p>
+
+<p>
+But&#x2026;what assumption can we replace it with, then?<br />
+</p>
+
+<p>
+how does the brain break knowledge apart into "pieces" that can be reused? =&gt; <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a> (thinking about decomp. in 106B.) Examples of compositionality include<br />
+</p>
+
+<div id="outline-container-orgce567c7" class="outline-2">
+<h2 id="orgce567c7">Systematic Generalization</h2>
+<div class="outline-text-2" id="text-orgce567c7">
+<p>
+Current DL methods overfit the training <b>distribution</b>. That is, if they encounter OOD data, they will perform poorly.<br />
+</p>
+</div>
+<div id="outline-container-orgc38d541" class="outline-3">
+<h3 id="orgc38d541">Conscious processing helps humans deal with OOD settings</h3>
+<div class="outline-text-3" id="text-orgc38d541">
+<p>
+We are <i>agents</i>, and agents face a dynamic environment &#x2013; particularly because there are other agents! We want our knowledge to generalize across different places, times, input modalities, goals, etc.<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4f19e19" class="outline-2">
+<h2 id="org4f19e19">System 1 vs. System 2</h2>
+<div class="outline-text-2" id="text-org4f19e19">
+<p>
+<b>System 1</b>: Intuitive, fast, unconscious, parallel, non-linguistic, habitual<br />
+<b>System 2</b>: Slow, logical, sequential, conscious, linguistic, algorithmic, planning, reasoning<br />
+</p>
+
+<p>
+Current deep learning systems excel at <a href="thinking_fast_and_slow.html#ID-1a22fb9c-9bc4-4943-9e33-9f08f62409f3">System 1</a> &#x2013; they are fast, intuitive, but brittle. How can we incorporate more <a href="thinking_fast_and_slow.html#ID-62eeec64-5a77-45d2-b386-54fed57e72e0">System 2</a> to allow DL to <i>reason</i> about the world?<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org15a7e54" class="outline-2">
+<h2 id="org15a7e54">Implicit vs. verbalizable knowledge</h2>
+<div class="outline-text-2" id="text-org15a7e54">
+<p>
+Most of our knowledge is implicit, and not verbalizable. Same for neural networks.<br />
+</p>
+
+<p>
+Verbalizable knowledge can be explicitly reasoned with, planned with.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-ID-ea661fe1-d0f4-4bf8-9678-0cbbe9f73fc5" class="outline-2">
+<h2 id="ID-ea661fe1-d0f4-4bf8-9678-0cbbe9f73fc5">Independent mechanisms</h2>
+<div class="outline-text-2" id="text-org3d3a52e">
+<p>
+Hypothesis: We can explain the world by the composition of informationally independent pieces/modules/mechanisms. (Note: not statistically independent, but independent s.t. any causal <a href="causal_inference.html#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a> would affect just one such mechanism.)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org2b5ff06" class="outline-2">
+<h2 id="org2b5ff06">Some System 2 inductive priors</h2>
+<div class="outline-text-2" id="text-org2b5ff06">
+<p>
+Sparse causal graph of high-level, semantically meaningful variables.<br />
+</p>
+
+<div id="org75e2946" class="figure">
+<p><img src="origin_image.png" alt="Sparse factor graph." /><br />
+</p>
+</div>
+
+<p>
+Semantic variables are <i>causal</i>: agents, intentions, controllable objects, for example.<br />
+</p>
+
+<p>
+Changes in distribution are due to causal interventions (in the aforementioned high-level semantic space.) Provided we have the right abstractions, it would only take a few words to describe this change.<br />
+</p>
+
+<p>
+Everything that's happening can be reported in simple language. (Interesting that this is an example of report/access consciousness.) Mapping from semantic variables &lt;=&gt; sentences<br />
+</p>
+
+<p>
+"generic rules" of how things work are shared across instances &#x2013; need variables / functions / some form of indirection.<br />
+</p>
+
+<p>
+Stability/robustness in <a href="meaning.html#ID-3841138e-363a-4bc2-b1c4-f5abbf973a54">meaning</a> (e.g. of laws of physics,) even with changes in distribution, vs. things that <i>do</i> change. E.g.: early visual layers are stable after childhood. Later things like object recognition can be adapted to very quickly.<br />
+</p>
+
+<p>
+Causal chains to explain things are short. (Interesting: connection to <a href="cognitive_dissonance.html#ID-8fb8913e-bdd8-4ece-8386-2978b765d7bf">dissonance reduction</a>: we like simple explanations of the world around us (possibly because it helps us streamline our cognition.))<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org8a1dfb7" class="outline-2">
+<h2 id="org8a1dfb7">What should the causal variables be?</h2>
+<div class="outline-text-2" id="text-org8a1dfb7">
+<p>
+Position and momentum of every particle: computationally intractable.<br />
+</p>
+
+<p>
+Take inspiration from scientists (and humans in general): we invent <i>high-level abstractions</i> that make the causal structure of the world simpler.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-ID-5b73a108-e867-4b92-9949-832840d52869" class="outline-2">
+<h2 id="ID-5b73a108-e867-4b92-9949-832840d52869">Agency to Guide Representation Learning &amp; Disentangling</h2>
+<div class="outline-text-2" id="text-orgae32bb7">
+<p>
+(E. Bengio et al, 2017; V Thomas e al 2017; Kim et al ICML 2019)<br />
+</p>
+
+<p>
+Independent mechanisms: there are ways to modify a single object in the graph (e.g., you can move a chair ➡️🪑. )<br />
+</p>
+
+<p>
+Way that we represent actions &lt;=&gt; objects: there's a bijection there.<br />
+</p>
+
+<p>
+Connected to the psychological notion of <a href="affordances.html#ID-0cebd56a-9669-4ff0-b93e-8e35d05a2d81">affordances</a>: the way we understand objects is by the things we can do with them.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922" class="outline-2">
+<h2 id="ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922">What causes changes in distribution?</h2>
+<div class="outline-text-2" id="text-orgefa6303">
+<p>
+hypothesis to replace i.i.d. assumption: changes in distribution = consequence of an <b>intervention</b> on one/few <b>causes</b> /mechanisms. So, not identically distributed, but pretty similar, if you're in the right high-level <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> space. (E.g. if you put shaded glasses on, all the pixels change in basic RGB space &#x2013; but in some high-level semantic space, only one bit changed!)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org60e4a67" class="outline-2">
+<h2 id="org60e4a67">Causal induction from interventional data</h2>
+<div class="outline-text-2" id="text-org60e4a67">
+<p>
+How to handle unknown <a href="causal_inference.html#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a>? <i>infer</i> it.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org5821966" class="outline-2">
+<h2 id="org5821966">Thoughts, Consciousness, Language</h2>
+<div class="outline-text-2" id="text-org5821966">
+<p>
+If we want better NLP/NLU, we need to ground language in higher-level concepts.<br />
+</p>
+
+<p>
+<i>Grounded language learning</i>: BabyAI (2019)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgd4d99f9" class="outline-2">
+<h2 id="orgd4d99f9">Core ingredient for conscious processing: <a href="private/20201005220252-cs224n.html#ID-f2c20bd3-dbef-4da6-8e0c-4a95dce140bd">attention</a></h2>
+<div class="outline-text-2" id="text-orgd4d99f9">
+<p>
+Attention enables us to make <i>dynamic</i> connections to the various different "modules" in the brain. Creates competition between the modules for which deserves attention.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org9012c7c" class="outline-2">
+<h2 id="org9012c7c">Attention to <a href="consciousness.html#ID-4fba6fb0-e9cc-48b1-875c-a70e1a2dbc9b">consciousness</a></h2>
+<div class="outline-text-2" id="text-org9012c7c">
+<p>
+Dehaene et al. &#x2013; workspace theory of consciousness<br />
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p>Made with <span class="heart">♥</span> using
+<a href="https://orgmode.org/">org-mode</a>.
+Source code is available
+<a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<script src="popper.min.js"></script>
+<script src="tippy-bundle.umd.min.js"></script>
+<script src="tooltips.js" async></script>
+</div>
+</body>
+</html>

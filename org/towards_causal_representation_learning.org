@@ -1,0 +1,79 @@
+:PROPERTIES:
+:ID:       12dfdb1e-d4ed-476b-be04-98cae7a3deaf
+:END:
+#+title: Towards Causal Representation Learning
+
+Yoshua Bengio [[https://www.youtube.com/watch?v=rKZJ0TJWvTk][talk]].
+
+causal representation learning: the discovery of high-level causal variables from low-level observations.
+
+In practice, i.i.d. is a bad assumption. Things don't stay the same distribution as train. Current DL systems are brittle.
+
+But...what assumption can we replace it with, then?
+
+how does the brain break knowledge apart into "pieces" that can be reused? => [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][compositionality]] (thinking about decomp. in 106B.) Examples of compositionality include
+
+* Systematic Generalization
+Current DL methods overfit the training *distribution*. That is, if they encounter OOD data, they will perform poorly.
+** Conscious processing helps humans deal with OOD settings
+We are /agents/, and agents face a dynamic environment -- particularly because there are other agents! We want our knowledge to generalize across different places, times, input modalities, goals, etc.
+* System 1 vs. System 2
+*System 1*: Intuitive, fast, unconscious, parallel, non-linguistic, habitual
+*System 2*: Slow, logical, sequential, conscious, linguistic, algorithmic, planning, reasoning
+
+Current deep learning systems excel at [[id:1a22fb9c-9bc4-4943-9e33-9f08f62409f3][System 1]] -- they are fast, intuitive, but brittle. How can we incorporate more [[id:62eeec64-5a77-45d2-b386-54fed57e72e0][System 2]] to allow DL to /reason/ about the world?
+* Implicit vs. verbalizable knowledge
+Most of our knowledge is implicit, and not verbalizable. Same for neural networks.
+
+Verbalizable knowledge can be explicitly reasoned with, planned with.
+* Independent mechanisms
+:PROPERTIES:
+:ID:       ea661fe1-d0f4-4bf8-9678-0cbbe9f73fc5
+:END:
+Hypothesis: We can explain the world by the composition of informationally independent pieces/modules/mechanisms. (Note: not statistically independent, but independent s.t. any causal [[id:d68c5093-d6d6-43b8-a48d-629ade9293b6][intervention]] would affect just one such mechanism.)
+* Some System 2 inductive priors
+Sparse causal graph of high-level, semantically meaningful variables.
+#+ATTR_HTML: :alt Sparse factor graph.
+[[file:origin_image.png]]
+
+Semantic variables are /causal/: agents, intentions, controllable objects, for example.
+
+Changes in distribution are due to causal interventions (in the aforementioned high-level semantic space.) Provided we have the right abstractions, it would only take a few words to describe this change.
+
+Everything that's happening can be reported in simple language. (Interesting that this is an example of report/access consciousness.) Mapping from semantic variables <=> sentences
+
+"generic rules" of how things work are shared across instances -- need variables / functions / some form of indirection.
+
+Stability/robustness in [[id:3841138e-363a-4bc2-b1c4-f5abbf973a54][meaning]] (e.g. of laws of physics,) even with changes in distribution, vs. things that /do/ change. E.g.: early visual layers are stable after childhood. Later things like object recognition can be adapted to very quickly.
+
+Causal chains to explain things are short. (Interesting: connection to [[id:8fb8913e-bdd8-4ece-8386-2978b765d7bf][dissonance reduction]]: we like simple explanations of the world around us (possibly because it helps us streamline our cognition.))
+* What should the causal variables be?
+Position and momentum of every particle: computationally intractable.
+
+Take inspiration from scientists (and humans in general): we invent /high-level abstractions/ that make the causal structure of the world simpler.
+* Agency to Guide Representation Learning & Disentangling
+:PROPERTIES:
+:ID:       5b73a108-e867-4b92-9949-832840d52869
+:END:
+(E. Bengio et al, 2017; V Thomas e al 2017; Kim et al ICML 2019)
+
+Independent mechanisms: there are ways to modify a single object in the graph (e.g., you can move a chair ➡️🪑. )
+
+Way that we represent actions <=> objects: there's a bijection there.
+
+Connected to the psychological notion of [[id:0cebd56a-9669-4ff0-b93e-8e35d05a2d81][affordances]]: the way we understand objects is by the things we can do with them.
+* What causes changes in distribution?
+:PROPERTIES:
+:ID:       b4821df4-68e3-43b1-a4f1-c212f0b8d922
+:END:
+hypothesis to replace i.i.d. assumption: changes in distribution = consequence of an *intervention* on one/few *causes* /mechanisms. So, not identically distributed, but pretty similar, if you're in the right high-level [[id:c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff][representation]] space. (E.g. if you put shaded glasses on, all the pixels change in basic RGB space -- but in some high-level semantic space, only one bit changed!)
+* Causal induction from interventional data
+How to handle unknown [[id:d68c5093-d6d6-43b8-a48d-629ade9293b6][intervention]]? /infer/ it.
+* Thoughts, Consciousness, Language
+If we want better NLP/NLU, we need to ground language in higher-level concepts.
+
+/Grounded language learning/: BabyAI (2019)
+* Core ingredient for conscious processing: [[id:f2c20bd3-dbef-4da6-8e0c-4a95dce140bd][attention]]
+Attention enables us to make /dynamic/ connections to the various different "modules" in the brain. Creates competition between the modules for which deserves attention.
+* Attention to [[id:4fba6fb0-e9cc-48b1-875c-a70e1a2dbc9b][consciousness]]
+Dehaene et al. -- workspace theory of consciousness
