@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       058bef0b-aba6-4ac6-b4ae-b3c7b7e22040
 :END:
-#+TITLE: karabiner config
+#+TITLE: shortcuts
 #+AUTHOR: Ketan Agrawal
 #+OPTIONS: -:nil
 

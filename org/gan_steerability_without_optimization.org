@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       5d885191-6699-4e33-a5a6-19c642ad6647
+:ROAM_REFS: https://arxiv.org/abs/2012.05328
+:END:
+#+title: GAN "Steerability" without optimization

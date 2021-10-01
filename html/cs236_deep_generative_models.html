@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-09-30 Thu 21:28 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CS236: Deep Generative Models</title>
+<meta name="author" content="Ketan Agrawal" />
+<meta name="generator" content="Org Mode" />
+<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="preamble" class="status">
+<a style="color: inherit; text-decoration: none" href="/">
+<h2>Ketan's Digital Laboratory &#129514;</h2>
+</a>
+</div>
+<div id="content" class="content">
+<h1 class="title">CS236: Deep Generative Models</h1>
+
+<div id="outline-container-ID-99509c50-67ff-4b27-b719-4816f8e2ed89" class="outline-2">
+<h2 id="ID-99509c50-67ff-4b27-b719-4816f8e2ed89">Introduction</h2>
+<div class="outline-text-2" id="text-orge431bde">
+<p>
+Feynman: "What I cannot create, I do not understand"<br />
+<a href="generative_models.html#ID-94e740e0-9dbb-4f60-99e0-cb1f574fc46f">Generative modeling</a>: "What I understand, I can create"<br />
+</p>
+</div>
+<div id="outline-container-orgd1a572c" class="outline-3">
+<h3 id="orgd1a572c">How to generative natural images with a computer?</h3>
+<div class="outline-text-3" id="text-orgd1a572c">
+<p>
+Generation: High level description =&gt; raw sensory outputs<br />
+Inference: raw sensory outputs =&gt; high level description<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org442b0f4" class="outline-3">
+<h3 id="org442b0f4">Statistical Generative Models</h3>
+<div class="outline-text-3" id="text-org442b0f4">
+<p>
+are learned from data. (Priors are necessary, but not as strict as in Graphics)<br />
+</p>
+
+<p>
+Data = samples<br />
+Priors = parametric (e.g. Gaussian prior), loss function, optimization algo, etc.<br />
+</p>
+
+<p>
+Image \(x\) =&gt; [probability distribution \(p\)] =&gt; \(p(x)\)<br />
+</p>
+
+<p>
+Sampling from \(p\) produces realistic samples<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orga084fe3" class="outline-3">
+<h3 id="orga084fe3">Discriminative vs. generative</h3>
+<div class="outline-text-3" id="text-orga084fe3">
+<p>
+Discriminative model: input \(X\) is given. learns \(P(Y|X)\) (e.g., probability of bedroom given image)<br />
+</p>
+
+<p>
+<a href="generative_models.html#ID-94e740e0-9dbb-4f60-99e0-cb1f574fc46f">Generative model</a>: input \(X\) is not given. learns \(P(Y,X)\)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-ID-2710b5a3-1b64-4e34-883c-86f4b84575ec" class="outline-3">
+<h3 id="ID-2710b5a3-1b64-4e34-883c-86f4b84575ec">Conditional generative models</h3>
+<div class="outline-text-3" id="text-orgd40c415">
+<p>
+They blur the line between generative and discriminative, because they also condition on some input <a href="features.html#ID-a7203065-7321-4a95-adbe-d38f0d5159c8">features</a>.<br />
+</p>
+
+<p>
+\(P(X|Y=Bedroom)\)<br />
+</p>
+
+<p>
+Superresolution: p(high-res signal | low-res signal)<br />
+Inpainting: p(full image | mask)<br />
+Colorization: p(color image | greyscale)<br />
+Translation: p(English text | Chinese text)<br />
+Text-to-Image: p(image | caption)<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org91676e6" class="outline-2">
+<h2 id="org91676e6">Background</h2>
+<div class="outline-text-2" id="text-org91676e6">
+</div>
+<div id="outline-container-orga2f4646" class="outline-3">
+<h3 id="orga2f4646">What is a generative model?</h3>
+<div class="outline-text-3" id="text-orga2f4646">
+<p>
+We are given a dataset of examples, e.g. images of cats. \(P_{data}\) is the underlying distribution that generates the samples. We want to get a \(P_\theta\) that is pretty close to \(P_{data}\).  \(\theta\) is learned by a model, e.g. a neural net.<br />
+</p>
+
+<p>
+<b>Generation</b>: Then, if we sample \(x_{new} \sim p_{data}(x)\), it should look like a cat.<br />
+</p>
+
+<p>
+<b>Density estimation</b>: \(p(x)\) should be high if \(x\) looks like a dog, and low otherwise.<br />
+</p>
+
+<p>
+<b>Unsupervised</b>: We should be able to learn what cats have in common, e.g. ears, tail, etc. (features!)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org3db41a5" class="outline-3">
+<h3 id="org3db41a5">Structure through independence</h3>
+<div class="outline-text-3" id="text-org3db41a5">
+<p>
+Consider an input with several components \(X_1, ..., X_n\) (these could be pixels in an image.) If \(X_1, ..., X_n\) are independent, then<br />
+\(p\left(x_{1}, \ldots, x_{n}\right)=p\left(x_{1}\right) p\left(x_{2}\right) \cdots p\left(x_{n}\right)\)<br />
+</p>
+
+<p>
+However, this assumption is too strong &#x2013; oftentimes, components are highly correlated (like pixels in an image.)<br />
+</p>
+
+<p>
+Chain rule &#x2013; fully general, no assumption on the joint. but the conditionals toward the end become large and intractable. Way too many parameters.<br />
+\(p\left(S_{1} \cap S_{2} \cap \cdots \cap S_{n}\right)=p\left(S_{1}\right) p\left(S_{2} \mid S_{1}\right) \cdots p\left(S_{n} \mid S_{1} \cap \ldots \cap S_{n-1}\right)\)<br />
+</p>
+
+<p>
+Need a better simplifying assumption in the middle&#x2026;<br />
+</p>
+</div>
+<div id="outline-container-org08552f4" class="outline-4">
+<h4 id="org08552f4">Conditional independence assumption</h4>
+<div class="outline-text-4" id="text-org08552f4">
+<p>
+\(p(x_1)p(x_2|x_1)...p(x_n|x_{n-1})\)<br />
+</p>
+
+<p>
+Actually this is just a special case of Bayes network, where it's like a line of nodes<br />
+</p>
+
+<p>
+x<sub>1</sub> =&gt; x<sub>2</sub> =&gt; x<sub>3</sub> =&gt; x<sub>n</sub>-1 =&gt; x<sub>n</sub>.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgcc2ca17" class="outline-4">
+<h4 id="orgcc2ca17">Bayes Network / graphical models:</h4>
+<div class="outline-text-4" id="text-orgcc2ca17">
+<p>
+This is a directed acyclic graph with one node with each random variable, and one conditional probabiliy distribution per node.<br />
+each random variable depends on some parents<br />
+\(p\left(x_{1}, \ldots, x_{n}\right)=\prod_{i} p\left(x_{i} \mid x_{Pa_{i}}\right)\)<br />
+</p>
+
+<p>
+This implies conditional independences between variables that aren't direct parent-child, given their parents(?).<br />
+</p>
+
+<p>
+Use neural networks to represent the conditional distributions.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org1c05e99" class="outline-4">
+<h4 id="org1c05e99">Naive Bayes:</h4>
+<div class="outline-text-4" id="text-org1c05e99">
+<p>
+Assume that all the inputs are independent conditioned on y. (another special case of a Bayes net)<br />
+</p>
+
+<p>
+directly estimate the conditionals p(xi|y) from data. =&gt; use those + bayes rule to calc p(y|x)<br />
+\(p\left(y, x_{1}, \ldots x_{n}\right)=p(y) \prod_{i=1}^{n} p\left(x_{i} \mid y\right)\)<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e892f9" class="outline-3">
+<h3 id="org6e892f9">Discriminative vs. generative</h3>
+<div class="outline-text-3" id="text-org6e892f9">
+<p>
+p(y,x) = p(x|y)p(y) = p(y|x)p(x)<br />
+</p>
+
+<p>
+Generative: need to learn/specify both p(y), p(x|y)<br />
+Discriminative: just need to learn p(y|x) (X is always given)<br />
+</p>
+
+<p>
+Discriminative assumes that p(y|x;a) = f(x;a) (assumes that the probability distribution takes a certain functional form.)<br />
+</p>
+
+<p>
+E.g. logistic regression. Modeling p(y|x) as a linear combination of the inputs =&gt; squeeze with softmax. Decision boundaries are straight lines (assumption of logistic regression.) Logistic does not assume conditional independence like Naive Bayes does.<br />
+</p>
+
+<p>
+Using a conditional model is only possible when X is always observed. when some Xi are unobserved, the generative model allows us to compute p(Y|X<sub>evidence</sub>) by marginalizing over unseen.<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaabf6d6" class="outline-2">
+<h2 id="orgaabf6d6">Autoregressive Models</h2>
+<div class="outline-text-2" id="text-orgaabf6d6">
+<p>
+Bayes net with modeling assumptions:<br />
+</p>
+<ul class="org-ul">
+<li>model using chain rule (fully general)<br />
+\(p(x) = p(x_1)p(x_2|x_1)p(x_3|x_2)...p(x_n|x_{n-1})\)<br /></li>
+<li>assume the conditionals take functional form (e.g., a logistic regression)<br /></li>
+</ul>
+</div>
+
+<div id="outline-container-orgcb5b5ee" class="outline-3">
+<h3 id="orgcb5b5ee">Fully Visible Sigmoid Belief Network (FVSBN)</h3>
+</div>
+<div id="outline-container-org4379cc3" class="outline-3">
+<h3 id="org4379cc3">Neural Autoregressive Density Estimation (NADE)</h3>
+<div class="outline-text-3" id="text-org4379cc3">
+<p>
+simple: model as Bernoulli<br />
+more classes: model as Categorical<br />
+RNADE: continuous- model as mixture of Gaussians<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org5648919" class="outline-3">
+<h3 id="org5648919">Autoregressive Autoencoder: Masked Autoencoder for Distribution Estimation (MADE)</h3>
+<div class="outline-text-3" id="text-org5648919">
+<p>
+Use masks to disallow certain paths in an autoencoder to make it autoregressive.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgbd855eb" class="outline-3">
+<h3 id="orgbd855eb">RNNs</h3>
+</div>
+<div id="outline-container-orgdee4c9d" class="outline-3">
+<h3 id="orgdee4c9d">Transformers</h3>
+<div class="outline-text-3" id="text-orgdee4c9d">
+<p>
+masked self-attention preserves autoregressive structure.<br />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p>Made with <span class="heart">♥</span> using
+<a href="https://orgmode.org/">org-mode</a>.
+Source code is available
+<a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<script src="popper.min.js"></script>
+<script src="tippy-bundle.umd.min.js"></script>
+<script src="tooltips.js" async></script>
+</div>
+</body>
+</html>

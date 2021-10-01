@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-12 Sun 04:05 -->
+<!-- 2021-09-30 Thu 21:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>compositionality</title>
@@ -34,8 +34,8 @@ Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c87
 </p>
 
 
-<div id="org3b9d9e4" class="figure">
-<p><img src="decompoisition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
+<div id="org10cec08" class="figure">
+<p><img src="decomposition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
 </p>
 </div>
 
@@ -43,31 +43,65 @@ Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c87
 Some methodical activities, such as making breakfast, decompose well into modular activities as well:<br />
 </p>
 
-<div id="org4672c14" class="figure">
+<div id="org4142c56" class="figure">
 <p><img src="breakfast.png" alt="tree of the decomposition of making breakfast into &quot;make toast,&quot; &quot;make tea,&quot; etc." /><br />
 </p>
 </div>
 
 <p>
-Another example of compositionaity is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model's early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
+A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> example of compositionaity is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model's early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
 </p>
 
 
-<div id="org789eb34" class="figure">
+<div id="org40e92b8" class="figure">
 <p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
 </p>
 </div>
 
 
-<div id="outline-container-orgb1df667" class="outline-2 references">
-<h2 id="orgb1df667">Links to this node</h2>
-<div class="outline-text-2" id="text-orgb1df667">
+<div id="outline-container-org2feaff6" class="outline-2 references">
+<h2 id="org2feaff6">Links to this node</h2>
+<div class="outline-text-2" id="text-org2feaff6">
 </div>
-<div id="outline-container-org26af228" class="outline-3">
-<h3 id="org26af228"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
-<div class="outline-text-3" id="text-org26af228">
+<div id="outline-container-org90c69bf" class="outline-3">
+<h3 id="org90c69bf"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-org90c69bf">
 <p>
-how does the brain break knowledge apart into "pieces" that can be reused? =&gt; <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a> (thinking about decomp. in 106B.) Examples of compositionality include<br />
+This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdbcd8b9" class="outline-3">
+<h3 id="orgdbcd8b9"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
+<div class="outline-text-3" id="text-orgdbcd8b9">
+<p>
+how does the brain break knowledge apart into "pieces" that can be reused? =&gt; <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a> (thinking decomposition into helper functions in programming.) Examples of compositionality include<br />
+</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgbc0a726" class="outline-2 references">
+<h2 id="orgbc0a726">Links to this node</h2>
+<div class="outline-text-2" id="text-orgbc0a726">
+</div>
+<div id="outline-container-orgefcf7d0" class="outline-3">
+<h3 id="orgefcf7d0"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-orgefcf7d0">
+<p>
+This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7ea032" class="outline-3">
+<h3 id="orgb7ea032"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
+<div class="outline-text-3" id="text-orgb7ea032">
+<p>
+how does the brain break knowledge apart into "pieces" that can be reused? =&gt; <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a> (thinking decomposition into helper functions in programming.) Examples of compositionality include<br />
 </p>
 </div>
 </div>

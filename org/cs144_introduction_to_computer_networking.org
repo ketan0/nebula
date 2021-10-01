@@ -1,0 +1,148 @@
+:PROPERTIES:
+:ID:       9908ac8d-fadd-4fe6-a78c-c3471cc36ea1
+:END:
+#+title: CS144: Introduction to Computer Networking
+
+* How does the [[id:b9d2d383-63a8-456b-afd2-4ca51b1b8825][Internet]] work?
+:PROPERTIES:
+:ID:       d0406c1d-0467-415e-829c-0615fb54391c
+:END:
+** Datagrams
+:PROPERTIES:
+:ID:       7c02c940-2bc8-412e-b8c2-ab3b784ca07d
+:END:
+Datagrams (specific kinds of packets) contain the following elements:
+
+To address of a node (fully specified)
+text (~1 KB)
+From address of a node (fully specified)
+*** The Internet is a system that tries its best to deliver datagrams.
+[my program] <- [someone else's program]
+
+Everything is built on top of the abstraction of datagrams.
+*** Things that could happen to datagrams:
+1) Delivered quickly
+2) Delivered, corrupted text
+3) Delivered, tampered text
+4) Delivered really late
+5) Delivered to/from wrong address
+6) Never delivered
+7) Delivered multiple times
+** How data finds its way across the internet
+| Data | IP address |
+** Internet addresses (IP addresses)
+Every computer is given an address that's 32 bits* long.
+
+*Problem: only $2^{32}$ = ~4 billion addresses in ipv4, which we have essentially run out of. Thus, ipv6 addresses were created that are 128 bits long.
+
+E.g. the IP address =104.196.238.229= simply represents a 32-bit number, separated into each of its 4 bytes.
+
+#+begin_src python :results output
+print('{0:b}'.format((104 << 24) + (196 << 16) + (238 << 8) + 229))
+#+end_src
+
+#+RESULTS:
+: 1101000110001001110111011100101
+
+Here's =127.0.0.1=, aka =localhost=, in binary:
+#+begin_src python :results output
+print('{0:b}'.format((127 << 24) + (0 << 16) + (0 << 8) + 1))
+#+end_src
+
+#+RESULTS:
+: 1111111000000000000000000000001
+** Routers
+Routers forward packets *one at a time*. They look at IP addresses, and then send the packets to a router closer to the destination.
+** We can see the path our packets take.
+#+begin_src bash
+ping yuba.stanford.edu -t 10
+#+end_src
+
+#+RESULTS:
+|       PING | yuba.stanford.edu  | (171.64.74.58): |                         56 | data       | bytes     |             |        |      |
+|         64 | bytes              | from            |              171.64.74.58: | icmp_seq=0 | ttl=61    | time=2.468  | ms     |      |
+|         64 | bytes              | from            |              171.64.74.58: | icmp_seq=1 | ttl=61    | time=2.198  | ms     |      |
+|         64 | bytes              | from            |              171.64.74.58: | icmp_seq=2 | ttl=61    | time=11.663 | ms     |      |
+|         64 | bytes              | from            |              171.64.74.58: | icmp_seq=3 | ttl=61    | time=2.891  | ms     |      |
+|         64 | bytes              | from            |              171.64.74.58: | icmp_seq=4 | ttl=61    | time=2.819  | ms     |      |
+|         64 | bytes              | from            |              171.64.74.58: | icmp_seq=5 | ttl=61    | time=13.421 | ms     |      |
+|         64 | bytes              | from            |              171.64.74.58: | icmp_seq=6 | ttl=61    | time=2.931  | ms     |      |
+|         64 | bytes              | from            |              171.64.74.58: | icmp_seq=7 | ttl=61    | time=26.903 | ms     |      |
+|         64 | bytes              | from            |              171.64.74.58: | icmp_seq=8 | ttl=61    | time=2.779  | ms     |      |
+|         64 | bytes              | from            |              171.64.74.58: | icmp_seq=9 | ttl=61    | time=33.740 | ms     |      |
+|            |                    |                 |                            |            |           |             |        |      |
+|        --- | yuba.stanford.edu  | ping            |                 statistics | ---        |           |             |        |      |
+|         10 | packets            | transmitted,    |                         10 | packets    | received, | 0.0%        | packet | loss |
+| round-trip | min/avg/max/stddev | =               | 2.198/10.181/33.740/10.887 | ms         |           |             |        |      |
+
+TTL: time to live -- how long the packet has to reach its destination. if it expires, look at the FROM address, and tell the sender
+** Levels of abstraction we'll build:
+Network stack:
+wave packet =[ network interface ]=> datagrams =[ Transmission Control Protocol ]=> Byte stream =[ HTTP ]=> request/response
+
+The modularity of the stack is quite elegant/nice: there have been innovations at each layer, that don't affect the functionality of any of the other layers. You can also insert other layers, e.g. TLS layer that encrypts the byte stream. Proxies work at the HTTP level by forwarding everything through a proxy server, VPNs work at the datagram level (wrap a datagram in another datagram.)
+* Reliability (from unreliability)
+** What the Internet provides
+The Internet provides best-effort delivery of datagrams, up to ~1.5KB.
+
+"best-effort" means the datagram might be:
+- lost completely
+- delivered more than once, out of order
+- delivered with some bytes changed
+- delivered but truncated.
+** What most users/applications want
+Users want reliability -- reliable retrieval of data, reliable action, reliable byte stream, reliable delivery of a large file, reliable remote procedure call
+** Reliability
+A module behaves *reliably* when it:
+- Provides some abstraction/interface
+- Even in the face of underlying faults
+- When it can't do that, it signals failure
+** Big question: how to provide these abstractions reliably on top of an unreliable system?
+We want to do *idempotent* operations; i.e. operations that have the same effect in the world, even if called multiple times / out of order.
+
+Byte stream 0..2 = "A B C"
+Byte stream 3..5 = "D E F"
+Byte stream ended at ...
+
+^idempotent operations.
+* Internet Protocols
+They're usually written in kernel space -- payload is determined by the application / user.
+** Example Internet [[id:7c02c940-2bc8-412e-b8c2-ab3b784ca07d][Datagram]] Header
+The header is usually 24 bytes (well, no one uses the =Options= field, so 20 bytes.)
+
+Everything in the internet is built on top of the datagram abstraction.
+#+begin_example
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |Version|  IHL  |Type of Service|          Total Length         |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |         Identification        |Flags|      Fragment Offset    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |  Time to Live |    Protocol   |         Header Checksum       |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                       Source Address                          |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Destination Address                        |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Options                    |    Padding    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#+end_example
+** Multiplexing
+Put something special, "User Datagram Protocol" (UDP) in the =Protocol= field of the datagram header -- then put additional stuff specifying the protocol in the message.
+* Name to Number to Name (DNS lookup)
+Have to ask Domain Name Servers.
+
+Internet Datagram contains User Datagram. User Datagram contains Domain Name System lookup / response
+
+How do names get assigned? There's a hierarchy, starting from the top-level domain (TLD.) Can lookup the domain name through this recursive process (but more local servers cache it.)
+* TCP
+the two connectors to the byte stream are peers.
+
+"window" of acceptable sequence numbers. (ohhhh wait that's how we can do it. Just store another circular array, lol. then there's no merging step -- just overwrite into the array, and move the head and tail.)
+
+Mechanisms in TCP that can combat the bad aspects of datagrams:
+corruption -- checksum
+lost -- ttl
+more than once -- idempotence
+order -- index

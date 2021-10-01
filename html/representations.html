@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-12 Sun 04:05 -->
+<!-- 2021-09-30 Thu 21:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>representations</title>
@@ -16,6 +16,27 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -37,6 +58,38 @@
 <ul class="org-ul">
 <li>Do we have <a href="free_will.html#ID-ed67aff3-34f7-461e-adc0-37d3fbb2a890">free will</a> / agency? Are we just subservient to a deterministic universe? Or both??   #+ATTR<sub>HTML</sub>: :alt A glider gun in Conway's Game of Life.   <img src="glider_gun.gif" alt="glider_gun.gif" /> - How does the <a href="mind.html#ID-162fdcaf-3b7f-4521-a4d2-9db33b231b4a">mind</a> work? What do our mental <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representations</a> of the outside world look like? - mind-body - science - <a href="life_philosophy.html#ID-bc3b4ee4-b1b4-4b1c-a44b-c5785c5cafe5">life philosophy</a><br /></li>
 </ul>
+</div>
+</div>
+
+<div id="outline-container-org854b451" class="outline-3">
+<h3 id="org854b451"><a href="cs224w_machine_learning_with_graphs.html#ID-a7eb4461-0b3d-4b47-9d84-115866589ddc">CS224W: Machine Learning with Graphs</a></h3>
+<div class="outline-text-3" id="text-org854b451">
+</div>
+<div id="outline-container-org51403c1" class="outline-4">
+<h4 id="org51403c1">(<i>Introduction &gt; Why Graphs?</i>)</h4>
+<div class="outline-text-4" id="text-org51403c1">
+<p>
+<a href="graphs.html#ID-5705ba04-b296-4446-824b-3551d7bd8a09">Graphs</a> are a general language for describing and analyzing entities with relationships/interactions. Many domains have a natural relational structure, that lends themselves to a graph <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a>:<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga560e6b" class="outline-3">
+<h3 id="orga560e6b"><a href="cs224w_machine_learning_with_graphs.html#ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c">Graph Representations</a></h3>
+<div class="outline-text-3" id="text-orga560e6b">
+<p>
+A few different traditional graph representations we can use.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org735d9c5" class="outline-3">
+<h3 id="org735d9c5"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-org735d9c5">
+<p>
+We have images \(\mathbf{x}\), and labels \(y\). In generative modeling, it's common to assume that each \(\mathbf{x}\) can be described by some lower-dimensional latent space \(\mathbf{z}\) (e.g. color, shape, etc.) We'd like this latent <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> to be disentangled into several separate, semenatically meaningful factors, so we can control the influence of each on the classifier's decision. Usually in disentangled modeling, these factors are assumed to be statistically independent&#x2013; however, in practice this is a poor assumption. One rather contrived example is found in the colored MNIST dataset:<br />
+</p>
 </div>
 </div>
 

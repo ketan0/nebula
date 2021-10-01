@@ -102,24 +102,19 @@ for i in range(5,0,-1):
 Whoa. This would certainly make using matplotlib a lot easier.
 #+begin_src python :results output
 """
-1. Plot the function `30cos(x) + 2x^2` using purple triangles for the markers.
-2. Save the figure.
+print the date in 100 days.
 """
 
-#%%
-import matplotlib.pyplot as plt
-import numpy as np
+from datetime import datetime, timedelta
 
-x = np.linspace(-2*np.pi, 2*np.pi, 100)
-y = 30*np.cos(x) + 2*x**2
+now = datetime.now()
+delta = timedelta(days=100)
+print(now + delta)
 
-plt.plot(x, y, 'purple', marker='^', linestyle='--')
-plt.savefig('my_plot.png')
-
-#%%
 #+end_src
 
 #+RESULTS:
+: 2021-12-31 12:08:53.843912
 
 [[file:my_plot.png]]
 

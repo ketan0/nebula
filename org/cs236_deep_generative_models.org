@@ -1,0 +1,105 @@
+:PROPERTIES:
+:ID:       c7f6a833-25e3-4fe0-b506-82ebd2819e87
+:END:
+#+title: CS236: Deep Generative Models
+
+* Introduction
+:PROPERTIES:
+:ID:       99509c50-67ff-4b27-b719-4816f8e2ed89
+:END:
+Feynman: "What I cannot create, I do not understand"
+[[id:94e740e0-9dbb-4f60-99e0-cb1f574fc46f][Generative modeling]]: "What I understand, I can create"
+** How to generative natural images with a computer?
+Generation: High level description => raw sensory outputs
+Inference: raw sensory outputs => high level description
+** Statistical Generative Models
+are learned from data. (Priors are necessary, but not as strict as in Graphics)
+
+Data = samples
+Priors = parametric (e.g. Gaussian prior), loss function, optimization algo, etc.
+
+Image $x$ => [probability distribution \(p\)] => $p(x)$
+
+Sampling from $p$ produces realistic samples
+** Discriminative vs. generative
+Discriminative model: input $X$ is given. learns $P(Y|X)$ (e.g., probability of bedroom given image)
+
+[[id:94e740e0-9dbb-4f60-99e0-cb1f574fc46f][Generative model]]: input $X$ is not given. learns $P(Y,X)$
+** Conditional generative models
+:PROPERTIES:
+:ID:       2710b5a3-1b64-4e34-883c-86f4b84575ec
+:END:
+They blur the line between generative and discriminative, because they also condition on some input [[id:a7203065-7321-4a95-adbe-d38f0d5159c8][features]].
+
+$P(X|Y=Bedroom)$
+
+Superresolution: p(high-res signal | low-res signal)
+Inpainting: p(full image | mask)
+Colorization: p(color image | greyscale)
+Translation: p(English text | Chinese text)
+Text-to-Image: p(image | caption)
+* Background
+** What is a generative model?
+We are given a dataset of examples, e.g. images of cats. $P_{data}$ is the underlying distribution that generates the samples. We want to get a $P_\theta$ that is pretty close to $P_{data}$.  $\theta$ is learned by a model, e.g. a neural net.
+
+*Generation*: Then, if we sample $x_{new} \sim p_{data}(x)$, it should look like a cat.
+
+*Density estimation*: $p(x)$ should be high if $x$ looks like a dog, and low otherwise.
+
+*Unsupervised*: We should be able to learn what cats have in common, e.g. ears, tail, etc. (features!)
+** Structure through independence
+Consider an input with several components $X_1, ..., X_n$ (these could be pixels in an image.) If $X_1, ..., X_n$ are independent, then
+$p\left(x_{1}, \ldots, x_{n}\right)=p\left(x_{1}\right) p\left(x_{2}\right) \cdots p\left(x_{n}\right)$
+
+However, this assumption is too strong -- oftentimes, components are highly correlated (like pixels in an image.)
+
+Chain rule -- fully general, no assumption on the joint. but the conditionals toward the end become large and intractable. Way too many parameters.
+$p\left(S_{1} \cap S_{2} \cap \cdots \cap S_{n}\right)=p\left(S_{1}\right) p\left(S_{2} \mid S_{1}\right) \cdots p\left(S_{n} \mid S_{1} \cap \ldots \cap S_{n-1}\right)$
+
+Need a better simplifying assumption in the middle...
+*** Conditional independence assumption
+$p(x_1)p(x_2|x_1)...p(x_n|x_{n-1})$
+
+Actually this is just a special case of Bayes network, where it's like a line of nodes
+
+x_1 => x_2 => x_3 => x_n-1 => x_n.
+*** Bayes Network / graphical models:
+This is a directed acyclic graph with one node with each random variable, and one conditional probabiliy distribution per node.
+each random variable depends on some parents
+$p\left(x_{1}, \ldots, x_{n}\right)=\prod_{i} p\left(x_{i} \mid x_{Pa_{i}}\right)$
+
+This implies conditional independences between variables that aren't direct parent-child, given their parents(?).
+
+Use neural networks to represent the conditional distributions.
+*** Naive Bayes:
+Assume that all the inputs are independent conditioned on y. (another special case of a Bayes net)
+
+directly estimate the conditionals p(xi|y) from data. => use those + bayes rule to calc p(y|x)
+$p\left(y, x_{1}, \ldots x_{n}\right)=p(y) \prod_{i=1}^{n} p\left(x_{i} \mid y\right)$
+** Discriminative vs. generative
+p(y,x) = p(x|y)p(y) = p(y|x)p(x)
+
+Generative: need to learn/specify both p(y), p(x|y)
+Discriminative: just need to learn p(y|x) (X is always given)
+
+Discriminative assumes that p(y|x;a) = f(x;a) (assumes that the probability distribution takes a certain functional form.)
+
+E.g. logistic regression. Modeling p(y|x) as a linear combination of the inputs => squeeze with softmax. Decision boundaries are straight lines (assumption of logistic regression.) Logistic does not assume conditional independence like Naive Bayes does.
+
+Using a conditional model is only possible when X is always observed. when some Xi are unobserved, the generative model allows us to compute p(Y|X_evidence) by marginalizing over unseen.
+* Autoregressive Models
+Bayes net with modeling assumptions:
+- model using chain rule (fully general)
+  $p(x) = p(x_1)p(x_2|x_1)p(x_3|x_2)...p(x_n|x_{n-1})$
+- assume the conditionals take functional form (e.g., a logistic regression)
+
+** Fully Visible Sigmoid Belief Network (FVSBN)
+** Neural Autoregressive Density Estimation (NADE)
+simple: model as Bernoulli
+more classes: model as Categorical
+RNADE: continuous- model as mixture of Gaussians
+** Autoregressive Autoencoder: Masked Autoencoder for Distribution Estimation (MADE)
+Use masks to disallow certain paths in an autoencoder to make it autoregressive.
+** RNNs
+** Transformers
+masked self-attention preserves autoregressive structure.

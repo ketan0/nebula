@@ -64,21 +64,22 @@ Tendency to want to verify our pre-existing beliefs.
 kids whose teachers thought the kids were "late bloomers" -- it actually came true.
 
 Side note: whoa. Intuitively I feel like (and I'm of course enjoying that sweet confirmation bias) but it confirms my intuitions -- in cases where I've set high, clear expectations for myself, I've achieved them.
-** [[file:20210627180445-self_fulfilling_prophecy.org][Self-fulfilling prophecy]]
+** Self-fulfilling prophecy
 You have expectations about someone => you behave accordingly towards them => they behave just how you expected => reinforces your expectations...
 
-This seems like a kind of [[file:20210626152258-positive_feedback_loop.org][positive feedback loop]] that can either go really well, or really badly. Parents have a huge role in establishing expectations for their children. (As a first-born, I know this firsthand 😅)
+This seems like a kind of positive feedback loop that can either go really well, or really badly. Parents have a huge role in establishing expectations for their children. (As a first-born, I know this firsthand 😅)
+
 * Cognitive Biases: [[id:8fb8913e-bdd8-4ece-8386-2978b765d7bf][cognitive dissonance]] theory
 :PROPERTIES:
 :ID:       e7bba662-df57-4a87-a813-c2686d680dda
 :END:
 Cognitive Dissonance Theory:
 - cognitive dissonance :: holding apparently incompatible / logically inconsistent thoughts about the world.
-** How to resolve dissonance between A and B?
-You can *disregard* one.
+** How to resolve dissonance between beliefs A and B?
+You can *disregard* one belief.
 You can *change* your belief in one.
-You can *distort* one.
-You can *add* C that resolves the conflict.
+You can *distort* one belief.
+You can *add* belief C that resolves the conflict.
 
 Which one to choose? Will probably go with the path of least resistance.
 
@@ -93,13 +94,13 @@ Bad: it loses the inherent complexity / ambiguity in the world.
 A foolish consistency is the hobgoblin of little minds. - Ralph Waldo Emerson
 #+end_quote
 ** Motivated reasoning is a key element in cognitive dissonance.
-Severity of initiation: we have a deep-seated belief that we're not gullible etc. Motivated reasoning leads us to believe that the task was actually interesting, rather than that we're just gullible.
+/Severity of initiation/: people seem to like organizations with sever initiation rituals, e.g. frats with extreme hazing. The reason is that we have a deep-seated belief that we're not gullible, so motivated reasoning leads us to conclude the initiation task was interesting / the organization is of value, rather than (more accuractely) concluding that we're just gullible.
 ** Behavior precedes thought
 Spreading of alternatives: we post-hoc try to "justify" our decisions in life to ourselves.
 
-Cognitive Behavioral Therapy: change behaviors in people's lives to change their psychology positively.
+Cognitive Behavioral Therapy: change behaviors in people's lives to change their perception of themselves positively.
 
-Don't /think/ like you're the person you want to be, /act/ the way you want to be and become that person.
+Don't /think/ like you're the person you want to be, /act/ the way you want to be and become that person. Then, you will convince yourself that you are that person.
 * TODO Cognitive Biases: attribution
 :PROPERTIES:
 :ID:       400c2def-0d0e-40b3-ad7d-efaf745c5937

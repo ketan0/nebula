@@ -2,8 +2,11 @@
 :ID:       12dfdb1e-d4ed-476b-be04-98cae7a3deaf
 :END:
 #+title: Towards Causal Representation Learning
+#+cite_export: csl ~/Zotero/styles/apa.csl
 
-Yoshua Bengio [[https://www.youtube.com/watch?v=rKZJ0TJWvTk][talk]].
+[cite:@scholkopfCausalRepresentationLearning2021]
+
+Yoshua Bengio [[https://www.youtube.com/watch?v=rKZJ0TJWvTk][talk]]. Also, the associated [[https://arxiv.org/abs/2102.11107][paper]].
 
 causal representation learning: the discovery of high-level causal variables from low-level observations.
 
@@ -11,7 +14,7 @@ In practice, i.i.d. is a bad assumption. Things don't stay the same distribution
 
 But...what assumption can we replace it with, then?
 
-how does the brain break knowledge apart into "pieces" that can be reused? => [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][compositionality]] (thinking about decomp. in 106B.) Examples of compositionality include
+how does the brain break knowledge apart into "pieces" that can be reused? => [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][compositionality]] (thinking decomposition into helper functions in programming.) Examples of compositionality include
 
 * Systematic Generalization
 Current DL methods overfit the training *distribution*. That is, if they encounter OOD data, they will perform poorly.
@@ -73,7 +76,13 @@ How to handle unknown [[id:d68c5093-d6d6-43b8-a48d-629ade9293b6][intervention]]?
 If we want better NLP/NLU, we need to ground language in higher-level concepts.
 
 /Grounded language learning/: BabyAI (2019)
-* Core ingredient for conscious processing: [[id:f2c20bd3-dbef-4da6-8e0c-4a95dce140bd][attention]]
+* Core ingredient for conscious processing: [[id:2e1955ad-af09-4bcd-8b8d-4a0838e96365][attention]]
 Attention enables us to make /dynamic/ connections to the various different "modules" in the brain. Creates competition between the modules for which deserves attention.
-* Attention to [[id:4fba6fb0-e9cc-48b1-875c-a70e1a2dbc9b][consciousness]]
+* Going from attention to [[id:4fba6fb0-e9cc-48b1-875c-a70e1a2dbc9b][consciousness]]
+:PROPERTIES:
+:ID:       899d0e14-02e5-4858-8f71-8e61e9f59ffa
+:END:
 Dehaene et al. -- workspace theory of consciousness
+
+* Bibliography
+#+print_bibliography:

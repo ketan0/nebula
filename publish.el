@@ -16,6 +16,7 @@
   (load (expand-file-name "core/core.el" user-emacs-directory) nil t)
   (require 'core-cli)
   (doom-initialize)
+  (load (expand-file-name "core/core-ui.el" user-emacs-directory) nil t)
   (load-theme 'doom-opera-light t))
 
 (require 'find-lisp)
@@ -26,6 +27,7 @@
 (require 'org-roam)
 (require 'ox-publish)
 (require 'ox-html)
+(require 'oc-csl)
 
 (setq org-babel-default-header-args
   (cons '(:exports . "both") ;; export code and results by default

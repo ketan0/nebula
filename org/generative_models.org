@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       94e740e0-9dbb-4f60-99e0-cb1f574fc46f
+:END:
+#+title: Generative models

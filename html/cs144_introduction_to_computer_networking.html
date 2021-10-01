@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-09-30 Thu 21:28 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CS144: Introduction to Computer Networking</title>
+<meta name="author" content="Ketan Agrawal" />
+<meta name="generator" content="Org Mode" />
+<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="preamble" class="status">
+<a style="color: inherit; text-decoration: none" href="/">
+<h2>Ketan's Digital Laboratory &#129514;</h2>
+</a>
+</div>
+<div id="content" class="content">
+<h1 class="title">CS144: Introduction to Computer Networking</h1>
+
+<div id="outline-container-ID-d0406c1d-0467-415e-829c-0615fb54391c" class="outline-2">
+<h2 id="ID-d0406c1d-0467-415e-829c-0615fb54391c">How does the <a href="internet.html#ID-b9d2d383-63a8-456b-afd2-4ca51b1b8825">Internet</a> work?</h2>
+<div class="outline-text-2" id="text-org143d813">
+</div>
+<div id="outline-container-ID-7c02c940-2bc8-412e-b8c2-ab3b784ca07d" class="outline-3">
+<h3 id="ID-7c02c940-2bc8-412e-b8c2-ab3b784ca07d">Datagrams</h3>
+<div class="outline-text-3" id="text-org9ebba76">
+<p>
+Datagrams (specific kinds of packets) contain the following elements:<br />
+</p>
+
+<p>
+To address of a node (fully specified)<br />
+text (~1 KB)<br />
+From address of a node (fully specified)<br />
+</p>
+</div>
+<div id="outline-container-orga14c207" class="outline-4">
+<h4 id="orga14c207">The Internet is a system that tries its best to deliver datagrams.</h4>
+<div class="outline-text-4" id="text-orga14c207">
+<p>
+[my program] &lt;- [someone else's program]<br />
+</p>
+
+<p>
+Everything is built on top of the abstraction of datagrams.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org80b9f7f" class="outline-4">
+<h4 id="org80b9f7f">Things that could happen to datagrams:</h4>
+<div class="outline-text-4" id="text-org80b9f7f">
+<ol class="org-ol">
+<li>Delivered quickly<br /></li>
+<li>Delivered, corrupted text<br /></li>
+<li>Delivered, tampered text<br /></li>
+<li>Delivered really late<br /></li>
+<li>Delivered to/from wrong address<br /></li>
+<li>Never delivered<br /></li>
+<li>Delivered multiple times<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8a08400" class="outline-4 references">
+<h4 id="org8a08400">Links to this node</h4>
+<div class="outline-text-4" id="text-org8a08400">
+</div>
+<ul class="org-ul">
+<li><a id="orgd936989"></a><a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">CS144: Introduction to Computer Networking</a><br />
+<ul class="org-ul">
+<li><a id="orgbdcc1f1"></a>(<i>Internet Protocols &gt; Example Internet Datagram Header</i>)<br />
+<div class="outline-text-6" id="text-orgbdcc1f1">
+<p>
+The header is usually 24 bytes (well, no one uses the <code>Options</code> field, so 20 bytes.)  Everything in the internet is built on top of the datagram abstraction. #+begin<sub>example</sub>     0                   1                   2                   3     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1    <del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-+    |Version|  IHL  |Type of Service|          Total Length         |    <del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-+    |         Identification        |Flags|      Fragment Offset    |    <del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-+    |  Time to Live |    Protocol   |         Header Checksum       |    <del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-+    |                       Source Address                          |    <del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-+    |                    Destination Address                        |    <del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-+    |                    Options                    |    Padding    |    <del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-<del>-</del>-+ #+end<sub>example</sub><br />
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgff5b8f2" class="outline-3">
+<h3 id="orgff5b8f2">How data finds its way across the internet</h3>
+<div class="outline-text-3" id="text-orgff5b8f2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Data</td>
+<td class="org-left">IP address</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org80eec4b" class="outline-3">
+<h3 id="org80eec4b">Internet addresses (IP addresses)</h3>
+<div class="outline-text-3" id="text-org80eec4b">
+<p>
+Every computer is given an address that's 32 bits* long.<br />
+</p>
+
+<p>
+*Problem: only \(2^{32}\) = ~4 billion addresses in ipv4, which we have essentially run out of. Thus, ipv6 addresses were created that are 128 bits long.<br />
+</p>
+
+<p>
+E.g. the IP address <code>104.196.238.229</code> simply represents a 32-bit number, separated into each of its 4 bytes.<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-keyword">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">104</span> &lt;&lt; <span class="org-highlight-numbers-number">24</span>) + (<span class="org-highlight-numbers-number">196</span> &lt;&lt; <span class="org-highlight-numbers-number">16</span>) + (<span class="org-highlight-numbers-number">238</span> &lt;&lt; <span class="org-highlight-numbers-number">8</span>) + <span class="org-highlight-numbers-number">229</span>))
+</pre>
+</div>
+
+<pre class="example">
+1101000110001001110111011100101
+</pre>
+
+
+<p>
+Here's <code>127.0.0.1</code>, aka <code>localhost</code>, in binary:<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-keyword">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">127</span> &lt;&lt; <span class="org-highlight-numbers-number">24</span>) + (<span class="org-highlight-numbers-number">0</span> &lt;&lt; <span class="org-highlight-numbers-number">16</span>) + (<span class="org-highlight-numbers-number">0</span> &lt;&lt; <span class="org-highlight-numbers-number">8</span>) + <span class="org-highlight-numbers-number">1</span>))
+</pre>
+</div>
+
+<pre class="example">
+1111111000000000000000000000001
+</pre>
+</div>
+</div>
+<div id="outline-container-org12a209f" class="outline-3">
+<h3 id="org12a209f">Routers</h3>
+<div class="outline-text-3" id="text-org12a209f">
+<p>
+Routers forward packets <b>one at a time</b>. They look at IP addresses, and then send the packets to a router closer to the destination.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org46abd8e" class="outline-3">
+<h3 id="org46abd8e">We can see the path our packets take.</h3>
+<div class="outline-text-3" id="text-org46abd8e">
+<div class="org-src-container">
+<pre class="src src-bash" data-language="bash">ping yuba.stanford.edu -t <span class="org-highlight-numbers-number">10</span>
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">PING</td>
+<td class="org-left">yuba.stanford.edu</td>
+<td class="org-left">(171.64.74.58):</td>
+<td class="org-right">56</td>
+<td class="org-left">data</td>
+<td class="org-left">bytes</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">bytes</td>
+<td class="org-left">from</td>
+<td class="org-right">171.64.74.58:</td>
+<td class="org-left">icmp<sub>seq</sub>=0</td>
+<td class="org-left">ttl=61</td>
+<td class="org-left">time=2.468</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">bytes</td>
+<td class="org-left">from</td>
+<td class="org-right">171.64.74.58:</td>
+<td class="org-left">icmp<sub>seq</sub>=1</td>
+<td class="org-left">ttl=61</td>
+<td class="org-left">time=2.198</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">bytes</td>
+<td class="org-left">from</td>
+<td class="org-right">171.64.74.58:</td>
+<td class="org-left">icmp<sub>seq</sub>=2</td>
+<td class="org-left">ttl=61</td>
+<td class="org-left">time=11.663</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">bytes</td>
+<td class="org-left">from</td>
+<td class="org-right">171.64.74.58:</td>
+<td class="org-left">icmp<sub>seq</sub>=3</td>
+<td class="org-left">ttl=61</td>
+<td class="org-left">time=2.891</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">bytes</td>
+<td class="org-left">from</td>
+<td class="org-right">171.64.74.58:</td>
+<td class="org-left">icmp<sub>seq</sub>=4</td>
+<td class="org-left">ttl=61</td>
+<td class="org-left">time=2.819</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">bytes</td>
+<td class="org-left">from</td>
+<td class="org-right">171.64.74.58:</td>
+<td class="org-left">icmp<sub>seq</sub>=5</td>
+<td class="org-left">ttl=61</td>
+<td class="org-left">time=13.421</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">bytes</td>
+<td class="org-left">from</td>
+<td class="org-right">171.64.74.58:</td>
+<td class="org-left">icmp<sub>seq</sub>=6</td>
+<td class="org-left">ttl=61</td>
+<td class="org-left">time=2.931</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">bytes</td>
+<td class="org-left">from</td>
+<td class="org-right">171.64.74.58:</td>
+<td class="org-left">icmp<sub>seq</sub>=7</td>
+<td class="org-left">ttl=61</td>
+<td class="org-left">time=26.903</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">bytes</td>
+<td class="org-left">from</td>
+<td class="org-right">171.64.74.58:</td>
+<td class="org-left">icmp<sub>seq</sub>=8</td>
+<td class="org-left">ttl=61</td>
+<td class="org-left">time=2.779</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">bytes</td>
+<td class="org-left">from</td>
+<td class="org-right">171.64.74.58:</td>
+<td class="org-left">icmp<sub>seq</sub>=9</td>
+<td class="org-left">ttl=61</td>
+<td class="org-left">time=33.740</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">---</td>
+<td class="org-left">yuba.stanford.edu</td>
+<td class="org-left">ping</td>
+<td class="org-right">statistics</td>
+<td class="org-left">---</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">packets</td>
+<td class="org-left">transmitted,</td>
+<td class="org-right">10</td>
+<td class="org-left">packets</td>
+<td class="org-left">received,</td>
+<td class="org-left">0.0%</td>
+<td class="org-left">packet</td>
+<td class="org-left">loss</td>
+</tr>
+
+<tr>
+<td class="org-right">round-trip</td>
+<td class="org-left">min/avg/max/stddev</td>
+<td class="org-left">=</td>
+<td class="org-right">2.198/10.181/33.740/10.887</td>
+<td class="org-left">ms</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+TTL: time to live &#x2013; how long the packet has to reach its destination. if it expires, look at the FROM address, and tell the sender<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org30ed945" class="outline-3">
+<h3 id="org30ed945">Levels of abstraction we'll build:</h3>
+<div class="outline-text-3" id="text-org30ed945">
+<p>
+Network stack:<br />
+wave packet =[ network interface ]=&gt; datagrams =[ Transmission Control Protocol ]=&gt; Byte stream =[ HTTP ]=&gt; request/response<br />
+</p>
+
+<p>
+The modularity of the stack is quite elegant/nice: there have been innovations at each layer, that don't affect the functionality of any of the other layers. You can also insert other layers, e.g. TLS layer that encrypts the byte stream. Proxies work at the HTTP level by forwarding everything through a proxy server, VPNs work at the datagram level (wrap a datagram in another datagram.)<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge894e2b" class="outline-2">
+<h2 id="orge894e2b">Reliability (from unreliability)</h2>
+<div class="outline-text-2" id="text-orge894e2b">
+</div>
+<div id="outline-container-org5b43ccf" class="outline-3">
+<h3 id="org5b43ccf">What the Internet provides</h3>
+<div class="outline-text-3" id="text-org5b43ccf">
+<p>
+The Internet provides best-effort delivery of datagrams, up to ~1.5KB.<br />
+</p>
+
+<p>
+"best-effort" means the datagram might be:<br />
+</p>
+<ul class="org-ul">
+<li>lost completely<br /></li>
+<li>delivered more than once, out of order<br /></li>
+<li>delivered with some bytes changed<br /></li>
+<li>delivered but truncated.<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgace2756" class="outline-3">
+<h3 id="orgace2756">What most users/applications want</h3>
+<div class="outline-text-3" id="text-orgace2756">
+<p>
+Users want reliability &#x2013; reliable retrieval of data, reliable action, reliable byte stream, reliable delivery of a large file, reliable remote procedure call<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7fcc54" class="outline-3">
+<h3 id="orgc7fcc54">Reliability</h3>
+<div class="outline-text-3" id="text-orgc7fcc54">
+<p>
+A module behaves <b>reliably</b> when it:<br />
+</p>
+<ul class="org-ul">
+<li>Provides some abstraction/interface<br /></li>
+<li>Even in the face of underlying faults<br /></li>
+<li>When it can't do that, it signals failure<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0dd930e" class="outline-3">
+<h3 id="org0dd930e">Big question: how to provide these abstractions reliably on top of an unreliable system?</h3>
+<div class="outline-text-3" id="text-org0dd930e">
+<p>
+We want to do <b>idempotent</b> operations; i.e. operations that have the same effect in the world, even if called multiple times / out of order.<br />
+</p>
+
+<p>
+Byte stream 0..2 = "A B C"<br />
+Byte stream 3..5 = "D E F"<br />
+Byte stream ended at &#x2026;<br />
+</p>
+
+<p>
+^idempotent operations.<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org436268d" class="outline-2">
+<h2 id="org436268d">Internet Protocols</h2>
+<div class="outline-text-2" id="text-org436268d">
+<p>
+They're usually written in kernel space &#x2013; payload is determined by the application / user.<br />
+</p>
+</div>
+<div id="outline-container-orga03d2f3" class="outline-3">
+<h3 id="orga03d2f3">Example Internet <a href="#ID-7c02c940-2bc8-412e-b8c2-ab3b784ca07d">Datagram</a> Header</h3>
+<div class="outline-text-3" id="text-orga03d2f3">
+<p>
+The header is usually 24 bytes (well, no one uses the <code>Options</code> field, so 20 bytes.)<br />
+</p>
+
+<p>
+Everything in the internet is built on top of the datagram abstraction.<br />
+</p>
+<pre class="example" id="orgf90fdfd">
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|Version|  IHL  |Type of Service|          Total Length         |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|         Identification        |Flags|      Fragment Offset    |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|  Time to Live |    Protocol   |         Header Checksum       |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                       Source Address                          |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                    Destination Address                        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                    Options                    |    Padding    |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+</pre>
+</div>
+</div>
+<div id="outline-container-org4b3395b" class="outline-3">
+<h3 id="org4b3395b">Multiplexing</h3>
+<div class="outline-text-3" id="text-org4b3395b">
+<p>
+Put something special, "User Datagram Protocol" (UDP) in the <code>Protocol</code> field of the datagram header &#x2013; then put additional stuff specifying the protocol in the message.<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1814c60" class="outline-2">
+<h2 id="org1814c60">Name to Number to Name (DNS lookup)</h2>
+<div class="outline-text-2" id="text-org1814c60">
+<p>
+Have to ask Domain Name Servers.<br />
+</p>
+
+<p>
+Internet Datagram contains User Datagram. User Datagram contains Domain Name System lookup / response<br />
+</p>
+
+<p>
+How do names get assigned? There's a hierarchy, starting from the top-level domain (TLD.) Can lookup the domain name through this recursive process (but more local servers cache it.)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org6db5379" class="outline-2">
+<h2 id="org6db5379">TCP</h2>
+<div class="outline-text-2" id="text-org6db5379">
+<p>
+the two connectors to the byte stream are peers.<br />
+</p>
+
+<p>
+"window" of acceptable sequence numbers. (ohhhh wait that's how we can do it. Just store another circular array, lol. then there's no merging step &#x2013; just overwrite into the array, and move the head and tail.)<br />
+</p>
+
+<p>
+Mechanisms in TCP that can combat the bad aspects of datagrams:<br />
+corruption &#x2013; checksum<br />
+lost &#x2013; ttl<br />
+more than once &#x2013; idempotence<br />
+order &#x2013; index<br />
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p>Made with <span class="heart">♥</span> using
+<a href="https://orgmode.org/">org-mode</a>.
+Source code is available
+<a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<script src="popper.min.js"></script>
+<script src="tippy-bundle.umd.min.js"></script>
+<script src="tooltips.js" async></script>
+</div>
+</body>
+</html>

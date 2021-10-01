@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-09-30 Thu 21:28 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Machine Learning Interviews Book</title>
+<meta name="author" content="Ketan Agrawal" />
+<meta name="generator" content="Org Mode" />
+<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="preamble" class="status">
+<a style="color: inherit; text-decoration: none" href="/">
+<h2>Ketan's Digital Laboratory &#129514;</h2>
+</a>
+</div>
+<div id="content" class="content">
+<h1 class="title">Machine Learning Interviews Book</h1>
+<p>
+<a href="https://huyenchip.com/ml-interviews-book/">https://huyenchip.com/ml-interviews-book/</a><br />
+</p>
+
+<p>
+This is a book that provides a comprehensive overview of <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> interview process, including the various machine learning roles, interview pipeline, and practice interview questions.<br />
+</p>
+
+<p>
+Below are my (WIP) answers to some of the <a href="https://huyenchip.com/ml-interviews-book/contents/part-ii.-questions.html">questions</a> in the book. DISCLAIMER: While these answers are accurate to the best of my knowledge, I can't guarantee their correctness.<br />
+</p>
+
+<div id="outline-container-orge8acd4c" class="outline-2">
+<h2 id="orge8acd4c">Math</h2>
+<div class="outline-text-2" id="text-orge8acd4c">
+</div>
+<div id="outline-container-orgafcd494" class="outline-3">
+<h3 id="orgafcd494">Algebra and (little) calculus</h3>
+<div class="outline-text-3" id="text-orgafcd494">
+</div>
+<div id="outline-container-orga3ee10e" class="outline-4">
+<h4 id="orga3ee10e">Vectors</h4>
+<div class="outline-text-4" id="text-orga3ee10e">
+<ol class="org-ol">
+<li><p>
+Dot product<br />
+a. [E] <b>What's the geometric interpretation of the dot product of two vectors?</b><br />
+   The dot product \(\mathbf{x} \cdot \mathbf{y}\) is the length of the projection of \(\mathbf{x}\) onto the unit vector \(\mathbf{\hat{y}}\); algebraically this is equal to \(\lvert\lvert \mathbf{x} \rvert\rvert \cos(\theta)\), where \(\theta\) is the angle between the vectors. Intuitively, the more the two vectors point in the same direction, the higher the dot product will be, as can be seen from the graphic below (where \(DP\) shows the value of the dot product between \(a\) and \(b\).) When the vectors are orthogonal, the dot product is zero.<br />
+</p>
+
+<p>
+   <img src="dot_product.gif" alt="dot_product.gif" /><br />
+b. [E] <b>Given a vector \(u\), find vector \(v\) of unit length such that the dot product of \(u\) and \(v\) is maximum.</b><br />
+   This would simply be the unit vector in the direction of \(u\); namely, \(v = \frac{u}{\lvert\lvert u \rvert\rvert}\).<br />
+</p></li>
+<li><p>
+Outer product<br />
+a. [E] <b>Given two vectors \(a=[3,2,1]\) and \(b=[−1,0,1]\), calculate the outer product \(a^T b\).</b><br />
+   \(a^T b = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 0 & 1 \end{bmatrix} = \begin{bmatrix} -3 & 0 & 3 \\ -2 & 0 & 2 \\ -1 & 0 & 1 \end{bmatrix}\)<br />
+</p>
+
+<p>
+We could also calculate this using numpy, like so:<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-variable-name">a</span> = np.array([<span class="org-highlight-numbers-number">3</span>,<span class="org-highlight-numbers-number">2</span>,<span class="org-highlight-numbers-number">1</span>])
+<span class="org-variable-name">b</span> = np.array([-<span class="org-highlight-numbers-number">1</span>,<span class="org-highlight-numbers-number">0</span>,<span class="org-highlight-numbers-number">1</span>])
+<span class="org-keyword">print</span>(np.outer(a, b))
+</pre>
+</div>
+
+<pre class="example">
+[[-3  0  3]
+ [-2  0  2]
+ [-1  0  1]]
+</pre>
+
+
+<p>
+b. [M] Give an example of how the outer product can be useful in ML.<br />
+   Potentially&#x2026;in some sort of collaborative filtering system, you'd want an outer product between \(m\) user vectors and \(n\) item vectors, to produce a \(m \times n\) similarity matrix?<br />
+</p>
+
+<p>
+Many applications seem to use the Kronecker product (generalization of the outer product to tensors) &#x2013; don't quite understand them yet, but here are a few:<br />
+</p>
+<ul class="org-ul">
+<li><a href="https://arxiv.org/pdf/1503.05671.pdf">Optimizing Neural Networks with Kronecker-factored Approximate Curvature</a><br /></li>
+<li><a href="https://openreview.net/forum?id=rcQdycl0zyk">Beyond Fully-Connected Layers with Quaternions: Parameterization of Hypercomplex Multiplications with 1/n Parameters</a><br /></li>
+</ul>
+
+<p>
+There has to be something simpler that I'm missing.<br />
+</p></li>
+
+<li><p>
+[E] <b>What does it mean for two vectors to be linearly independent?</b><br />
+A set of vectors is linearly <i>independent</i> if there is no way to nontrivially combine them into the zero vector. What this means is that there should e no way for the vectors to "cancel each other out," so to speak; there are no "redundant" vectors.<br />
+</p>
+
+<p>
+For only two vectors, this occurs iff (1) neither of them is the zero vector (otherwise the other vector could easily be canceled out by a scalar multiple of \(0\)),  and (2) they are not scalar multiples of each other (otherwise they could simply cancel each other out by multiplying one by a scalar such that it points in the opposite direction as the other.)<br />
+</p></li>
+
+<li>[M] <b>Given two sets of vectors \(A=a_1,a_2,a_3,...,a_n\)<br />
+and \(B=b_1,b_2,b_3,...,b_m\), How do you check that they share the same basis?</b><br />
+I think more precisely we'd want to determine whether the <i>vector spaces</i> spanned by \(A\) and \(B\) share the same basis. But for now, let's just gloss over that minor distinction, and refer to the vector spaces as \(A\) and \(B\) as well. With that understanding, we can find a basis of \(A\) by building a maximal linearly independent set, and then if that basis also spans \(B\), then they share the same basis (in fact, that means that \(A\) and \(B\) span the same vector space.)<br /></li>
+
+<li><b>Given \(n\) vectors, each of \(d\) dimensions, what is the dimension of their span?</b><br />
+Not enough information. For example, let \(n = 2\) and \(d = 2\). Consider the vector space spanned by \(\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 2 \\ 0 \end{bmatrix}\}\). This vector space is fully spanned by the basis \(\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}\}\), making the dimension of the span \(1\). However, if we consider the vector space spanned by \(\{ \begin{bmatrix} 2 \\ 3 \end{bmatrix}, \begin{bmatrix} 4 \\ 1 \end{bmatrix}\}\), it is fully spanned by the basis \(\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \end{bmatrix}\}\), making the dimension of its span \(2\). So, essentially it depends on the specific values of the vectors, and to what degree they're linearly independent from each other (i.e. the size of the basis.)<br /></li>
+
+<li><p>
+Norms and metrics<br />
+a. [E] <b>What's a norm? What is \(L_0\), \(L_1\), \(L_2\), \(L_{norm}\)?</b><br />
+   Can be thought of as a vector's distance from the origin. This becomes relevant in <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a>, when we want to objectively measure and minimize a scalar distance between the ground truth labels and model predictions.<br />
+</p>
+
+<p>
+So first, we get the vector distance between the ground truth and prediction,  which we can call \(x\). Then, we pass is through one of these norms to obtain a scalar distance:<br />
+</p>
+
+<p>
+\(L_0\) "norm" is simply the total number of nonzero elements in a vector. If you consider \(0^0 = 0\), then<br />
+\[L_0(x) = \left|x_{1}\right|^{0}+\left|x_{2}\right|^{0}+\cdots+\left|x_{n}\right|^{0}\]<br />
+\(L_1\) norm: add up the absolute values of the elements.<br />
+\[L_1(x) = \left|x_{1}\right|^{1}+\left|x_{2}\right|^{1}+\cdots+\left|x_{n}\right|^{1}\]<br />
+\(L_2\) norm: add up the squares of the elements.<br />
+\[L_2(x) = \left|x_{1}\right|^{2}+\left|x_{2}\right|^{2}+\cdots+\left|x_{n}\right|^{2}\]<br />
+&#x2026;and so on.<br />
+\(L_\infty\) norm is the equal to the maximum absolute value of a component of \(x\). That is:<br />
+\[L_\infty = \max_i |x_i|\]<br />
+</p>
+
+<p>
+I can't find anything on \(L_{norm}\), so maybe that was a typo?<br />
+</p>
+
+<p>
+b. [M] <b>How do norm and metric differ? Given a norm, make a metric. Given a metric, can we make a norm?</b><br />
+   My understanding is that a norm is simply a mathematical operation on a vector, whereas a (loss) metric is measuring the distance between two things. Given a norm, let's take the \(L_2\) norm, we can easily make a metric, by plugging in a distance vector between ground truth and prediction, as shown in the previous question, and summing the squares of the components. A norm takes in a single variable (i.e. a vector,) whereas a metric takes in two (i.e. ground truth vector and predictions vector.)<br />
+</p></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgbc4f924" class="outline-4">
+<h4 id="orgbc4f924">Matrices</h4>
+<div class="outline-text-4" id="text-orgbc4f924">
+<ol class="org-ol">
+<li>[E] <b>Why do we say that matrices are linear transformations?</b><br />
+If you take a matrix \(A\) and multiply by a vector \(x\), you get another vector \(b = Ax\), where \(b\) is just a linear transformation of \(x\). One way to think about this is that a matrix is a vector of vectors, and when we multiply the matrix by a vector, we get a linear combination of those vectors in \(A\) multiplied by the scalars in \(x\)<br /></li>
+<li>[E] <b>What's the inverse of a matrix? Do all matrices have an inverse? Is the inverse of a matrix always unique?</b><br />
+\(B\) is an inverse of square matrix \(A\) if<br />
+\[AB = BA = I_n\]. Not all matrices have an inverse (non-invertible = singular). Inverse is unique.<br /></li>
+<li>[E] <b>What does the determinant of a matrix represent?</b><br /></li>
+
+<li>[E] <b>What happens to the determinant of a matrix if we multiply one of its rows by a scalar \(t \times R\)?</b><br /></li>
+<li>[M] <b>A \(4 \times 4\) matrix has four eigenvalues \(3,3,2,-1\). What can we say about the trace and determinant of this matrix?</b><br /></li>
+<li>[M] <b>Given the following matrix:</b><br />
+\[\left[\begin{array}{ccc}1 & 4 & -2 \\ -1 & 3 & 2 \\ 3 & 5 & -6\end{array}\right]\]<br />
+Without explicitly using the equation for calculating determinants, what can we say about this matrix's determinant?<br /></li>
+<li>[M] <b>What's the difference between the covariance matrix \(A^T A\) and the Gram matrix \(AA^T\)?</b><br /></li>
+<li>Given \(A \in R^{n \times m}\) and \(b \in R^n\)<br />
+a. [M] <b>Find \(x\) such that \(Ax = b\).</b><br />
+b. [E] <b>When does this have a unique solution?</b><br />
+c. [M] <b>Why is it when \(A\) has more columns than rows, \(Ax = b\) has multiple solutions?</b><br />
+d. [M] <b>Given a matrix \(A\) with no inverse, how would you solve the equation \(Ax = b\)? What is the pseudoinverse and how to calculate it?</b><br /></li>
+<li>Derivative is the backbone of gradient descent.<br />
+a. [E] <b>What does the derivative represent?</b><br />
+b. [M] <b>What's the difference between derivative, gradient, Jacobian?</b><br /></li>
+<li>[H] <b>Say we have the weights \(w \in R^{d \times m}\) and a mini-batch \(x\) of \(n\) elements, each of the shape \(1 \times d\) so that \(x \in R^{n \times d}\). We have the output \(y = f(x;w) = xw\). What's the dimension of the Jacobian \(\frac{\delta y}{\delta x}\)?</b><br /></li>
+<li>[H] <b>Given a very large symmetric matrix \(A\) that doesn't fit in memory, say \(A \in R^{1M \times 1M}\) and a function \(f\) that can quickly compute \(f(x) = Ax\) for \(x \in R^{1M}\), find the unit vector \(x\) such that \(x^TAx\) is minimal.</b><br /></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org1cb67c7" class="outline-3">
+<h3 id="org1cb67c7">Probability and statistics</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p>Made with <span class="heart">♥</span> using
+<a href="https://orgmode.org/">org-mode</a>.
+Source code is available
+<a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<script src="popper.min.js"></script>
+<script src="tippy-bundle.umd.min.js"></script>
+<script src="tooltips.js" async></script>
+</div>
+</body>
+</html>

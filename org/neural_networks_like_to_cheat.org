@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       412cda14-f385-463d-9a7e-cd9ffe87c0a2
+:END:
+#+title: Neural networks like to "cheat"

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-12 Sun 04:04 -->
+<!-- 2021-09-30 Thu 21:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>codex</title>
@@ -57,7 +57,7 @@ Haha, this one seemed to assume that it was already December. But it was cool th
 <span class="org-keyword">if</span> today == <span class="org-string">"12/25"</span>:
     <span class="org-keyword">print</span>(<span class="org-string">"Merry Christmas!"</span>)
 <span class="org-keyword">else</span>:
-    <span class="org-keyword">print</span>(<span class="org-string">"There are "</span> + <span class="org-builtin">str</span>(25 - <span class="org-builtin">int</span>(today[3:])) + <span class="org-string">" days until Christmas!"</span>)
+    <span class="org-keyword">print</span>(<span class="org-string">"There are "</span> + <span class="org-builtin">str</span>(<span class="org-highlight-numbers-number">25</span> - <span class="org-builtin">int</span>(today[<span class="org-highlight-numbers-number">3</span>:])) + <span class="org-string">" days until Christmas!"</span>)
 </pre>
 </div>
 
@@ -77,9 +77,9 @@ This&#x2026;this is cool to be able to write math in natural language like this,
 
 <span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
 <span class="org-keyword">from</span> scipy.linalg <span class="org-keyword">import</span> hilbert
-<span class="org-variable-name">n</span> = 5
+<span class="org-variable-name">n</span> = <span class="org-highlight-numbers-number">5</span>
 <span class="org-variable-name">a</span> = hilbert(n)
-<span class="org-variable-name">b</span> = 1.0 / a
+<span class="org-variable-name">b</span> = <span class="org-highlight-numbers-number">1.0</span> / a
 <span class="org-keyword">print</span>(b)
 </pre>
 </div>
@@ -105,7 +105,7 @@ Hah, this is a cute one. I initially only put the first 4 lines in, and it proce
 <span class="org-doc">*****</span>
 <span class="org-doc">"""</span>
 
-<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(1,6):
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-highlight-numbers-number">1</span>,<span class="org-highlight-numbers-number">6</span>):
     <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(i):
         <span class="org-keyword">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
     <span class="org-keyword">print</span>()
@@ -118,14 +118,14 @@ Hah, this is a cute one. I initially only put the first 4 lines in, and it proce
 <span class="org-string">*</span>
 <span class="org-string">"""</span>
 
-<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(5,0,-1):
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-highlight-numbers-number">5</span>,<span class="org-highlight-numbers-number">0</span>,-<span class="org-highlight-numbers-number">1</span>):
     <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(i):
         <span class="org-keyword">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
     <span class="org-keyword">print</span>()
 </pre>
 </div>
 
-<pre class="example" id="orgfad9338">
+<pre class="example" id="org7dd81fb">
 *
 **
 ***
@@ -144,26 +144,25 @@ Whoa. This would certainly make using matplotlib a lot easier.<br />
 </p>
 <div class="org-src-container">
 <pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
-<span class="org-doc">1. Plot the function `30cos(x) + 2x^2` using purple triangles for the markers.</span>
-<span class="org-doc">2. Save the figure.</span>
+<span class="org-doc">print the date in 100 days.</span>
 <span class="org-doc">"""</span>
 
-<span class="org-comment-delimiter">#</span><span class="org-comment">%%</span>
-<span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
-<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-keyword">from</span> datetime <span class="org-keyword">import</span> datetime, timedelta
 
-<span class="org-variable-name">x</span> = np.linspace(-2*np.pi, 2*np.pi, 100)
-<span class="org-variable-name">y</span> = 30*np.cos(x) + 2*x**2
+<span class="org-variable-name">now</span> = datetime.now()
+<span class="org-variable-name">delta</span> = timedelta(days=<span class="org-highlight-numbers-number">100</span>)
+<span class="org-keyword">print</span>(now + delta)
 
-plt.plot(x, y, <span class="org-string">'purple'</span>, marker=<span class="org-string">'^'</span>, linestyle=<span class="org-string">'--'</span>)
-plt.savefig(<span class="org-string">'my_plot.png'</span>)
-
-<span class="org-comment-delimiter">#</span><span class="org-comment">%%</span>
 </pre>
 </div>
 
+<pre class="example">
+2021-12-31 12:08:53.843912
+</pre>
 
-<div id="orgbce80c3" class="figure">
+
+
+<div id="org708f7ff" class="figure">
 <p><img src="my_plot.png" alt="my_plot.png" /><br />
 </p>
 </div>
@@ -188,8 +187,8 @@ It honored my request to use requests!<br />
 
 
 <span class="org-comment-delimiter"># </span><span class="org-comment">I put these lines in</span>
-<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][0])
-<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][1])
+<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">0</span>])
+<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">1</span>])
 </pre>
 </div>
 

@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-12 Sun 04:10 -->
+<!-- 2021-09-30 Thu 21:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>karabiner config</title>
+<title>shortcuts</title>
 <meta name="author" content="Ketan Agrawal" />
 <meta name="generator" content="Org Mode" />
 <link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -24,7 +24,7 @@
 </a>
 </div>
 <div id="content" class="content">
-<h1 class="title">karabiner config</h1>
+<h1 class="title">shortcuts</h1>
 <p>
 This is my literate config for <a href="https://github.com/yqrashawn/GokuRakuJoudo">goku</a>. It is a succint, powerful way to define keyboard shortcuts in macOS.<br />
 </p>
@@ -39,9 +39,9 @@ inspiration taken from these goku configs:<br />
 </ul>
 
 
-<div id="outline-container-org315217c" class="outline-2 karabiner-keyboard-container">
-<h2 id="org315217c">Layout</h2>
-<div class="outline-text-2" id="text-org315217c">
+<div id="outline-container-org6df0b16" class="outline-2 karabiner-keyboard-container">
+<h2 id="org6df0b16">Layout</h2>
+<div class="outline-text-2" id="text-org6df0b16">
 <p>
 ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------,<br />
 ❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ + ❘ ' ❘ &lt;-    ❘<br />
@@ -57,9 +57,9 @@ inspiration taken from these goku configs:<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orge629072" class="outline-2">
-<h2 id="orge629072">Guide</h2>
-<div class="outline-text-2" id="text-orge629072">
+<div id="outline-container-org1a21f32" class="outline-2">
+<h2 id="org1a21f32">Guide</h2>
+<div class="outline-text-2" id="text-org1a21f32">
 <p>
 For more info on configuring Goku, see the <a href="https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md">tutorial</a>.<br />
 Guide lifted from <a href="https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126">kaushikgopal</a>. To understand better how modifiers work in karabiner, see the karabiner definition of mandatory and optional: <a href="https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/#frommodifiersoptional%20%20%20">karabiner modifiers documentation</a><br />
@@ -148,22 +148,22 @@ need to prefix C T O S F with ! or #<br />
 </table>
 </div>
 </div>
-<div id="outline-container-orgbc30432" class="outline-2">
-<h2 id="orgbc30432">Profiles</h2>
-<div class="outline-text-2" id="text-orgbc30432">
+<div id="outline-container-orgb1d365e" class="outline-2">
+<h2 id="orgb1d365e">Profiles</h2>
+<div class="outline-text-2" id="text-orgb1d365e">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure">{<span class="org-comment-delimiter">;;</span><span class="org-comment">beginning bracket for whole data structure -- don't delete!</span>
 
  <span class="org-clojure-keyword">:profiles</span> {
             <span class="org-clojure-keyword">:Ketan</span> {
                     <span class="org-clojure-keyword">:default</span> <span class="org-constant">true</span>
-                    <span class="org-clojure-keyword">:sim</span>     500    <span class="org-comment-delimiter">;; </span><span class="org-comment">simultaneous_threshold_milliseconds (def: 50)</span>
+                    <span class="org-clojure-keyword">:sim</span>     <span class="org-highlight-numbers-number">500</span>    <span class="org-comment-delimiter">;; </span><span class="org-comment">simultaneous_threshold_milliseconds (def: 50)</span>
                     <span class="org-comment-delimiter">;; </span><span class="org-comment">keys need to be pressed within this threshold to be considered simultaneous</span>
-                    <span class="org-clojure-keyword">:delay</span>   80    <span class="org-comment-delimiter">;; </span><span class="org-comment">to_delayed_action_delay_milliseconds (def: 500)</span>
+                    <span class="org-clojure-keyword">:delay</span>   <span class="org-highlight-numbers-number">80</span>    <span class="org-comment-delimiter">;; </span><span class="org-comment">to_delayed_action_delay_milliseconds (def: 500)</span>
                     <span class="org-comment-delimiter">;; </span><span class="org-comment">basically it means time after which the key press is count delayed</span>
-                    <span class="org-clojure-keyword">:alone</span>   500      <span class="org-comment-delimiter">;; </span><span class="org-comment">to_if_alone_timeout_milliseconds (def: 1000)</span>
+                    <span class="org-clojure-keyword">:alone</span>   <span class="org-highlight-numbers-number">500</span>      <span class="org-comment-delimiter">;; </span><span class="org-comment">to_if_alone_timeout_milliseconds (def: 1000)</span>
                     <span class="org-comment-delimiter">;; </span><span class="org-comment">hold for 995s and single tap registered; hold for 1005s and seen as modifier</span>
-                    <span class="org-clojure-keyword">:held</span>    1000   <span class="org-comment-delimiter">;; </span><span class="org-comment">to_if_held_down_threshold_milliseconds (def: 500)</span>
+                    <span class="org-clojure-keyword">:held</span>    <span class="org-highlight-numbers-number">1000</span>   <span class="org-comment-delimiter">;; </span><span class="org-comment">to_if_held_down_threshold_milliseconds (def: 500)</span>
                     <span class="org-comment-delimiter">;; </span><span class="org-comment">key is fired twice when 500 ms is elapsed (otherwise seen as a hold command)</span>
                     }
             } <span class="org-comment-delimiter">;; </span><span class="org-comment">profiles</span>
@@ -172,9 +172,9 @@ need to prefix C T O S F with ! or #<br />
 </div>
 </div>
 
-<div id="outline-container-org48f5920" class="outline-2">
-<h2 id="org48f5920">Templates</h2>
-<div class="outline-text-2" id="text-org48f5920">
+<div id="outline-container-orgd9ec201" class="outline-2">
+<h2 id="orgd9ec201">Templates</h2>
+<div class="outline-text-2" id="text-orgd9ec201">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure"><span class="org-clojure-keyword">:templates</span> {
             <span class="org-clojure-keyword">:km</span> <span class="org-string">"osascript -e 'tell application </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">Keyboard Maestro Engine</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string"> to do script </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">%s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string"> with parameter </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">%s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">'"</span>
@@ -195,18 +195,18 @@ need to prefix C T O S F with ! or #<br />
 </div>
 </div>
 
-<div id="outline-container-org7b97e31" class="outline-2">
-<h2 id="org7b97e31">Layers &amp; Simlayers</h2>
-<div class="outline-text-2" id="text-org7b97e31">
+<div id="outline-container-org69ab8a0" class="outline-2">
+<h2 id="org69ab8a0">Layers &amp; Simlayers</h2>
+<div class="outline-text-2" id="text-org69ab8a0">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure"><span class="org-clojure-keyword">:layers</span> {
 
          <span class="org-clojure-keyword">:tab-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:tab</span>
-                    <span class="org-clojure-keyword">:afterup</span> [{<span class="org-clojure-keyword">:set</span> [<span class="org-string">"yabai-move-mode"</span> 0]}
-                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"yabai-focus-mode"</span> 0]}
-                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"yabai-display-mode"</span> 0]}
-                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"chrome-movement-mode"</span> 0]}
-                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"chrome-rearrange-tab-mode"</span> 0]}]}
+                    <span class="org-clojure-keyword">:afterup</span> [{<span class="org-clojure-keyword">:set</span> [<span class="org-string">"yabai-move-mode"</span> <span class="org-highlight-numbers-number">0</span>]}
+                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"yabai-focus-mode"</span> <span class="org-highlight-numbers-number">0</span>]}
+                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"yabai-display-mode"</span> <span class="org-highlight-numbers-number">0</span>]}
+                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"chrome-movement-mode"</span> <span class="org-highlight-numbers-number">0</span>]}
+                              {<span class="org-clojure-keyword">:set</span> [<span class="org-string">"chrome-rearrange-tab-mode"</span> <span class="org-highlight-numbers-number">0</span>]}]}
 
          <span class="org-clojure-keyword">:yabai-move-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:w</span> <span class="org-clojure-keyword">:condi</span> <span class="org-clojure-keyword">:tab-mode</span>}
          <span class="org-clojure-keyword">:yabai-focus-mode</span> {<span class="org-clojure-keyword">:key</span> <span class="org-clojure-keyword">:f</span> <span class="org-clojure-keyword">:condi</span> <span class="org-clojure-keyword">:tab-mode</span>}
@@ -233,13 +233,13 @@ need to prefix C T O S F with ! or #<br />
 </div>
 </div>
 
-<div id="outline-container-org1dbb7ce" class="outline-2">
-<h2 id="org1dbb7ce">Main</h2>
-<div class="outline-text-2" id="text-org1dbb7ce">
+<div id="outline-container-org6feba23" class="outline-2">
+<h2 id="org6feba23">Main</h2>
+<div class="outline-text-2" id="text-org6feba23">
 </div>
-<div id="outline-container-org3a4beb7" class="outline-3">
-<h3 id="org3a4beb7">begin main</h3>
-<div class="outline-text-3" id="text-org3a4beb7">
+<div id="outline-container-orgab475a1" class="outline-3">
+<h3 id="orgab475a1">begin main</h3>
+<div class="outline-text-3" id="text-orgab475a1">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure"><span class="org-clojure-keyword">:main</span> [{
         <span class="org-clojure-keyword">:des</span> <span class="org-string">"see karabiner.org for documentation."</span>,
@@ -248,9 +248,9 @@ need to prefix C T O S F with ! or #<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgfedff5d" class="outline-3">
-<h3 id="orgfedff5d">right cmd/option =&gt; previous app</h3>
-<div class="outline-text-3" id="text-orgfedff5d">
+<div id="outline-container-org11dc107" class="outline-3">
+<h3 id="org11dc107">right cmd/option =&gt; previous app</h3>
+<div class="outline-text-3" id="text-org11dc107">
 <p>
 Switch to the previous application with right command/option -- right command hides the current app, right option doesn't.<br />
 </p>
@@ -261,18 +261,18 @@ Switch to the previous application with right command/option -- right command hi
 </div>
 </div>
 </div>
-<div id="outline-container-orgb15d61a" class="outline-3">
-<h3 id="orgb15d61a">caps lock alone = escape, with other keys = ctrl</h3>
-<div class="outline-text-3" id="text-orgb15d61a">
+<div id="outline-container-org426fbcf" class="outline-3">
+<h3 id="org426fbcf">caps lock alone = escape, with other keys = ctrl</h3>
+<div class="outline-text-3" id="text-org426fbcf">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure">[<span class="org-clojure-keyword">:##caps_lock</span> <span class="org-clojure-keyword">:left_control</span> <span class="org-constant">nil</span> {<span class="org-clojure-keyword">:alone</span> <span class="org-clojure-keyword">:escape</span>}]
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org8a3fab0" class="outline-3">
-<h3 id="org8a3fab0">yabai-move-mode (tab + w + {hjkl})</h3>
-<div class="outline-text-3" id="text-org8a3fab0">
+<div id="outline-container-org48054b7" class="outline-3">
+<h3 id="org48054b7">yabai-move-mode (tab + w + {hjkl})</h3>
+<div class="outline-text-3" id="text-org48054b7">
 <p>
 Move the current window directionally in the yabai tiling setup.<br />
 </p>
@@ -300,9 +300,9 @@ Move the current window directionally in the yabai tiling setup.<br />
 </div>
 </div>
 
-<div id="outline-container-orgf97e9a1" class="outline-3">
-<h3 id="orgf97e9a1">yabai-focus-mode (tab + f + {hjkl})</h3>
-<div class="outline-text-3" id="text-orgf97e9a1">
+<div id="outline-container-org5856921" class="outline-3">
+<h3 id="org5856921">yabai-focus-mode (tab + f + {hjkl})</h3>
+<div class="outline-text-3" id="text-org5856921">
 <p>
 Move focus to the left/top/bottom/right of the current window.<br />
 </p>
@@ -319,9 +319,9 @@ Move focus to the left/top/bottom/right of the current window.<br />
 </div>
 </div>
 
-<div id="outline-container-org23538eb" class="outline-3">
-<h3 id="org23538eb">yabai-display-mode (tab + d + {hjkl})</h3>
-<div class="outline-text-3" id="text-org23538eb">
+<div id="outline-container-orgd1e1e6e" class="outline-3">
+<h3 id="orgd1e1e6e">yabai-display-mode (tab + d + {hjkl})</h3>
+<div class="outline-text-3" id="text-orgd1e1e6e">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure"><span class="org-clojure-keyword">:yabai-display-mode</span>
 [<span class="org-clojure-keyword">:h</span> <span class="org-string">"/usr/local/bin/yabai -m display --focus prev"</span>]
@@ -333,9 +333,9 @@ Move focus to the left/top/bottom/right of the current window.<br />
 </div>
 </div>
 
-<div id="outline-container-orgc1e1072" class="outline-3">
-<h3 id="orgc1e1072">chrome-history-mode (tab + g + {hl})</h3>
-<div class="outline-text-3" id="text-orgc1e1072">
+<div id="outline-container-orgdb35b1c" class="outline-3">
+<h3 id="orgdb35b1c">chrome-history-mode (tab + g + {hl})</h3>
+<div class="outline-text-3" id="text-orgdb35b1c">
 <p>
 Move backward/forward in Chrome history.<br />
 </p>
@@ -347,9 +347,9 @@ Move backward/forward in Chrome history.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orge70cf9c" class="outline-3">
-<h3 id="orge70cf9c">chrome-movement-mode (tab + t + {hl})</h3>
-<div class="outline-text-3" id="text-orge70cf9c">
+<div id="outline-container-orgfaf71c5" class="outline-3">
+<h3 id="orgfaf71c5">chrome-movement-mode (tab + t + {hl})</h3>
+<div class="outline-text-3" id="text-orgfaf71c5">
 <p>
 Move to the tab left/right of the current tab.<br />
 </p>
@@ -361,9 +361,9 @@ Move to the tab left/right of the current tab.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-org2d3dd45" class="outline-3">
-<h3 id="org2d3dd45">chrome-rearrange-tab-mode (tab + r + {hl})</h3>
-<div class="outline-text-3" id="text-org2d3dd45">
+<div id="outline-container-org204ff76" class="outline-3">
+<h3 id="org204ff76">chrome-rearrange-tab-mode (tab + r + {hl})</h3>
+<div class="outline-text-3" id="text-org204ff76">
 <p>
 Move current tab left/right. Need <a href="https://chrome.google.com/webstore/detail/rearrange-tabs/ccnnhhnmpoffieppjjkhdakcoejcpbga">this Chrome extension</a> for this to work.<br />
 </p>
@@ -375,9 +375,9 @@ Move current tab left/right. Need <a href="https://chrome.google.com/webstore/de
 </div>
 </div>
 </div>
-<div id="outline-container-org5842188" class="outline-3">
-<h3 id="org5842188">tab-mode (tab)</h3>
-<div class="outline-text-3" id="text-org5842188">
+<div id="outline-container-org78d6c76" class="outline-3">
+<h3 id="org78d6c76">tab-mode (tab)</h3>
+<div class="outline-text-3" id="text-org78d6c76">
 <p>
 Mostly for opening apps, and some other convenient shortcuts like toggling dark mode and emojis.<br />
 </p>
@@ -422,7 +422,7 @@ Toggle system dark mode, as well as the emacs theme. (See <a href="https://githu
 </div>
 <div id="outline-container-ID-d9445d05-36b8-4435-ba52-b4dd28934160" class="outline-3">
 <h3 id="ID-d9445d05-36b8-4435-ba52-b4dd28934160">q-key-mode (q)</h3>
-<div class="outline-text-3" id="text-orgab3ef69">
+<div class="outline-text-3" id="text-org14984d1">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure"><span class="org-clojure-keyword">:q-key-mode</span>
 [<span class="org-clojure-keyword">:grave_accent_and_tilde</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Stickies"</span>]]
@@ -441,13 +441,13 @@ Toggle system dark mode, as well as the emacs theme. (See <a href="https://githu
 </div>
 </div>
 
-<div id="outline-container-orgdc9a4c4" class="outline-4 references">
-<h4 id="orgdc9a4c4">Links to this node</h4>
-<div class="outline-text-4" id="text-orgdc9a4c4">
+<div id="outline-container-orgb27960d" class="outline-4 references">
+<h4 id="orgb27960d">Links to this node</h4>
+<div class="outline-text-4" id="text-orgb27960d">
 </div>
 <ul class="org-ul">
-<li><a id="orgf506ec9"></a><a href="karabiner.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">karabiner config</a><br />
-<div class="outline-text-5" id="text-orgf506ec9">
+<li><a id="org232c620"></a><a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">shortcuts</a><br />
+<div class="outline-text-5" id="text-org232c620">
 <p>
 ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------, ❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ + ❘ ' ❘ &lt;-    ❘ ❘---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----❘ ❘ -&gt;❘ ❘ <a href="#ID-d9445d05-36b8-4435-ba52-b4dd28934160">Q</a> ❘ W ❘ E ❘ R ❘ T ❘ Y ❘ U ❘ I ❘ O ❘ P ❘ ] ❘ ^ ❘     ❘ ❘-----',--',--',--',--',--',--',--',--',--',--',--',--'❘    ❘ ❘ Caps ❘ A ❘ S ❘ D ❘ F ❘ G ❘ H ❘ J ❘ K ❘ L ❘ \ ❘ [ ❘ * ❘    ❘ ❘----,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---'----❘ ❘    ❘ &lt; ❘ <a href="#ID-94658b27-f223-405e-b637-1866e3a1dc0b">Z</a> ❘ <a href="#ID-a89045f9-8744-4b59-9dd8-752d74148268">X</a> ❘ C ❘ V ❘ B ❘ N ❘ M ❘ , ❘ . ❘ - ❘          ❘ ❘----'-,-',--'--,'---'---'---'---'---'---'-,-'---',--,------❘ ❘ ctrl ❘  ❘ alt ❘                          ❘ alt  ❘  ❘ ctrl ❘ '------'  '-----'--------------------------'------'  '------'<br />
 </p>
@@ -460,7 +460,7 @@ Toggle system dark mode, as well as the emacs theme. (See <a href="https://githu
 
 <div id="outline-container-ID-a89045f9-8744-4b59-9dd8-752d74148268" class="outline-3">
 <h3 id="ID-a89045f9-8744-4b59-9dd8-752d74148268">x-key-mode (x)</h3>
-<div class="outline-text-3" id="text-org07103d1">
+<div class="outline-text-3" id="text-org9844a85">
 <div class="org-src-container">
 <pre class="src src-apples" data-language="apples"><span class="org-apples-statements">tell</span> <span class="org-apples-statements">application</span> <span class="org-string">"Google Chrome"</span>
     execute <span class="org-apples-reserved-words">front</span> window<span class="org-apples-reserved-words">'s</span> active tab javascript <span class="org-string">"javascript:location.href = 'org-protocol://roam-ref?template=r&amp;ref=' + encodeURIComponent(location.href) + '&amp;title=' + encodeURIComponent(document.title)"</span>
@@ -483,13 +483,13 @@ Toggle system dark mode, as well as the emacs theme. (See <a href="https://githu
 </div>
 </div>
 
-<div id="outline-container-orga927818" class="outline-4 references">
-<h4 id="orga927818">Links to this node</h4>
-<div class="outline-text-4" id="text-orga927818">
+<div id="outline-container-orgecb525b" class="outline-4 references">
+<h4 id="orgecb525b">Links to this node</h4>
+<div class="outline-text-4" id="text-orgecb525b">
 </div>
 <ul class="org-ul">
-<li><a id="org0c5e4ea"></a><a href="karabiner.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">karabiner config</a><br />
-<div class="outline-text-5" id="text-org0c5e4ea">
+<li><a id="orgbaddf72"></a><a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">shortcuts</a><br />
+<div class="outline-text-5" id="text-orgbaddf72">
 <p>
 ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------, ❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ + ❘ ' ❘ &lt;-    ❘ ❘---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----❘ ❘ -&gt;❘ ❘ <a href="#ID-d9445d05-36b8-4435-ba52-b4dd28934160">Q</a> ❘ W ❘ E ❘ R ❘ T ❘ Y ❘ U ❘ I ❘ O ❘ P ❘ ] ❘ ^ ❘     ❘ ❘-----',--',--',--',--',--',--',--',--',--',--',--',--'❘    ❘ ❘ Caps ❘ A ❘ S ❘ D ❘ F ❘ G ❘ H ❘ J ❘ K ❘ L ❘ \ ❘ [ ❘ * ❘    ❘ ❘----,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---'----❘ ❘    ❘ &lt; ❘ <a href="#ID-94658b27-f223-405e-b637-1866e3a1dc0b">Z</a> ❘ <a href="#ID-a89045f9-8744-4b59-9dd8-752d74148268">X</a> ❘ C ❘ V ❘ B ❘ N ❘ M ❘ , ❘ . ❘ - ❘          ❘ ❘----'-,-',--'--,'---'---'---'---'---'---'-,-'---',--,------❘ ❘ ctrl ❘  ❘ alt ❘                          ❘ alt  ❘  ❘ ctrl ❘ '------'  '-----'--------------------------'------'  '------'<br />
 </p>
@@ -500,9 +500,9 @@ Toggle system dark mode, as well as the emacs theme. (See <a href="https://githu
 </div>
 
 
-<div id="outline-container-org555bbb1" class="outline-3">
-<h3 id="org555bbb1">tilde-mode</h3>
-<div class="outline-text-3" id="text-org555bbb1">
+<div id="outline-container-org16742ff" class="outline-3">
+<h3 id="org16742ff">tilde-mode</h3>
+<div class="outline-text-3" id="text-org16742ff">
 <p>
 Using this mode to "focus" / "unfocus" with the <a href="https://heyfocus.com/">Focus</a> app for MacOS.<br />
 </p>
@@ -516,9 +516,9 @@ Using this mode to "focus" / "unfocus" with the <a href="https://heyfocus.com/">
 </div>
 </div>
 </div>
-<div id="outline-container-orgf776abe" class="outline-3">
-<h3 id="orgf776abe">comma-mode</h3>
-<div class="outline-text-3" id="text-orgf776abe">
+<div id="outline-container-orge837f4a" class="outline-3">
+<h3 id="orge837f4a">comma-mode</h3>
+<div class="outline-text-3" id="text-orge837f4a">
 <p>
 Just some like random stuff. Open notes, zoom links, twitter, typing tests.<br />
 </p>
@@ -665,18 +665,18 @@ I really like Safari, but sometimes need to use Chrome for various extensions et
 </div>
 </div>
 </div>
-<div id="outline-container-orgd05316d" class="outline-3">
-<h3 id="orgd05316d">o-key-mode</h3>
-<div class="outline-text-3" id="text-orgd05316d">
+<div id="outline-container-org0b8dd63" class="outline-3">
+<h3 id="org0b8dd63">o-key-mode</h3>
+<div class="outline-text-3" id="text-org0b8dd63">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure">
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb86eb1c" class="outline-3">
-<h3 id="orgb86eb1c">wallpaper-mode</h3>
-<div class="outline-text-3" id="text-orgb86eb1c">
+<div id="outline-container-org6d3413f" class="outline-3">
+<h3 id="org6d3413f">wallpaper-mode</h3>
+<div class="outline-text-3" id="text-org6d3413f">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure"><span class="org-clojure-keyword">:wallpaper-mode</span>
 [<span class="org-clojure-keyword">:g</span> [<span class="org-clojure-keyword">:wallpaper</span> <span class="org-string">"/System/Library/Desktop Pictures/Solar Gradients.heic"</span>]]
@@ -690,7 +690,7 @@ I really like Safari, but sometimes need to use Chrome for various extensions et
 </div>
 <div id="outline-container-ID-94658b27-f223-405e-b637-1866e3a1dc0b" class="outline-3">
 <h3 id="ID-94658b27-f223-405e-b637-1866e3a1dc0b">vim-mode (z)</h3>
-<div class="outline-text-3" id="text-orgcf02532">
+<div class="outline-text-3" id="text-orgb576bbe">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure"><span class="org-clojure-keyword">:vim-mode</span>
 [<span class="org-clojure-keyword">:#Sh</span> <span class="org-clojure-keyword">:left_arrow</span>] <span class="org-comment-delimiter">;; </span><span class="org-comment">hjkl navigation everywhere + Shift</span>
@@ -705,13 +705,13 @@ I really like Safari, but sometimes need to use Chrome for various extensions et
 </div>
 
 
-<div id="outline-container-org42151b6" class="outline-4 references">
-<h4 id="org42151b6">Links to this node</h4>
-<div class="outline-text-4" id="text-org42151b6">
+<div id="outline-container-org64958ab" class="outline-4 references">
+<h4 id="org64958ab">Links to this node</h4>
+<div class="outline-text-4" id="text-org64958ab">
 </div>
 <ul class="org-ul">
-<li><a id="org98dcf26"></a><a href="karabiner.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">karabiner config</a><br />
-<div class="outline-text-5" id="text-org98dcf26">
+<li><a id="org1fe4909"></a><a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">shortcuts</a><br />
+<div class="outline-text-5" id="text-org1fe4909">
 <p>
 ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------, ❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ + ❘ ' ❘ &lt;-    ❘ ❘---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----❘ ❘ -&gt;❘ ❘ <a href="#ID-d9445d05-36b8-4435-ba52-b4dd28934160">Q</a> ❘ W ❘ E ❘ R ❘ T ❘ Y ❘ U ❘ I ❘ O ❘ P ❘ ] ❘ ^ ❘     ❘ ❘-----',--',--',--',--',--',--',--',--',--',--',--',--'❘    ❘ ❘ Caps ❘ A ❘ S ❘ D ❘ F ❘ G ❘ H ❘ J ❘ K ❘ L ❘ \ ❘ [ ❘ * ❘    ❘ ❘----,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---'----❘ ❘    ❘ &lt; ❘ <a href="#ID-94658b27-f223-405e-b637-1866e3a1dc0b">Z</a> ❘ <a href="#ID-a89045f9-8744-4b59-9dd8-752d74148268">X</a> ❘ C ❘ V ❘ B ❘ N ❘ M ❘ , ❘ . ❘ - ❘          ❘ ❘----'-,-',--'--,'---'---'---'---'---'---'-,-'---',--,------❘ ❘ ctrl ❘  ❘ alt ❘                          ❘ alt  ❘  ❘ ctrl ❘ '------'  '-----'--------------------------'------'  '------'<br />
 </p>
@@ -722,9 +722,9 @@ I really like Safari, but sometimes need to use Chrome for various extensions et
 </div>
 
 
-<div id="outline-container-org1ad1116" class="outline-3">
-<h3 id="org1ad1116">jupyter mode (j)</h3>
-<div class="outline-text-3" id="text-org1ad1116">
+<div id="outline-container-org1a12a85" class="outline-3">
+<h3 id="org1a12a85">jupyter mode (j)</h3>
+<div class="outline-text-3" id="text-org1a12a85">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure"><span class="org-clojure-keyword">:jupyter-mode</span>
 [<span class="org-clojure-keyword">:l</span> [<span class="org-clojure-keyword">:km</span> <span class="org-string">"Start or Go to Existing Jupyter Lab Server"</span>]]
@@ -733,9 +733,9 @@ I really like Safari, but sometimes need to use Chrome for various extensions et
 </div>
 </div>
 
-<div id="outline-container-org5dfac63" class="outline-3">
-<h3 id="org5dfac63">end main</h3>
-<div class="outline-text-3" id="text-org5dfac63">
+<div id="outline-container-org05df585" class="outline-3">
+<h3 id="org05df585">end main</h3>
+<div class="outline-text-3" id="text-org05df585">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure">]}] <span class="org-comment-delimiter">;;</span><span class="org-comment">end main</span>
 </pre>
@@ -744,9 +744,9 @@ I really like Safari, but sometimes need to use Chrome for various extensions et
 </div>
 </div>
 
-<div id="outline-container-orgdd14a5d" class="outline-2">
-<h2 id="orgdd14a5d">Applications</h2>
-<div class="outline-text-2" id="text-orgdd14a5d">
+<div id="outline-container-org54cbddf" class="outline-2">
+<h2 id="org54cbddf">Applications</h2>
+<div class="outline-text-2" id="text-org54cbddf">
 <div class="org-src-container">
 <pre class="src src-clojure" data-language="clojure"><span class="org-clojure-keyword">:applications</span> [
 
@@ -762,15 +762,15 @@ I really like Safari, but sometimes need to use Chrome for various extensions et
 </div>
 
 
-<div id="outline-container-org9cfd57b" class="outline-2 references">
-<h2 id="org9cfd57b">Links to this node</h2>
-<div class="outline-text-2" id="text-org9cfd57b">
+<div id="outline-container-org9e13e4e" class="outline-2 references">
+<h2 id="org9e13e4e">Links to this node</h2>
+<div class="outline-text-2" id="text-org9e13e4e">
 </div>
-<div id="outline-container-orgd9b5503" class="outline-3">
-<h3 id="orgd9b5503"><a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a></h3>
-<div class="outline-text-3" id="text-orgd9b5503">
+<div id="outline-container-org1597ac6" class="outline-3">
+<h3 id="org1597ac6"><a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a></h3>
+<div class="outline-text-3" id="text-org1597ac6">
 <p>
-connected to a lot of these things is my <a href="karabiner.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">goku (karabiner) config</a>.<br />
+connected to a lot of these things is my <a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">goku (karabiner) config</a>.<br />
 </p>
 </div>
 </div>

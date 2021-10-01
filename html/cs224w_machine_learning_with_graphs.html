@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-09-30 Thu 21:28 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CS224W: Machine Learning with Graphs</title>
+<meta name="author" content="Ketan Agrawal" />
+<meta name="generator" content="Org Mode" />
+<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="preamble" class="status">
+<a style="color: inherit; text-decoration: none" href="/">
+<h2>Ketan's Digital Laboratory &#129514;</h2>
+</a>
+</div>
+<div id="content" class="content">
+<h1 class="title">CS224W: Machine Learning with Graphs</h1>
+
+<div id="outline-container-org03df067" class="outline-2">
+<h2 id="org03df067">Introduction</h2>
+<div class="outline-text-2" id="text-org03df067">
+</div>
+<div id="outline-container-ID-da69965b-ad50-45ad-9e81-b8593e7de09e" class="outline-3">
+<h3 id="ID-da69965b-ad50-45ad-9e81-b8593e7de09e">Why Graphs?</h3>
+<div class="outline-text-3" id="text-orgb91d3eb">
+<p>
+<a href="graphs.html#ID-5705ba04-b296-4446-824b-3551d7bd8a09">Graphs</a> are a general language for describing and analyzing entities with relationships/interactions. Many domains have a natural relational structure, that lends themselves to a graph <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a>:<br />
+</p>
+<ul class="org-ul">
+<li>Physical roads, bridges, tunnels connecting places. 🚗<br /></li>
+<li>Particles, based on their proximities. ⚛️<br /></li>
+<li>Animals in a food ecosystem. 🕸<br /></li>
+<li>Computer networks. 💻<br /></li>
+<li>Knowledge graphs, scene graphs, code graphs&#x2026;<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgde94deb" class="outline-3">
+<h3 id="orgde94deb">Distinction between Networks and Graphs</h3>
+<div class="outline-text-3" id="text-orgde94deb">
+<p>
+Networks = "natural graphs." (social networks, electronic networks, genetic pathrways, brain connections)<br />
+Graphs = a mathematical object representing/modeling the underlying data.<br />
+</p>
+
+<p>
+(Sometimes this distinction is blurred.)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org9aaacf9" class="outline-3">
+<h3 id="org9aaacf9">Today's ML toolbox is good at processing grids (images) and sequences (speech/text.)</h3>
+<div class="outline-text-3" id="text-org9aaacf9">
+<p>
+However, not everything is best represented as a sequence or grid.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org4b075e3" class="outline-3">
+<h3 id="org4b075e3">Why is Graph Deep Learning hard?</h3>
+<div class="outline-text-3" id="text-org4b075e3">
+<ul class="org-ul">
+<li>arbitrary size, topological structure<br /></li>
+<li>no fixed node ordering, reference point<br /></li>
+<li>dynamic, multimodal<br /></li>
+</ul>
+
+
+<div id="org990c784" class="figure">
+<p><img src="network_vs_image.png" alt="network_vs_image.png" /><br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org10dda42" class="outline-3">
+<h3 id="org10dda42">Representation learning</h3>
+<div class="outline-text-3" id="text-org10dda42">
+<p>
+We can learn directly on graphs, rather than feature engineering.<br />
+</p>
+
+<p>
+General strategy: map nodes to \(d\)-dimensional embeddings such that similar nodes are embedded close together.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org6bf53bf" class="outline-3">
+<h3 id="org6bf53bf">Applications of Graph ML</h3>
+<div class="outline-text-3" id="text-org6bf53bf">
+<p>
+Different tasks we can do:<br />
+</p>
+
+<ul class="org-ul">
+<li>graph =&gt; prediction<br /></li>
+<li>=&gt; generate graph<br /></li>
+<li>graph =&gt; subgraph<br /></li>
+<li>node =&gt; prediction<br /></li>
+<li>edge =&gt; prediction<br /></li>
+<li>missing links<br /></li>
+<li>clustering<br /></li>
+<li>evolution<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgda87bf4" class="outline-4">
+<h4 id="orgda87bf4">Node-level: AlphaFold</h4>
+<div class="outline-text-4" id="text-orgda87bf4">
+<p>
+Nodes = amino acids, Edges = proximity between amino acids<br />
+Key idea: "spatial graph"<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgab67915" class="outline-4">
+<h4 id="orgab67915">Edge-level: Recommender Systems</h4>
+<div class="outline-text-4" id="text-orgab67915">
+<p>
+Nodes = users and items, edges = user-item interactions<br />
+Link prediction: Goal is to predict "missing" edges.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org07ece09" class="outline-4">
+<h4 id="org07ece09">Edge-level: Drug Side Effects</h4>
+<div class="outline-text-4" id="text-org07ece09">
+<p>
+Nodes = drugs, edges = side effects<br />
+Given a pair of drugs, predict adverse side effects.<br />
+Link prediction task.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc6f46fc" class="outline-4">
+<h4 id="orgc6f46fc">Subgraph-level: Traffic Prediction</h4>
+</div>
+<div id="outline-container-orgc60af90" class="outline-4">
+<h4 id="orgc60af90">Graph-level: Drug Discovery</h4>
+<div class="outline-text-4" id="text-orgc60af90">
+<p>
+Nodes = atoms, edges = bonds<br />
+Predict promising molecules from a pool of condidates<br />
+Generate novel molecules with high "score"<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orga9e6cbe" class="outline-4">
+<h4 id="orga9e6cbe">Graph evolution: Physics Simulation</h4>
+<div class="outline-text-4" id="text-orga9e6cbe">
+<p>
+Nodes = particles, edges = interactions between particles<br />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c" class="outline-2 headlines-grid-container">
+<h2 id="ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c"><a href="graphs.html#ID-5705ba04-b296-4446-824b-3551d7bd8a09">Graph</a> <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">Representations</a></h2>
+<div class="outline-text-2" id="text-org49981c1">
+<p>
+A few different traditional graph representations we can use.<br />
+</p>
+</div>
+<div id="outline-container-orga5651e5" class="outline-3">
+<h3 id="orga5651e5">Adjacency matrix</h3>
+<div class="outline-text-3" id="text-orga5651e5">
+<p>
+Problem: real-world graphs are <b>sparse</b>. I.e., the adjancency matrix would be filled with zeros, a highly inefficient representation.<br />
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>1</b></td>
+<td class="org-left"><b>2</b></td>
+<td class="org-left"><b>3</b></td>
+<td class="org-left"><b>4</b></td>
+<td class="org-left"><b>5</b></td>
+</tr>
+
+<tr>
+<td class="org-left"><b>1</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">X</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>2</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">X</td>
+<td class="org-left">X</td>
+<td class="org-left">X</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>3</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">X</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">X</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>4</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">X</td>
+<td class="org-left">X</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">X</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>5</b></td>
+<td class="org-left">X</td>
+<td class="org-left">X</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">X</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org14b0ca5" class="outline-3">
+<h3 id="org14b0ca5">Edge list</h3>
+<div class="outline-text-3" id="text-org14b0ca5">
+<ul class="org-ul">
+<li>(2, 3)<br /></li>
+<li>(2, 4)<br /></li>
+<li>(3, 2)<br /></li>
+<li>(3, 4)<br /></li>
+<li>(4, 5)<br /></li>
+<li>(5, 2)<br /></li>
+<li>(5, 1)<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org34b6a7d" class="outline-3">
+<h3 id="org34b6a7d">Adjacency list</h3>
+<div class="outline-text-3" id="text-org34b6a7d">
+<ul class="org-ul">
+<li>1:<br /></li>
+<li>2: 3, 4<br /></li>
+<li>3: 2, 4<br /></li>
+<li>4: 5<br /></li>
+<li>5: 1, 2<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga374c7f" class="outline-3">
+<h3 id="orga374c7f">More types of graphs</h3>
+<div class="outline-text-3" id="text-orga374c7f">
+<p>
+Self-edges: nodes that loop to themselves<br />
+Multigraph: allows multiple edges between the same two nodes<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orga8e8e2a" class="outline-3">
+<h3 id="orga8e8e2a">Connectivity</h3>
+<div class="outline-text-3" id="text-orga8e8e2a">
+<p>
+Strongly connected: path from each node to every other node<br />
+Weakly connected: strongly connected if we disregard edge directions<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org84b022d" class="outline-2">
+<h2 id="org84b022d">Traditional Graph ML Methods</h2>
+<div class="outline-text-2" id="text-org84b022d">
+<p>
+Three major types of tasks: <b>node-level</b> prediction, <b>link-level</b> prediction, and <b>graph-level</b> prediction.<br />
+The traditional graph ML pipeline: design features for nodes/links/graphs, obtain said features<br />
+</p>
+</div>
+<div id="outline-container-ID-399d9298-4382-40ef-9a1e-11f9bd7b3206" class="outline-3">
+<h3 id="ID-399d9298-4382-40ef-9a1e-11f9bd7b3206">Node-level <a href="features.html#ID-a7203065-7321-4a95-adbe-d38f0d5159c8">Features</a></h3>
+<div class="outline-text-3" id="text-orga51a362">
+<p>
+Different ways to model centrality:<br />
+</p>
+</div>
+<div id="outline-container-org8cff58c" class="outline-4">
+<h4 id="org8cff58c">Node degree</h4>
+<div class="outline-text-4" id="text-org8cff58c">
+<p>
+node degree \(k_v\) of the node \(v\) is the number of outgoing edges<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org7efca48" class="outline-4">
+<h4 id="org7efca48">Centrality</h4>
+<div class="outline-text-4" id="text-org7efca48">
+<p>
+Node centrality: how important is a given node to the structure of the network?<br />
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org66a2fc9"></a>Eigenvector centrality<br />
+<div class="outline-text-5" id="text-org66a2fc9">
+<p>
+A node v is important if surrounded by important neighboring nodes \(u \in N(v)\).<br />
+\[c_v = \frac{1}{\lambda} \sum_{u \in N(v)} c_u\]<br />
+</p>
+</div>
+</li>
+<li><a id="org740b28c"></a>Betweenness centrality<br />
+<div class="outline-text-5" id="text-org740b28c">
+<p>
+A node is important if it lies on many shortest paths between other nodes.<br />
+\[c_{v}=\sum_{s \neq v \neq t} \frac{\#(\text { shortest paths betwen } s \text { and } t \text { that contain } v)}{\#(\text { shortest paths between } s \text { and } t)}\]<br />
+</p>
+</div>
+</li>
+<li><a id="org22e20f1"></a>Clustering coefficient<br />
+<div class="outline-text-5" id="text-org22e20f1">
+<p>
+How connected \(v\)'s neighboring nodes are:<br />
+\[e_v = \frac{\text{\#(edges among neighboring nodes)}}{\binom{k_v}{2}}\]<br />
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org9214724" class="outline-4">
+<h4 id="org9214724">Graphlet</h4>
+<div class="outline-text-4" id="text-org9214724">
+<p>
+Small subgraphs that describe the structure of a node neighborhood.<br />
+</p>
+
+
+<div id="org65176a6" class="figure">
+<p><img src="graphlets.png" alt="all graphlets of up to 5 nodes" width="300" /><br />
+</p>
+</div>
+
+<p>
+<b>Graphlets</b> are <i>rooted</i>, <i>connected</i>, <i>induced</i>, <i>non-isomorphic</i> subgraphs.<br />
+</p>
+
+<p>
+<b>Graphlet Degree Vector (GDV)</b>: a count vector of graphlets rooted at a given node.<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-ID-968e752d-b121-4822-92c5-57f29181e914" class="outline-3">
+<h3 id="ID-968e752d-b121-4822-92c5-57f29181e914">Link-level <a href="features.html#ID-a7203065-7321-4a95-adbe-d38f0d5159c8">Features</a></h3>
+<div class="outline-text-3" id="text-org7d8b00d">
+<p>
+These can be used in link prediction tasks &#x2013; i.e., whether two nodes should be connected / will be connected in the future.<br />
+</p>
+</div>
+<div id="outline-container-orga2ef506" class="outline-4">
+<h4 id="orga2ef506">Distance-based features</h4>
+<div class="outline-text-4" id="text-orga2ef506">
+<p>
+Use the shortest path length between two nodes.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgb82b847" class="outline-4">
+<h4 id="orgb82b847">Local neighborhood overlap</h4>
+<div class="outline-text-4" id="text-orgb82b847">
+<p>
+Capture how many neighboring nodes are shared by two nodes.<br />
+</p>
+
+<p>
+Common neighbors: \(\left|N\left(v_{1}\right) \cap N\left(v_{2}\right)\right|\)<br />
+Jaccard coefficient: \(\frac{\left|N\left(v_{1}\right) \cap N\left(v_{2}\right)\right|}{\left|N\left(v_{1}\right) \cup N\left(v_{2}\right)\right|}\)<br />
+Adamic-Amar index: \(\sum_{u \in N\left(v_{1}\right) \cap N\left(v_{2}\right)} \frac{1}{\log \left(k_{u}\right)}\)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc3fd9a2" class="outline-4">
+<h4 id="orgc3fd9a2">Global neighborhood overlap</h4>
+<div class="outline-text-4" id="text-orgc3fd9a2">
+<p>
+Count the number of paths of all lengths between the two nodes.<br />
+</p>
+
+<p>
+Katz index matrix:<br />
+\[S=\sum_{i=1}^{\infty} \beta^{i} \boldsymbol{A}^{i}=(\boldsymbol{I}-\beta \boldsymbol{A})^{-1}-\boldsymbol{I}\]<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-ID-c36de436-5329-4b0d-8250-e706ae9a5306" class="outline-3">
+<h3 id="ID-c36de436-5329-4b0d-8250-e706ae9a5306">Graph-level <a href="features.html#ID-a7203065-7321-4a95-adbe-d38f0d5159c8">Features</a></h3>
+<div class="outline-text-3" id="text-org3126950">
+<p>
+Goal: we want features that characterize the structure of an entire graph.<br />
+</p>
+
+<p>
+<b><a href="kernels.html#ID-f5c0386c-29c6-45d5-90ef-b26484ed7ae4">Kernel</a> methods</b> are widely-used for traditional graph-level prediction. The idea is to design kernels instead of feature vectors.<br />
+</p>
+
+<p>
+That is, we want some graph feature vector \(\phi(G)\). Basically, bag-of-words for a graph, in that each node has some features, but the ordering / relation between nodes isn't considered.<br />
+</p>
+</div>
+
+<div id="outline-container-orgeda332e" class="outline-4">
+<h4 id="orgeda332e">Graphlet Kernels</h4>
+</div>
+<div id="outline-container-org7f6ccac" class="outline-4">
+<h4 id="org7f6ccac">Weisfeiler-Lehman Kernel</h4>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p>Made with <span class="heart">♥</span> using
+<a href="https://orgmode.org/">org-mode</a>.
+Source code is available
+<a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<script src="popper.min.js"></script>
+<script src="tippy-bundle.umd.min.js"></script>
+<script src="tooltips.js" async></script>
+</div>
+</body>
+</html>
