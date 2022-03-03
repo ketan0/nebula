@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-02 Wed 20:50 -->
+<!-- 2022-03-02 Wed 20:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>representations</title>
@@ -45,36 +45,36 @@
 <h1 class="title">representations</h1>
 
 
-<div id="outline-container-org590714b" class="outline-2 references">
-<h2 id="org590714b">Links to this node</h2>
-<div class="outline-text-2" id="text-org590714b">
+<div id="outline-container-org6f6ba95" class="outline-2 references">
+<h2 id="org6f6ba95">Links to this node</h2>
+<div class="outline-text-2" id="text-org6f6ba95">
 </div>
-<div id="outline-container-org61419b5" class="outline-3">
-<h3 id="org61419b5"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
-<div class="outline-text-3" id="text-org61419b5">
+<div id="outline-container-org1ad1cd6" class="outline-3">
+<h3 id="org1ad1cd6"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-org1ad1cd6">
 <p>
-We have images \(\mathbf{x}\), and labels \(y\). In generative modeling, it's common to assume that each \(\mathbf{x}\) can be described by some lower-dimensional latent space \(\mathbf{z}\) (e.g. color, shape, etc.) We'd like this latent <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> to be disentangled into several separate, semenatically meaningful factors, so we can control the influence of each on the classifier's decision. Usually in disentangled modeling, these factors are assumed to be statistically independent&#x2013; however, in practice this is a poor assumption. One rather contrived example is found in the colored MNIST dataset:<br />
+We have images \(\mathbf{x}\), and labels \(y\). In generative modeling, it&rsquo;s common to assume that each \(\mathbf{x}\) can be described by some lower-dimensional latent space \(\mathbf{z}\) (e.g. color, shape, etc.) We&rsquo;d like this latent <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> to be disentangled into several separate, semenatically meaningful factors, so we can control the influence of each on the classifier&rsquo;s decision. Usually in disentangled modeling, these factors are assumed to be statistically independent&#x2013; however, in practice this is a poor assumption. One rather contrived example is found in the colored MNIST dataset:<br />
 </p>
 
 
-<div id="org7c5c770" class="figure">
+<div id="org192bb78" class="figure">
 <p><img src="colored_mnist.png" alt="example digits in colored MNIST dataset." /><br />
 </p>
 </div>
 
 <p>
-We might want to disentangle digit shape from color; however, in the train fold, all examples of the same digit are also the same color. (In the test fold, the colors are randomized.) Given this dataset, a "dumb" neural net might learn to do the simplest thing, which is to count how many pixels are a certain color; if a digit is red, it assumes it must be a 0, if it's green, a 1, and so on, completely ignoring the digit's shape.<br />
+We might want to disentangle digit shape from color; however, in the train fold, all examples of the same digit are also the same color. (In the test fold, the colors are randomized.) Given this dataset, a &ldquo;dumb&rdquo; neural net might learn to do the simplest thing, which is to count how many pixels are a certain color; if a digit is red, it assumes it must be a 0, if it&rsquo;s green, a 1, and so on, completely ignoring the digit&rsquo;s shape.<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgcee0ad9" class="outline-3">
-<h3 id="orgcee0ad9"><a href="philosophy.html#ID-091329e5-7896-4975-b88b-99b30f4dd482">philosophy</a></h3>
-<div class="outline-text-3" id="text-orgcee0ad9">
+<div id="outline-container-orgbe1ce70" class="outline-3">
+<h3 id="orgbe1ce70"><a href="philosophy.html#ID-091329e5-7896-4975-b88b-99b30f4dd482">philosophy</a></h3>
+<div class="outline-text-3" id="text-orgbe1ce70">
 <blockquote>
 <p>
 The aim of philosophy, abstractly formulated, is to understand how things in the broadest possible sense of the term hang together in the broadest possible sense of the term.<br />
-&#x2013; Wilfrid Sellars, "Philosophy and the Scientific Image of Man"<br />
+&#x2013; Wilfrid Sellars, &ldquo;Philosophy and the Scientific Image of Man&rdquo;<br />
 </p>
 </blockquote>
 
@@ -88,7 +88,7 @@ Some things we can think about in a philosophical lens&#x2026;<br />
 Do we have <a href="free_will.html#ID-ed67aff3-34f7-461e-adc0-37d3fbb2a890">free will</a> / agency? Are we just subservient to a deterministic universe? Or both??<br />
 </p>
 
-<div id="org0642eec" class="figure">
+<div id="orge932d2c" class="figure">
 <p><img src="glider_gun.gif" alt="A glider gun in Conway's Game of Life." /><br />
 </p>
 </div></li>
@@ -100,22 +100,22 @@ Do we have <a href="free_will.html#ID-ed67aff3-34f7-461e-adc0-37d3fbb2a890">free
 </div>
 </div>
 
-<div id="outline-container-org993f5c9" class="outline-3">
-<h3 id="org993f5c9"><a href="towards_causal_representation_learning.html#ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922">What causes changes in distribution?</a></h3>
-<div class="outline-text-3" id="text-org993f5c9">
+<div id="outline-container-orgb61b0e1" class="outline-3">
+<h3 id="orgb61b0e1"><a href="towards_causal_representation_learning.html#ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922">What causes changes in distribution?</a></h3>
+<div class="outline-text-3" id="text-orgb61b0e1">
 <p>
-hypothesis to replace i.i.d. assumption: changes in distribution = consequence of an <b>intervention</b> on one/few <b>causes</b> /mechanisms. So, not identically distributed, but pretty similar, if you're in the right high-level <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> space. (E.g. if you put shaded glasses on, all the pixels change in basic RGB space &#x2013; but in some high-level semantic space, only one bit changed!)<br />
+hypothesis to replace i.i.d. assumption: changes in distribution = consequence of an <b>intervention</b> on one/few <b>causes</b> /mechanisms. So, not identically distributed, but pretty similar, if you&rsquo;re in the right high-level <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> space. (E.g. if you put shaded glasses on, all the pixels change in basic RGB space &#x2013; but in some high-level semantic space, only one bit changed!)<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge00dfb2" class="outline-3">
-<h3 id="orge00dfb2"><a href="cs224w_machine_learning_with_graphs.html#ID-da69965b-ad50-45ad-9e81-b8593e7de09e">Why Graphs?</a></h3>
-<div class="outline-text-3" id="text-orge00dfb2">
+<div id="outline-container-orga0d708c" class="outline-3">
+<h3 id="orga0d708c"><a href="cs224w_machine_learning_with_graphs.html#ID-da69965b-ad50-45ad-9e81-b8593e7de09e">Why Graphs?</a></h3>
+<div class="outline-text-3" id="text-orga0d708c">
 </div>
-<div id="outline-container-org9cc21f6" class="outline-4">
-<h4 id="org9cc21f6">(<i>Introduction &gt; Why Graphs?</i>)</h4>
-<div class="outline-text-4" id="text-org9cc21f6">
+<div id="outline-container-orga593d2a" class="outline-4">
+<h4 id="orga593d2a">(<i>Introduction &gt; Why Graphs?</i>)</h4>
+<div class="outline-text-4" id="text-orga593d2a">
 <p>
 <a href="graphs.html#ID-5705ba04-b296-4446-824b-3551d7bd8a09">Graphs</a> are a general language for describing and analyzing entities with relationships/interactions. Many domains have a natural relational structure, that lends themselves to a graph <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a>:<br />
 </p>
@@ -130,9 +130,9 @@ hypothesis to replace i.i.d. assumption: changes in distribution = consequence o
 </div>
 </div>
 
-<div id="outline-container-orga8bd567" class="outline-3">
-<h3 id="orga8bd567"><a href="cs224w_machine_learning_with_graphs.html#ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c">Graph Representations</a></h3>
-<div class="outline-text-3" id="text-orga8bd567">
+<div id="outline-container-orgc7340db" class="outline-3">
+<h3 id="orgc7340db"><a href="cs224w_machine_learning_with_graphs.html#ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c">Graph Representations</a></h3>
+<div class="outline-text-3" id="text-orgc7340db">
 <p>
 A few different traditional graph representations we can use.<br />
 </p>
