@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       bd461df8-4837-40a7-8260-6cf777cf6d5c
+:END:
+#+title: CS246: Mining Massive Datasets
+
+* Introduction
+* MapReduce
+* Spark
+* Frequent Itemsets Mining

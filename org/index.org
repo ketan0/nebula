@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       23e03a28-48b1-4fa3-9fa3-71a369950c6d
 :END:
-#+title: Hello
+#+title: Ketan's Nebula
 
 #+begin_export html
 <svg display="block" style="margin: auto;" width="240px" height="240px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,20 +16,11 @@
       .stop2 { stop-color: #4eb8ca; }
     ]]></style>
   </defs>
-  <path class="beaker" d="M8.99998 4.5V10.7382C8.99998 11.1132 8.90628 11.4822 8.72739 11.8117L7.53944 14H16.4605L15.2726 11.8117C15.0937 11.4822 15 11.1132 15 10.7382V4.5H16C16.4142 4.5 16.75 4.16421 16.75 3.75C16.75 3.33579 16.4142 3 16 3H8C7.58579 3 7.25 3.33579 7.25 3.75C7.25 4.16421 7.58579 4.5 8 4.5H8.99998Z" stroke-width="1"/>
-  <path class="beaker" d="M17.2748 15.5H6.72515L5.14269 18.415C4.50968 19.5811 5.35388 20.9999 6.68068 20.9999H17.3193C18.6461 20.9999 19.4903 19.5811 18.8573 18.415L17.2748 15.5Z" fill="#212121"/>
+  <circle r="8" cx="8" cy="8" fill="#bb00bb" opacity="0.4"/>
+  <circle r="8" cx="12" cy="12" fill="#bb0000" opacity="0.4"/>
+  <circle r="8" cx="16" cy="16" fill="#0000bb" opacity="0.4"/>
 </svg>
 #+end_export
 
-Welcome to my digital laboratory! This site (the public facing side of my [[id:16db6da7-fbb6-4614-a23c-79ad58a43310][zettelkasten]]) is currently under construction. 🚧
-
-[[id:e6aca40a-e418-4a55-b74e-dfb0109152aa][What's the point?]]
-
-* What you'll find in my laboratory
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: headlines-grid-container
-:END:
-** [[id:0997b060-ee05-458e-beed-3494675c879d][programming]]
-** [[id:b56d1847-4a25-47cf-a019-4d00319d0dd1][visuals]]
-** [[id:091329e5-7896-4975-b88b-99b30f4dd482][philosophy]]
-** [[id:e2ff4d71-a630-4a8d-94d4-66606f321bd4][musings]]
+[[id:091329e5-7896-4975-b88b-99b30f4dd482][philosophy]]
+[[id:058bef0b-aba6-4ac6-b4ae-b3c7b7e22040][shortcuts]]

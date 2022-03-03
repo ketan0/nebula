@@ -3,14 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-30 Thu 21:28 -->
+<!-- 2022-03-02 Wed 20:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Counterfactual Generative Networks</title>
 <meta name="author" content="Ketan Agrawal" />
 <meta name="generator" content="Org Mode" />
-<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -40,9 +39,7 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/">
-<h2>Ketan's Digital Laboratory &#129514;</h2>
-</a>
+<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Nebula</h2></a>
 </div>
 <div id="content" class="content">
 <h1 class="title">Counterfactual Generative Networks</h1>
@@ -58,15 +55,15 @@
 This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
 </p>
 
-<div id="outline-container-org65327eb" class="outline-2">
-<h2 id="org65327eb">Problem setting:</h2>
-<div class="outline-text-2" id="text-org65327eb">
+<div id="outline-container-org9c750b5" class="outline-2">
+<h2 id="org9c750b5">Problem setting:</h2>
+<div class="outline-text-2" id="text-org9c750b5">
 <p>
 We have images \(\mathbf{x}\), and labels \(y\). In generative modeling, it's common to assume that each \(\mathbf{x}\) can be described by some lower-dimensional latent space \(\mathbf{z}\) (e.g. color, shape, etc.) We'd like this latent <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> to be disentangled into several separate, semenatically meaningful factors, so we can control the influence of each on the classifier's decision. Usually in disentangled modeling, these factors are assumed to be statistically independent&#x2013; however, in practice this is a poor assumption. One rather contrived example is found in the colored MNIST dataset:<br />
 </p>
 
 
-<div id="org90d6e93" class="figure">
+<div id="org7ba5d8b" class="figure">
 <p><img src="colored_mnist.png" alt="example digits in colored MNIST dataset." /><br />
 </p>
 </div>
@@ -76,9 +73,9 @@ We might want to disentangle digit shape from color; however, in the train fold,
 </p>
 </div>
 </div>
-<div id="outline-container-org80e3d83" class="outline-2">
-<h2 id="org80e3d83">Structural Causal Models</h2>
-<div class="outline-text-2" id="text-org80e3d83">
+<div id="outline-container-orgb0b098c" class="outline-2">
+<h2 id="orgb0b098c">Structural Causal Models</h2>
+<div class="outline-text-2" id="text-orgb0b098c">
 <p>
 An SCM \(\mathfrak{C}\) is defined is a collection of \(d\) structural assignments<br />
 \(S_{j}:=f_{j}\left(\mathbf{P A}_{j}, U_{j}\right), \quad j=1, \ldots, d\)<br />
@@ -86,20 +83,20 @@ where each random variable \(S_{j}\) is a function of its parents \(\mathbf{P A}
 </p>
 </div>
 </div>
-<div id="outline-container-org6a13bd9" class="outline-2">
-<h2 id="org6a13bd9">Architecture</h2>
-<div class="outline-text-2" id="text-org6a13bd9">
+<div id="outline-container-orgad6beef" class="outline-2">
+<h2 id="orgad6beef">Architecture</h2>
+<div class="outline-text-2" id="text-orgad6beef">
 
-<div id="org93bb758" class="figure">
+<div id="org68f50b0" class="figure">
 <p><img src="cgn_architecture.png" alt="architecture diagram of the Counterfactual Generative Network (CGN.)" /><br />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org30cf62c" class="outline-2">
-<h2 id="org30cf62c">Bibliography</h2>
-<div class="outline-text-2" id="text-org30cf62c">
+<div id="outline-container-org954ad61" class="outline-2">
+<h2 id="org954ad61">Bibliography</h2>
+<div class="outline-text-2" id="text-org954ad61">
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry">NO_ITEM_DATA:sauerCounterfactualGenerativeNetworks2021</div>
 </div>
@@ -113,7 +110,7 @@ Source code is available
 <a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
-<script src="tooltips.js" async></script>
+<script src="tooltips.js"></script>
 </div>
 </body>
 </html>

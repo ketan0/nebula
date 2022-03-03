@@ -103,3 +103,6 @@ print(np.outer(a, b))
 10. [H] *Say we have the weights $w \in R^{d \times m}$ and a mini-batch $x$ of $n$ elements, each of the shape $1 \times d$ so that $x \in R^{n \times d}$. We have the output $y = f(x;w) = xw$. What's the dimension of the Jacobian $\frac{\delta y}{\delta x}$?*
 11. [H] *Given a very large symmetric matrix $A$ that doesn't fit in memory, say $A \in R^{1M \times 1M}$ and a function $f$ that can quickly compute $f(x) = Ax$ for $x \in R^{1M}$, find the unit vector $x$ such that $x^TAx$ is minimal.*
 ** Probability and statistics
+* Machine learning workflows
+** Empirical risk minimization
+ s

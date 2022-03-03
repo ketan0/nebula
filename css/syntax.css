@@ -40,6 +40,11 @@
   color: #29838d;
 }
 
+.org-clojure-keyword {
+  /* clojure-keyword-face */
+  color: #97365b;
+}
+
 .org-comment {
   /* font-lock-comment-face */
   color: #b1b1b1;
@@ -63,6 +68,12 @@
 .org-function-name {
   /* font-lock-function-name-face */
   color: #29838d;
+}
+
+.org-highlight-numbers-number {
+  /* highlight-numbers-number */
+  color: #97365b;
+  font-weight: bold;
 }
 
 .org-keyword {

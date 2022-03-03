@@ -18,6 +18,7 @@ function setupTooltips() {
       const instance = tippy(event.target, {
         allowHTML: true,
         interactive: true,
+        delay: [500, null],
         touch: ['hold', 500],
         maxWidth: '30rem',
         inlinePositioning: false,

@@ -10,13 +10,35 @@ body {
   line-height: 28px;
 }
 
+.nebula {
+  background-color: #990099;
+}
+
+#table-of-contents {
+  background-color: #eee;
+  position: fixed;
+  top: 100px;
+  left: 0px;
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+
 .title {
   text-align: center;
   font-weight: 300;
   margin-bottom: 40px;
 }
 
-.karabiner-keyboard-container > div.outline-text-2 > p {
+span.done {
+  font-style: italic;
+}
+
+span.todo {
+  font-weight: 700;
+}
+
+.karabiner-keyboard-container > div.outline-text-2 > p,
+.karabiner-keyboard-container > div.outline-text-3 > p {
   line-height: 9px;
   white-space: pre;
   font-family: monospace;
@@ -60,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #eee;
   padding: 8px 16px;
   border-radius: 25px;
-  max-width: 20rem;
+  /* max-width: 20rem; */
 }
 
 .references > div > h2,
@@ -130,8 +152,10 @@ blockquote {
 }
 
 a {
-  color: #01a049;
+  /* color: #01a049; */
+  color: #66cc00;
   text-decoration: none;
+  font-weight: 700;
 }
 
 a:visited {

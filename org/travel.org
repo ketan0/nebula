@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       07318f52-e429-4cbf-b5ac-022dfd7dc8f0
+:END:
+#+title: travel
+
+I want to travel the world (more than I have so far.)
+
+I studied abroad in [[id:e73691b0-18a3-42b0-8ac2-ba888d1080d0][Japan]], and that was pretty cool.
+
+Good resources:
+https://cs.stanford.edu/people/widom/travelfavs.html

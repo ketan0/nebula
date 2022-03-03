@@ -3,14 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-30 Thu 21:28 -->
+<!-- 2022-03-02 Wed 20:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>computer vision</title>
 <meta name="author" content="Ketan Agrawal" />
 <meta name="generator" content="Org Mode" />
-<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -19,24 +18,51 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/">
-<h2>Ketan's Digital Laboratory &#129514;</h2>
-</a>
+<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Nebula</h2></a>
 </div>
 <div id="content" class="content">
 <h1 class="title">computer vision</h1>
 
 
-<div id="outline-container-orgb95b05a" class="outline-2 references">
-<h2 id="orgb95b05a">Links to this node</h2>
-<div class="outline-text-2" id="text-orgb95b05a">
+<div id="outline-container-org352798c" class="outline-2 references">
+<h2 id="org352798c">Links to this node</h2>
+<div class="outline-text-2" id="text-org352798c">
 </div>
-<div id="outline-container-org5b1712d" class="outline-3">
-<h3 id="org5b1712d"><a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a></h3>
-<div class="outline-text-3" id="text-org5b1712d">
+<div id="outline-container-org8131b37" class="outline-3">
+<h3 id="org8131b37"><a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a></h3>
+<div class="outline-text-3" id="text-org8131b37">
+<p>
+You have a set of reusable pieces that can be combined to form different, interesting things.<br />
+</p>
+
+<p>
+Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programs</a> into modular, reusable unit is one example of this.<br />
+</p>
+
+
+<div id="org9cb8d35" class="figure">
+<p><img src="decomposition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
+</p>
+</div>
+
+<p>
+Some methodical activities, such as making breakfast, decompose well into modular activities as well:<br />
+</p>
+
+<div id="org36fd099" class="figure">
+<p><img src="breakfast.png" alt="tree of the decomposition of making breakfast into &quot;make toast,&quot; &quot;make tea,&quot; etc." /><br />
+</p>
+</div>
+
 <p>
 A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> example of compositionaity is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model's early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
 </p>
+
+
+<div id="org0ef4d01" class="figure">
+<p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -48,7 +74,7 @@ Source code is available
 <a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
-<script src="tooltips.js" async></script>
+<script src="tooltips.js"></script>
 </div>
 </body>
 </html>

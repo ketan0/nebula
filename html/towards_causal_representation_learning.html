@@ -3,14 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-30 Thu 21:28 -->
+<!-- 2022-03-02 Wed 20:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Towards Causal Representation Learning</title>
 <meta name="author" content="Ketan Agrawal" />
 <meta name="generator" content="Org Mode" />
-<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -19,9 +18,7 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/">
-<h2>Ketan's Digital Laboratory &#129514;</h2>
-</a>
+<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Nebula</h2></a>
 </div>
 <div id="content" class="content">
 <h1 class="title">Towards Causal Representation Learning</h1>
@@ -49,25 +46,25 @@ But&#x2026;what assumption can we replace it with, then?<br />
 how does the brain break knowledge apart into "pieces" that can be reused? =&gt; <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a> (thinking decomposition into helper functions in programming.) Examples of compositionality include<br />
 </p>
 
-<div id="outline-container-orgce567c7" class="outline-2">
-<h2 id="orgce567c7">Systematic Generalization</h2>
-<div class="outline-text-2" id="text-orgce567c7">
+<div id="outline-container-org842a55e" class="outline-2">
+<h2 id="org842a55e">Systematic Generalization</h2>
+<div class="outline-text-2" id="text-org842a55e">
 <p>
 Current DL methods overfit the training <b>distribution</b>. That is, if they encounter OOD data, they will perform poorly.<br />
 </p>
 </div>
-<div id="outline-container-orgc38d541" class="outline-3">
-<h3 id="orgc38d541">Conscious processing helps humans deal with OOD settings</h3>
-<div class="outline-text-3" id="text-orgc38d541">
+<div id="outline-container-orgd4f930e" class="outline-3">
+<h3 id="orgd4f930e">Conscious processing helps humans deal with OOD settings</h3>
+<div class="outline-text-3" id="text-orgd4f930e">
 <p>
 We are <i>agents</i>, and agents face a dynamic environment &#x2013; particularly because there are other agents! We want our knowledge to generalize across different places, times, input modalities, goals, etc.<br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org4f19e19" class="outline-2">
-<h2 id="org4f19e19">System 1 vs. System 2</h2>
-<div class="outline-text-2" id="text-org4f19e19">
+<div id="outline-container-orgfe86c87" class="outline-2">
+<h2 id="orgfe86c87">System 1 vs. System 2</h2>
+<div class="outline-text-2" id="text-orgfe86c87">
 <p>
 <b>System 1</b>: Intuitive, fast, unconscious, parallel, non-linguistic, habitual<br />
 <b>System 2</b>: Slow, logical, sequential, conscious, linguistic, algorithmic, planning, reasoning<br />
@@ -78,9 +75,9 @@ Current deep learning systems excel at <a href="thinking_fast_and_slow.html#ID-1
 </p>
 </div>
 </div>
-<div id="outline-container-org15a7e54" class="outline-2">
-<h2 id="org15a7e54">Implicit vs. verbalizable knowledge</h2>
-<div class="outline-text-2" id="text-org15a7e54">
+<div id="outline-container-org1c52275" class="outline-2">
+<h2 id="org1c52275">Implicit vs. verbalizable knowledge</h2>
+<div class="outline-text-2" id="text-org1c52275">
 <p>
 Most of our knowledge is implicit, and not verbalizable. Same for neural networks.<br />
 </p>
@@ -92,20 +89,20 @@ Verbalizable knowledge can be explicitly reasoned with, planned with.<br />
 </div>
 <div id="outline-container-ID-ea661fe1-d0f4-4bf8-9678-0cbbe9f73fc5" class="outline-2">
 <h2 id="ID-ea661fe1-d0f4-4bf8-9678-0cbbe9f73fc5">Independent mechanisms</h2>
-<div class="outline-text-2" id="text-org3d3a52e">
+<div class="outline-text-2" id="text-org5232300">
 <p>
 Hypothesis: We can explain the world by the composition of informationally independent pieces/modules/mechanisms. (Note: not statistically independent, but independent s.t. any causal <a href="causal_inference.html#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a> would affect just one such mechanism.)<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org2b5ff06" class="outline-2">
-<h2 id="org2b5ff06">Some System 2 inductive priors</h2>
-<div class="outline-text-2" id="text-org2b5ff06">
+<div id="outline-container-orgf4154b1" class="outline-2">
+<h2 id="orgf4154b1">Some System 2 inductive priors</h2>
+<div class="outline-text-2" id="text-orgf4154b1">
 <p>
 Sparse causal graph of high-level, semantically meaningful variables.<br />
 </p>
 
-<div id="orga711a58" class="figure">
+<div id="orge91b1cb" class="figure">
 <p><img src="origin_image.png" alt="Sparse factor graph." /><br />
 </p>
 </div>
@@ -135,9 +132,9 @@ Causal chains to explain things are short. (Interesting: connection to <a href="
 </p>
 </div>
 </div>
-<div id="outline-container-org8a1dfb7" class="outline-2">
-<h2 id="org8a1dfb7">What should the causal variables be?</h2>
-<div class="outline-text-2" id="text-org8a1dfb7">
+<div id="outline-container-org2792d76" class="outline-2">
+<h2 id="org2792d76">What should the causal variables be?</h2>
+<div class="outline-text-2" id="text-org2792d76">
 <p>
 Position and momentum of every particle: computationally intractable.<br />
 </p>
@@ -149,7 +146,7 @@ Take inspiration from scientists (and humans in general): we invent <i>high-leve
 </div>
 <div id="outline-container-ID-5b73a108-e867-4b92-9949-832840d52869" class="outline-2">
 <h2 id="ID-5b73a108-e867-4b92-9949-832840d52869">Agency to Guide Representation Learning &amp; Disentangling</h2>
-<div class="outline-text-2" id="text-orgae32bb7">
+<div class="outline-text-2" id="text-orgf2a153c">
 <p>
 (E. Bengio et al, 2017; V Thomas e al 2017; Kim et al ICML 2019)<br />
 </p>
@@ -169,23 +166,23 @@ Connected to the psychological notion of <a href="affordances.html#ID-0cebd56a-9
 </div>
 <div id="outline-container-ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922" class="outline-2">
 <h2 id="ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922">What causes changes in distribution?</h2>
-<div class="outline-text-2" id="text-orgefa6303">
+<div class="outline-text-2" id="text-org09eaefe">
 <p>
 hypothesis to replace i.i.d. assumption: changes in distribution = consequence of an <b>intervention</b> on one/few <b>causes</b> /mechanisms. So, not identically distributed, but pretty similar, if you're in the right high-level <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> space. (E.g. if you put shaded glasses on, all the pixels change in basic RGB space &#x2013; but in some high-level semantic space, only one bit changed!)<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org60e4a67" class="outline-2">
-<h2 id="org60e4a67">Causal induction from interventional data</h2>
-<div class="outline-text-2" id="text-org60e4a67">
+<div id="outline-container-org75608d6" class="outline-2">
+<h2 id="org75608d6">Causal induction from interventional data</h2>
+<div class="outline-text-2" id="text-org75608d6">
 <p>
 How to handle unknown <a href="causal_inference.html#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a>? <i>infer</i> it.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org5821966" class="outline-2">
-<h2 id="org5821966">Thoughts, Consciousness, Language</h2>
-<div class="outline-text-2" id="text-org5821966">
+<div id="outline-container-org32ba41f" class="outline-2">
+<h2 id="org32ba41f">Thoughts, Consciousness, Language</h2>
+<div class="outline-text-2" id="text-org32ba41f">
 <p>
 If we want better NLP/NLU, we need to ground language in higher-level concepts.<br />
 </p>
@@ -195,9 +192,9 @@ If we want better NLP/NLU, we need to ground language in higher-level concepts.<
 </p>
 </div>
 </div>
-<div id="outline-container-orgfd8d7d2" class="outline-2">
-<h2 id="orgfd8d7d2">Core ingredient for conscious processing: <a href="attention.html#ID-2e1955ad-af09-4bcd-8b8d-4a0838e96365">attention</a></h2>
-<div class="outline-text-2" id="text-orgfd8d7d2">
+<div id="outline-container-org8dc1829" class="outline-2">
+<h2 id="org8dc1829">Core ingredient for conscious processing: <a href="attention.html#ID-2e1955ad-af09-4bcd-8b8d-4a0838e96365">attention</a></h2>
+<div class="outline-text-2" id="text-org8dc1829">
 <p>
 Attention enables us to make <i>dynamic</i> connections to the various different "modules" in the brain. Creates competition between the modules for which deserves attention.<br />
 </p>
@@ -205,16 +202,16 @@ Attention enables us to make <i>dynamic</i> connections to the various different
 </div>
 <div id="outline-container-ID-899d0e14-02e5-4858-8f71-8e61e9f59ffa" class="outline-2">
 <h2 id="ID-899d0e14-02e5-4858-8f71-8e61e9f59ffa">Going from attention to <a href="consciousness.html#ID-4fba6fb0-e9cc-48b1-875c-a70e1a2dbc9b">consciousness</a></h2>
-<div class="outline-text-2" id="text-org19105ca">
+<div class="outline-text-2" id="text-org8987b1b">
 <p>
 Dehaene et al. &#x2013; workspace theory of consciousness<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org4ab26f7" class="outline-2">
-<h2 id="org4ab26f7">Bibliography</h2>
-<div class="outline-text-2" id="text-org4ab26f7">
+<div id="outline-container-orgd2e9331" class="outline-2">
+<h2 id="orgd2e9331">Bibliography</h2>
+<div class="outline-text-2" id="text-orgd2e9331">
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry">NO_ITEM_DATA:scholkopfCausalRepresentationLearning2021</div>
 </div>
@@ -228,7 +225,7 @@ Source code is available
 <a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
-<script src="tooltips.js" async></script>
+<script src="tooltips.js"></script>
 </div>
 </body>
 </html>

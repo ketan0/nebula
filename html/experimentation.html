@@ -3,14 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-30 Thu 21:28 -->
+<!-- 2022-03-02 Wed 20:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>experimentation</title>
 <meta name="author" content="Ketan Agrawal" />
 <meta name="generator" content="Org Mode" />
-<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -19,38 +18,85 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/">
-<h2>Ketan's Digital Laboratory &#129514;</h2>
-</a>
+<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Nebula</h2></a>
 </div>
 <div id="content" class="content">
 <h1 class="title">experimentation</h1>
 
 
-<div id="outline-container-org97b84b8" class="outline-2 references">
-<h2 id="org97b84b8">Links to this node</h2>
-<div class="outline-text-2" id="text-org97b84b8">
+<div id="outline-container-org120e6a7" class="outline-2 references">
+<h2 id="org120e6a7">Links to this node</h2>
+<div class="outline-text-2" id="text-org120e6a7">
 </div>
-<div id="outline-container-org12ca31c" class="outline-3">
-<h3 id="org12ca31c"><a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a></h3>
-<div class="outline-text-3" id="text-org12ca31c">
+<div id="outline-container-org4bbb400" class="outline-3">
+<h3 id="org4bbb400"><a href="pieces_of_happy.html#ID-e9a9835e-582d-4cb3-8f5e-72ad7bdaf003">Summary</a></h3>
+<div class="outline-text-3" id="text-org4bbb400">
+<p>
+Essentially, recurring features of your environment have a compounding effect on your happiness over the course of your life. Life satisfaction research has revealed certain factors that reliably produce (and don't produce) happiness across all humans.<br />
+</p>
+
+<p>
+Also, take advantage of your personality strengths, and possibly experiment with actions that could help shore up negative personality traits (e.g. cut caffeine to lower neuroticism.)<br />
+</p>
+
+<p>
+All of this should take place within a framework of personal <a href="experimentation.html#ID-1096f874-fab2-4db1-88dc-b90740bf608a">experimentation</a>. Try "domain randomization" on yourself &#x2013; that is, try messing with some of the parameters of your life that have been on default settings thus far. The following are sliders for some relatively meaningless parameters that probably won't affect your life that much&#x2013; because why not!<br />
+</p>
+
+<div>
+    <input type="range" id="size-slider" name="size-slider"
+            min="8" max="24" value="14">
 </div>
-<div id="outline-container-orgfc80e76" class="outline-4">
-<h4 id="orgfc80e76">(<i>Things I really like about emacs &gt; Emacs enables a personal framework of experimentation.</i>)</h4>
-<div class="outline-text-4" id="text-orgfc80e76">
+<div>
+    <input type="range" id="font-slider" name="font-slider"
+    min="0" max="3" value="0" step="1">
+</div>
+<!--TODO: make this slider turn on some d3 particle thingy-->
+<div>
+    <input type="range" id="violin" name="violin"
+    min="0" max="100" value="30" step="10">
+</div>
+<script type="text/javascript">
+let sizeSlider = document.getElementById("size-slider");
+if (sizeSlider.addEventListener) {
+    sizeSlider.addEventListener("input", function () {
+        var div = document.getElementById("content");
+        div.style.fontSize = sizeSlider.value + "px";
+    })
+}
+
+let fontSlider = document.getElementById("font-slider");
+if (fontSlider.addEventListener) {
+    fontSlider.addEventListener("input", function () {
+        var div = document.getElementById("content");
+        var fontFamilies = {
+            "0" : "Inter",
+            "1" : "Georgia",
+            "2" : "Courier New",
+            "3" : "Brush Script MT"
+        }
+        div.style.fontFamily = fontFamilies[fontSlider.value]
+    })
+}
+</script>
+
+<p>
+Record your findings. The cost of experimentation is small, but the potential life-changing benefits of finding something that makes you happier are immense.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bd78d1" class="outline-3">
+<h3 id="org0bd78d1"><a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a></h3>
+<div class="outline-text-3" id="text-org0bd78d1">
+</div>
+<div id="outline-container-orgd307207" class="outline-4">
+<h4 id="orgd307207">(<i>Things I really like about emacs &gt; Emacs enables a personal framework of experimentation.</i>)</h4>
+<div class="outline-text-4" id="text-orgd307207">
 <p>
 It's completely hackable, which easily leads to an "experimental" mindset. I feel like people don't really try tweaking the default settings of things in important ways. Granted, you can get lost in customization, and tweaking every little aesthetic and all that&#x2026;but I believe that there have been several important ways that I've been able to customize my workflow due to Emacs and the OSS that has built many different extensions for it.<br />
 </p>
 </div>
-</div>
-</div>
-
-<div id="outline-container-org8b54807" class="outline-3">
-<h3 id="org8b54807"><a href="pieces_of_happy.html#ID-e9a9835e-582d-4cb3-8f5e-72ad7bdaf003">Summary</a></h3>
-<div class="outline-text-3" id="text-org8b54807">
-<p>
-All of this should take place within a framework of personal <a href="experimentation.html#ID-1096f874-fab2-4db1-88dc-b90740bf608a">experimentation</a>. Try "domain randomization" on yourself &#x2013; that is, try messing with some of the parameters of your life that have been on default settings thus far. The following are sliders for some relatively meaningless parameters that probably won't affect your life that much&#x2013; because why not!<br />
-</p>
 </div>
 </div>
 </div>
@@ -62,7 +108,7 @@ Source code is available
 <a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
-<script src="tooltips.js" async></script>
+<script src="tooltips.js"></script>
 </div>
 </body>
 </html>

@@ -2,3 +2,5 @@
 :ID:       5705ba04-b296-4446-824b-3551d7bd8a09
 :END:
 #+title: graphs
+
+have [[id:01d1ebb2-467c-4d3e-80c4-879429ccf9b6][nodes]] and [[id:993f765f-4385-4fcc-a5f6-de5f9a3360ad][edges]].

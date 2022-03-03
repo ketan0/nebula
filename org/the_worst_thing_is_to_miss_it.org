@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6000ad3e-ad4c-4857-bd5d-27559241b6dd
+:ROAM_REFS: https://socialdance.stanford.edu/Syllabi/missing_it.htm
+:END:
+#+title: The Worst Thing Is To Miss It
+
+https://socialdance.stanford.edu/Syllabi/missing_it.htm
+
+I loved taking Social Dance II at Stanford, and I really loved the way that Richard Powers taught it. He connected dance to life; it's all about [[id:05869b17-92db-4a55-9367-cdc409938bc9][being in the moment]], noticing and reacting to the people around you, noticing the good in life...which relates to [[id:38eb0870-2056-4219-b413-9e2bf1457989][Gratitude]]. I was just thinking about how gratitude is kind of a "hack" against the onslaught of hedonic adaptation. Most of the time, I'm sitting on a mountain of good fortune, and I've completely forgotten it's there. But if I get reminded of that good fortune somehow, it really puts things in a different perspective.

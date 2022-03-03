@@ -4,6 +4,8 @@
 :END:
 #+title: This Page is Designed to Last: A Manifesto for Preserving Content on the Web
 
+https://jeffhuang.com/designed_to_last/
+
 * Is this site designed to last? [71%]
 ** DONE vanilla HTML/CSS
 Yup. 100%. (static site generated from org files.) I usually try and check MDN to see if the CSS I'm using is kosher across browsers.

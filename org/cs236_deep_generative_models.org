@@ -94,12 +94,377 @@ Bayes net with modeling assumptions:
 - assume the conditionals take functional form (e.g., a logistic regression)
 
 ** Fully Visible Sigmoid Belief Network (FVSBN)
+$p\left(X_{i}=1 \mid x_{<i} ; \alpha^{i}\right)=\sigma\left(\alpha_{0}^{i}+\sum_{j=1}^{i-1} \alpha_{j}^{i} x_{j}\right)$
 ** Neural Autoregressive Density Estimation (NADE)
 simple: model as Bernoulli
 more classes: model as Categorical
 RNADE: continuous- model as mixture of Gaussians
+Like FVSBN, but use a 1-hidden-layer neural net:
+$\mathrm{h}_{i}=\sigma\left(A_{i} \mathrm{x}<i+\mathrm{c}_{i}\right)$
+$p(x_{i} \mid x_{1}, \cdots, x_{i-1} ; \underbrace{A_{i}, \mathrm{c}_{i}, \boldsymbol{\alpha}_{i}, b_{i}}_{\text {parameters }})=\sigma\left(\boldsymbol{\alpha}_{i} \mathrm{~h}_{i}+b_{i}\right)$
+
+Problem: lots of redundant parameters. Solution: "tie" the weights:
+Tie weights to reduce the number of parameters and speed up computation (see blue dots in the figure):
+$$
+\begin{array}{r}
+\mathrm{h}_{i}=\sigma\left(W_{\cdot,<i} \mathrm{x}<i+\mathrm{c}\right) \\
+\hat{x}_{i}=p\left(x_{i} \mid x_{1}, \cdots, x_{i-1}\right)=\sigma\left(\alpha_{i} \mathrm{~h}_{i}+b_{i}\right)
+\end{array}
+$$
+** RNADE
+$p\left(x_{i} \mid x_{1}, \cdots, x_{i-1}\right)=\sum_{j=1}^{K} \frac{1}{K} \mathcal{N}\left(x_{i} ; \mu_{i}^{j}, \sigma_{i}^{j}\right)$
+$\mathrm{h}_{i}=\sigma\left(W_{\cdot,<i} \mathrm{x}<i+\mathrm{c}\right)$
+$\hat{\boldsymbol{x}}_{i}=\left(\mu_{i}^{1}, \cdots, \mu_{i}^{K}, \sigma_{i}^{1}, \cdots, \sigma_{i}^{K}\right)=f\left(\mathrm{~h}_{i}\right)$
 ** Autoregressive Autoencoder: Masked Autoencoder for Distribution Estimation (MADE)
+:PROPERTIES:
+:ID:       50bf2de7-e33c-4485-9dcd-b721d7f601a6
+:END:
 Use masks to disallow certain paths in an autoencoder to make it autoregressive.
+
+Solution: use masks to disallow certain paths (Germain et al., 2015). Suppose ordering is $x_{2}, x_{3}, x_{1}$.
+1) The unit producing the parameters for $p\left(x_{2}\right)$ is not allowed to depend on any input. Unit for $p\left(x_{3} \mid x_{2}\right)$ only on $x_{2}$. And so on...
+2) For each unit in a hidden layer, pick a random integer $i$ in $[1, n-1]$. That unit is allowed to depend only on the first $i$ inputs (according to the chosen ordering).
+3) Add mask to preserve this invariant: connect to all units in previous layer with smaller or equal assigned number (strictly $<$ in final layer)
 ** RNNs
+Challenge: the history for these autoregressive models keeps getting longer and longer. Ideally we'd just have a fixed-size "summary" of the history.
 ** Transformers
 masked self-attention preserves autoregressive structure.
+** PixelCNN
+Masked convolutions preserve raster scan order.
+
+Lol u can use these for adversarial attacks --
+** WaveNet
+* Learning a generative model (Maximum Likelihood)
+We are given a dataset $D$ of $m$ samples from $P_{data}$.
+
+We are given a family of models M, our task is to learn a "good" model M_hat in M that defines a distribution p_m_hat
+
+Can't capture the *exact* distribution. All we have are samples -- that's very sparse coverage over the space of all possible samples. (So...we need regularization / priors / inductive biases.)
+** KL divergence:
+"distance" between two distributions, $p$ and $q$.
+
+$D(p \| q)=\sum_{\mathrm{x}} p(\mathrm{x}) \log \frac{p(\mathrm{x})}{q(\mathrm{x})}$
+However, it's not quite a "distance," because it's asymmetric. $D(p \| q) \neq D(q \| p)$
+
+Intuition: we have a known distribution $q$, and we're trying to minimize the distance to a target distribution $p$.
+*** Detour: compression
+Generative models are basically compression schemes. Trying to compress the data as well as we can.
+
+To compress, it is useful to know the probability distribution the data is sampled from
+For example, let X1, · · · , X100 be samples of an unbiased coin. Roughly 50 heads and 50 tails. Optimal compression scheme is to record heads as 0 and tails as 1. In expectation, use 1 bit per sample, and cannot do better
+Suppose the coin is biased, and P[H] ≫ P[T]. Then it’s more efficient to uses fewer bits on average to represent heads and more bits to represent tails, e.g.
+Batch multiple samples together
+Use a short sequence of bits to encode HHHH (common) and a long sequence for TTTT (rare).
+Like Morse code: E = •, A = •−, Q = − − •−
+KL-divergence: if your data comes from p, but you use a scheme optimized for q, the divergence DKL(p||q) is the number of extra bits you’ll need on average
+*** Minimizing KL divergence is equivalent to maximizing the expected log likelihood. => Maximum Likelihood Estimation
+** MLE Learning: Stochastic [[id:2a80ce32-c37d-4047-b69b-e0c355d91670][Gradient Descent]]
+** Empirical risk minimization can easily overfit the data.
+** Bias-variance trade off:
+:PROPERTIES:
+:ID:       c8a6b4f0-1424-43e7-913c-f55593b1792f
+:END:
+Bias limitation: If the hypothesis space of functions is very limited, we might not be able to represent the data distribution.
+
+Variance limitation: If the hypothesis space is /too/ expressive, it will overfit to the data.
+
+How to prevent overfitting? Prefer "simpler" models (Occam's razor.) [[id:69cfe558-04ed-41b0-8807-922ead5afde3][Regularization]] in the objective function. Evaluate on validation set while training.
+* Latent Variable Models
+** Motivation
+There are lots of variability in images due to high-level semantic factors: gender, eye color, pose, etc.
+
+*Idea*: model these factors using latent variables $\mathbf{z}$.
+
+If you choose $\mathbf{z}$ properly, p(x|z) could be a lot simpler than p(x).
+
+We could identify the factors of variation using these generative models -- e.g. p(eye color = blue | x)
+** Deep Latent Variable Models
+$z \sim \mathcal{N}(0, I)$
+
+$p(x \mid z)=\mathcal{N}\left(\mu_{\theta}(z), \Sigma_{\theta}(z)\right)$ where $\mu_{\theta}, \Sigma_{\theta}$ are neural networks
+
+We /hope/ that z will capture useful factors of variation in an unsupervised manner. Training a classifier on top of z could be a lot easier.
+
+Features computer via $p(z|x)$
+** Mixture of Gaussians: a shallow latent variable model
+A mixture of $k$ gaussians:
+$z \sim \text{Categorical}(1, ..., K)$
+$p(x | z = k) = \mathcal{N}(\mu_k, \Sigma_k)$
+** Variational Autoencoder (VAE)
+A mixture of an infinite number of gaussians (since z is continuous):
+$z \sim \mathcal{N}(0, I)$
+
+$p(x \mid z)=\mathcal{N}\left(\mu_{\theta}(z), \Sigma_{\theta}(z)\right)$ where $\mu_{\theta}, \Sigma_{\theta}$ are neural networks
+
+Simple example:
+$\mu_{\theta}(z)=\sigma(A z+c)=\left(\sigma\left(a_{1} \mathbf{z}+c_{1}\right), \sigma\left(a_{2} \mathbf{z}+c_{2}\right)\right)=\left(\mu_{1}(z), \mu_{2}(z)\right)$
+$\Sigma_{\theta}(z)=\operatorname{diag}(\exp (\sigma(B \mathbf{z}+d)))=\left(\begin{array}{cc}\exp \left(\sigma\left(b_{1} z+d_{1}\right)\right) & 0 \\ 0 & \exp \left(\sigma\left(b_{2} \mathbf{z}+d_{2}\right)\right)\end{array}\right)$
+$\theta = A,B,c,d$
+** Good stuff about latent variable models:  complex models, natural for unsupervised learning
+** Hard stuff about latent variable models: learning in unsupervised manner is very difficult
+* Normalizing Flow Models
+Autoregressive models provide tractable likelihoods but no direct mechanism for learning features.
+
+Variational autoencoders can learn feature representations (via latent variables $z$,) but have intractable marginal likelihoods.
+
+Normalizing flow models have both latent variables /and/ tractable likelihoods.
+
+We want $p_{\theta}(x)$ to be easy-to-evaluate, and easy-to-sample. The key idea behind flow models is to map simple distributions => complex distributions through an *invertible transformation*.
+
+
+This is similar to a VAE:
+- Start from a simple prior $z \sim \mathcal{N}(0, I)$
+- Transform the sample via $p(x|z)$
+- Problem: $p_{\theta}(\mathrm{x})=\int p_{\theta}(\mathrm{x}, \mathrm{z}) d \mathrm{z}$ is expensive to compute.
+- What if we could easily "invert" $p(x|z)$ and compute $p(z|x)$ by design? => we want $x = f_{\theta}(z)$ to be a *deterministic* and *invertible* function.
+
+We are going to exploit the *Change of Variables formula*.
+** Change of variables
+*Change of variables (1D case)*: If $X=f(Z)$ and $f(\cdot)$ is monotone with inverse $Z=f^{-1}(X)=h(X)$, then:
+$$
+p_{X}(x)=p_{Z}(h(x))\left|h^{\prime}(x)\right|
+$$
+
+This result comes from chain rule on the PDF.
+
+This allows us to change the distribution of $X$ in interesting ways -- start with a simple $Z$, transform with change-of-variables, and potentially get something much more complex than the prior.
+
+$p_{X}(x)=p_{Z}(z) \frac{1}{f^{\prime}(z)}$
+
+Intuition: if you're expanding in one direction, you're contracting in the other.
+
+All this intuition carries over to random vectors (not just random variables.) See slides for more.
+
+*Change of variables (General case)*: The mapping between $Z$ and $X$, given by $f: \mathbb{R}^{n} \mapsto \mathbb{R}^{n}$, is invertible such that $X=\mathrm{f}(Z)$ and $Z=f^{-1}(X)$
+$$ p_{X}(\mathrm{x})=p_{Z}\left(\mathrm{f}^{-1}(\mathrm{x})\right)\left|\operatorname{det}\left(\frac{\partial \mathrm{f}^{-1}(\mathrm{x})}{\partial \mathrm{x}}\right)\right|.$$
+
+Equivalently, since $\operatorname{det}\left(A^{-1}\right)=\operatorname{det}(A)^{-1}$ for any invertible matrix $A$,
+$$p_{X}(\mathrm{x})=p_{Z}(\mathrm{z})\left|\operatorname{det}\left(\frac{\partial \mathrm{f}(\mathrm{z})}{\partial \mathrm{z}}\right)\right|^{-1}.$$
+
+Note: $Z$ has to have the /same dimensionality/ as x (so that the mapping is invertible.)
+
+It's kinda like a VAE, but $p(x|z)$ is deterministic. And, crucially, we can directly evaluate the marginal likelihood $p(x)$; no integration
+
+$$ p_{X}(\mathrm{x}|\theta)=p_{Z}\left(\mathrm{f}_\theta^{-1}(\mathrm{x})\right)\left|\operatorname{det}\left(\frac{\partial \mathrm{f}_\theta^{-1}(\mathrm{x})}{\partial \mathrm{x}}\right)\right|.$$
+
+Note: $x, z$ need to be continuous and have the same dimension.
+
+** Flow of transformations
+A flow of transformations: invertible transformations can be composed together.
+$$\mathrm{z}_{m}=\mathrm{f}_{\theta}^{m} \circ \cdots \circ \mathrm{f}_{\theta}^{1}\left(\mathrm{z}_{0}\right)=\mathrm{f}_{\theta}^{m}\left(\mathrm{f}_{\theta}^{m-1}\left(\cdots\left(\mathrm{f}_{\theta}^{1}\left(\mathrm{z}_{0}\right)\right)\right)\right) \triangleq \mathrm{f}_{\theta}\left(\mathrm{z}_{0}\right)$$
+
+By change of variables
+$$
+p_{X}(\mathrm{x} ; \theta)=p_{Z}\left(\mathrm{f}_{\theta}^{-1}(\mathrm{x})\right) \prod_{m=1}^{M}\left|\operatorname{det}\left(\frac{\partial\left(\mathrm{f}_{\theta}^{m}\right)^{-1}\left(\mathrm{z}_{m}\right)}{\partial \mathrm{z}_{m}}\right)\right|
+.$$
+
+By adding more "layers" in the transformation (i.e. a deeper neural net,) we get something increasingly complexified from the prior.
+** Desiderata for flow models
+The prior $p(z)$ should be simple+efficient; e.g. isotropic Gaussian.
+
+The transformations should have tractable evaluation in both directions.
+
+Computing the likelihoods $p(x)$ and $p(z)$ require you to evaluate the determinant of an $n \times n$ Jacobian matrix; this is $O(n^3)$, and way to expensive to do in a learning loop.
+
+*Key idea*: Choose transformations so that their Jacobians have a "special" structure; e.g. the determinant of a triangular matrix is the product of the diagonals; this is $O(n)$.
+
+^how do we get that to happen? Some possibilities:
+- Make $x_i = f_i(z)$ only depend on $z_{\leq i}$.
+- More efficient ways of computing Jacobians that are "close" to the identity matrix (Planar flows paper.)
+** Nonlinear Independent Components Estimation (NICE)
+Partition the variables $z$ into two disjoint subsets: $z_{1:d}$ and $z_{d+1:n}$
+
+Forward mapping (z=>x):
+$x_{1:d} = z_{1:d}$
+$x_{d+1:n} = z_{d+1:n} + m_\theta(z_{1:d})$ (Where $m_\theta$ is a neural net)
+
+Reverse mapping (x=>z):
+$\mathrm{z}_{1: d}=\mathrm{x}_{1: d}$ (identity transformation)
+$\mathrm{z}_{d+1: n}=\mathrm{x}_{d+1: n}-m_{\theta}\left(\mathrm{x}_{1: d}\right)$
+
+Jacobian:
+$J=\frac{\partial \mathrm{x}}{\partial \mathrm{z}}=\left(\begin{array}{cc}I_{d} & 0 \\ \frac{\partial \mathrm{x}_{d+1: n}}{\partial \mathrm{z}_{1: d}} & I_{n-d}\end{array}\right)$
+$\operatorname{det}(J)=1$
+
+Since the determinant is 1, it is a *volume preserving transformation*. (No expanding/contracting)
+
+- Invertible
+- Easy to compute
+- Tractable marginal likelihood
+
+Additive coupling layers can be composed together.
+
+Final layer of NICE applies a rescaling transformation (so we can change the volume.)
+Forward mapping $z \mapsto x:$
+$$
+x_{i}=s_{i} z_{i}
+$$
+where $s_{i}>0$ is the scaling factor for the $i$-th dimension.
+Inverse mapping $x \mapsto z$ :
+$$
+z_{i}=\frac{x_{i}}{s_{i}}
+$$
+Jacobian of forward mapping:
+$$\begin{gathered}
+J=\operatorname{diag}(\mathrm{s}) \\
+\operatorname{det}(J)=\prod_{i=1}^{n} s_{i}
+\end{gathered}$$
+** Real-NVP: Non-volume preserving extension of NICE.
+Same as NICE, but rescaling happens at each layer.
+
+Forward mapping $z \mapsto x:$
+- $\mathrm{x}_{1: d}=\mathrm{z}_{1: d}$ (identity transformation)
+- $\mathrm{x}_{d+1: n}=\mathrm{z}_{d+1: n} \odot \exp \left(\alpha_{\theta}\left(\mathrm{z}_{1: d}\right)\right)+\mu_{\theta}\left(\mathrm{z}_{1: d}\right)$
+- $\mu_{\theta}(\cdot)$ and $\alpha_{\theta}(\cdot)$ are both neural networks with parameters $\theta, d$ input units, and $n-d$ output units $[\odot$ denotes elementwise product $]$
+Inverse mapping $x \mapsto z$ :
+- $\mathrm{z}_{1: d}=\mathrm{x}_{1: d}$ (identity transformation)
+- $\mathrm{z}_{d+1: n}=\left(\mathrm{x}_{d+1: n}-\mu_{\theta}\left(\mathrm{x}_{1: d}\right)\right) \odot\left(\exp \left(-\alpha_{\theta}\left(\mathrm{x}_{1: d}\right)\right)\right)$
+Jacobian of forward mapping:
+$$\begin{gathered}
+J=\frac{\partial \mathrm{x}}{\partial \mathrm{z}}=\left(\begin{array}{cc}
+I_{d} & 0 \\
+\frac{\partial \mathrm{x}_{d+1: n}}{\partial \mathrm{z}_{1: d}} & \operatorname{diag}\left(\exp \left(\alpha_{\theta}\left(\mathrm{z}_{1: d}\right)\right)\right)
+\end{array}\right) \\
+\operatorname{det}(J)=\prod_{i=d+1}^{n} \exp \left(\alpha_{\theta}\left(\mathrm{z}_{1: d}\right)_{i}\right)=\exp \left(\sum_{i=d+1}^{n} \alpha_{\theta}\left(\mathrm{z}_{1: d}\right)_{i}\right)
+\end{gathered}$$
+Non-volume preserving transformation in general since determinant can be less than or greater than 1
+** Autoregressive Models as Normalizing Flow Models
+We can view autoregressive models as flow models.
+
+Consider a Gaussian autoregressive model:
+$$
+p(\mathrm{x})=\prod_{i=1}^{n} p\left(x_{i} \mid \mathrm{x}<i\right)
+$$
+such that $p\left(x_{i} \mid \mathrm{x}_{<i}\right)=\mathcal{N}\left(\mu_{i}\left(x_{1}, \cdots, x_{i-1}\right), \exp \left(\alpha_{i}\left(x_{1}, \cdots, x_{i-1}\right)\right)^{2}\right)$ Here, $\mu_{i}(\cdot)$ and $\alpha_{i}(\cdot)$ are neural networks for $i>1$ and constants for $i=1$
+Sampler for this model:
+- Sample $z_{i} \sim \mathcal{N}(0,1)$ for $i=1, \cdots, n$
+- Let $x_{1}=\exp \left(\alpha_{1}\right) z_{1}+\mu_{1}$. Compute $\mu_{2}\left(x_{1}\right), \alpha_{2}\left(x_{1}\right)$
+- Let $x_{2}=\exp \left(\alpha_{2}\right) z_{2}+\mu_{2}$. Compute $\mu_{3}\left(x_{1}, x_{2}\right), \alpha_{3}\left(x_{1}, x_{2}\right)$
+- Let $x_{3}=\exp \left(\alpha_{3}\right) z_{3}+\mu_{3} \ldots$
+Flow interpretation: transforms samples from the standard Gaussian $\left(z_{1}, z_{2}, \ldots, z_{n}\right)$ to those generated from the model $\left(x_{1}, x_{2}, \ldots, x_{n}\right)$ via invertible transformations (parameterized by $\left.\mu_{i}(\cdot), \alpha_{i}(\cdot)\right)$
+*** Masked Autoregressive Flow (MAF)
+:PROPERTIES:
+:ID:       206c8dcd-0059-4704-b1a2-d5f1abdbad07
+:END:
+Forward mapping from $z \mapsto x:$
+- Let $x_{1}=\exp \left(\alpha_{1}\right) z_{1}+\mu_{1}$. Compute $\mu_{2}\left(x_{1}\right), \alpha_{2}\left(x_{1}\right)$
+- Let $x_{2}=\exp \left(\alpha_{2}\right) z_{2}+\mu_{2}$. Compute $\mu_{3}\left(x_{1}, x_{2}\right), \alpha_{3}\left(x_{1}, x_{2}\right)$
+Sampling is sequential and slow (like autoregressive): $O(n)$ time
+
+Forward mapping from $z \mapsto x:$
+- Let $x_{1}=\exp \left(\alpha_{1}\right) z_{1}+\mu_{1}$. Compute $\mu_{2}\left(x_{1}\right), \alpha_{2}\left(x_{1}\right)$
+- Let $x_{2}=\exp \left(\alpha_{2}\right) z_{2}+\mu_{2}$. Compute $\mu_{3}\left(x_{1}, x_{2}\right), \alpha_{3}\left(x_{1}, x_{2}\right)$
+Sampling is sequential and slow (like autoregressive): $O(n)$ time
+
+Inverse mapping from $x \mapsto z$ :
+- Compute all $\mu_{i}, \alpha_{i}$ (can be done in parallel using e.g., [[id:50bf2de7-e33c-4485-9dcd-b721d7f601a6][MADE]])
+- Let $z_{1}=\left(x_{1}-\mu_{1}\right) / \exp \left(\alpha_{1}\right)$ (scale and shift)
+- Let $z_{2}=\left(x_{2}-\mu_{2}\right) / \exp \left(\alpha_{2}\right)$
+- Let $z_{3}=\left(x_{3}-\mu_{3}\right) / \exp \left(\alpha_{3}\right) \ldots$
+Jacobian is lower diagonal, hence efficient determinant computation Likelihood evaluation is easy and parallelizable (like MADE)
+Layers with different variable orderings can be stacked
+*** Inverse Autoregressive Flow (IAF)
+Identical to [[id:206c8dcd-0059-4704-b1a2-d5f1abdbad07][MAF]], but change the roles of z and x.
+
+*** Computational tradeoffs of MAF vs. IAF
+MAF: Fast likelihood evaluation, slow sampling
+^good for training
+
+IAF: Fast sampling, slow likelihood evaluation
+^good for inference
+*** Parallel Wavenet
+Idea: best of both worlds...teacher MAF model, student IAF model. First train MAF model normally. Then train IAF model to minimize divergence with MAF model. Use IAF model at test-time.
+
+*Probability density distillation*: Student distribution is trained to minimize the $\mathrm{KL}$ divergence between student $(s)$ and teacher $(t)$
+$$
+D_{\mathrm{KL}}(s, t)=E_{\mathrm{x} \sim s}[\log s(\mathrm{x})-\log t(\mathrm{x})]
+$$
+
+Evaluating and optimizing Monte Carlo estimates of this objective requires:
+- Samples $x$ from student model (IAF)
+- Density of $x$ assigned by student model (IAF)
+- Density of $x$ assigned by teacher model (MAF)
+
+All operations above can be implemented efficiently.
+** Invertible CNNs
+It's possible to change a convolutional architecture to become invertible.
+
+We can use masked convolutions to enforce ordering => Jacobian is lower triangular + easy to compute. If all the diagonal elements of Jacobian are positive, the transformation is invertible.
+
+The point is, you can train a ResNet normally, then invert + use as a flow model.
+*** MintNet
+uses masked/causal convolutions in a way enforces ordering, makes the Jacobian triangular, makes the transformation invertible..
+** Gaussianization flows
+Let $X=f_{\theta}(Z)$ be a flow model with Gaussian prior $Z \sim \mathcal{N}(0, I)=p_{Z}$, and let $\tilde{X} \sim p_{\text {data }}$ be a random vector distributed according to the true data distribution.
+
+Flow models are trained with maximum likelihood to minimize the $\mathrm{KL}$ divergence \(D_{\mathrm{KL}}\left(p_{\text {data }} \| p_{\theta}(x)\right)=D_{\mathrm{KL}}\left(p_{\tilde{X}} \| p_{X}\right).\) Gaussian samples transformed through $f_{\theta}$ should be distributed as the data.
+
+It can be shown that \(D_{\mathrm{KL}}\left(p_{\tilde{X}} \| p_{X}\right)=D_{\mathrm{KL}}\left(p_{f_{\theta}^{-1}(\tilde{X})} \| p_{f_{\theta}^{-1}(X)}\right)=D_{\mathrm{KL}}\left(p_{f_{\theta}^{-1}(\tilde{X})} \| p_{Z}\right).\)Ideally, data samples transformed through $f_{\theta}^{-1}$ should be distributed as Gaussian (Hence "Gaussianizing.") Then, we can easily turn it around and efficiently generate new data samples from Gaussian prior. So, how can we achieve this?
+*** Inverse CDF trick
+Inverse CDF gives you data samples from a distribution. E.g. Inverse Gaussian composed with $F_{\text{data}}$ can give you gaussian data.
+*** Step 1: Dimension-wise Gaussianization
+*** Step 2: apply a rotation matrix to the transformed data
+*** repeat Step 1 and Step 2 ("stack" these models) => eventually Gaussian.
+* Generative Adversarial Networks (GANs)
+Autoregressive and VAEs use maximum likelihood training over the marignal likelihood (or an approximation, at least.) But why maximum likelihood? => higher likelihood = better lossless compression.
+
+But...let's say our goal isn't compression, but high-quality samples. Granted...the optimal generative model will maximize /both/ sample quality and log-likelihood. However, in real life, nothing is perfect, and for imperfect models, high likelihood != good sample quality. (Can have great likelihoods, but terrible samples, or terrible likelihoods but great samples.)
+
+*Likelihood-free learning* consider objectives that do not depend directly on a likelihood function.
+
+When we don't have access to likelihood, we can't depend on KL divergence to optimize. Need a new way of quantifying distance.
+
+Given a finite set of samples from two distributions $S_{1}=\{\mathbf{x} \sim P\}$ and $S_{2}=\{\mathbf{x} \sim Q\}$, how can we tell if these samples are from the same distribution? (i.e., $P=Q$ ?) => two-sample test from statistics.
+
+New objective: train the generative model to minimize a two-sample test objective between $S_1$ and $S_2$. But...that's hard to directly optimize those two to converge.
+
+But...ok in the generative modeling setting, we know that $S_1$ and $S_2$ come from different distributions, the data distribution and the model's approximation of that. let's exploit that we know that label and learn a statistic that /maximizes/ a suitable notion of distance between $S_1$ and $S_2$.
+** Two-sample test via a Discriminator
+A neural net that tries to distinguish "real" from "fake" samples.
+
+Maximize the two-sample test objective (in support of the hypotehsis $p_{\text {data }} \neq p_{\theta}$)
+Training objective for discriminator:
+
+$$
+\max _{D} V(G, D)=E_{\mathbf{x} \sim p_{\text {data }}}[\log D(\mathbf{x})]+E_{\mathbf{x} \sim p_{G}}[\log (1-D(\mathbf{x}))]
+$$
+For a fixed generator $G$, the discriminator is performing binary classification with the cross entropy objective
+- Assign probability 1 to true data points $\mathbf{x} \sim p_{\text {data }}$
+- Assing probability 0 to fake samples $\mathbf{x} \sim p_{G}$
+Optimal discriminator
+$$
+D_{G}^{*}(\mathbf{x})=\frac{p_{\mathrm{data}}(\mathbf{x})}{p_{\mathrm{data}}(\mathbf{x})+p_{G}(\mathbf{x})}
+$$
+
+(We don't want to use likelihoods, though.)
+** GANs are basically a two-player minimax game between a *generator* and *discriminator*.
+** Generator
+Directed, latent variable model with a deterministic mapping between $z$ and $x$, $G_\theta$.
+Training objective for generator:
+$$
+\min _{G} \max _{D} V(G, D)=E_{\mathbf{x} \sim p_{\text {data }}}[\log D(\mathbf{x})]+E_{\mathbf{x} \sim p_{G}}[\log (1-D(\mathbf{x}))]
+$$
+For the optimal discriminator $D_{G}^{*}(\cdot)$, we have
+$$
+\begin{gathered}
+V\left(G, D_{G}^{*}(\mathbf{x})\right) \\
+=E_{\mathbf{x} \sim p_{\text {data }}}\left[\log \frac{p_{\text {data }}(\mathbf{x})}{p_{\text {data }}(\mathbf{x})+p_{G}(\mathbf{x})}\right]+E_{\mathbf{x} \sim p_{G}}\left[\log \frac{p_{G}(\mathbf{x})}{p_{\text {data }}(\mathbf{x})+p_{G}(\mathbf{x})}\right] \\
+=E_{\mathbf{x} \sim p_{\text {data }}}\left[\log \frac{p_{\text {data }}(\mathbf{x})}{\frac{p_{\text {data }}(\mathbf{x})+p_{G}(\mathbf{x})}{2}}\right]+E_{\mathbf{x} \sim p_{G}}\left[\log \frac{p_{G}(\mathbf{x})}{\frac{p_{\text {data }}(\mathbf{x})+p_{G}(\mathbf{x})}{2}}\right]-\log 4 \\
+=\underbrace{D_{K L}\left[p_{\text {data }}, \frac{p_{\text {data }}+p_{G}}{2}\right]+D_{K L}\left[p_{G}, \frac{p_{\text {data }}+p_{G}}{2}\right]}_{2 \times \text { Jenson-Shannon Divergence }(\text { JSD })}-\log 4 \\
+=2 D_{J S D}\left[p_{\text {data }}, p_{G}\right]-\log 4
+\end{gathered}
+$$
+
+Btw, there are other divergences that we can use than Jenson-Shannon Divergence.
+** GAN training algorithm
+Sample minibatch of $m$ training points $\mathbf{x}^{(1)}, \mathbf{x}^{(2)}, \ldots, \mathbf{x}^{(m)}$ from $\mathcal{D}$ Sample minibatch of $m$ noise vectors $\mathbf{z}^{(1)}, \mathbf{z}^{(2)}, \ldots, \mathbf{z}^{(m)}$ from $p_{z}$ Update the discriminator parameters $\phi$ by stochastic gradient ascent
+$$
+\nabla_{\phi} V\left(G_{\theta}, D_{\phi}\right)=\frac{1}{m} \nabla_{\phi} \sum_{i=1}^{m}\left[\log D_{\phi}\left(\mathbf{x}^{(i)}\right)+\log \left(1-D_{\phi}\left(G_{\theta}\left(\mathbf{z}^{(i)}\right)\right)\right)\right]
+$$
+Update the generator parameters $\theta$ by stochastic gradient descent
+$$
+\nabla_{\theta} V\left(G_{\theta}, D_{\phi}\right)=\frac{1}{m} \nabla_{\theta} \sum_{i=1}^{m} \log \left(1-D_{\phi}\left(G_{\theta}\left(\mathbf{z}^{(i)}\right)\right)\right)
+$$
+Repeat for fixed number of epochs...or until samples look good, lol.
+
+GANs can be /very/ challenging to train in practice.

@@ -3,6 +3,7 @@
 :ROAM_REFS: https://michaelnielsen.org/reinventing_explanation/ https://michaelnielsen.org/reinventing_explanation/index.html
 :END:
 #+title: Reinventing Explanation
+https://michaelnielsen.org/reinventing_explanation/
 
 It's about creating an /emotional/ investment in whatever you're learning. Which ties into my thought about how the form of the message impacts the content of message itself. I feel inherently more attached to [[id:b56d1847-4a25-47cf-a019-4d00319d0dd1][visuals]], and really I have a good appetite for [[id:7b8a4962-28ca-48e5-95a7-d347292a6dca][math]] -- PROVIDED that it's a subject I care about. Otherwise things tend to seem arcane and dry if you haven't found an emotional "hook" into it, so to speak. I feel like university courses make an attempt to do this, to say, "why should we even care at all?" but it's usually only in the introductory lecture, or the concluding lecture, and it's rushed. It's when we hook things into the fabric of our lives, of our thoughts, that they acquire deep meaning.
 

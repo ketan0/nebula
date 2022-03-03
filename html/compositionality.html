@@ -3,14 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-30 Thu 21:28 -->
+<!-- 2022-03-02 Wed 20:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>compositionality</title>
 <meta name="author" content="Ketan Agrawal" />
 <meta name="generator" content="Org Mode" />
-<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -19,9 +18,7 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/">
-<h2>Ketan's Digital Laboratory &#129514;</h2>
-</a>
+<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Nebula</h2></a>
 </div>
 <div id="content" class="content">
 <h1 class="title">compositionality</h1>
@@ -34,7 +31,7 @@ Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c87
 </p>
 
 
-<div id="org10cec08" class="figure">
+<div id="org0d966b9" class="figure">
 <p><img src="decomposition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
 </p>
 </div>
@@ -43,7 +40,7 @@ Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c87
 Some methodical activities, such as making breakfast, decompose well into modular activities as well:<br />
 </p>
 
-<div id="org4142c56" class="figure">
+<div id="org79f6500" class="figure">
 <p><img src="breakfast.png" alt="tree of the decomposition of making breakfast into &quot;make toast,&quot; &quot;make tea,&quot; etc." /><br />
 </p>
 </div>
@@ -53,28 +50,56 @@ A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machin
 </p>
 
 
-<div id="org40e92b8" class="figure">
+<div id="org9df839a" class="figure">
 <p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
 </p>
 </div>
 
 
-<div id="outline-container-org2feaff6" class="outline-2 references">
-<h2 id="org2feaff6">Links to this node</h2>
-<div class="outline-text-2" id="text-org2feaff6">
+<div id="outline-container-org18f2810" class="outline-2 references">
+<h2 id="org18f2810">Links to this node</h2>
+<div class="outline-text-2" id="text-org18f2810">
 </div>
-<div id="outline-container-org90c69bf" class="outline-3">
-<h3 id="org90c69bf"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
-<div class="outline-text-3" id="text-org90c69bf">
+<div id="outline-container-org210b1cc" class="outline-3">
+<h3 id="org210b1cc"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-org210b1cc">
+<p>
+(, )<br />
+</p>
+
+<p>
+<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to "cheat"</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object's shape; a classifier might learn that "green grass background" =&gt; "cow classification."<br />
+</p>
+
 <p>
 This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgdbcd8b9" class="outline-3">
-<h3 id="orgdbcd8b9"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
-<div class="outline-text-3" id="text-orgdbcd8b9">
+<div id="outline-container-orgc4382b9" class="outline-3">
+<h3 id="orgc4382b9"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
+<div class="outline-text-3" id="text-orgc4382b9">
+<p>
+(, a)<br />
+</p>
+
+<p>
+Yoshua Bengio <a href="https://www.youtube.com/watch?v=rKZJ0TJWvTk">talk</a>. Also, the associated <a href="https://arxiv.org/abs/2102.11107">paper</a>.<br />
+</p>
+
+<p>
+causal representation learning: the discovery of high-level causal variables from low-level observations.<br />
+</p>
+
+<p>
+In practice, i.i.d. is a bad assumption. Things don't stay the same distribution as train. Current DL systems are brittle.<br />
+</p>
+
+<p>
+But&#x2026;what assumption can we replace it with, then?<br />
+</p>
+
 <p>
 how does the brain break knowledge apart into "pieces" that can be reused? =&gt; <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a> (thinking decomposition into helper functions in programming.) Examples of compositionality include<br />
 </p>
@@ -84,22 +109,50 @@ how does the brain break knowledge apart into "pieces" that can be reused? =&gt;
 
 
 
-<div id="outline-container-orgbc0a726" class="outline-2 references">
-<h2 id="orgbc0a726">Links to this node</h2>
-<div class="outline-text-2" id="text-orgbc0a726">
+<div id="outline-container-org34656bc" class="outline-2 references">
+<h2 id="org34656bc">Links to this node</h2>
+<div class="outline-text-2" id="text-org34656bc">
 </div>
-<div id="outline-container-orgefcf7d0" class="outline-3">
-<h3 id="orgefcf7d0"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
-<div class="outline-text-3" id="text-orgefcf7d0">
+<div id="outline-container-orgb3e221e" class="outline-3">
+<h3 id="orgb3e221e"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-orgb3e221e">
+<p>
+(, )<br />
+</p>
+
+<p>
+<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to "cheat"</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object's shape; a classifier might learn that "green grass background" =&gt; "cow classification."<br />
+</p>
+
 <p>
 This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb7ea032" class="outline-3">
-<h3 id="orgb7ea032"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
-<div class="outline-text-3" id="text-orgb7ea032">
+<div id="outline-container-orged05e13" class="outline-3">
+<h3 id="orged05e13"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
+<div class="outline-text-3" id="text-orged05e13">
+<p>
+(, a)<br />
+</p>
+
+<p>
+Yoshua Bengio <a href="https://www.youtube.com/watch?v=rKZJ0TJWvTk">talk</a>. Also, the associated <a href="https://arxiv.org/abs/2102.11107">paper</a>.<br />
+</p>
+
+<p>
+causal representation learning: the discovery of high-level causal variables from low-level observations.<br />
+</p>
+
+<p>
+In practice, i.i.d. is a bad assumption. Things don't stay the same distribution as train. Current DL systems are brittle.<br />
+</p>
+
+<p>
+But&#x2026;what assumption can we replace it with, then?<br />
+</p>
+
 <p>
 how does the brain break knowledge apart into "pieces" that can be reused? =&gt; <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a> (thinking decomposition into helper functions in programming.) Examples of compositionality include<br />
 </p>
@@ -114,7 +167,7 @@ Source code is available
 <a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
-<script src="tooltips.js" async></script>
+<script src="tooltips.js"></script>
 </div>
 </body>
 </html>

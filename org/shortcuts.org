@@ -13,25 +13,26 @@ inspiration taken from these goku configs:
 - [[https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126][kaushikgopal]]
 
 
-* Layout
+* Interactive Keyboard Layout
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: karabiner-keyboard-container
+:HTML_CONTAINER_CLASS: karabiner-keyboard-container dont-show-content-in-backlinks
+:ID:       7e0b1fcf-cdd2-46eb-8195-c021c498fd1a
 :END:
+# TODO: don't generate backlinks from this node (create a dont-backlink-here prop)
 ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------,
 ❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ + ❘ ' ❘ <-    ❘
 ❘---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----❘
-❘ ->❘ ❘ [[id:d9445d05-36b8-4435-ba52-b4dd28934160][Q]] ❘ W ❘ E ❘ R ❘ T ❘ Y ❘ U ❘ I ❘ O ❘ P ❘ ] ❘ ^ ❘     ❘
+❘ [[id:8ba2437c-ba0d-4bc6-983e-bb5dbf026e95][->]]❘ ❘ [[id:641cd7e8-71f4-4911-ac7b-85685593a9df][Q]] ❘ W ❘ E ❘ R ❘ T ❘ Y ❘ U ❘ I ❘ O ❘ P ❘ ] ❘ ^ ❘     ❘
 ❘-----',--',--',--',--',--',--',--',--',--',--',--',--'❘    ❘
-❘ Caps ❘ A ❘ S ❘ D ❘ F ❘ G ❘ H ❘ J ❘ K ❘ L ❘ \ ❘ [ ❘ * ❘    ❘
+❘ [[id:030d326c-05a7-46c3-8da7-9cf3662fa8f6][Caps]] ❘ A ❘ S ❘ D ❘ F ❘ G ❘ H ❘ J ❘ K ❘ L ❘ \ ❘ [ ❘ * ❘    ❘
 ❘----,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---'----❘
-❘    ❘ < ❘ [[id:94658b27-f223-405e-b637-1866e3a1dc0b][Z]] ❘ [[id:a89045f9-8744-4b59-9dd8-752d74148268][X]] ❘ C ❘ V ❘ B ❘ N ❘ M ❘ , ❘ . ❘ - ❘          ❘
+❘    ❘ < ❘ [[id:9c2ae9d6-f08b-4538-ab1a-7674f1c7d2c7][Z]] ❘ [[id:3f159d2c-587f-4cb0-b305-a1beb3aed923][X]] ❘ C ❘ V ❘ B ❘ N ❘ M ❘ [[id:2f839e85-533a-4052-96e8-10c776382f79][,]] ❘ . ❘ - ❘          ❘
 ❘----'-,-',--'--,'---'---'---'---'---'---'-,-'---',--,------❘
 ❘ ctrl ❘  ❘ alt ❘                          ❘ alt  ❘  ❘ ctrl ❘
 '------'  '-----'--------------------------'------'  '------'
 * Guide
 For more info on configuring Goku, see the [[https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md][tutorial]].
 Guide lifted from [[https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126][kaushikgopal]]. To understand better how modifiers work in karabiner, see the karabiner definition of mandatory and optional: [[https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/#frommodifiersoptional   ][karabiner modifiers documentation]]
-need to prefix C T O S F with ! or #
 | Modifier | Meaning                                      |
 |----------+----------------------------------------------|
 | !        | mandatory (w/o modifier changes behavior)    |
@@ -119,66 +120,148 @@ need to prefix C T O S F with ! or #
 
 * Main
 ** begin main
+:PROPERTIES:
+:ID:       f40c5408-e269-411c-b02a-a2054e452ed3
+:END:
 #+begin_src clojure
 :main [{
         :des "see karabiner.org for documentation.",
         :rules [
 #+end_src
 ** right cmd/option => previous app
+:PROPERTIES:
+:ID:       8a5eb4c8-1434-4c3e-83c1-3325061d5d78
+:END:
 Switch to the previous application with right command/option -- right command hides the current app, right option doesn't.
 #+begin_src clojure
-[:right_command :right_command nil {:alone [:km "Previous Application" "hide"]}]
+[:right_command :right_command nil {:alone [:elisp "(set-transient-map doom-leader-map)"]}]
 [:right_option :right_option nil {:alone [:km "Previous Application"]}]
 #+end_src
 ** caps lock alone = escape, with other keys = ctrl
+:PROPERTIES:
+:ID:       030d326c-05a7-46c3-8da7-9cf3662fa8f6
+:END:
 #+begin_src clojure
 [:##caps_lock :left_control nil {:alone :escape}]
 #+end_src
+** function keys
+Brightness controls (matching the default mappings in macOS):
+#+begin_src clojure
+[:f1 :display_brightness_decrement]
+[:f2 :display_brightness_increment]
+#+end_src
+
+Commands to access my various org-agenda views; looking at future tasks, looking at today's tasks, and reviewing tasks that I already got done.
+#+begin_src clojure
+[:f3 [:elisp "(ketan0/look-ahead nil)"]]
+[:f4 [:elisp "(ketan0/new-agenda)"]]
+[:f4 [:elisp "(ketan0/weekly-review nil)"]]
+#+end_src
+
+Some spotify specific commands; these are nice to control spotify playback in the background, e.g. to adjust Spotify's volume relative to the volume of a video I'm watching.
+#+begin_src apples :tangle ~/.dotfiles/decrease_music_volume.scpt
+tell application "Spotify"
+    set vol to sound volume
+    set vol to vol - 10
+    if vol is less than 0 then
+        set vol to 0
+    end if
+    set the sound volume to vol
+end tell
+#+end_src
+
+#+begin_src apples :tangle ~/.dotfiles/increase_music_volume.scpt
+tell application "Spotify"
+    set vol to sound volume
+    set vol to vol + 10
+    if vol is greater than 100 then
+        set vol to 100
+    end if
+    set the sound volume to vol
+end tell
+#+end_src
+
+#+begin_src clojure
+[:f7  "osascript -e 'tell application \"Spotify\" to previous track'"]
+[:f8  "osascript -e 'tell application \"Spotify\" to playpause'"]
+[:f9  "osascript -e 'tell application \"Spotify\" to next track'"]
+[:!Sf11  "osascript ~/.dotfiles/decrease_music_volume.scpt"]
+[:!Sf12 "osascript ~/.dotfiles/increase_music_volume.scpt"]
+#+end_src
+
+Brightness controls (matching the default mappings in macOS):
+#+begin_src clojure
+[:f10 :mute]
+[:f11 :volume_decrement]
+[:f12 :volume_increment]
+#+end_src
 ** yabai-move-mode (tab + w + {hjkl})
+:PROPERTIES:
+:ID:       3462dbc5-e696-41ba-9ff4-c8b693f09017
+:END:
 Move the current window directionally in the yabai tiling setup.
 #+begin_src clojure
 :yabai-move-mode
-[:h "/usr/local/bin/yabai -m window --warp west"]
-[:j "/usr/local/bin/yabai -m window --warp south"]
-[:k "/usr/local/bin/yabai -m window --warp north"]
-[:l "/usr/local/bin/yabai -m window --warp east"]
-[:b "/usr/local/bin/yabai -m space --balance"]
-[:0 "/usr/local/bin/yabai -m window --opacity 0.0"]
-[:1 "/usr/local/bin/yabai -m window --opacity 0.1"]
-[:2 "/usr/local/bin/yabai -m window --opacity 0.2"]
-[:3 "/usr/local/bin/yabai -m window --opacity 0.3"]
-[:4 "/usr/local/bin/yabai -m window --opacity 0.4"]
-[:5 "/usr/local/bin/yabai -m window --opacity 0.5"]
-[:6 "/usr/local/bin/yabai -m window --opacity 0.6"]
-[:7 "/usr/local/bin/yabai -m window --opacity 0.7"]
-[:8 "/usr/local/bin/yabai -m window --opacity 0.8"]
-[:9 "/usr/local/bin/yabai -m window --opacity 0.9"]
-[:grave_accent_and_tilde "/usr/local/bin/yabai -m window --opacity 1.0"]
-[:s "/usr/local/bin/yabai -m window --toggle split"]
+[:c [:yabai "window --grid 16:10:3:1:4:12"]]
+[:h [:yabai "window --warp west"]]
+[:j [:yabai "window --warp south"]]
+[:k [:yabai "window --warp north"]]
+[:l [:yabai "window --warp east"]]
+[:b [:yabai "space --balance" ]]
+[:0 [:yabai "window --opacity 0.0"]]
+[:1 [:yabai "window --opacity 0.1"]]
+[:2 [:yabai "window --opacity 0.2"]]
+[:3 [:yabai "window --opacity 0.3"]]
+[:4 [:yabai "window --opacity 0.4"]]
+[:5 [:yabai "window --opacity 0.5"]]
+[:6 [:yabai "window --opacity 0.6"]]
+[:7 [:yabai "window --opacity 0.7"]]
+[:8 [:yabai "window --opacity 0.8"]]
+[:9 [:yabai "window --opacity 0.9"]]
+[:grave_accent_and_tilde [:yabai "window --opacity 1.0"]]
+[:s [:yabai "window --toggle split"]]
 #+end_src
 
 ** yabai-focus-mode (tab + f + {hjkl})
+:PROPERTIES:
+:ID:       7da7aa7e-0111-4717-84ea-a58ee9b6741d
+:END:
 Move focus to the left/top/bottom/right of the current window.
 #+begin_src clojure
 :yabai-focus-mode
-[:g "/usr/local/bin/yabai -m space --focus prev"]
-[:h "/usr/local/bin/yabai -m window --focus west"]
-[:j "/usr/local/bin/yabai -m window --focus south"]
-[:k "/usr/local/bin/yabai -m window --focus north"]
-[:l "/usr/local/bin/yabai -m window --focus east"]
-[:semicolon "/usr/local/bin/yabai -m space --focus next"]
+[:g [:yabai "space --focus prev"]]
+[:h [:yabai "window --focus west"]]
+[:j [:yabai "window --focus south"]]
+[:k [:yabai "window --focus north"]]
+[:l [:yabai "window --focus east"]]
+[:semicolon [:yabai "space --focus next"]]
 #+end_src
 
-** yabai-display-mode (tab + d + {hjkl})
+** yabai-display-mode (currently unused)
+:PROPERTIES:
+:ID:       8ccd4df9-2f31-459c-8bea-2f6ea5649e5a
+:END:
 #+begin_src clojure
 :yabai-display-mode
-[:h "/usr/local/bin/yabai -m display --focus prev"]
-[:j "/usr/local/bin/yabai -m window --display prev && /usr/local/bin/yabai -m display --focus prev"]
-[:k "/usr/local/bin/yabai -m window --display next && /usr/local/bin/yabai -m display --focus next"]
-[:l "/usr/local/bin/yabai -m display --focus next"]
+[:h [:yabai "display --focus prev"]]
+[:l [:yabai "display --focus next"]]
+#+end_src
+** yabai-adjust-mode (tab + d + {hl})
+:PROPERTIES:
+:ID:       7d38a8d6-813e-417b-898e-0d023f996dca
+:END:
+#+begin_src clojure
+:yabai-adjust-mode
+[:h [:yabai "window --ratio rel:-0.02"]]
+[:j [:yabai "window --ratio rel:0.02"]]
+[:k [:yabai "window --ratio rel:-0.02"]]
+[:l [:yabai "window --ratio rel:0.02"]]
 #+end_src
 
 ** chrome-history-mode (tab + g + {hl})
+:PROPERTIES:
+:ID:       3954c336-fc50-49d1-a7a3-9e78eed760dd
+:END:
 Move backward/forward in Chrome history.
 #+begin_src clojure
 :chrome-history-mode
@@ -186,6 +269,9 @@ Move backward/forward in Chrome history.
 [:l :!Cclose_bracket]
 #+end_src
 ** chrome-movement-mode (tab + t + {hl})
+:PROPERTIES:
+:ID:       957c4af0-e25f-4889-a062-4aec0aadac7f
+:END:
 Move to the tab left/right of the current tab.
 #+begin_src clojure
 :chrome-movement-mode
@@ -193,6 +279,9 @@ Move to the tab left/right of the current tab.
 [:l :!Ttab]
 #+end_src
 ** chrome-rearrange-tab-mode (tab + r + {hl})
+:PROPERTIES:
+:ID:       ce23046b-7c9c-47a5-ba39-ac951d43e157
+:END:
 Move current tab left/right. Need [[https://chrome.google.com/webstore/detail/rearrange-tabs/ccnnhhnmpoffieppjjkhdakcoejcpbga][this Chrome extension]] for this to work.
 #+begin_src clojure
 :chrome-rearrange-tab-mode
@@ -200,14 +289,17 @@ Move current tab left/right. Need [[https://chrome.google.com/webstore/detail/re
 [:l :!TSright_arrow]
 #+end_src
 ** tab-mode (tab)
+:PROPERTIES:
+:ID:       8ba2437c-ba0d-4bc6-983e-bb5dbf026e95
+:END:
 Mostly for opening apps, and some other convenient shortcuts like toggling dark mode and emojis.
 
-Toggle system dark mode, as well as the emacs theme. (See [[https://github.com/ketan0/dotfiles/blob/master/doom.d/config.el][ketan0/responsive-theme]] for details)
-#+begin_src apples
+Toggle system dark mode, as well as the emacs theme. (See [[https://github.com/ketan0/dotfiles/blob/c81d2e3dd4ddf84196f7b70d6ad6418dd9f4b0ba/doom.d/config.el#L52][ketan0/responsive-theme]] for details)
+#+begin_src apples :tangle ~/.dotfiles/toggle_dark_mode.scpt
 tell application "System Events"
     tell appearance preferences
         set dark mode to not dark mode
-        do shell script "/usr/local/bin/emacsclient --eval '(load-theme (ketan0/responsive-theme) t)'"
+        do shell script "/opt/homebrew/bin/emacsclient --eval '(load-theme (ketan0/responsive-theme) t)'"
     end tell
 end tell
 #+end_src
@@ -215,11 +307,11 @@ end tell
 #+begin_src clojure
 :tab-mode
 [:spacebar :!CTspacebar] ;; open emoji picker
-[:return_or_enter  "/usr/local/bin/yabai -m window --toggle float"]
+[:return_or_enter [:yabai "window --toggle float"]]
 [:comma [:km "Open Messenger" "hide"]]
 [:3 "osascript ~/.dotfiles/toggle_dark_mode.scpt"]
 [:4 [:km "Open Finder"]]
-[:a [:km "Open Safari" "hide"]]
+[:a [:km "Open Music" "hide"]]
 [:x [:km "Open Chrome" "hide"]]
 [:c [:km "Open Safari" "hide"]]
 [:k [:km "Open Keyboard Maestro" "hide"]]
@@ -236,12 +328,12 @@ end tell
 #+end_src
 ** q-key-mode (q)
 :PROPERTIES:
-:ID:       d9445d05-36b8-4435-ba52-b4dd28934160
+:ID:       641cd7e8-71f4-4911-ac7b-85685593a9df
 :END:
 #+begin_src clojure
 :q-key-mode
 [:grave_accent_and_tilde [:km "Open Stickies"]]
-[:a [:km "Open Safari"]]
+[:a [:km "Open Music"]]
 [:x [:km "Open Chrome"]]
 [:s [:km "Open Spotify"]]
 [:c [:km "Open Safari"]]
@@ -255,46 +347,105 @@ end tell
 #+end_src
 ** x-key-mode (x)
 :PROPERTIES:
-:ID:       a89045f9-8744-4b59-9dd8-752d74148268
+:ID:       3f159d2c-587f-4cb0-b305-a1beb3aed923
 :END:
-#+begin_src apples
-tell application "Google Chrome"
-    execute front window's active tab javascript "javascript:location.href = 'org-protocol://roam-ref?template=r&ref=' + encodeURIComponent(location.href) + '&title=' + encodeURIComponent(document.title)"
-end tell
+#+begin_src js :tangle ~/.dotfiles/org_roam_capture.scpt
+app = Application.currentApplication()
+app.includeStandardAdditions = true
+const currentTab = Application('Safari').windows[0].currentTab
+const url = currentTab.url()
+const name = currentTab.name()
+app.openLocation(`org-protocol://roam-ref?template=r&ref=${encodeURIComponent(url)}&title=${encodeURIComponent(name)}`)
 #+end_src
 
 #+begin_src clojure
 :x-key-mode
-[:a [:elisp "(ketan0/switch-to-main-agenda)"]]
+[:a [:elisp "(ketan0/new-agenda)"]]
+[:c "screencapture -ic"]
+[:w [:elisp "(ketan0/look-ahead nil)"]]
 [:s [:elisp "(+org-capture/open-frame nil \"s\")"]]
 [:t [:elisp "(+org-capture/open-frame nil \"t\")"]]
 [:d [:elisp "(+org-capture/open-frame nil \"d\")"]]
 [:i [:elisp "(+org-capture/open-frame nil \"i\")"]]
-[:g "osascript ~/.dotfiles/org_roam_capture.scpt"] ;; create new org-roam note
+[:g "osascript -l JavaScript ~/.dotfiles/org_roam_capture.scpt"] ;; create new org-roam note
 [:spacebar [:elisp "(+org-capture/open-frame)"]]
 [:r [:elisp "(org-roam-node-random)"]]
 [:j [:elisp "(org-journal-new-entry nil)"]]
 #+end_src
 ** tilde-mode
+:PROPERTIES:
+:ID:       7a27feb4-076c-43ee-abfd-3add04f4f472
+:END:
 Using this mode to "focus" / "unfocus" with the [[https://heyfocus.com/][Focus]] app for MacOS.
+
+Also, toggle Do Not Disturb.
+#+begin_src apples :tangle ~/.dotfiles/toggle_dnd.scpt
+my setDoNoDisturbTo()
+
+-- https://github.com/sindresorhus/do-not-disturb/issues/9
+on setDoNoDisturbTo()
+    set checkDNDstatusCMD to ¬
+        {"defaults read", space, ¬
+            "com.apple.ncprefs.plist", ¬
+            space, "dnd_status"} as string
+    set statusOfDND to ¬
+        (do shell script checkDNDstatusCMD) ¬
+            as boolean
+    if not statusOfDND
+        display notification "Turning on Do Not Disturb..."
+        set OnOffData to "62706C6973743030D60102030405060708080A08085B646E644D6972726F7265645F100F646E64446973706C6179536C6565705F101E72657065617465644661636574696D6543616C6C73427265616B73444E445875736572507265665E646E64446973706C61794C6F636B5F10136661636574696D6543616E427265616B444E44090808D30B0C0D070F1057656E61626C6564546461746556726561736F6E093341C2B41C4FC9D3891001080808152133545D6C828384858C9499A0A1AAACAD00000000000001010000000000000013000000000000000000000000000000AE"
+    else
+        set OnOffData to "62706C6973743030D5010203040506070707075B646E644D6972726F7265645F100F646E64446973706C6179536C6565705F101E72657065617465644661636574696D6543616C6C73427265616B73444E445E646E64446973706C61794C6F636B5F10136661636574696D6543616E427265616B444E44090808080808131F3152617778797A7B0000000000000101000000000000000B0000000000000000000000000000007C"
+    end if
+    set changeDNDstatusCMD to ¬
+        {"defaults write", space, ¬
+            "com.apple.ncprefs.plist", ¬
+            space, "dnd_prefs -data", space, OnOffData, ¬
+            space, "&&", ¬
+        "defaults write", space, ¬
+            "com.apple.ncprefs.plist", ¬
+            space, "dnd_status ", not statusOfDND, space, ¬
+        "&& killall usernoted && killall ControlCenter"} as string
+    do shell script changeDNDstatusCMD
+    if statusOfDND
+        display notification "Turned off Do Not Disturb."
+    end if
+end setDoNoDisturbTo
+#+end_src
+
+#+RESULTS:
+
 #+begin_src clojure
 :tilde-mode
+[:d "osascript ~/.dotfiles/toggle_dnd.scpt"]
 [:f [:openhide "focus://focus?minutes=60"]]
 [:t [:openhide "focus://toggle"]]
 [:u [:openhide "focus://unfocus"]]
 [:comma [:open "focus://preferences"]]
 #+end_src
+
 ** comma-mode
+:PROPERTIES:
+:ID:       2f839e85-533a-4052-96e8-10c776382f79
+:END:
 Just some like random stuff. Open notes, zoom links, twitter, typing tests.
 
 Open [[https://chrome.google.com/webstore/detail/history-trends-unlimited/pnmchffiealhkdloeffcdnbgdnedheme?hl=en][History Trends Unlimited]] chrome extension
-#+begin_src apples
+#+begin_src apples :tangle ~/.dotfiles/open_chrome_history.scpt
 tell application "Google Chrome" to open location "chrome-extension://pnmchffiealhkdloeffcdnbgdnedheme/search.html"
 #+end_src
 
 Open a URL, but only if it's not already a tab. If it's a tab, then go to that tab.
-#+begin_src apples
+#+begin_src apples :tangle ~/.dotfiles/open_url_smart.scpt
 on run (clp)
+    -- given "block" argument on command line, block certain sites from 9am to 9pm
+    if clp's length is 2 and clp's item 2 = "block"
+        tell (current date) to set currentHour to (its hours)
+        if currentHour >= 9 and currentHour < 21
+            display notification "Blocked!"
+            return
+        end if
+    end if
     tell application "Safari"
         repeat with w in windows
             set i to 1
@@ -323,7 +474,7 @@ end run
 #+end_src
 
 Check my calendar; if there's an event with a zoom link, open the zoom link.
-#+begin_src apples
+#+begin_src apples :tangle ~/.dotfiles/open_current_zoom_link.scpt
 use script "CalendarLib EC" version "1.1.5"
 use scripting additions
 use framework "Foundation"
@@ -379,47 +530,60 @@ end if
 #+RESULTS:
 
 I really like Safari, but sometimes need to use Chrome for various extensions etc. Solution: have Safari => Chrome shortcut.
-#+begin_src apples
+#+begin_src apples :tangle ~/.dotfiles/open_in_chrome.scpt
 tell application "Safari"
     set theURL to URL of current tab of window 1
     tell application "Google Chrome" to open location theURL
 end tell
 #+end_src
 
+Download a video from youtube with one keyboard shortcut, using the wonderful ~youtube-dl~.
+#+begin_src apples :tangle ~/.dotfiles/download_video.scpt
+tell application "Safari"
+    set theURL to URL of current tab of window 1
+    display notification "/opt/homebrew/bin/youtube-dl -o \"~/Downloads/%(title)s.%(ext)s\" '" & theURL & "'"
+    do shell script "/opt/homebrew/bin/youtube-dl -o \"~/Downloads/%(title)s.%(ext)s\" '" & theURL & "'"
+end tell
+#+end_src
 
 #+begin_src clojure
 :comma-mode
 [:1 [:withsecretsmarturl "$PSYCH_LECTURE_LINK"]]
 [:3 [:withsecret "open $PAC_PROJECT_ZOOM_LINK"]]
 ;; add title bar to frame
+;; (I use the --with-no-title-bars patch for emacs-mac, but sometimes I like the title bar)
 [:a [:elisp "(setq mac-use-title-bar t)(setq ketan0/old-frame (selected-frame)) (make-frame)(delete-frame ketan0/old-frame)"]]
 [:b "osascript ~/.dotfiles/open_in_chrome.scpt"]
-[:c [:open "/Users/ketanagrawal/capture.org"]]
+[:c [:open "/Users/ketanagrawal/garden-simple/org/private/capture.org"]]
 [:d [:open "https://drive.google.com/drive/my-drive"]]
 [:o [:open "http://doc.new"]] ;; new google doc
 [:e [:open "/Users/ketanagrawal/.dotfiles/doom.d/config.el"]]
-[:f [:smarturl "https://www.keyhero.com/free-typing-test/"]]
+[:f [:smarturl "https://www.keyhero.com/free-typing-test/" "block"]]
 ;; [:h [:km "Github => Emacs"]]
 [:h "osascript /Users/ketanagrawal/.dotfiles/open_chrome_history.scpt"]
 
-[:i [:smarturl "https://www.keyhero.com/typing-instant-death/"]]
+[:i [:smarturl "https://www.keyhero.com/typing-instant-death/" "block"]]
 [:j [:smarturl "http://localhost:8888"]]
+[:k [:smarturl "https://laboratory.ketan.me"]]
 [:l "osascript /Users/ketanagrawal/.dotfiles/open_current_zoom_link.scpt"]
-[:m [:smarturl "https://outlook.office.com/"]]
+[:m [:smarturl "https://outlook.office.com/" "block"]]
 [:n [:openwith "Google Chrome" "https://www.netflix.com/title/80199128"]]
+[:u "osascript /Users/ketanagrawal/.dotfiles/download_video.scpt"]
 [:p [:withsecretsmarturl "$PAC_PROGRESS_DOC_LINK"]]
-[:t [:smarturl "https://twitter.com/i/bookmarks"]]
-[:r [:open "/Users/ketanagrawal/private/todos.org"]]
+[:q [:withsecretsmarturl "$HCI_PROGRESS_DOC_LINK"]]
+[:t [:smarturl "https://twitter.com/i/bookmarks" "block"]]
+[:r [:open "/Users/ketanagrawal/garden-simple/org/private/todos.org"]]
 [:s [:open "/Users/ketanagrawal/.dotfiles/karabiner.org"]]
 ;; [:v [:open "https://healthy.verily.com/"]] ;; covid testing
-[:v [:openwith "Emacs" "/Users/ketanagrawal/Dropbox/Apps/GoodNotes 5/GoodNotes/vision.pdf"]]
+[:v [:open "https://home.color.com/sign-in?next=%2Fcovid%2Factivation"]]
+;; [:v [:openwith "Emacs" "/Users/ketanagrawal/Dropbox/Apps/GoodNotes 5/GoodNotes/vision.pdf"]]
 [:y [:openwith "Emacs" "/Users/ketanagrawal/.dotfiles/yabairc"]]
 [:z [:withsecret "open $MY_ZOOM_LINK"]]
 #+end_src
-** o-key-mode
-#+begin_src clojure
-#+end_src
 ** wallpaper-mode
+:PROPERTIES:
+:ID:       0a217b5a-4bca-46bf-9482-affde5df2652
+:END:
 #+begin_src clojure
 :wallpaper-mode
 [:g [:wallpaper "/System/Library/Desktop Pictures/Solar Gradients.heic"]]
@@ -430,26 +594,22 @@ end tell
 #+end_src
 ** vim-mode (z)
 :PROPERTIES:
-:ID:       94658b27-f223-405e-b637-1866e3a1dc0b
+:ID:       9c2ae9d6-f08b-4538-ab1a-7674f1c7d2c7
 :END:
 #+begin_src clojure
 :vim-mode
-[:#Sh :left_arrow] ;; hjkl navigation everywhere + Shift
-[:#Sj :down_arrow]
-[:#Sk :up_arrow]
-[:#Sl :right_arrow]
-[:#Sb :!Oleft_arrow]
-[:#Sw :!Oright_arrow]
+[:##h :left_arrow] ;; hjkl navigation everywhere + Shift
+[:##j :down_arrow]
+[:##k :up_arrow]
+[:##l :right_arrow]
+[:##b :!Oleft_arrow]
+[:##w :!Oright_arrow]
 [:delete_or_backspace :!Odelete_or_backspace]
 #+end_src
-
-** jupyter mode (j)
-#+begin_src clojure
-:jupyter-mode
-[:l [:km "Start or Go to Existing Jupyter Lab Server"]]
-#+end_src
-
 ** end main
+:PROPERTIES:
+:ID:       6d6e59dc-0a07-462f-bcf2-0da725ebb0a6
+:END:
 #+begin_src clojure
 ]}] ;;end main
 #+end_src

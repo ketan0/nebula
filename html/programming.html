@@ -3,14 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-30 Thu 21:28 -->
+<!-- 2022-03-02 Wed 20:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>programming</title>
 <meta name="author" content="Ketan Agrawal" />
 <meta name="generator" content="Org Mode" />
-<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -19,22 +18,20 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/">
-<h2>Ketan's Digital Laboratory &#129514;</h2>
-</a>
+<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Nebula</h2></a>
 </div>
 <div id="content" class="content">
 <h1 class="title">programming</h1>
 <p>
-I will make this an actual, substantive note at some point. In the meantime, enjoy some random-ish code snippets that I've encountered.<br />
+Hey! These are some snippets of various languages that can be run straight out of org mode.<br />
 </p>
 
 <p>
 connected to a lot of these things is my <a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">goku (karabiner) config</a>.<br />
 </p>
-<div id="outline-container-org60127da" class="outline-2">
-<h2 id="org60127da">Who am i</h2>
-<div class="outline-text-2" id="text-org60127da">
+<div id="outline-container-org959ce24" class="outline-2">
+<h2 id="org959ce24">Who am i</h2>
+<div class="outline-text-2" id="text-org959ce24">
 <div class="org-src-container">
 <pre class="src src-bash" data-language="bash">whoami
 </pre>
@@ -44,9 +41,9 @@ ketanagrawal
 </pre>
 </div>
 </div>
-<div id="outline-container-orgfadc26d" class="outline-2">
-<h2 id="orgfadc26d">Rust</h2>
-<div class="outline-text-2" id="text-orgfadc26d">
+<div id="outline-container-org7047ab8" class="outline-2">
+<h2 id="org7047ab8">Rust</h2>
+<div class="outline-text-2" id="text-org7047ab8">
 <p>
 In rust, you can create a tuple by <code>let tuple = (x0, x1, x2)</code> and access them by <code>tuple.0</code>, <code>tuple.1</code>, and <code>tuple.2</code>. For example:<br />
 </p>
@@ -54,13 +51,14 @@ In rust, you can create a tuple by <code>let tuple = (x0, x1, x2)</code> and acc
 <pre class="src src-rust" data-language="rust"><span class="org-keyword">let</span> <span class="org-variable-name">tuple</span> = (<span class="org-highlight-numbers-number">1</span>, <span class="org-string">"hello"</span>);
 <span class="org-preprocessor">assert_eq!</span>(tuple.<span class="org-highlight-numbers-number">0</span>, <span class="org-highlight-numbers-number">1</span>);
 <span class="org-preprocessor">assert_eq!</span>(tuple.<span class="org-highlight-numbers-number">1</span>, <span class="org-string">"hello"</span>);
+<span class="org-keyword">struct</span> <span class="org-type">Point</span> { <span class="org-variable-name">x</span>: <span class="org-type">f32</span>, <span class="org-variable-name">y</span>: <span class="org-type">f32</span> };
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org8bd9ce6" class="outline-2">
-<h2 id="org8bd9ce6">Applescript</h2>
-<div class="outline-text-2" id="text-org8bd9ce6">
+<div id="outline-container-orgf3464c4" class="outline-2">
+<h2 id="orgf3464c4">Applescript</h2>
+<div class="outline-text-2" id="text-orgf3464c4">
 <p>
 Applescript to switch the current tab from Safari =&gt; Chrome:<br />
 </p>
@@ -73,9 +71,9 @@ Applescript to switch the current tab from Safari =&gt; Chrome:<br />
 </div>
 </div>
 </div>
-<div id="outline-container-org51975d2" class="outline-2">
-<h2 id="org51975d2">Emacs Lisp</h2>
-<div class="outline-text-2" id="text-org51975d2">
+<div id="outline-container-orgb25447a" class="outline-2">
+<h2 id="orgb25447a">Emacs Lisp</h2>
+<div class="outline-text-2" id="text-orgb25447a">
 <div class="org-src-container">
 <pre class="src src-elisp" data-language="elisp">(message <span class="org-string">"Lovely %s we're having, isn't it?"</span>
     (format-time-string <span class="org-string">"%A"</span>))
@@ -88,9 +86,9 @@ Lovely Monday we’re having, isn’t it?
 </div>
 </div>
 
-<div id="outline-container-org132c8e5" class="outline-2">
-<h2 id="org132c8e5">Python</h2>
-<div class="outline-text-2" id="text-org132c8e5">
+<div id="outline-container-org4bd0fde" class="outline-2">
+<h2 id="org4bd0fde">Python</h2>
+<div class="outline-text-2" id="text-org4bd0fde">
 <div class="org-src-container">
 <pre class="src src-python" data-language="python"><span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
 
@@ -110,79 +108,314 @@ Lovely Monday we’re having, isn’t it?
 
 <span class="org-keyword">def</span> <span class="org-function-name">fibonacci_squares</span>(n):
     <span class="org-variable-name">arr</span> = fibonacci_squares_arr(n)
-    <span class="org-variable-name">chars</span> = <span class="org-builtin">list</span>(<span class="org-string">'&#128997;&#129003;&#128998;&#128999;&#129000;&#129001;&#129002;'</span>)
+    <span class="org-variable-name">chars</span> = <span class="org-builtin">list</span>(<span class="org-string">'&#128997;&#129003;&#128998;&#128999;&#129000;&#129002;&#129001;'</span>)
     <span class="org-variable-name">fib_str</span> = <span class="org-string">'\n'</span>.join([<span class="org-string">''</span>.join([chars[(elem - <span class="org-highlight-numbers-number">1</span>) % <span class="org-builtin">len</span>(chars)]
                                   <span class="org-keyword">for</span> elem <span class="org-keyword">in</span> row]) <span class="org-keyword">for</span> row <span class="org-keyword">in</span> arr])
     <span class="org-keyword">return</span> fib_str
-<span class="org-keyword">print</span>(fibonacci_squares(<span class="org-highlight-numbers-number">8</span>))
+<span class="org-keyword">print</span>(fibonacci_squares(<span class="org-highlight-numbers-number">6</span>))
 </pre>
 </div>
 
-<pre class="example" id="org17dabdc">
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟪🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟩🟩🟩🟩🟩🟩🟩🟩🟦🟦🟧🟧🟧🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟩🟩🟩🟩🟩🟩🟩🟩🟦🟦🟧🟧🟧🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟩🟩🟩🟩🟩🟩🟩🟩🟫🟥🟧🟧🟧🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+<pre class="example">
+🟪🟪🟪🟪🟪🟪🟪🟪🟦🟦🟧🟧🟧
+🟪🟪🟪🟪🟪🟪🟪🟪🟦🟦🟧🟧🟧
+🟪🟪🟪🟪🟪🟪🟪🟪🟫🟥🟧🟧🟧
+🟪🟪🟪🟪🟪🟪🟪🟪🟨🟨🟨🟨🟨
+🟪🟪🟪🟪🟪🟪🟪🟪🟨🟨🟨🟨🟨
+🟪🟪🟪🟪🟪🟪🟪🟪🟨🟨🟨🟨🟨
+🟪🟪🟪🟪🟪🟪🟪🟪🟨🟨🟨🟨🟨
+🟪🟪🟪🟪🟪🟪🟪🟪🟨🟨🟨🟨🟨
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-variable-name">y</span> = <span class="org-highlight-numbers-number">2</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-keyword">print</span>(y)
+</pre>
+</div>
+
+<pre class="example">
+2
 </pre>
 </div>
 </div>
 
 
-<div id="outline-container-org10da6ce" class="outline-2 references">
-<h2 id="org10da6ce">Links to this node</h2>
-<div class="outline-text-2" id="text-org10da6ce">
+<div id="outline-container-org70dc26f" class="outline-2 references">
+<h2 id="org70dc26f">Links to this node</h2>
+<div class="outline-text-2" id="text-org70dc26f">
 </div>
-<div id="outline-container-org507b8e4" class="outline-3">
-<h3 id="org507b8e4"><a href="index.html#ID-23e03a28-48b1-4fa3-9fa3-71a369950c6d">Hello</a></h3>
-<div class="outline-text-3" id="text-org507b8e4">
-</div>
-<div id="outline-container-org70d7e6e" class="outline-4">
-<h4 id="org70d7e6e">(<i>What you'll find in my laboratory &gt; programming</i>)</h4>
-</div>
-</div>
-
-
-<div id="outline-container-org27a4601" class="outline-3">
-<h3 id="org27a4601"><a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a></h3>
-<div class="outline-text-3" id="text-org27a4601">
-<p>
-Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programs</a> into modular, reusable unit is one example of this.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-org1832d08" class="outline-3">
-<h3 id="org1832d08"><a href="codex.html#ID-c626be7b-9d81-4a41-97cb-bf6a24558e71">codex</a></h3>
-<div class="outline-text-3" id="text-org1832d08">
+<div id="outline-container-orgb727f1f" class="outline-3">
+<h3 id="orgb727f1f"><a href="codex.html#ID-c626be7b-9d81-4a41-97cb-bf6a24558e71">codex</a></h3>
+<div class="outline-text-3" id="text-orgb727f1f">
 <p>
 Some cool (mostly) working examples I've been able to generate with <a href="https://openai.com/blog/openai-codex/">OpenAI Codex</a> so far! For context, Codex is a language model that can generate completions for <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a> examples, given some initial prompt. For all of these Python examples, the initial prompt is the block comment at the top, and Codex's completion is the rest of the example.<br />
 </p>
+
+<p>
+Each of these was syntactically correct and functional with very minimal modification, most none at all. I'm sure some of these examples are partly "memorized" from the training data, but the fact that it can substitute new parameters into those memorized templates is pretty amazing.<br />
+</p>
+
+<p>
+&#x2013;<br />
+</p>
+
+<p>
+Haha, this one seemed to assume that it was already December. But it was cool that it did this much by itself.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
+<span class="org-doc">1. Print the date today.</span>
+<span class="org-doc">2. Print how many days until Christmas.</span>
+<span class="org-doc">"""</span>
+
+<span class="org-keyword">import</span> datetime
+
+<span class="org-variable-name">now</span> = datetime.datetime.now()
+
+<span class="org-keyword">print</span>(now.strftime(<span class="org-string">"%A, %B %d, %Y"</span>))
+
+<span class="org-variable-name">today</span> = now.strftime(<span class="org-string">"%m/%d"</span>)
+
+<span class="org-keyword">if</span> today == <span class="org-string">"12/25"</span>:
+    <span class="org-keyword">print</span>(<span class="org-string">"Merry Christmas!"</span>)
+<span class="org-keyword">else</span>:
+    <span class="org-keyword">print</span>(<span class="org-string">"There are "</span> + <span class="org-builtin">str</span>(<span class="org-highlight-numbers-number">25</span> - <span class="org-builtin">int</span>(today[<span class="org-highlight-numbers-number">3</span>:])) + <span class="org-string">" days until Christmas!"</span>)
+</pre>
+</div>
+
+<pre class="example">
+Wednesday, September 08, 2021
+There are 17 days until Christmas!
+</pre>
+
+
+<p>
+This&#x2026;this is cool to be able to write math in natural language like this, and have it come to life. Wow.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
+<span class="org-doc">Print the reciprocal of the Hilbert matrix.</span>
+<span class="org-doc">"""</span>
+
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-keyword">from</span> scipy.linalg <span class="org-keyword">import</span> hilbert
+<span class="org-variable-name">n</span> = <span class="org-highlight-numbers-number">5</span>
+<span class="org-variable-name">a</span> = hilbert(n)
+<span class="org-variable-name">b</span> = <span class="org-highlight-numbers-number">1.0</span> / a
+<span class="org-keyword">print</span>(b)
+</pre>
+</div>
+
+<pre class="example">
+[[1. 2. 3. 4. 5.]
+ [2. 3. 4. 5. 6.]
+ [3. 4. 5. 6. 7.]
+ [4. 5. 6. 7. 8.]
+ [5. 6. 7. 8. 9.]]
+</pre>
+
+
+<p>
+Hah, this is a cute one. I initially only put the first 4 lines in, and it proceeded to complete my pattern of stars, and even add a complementary pattern at the bottom.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
+<span class="org-doc">*</span>
+<span class="org-doc">**</span>
+<span class="org-doc">***</span>
+<span class="org-doc">****</span>
+<span class="org-doc">*****</span>
+<span class="org-doc">"""</span>
+
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-highlight-numbers-number">1</span>,<span class="org-highlight-numbers-number">6</span>):
+    <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(i):
+        <span class="org-keyword">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
+    <span class="org-keyword">print</span>()
+
+<span class="org-string">"""</span>
+<span class="org-string">*****</span>
+<span class="org-string">****</span>
+<span class="org-string">***</span>
+<span class="org-string">**</span>
+<span class="org-string">*</span>
+<span class="org-string">"""</span>
+
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-highlight-numbers-number">5</span>,<span class="org-highlight-numbers-number">0</span>,-<span class="org-highlight-numbers-number">1</span>):
+    <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(i):
+        <span class="org-keyword">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
+    <span class="org-keyword">print</span>()
+</pre>
+</div>
+
+<pre class="example" id="org554b279">
+*
+**
+***
+****
+*****
+*****
+****
+***
+**
+*
+</pre>
+
+
+<p>
+Whoa. This would certainly make using matplotlib a lot easier.<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
+<span class="org-doc">print the date in 100 days.</span>
+<span class="org-doc">"""</span>
+
+<span class="org-keyword">from</span> datetime <span class="org-keyword">import</span> datetime, timedelta
+
+<span class="org-variable-name">now</span> = datetime.now()
+<span class="org-variable-name">delta</span> = timedelta(days=<span class="org-highlight-numbers-number">100</span>)
+<span class="org-keyword">print</span>(now + delta)
+
+</pre>
+</div>
+
+<pre class="example">
+2021-12-31 12:08:53.843912
+</pre>
+
+
+
+<div id="org0afcd6c" class="figure">
+<p><img src="my_plot.png" alt="my_plot.png" /><br />
+</p>
+</div>
+
+<p>
+It honored my request to use requests!<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python" data-language="python"><span class="org-doc">"""</span>
+<span class="org-doc">Print the high and low temperatures for today in Stanford, California, using the requests library and the forecaster.weather.gov API.</span>
+<span class="org-doc">"""</span>
+
+<span class="org-keyword">import</span> requests
+
+<span class="org-variable-name">r</span> = requests.get(<span class="org-string">'http://forecast.weather.gov/MapClick.php?lat=37.4&amp;lon=-122.1&amp;unit=0&amp;lg=english&amp;FcstType=json'</span>)
+<span class="org-variable-name">data</span> = r.json()
+
+
+
+<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">0</span>])
+<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">1</span>])
+</pre>
+</div>
+
+<pre class="example">
+87
+60
+</pre>
 </div>
 </div>
 
-<div id="outline-container-orgb649747" class="outline-3">
-<h3 id="orgb649747"><a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
-<div class="outline-text-3" id="text-orgb649747">
+<div id="outline-container-orga37a5d9" class="outline-3">
+<h3 id="orga37a5d9"><a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
+<div class="outline-text-3" id="text-orga37a5d9">
+<p>
+<a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a><br />
+</p>
+
 <p>
 There are two ways of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a> in Lisp &#x2013; top-down, and bottom-up.<br />
 </p>
+
+<p>
+Top-down = the classic paradigm of divide-and conquer, decomposing the problem hierarchically into smaller problems.<br />
+</p>
+
+<p>
+Bottom-up = defining your own DSL in Lisp, and using those primitives to make something cool.<br />
+</p>
+
+<p>
+Most programming is done top-down, but with the powers of macros you can go bottom-up, creating "little universes" in Lisp&#x2026;<br />
+</p>
+
+<p>
+Personally what comes to mind is the <code>rx</code> macro in emacs. It's like a nice little domain-specific language for writing regular expressions, embedded right into elisp.<br />
+</p>
+
+<p>
+Regexp matching a block comment in C:<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp" data-language="emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
+    (zero-or-more
+     (<span class="org-keyword">or</span> (not (any <span class="org-string">"*"</span>))          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
+         (seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
+              (not (any <span class="org-string">"/"</span>)))))  <span class="org-comment-delimiter">;  </span><span class="org-comment">non-/</span>
+    (one-or-more <span class="org-string">"*"</span>)             <span class="org-comment-delimiter">; </span><span class="org-comment">At least one star,</span>
+    <span class="org-string">"/"</span>)                          <span class="org-comment-delimiter">; </span><span class="org-comment">and the final /</span>
+</pre>
+</div>
+
+<pre class="example">
+/\*\(?:[^*]\|\*[^/]\)*\*+/
+</pre>
+
+
+<p>
+you redefine <i>the language itself</i> to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It's like "meeting in the middle," so you don't have to build up super complex primitives, and you don't have to decompose down to a super fine-grained level.<br />
+</p>
+
+<p>
+I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there's an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.<br />
+</p>
+
+<p>
+Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it's like, ok cool, what else can I build with these snippets?<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga9c082b" class="outline-3">
+<h3 id="orga9c082b"><a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a></h3>
+<div class="outline-text-3" id="text-orga9c082b">
+<p>
+You have a set of reusable pieces that can be combined to form different, interesting things.<br />
+</p>
+
+<p>
+Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programs</a> into modular, reusable unit is one example of this.<br />
+</p>
+
+
+<div id="org8bec616" class="figure">
+<p><img src="decomposition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
+</p>
+</div>
+
+<p>
+Some methodical activities, such as making breakfast, decompose well into modular activities as well:<br />
+</p>
+
+<div id="orga6aed5d" class="figure">
+<p><img src="breakfast.png" alt="tree of the decomposition of making breakfast into &quot;make toast,&quot; &quot;make tea,&quot; etc." /><br />
+</p>
+</div>
+
+<p>
+A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> example of compositionaity is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model's early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
+</p>
+
+
+<div id="orgec1358e" class="figure">
+<p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -194,7 +427,7 @@ Source code is available
 <a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
-<script src="tooltips.js" async></script>
+<script src="tooltips.js"></script>
 </div>
 </body>
 </html>

@@ -4,6 +4,8 @@
 :END:
 #+title: CS224W: Machine Learning with Graphs
 
+(I dropped this class a few lectures in, so the notes are incomplete. Nonetheless, it contains some interesting connections with graphs/networks, so I leave it in my knowledge graph.)
+
 * Introduction
 ** Why Graphs?
 :PROPERTIES:
@@ -13,10 +15,13 @@
 - Physical roads, bridges, tunnels connecting places. 🚗
 - Particles, based on their proximities. ⚛️
 - Animals in a food ecosystem. 🕸
-- Computer networks. 💻
+- [[id:9908ac8d-fadd-4fe6-a78c-c3471cc36ea1][Computer networks]]. 💻
 - Knowledge graphs, scene graphs, code graphs...
 ** Distinction between Networks and Graphs
-Networks = "natural graphs." (social networks, electronic networks, genetic pathrways, brain connections)
+:PROPERTIES:
+:ID:       7a085a3d-41ac-46d4-911c-a88ed5dc7caf
+:END:
+[[id:84dca4ab-9e04-45d9-89e3-7205eb591698][Networks]] = "natural graphs." (social networks, electronic networks, genetic pathrways, brain connections)
 Graphs = a mathematical object representing/modeling the underlying data.
 
 (Sometimes this distinction is blurred.)

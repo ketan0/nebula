@@ -17,7 +17,7 @@ Related to the idea of constraints supporting creativity--dead [[id:0dc3bc78-df9
 :PROPERTIES:
 :ID:       e18ffcb8-f4cf-4d42-a4d7-8e88f7264f4e
 :END:
-  By induction, if you can progress from complexity k to k + 1, you can progress infinitely.
+  By induction, if you can progress from complexity $k$ to $k + 1$, you can progress infinitely.
 
   Over time, I've gotten to know the amazing beast that is org mode. It is astounding how much you can do—but perhaps even more impressive is that you can start using it to do interesting things from the first day. You can learn in 5 minutes how to create headlines, expand and collapse nodes, write text, etc. That is not hard. In that way, it is a [[id:0dc3bc78-df96-4240-a6be-beb71e6074cc][simple]] tool.
 

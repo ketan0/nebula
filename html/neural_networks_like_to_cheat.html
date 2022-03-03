@@ -3,14 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-30 Thu 21:28 -->
+<!-- 2022-03-02 Wed 20:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Neural networks like to "cheat"</title>
 <meta name="author" content="Ketan Agrawal" />
 <meta name="generator" content="Org Mode" />
-<link rel="preload" href="syntax.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="syntax.css"></noscript>
+<link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -19,23 +18,29 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/">
-<h2>Ketan's Digital Laboratory &#129514;</h2>
-</a>
+<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Nebula</h2></a>
 </div>
 <div id="content" class="content">
 <h1 class="title">Neural networks like to "cheat"</h1>
 
 
-<div id="outline-container-org1b5f066" class="outline-2 references">
-<h2 id="org1b5f066">Links to this node</h2>
-<div class="outline-text-2" id="text-org1b5f066">
+<div id="outline-container-orge8416ae" class="outline-2 references">
+<h2 id="orge8416ae">Links to this node</h2>
+<div class="outline-text-2" id="text-orge8416ae">
 </div>
-<div id="outline-container-org84ea017" class="outline-3">
-<h3 id="org84ea017"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
-<div class="outline-text-3" id="text-org84ea017">
+<div id="outline-container-orgab8e45b" class="outline-3">
+<h3 id="orgab8e45b"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-orgab8e45b">
+<p>
+(, )<br />
+</p>
+
 <p>
 <a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to "cheat"</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object's shape; a classifier might learn that "green grass background" =&gt; "cow classification."<br />
+</p>
+
+<p>
+This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
 </p>
 </div>
 </div>
@@ -48,7 +53,7 @@ Source code is available
 <a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
-<script src="tooltips.js" async></script>
+<script src="tooltips.js"></script>
 </div>
 </body>
 </html>
