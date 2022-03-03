@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       9908ac8d-fadd-4fe6-a78c-c3471cc36ea1
 :END:
-#+title: CS144: Introduction to Computer Networking
+#+title: Computer Networking
 
 * How does the [[id:b9d2d383-63a8-456b-afd2-4ca51b1b8825][Internet]] work?
 :PROPERTIES:

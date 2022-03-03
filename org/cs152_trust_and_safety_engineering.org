@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0e008aa4-63a2-4ae3-8c59-933b3065d721
 :END:
-#+title: CS152: Trust and Safety Engineering
+#+title: Trust and Safety Engineering
 
 * Introduction
 Trust and Safety Engineering is kinda like "predicting the wind" when building a bridge. By and large, the winds are very predictable.
