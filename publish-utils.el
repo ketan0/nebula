@@ -9,7 +9,7 @@
 ;; Version: 0.0.1
 ;; Keywords: abbrev bib c calendar comm convenience data docs emulations extensions faces files frames games hardware help hypermedia i18n internal languages lisp local maint mail matching mouse multimedia news outlines processes terminals tex tools unix vc wp
 ;; Homepage: https://github.com/ketanagrawal/publish-utils
-;; Package-Requires: ((emacs "25.1"))
+;; Package-Requires: ((emacs "26.1"))
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
@@ -19,8 +19,23 @@
 ;;
 ;;; Code:
 (setq org-html-htmlize-output-type 'css)
+(setq org-cite-global-bibliography '("/Users/ketanagrawal/zoterocitations.bib"))
+(setq org-cite-export-processors '((t basic)))
+
+(defun add-modified-date (backend)
+  (when (equal backend 'html)
+    (let ((modified-timestamp-subtitle (->> (buffer-file-name) (file-attributes)
+                                            (file-attribute-modification-time)
+                                            (format-time-string "%B %d, %Y\n")
+                                            (concat "#+subtitle: Last modified on "))))
+      (goto-line 4)
+      (insert modified-timestamp-subtitle))))
+(add-hook 'org-export-before-processing-hook 'add-modified-date)
+
+;; modified from https://org-roam.discourse.group/t/export-backlinks-on-org-export/1756
 (defun collect-backlinks-string (backend)
-  (when (org-roam-node-at-point)
+  (when (and (equal backend 'html)
+             (org-roam-node-at-point))
     (let* ((source-node (org-roam-node-at-point))
            (source-file (org-roam-node-file source-node))
            (nodes-in-file (--filter (s-equals? (org-roam-node-file it) source-file)
@@ -82,36 +97,7 @@
 
 (add-hook 'org-export-before-processing-hook 'collect-backlinks-string)
 
-(setq org-publish-project-alist
-        '(("digital laboratory"
-           :base-directory "~/garden-simple/org"
-           :publishing-function org-html-publish-to-html
-           :publishing-directory "~/garden-simple/html"
-           :auto-sitemap t
-           :sitemap-title "sitemap"
-           ;; :html-head-include-default-style nil
-           :section-numbers nil
-           :with-toc nil
-           :preserve-breaks t
-           :html-preamble t
-           :html-preamble-format (("en" "<a style=\"color: inherit; text-decoration: none\" href=\"/\"><h2>Ketan's Nebula</h2></a>"))
-           :html-postamble t
-           :html-postamble-format (("en" "<p>Made with <span class=\"heart\">♥</span> using
-<a href=\"https://orgmode.org/\">org-mode</a>.
-Source code is available
-<a href=\"https://github.com/ketan0/digital-laboratory\">here</a>.</p>
-<script src=\"popper.min.js\"></script>
-<script src=\"tippy-bundle.umd.min.js\"></script>
-<script src=\"tooltips.js\"></script>"))
-           :html-link-home ""
-           :html-link-up ""
-           :html-head-include-default-style nil
-           :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"syntax.css\" />
-<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\" />"
-           :html-head-extra "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\" />
-<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\" />
-<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\" />
-<link rel=\"manifest\" href=\"/site.webmanifest\" />")))
+
 
 ;; patch from https://gist.github.com/jethrokuan/d6f80caaec7f49dedffac7c4fe41d132
 ;; makes links to headlines work properly
@@ -187,5 +173,36 @@ contextual information."
                     (format "<pre class=\"src src-%s\" data-language=\"%s\"%s>%s</pre>"
                     ;; END CHANGED LINE
                             lang lang label code)))))))
+
+(setq org-publish-project-alist
+        '(("digital laboratory"
+           :base-directory "~/garden-simple/org"
+           :publishing-function org-html-publish-to-html
+           :publishing-directory "~/garden-simple/html"
+           :auto-sitemap t
+           :sitemap-title "sitemap"
+           ;; :html-head-include-default-style nil
+           :section-numbers nil
+           :with-toc nil
+           :preserve-breaks t
+           :html-preamble t
+           :html-preamble-format (("en" "<a style=\"color: inherit; text-decoration: none\" href=\"/\"><h2>Ketan's Nebula</h2></a>"))
+           :html-postamble t
+           :html-postamble-format (("en" "<p>Made with <span class=\"heart\">♥</span> using
+<a href=\"https://orgmode.org/\">org-mode</a>.
+Source code is available
+<a href=\"https://github.com/ketan0/digital-laboratory\">here</a>.</p>
+<script src=\"popper.min.js\"></script>
+<script src=\"tippy-bundle.umd.min.js\"></script>
+<script src=\"tooltips.js\"></script>"))
+           :html-link-home ""
+           :html-link-up ""
+           :html-head-include-default-style nil
+           :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"syntax.css\" />
+<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\" />"
+           :html-head-extra "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\" />
+<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\" />
+<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\" />
+<link rel=\"manifest\" href=\"/site.webmanifest\" />")))
 
 ;;; publish-utils.el ends here
