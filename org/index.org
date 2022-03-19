@@ -3,29 +3,29 @@
 :END:
 #+title: Ketan's Nebula
 
+Where ideas, etc. are born.
+
 #+begin_export html
-<svg display="block" style="margin: auto;" width="240px" height="240px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="Gradient1">
-      <stop class="stop1" offset="0%"/>
-      <stop class="stop2" offset="100%"/>
-    </linearGradient>
-    <style type="text/css"><![CDATA[
-      .beaker { fill: url(#Gradient1); }
-      .stop1 { stop-color: #50cf42; }
-      .stop2 { stop-color: #4eb8ca; }
-    ]]></style>
-  </defs>
-  <circle r="8" cx="8" cy="8" fill="#bb00bb" opacity="0.4"/>
-  <circle r="8" cx="12" cy="12" fill="#bb0000" opacity="0.4"/>
-  <circle r="8" cx="16" cy="16" fill="#0000bb" opacity="0.4"/>
+<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+<style>
+circle {
+    fill: #bbbb00;
+    # stroke: #ffffff;
+}
+</style>
+<svg display="block" style="margin: auto;" width="100%" height="500px" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
 </svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="nebula.js"> </script>
 #+end_export
 
 [[id:091329e5-7896-4975-b88b-99b30f4dd482][philosophy]]
 [[id:c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff][representations]]
 [[id:058bef0b-aba6-4ac6-b4ae-b3c7b7e22040][shortcuts]]
+[[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][emacs]]
 [[id:0997b060-ee05-458e-beed-3494675c879d][programming]]
 [[id:3db1ed04-4b29-46cf-9940-1afd30d5d25f][Social Psychology]]
 [[id:0e008aa4-63a2-4ae3-8c59-933b3065d721][Trust and Safety Engineering]]
 [[id:9908ac8d-fadd-4fe6-a78c-c3471cc36ea1][Computer Networking]]
+-----
+[[id:65b7c2dd-ad4c-465f-b382-4e4d431e0be8][How I made this website]]

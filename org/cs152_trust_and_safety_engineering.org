@@ -317,3 +317,65 @@ Also - unlabeled things are implied to be true / implied that everything is fact
 :END:
 #+ATTR_HTML: :width 600px
 [[file:amplification_free_expression_pyramid.png]]
+* Sharing Economy
+** Mismatch between policy and reality
+*** Uber driver / sexual assault
+** "In Real Life" Platforms
+New class of issues from putting pseudo-strangers together for some kind of interaction.
+Creates a number of new risks- can be higher stake because of the physical interactions.
+Many safety issues involve breaking laws in the real world- use Section 230
+Safety depends on design choices of platforms
+** What are you disrupting?
+There is a real chance to make things better- e.g. the taxi business kinda sucks atm. Uber could be better.
+** Uber
+violence between drivers/guests
+Brazil: drivers have a bunch of cash (can be robbed)
+** Airbnb
+** Craigslist / Ebay / Etsy
+** Dating apps
+People can be located using trilateration (Grindr)
+People can be monitored, persecuted on Grindr in repressive countries
+** Policy responses
+set rules for interactions above the law (not just illegal stuff)
+enforce identity (background checks, validation, etc.)
+2-way rating systems (drivers & passengers, hosts & guests, etc.)
+investigation teams
+work with local authorities / LE
+publish measurement, transparency reports
+educate users and employees on risks, mitigations
+** Lifecycle of a company
+"scaffold" trust & safety as you're scaling up -
+
+ideation: think about the space as it exists now, before you disrupt it.
+pre-seed: include risks/downsides in slide deck
+seed: safety in design
+series a: hire someone for t&s
+hypergrowth: hire t&s team
+* Emerging issues
+** rise of Chinese platforms
+Alibaba, Tencent, ByteDance etc. all in top-10 revenue of social media companies.
+
+these companies might have to deal w/:
+political moderation requirements, less experience w/ safety issues, Western privacy laws, data stored in China, decide not to follow ECPA, issues with transparency, etc.
+*** TikTok
+Chinese-American ties - bifurcated app, with a version that follows the regulations of both countries
+
+Now, China is playing the role of US and US playing the role of Europe (wrt user privacy, etc.)
+
+Lots of misinformation- not as well dealt-with as on Youtube, twitter, etc. They only label Russian state media atm.
+
+Video is a huge challenge for Trust and Safety teams
+*** Synthetic media
+Deepfakes - huge problem mainly for women, pornographic deepfakes
+**** How is falsity relevant to impact in abuse?
+Relevant: John Podesta emails
+Not relevant: sextortion, fake accounts, etc.
+**** Podcasts
+**** Metaverse
+*** Crypto
+Very easy to steal money - nobody's in charge, no one monitors transactions, etc.
+
+launder money is very easy.
+
+Ransom is easy to do
+** career advice

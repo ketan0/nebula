@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b6a1ff64-eae1-4a6f-ab54-01ddfca5353d
+:END:
+#+title: org-mode
+
+An integral part of [[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][emacs]] .

@@ -29,6 +29,11 @@ body {
   margin-bottom: 40px;
 }
 
+.subtitle {
+  font-style: italic;
+  font-size: 40%;
+}
+
 span.done {
   font-style: italic;
 }
