@@ -157,13 +157,21 @@ blockquote {
 }
 
 a {
-  /* color: #01a049; */
-  color: #66cc00;
+  color: #0a84ff;
   text-decoration: none;
   font-weight: 700;
 }
 
 a:visited {
+  color: #af52de;
+}
+
+a:not([href^="http"],[href="/"]) {
+  color: #66cc00;
+}
+
+
+a:not([href^="http"],[href="/"]):visited {
   color: #01a049;
 }
 
