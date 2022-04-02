@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       c7dbefee-e0c2-4f14-bf69-b9e784e4d72b
+:END:
+#+title: CS224s: Spoken Language Processing
+
+* Phonetics
+** How do we form sounds?
+#+ATTR_HTML: :width 500px
+[[file:voice_tract.png]]
+
+Things depend on the positioning of the (tip/back) of tongue, lips
+** ARPAbet
+#+ATTR_HTML: :width 500px
+[[file:arpabet.png]]
+** Sound waves are Longitudinal waves
+Vocal tract is basically air moving through a tube, with a certain size/length of the tube.

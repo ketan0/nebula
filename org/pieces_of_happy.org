@@ -4,10 +4,6 @@
 http://nickcammarata.com/writing/pieces-of-happy
 
 * Summary
-:PROPERTIES:
-:ID:       e9a9835e-582d-4cb3-8f5e-72ad7bdaf003
-:END:
-
 Essentially, recurring features of your environment have a compounding effect on your happiness over the course of your life. Life satisfaction research has revealed certain factors that reliably produce (and don't produce) happiness across all humans.
 
 Also, take advantage of your personality strengths, and possibly experiment with actions that could help shore up negative personality traits (e.g. cut caffeine to lower neuroticism.)

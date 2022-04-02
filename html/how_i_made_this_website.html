@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-18 Fri 17:59 -->
+<!-- 2022-03-25 Fri 01:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How I made this website</title>
@@ -18,13 +18,10 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Nebula</h2></a>
+<a style="color: inherit; text-decoration: none" href="/"><img src="nebula-logo.svg" width="50px"></a>
 </div>
 <div id="content" class="content">
-<h1 class="title">How I made this website
-<br />
-<span class="subtitle">Last modified on March 06, 2022</span>
-</h1>
+<h1 class="title">How I made this website</h1>
 <p>
 🚧 TODO 🚧<br />
 </p>
@@ -33,6 +30,7 @@
 <li class="off"><code>[&#xa0;]</code> <a href="org_mode.html#ID-b6a1ff64-eae1-4a6f-ab54-01ddfca5353d">org-mode</a> description, setup<br /></li>
 <li class="off"><code>[&#xa0;]</code> org-publish setup<br /></li>
 <li class="off"><code>[&#xa0;]</code> Hovercards w/ Tippy.js<br /></li>
+<li class="off"><code>[&#xa0;]</code> Quotebacks<br /></li>
 <li class="off"><code>[&#xa0;]</code> <p>
 Hello<br />
 </p>
@@ -61,16 +59,12 @@ The ethos behind Quotebacks is one of the reasons why I love the product. Yes, i
 <h3 id="org8031a1b"><a href="index.html#ID-23e03a28-48b1-4fa3-9fa3-71a369950c6d">Ketan's Nebula</a></h3>
 <div class="outline-text-3" id="text-org8031a1b">
 <p>
-Where ideas, etc. are born.<br />
+Where ideas, etc. are born..<br />
 </p>
-
 <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
-<style>
-circle {
-    fill: #bbbb00;
-}
-</style>
-<svg display="block" style="margin: auto;" width="100%" height="500px" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="nebula-svg" display="block" width="100%" height="500px" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g class="circles">
+  </g>
 </svg>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script src="nebula.js"> </script>
@@ -101,6 +95,7 @@ Source code is available
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>
+<script src="dark-themes.js"></script>
 </div>
 </body>
 </html>

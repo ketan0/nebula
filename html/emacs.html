@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-18 Fri 17:59 -->
+<!-- 2022-03-25 Fri 01:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>emacs</title>
@@ -18,15 +18,12 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Nebula</h2></a>
+<a style="color: inherit; text-decoration: none" href="/"><img src="nebula-logo.svg" width="50px"></a>
 </div>
 <div id="content" class="content">
-<h1 class="title">emacs
-<br />
-<span class="subtitle">Last modified on March 04, 2022</span>
-</h1>
+<h1 class="title">emacs</h1>
 <p>
-I started using Emacs in January 2020, and it has veritably changed the way I do work on my computer, and the way I think about computing in general.<br />
+I started using Emacs in January 2020, and it has undoubtedly changed the way I do work on my computer, and the way I think about computing in general.<br />
 </p>
 
 <div id="outline-container-orgead5ec7" class="outline-2">
@@ -90,22 +87,97 @@ Really powerful feature that allows one to define domain-specific syntax <i>with
 </div>
 
 
-<div id="outline-container-org05d28e5" class="outline-2 references">
-<h2 id="org05d28e5">Links to this node</h2>
-<div class="outline-text-2" id="text-org05d28e5">
+<div id="outline-container-org30c74a8" class="outline-2 references">
+<h2 id="org30c74a8">Links to this node</h2>
+<div class="outline-text-2" id="text-org30c74a8">
 </div>
-<div id="outline-container-orgae08a1e" class="outline-3">
-<h3 id="orgae08a1e"><a href="musings.html#ID-e2ff4d71-a630-4a8d-94d4-66606f321bd4">musings</a></h3>
+<div id="outline-container-org684e658" class="outline-3">
+<h3 id="org684e658"><a href="musings.html#ID-e2ff4d71-a630-4a8d-94d4-66606f321bd4">musings</a></h3>
 </div>
 </div>
 
-<div id="outline-container-orgd7a5d31" class="outline-2">
-<h2 id="orgd7a5d31">Computation in brains must be deeply <a href="context.html#ID-8d27adad-158b-4fa4-b31b-5f793d0b8341">context</a>-aware.</h2>
-<div class="outline-text-2" id="text-orgd7a5d31">
+<div id="outline-container-orgcfcb9eb" class="outline-2">
+<h2 id="orgcfcb9eb">Computation in brains must be deeply <a href="context.html#ID-8d27adad-158b-4fa4-b31b-5f793d0b8341">context</a>-aware.</h2>
+<div class="outline-text-2" id="text-orgcfcb9eb">
 </div>
-<div id="outline-container-org9b4d2a6" class="outline-3">
-<h3 id="org9b4d2a6"><a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
-<div class="outline-text-3" id="text-org9b4d2a6">
+<div id="outline-container-orge1454f9" class="outline-3">
+<h3 id="orge1454f9"><a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
+<div class="outline-text-3" id="text-orge1454f9">
+<p>
+<a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a><br />
+</p>
+
+<p>
+There are two ways of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a> in Lisp &#x2013; top-down, and bottom-up.<br />
+</p>
+
+<p>
+Top-down = the classic paradigm of divide-and conquer, decomposing the problem hierarchically into smaller problems.<br />
+</p>
+
+<p>
+Bottom-up = defining your own DSL in Lisp, and using those primitives to make something cool.<br />
+</p>
+
+<p>
+Most programming is done top-down, but with the powers of macros you can go bottom-up, creating "little universes" in Lisp&#x2026;<br />
+</p>
+
+<p>
+Personally what comes to mind is the <code>rx</code> macro in emacs. It's like a nice little domain-specific language for writing regular expressions, embedded right into elisp.<br />
+</p>
+
+<p>
+Regexp matching a block comment in C:<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp" data-language="emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
+    (zero-or-more
+     (<span class="org-keyword">or</span> (not (any <span class="org-string">"*"</span>))          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
+         (seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
+              (not (any <span class="org-string">"/"</span>)))))  <span class="org-comment-delimiter">;  </span><span class="org-comment">non-/</span>
+    (one-or-more <span class="org-string">"*"</span>)             <span class="org-comment-delimiter">; </span><span class="org-comment">At least one star,</span>
+    <span class="org-string">"/"</span>)                          <span class="org-comment-delimiter">; </span><span class="org-comment">and the final /</span>
+</pre>
+</div>
+
+<pre class="example">
+/\*\(?:[^*]\|\*[^/]\)*\*+/
+</pre>
+
+
+<p>
+you redefine <i>the language itself</i> to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It's like "meeting in the middle," so you don't have to build up super complex primitives, and you don't have to decompose down to a super fine-grained level.<br />
+</p>
+
+<p>
+I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there's an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.<br />
+</p>
+
+<p>
+Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it's like, ok cool, what else can I build with these snippets?<br />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org0d802e8" class="outline-2 references">
+<h2 id="org0d802e8">Links to this node</h2>
+<div class="outline-text-2" id="text-org0d802e8">
+</div>
+<div id="outline-container-org4dad69e" class="outline-3">
+<h3 id="org4dad69e"><a href="musings.html#ID-e2ff4d71-a630-4a8d-94d4-66606f321bd4">musings</a></h3>
+</div>
+</div>
+
+<div id="outline-container-orgc6f1002" class="outline-2">
+<h2 id="orgc6f1002">Computation in brains must be deeply <a href="context.html#ID-8d27adad-158b-4fa4-b31b-5f793d0b8341">context</a>-aware.</h2>
+<div class="outline-text-2" id="text-orgc6f1002">
+</div>
+<div id="outline-container-org5adbc39" class="outline-3">
+<h3 id="org5adbc39"><a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
+<div class="outline-text-3" id="text-org5adbc39">
 <p>
 <a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a><br />
 </p>
@@ -172,20 +244,81 @@ An integral part of <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff"
 </div>
 </div>
 
+<div id="outline-container-orgfa9d98c" class="outline-3">
+<h3 id="orgfa9d98c"><a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a></h3>
+<div class="outline-text-3" id="text-orgfa9d98c">
+</div>
+<div id="outline-container-org77794df" class="outline-4">
+<h4 id="org77794df">(<i>Computation in brains must be deeply context-aware. &gt; Programming Bottom-Up</i>)</h4>
+<div class="outline-text-4" id="text-org77794df">
+<p>
+<a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a><br />
+</p>
+
+<p>
+There are two ways of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a> in Lisp &#x2013; top-down, and bottom-up.<br />
+</p>
+
+<p>
+Top-down = the classic paradigm of divide-and conquer, decomposing the problem hierarchically into smaller problems.<br />
+</p>
+
+<p>
+Bottom-up = defining your own DSL in Lisp, and using those primitives to make something cool.<br />
+</p>
+
+<p>
+Most programming is done top-down, but with the powers of macros you can go bottom-up, creating "little universes" in Lisp&#x2026;<br />
+</p>
+
+<p>
+Personally what comes to mind is the <code>rx</code> macro in emacs. It's like a nice little domain-specific language for writing regular expressions, embedded right into elisp.<br />
+</p>
+
+<p>
+Regexp matching a block comment in C:<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp" data-language="emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
+    (zero-or-more
+     (<span class="org-keyword">or</span> (not (any <span class="org-string">"*"</span>))          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
+         (seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
+              (not (any <span class="org-string">"/"</span>)))))  <span class="org-comment-delimiter">;  </span><span class="org-comment">non-/</span>
+    (one-or-more <span class="org-string">"*"</span>)             <span class="org-comment-delimiter">; </span><span class="org-comment">At least one star,</span>
+    <span class="org-string">"/"</span>)                          <span class="org-comment-delimiter">; </span><span class="org-comment">and the final /</span>
+</pre>
+</div>
+
+<pre class="example">
+/\*\(?:[^*]\|\*[^/]\)*\*+/
+</pre>
+
+
+<p>
+you redefine <i>the language itself</i> to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It's like "meeting in the middle," so you don't have to build up super complex primitives, and you don't have to decompose down to a super fine-grained level.<br />
+</p>
+
+<p>
+I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there's an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.<br />
+</p>
+
+<p>
+Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it's like, ok cool, what else can I build with these snippets?<br />
+</p>
+</div>
+</div>
+</div>
+
 <div id="outline-container-org524460a" class="outline-3">
 <h3 id="org524460a"><a href="index.html#ID-23e03a28-48b1-4fa3-9fa3-71a369950c6d">Ketan's Nebula</a></h3>
 <div class="outline-text-3" id="text-org524460a">
 <p>
-Where ideas, etc. are born.<br />
+Where ideas, etc. are born..<br />
 </p>
-
 <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
-<style>
-circle {
-    fill: #bbbb00;
-}
-</style>
-<svg display="block" style="margin: auto;" width="100%" height="500px" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="nebula-svg" display="block" width="100%" height="500px" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g class="circles">
+  </g>
 </svg>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script src="nebula.js"> </script>
@@ -216,6 +349,7 @@ Source code is available
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>
+<script src="dark-themes.js"></script>
 </div>
 </body>
 </html>

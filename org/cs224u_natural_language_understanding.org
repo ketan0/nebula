@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       4785205d-bb3f-4795-9b13-7bc8128e3ae0
+:END:
+#+title: CS224u: Natural Language Understanding
+
+* Introduction
+** Progress
+[[id:baf38486-0508-4faa-9b96-9ed914cf58ef][Natural language /understanding/ (NLU)]] (as opposed to [[id:08b2deb9-f7f7-43bd-a663-113ab080bf90][Natural Language Processing (NLP)]]) is attempting to proactively understand user intent, and respond productively. Now -- almost no difference between NLU and NLP. As we've gotten better, focus on real important problems-- those of understanding, not just of syntax processing or whatever.
+
+Speech assistants are really good now.
+
+Google search -- has really switched from brute information retrieval to NLU -- search a movie, find movie showtimes. search a question, get an answer.
+
+Systems /rapidly/ have surpassed human performance on benchmarks. 15 years ago, these systems didn't exist
+
+Caveat w/ question-answering: machines are pitted against humans on a machine-geared question-answering task. It's crass to suggest that these machines are flat-out better at answering questions than humans.
+** Limitations
+- NLU systems are easily "confused."
+- Models don't "know what the world is like." e.g., GPT-3 doesn't really...know what a cat is. Image-captioning models show that they don't know what the world is like.
+- Systems can encourage self-harm.
+- Systems are vulnerable to adversarial attacks.
+- Social biases are reflected in NLP models.
+- Observing diminishing returns in ever-larger language models.
+- [[id:412cda14-f385-463d-9a7e-cd9ffe87c0a2][Neural networks like to "cheat".]] NLI models figure out how to predict the correct relation between premise-hypothesis through some superficial correlation.
+
+Question someone asked: "Is there any case where symbolic approaches definitely would be used over neural nets?"
+
+Answer: Mental health chatbot. Don't want it saying harmful things to users. Other safety-critical situations. etc. Also-- sometimes a mixture of symbolic and neural approaches, e.g. how in Google Translate, they may tack on a logical rule that attempts to correct for gender biases in neurally-produced translations.
+*** Benchmarks
+Benchmark datasets are imperfect. They have outright errors, built-in biases, artifacts (i.e. spurious correlations,) and gaps(?)
+
+Leaderboards are pretty one-dimensional, classification tasks are pretty rigid. Once you put a quantitative metric out there, people just hill-climb the measure.
+*** Why is it so difficult?
+To do NLU, you need a lot of domain knowledge, discourse knowledge, and world knowledge.
+
+Where is *Black Panther* playing in *Mountain View*?
+*Black Panther* is playing at the *Century 16 Theater*.
+When is it playing *there*?
+It's playing at *2pm*, *5pm*, and *8pm*.
+OK. I'd like 1 *adult* and 2 *children* for the *first show*. How much would *that* cost?

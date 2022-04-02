@@ -5,6 +5,11 @@
 #+title: Reinventing Explanation
 https://michaelnielsen.org/reinventing_explanation/
 
+#+ATTR_HTML: :class quoteback :data-title Reinventing Explanation :data-author Michael Nielsen :cite https://michaelnielsen.org/reinventing_explanation/#:~:text=Even%20when%20explaining,of%20creating%20them.
+#+begin_quote
+Even when explaining abstract, intellectual subjects -- perhaps, especially when explaining abstract, intellectual subjects -- creating strong emotional involvement is crucial. If someone's desire to understand is strong enough, they can overcome tremendous obstacles. Part of what we can learn from the movie and game makers is how important such desires are, and the art of creating them.
+#+end_quote
+
 It's about creating an /emotional/ investment in whatever you're learning. Which ties into my thought about how the form of the message impacts the content of message itself. I feel inherently more attached to [[id:b56d1847-4a25-47cf-a019-4d00319d0dd1][visuals]], and really I have a good appetite for [[id:7b8a4962-28ca-48e5-95a7-d347292a6dca][math]] -- PROVIDED that it's a subject I care about. Otherwise things tend to seem arcane and dry if you haven't found an emotional "hook" into it, so to speak. I feel like university courses make an attempt to do this, to say, "why should we even care at all?" but it's usually only in the introductory lecture, or the concluding lecture, and it's rushed. It's when we hook things into the fabric of our lives, of our thoughts, that they acquire deep meaning.
 
 So yes, this has totally motivated me to use my [[id:16db6da7-fbb6-4614-a23c-79ad58a43310][digital laboratory]] as a playground for reinventing explanation. And just autodidacticism in general -- it seems to be the best way. (The problem is, how to get people (myself) to be productive without the oppressive structure of traditional schools and workplaces? It's much easier for people to do stuff when someone else tells them what to do. I guess that was one of my fundamental struggles in my gap quarter.)

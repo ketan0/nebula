@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       baf38486-0508-4faa-9b96-9ed914cf58ef
+:ROAM_ALIASES: NLU
+:END:
+#+title: Natural language understanding

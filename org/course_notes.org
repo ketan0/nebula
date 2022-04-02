@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       6d2c6f5c-f8c1-4b38-a01a-6adcdbfe8e7a
+:END:
+#+title: course notes
+
+[[id:3db1ed04-4b29-46cf-9940-1afd30d5d25f][Social Psychology]]
+[[id:9908ac8d-fadd-4fe6-a78c-c3471cc36ea1][Computer Networking]]
+[[id:4785205d-bb3f-4795-9b13-7bc8128e3ae0][CS224u: Natural Language Understanding]]

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-18 Fri 17:59 -->
+<!-- 2022-03-28 Mon 17:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Neural networks like to "cheat"</title>
@@ -18,33 +18,61 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/"><h2>Ketan's Nebula</h2></a>
+<a style="color: inherit; text-decoration: none" href="/"><img src="nebula-logo.svg" width="50px"></a>
 </div>
 <div id="content" class="content">
-<h1 class="title">Neural networks like to "cheat"
+<h1 class="title">Neural networks like to &ldquo;cheat&rdquo;
 <br />
-<span class="subtitle">Last modified on September 21, 2021</span>
+<span class="subtitle">Last modified on March 28, 2022</span>
 </h1>
 
 
-<div id="outline-container-orge8416ae" class="outline-2 references">
-<h2 id="orge8416ae">Links to this node</h2>
-<div class="outline-text-2" id="text-orge8416ae">
+<div id="outline-container-orgbd4d289" class="outline-2 references">
+<h2 id="orgbd4d289">Links to this node</h2>
+<div class="outline-text-2" id="text-orgbd4d289">
 </div>
-<div id="outline-container-orgab8e45b" class="outline-3">
-<h3 id="orgab8e45b"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
-<div class="outline-text-3" id="text-orgab8e45b">
+<div id="outline-container-orga19af19" class="outline-3">
+<h3 id="orga19af19"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-orga19af19">
 <p>
 (, )<br />
 </p>
 
 <p>
-<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to "cheat"</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object's shape; a classifier might learn that "green grass background" =&gt; "cow classification."<br />
+<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
 </p>
 
 <p>
-This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
+This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate &ldquo;<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images&rdquo; to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
 </p>
+</div>
+</div>
+
+<div id="outline-container-orgb68812b" class="outline-3">
+<h3 id="orgb68812b"><a href="cs224u_natural_language_understanding.html#ID-4785205d-bb3f-4795-9b13-7bc8128e3ae0">CS224u: Natural Language Understanding</a></h3>
+<div class="outline-text-3" id="text-orgb68812b">
+</div>
+<div id="outline-container-org34d66ef" class="outline-4">
+<h4 id="org34d66ef">(<i>Introduction &gt; Limitations</i>)</h4>
+<div class="outline-text-4" id="text-org34d66ef">
+<ul class="org-ul">
+<li>NLU systems are easily &ldquo;confused.&rdquo;<br /></li>
+<li>Models don&rsquo;t &ldquo;know what the world is like.&rdquo; e.g., GPT-3 doesn&rsquo;t really&#x2026;know what a cat is. Image-captioning models show that they don&rsquo;t know what the world is like.<br /></li>
+<li>Systems can encourage self-harm.<br /></li>
+<li>Systems are vulnerable to adversarial attacks.<br /></li>
+<li>Social biases are reflected in NLP models.<br /></li>
+<li>Observing diminishing returns in ever-larger language models.<br /></li>
+<li><a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;.</a> NLI models figure out how to predict the correct relation between premise-hypothesis through some superficial correlation.<br /></li>
+</ul>
+
+<p>
+Question someone asked: &ldquo;Is there any case where symbolic approaches definitely would be used over neural nets?&rdquo;<br />
+</p>
+
+<p>
+Answer: Mental health chatbot. Don&rsquo;t want it saying harmful things to users. Other safety-critical situations. etc. Also&#x2013; sometimes a mixture of symbolic and neural approaches, e.g. how in Google Translate, they may tack on a logical rule that attempts to correct for gender biases in neurally-produced translations.<br />
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -57,6 +85,7 @@ Source code is available
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>
+<script src="dark-themes.js"></script>
 </div>
 </body>
 </html>

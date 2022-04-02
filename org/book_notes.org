@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       b910e58f-f1fe-4c3f-8efb-69bfa261b191
+:END:
+#+title: book notes
+
+[[id:1ef6d0be-e0f0-4a12-b32e-63abe89c1e6a][Zen and the Art of Motorcycle Maintenance]]
+[[id:7e70ddaf-359e-4be2-9110-3a826d314cfb][Thinking Fast and Slow]]
+[[id:3cfaf377-521e-46f4-bef6-31ed6fdbac30][Six Suspects]]

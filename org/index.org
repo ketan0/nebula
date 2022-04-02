@@ -3,22 +3,19 @@
 :END:
 #+title: Ketan's Nebula
 
-Where ideas, etc. are born.
-
+Where ideas, etc. are born!!.
 #+begin_export html
-<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
-<style>
-circle {
-    fill: #bbbb00;
-    # stroke: #ffffff;
-}
-</style>
-<svg display="block" style="margin: auto;" width="100%" height="500px" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="nebula-svg" display="block" width="100%" height="500px" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g class="circles">
+  </g>
 </svg>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script src="nebula.js"> </script>
 #+end_export
 
+* A few starting points:
+[[id:6d2c6f5c-f8c1-4b38-a01a-6adcdbfe8e7a][course notes]]
+[[id:b910e58f-f1fe-4c3f-8efb-69bfa261b191][book notes]]
 [[id:091329e5-7896-4975-b88b-99b30f4dd482][philosophy]]
 [[id:c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff][representations]]
 [[id:058bef0b-aba6-4ac6-b4ae-b3c7b7e22040][shortcuts]]
@@ -27,5 +24,4 @@ circle {
 [[id:3db1ed04-4b29-46cf-9940-1afd30d5d25f][Social Psychology]]
 [[id:0e008aa4-63a2-4ae3-8c59-933b3065d721][Trust and Safety Engineering]]
 [[id:9908ac8d-fadd-4fe6-a78c-c3471cc36ea1][Computer Networking]]
------
 [[id:65b7c2dd-ad4c-465f-b382-4e4d431e0be8][How I made this website]]

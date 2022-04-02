@@ -10,8 +10,15 @@ body {
   line-height: 28px;
 }
 
-.nebula {
-  background-color: #990099;
+#nebula-logo {
+  fill: #000;
+}
+
+.nebula-svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
 #table-of-contents {
@@ -286,6 +293,9 @@ code {
 }
 
 @media (prefers-color-scheme: dark) {
+  #nebula-logo {
+    fill: #fff;
+  }
   body {
     background-color: #181818;
     color: #efefef;

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-03-23 Wed 16:23 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>emacs</title>
+<meta name="author" content="Ketan Agrawal" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">emacs
+<br />
+<span class="subtitle">Last modified on March 23, 2022</span>
+</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc0a90db">1. Things I really like about emacs</a>
+<ul>
+<li><a href="#orgc97e040">1.1. Emacs enables a personal framework of experimentation.</a></li>
+</ul>
+</li>
+<li><a href="#org9394e1a">2. Cool configs</a>
+<ul>
+<li><a href="#orgc53ba05">2.1. justinekizhak</a></li>
+<li><a href="#org0668c7c">2.2. larstvei</a></li>
+<li><a href="#org1b99a54">2.3. danielmai</a></li>
+<li><a href="#org0d0af96">2.4. tecosaur</a></li>
+<li><a href="#orgafc5cb2">2.5. jethro</a></li>
+</ul>
+</li>
+<li><a href="#org18d0326">3. skills I am learning</a>
+<ul>
+<li><a href="#orgdd80694">3.1. become a master of debugging in emacs</a></li>
+<li><a href="#orgce8489a">3.2. lisp macros</a></li>
+</ul>
+</li>
+<li><a href="#org5d979d4">4. Links to this node</a>
+<ul>
+<li><a href="#org43b9453">4.1. musings</a></li>
+</ul>
+</li>
+<li><a href="#org26349b9">5. Computation in brains must be deeply context-aware.</a>
+<ul>
+<li><a href="#orga3c904c">5.1. Programming Bottom-Up</a></li>
+</ul>
+</li>
+<li><a href="#orgdeb647c">6. Links to this node</a>
+<ul>
+<li><a href="#orgc54e9d1">6.1. musings</a></li>
+</ul>
+</li>
+<li><a href="#org81f86ba">7. Computation in brains must be deeply context-aware.</a>
+<ul>
+<li><a href="#org9674a5a">7.1. Programming Bottom-Up</a></li>
+<li><a href="#org40d3825">7.2. org-mode</a></li>
+<li><a href="#org1dbc6ae">7.3. emacs</a>
+<ul>
+<li><a href="#org31eefd2">7.3.1. (<i>Computation in brains must be deeply context-aware. &gt; Programming Bottom-Up</i>)</a></li>
+</ul>
+</li>
+<li><a href="#org697ac64">7.4. Ketan&rsquo;s Nebula</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+I started using Emacs in January 2020, and it has undoubtedly changed the way I do work on my computer, and the way I think about computing in general.
+</p>
+
+<div id="outline-container-orgc0a90db" class="outline-2">
+<h2 id="orgc0a90db"><span class="section-number-2">1.</span> Things I really like about emacs</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgc97e040" class="outline-3">
+<h3 id="orgc97e040"><span class="section-number-3">1.1.</span> Emacs enables a personal framework of <a href="experimentation.html#ID-1096f874-fab2-4db1-88dc-b90740bf608a">experimentation</a>.</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+It&rsquo;s completely hackable, which easily leads to an &ldquo;experimental&rdquo; mindset. I feel like people don&rsquo;t really try tweaking the default settings of things in important ways. Granted, you can get lost in customization, and tweaking every little aesthetic and all that&#x2026;but I believe that there have been several important ways that I&rsquo;ve been able to customize my workflow due to Emacs and the OSS that has built many different extensions for it.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9394e1a" class="outline-2">
+<h2 id="org9394e1a"><span class="section-number-2">2.</span> Cool configs</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgc53ba05" class="outline-3">
+<h3 id="orgc53ba05"><span class="section-number-3">2.1.</span> <a href="https://gitlab.com/justinekizhak/dotfiles/blob/master/emacs/doom.d/config.org">justinekizhak</a></h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+I like the motivation he gives for why emacs is so damn cool. &ldquo;Emacs changes how you <i>think</i> about programming.&rdquo; I feel like this has been very true for me. It makes many other applications seem needlessly restrictive. It feels natural to have the entire OS be an introspectable operating system.
+</p>
+</div>
+</div>
+<div id="outline-container-org0668c7c" class="outline-3">
+<h3 id="org0668c7c"><span class="section-number-3">2.2.</span> <a href="https://github.com/larstvei/dot-emacs">larstvei</a></h3>
+</div>
+<div id="outline-container-org1b99a54" class="outline-3">
+<h3 id="org1b99a54"><span class="section-number-3">2.3.</span> <a href="https://github.com/danielmai/.emacs.d/blob/master/config.org">danielmai</a></h3>
+</div>
+<div id="outline-container-org0d0af96" class="outline-3">
+<h3 id="org0d0af96"><span class="section-number-3">2.4.</span> <a href="https://tecosaur.github.io/emacs-config/config.html">tecosaur</a></h3>
+</div>
+<div id="outline-container-orgafc5cb2" class="outline-3">
+<h3 id="orgafc5cb2"><span class="section-number-3">2.5.</span> <a href="https://github.com/jethrokuan/dots/blob/master/.doom.d/config.el">jethro</a></h3>
+</div>
+</div>
+<div id="outline-container-org18d0326" class="outline-2">
+<h2 id="org18d0326"><span class="section-number-2">3.</span> skills I am learning</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgdd80694" class="outline-3">
+<h3 id="orgdd80694"><span class="section-number-3">3.1.</span> become a master of <a href="debugging.html#ID-2baa1991-e3c3-4b37-8703-296cda53a9a0">debugging</a> in emacs</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Something crashing? Use <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Edebug.html">Edebug</a> to debug it. Something slow? You can easily <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Profiling.html">profile</a> it.
+</p>
+</div>
+</div>
+<div id="outline-container-orgce8489a" class="outline-3">
+<h3 id="orgce8489a"><span class="section-number-3">3.2.</span> lisp macros</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Really powerful feature that allows one to define domain-specific syntax <i>within</i> Emacs Lisp. Examples I really like include <a href="https://github.com/alphapapa/org-ql">org-ql</a>, <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Rx-Notation.html">rx notation</a>, and so many more that enable someone to write expressive, parsimonious code in a <a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">bottom-up</a> fashion.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org5d979d4" class="outline-2 references">
+<h2 id="org5d979d4"><span class="section-number-2">4.</span> Links to this node</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org43b9453" class="outline-3">
+<h3 id="org43b9453"><span class="section-number-3">4.1.</span> <a href="musings.html#ID-e2ff4d71-a630-4a8d-94d4-66606f321bd4">musings</a></h3>
+</div>
+</div>
+
+<div id="outline-container-org26349b9" class="outline-2">
+<h2 id="org26349b9"><span class="section-number-2">5.</span> Computation in brains must be deeply <a href="context.html#ID-8d27adad-158b-4fa4-b31b-5f793d0b8341">context</a>-aware.</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orga3c904c" class="outline-3">
+<h3 id="orga3c904c"><span class="section-number-3">5.1.</span> <a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+<a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a>
+</p>
+
+<p>
+There are two ways of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a> in Lisp &#x2013; top-down, and bottom-up.
+</p>
+
+<p>
+Top-down = the classic paradigm of divide-and conquer, decomposing the problem hierarchically into smaller problems.
+</p>
+
+<p>
+Bottom-up = defining your own DSL in Lisp, and using those primitives to make something cool.
+</p>
+
+<p>
+Most programming is done top-down, but with the powers of macros you can go bottom-up, creating &ldquo;little universes&rdquo; in Lisp&#x2026;
+</p>
+
+<p>
+Personally what comes to mind is the <code>rx</code> macro in emacs. It&rsquo;s like a nice little domain-specific language for writing regular expressions, embedded right into elisp.
+</p>
+
+<p>
+Regexp matching a block comment in C:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
+    <span class="org-rainbow-delimiters-depth-2">(</span>zero-or-more
+     <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-keyword">or</span> <span class="org-rainbow-delimiters-depth-4">(</span><span class="org-constant">not</span> <span class="org-rainbow-delimiters-depth-1">(</span>any <span class="org-string">"*"</span><span class="org-rainbow-delimiters-depth-1">)</span><span class="org-rainbow-delimiters-depth-4">)</span>          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
+         <span class="org-rainbow-delimiters-depth-4">(</span>seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
+              <span class="org-rainbow-delimiters-depth-1">(</span><span class="org-constant">not</span> <span class="org-rainbow-delimiters-depth-2">(</span>any <span class="org-string">"/"</span><span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span><span class="org-rainbow-delimiters-depth-4">)</span><span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span>  <span class="org-comment-delimiter">;  </span><span class="org-comment">non-/</span>
+    <span class="org-rainbow-delimiters-depth-2">(</span>one-or-more <span class="org-string">"*"</span><span class="org-rainbow-delimiters-depth-2">)</span>             <span class="org-comment-delimiter">; </span><span class="org-comment">At least one star,</span>
+    <span class="org-string">"/"</span><span class="org-rainbow-delimiters-depth-1">)</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">and the final /</span>
+</pre>
+</div>
+
+<pre class="example">
+/\*\(?:[^*]\|\*[^/]\)*\*+/
+</pre>
+
+
+<p>
+you redefine <i>the language itself</i> to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It&rsquo;s like &ldquo;meeting in the middle,&rdquo; so you don&rsquo;t have to build up super complex primitives, and you don&rsquo;t have to decompose down to a super fine-grained level.
+</p>
+
+<p>
+I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there&rsquo;s an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.
+</p>
+
+<p>
+Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it&rsquo;s like, ok cool, what else can I build with these snippets?
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgdeb647c" class="outline-2 references">
+<h2 id="orgdeb647c"><span class="section-number-2">6.</span> Links to this node</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgc54e9d1" class="outline-3">
+<h3 id="orgc54e9d1"><span class="section-number-3">6.1.</span> <a href="musings.html#ID-e2ff4d71-a630-4a8d-94d4-66606f321bd4">musings</a></h3>
+</div>
+</div>
+
+<div id="outline-container-org81f86ba" class="outline-2">
+<h2 id="org81f86ba"><span class="section-number-2">7.</span> Computation in brains must be deeply <a href="context.html#ID-8d27adad-158b-4fa4-b31b-5f793d0b8341">context</a>-aware.</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org9674a5a" class="outline-3">
+<h3 id="org9674a5a"><span class="section-number-3">7.1.</span> <a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+<a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a>
+</p>
+
+<p>
+There are two ways of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a> in Lisp &#x2013; top-down, and bottom-up.
+</p>
+
+<p>
+Top-down = the classic paradigm of divide-and conquer, decomposing the problem hierarchically into smaller problems.
+</p>
+
+<p>
+Bottom-up = defining your own DSL in Lisp, and using those primitives to make something cool.
+</p>
+
+<p>
+Most programming is done top-down, but with the powers of macros you can go bottom-up, creating &ldquo;little universes&rdquo; in Lisp&#x2026;
+</p>
+
+<p>
+Personally what comes to mind is the <code>rx</code> macro in emacs. It&rsquo;s like a nice little domain-specific language for writing regular expressions, embedded right into elisp.
+</p>
+
+<p>
+Regexp matching a block comment in C:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
+    <span class="org-rainbow-delimiters-depth-2">(</span>zero-or-more
+     <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-keyword">or</span> <span class="org-rainbow-delimiters-depth-4">(</span><span class="org-constant">not</span> <span class="org-rainbow-delimiters-depth-1">(</span>any <span class="org-string">"*"</span><span class="org-rainbow-delimiters-depth-1">)</span><span class="org-rainbow-delimiters-depth-4">)</span>          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
+         <span class="org-rainbow-delimiters-depth-4">(</span>seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
+              <span class="org-rainbow-delimiters-depth-1">(</span><span class="org-constant">not</span> <span class="org-rainbow-delimiters-depth-2">(</span>any <span class="org-string">"/"</span><span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span><span class="org-rainbow-delimiters-depth-4">)</span><span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span>  <span class="org-comment-delimiter">;  </span><span class="org-comment">non-/</span>
+    <span class="org-rainbow-delimiters-depth-2">(</span>one-or-more <span class="org-string">"*"</span><span class="org-rainbow-delimiters-depth-2">)</span>             <span class="org-comment-delimiter">; </span><span class="org-comment">At least one star,</span>
+    <span class="org-string">"/"</span><span class="org-rainbow-delimiters-depth-1">)</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">and the final /</span>
+</pre>
+</div>
+
+<pre class="example">
+/\*\(?:[^*]\|\*[^/]\)*\*+/
+</pre>
+
+
+<p>
+you redefine <i>the language itself</i> to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It&rsquo;s like &ldquo;meeting in the middle,&rdquo; so you don&rsquo;t have to build up super complex primitives, and you don&rsquo;t have to decompose down to a super fine-grained level.
+</p>
+
+<p>
+I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there&rsquo;s an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.
+</p>
+
+<p>
+Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it&rsquo;s like, ok cool, what else can I build with these snippets?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org40d3825" class="outline-3">
+<h3 id="org40d3825"><span class="section-number-3">7.2.</span> <a href="org_mode.html#ID-b6a1ff64-eae1-4a6f-ab54-01ddfca5353d">org-mode</a></h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+An integral part of <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> .
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1dbc6ae" class="outline-3">
+<h3 id="org1dbc6ae"><span class="section-number-3">7.3.</span> <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a></h3>
+<div class="outline-text-3" id="text-7-3">
+</div>
+<div id="outline-container-org31eefd2" class="outline-4">
+<h4 id="org31eefd2"><span class="section-number-4">7.3.1.</span> (<i>Computation in brains must be deeply context-aware. &gt; Programming Bottom-Up</i>)</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<p>
+<a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a>
+</p>
+
+<p>
+There are two ways of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a> in Lisp &#x2013; top-down, and bottom-up.
+</p>
+
+<p>
+Top-down = the classic paradigm of divide-and conquer, decomposing the problem hierarchically into smaller problems.
+</p>
+
+<p>
+Bottom-up = defining your own DSL in Lisp, and using those primitives to make something cool.
+</p>
+
+<p>
+Most programming is done top-down, but with the powers of macros you can go bottom-up, creating &ldquo;little universes&rdquo; in Lisp&#x2026;
+</p>
+
+<p>
+Personally what comes to mind is the <code>rx</code> macro in emacs. It&rsquo;s like a nice little domain-specific language for writing regular expressions, embedded right into elisp.
+</p>
+
+<p>
+Regexp matching a block comment in C:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
+    <span class="org-rainbow-delimiters-depth-2">(</span>zero-or-more
+     <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-keyword">or</span> <span class="org-rainbow-delimiters-depth-4">(</span><span class="org-constant">not</span> <span class="org-rainbow-delimiters-depth-1">(</span>any <span class="org-string">"*"</span><span class="org-rainbow-delimiters-depth-1">)</span><span class="org-rainbow-delimiters-depth-4">)</span>          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
+         <span class="org-rainbow-delimiters-depth-4">(</span>seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
+              <span class="org-rainbow-delimiters-depth-1">(</span><span class="org-constant">not</span> <span class="org-rainbow-delimiters-depth-2">(</span>any <span class="org-string">"/"</span><span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span><span class="org-rainbow-delimiters-depth-4">)</span><span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span>  <span class="org-comment-delimiter">;  </span><span class="org-comment">non-/</span>
+    <span class="org-rainbow-delimiters-depth-2">(</span>one-or-more <span class="org-string">"*"</span><span class="org-rainbow-delimiters-depth-2">)</span>             <span class="org-comment-delimiter">; </span><span class="org-comment">At least one star,</span>
+    <span class="org-string">"/"</span><span class="org-rainbow-delimiters-depth-1">)</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">and the final /</span>
+</pre>
+</div>
+
+<pre class="example">
+/\*\(?:[^*]\|\*[^/]\)*\*+/
+</pre>
+
+
+<p>
+you redefine <i>the language itself</i> to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It&rsquo;s like &ldquo;meeting in the middle,&rdquo; so you don&rsquo;t have to build up super complex primitives, and you don&rsquo;t have to decompose down to a super fine-grained level.
+</p>
+
+<p>
+I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there&rsquo;s an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.
+</p>
+
+<p>
+Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it&rsquo;s like, ok cool, what else can I build with these snippets?
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org697ac64" class="outline-3">
+<h3 id="org697ac64"><span class="section-number-3">7.4.</span> <a href="index.html#ID-23e03a28-48b1-4fa3-9fa3-71a369950c6d">Ketan&rsquo;s Nebula</a></h3>
+<div class="outline-text-3" id="text-7-4">
+<p>
+Where ideas, etc. are born.
+</p>
+<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+<style>
+circle {
+    fill: #bbbb00;
+}
+</style>
+<svg display="block" style="margin: auto;" width="100%" height="500px" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+</svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="nebula.js"> </script>
+
+<p>
+<a href="philosophy.html#ID-091329e5-7896-4975-b88b-99b30f4dd482">philosophy</a>
+<a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representations</a>
+<a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">shortcuts</a>
+<a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a>
+<a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a>
+<a href="social_psychology.html#ID-3db1ed04-4b29-46cf-9940-1afd30d5d25f">Social Psychology</a>
+<a href="cs152_trust_and_safety_engineering.html#ID-0e008aa4-63a2-4ae3-8c59-933b3065d721">Trust and Safety Engineering</a>
+<a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">Computer Networking</a>
+</p>
+<hr />
+<p>
+<a href="how_i_made_this_website.html#ID-65b7c2dd-ad4c-465f-b382-4e4d431e0be8">How I made this website</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Ketan Agrawal</p>
+<p class="date">Created: 2022-03-23 Wed 16:23</p>
+</div>
+</body>
+</html>

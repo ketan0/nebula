@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       08b2deb9-f7f7-43bd-a663-113ab080bf90
+:ROAM_ALIASES: NLP
+:END:
+#+title: Natural Language Processing
