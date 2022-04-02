@@ -26,10 +26,12 @@
   (when (equal backend 'html)
     (let ((modified-timestamp-subtitle (->> (buffer-file-name) (file-attributes)
                                             (file-attribute-modification-time)
-                                            (format-time-string "%B %d, %Y\n")
-                                            (concat "#+subtitle: Last modified on "))))
-      (goto-line 4)
-      (insert modified-timestamp-subtitle))))
+                                            (format-time-string "%B %d, %Y")
+                                            (concat "\n#+subtitle: Last modified on "))))
+      (beginning-of-buffer)
+      (when (re-search-forward "#\\+TITLE:" nil t)
+        (end-of-line)
+        (insert modified-timestamp-subtitle)))))
 (add-hook 'org-export-before-processing-hook 'add-modified-date)
 
 ;; modified from https://org-roam.discourse.group/t/export-backlinks-on-org-export/1756
@@ -174,8 +176,39 @@ contextual information."
                     ;; END CHANGED LINE
                             lang lang label code)))))))
 
+;; I modified this to allow me to use Quotebacks: https://quotebacks.net/
+(defun org-html-quote-block (quote-block contents info)
+  "Transcode a QUOTE-BLOCK element from Org to HTML.
+CONTENTS holds the contents of the block.  INFO is a plist
+holding contextual information."
+
+  (let* ((reference (org-html--reference quote-block info t))
+         (attributes (org-export-read-attribute :attr_html quote-block))
+         (data-author (plist-get attributes :data-author))
+         (cite (plist-get attributes :cite))
+         (quotebackp (string= (plist-get attributes :class) "quoteback"))
+         (a (org-html--make-attribute-string
+             (if (or (not reference) (plist-member attributes :id))
+                 attributes
+               (plist-put attributes :id reference)))))
+    (format "<blockquote%s>\n%s%s</blockquote>%s"
+            (if (org-string-nw-p a) (concat " " a) "")
+            contents
+            (if quotebackp (format "<footer>%s<cite><a href=\"%s\">%s</a></cite></footer>"
+                                   (or data-author "") (or cite "") (or cite ""))
+              "")
+            (if quotebackp "<script src=\"dark-themes.js\"></script>
+<script note=\"\" src=\"https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js\"></script>"
+              ""))))
+
+(defun file-contents (file)
+  (with-temp-buffer
+    (insert-file-contents file)
+    (buffer-string)))
+(setq html-preamble (file-contents "assets/header.html")
+      html-postamble (file-contents "assets/footer.html"))
 (setq org-publish-project-alist
-        '(("digital laboratory"
+        `(("digital laboratory"
            :base-directory "~/garden-simple/org"
            :publishing-function org-html-publish-to-html
            :publishing-directory "~/garden-simple/html"
@@ -186,15 +219,9 @@ contextual information."
            :with-toc nil
            :preserve-breaks t
            :html-preamble t
-           :html-preamble-format (("en" "<a style=\"color: inherit; text-decoration: none\" href=\"/\"><h2>Ketan's Nebula</h2></a>"))
+           :html-preamble-format (("en" ,html-preamble))
            :html-postamble t
-           :html-postamble-format (("en" "<p>Made with <span class=\"heart\">♥</span> using
-<a href=\"https://orgmode.org/\">org-mode</a>.
-Source code is available
-<a href=\"https://github.com/ketan0/digital-laboratory\">here</a>.</p>
-<script src=\"popper.min.js\"></script>
-<script src=\"tippy-bundle.umd.min.js\"></script>
-<script src=\"tooltips.js\"></script>"))
+           :html-postamble-format (("en" ,html-postamble))
            :html-link-home ""
            :html-link-up ""
            :html-head-include-default-style nil
