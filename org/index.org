@@ -3,7 +3,6 @@
 :END:
 #+title: Ketan's Nebula
 
-Where ideas, etc. are born!!.
 #+begin_export html
 <svg class="nebula-svg" display="block" width="100%" height="500px" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g class="circles">
