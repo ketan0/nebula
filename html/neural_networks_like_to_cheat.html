@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-28 Mon 17:31 -->
+<!-- 2022-04-02 Sat 05:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Neural networks like to "cheat"</title>
@@ -18,59 +18,97 @@
 </head>
 <body>
 <div id="preamble" class="status">
-<a style="color: inherit; text-decoration: none" href="/"><img src="nebula-logo.svg" width="50px"></a>
+<header>
+  <a style="color: inherit; text-decoration: none" href="/">
+    <svg id="nebula-logo" x="0px" y="0px" width="50px"
+         viewBox="0 0 290.513 290.513" style="enable-background:new 0 0 290.513 290.513;" xml:space="preserve">
+      <g>
+        <g>
+          <path d="M168.684,103.086c-58.679,0-93.713,17.515-93.713,46.857c0,18.344,27.214,28.114,46.857,28.114
+                   c46.327,0,46.857-22.472,46.857-23.428l-9.367-0.141c-0.009,0.141-1.354,14.198-37.49,14.198
+                   c-16.976,0-37.485-8.359-37.485-18.743c0-23.124,32.317-37.485,84.342-37.485c68.312,0,112.456,20.233,112.456,51.542
+                   c0,32.818-50.989,70.252-145.49,74.975l0.469,9.357c101.36-5.065,154.393-46.262,154.393-84.333
+                   C290.511,126.996,242.689,103.086,168.684,103.086z"/>
+          <path d="M215.541,154.628c0-18.344-27.214-28.114-46.857-28.114c-46.327,0-46.857,22.472-46.857,23.428
+                   l9.367,0.141c0.009-0.141,1.354-14.198,37.49-14.198c16.976,0,37.485,8.359,37.485,18.743c0,23.124-32.317,37.485-84.342,37.485
+                   c-68.312,0-112.456-20.233-112.456-51.542c0-32.818,50.989-70.252,145.49-74.975l-0.469-9.357C53.032,61.303,0,102.5,0,140.571
+                   c0,37.003,47.822,60.914,121.827,60.914C180.506,201.485,215.541,183.97,215.541,154.628z"/>
+          <path d="M51.542,107.771c0,7.75-6.307,14.057-14.057,14.057v9.371c7.75,0,14.057,6.307,14.057,14.057h9.371
+                   c0-7.75,6.307-14.057,14.057-14.057v-9.371c-7.75,0-14.057-6.307-14.057-14.057H51.542z M56.228,131.214
+                   c-1.335-1.776-2.919-3.364-4.7-4.7c1.781-1.335,3.364-2.924,4.7-4.7c1.335,1.776,2.919,3.364,4.7,4.7
+                   C59.147,127.849,57.563,129.438,56.228,131.214z"/>
+          <path d="M238.969,187.428h9.371c0-10.337,8.406-18.743,18.743-18.743v-9.371
+                   c-10.337,0-18.743-8.406-18.743-18.743h-9.371c0,10.337-8.406,18.743-18.743,18.743v9.371
+                   C230.563,168.685,238.969,177.091,238.969,187.428z M243.655,156.095c2.08,3.13,4.775,5.82,7.905,7.905
+                   c-3.13,2.08-5.82,4.775-7.905,7.905c-2.08-3.13-4.775-5.82-7.905-7.905C238.88,161.919,241.574,159.225,243.655,156.095z"/>
+          <path d="M103.085,206.17h-9.371c0,10.337-8.406,18.743-18.743,18.743v9.371
+                   c10.337,0,18.743,8.406,18.743,18.743h9.371c0-10.337,8.406-18.743,18.743-18.743v-9.371
+                   C111.491,224.913,103.085,216.507,103.085,206.17z M98.399,237.503c-2.08-3.13-4.775-5.82-7.905-7.905
+                   c3.13-2.08,5.82-4.775,7.905-7.905c2.08,3.13,4.775,5.82,7.905,7.905C103.174,231.679,100.479,234.373,98.399,237.503z"/>
+          <path d="M182.741,84.343h9.371c0-10.337,8.406-18.743,18.743-18.743v-9.371
+                   c-10.337,0-18.743-8.406-18.743-18.743h-9.371c0,10.337-8.406,18.743-18.743,18.743V65.6
+                   C174.335,65.6,182.741,74.006,182.741,84.343z M187.427,53.01c2.08,3.13,4.775,5.82,7.905,7.905
+                   c-3.13,2.08-5.82,4.775-7.905,7.905c-2.08-3.13-4.775-5.82-7.905-7.905C182.652,58.834,185.346,56.14,187.427,53.01z"/>
+          <rect x="98.399" y="135.885" width="9.371" height="9.371"/>
+          <rect x="107.77" y="149.942" width="9.371" height="9.371"/>
+          <rect x="168.684" y="168.685" width="9.371" height="9.371"/>
+          <rect x="182.741" y="145.257" width="9.371" height="9.371"/>
+		  <rect x="215.541" y="187.428" width="9.371" height="9.371"/>
+		  <rect x="154.627" y="215.542" width="9.371" height="9.371"/>
+	    </g>
+      </g>
+    </svg>
+  </a>
+</header>
 </div>
 <div id="content" class="content">
-<h1 class="title">Neural networks like to &ldquo;cheat&rdquo;
-<br />
-<span class="subtitle">Last modified on March 28, 2022</span>
-</h1>
+<h1 class="title">Neural networks like to "cheat"</h1>
 
 
-<div id="outline-container-orgbd4d289" class="outline-2 references">
-<h2 id="orgbd4d289">Links to this node</h2>
-<div class="outline-text-2" id="text-orgbd4d289">
+<div id="outline-container-orge8416ae" class="outline-2 references">
+<h2 id="orge8416ae">Links to this node</h2>
+<div class="outline-text-2" id="text-orge8416ae">
 </div>
-<div id="outline-container-orga19af19" class="outline-3">
-<h3 id="orga19af19"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
-<div class="outline-text-3" id="text-orga19af19">
+<div id="outline-container-orgab8e45b" class="outline-3">
+<h3 id="orgab8e45b"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-orgab8e45b">
 <p>
 (, )<br />
 </p>
 
 <p>
-<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
+<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to "cheat"</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object's shape; a classifier might learn that "green grass background" =&gt; "cow classification."<br />
 </p>
 
 <p>
-This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate &ldquo;<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images&rdquo; to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
+This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb68812b" class="outline-3">
-<h3 id="orgb68812b"><a href="cs224u_natural_language_understanding.html#ID-4785205d-bb3f-4795-9b13-7bc8128e3ae0">CS224u: Natural Language Understanding</a></h3>
-<div class="outline-text-3" id="text-orgb68812b">
+<div id="outline-container-orgbfb2e1b" class="outline-3">
+<h3 id="orgbfb2e1b"><a href="cs224u_natural_language_understanding.html#ID-4785205d-bb3f-4795-9b13-7bc8128e3ae0">CS224u: Natural Language Understanding</a></h3>
+<div class="outline-text-3" id="text-orgbfb2e1b">
 </div>
-<div id="outline-container-org34d66ef" class="outline-4">
-<h4 id="org34d66ef">(<i>Introduction &gt; Limitations</i>)</h4>
-<div class="outline-text-4" id="text-org34d66ef">
+<div id="outline-container-orgabcc863" class="outline-4">
+<h4 id="orgabcc863">(<i>Introduction &gt; Limitations</i>)</h4>
+<div class="outline-text-4" id="text-orgabcc863">
 <ul class="org-ul">
-<li>NLU systems are easily &ldquo;confused.&rdquo;<br /></li>
-<li>Models don&rsquo;t &ldquo;know what the world is like.&rdquo; e.g., GPT-3 doesn&rsquo;t really&#x2026;know what a cat is. Image-captioning models show that they don&rsquo;t know what the world is like.<br /></li>
+<li>NLU systems are easily "confused."<br /></li>
+<li>Models don't "know what the world is like." e.g., GPT-3 doesn't really&#x2026;know what a cat is. Image-captioning models show that they don't know what the world is like.<br /></li>
 <li>Systems can encourage self-harm.<br /></li>
 <li>Systems are vulnerable to adversarial attacks.<br /></li>
 <li>Social biases are reflected in NLP models.<br /></li>
 <li>Observing diminishing returns in ever-larger language models.<br /></li>
-<li><a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;.</a> NLI models figure out how to predict the correct relation between premise-hypothesis through some superficial correlation.<br /></li>
+<li><a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to "cheat".</a> NLI models figure out how to predict the correct relation between premise-hypothesis through some superficial correlation.<br /></li>
 </ul>
 
 <p>
-Question someone asked: &ldquo;Is there any case where symbolic approaches definitely would be used over neural nets?&rdquo;<br />
+Question someone asked: "Is there any case where symbolic approaches definitely would be used over neural nets?"<br />
 </p>
 
 <p>
-Answer: Mental health chatbot. Don&rsquo;t want it saying harmful things to users. Other safety-critical situations. etc. Also&#x2013; sometimes a mixture of symbolic and neural approaches, e.g. how in Google Translate, they may tack on a logical rule that attempts to correct for gender biases in neurally-produced translations.<br />
+Answer: Mental health chatbot. Don't want it saying harmful things to users. Other safety-critical situations. etc. Also&#x2013; sometimes a mixture of symbolic and neural approaches, e.g. how in Google Translate, they may tack on a logical rule that attempts to correct for gender biases in neurally-produced translations.<br />
 </p>
 </div>
 </div>
@@ -78,10 +116,13 @@ Answer: Mental health chatbot. Don&rsquo;t want it saying harmful things to user
 </div>
 </div>
 <div id="postamble" class="status">
-<p>Made with <span class="heart">♥</span> using
-<a href="https://orgmode.org/">org-mode</a>.
-Source code is available
-<a href="https://github.com/ketan0/digital-laboratory">here</a>.</p>
+<footer>
+  <p>Made with <span class="heart">♥</span> using
+    <a href="https://orgmode.org/">org-mode</a>.
+    Source code is available
+    <a href="https://github.com/ketan0/digital-laboratory">here</a>.
+  </p>
+</footer>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>
