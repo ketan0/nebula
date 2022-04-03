@@ -1,7 +1,7 @@
 // code to setup tippy.js tooltips
 function setupTooltips() {
   // hacky CSS for now to only match internal links, and not the homepage
-  const links = document.querySelectorAll('a:not([href^="http"],[href="/"])');
+  const links = document.querySelectorAll('a:not([href^="http"],[href="/"],.no-tippy)');
   const parser = new DOMParser();
   for (let link of links) {
     // when hover over a link, fetch its preview

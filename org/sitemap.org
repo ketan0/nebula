@@ -8,6 +8,7 @@
 - [[file:cs224u_natural_language_understanding.org][CS224u: Natural Language Understanding]]
 - [[file:cs236_deep_generative_models.org][CS236: Deep Generative Models]]
 - [[file:cs246_mining_massive_datasets.org][CS246: Mining Massive Datasets]]
+- [[file:game_of_life.org][Conway's Game of Life]]
 - [[file:counterfactual_generative_networks.org][Counterfactual Generative Networks]]
 - [[file:gan_steerability_without_optimization.org][GAN "Steerability" without optimization]]
 - [[file:generative_models.org][Generative models]]

@@ -29,7 +29,8 @@
                                             (format-time-string "%B %d, %Y")
                                             (concat "\n#+subtitle: Last modified on "))))
       (beginning-of-buffer)
-      (when (re-search-forward "#\\+TITLE:" nil t)
+      (setq case-fold-search t)
+      (when (re-search-forward "#\\+title:" nil t)
         (end-of-line)
         (insert modified-timestamp-subtitle)))))
 (add-hook 'org-export-before-processing-hook 'add-modified-date)
@@ -206,7 +207,8 @@ holding contextual information."
     (insert-file-contents file)
     (buffer-string)))
 (setq html-preamble (file-contents "assets/header.html")
-      html-postamble (file-contents "assets/footer.html"))
+      html-postamble (file-contents "assets/footer.html")
+      html-head-extra (file-contents "assets/head-extra.html"))
 (setq org-publish-project-alist
         `(("digital laboratory"
            :base-directory "~/garden-simple/org"
@@ -225,11 +227,6 @@ holding contextual information."
            :html-link-home ""
            :html-link-up ""
            :html-head-include-default-style nil
-           :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"syntax.css\" />
-<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\" />"
-           :html-head-extra "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\" />
-<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\" />
-<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\" />
-<link rel=\"manifest\" href=\"/site.webmanifest\" />")))
+           :html-head-extra ,html-head-extra)))
 
 ;;; publish-utils.el ends here

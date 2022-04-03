@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       0be7979d-d523-4567-ac06-d6a01f12216d
+:END:
+#+title: things i want to try in my digital garden
+
+- interactive experiments
+- org-transclusion
