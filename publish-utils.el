@@ -22,6 +22,7 @@
 (setq org-cite-global-bibliography '("/Users/ketanagrawal/zoterocitations.bib"))
 (setq org-cite-export-processors '((t basic)))
 
+;; add the last modified date as a subtitle
 (defun add-modified-date (backend)
   (when (equal backend 'html)
     (let ((modified-timestamp-subtitle (->> (buffer-file-name) (file-attributes)
@@ -36,6 +37,7 @@
 (add-hook 'org-export-before-processing-hook 'add-modified-date)
 
 ;; modified from https://org-roam.discourse.group/t/export-backlinks-on-org-export/1756
+;; collect backlinks and append them as a subtree at the end of the document
 (defun collect-backlinks-string (backend)
   (when (and (equal backend 'html)
              (org-roam-node-at-point))

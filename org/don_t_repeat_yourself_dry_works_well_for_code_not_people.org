@@ -3,6 +3,6 @@
 :END:
 #+title: Don't Repeat Yourself (DRY) works well for code, not people.
 
-People like the multiply-connected nature of things.
+People like ideas to be multiply connected.
 
 TODO: talk about Marvin Minsky's essay "Why People Think Computers Can't" (make separate note for that), etc.

@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       918b7900-d37d-4d92-a900-6d6632fd2f47
 :END:
-#+title: Conway's Game of Life
+#+title: 🔲 Conway's Game of Life
 #+html_head: <script src="json-sans-eval.js"></script><script src="css-browser-selector.js"></script><script src="game-of-life-v3.1.1.js"></script><link rel="stylesheet" type="text/css" href="gol-styles.css" />
 
 #+begin_export html
