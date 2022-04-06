@@ -7,6 +7,7 @@
 [[id:3f0de91d-119f-4fd2-942e-f3458e60ed40][code comments]]
 [[id:b910e58f-f1fe-4c3f-8efb-69bfa261b191][📚 book notes]]
 [[id:918b7900-d37d-4d92-a900-6d6632fd2f47][🔲 Conway's Game of Life]]
+[[id:091329e5-7896-4975-b88b-99b30f4dd482][🧐 philosophy]]
 [[id:5df9203d-c7d9-4341-b7dc-ac4236000d8b][rules of thumb]]
 [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][decomposition]]
 [[id:e2a95a21-0e55-4160-a6bb-0d7f87e81516][Don't Repeat Yourself (DRY) works well for code, not people.]]

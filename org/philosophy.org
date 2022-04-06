@@ -8,7 +8,6 @@ The aim of philosophy, abstractly formulated, is to understand how things in the
 -- Wilfrid Sellars, "Philosophy and the Scientific Image of Man"
 #+end_quote
 
-
 Some things we can think about in a philosophical lens...
 
 - Do we have [[id:ed67aff3-34f7-461e-adc0-37d3fbb2a890][free will]] / agency? Are we just subservient to a deterministic universe? Or both??
