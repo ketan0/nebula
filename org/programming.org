@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       0997b060-ee05-458e-beed-3494675c879d
 :END:
-#+title: programming
+#+title: 👾 programming
 
 Hey! These are some snippets of various languages that can be run straight out of org mode.
 

@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       3db1ed04-4b29-46cf-9940-1afd30d5d25f
 :END:
-#+title: Social Psychology
+#+title: 🧠 Social Psychology
 
 Some (incomplete) notes from PSYCH 70: Social Psychology at Stanford.
 

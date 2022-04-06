@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       1999996d-b676-4fc4-894b-caf82f8dd7ff
 :END:
-#+title: emacs
+#+title: ♏️ emacs
 
 I started using Emacs in January 2020, and it has undoubtedly changed the way I do work on my computer, and the way I think about computing in general.
 

@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       f1284b63-905a-45f8-b649-4eb3d3e6aaeb
+:END:
+#+title: Maintain continuity in life
+
+
+We need some ways of maintaining continuity in our life, keeping re-upping on the same, powerful threads. Life shouldn't dissolve into a sea of fragmented, 30-second Youtube clips...rather, we should keep coming back to the same threads, seeing how they evolve over time.
+
+#+ATTR_HTML: :class quoteback :data-title 2020-07-28 - Timeful texts :data-author Andy Matuschak :cite https://notes.andymatuschak.org/z7sgmonRR3uibGYusWYnVpGFRdQYrk65Wsuzn#:~:text=to%20be%20transformed%20by%20a%20book%2C%20readers%20must%20do%20more%20than%20absorb%20information%3A%20they%20must%20bathe%20in%20the%20book%E2%80%99s%20ideas%2C%20relate%20those%20ideas%20to%20experiences%20in%20their%20lives%20over%20weeks%20and%20months%2C%20try%20on%20the%20book%E2%80%99s%20mental%20models%20like%20a%20new%20hat.
+#+begin_quote
+To be transformed by a book, readers must do more than absorb information: they must bathe in the book’s ideas, relate those ideas to experiences in their lives over weeks and months, try on the book’s mental models like a new hat.
+#+end_quote
+
+This can mean:
+- Doing intellectual work on a more daily basis, rather than in sporadic bursts, in order to be more immersed in that headspace. I feel like the people who are the best at what they do are absolutely immersed in the headspace -- they're the kind of people whose minds wander to think about those problems while they're in the shower.
+- Actively memorizing things through [[id:3e676e0c-65d7-44ee-9886-324b82878b28][spaced repetition]] .
+- Establishing a daily meditation practice, where you learn new insights over time.
+- "Slow-reading" a book, allowing its insights to unfurl over the backdrop of your life in motion. (Alternatively, re-reading a book at different points in your life.)
+
+I think another crucial source of continuity in life is [[id:59af5716-6264-4d91-9fdd-3e9eb383d602][being part of a good community]]. Essentially, I'd want to find community/communities that take "that one engrossing conversation that kept you up till 3am," and serialize it. Be living and breahting in an ideaspace that is enriching.

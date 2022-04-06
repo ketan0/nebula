@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       3f0de91d-119f-4fd2-942e-f3458e60ed40
+:END:
+#+title: code comments
+
+* Why do we comment our [[id:0997b060-ee05-458e-beed-3494675c879d][programs]]?
+Comments don't change the functionality of the program, but completely changes the user experience of /reading/ someone else's code. It's the difference between watching ESPN on mute and watching with the color commentator-- you get all the finer points, all the thoughts, all the ramblings connected to this large body of cold, unyielding computer instructions.
+
+For example, here's some code from my Emacs config:
+#+begin_src emacs-lisp
+(setq org-refile-use-cache t) ;;speeds up loading refile targets
+(setq org-refile-targets '((nil :maxlevel . 9) ;; at most can refile 9 levels deep in the hierarchy
+                           (org-agenda-files :maxlevel . 9)))
+(setq org-refile-allow-creating-parent-nodes 'confirm) ;; confirm creation of new nodes as refile targets
+(setq org-refile-use-outline-path 'file) ;;see whole hierarchy (not just headline) when refiling
+(setq org-outline-path-complete-in-steps nil) ;;easy to complete in one go w/ helm
+#+end_src
+
+#+RESULTS:
+
+If I just had the bare config, it'd be pretty opaque /what/ the code means in some cases (e.g., what ~org-refile-use-outline-path~ means isn't super apparent just from the variable name) but also /why/ I've set certain settings.
+* What could be in store for the future of code comments?
+
+We might need to extend our idea of what code comments can even be. [[https://omar.website][Omar Rizwan]] has some pretty fascinating ideas on this.
+#+begin_export html
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">need to be able to put screenshots and video clips of bugs inside my code comments</p>&mdash; Omar Rizwan (@rsnous) <a href="https://twitter.com/rsnous/status/1457822312099561472?ref_src=twsrc%5Etfw">November 8, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+#+end_export
+
+#+begin_export html
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">need to be able to hyperlink other source code files inside comments</p>&mdash; Omar Rizwan (@rsnous) <a href="https://twitter.com/rsnous/status/1427372174701039625?ref_src=twsrc%5Etfw">August 16, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+#+end_export

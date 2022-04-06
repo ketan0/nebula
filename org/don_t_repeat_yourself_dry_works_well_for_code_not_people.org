@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       e2a95a21-0e55-4160-a6bb-0d7f87e81516
+:END:
+#+title: Don't Repeat Yourself (DRY) works well for code, not people.
+
+People like the multiply-connected nature of things.
+
+TODO: talk about Marvin Minsky's essay "Why People Think Computers Can't" (make separate note for that), etc.

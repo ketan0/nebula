@@ -5,7 +5,7 @@
 
 * Phonetics
 ** How do we form sounds?
-#+ATTR_HTML: :width 500px
+#+ATTR_HTML: :width 400px
 [[file:voice_tract.png]]
 
 Things depend on the positioning of the (tip/back) of tongue, lips
@@ -14,3 +14,7 @@ Things depend on the positioning of the (tip/back) of tongue, lips
 [[file:arpabet.png]]
 ** Sound waves are Longitudinal waves
 Vocal tract is basically air moving through a tube, with a certain size/length of the tube.
+* Chatbots vs. Dialog systems
+The goal of chatbots is to produce natural, human-like conversations.
+
+The goal of *dialog systems* is to accomplish a particular task. Naturalness / human-like chat is a "nice to have," but not essential

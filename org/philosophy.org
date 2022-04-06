@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       091329e5-7896-4975-b88b-99b30f4dd482
 :END:
-#+title: philosophy
+#+title: 🧐 philosophy
 
 #+begin_quote
 The aim of philosophy, abstractly formulated, is to understand how things in the broadest possible sense of the term hang together in the broadest possible sense of the term.

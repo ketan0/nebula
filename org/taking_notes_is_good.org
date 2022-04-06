@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       d7d536ea-a7e1-4663-b4a2-f20f7b8c7ebc
+:END:
+#+title: Taking notes is good.
+
+Documentation when programming is good. It makes the user experience better - connection to HCI stuff.
+
+Come to think of it... [[id:3f0de91d-119f-4fd2-942e-f3458e60ed40][code comments]] are essentially just notes about code, intermingled with that code itself.

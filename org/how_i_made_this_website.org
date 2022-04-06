@@ -3,7 +3,7 @@
 :END:
 #+title: How I made this website
 
-🚧 TODO 🚧
+🚧 TODO 🚧 This is [[id:4bba82cd-9443-4496-8896-81323093ec11][a note I'm actively working on.]]
 
 - [ ] [[id:b6a1ff64-eae1-4a6f-ab54-01ddfca5353d][org-mode]] description, setup
 - [ ] org-publish setup

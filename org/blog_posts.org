@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       288afdae-8e50-4aa5-b16f-2545baf10967
+:END:
+#+title: blog posts
