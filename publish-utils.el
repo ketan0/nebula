@@ -81,7 +81,8 @@
                      (outline (when-let ((outline (plist-get properties :outline)))
                                 (message "Ok, we got the outline property: %s" outline)
                                 (when (>= (length outline) 1)
-                                  (mapconcat #'org-link-display-format outline " > "))))
+                                  (->> (mapconcat #'org-link-display-format outline " > ")
+                                       (format "%s (/%s/)" (s-repeat (+ (org-roam-node-level node) 3) "*"))))))
                      (point (org-roam-backlink-point backlink))
                      (text (if (-some->> (org-roam-node-properties source-node)
                                  (assoc "HTML_CONTAINER_CLASS") (cdr)
@@ -94,13 +95,7 @@
                                         (s-repeat (+ (org-roam-node-level node) 2) "*")
                                         (org-roam-node-id source-node)
                                         (org-roam-node-title source-node)
-                                        (if outline
-                                            (progn
-                                              (message "Got the outline! %s (/%s/)" (s-repeat (+ (org-roam-node-level node) 3) "*") outline)
-                                              (format "%s (/%s/)" (s-repeat (+ (org-roam-node-level node) 3) "*") outline))
-                                          (progn
-                                            (message "No outline? 🥺")
-                                            ""))
+                                        (or outline "")
                                         text)))
                 (insert reference)))))))))
 
