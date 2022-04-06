@@ -206,9 +206,9 @@ holding contextual information."
   (with-temp-buffer
     (insert-file-contents file)
     (buffer-string)))
-(setq html-preamble (file-contents "assets/header.html")
-      html-postamble (file-contents "assets/footer.html")
-      html-head-extra (file-contents "assets/head-extra.html"))
+(setq html-preamble (file-contents "~/garden-simple/assets/header.html")
+      html-postamble (file-contents "~/garden-simple/assets/footer.html")
+      html-head-extra (file-contents "~/garden-simple/assets/head-extra.html"))
 (setq org-publish-project-alist
         `(("digital laboratory"
            :base-directory "~/garden-simple/org"
