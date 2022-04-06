@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-06 Wed 03:37 -->
+<!-- 2022-04-06 Wed 04:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>code comments</title>
@@ -67,34 +67,34 @@
 <span class="subtitle">Last modified on April 06, 2022</span>
 </h1>
 
-<div id="outline-container-org72856eb" class="outline-2">
-<h2 id="org72856eb">Why do we comment our <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programs</a>?</h2>
-<div class="outline-text-2" id="text-org72856eb">
+<div id="outline-container-orge6661e6" class="outline-2">
+<h2 id="orge6661e6">Why do we comment our <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programs</a>?</h2>
+<div class="outline-text-2" id="text-orge6661e6">
 <p>
-Comments don&rsquo;t change the functionality of the program, but completely changes the user experience of <i>reading</i> someone else&rsquo;s code. It&rsquo;s the difference between watching ESPN on mute and watching with the color commentator&#x2013; you get all the finer points, all the thoughts, all the ramblings connected to this large body of cold, unyielding computer instructions.<br />
+Comments don't change the functionality of the program, but completely changes the user experience of <i>reading</i> someone else's code. It's the difference between watching ESPN on mute and watching with the color commentator&#x2013; you get all the finer points, all the thoughts, all the ramblings connected to this large body of cold, unyielding computer instructions.<br />
 </p>
 
 <p>
-For example, here&rsquo;s some code from my Emacs config:<br />
+For example, here's some code from my Emacs config:<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">setq</span> <span class="org-variable-name">org-refile-use-cache</span> t<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-comment-delimiter">;;</span><span class="org-comment">speeds up loading refile targets</span>
-<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">setq</span> <span class="org-variable-name">org-refile-targets</span> <span class="org-highlight-quoted-quote">'</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-rainbow-delimiters-depth-3">(</span>nil <span class="org-builtin">:maxlevel</span> . <span class="org-highlight-numbers-number">9</span><span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-comment-delimiter">;; </span><span class="org-comment">at most can refile 9 levels deep in the hierarchy</span>
-                           <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-variable-name">org-agenda-files</span> <span class="org-builtin">:maxlevel</span> . <span class="org-highlight-numbers-number">9</span><span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
-<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">setq</span> <span class="org-variable-name">org-refile-allow-creating-parent-nodes</span> <span class="org-highlight-quoted-quote">'</span><span class="org-highlight-quoted-symbol">confirm</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-comment-delimiter">;; </span><span class="org-comment">confirm creation of new nodes as refile targets</span>
-<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">setq</span> <span class="org-variable-name">org-refile-use-outline-path</span> <span class="org-highlight-quoted-quote">'</span><span class="org-highlight-quoted-symbol">file</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-comment-delimiter">;;</span><span class="org-comment">see whole hierarchy (not just headline) when refiling</span>
-<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">setq</span> <span class="org-variable-name">org-outline-path-complete-in-steps</span> nil<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-comment-delimiter">;;</span><span class="org-comment">easy to complete in one go w/ helm</span>
+<pre class="src src-emacs-lisp" data-language="emacs-lisp">(<span class="org-keyword">setq</span> org-refile-use-cache t) <span class="org-comment-delimiter">;;</span><span class="org-comment">speeds up loading refile targets</span>
+(<span class="org-keyword">setq</span> org-refile-targets '((nil <span class="org-builtin">:maxlevel</span> . <span class="org-highlight-numbers-number">9</span>) <span class="org-comment-delimiter">;; </span><span class="org-comment">at most can refile 9 levels deep in the hierarchy</span>
+                           (org-agenda-files <span class="org-builtin">:maxlevel</span> . <span class="org-highlight-numbers-number">9</span>)))
+(<span class="org-keyword">setq</span> org-refile-allow-creating-parent-nodes 'confirm) <span class="org-comment-delimiter">;; </span><span class="org-comment">confirm creation of new nodes as refile targets</span>
+(<span class="org-keyword">setq</span> org-refile-use-outline-path 'file) <span class="org-comment-delimiter">;;</span><span class="org-comment">see whole hierarchy (not just headline) when refiling</span>
+(<span class="org-keyword">setq</span> org-outline-path-complete-in-steps nil) <span class="org-comment-delimiter">;;</span><span class="org-comment">easy to complete in one go w/ helm</span>
 </pre>
 </div>
 
 <p>
-If I just had the bare config, it&rsquo;d be pretty opaque <i>what</i> the code means in some cases (e.g., what <code>org-refile-use-outline-path</code> means isn&rsquo;t super apparent just from the variable name) but also <i>why</i> I&rsquo;ve set certain settings.<br />
+If I just had the bare config, it'd be pretty opaque <i>what</i> the code means in some cases (e.g., what <code>org-refile-use-outline-path</code> means isn't super apparent just from the variable name) but also <i>why</i> I've set certain settings.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org018d42d" class="outline-2">
-<h2 id="org018d42d">What could be in store for the future of code comments?</h2>
-<div class="outline-text-2" id="text-org018d42d">
+<div id="outline-container-orgd284a6b" class="outline-2">
+<h2 id="orgd284a6b">What could be in store for the future of code comments?</h2>
+<div class="outline-text-2" id="text-orgd284a6b">
 <p>
 We might need to extend our idea of what code comments can even be. <a href="https://omar.website">Omar Rizwan</a> has some pretty fascinating ideas on this.<br />
 </p>
@@ -105,33 +105,34 @@ We might need to extend our idea of what code comments can even be. <a href="htt
 </div>
 
 
-<div id="outline-container-orgfa520f4" class="outline-2 references">
-<h2 id="orgfa520f4">Links to this node</h2>
-<div class="outline-text-2" id="text-orgfa520f4">
+<div id="outline-container-org77e2ff9" class="outline-2 references">
+<h2 id="org77e2ff9">Links to this node</h2>
+<div class="outline-text-2" id="text-org77e2ff9">
 </div>
-<div id="outline-container-orga68f651" class="outline-3">
-<h3 id="orga68f651"><a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I&rsquo;m actively working on</a></h3>
-<div class="outline-text-3" id="text-orga68f651">
-<p>
-<a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I&rsquo;m actively working on</a> (hah, recursive)<br />
-<a href="code_comments.html#ID-3f0de91d-119f-4fd2-942e-f3458e60ed40">code comments</a><br />
-<a href="rules_of_thumb.html#ID-5df9203d-c7d9-4341-b7dc-ac4236000d8b">rules of thumb</a><br />
-<a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposition</a><br />
-<a href="don_t_repeat_yourself_dry_works_well_for_code_not_people.html#ID-e2a95a21-0e55-4160-a6bb-0d7f87e81516">Don&rsquo;t Repeat Yourself (DRY) works well for code, not people.</a><br />
-<a href="blog_posts.html#ID-288afdae-8e50-4aa5-b16f-2545baf10967">blog posts</a><br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-org43b9003" class="outline-3">
-<h3 id="org43b9003"><a href="taking_notes_is_good.html#ID-d7d536ea-a7e1-4663-b4a2-f20f7b8c7ebc">Taking notes is good.</a></h3>
-<div class="outline-text-3" id="text-org43b9003">
+<div id="outline-container-org9671279" class="outline-3">
+<h3 id="org9671279"><a href="taking_notes_is_good.html#ID-d7d536ea-a7e1-4663-b4a2-f20f7b8c7ebc">Taking notes is good.</a></h3>
+<div class="outline-text-3" id="text-org9671279">
 <p>
 Documentation when programming is good. It makes the user experience better - connection to HCI stuff.<br />
 </p>
 
 <p>
 Come to think of it&#x2026; <a href="code_comments.html#ID-3f0de91d-119f-4fd2-942e-f3458e60ed40">code comments</a> are essentially just notes about code, intermingled with that code itself.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org52d1ed8" class="outline-3">
+<h3 id="org52d1ed8"><a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I'm actively working on</a></h3>
+<div class="outline-text-3" id="text-org52d1ed8">
+<p>
+<a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I'm actively working on</a> (hah, recursive)<br />
+<a href="code_comments.html#ID-3f0de91d-119f-4fd2-942e-f3458e60ed40">code comments</a><br />
+<a href="book_notes.html#ID-b910e58f-f1fe-4c3f-8efb-69bfa261b191">📚 book notes</a><br />
+<a href="rules_of_thumb.html#ID-5df9203d-c7d9-4341-b7dc-ac4236000d8b">rules of thumb</a><br />
+<a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposition</a><br />
+<a href="don_t_repeat_yourself_dry_works_well_for_code_not_people.html#ID-e2a95a21-0e55-4160-a6bb-0d7f87e81516">Don't Repeat Yourself (DRY) works well for code, not people.</a><br />
+<a href="blog_posts.html#ID-288afdae-8e50-4aa5-b16f-2545baf10967">blog posts</a><br />
 </p>
 </div>
 </div>

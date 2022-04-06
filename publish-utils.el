@@ -79,7 +79,8 @@
                      (source-file (org-roam-node-file source-node))
                      (properties (org-roam-backlink-properties backlink))
                      (outline (when-let ((outline (plist-get properties :outline)))
-                                (when (> (length outline) 1)
+                                (message "Ok, we got the outline property: %s" outline)
+                                (when (>= (length outline) 1)
                                   (mapconcat #'org-link-display-format outline " > "))))
                      (point (org-roam-backlink-point backlink))
                      (text (if (-some->> (org-roam-node-properties source-node)
@@ -94,7 +95,12 @@
                                         (org-roam-node-id source-node)
                                         (org-roam-node-title source-node)
                                         (if outline
-                                            (format "%s (/%s/)" (s-repeat (+ (org-roam-node-level node) 3) "*") outline) "")
+                                            (progn
+                                              (message "Got the outline! %s (/%s/)" (s-repeat (+ (org-roam-node-level node) 3) "*") outline)
+                                              (format "%s (/%s/)" (s-repeat (+ (org-roam-node-level node) 3) "*") outline))
+                                          (progn
+                                            (message "No outline? 🥺")
+                                            ""))
                                         text)))
                 (insert reference)))))))))
 

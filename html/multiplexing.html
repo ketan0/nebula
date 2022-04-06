@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-02 Sat 21:40 -->
+<!-- 2022-04-06 Wed 04:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>multiplexing</title>
@@ -144,6 +144,10 @@ Here's <code>127.0.0.1</code>, aka <code>localhost</code>, in binary:<br />
 <div id="outline-container-org0a443b8" class="outline-3">
 <h3 id="org0a443b8"><a href="cs144_introduction_to_computer_networking.html#ID-a2413139-aec2-4c32-9b0d-4a1f996ccd91">User Datagram Protocol (UDP)</a></h3>
 <div class="outline-text-3" id="text-org0a443b8">
+</div>
+<div id="outline-container-orgbe9b9cf" class="outline-4">
+<h4 id="orgbe9b9cf">(<i>User Datagram Protocol (UDP)</i>)</h4>
+<div class="outline-text-4" id="text-orgbe9b9cf">
 <p>
 Problem: IP addresses only identify a machine. How does that machine know which application/program to deliver the packet to? We need another another layer of <a href="multiplexing.html#ID-e12d4dfd-b03b-4f84-bd5f-458dab82b2c5">multiplexing</a>, so that multiple applications on one computer can share one IP address.<br />
 </p>
@@ -155,6 +159,7 @@ This is where UDP comes in&#x2013; we put something special, "User Datagram Prot
 <p>
 Applications such as Zoom which may not need the strict ordering/reliability of TCP may use UDP to create a custom protocol. E.g. Zoom uses UDP to deliver their packets.<br />
 </p>
+</div>
 </div>
 </div>
 </div>
