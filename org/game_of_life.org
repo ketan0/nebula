@@ -4,6 +4,8 @@
 #+title: 🔲 Conway's Game of Life
 #+html_head: <script src="json-sans-eval.js"></script><script src="css-browser-selector.js"></script><script src="game-of-life-v3.1.1.js"></script><link rel="stylesheet" type="text/css" href="gol-styles.css" />
 
+Using the great implementation of Conway's Game of Life from https://pmav.eu/stuff/javascript-game-of-life-v3.1.1/.
+
 #+begin_export html
 <div id="wrapper">
 
