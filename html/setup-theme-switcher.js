@@ -1,3 +1,9 @@
+/*
+ * Adds listeners to change themes whenever:
+ * - User toggles the theme-switcher checkbox
+ * - User changes their OS color scheme preference (and hasn't toggled the checkbox)
+ * */
+
 (function() {
   // setup checkbox to change theme when checked / unchecked
   checkbox = document.getElementById("theme-switcher");

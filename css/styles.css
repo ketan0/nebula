@@ -1,3 +1,5 @@
+/* variables used below are defined in setup-initial-theme.js */
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -22,7 +24,7 @@ body {
   content: var(--switch-icon);
 }
 
-#nebula-logo path{
+#nebula-logo {
   fill: var(--nebula-logo);
   -webkit-transition: fill .5s ease;
   -moz-transition: fill .5s ease;
@@ -30,7 +32,7 @@ body {
   transition: fill .5s ease;
 }
 
-#nebula-logo:hover path {
+#nebula-logo:hover {
   fill: #66cc00;
 }
 

@@ -1,3 +1,6 @@
+/* Gets the initial color preferences from the user,
+ * then sets the CSS style variables appropriately. */
+
 STYLES = {
   dark: {
     ['--bg']: '#181818',
@@ -43,6 +46,7 @@ function setCSSProperties(colorMode) {
   });
 }
 
+// taken from https://www.joshwcomeau.com/react/dark-mode/
 function getInitialColorMode() {
   const persistedColorPreference = localStorage.getItem('theme');
   const hasPersistedPreference = typeof persistedColorPreference === 'string';
