@@ -20,16 +20,16 @@ inspiration taken from these goku configs:
 :END:
 # TODO: don't generate backlinks from this node (create a dont-backlink-here prop)
 ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------,
-❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ + ❘ ' ❘ <-    ❘
+❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ - ❘ + ❘ <-    ❘
 ❘---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----❘
-❘ [[id:8ba2437c-ba0d-4bc6-983e-bb5dbf026e95][->]]❘ ❘ [[id:641cd7e8-71f4-4911-ac7b-85685593a9df][Q]] ❘ W ❘ E ❘ R ❘ T ❘ Y ❘ U ❘ I ❘ O ❘ P ❘ ] ❘ ^ ❘     ❘
-❘-----',--',--',--',--',--',--',--',--',--',--',--',--'❘    ❘
-❘ [[id:030d326c-05a7-46c3-8da7-9cf3662fa8f6][Caps]] ❘ A ❘ S ❘ D ❘ F ❘ G ❘ H ❘ J ❘ K ❘ L ❘ \ ❘ [ ❘ * ❘    ❘
-❘----,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---'----❘
-❘    ❘ < ❘ [[id:9c2ae9d6-f08b-4538-ab1a-7674f1c7d2c7][Z]] ❘ [[id:3f159d2c-587f-4cb0-b305-a1beb3aed923][X]] ❘ C ❘ V ❘ B ❘ N ❘ M ❘ [[id:2f839e85-533a-4052-96e8-10c776382f79][,]] ❘ . ❘ - ❘          ❘
-❘----'-,-',--'--,'---'---'---'---'---'---'-,-'---',--,------❘
-❘ ctrl ❘  ❘ alt ❘                          ❘ alt  ❘  ❘ ctrl ❘
-'------'  '-----'--------------------------'------'  '------'
+❘ [[id:8ba2437c-ba0d-4bc6-983e-bb5dbf026e95][->❘]] ❘ [[id:641cd7e8-71f4-4911-ac7b-85685593a9df][Q]] ❘ W ❘ E ❘ R ❘ T ❘ Y ❘ U ❘ I ❘ O ❘ P ❘ [ ❘ ] ❘ \   ❘
+❘-----',--',--',--',--',--',--',--',--',--',--',--',--'-----❘
+❘ [[id:030d326c-05a7-46c3-8da7-9cf3662fa8f6][Caps]] ❘ A ❘ S ❘ D ❘ F ❘ G ❘ H ❘ J ❘ K ❘ L ❘ ; ❘ ' ❘ Return ❘
+❘------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------❘
+❘ Shift  ❘ [[id:9c2ae9d6-f08b-4538-ab1a-7674f1c7d2c7][Z]] ❘ [[id:3f159d2c-587f-4cb0-b305-a1beb3aed923][X]] ❘ C ❘ V ❘ B ❘ N ❘ M ❘ [[id:2f839e85-533a-4052-96e8-10c776382f79][,]] ❘ . ❘ / ❘    Shift ❘
+❘------,-'---',--',--'---'---'---'---'---'-,-'---'--,-------❘
+❘ ctrl ❘ alt  ❘cmd❘                      ❘cmd| alt  ❘       ❘
+'------'------'---'----------------------'---'------'-------'
 * Guide
 For more info on configuring Goku, see the [[https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md][tutorial]].
 Guide lifted from [[https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126][kaushikgopal]]. To understand better how modifiers work in karabiner, see the karabiner definition of mandatory and optional: [[https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/#frommodifiersoptional   ][karabiner modifiers documentation]]
