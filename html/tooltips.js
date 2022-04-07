@@ -18,8 +18,8 @@ function setupTooltips() {
       const instance = tippy(event.target, {
         allowHTML: true,
         interactive: true,
-        delay: [500, null],
-        touch: ['hold', 500],
+        delay: [250, null],
+        touch: ['hold', 250],
         maxWidth: '30rem',
         inlinePositioning: false,
         placement: 'auto',
@@ -39,8 +39,9 @@ function setupTooltips() {
             }
             parent.scrollTop = anchor.offsetTop;
           }
-        }
+        },
       });
+      tippy.hideAll({ duration: 0 });
       instance.setContent(content);
       instance.show();
     })
