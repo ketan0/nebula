@@ -153,7 +153,7 @@ Everything in the internet is built on top of the Internet [[id:7c02c940-2bc8-41
 The header is usually 24 bytes (well, no one uses the =Options= field, so 20 bytes):
 ** Internet [[id:7c02c940-2bc8-412e-b8c2-ab3b784ca07d][Datagram]] Header
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: karabiner-keyboard-container dont-backlink-here
+:HTML_CONTAINER_CLASS: karabiner-keyboard-container dont-show-content-in-backlinks
 :ID:       ea4c8b49-7937-4e0d-b197-697c0c781ae6
 :END:
 # TODO: don't generate backlinks from this node (create a dont-backlink-here prop)
