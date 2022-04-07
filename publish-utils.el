@@ -105,7 +105,7 @@
 
 
 ;; patch from https://gist.github.com/jethrokuan/d6f80caaec7f49dedffac7c4fe41d132
-;; makes links to headlines work properly
+;; makes ID links to headlines work properly
 (defun org-html--reference (datum info &optional named-only)
     "Return an appropriate reference for DATUM.
 DATUM is an element or a `target' type object.  INFO is the
@@ -137,6 +137,7 @@ targets and targets."
        (t
         (org-export-get-reference datum info)))))
 
+;; Modify org src block export to add the programming language as an attribute of <pre>
 (defun org-html-src-block (src-block _contents info)
     "Transcode a SRC-BLOCK element from Org to HTML.
 CONTENTS holds the contents of the item.  INFO is a plist holding
@@ -179,7 +180,7 @@ contextual information."
                     ;; END CHANGED LINE
                             lang lang label code)))))))
 
-;; I modified this to allow me to use Quotebacks: https://quotebacks.net/
+;; Modify org quote block export to allow me to use Quotebacks: https://quotebacks.net/
 (defun org-html-quote-block (quote-block contents info)
   "Transcode a QUOTE-BLOCK element from Org to HTML.
 CONTENTS holds the contents of the block.  INFO is a plist

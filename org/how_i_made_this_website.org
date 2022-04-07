@@ -8,6 +8,7 @@
 - [ ] [[id:b6a1ff64-eae1-4a6f-ab54-01ddfca5353d][org-mode]] description, setup
 - [ ] dark mode...
 - [ ] org-publish setup
+- [ ] local development setup (org-publish on save, ~live-server~, etc.)
 - [ ] Hovercards w/ Tippy.js
 - [ ] Quotebacks
 - [ ] Hello
