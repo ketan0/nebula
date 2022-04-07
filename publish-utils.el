@@ -81,7 +81,6 @@
                      (source-file (org-roam-node-file source-node))
                      (properties (org-roam-backlink-properties backlink))
                      (outline (when-let ((outline (plist-get properties :outline)))
-                                (message "Ok, we got the outline property: %s" outline)
                                 (when (>= (length outline) 1)
                                   (->> (mapconcat #'org-link-display-format outline " > ")
                                        (format "%s (/%s/)" (s-repeat (+ (org-roam-node-level node) 3) "*"))))))
