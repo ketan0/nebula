@@ -42,6 +42,7 @@
 - [[file:towards_causal_representation_learning.org][Towards Causal Representation Learning]]
 - [[file:what_s_the_point.org][What's the point of a digital lab [/garden/whatever]?]]
 - [[file:you_and_your_research.org][You and Your Research]]
+- [[file:zaomm.org][Zen and the Art of Motorcycle Maintenance]]
 - [[file:affordances.org][affordances]]
 - [[file:artists_i_like.org][artists I like]]
 - [[file:attention.org][attention]]

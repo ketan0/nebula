@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-06 Wed 04:01 -->
+<!-- 2022-04-06 Wed 22:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>multiplexing</title>
@@ -117,7 +117,7 @@ E.g. the IP address <code>104.196.238.229</code> simply represents a 32-bit numb
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python" data-language="python"><span class="org-keyword">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">104</span> &lt;&lt; <span class="org-highlight-numbers-number">24</span>) + (<span class="org-highlight-numbers-number">196</span> &lt;&lt; <span class="org-highlight-numbers-number">16</span>) + (<span class="org-highlight-numbers-number">238</span> &lt;&lt; <span class="org-highlight-numbers-number">8</span>) + <span class="org-highlight-numbers-number">229</span>))
+<pre class="src src-python" data-language="python"><span class="org-builtin">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">104</span> &lt;&lt; <span class="org-highlight-numbers-number">24</span>) + (<span class="org-highlight-numbers-number">196</span> &lt;&lt; <span class="org-highlight-numbers-number">16</span>) + (<span class="org-highlight-numbers-number">238</span> &lt;&lt; <span class="org-highlight-numbers-number">8</span>) + <span class="org-highlight-numbers-number">229</span>))
 </pre>
 </div>
 
@@ -130,7 +130,7 @@ E.g. the IP address <code>104.196.238.229</code> simply represents a 32-bit numb
 Here's <code>127.0.0.1</code>, aka <code>localhost</code>, in binary:<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-python" data-language="python"><span class="org-keyword">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">127</span> &lt;&lt; <span class="org-highlight-numbers-number">24</span>) + (<span class="org-highlight-numbers-number">0</span> &lt;&lt; <span class="org-highlight-numbers-number">16</span>) + (<span class="org-highlight-numbers-number">0</span> &lt;&lt; <span class="org-highlight-numbers-number">8</span>) + <span class="org-highlight-numbers-number">1</span>))
+<pre class="src src-python" data-language="python"><span class="org-builtin">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">127</span> &lt;&lt; <span class="org-highlight-numbers-number">24</span>) + (<span class="org-highlight-numbers-number">0</span> &lt;&lt; <span class="org-highlight-numbers-number">16</span>) + (<span class="org-highlight-numbers-number">0</span> &lt;&lt; <span class="org-highlight-numbers-number">8</span>) + <span class="org-highlight-numbers-number">1</span>))
 </pre>
 </div>
 

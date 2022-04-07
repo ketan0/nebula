@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-06 Wed 04:01 -->
+<!-- 2022-04-06 Wed 22:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>👾 programming</title>
@@ -144,19 +144,19 @@ Lovely Monday we’re having, isn’t it?
     <span class="org-keyword">if</span> n == <span class="org-highlight-numbers-number">1</span>:
         <span class="org-keyword">return</span> np.array([[n]])
     <span class="org-keyword">else</span>:
-        <span class="org-variable-name">old</span> = fibonacci_squares_arr(n - <span class="org-highlight-numbers-number">1</span>)
-        <span class="org-variable-name">side_len</span> = <span class="org-builtin">max</span>(old.shape)
-        <span class="org-variable-name">nxt</span> = np.full((side_len, side_len), n)
-        <span class="org-variable-name">elems</span> = (old, nxt) <span class="org-keyword">if</span> n // <span class="org-highlight-numbers-number">2</span> % <span class="org-highlight-numbers-number">2</span> == <span class="org-highlight-numbers-number">0</span> <span class="org-keyword">else</span> (nxt, old)
+        old = fibonacci_squares_arr(n - <span class="org-highlight-numbers-number">1</span>)
+        side_len = <span class="org-builtin">max</span>(old.shape)
+        nxt = np.full((side_len, side_len), n)
+        elems = (old, nxt) <span class="org-keyword">if</span> n // <span class="org-highlight-numbers-number">2</span> % <span class="org-highlight-numbers-number">2</span> == <span class="org-highlight-numbers-number">0</span> <span class="org-keyword">else</span> (nxt, old)
         <span class="org-keyword">return</span> np.concatenate(elems, axis=<span class="org-builtin">int</span>(n % <span class="org-highlight-numbers-number">2</span> == <span class="org-highlight-numbers-number">0</span>))
 
 <span class="org-keyword">def</span> <span class="org-function-name">fibonacci_squares</span>(n):
-    <span class="org-variable-name">arr</span> = fibonacci_squares_arr(n)
-    <span class="org-variable-name">chars</span> = <span class="org-builtin">list</span>(<span class="org-string">'&#128997;&#129003;&#128998;&#128999;&#129000;&#129002;&#129001;'</span>)
-    <span class="org-variable-name">fib_str</span> = <span class="org-string">'\n'</span>.join([<span class="org-string">''</span>.join([chars[(elem - <span class="org-highlight-numbers-number">1</span>) % <span class="org-builtin">len</span>(chars)]
+    arr = fibonacci_squares_arr(n)
+    chars = <span class="org-builtin">list</span>(<span class="org-string">'&#128997;&#129003;&#128998;&#128999;&#129000;&#129002;&#129001;'</span>)
+    fib_str = <span class="org-string">'\n'</span>.join([<span class="org-string">''</span>.join([chars[(elem - <span class="org-highlight-numbers-number">1</span>) % <span class="org-builtin">len</span>(chars)]
                                   <span class="org-keyword">for</span> elem <span class="org-keyword">in</span> row]) <span class="org-keyword">for</span> row <span class="org-keyword">in</span> arr])
     <span class="org-keyword">return</span> fib_str
-<span class="org-keyword">print</span>(fibonacci_squares(<span class="org-highlight-numbers-number">6</span>))
+<span class="org-builtin">print</span>(fibonacci_squares(<span class="org-highlight-numbers-number">6</span>))
 </pre>
 </div>
 
@@ -178,7 +178,7 @@ Lovely Monday we’re having, isn’t it?
 </div>
 
 <div class="org-src-container">
-<pre class="src src-python" data-language="python"><span class="org-keyword">print</span>(y)
+<pre class="src src-python" data-language="python"><span class="org-builtin">print</span>(y)
 </pre>
 </div>
 
@@ -221,14 +221,14 @@ Haha, this one seemed to assume that it was already December. But it was cool th
 
 <span class="org-variable-name">now</span> = datetime.datetime.now()
 
-<span class="org-keyword">print</span>(now.strftime(<span class="org-string">"%A, %B %d, %Y"</span>))
+<span class="org-builtin">print</span>(now.strftime(<span class="org-string">"%A, %B %d, %Y"</span>))
 
 <span class="org-variable-name">today</span> = now.strftime(<span class="org-string">"%m/%d"</span>)
 
 <span class="org-keyword">if</span> today == <span class="org-string">"12/25"</span>:
-    <span class="org-keyword">print</span>(<span class="org-string">"Merry Christmas!"</span>)
+    <span class="org-builtin">print</span>(<span class="org-string">"Merry Christmas!"</span>)
 <span class="org-keyword">else</span>:
-    <span class="org-keyword">print</span>(<span class="org-string">"There are "</span> + <span class="org-builtin">str</span>(<span class="org-highlight-numbers-number">25</span> - <span class="org-builtin">int</span>(today[<span class="org-highlight-numbers-number">3</span>:])) + <span class="org-string">" days until Christmas!"</span>)
+    <span class="org-builtin">print</span>(<span class="org-string">"There are "</span> + <span class="org-builtin">str</span>(<span class="org-highlight-numbers-number">25</span> - <span class="org-builtin">int</span>(today[<span class="org-highlight-numbers-number">3</span>:])) + <span class="org-string">" days until Christmas!"</span>)
 </pre>
 </div>
 
@@ -251,7 +251,7 @@ This&#x2026;this is cool to be able to write math in natural language like this,
 <span class="org-variable-name">n</span> = <span class="org-highlight-numbers-number">5</span>
 <span class="org-variable-name">a</span> = hilbert(n)
 <span class="org-variable-name">b</span> = <span class="org-highlight-numbers-number">1.0</span> / a
-<span class="org-keyword">print</span>(b)
+<span class="org-builtin">print</span>(b)
 </pre>
 </div>
 
@@ -278,8 +278,8 @@ Hah, this is a cute one. I initially only put the first 4 lines in, and it proce
 
 <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-highlight-numbers-number">1</span>,<span class="org-highlight-numbers-number">6</span>):
     <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(i):
-        <span class="org-keyword">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
-    <span class="org-keyword">print</span>()
+        <span class="org-builtin">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
+    <span class="org-builtin">print</span>()
 
 <span class="org-string">"""</span>
 <span class="org-string">*****</span>
@@ -291,12 +291,12 @@ Hah, this is a cute one. I initially only put the first 4 lines in, and it proce
 
 <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-highlight-numbers-number">5</span>,<span class="org-highlight-numbers-number">0</span>,-<span class="org-highlight-numbers-number">1</span>):
     <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(i):
-        <span class="org-keyword">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
-    <span class="org-keyword">print</span>()
+        <span class="org-builtin">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
+    <span class="org-builtin">print</span>()
 </pre>
 </div>
 
-<pre class="example" id="orga11ed34">
+<pre class="example" id="org21bced3">
 *
 **
 ***
@@ -322,7 +322,7 @@ Whoa. This would certainly make using matplotlib a lot easier.<br />
 
 <span class="org-variable-name">now</span> = datetime.now()
 <span class="org-variable-name">delta</span> = timedelta(days=<span class="org-highlight-numbers-number">100</span>)
-<span class="org-keyword">print</span>(now + delta)
+<span class="org-builtin">print</span>(now + delta)
 
 </pre>
 </div>
@@ -333,7 +333,7 @@ Whoa. This would certainly make using matplotlib a lot easier.<br />
 
 
 
-<div id="orga934f75" class="figure">
+<div id="org1c511c0" class="figure">
 <p><img src="my_plot.png" alt="my_plot.png" /><br />
 </p>
 </div>
@@ -349,12 +349,12 @@ It honored my request to use requests!<br />
 <span class="org-keyword">import</span> requests
 
 <span class="org-variable-name">r</span> = requests.get(<span class="org-string">'http://forecast.weather.gov/MapClick.php?lat=37.4&amp;lon=-122.1&amp;unit=0&amp;lg=english&amp;FcstType=json'</span>)
-<span class="org-variable-name">data</span> = r.json()
+data = r.json()
 
 
 
-<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">0</span>])
-<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">1</span>])
+<span class="org-builtin">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">0</span>])
+<span class="org-builtin">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">1</span>])
 </pre>
 </div>
 
@@ -437,7 +437,7 @@ Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c87
 </p>
 
 
-<div id="orgcca8c43" class="figure">
+<div id="org2f04ab4" class="figure">
 <p><img src="decomposition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
 </p>
 </div>
@@ -446,7 +446,7 @@ Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c87
 Some methodical activities, such as making breakfast, decompose well into modular activities as well:<br />
 </p>
 
-<div id="orgf106e44" class="figure">
+<div id="org7de0239" class="figure">
 <p><img src="breakfast.png" alt="tree of the decomposition of making breakfast into &quot;make toast,&quot; &quot;make tea,&quot; etc." /><br />
 </p>
 </div>
@@ -456,7 +456,7 @@ A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machin
 </p>
 
 
-<div id="org8c62781" class="figure">
+<div id="org2caef46" class="figure">
 <p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
 </p>
 </div>
@@ -574,6 +574,7 @@ If I just had the bare config, it'd be pretty opaque <i>what</i> the code means 
 <a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">⤴️ shortcuts</a><br />
 <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a><br />
 <a href="social_psychology.html#ID-3db1ed04-4b29-46cf-9940-1afd30d5d25f">🧠 Social Psychology</a><br />
+<a href="game_of_life.html#ID-918b7900-d37d-4d92-a900-6d6632fd2f47">🔲 Conway's Game of Life</a><br />
 <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">👾 programming</a><br />
 <a href="cs152_trust_and_safety_engineering.html#ID-0e008aa4-63a2-4ae3-8c59-933b3065d721">Trust and Safety Engineering</a><br />
 <a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">🌐 Computer Networking</a><br />

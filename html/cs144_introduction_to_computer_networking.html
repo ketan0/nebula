@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-06 Wed 04:01 -->
+<!-- 2022-04-06 Wed 22:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>🌐 Computer Networking</title>
@@ -140,9 +140,9 @@ Packets are like nested envelopes. Abstractions exist inside the packets as "lay
 </div>
 </div>
 
-<div id="outline-container-orgfd7ffd4" class="outline-4 references">
-<h4 id="orgfd7ffd4">Links to this node</h4>
-<div class="outline-text-4" id="text-orgfd7ffd4">
+<div id="outline-container-orgff0a8df" class="outline-4 references">
+<h4 id="orgff0a8df">Links to this node</h4>
+<div class="outline-text-4" id="text-orgff0a8df">
 </div>
 <ul class="org-ul">
 <li><a id="org88cde08"></a><a href="#ID-795ea436-a7af-4806-a754-5b05ffe0a35d">Internet Protocol (IP)</a><br />
@@ -161,10 +161,10 @@ The header is usually 24 bytes (well, no one uses the <code>Options</code> field
 </ul>
 </li>
 
-<li><a id="org33eaf29"></a><a href="#ID-ea4c8b49-7937-4e0d-b197-697c0c781ae6">Internet Datagram Header</a><br />
+<li><a id="orgd005b6c"></a><a href="#ID-ea4c8b49-7937-4e0d-b197-697c0c781ae6">Internet Datagram Header</a><br />
 <ul class="org-ul">
-<li><a id="org07dfd5b"></a>(<i>Internet Protocol (IP) &gt; Internet Datagram Header</i>)<br />
-<div class="outline-text-6" id="text-org07dfd5b">
+<li><a id="orgfe85df6"></a>(<i>Internet Protocol (IP) &gt; Internet Datagram Header</i>)<br />
+<div class="outline-text-6" id="text-orgfe85df6">
 <p>
  0                   1                   2                   3<br />
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1<br />
@@ -231,7 +231,7 @@ E.g. the IP address <code>104.196.238.229</code> simply represents a 32-bit numb
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python" data-language="python"><span class="org-keyword">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">104</span> &lt;&lt; <span class="org-highlight-numbers-number">24</span>) + (<span class="org-highlight-numbers-number">196</span> &lt;&lt; <span class="org-highlight-numbers-number">16</span>) + (<span class="org-highlight-numbers-number">238</span> &lt;&lt; <span class="org-highlight-numbers-number">8</span>) + <span class="org-highlight-numbers-number">229</span>))
+<pre class="src src-python" data-language="python"><span class="org-builtin">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">104</span> &lt;&lt; <span class="org-highlight-numbers-number">24</span>) + (<span class="org-highlight-numbers-number">196</span> &lt;&lt; <span class="org-highlight-numbers-number">16</span>) + (<span class="org-highlight-numbers-number">238</span> &lt;&lt; <span class="org-highlight-numbers-number">8</span>) + <span class="org-highlight-numbers-number">229</span>))
 </pre>
 </div>
 
@@ -244,7 +244,7 @@ E.g. the IP address <code>104.196.238.229</code> simply represents a 32-bit numb
 Here's <code>127.0.0.1</code>, aka <code>localhost</code>, in binary:<br />
 </p>
 <div class="org-src-container">
-<pre class="src src-python" data-language="python"><span class="org-keyword">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">127</span> &lt;&lt; <span class="org-highlight-numbers-number">24</span>) + (<span class="org-highlight-numbers-number">0</span> &lt;&lt; <span class="org-highlight-numbers-number">16</span>) + (<span class="org-highlight-numbers-number">0</span> &lt;&lt; <span class="org-highlight-numbers-number">8</span>) + <span class="org-highlight-numbers-number">1</span>))
+<pre class="src src-python" data-language="python"><span class="org-builtin">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">127</span> &lt;&lt; <span class="org-highlight-numbers-number">24</span>) + (<span class="org-highlight-numbers-number">0</span> &lt;&lt; <span class="org-highlight-numbers-number">16</span>) + (<span class="org-highlight-numbers-number">0</span> &lt;&lt; <span class="org-highlight-numbers-number">8</span>) + <span class="org-highlight-numbers-number">1</span>))
 </pre>
 </div>
 
@@ -266,12 +266,12 @@ Routers forward packets <b>one at a time</b>. They look at IP addresses, and the
 <div class="outline-text-3" id="text-org5e5326c">
 </div>
 
-<div id="outline-container-org5791341" class="outline-4 references">
-<h4 id="org5791341">Links to this node</h4>
-<div class="outline-text-4" id="text-org5791341">
+<div id="outline-container-orgf3179f5" class="outline-4 references">
+<h4 id="orgf3179f5">Links to this node</h4>
+<div class="outline-text-4" id="text-orgf3179f5">
 </div>
 <ul class="org-ul">
-<li><a id="orgb9950f4"></a><a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">🌐 Computer Networking</a><br />
+<li><a id="org3629756"></a><a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">🌐 Computer Networking</a><br />
 <ul class="org-ul">
 <li><a id="org5fed400"></a>(<i>Evolution of the Internet &gt; Level 1: Home Modem</i>)<br />
 <div class="outline-text-6" id="text-org5fed400">
@@ -692,15 +692,15 @@ The header is usually 24 bytes (well, no one uses the <code>Options</code> field
 <h4 id="org0ead50f">Implementation of <code>traceroute</code> with TTL</h4>
 </div>
 
-<div id="outline-container-org8b9467f" class="outline-4 references">
-<h4 id="org8b9467f">Links to this node</h4>
-<div class="outline-text-4" id="text-org8b9467f">
+<div id="outline-container-org3dc9523" class="outline-4 references">
+<h4 id="org3dc9523">Links to this node</h4>
+<div class="outline-text-4" id="text-org3dc9523">
 </div>
 <ul class="org-ul">
-<li><a id="orgfdb6105"></a><a href="#ID-ea4c8b49-7937-4e0d-b197-697c0c781ae6">Internet Datagram Header</a><br />
+<li><a id="org8281f04"></a><a href="#ID-ea4c8b49-7937-4e0d-b197-697c0c781ae6">Internet Datagram Header</a><br />
 <ul class="org-ul">
-<li><a id="orgf1950cd"></a>(<i>Internet Protocol (IP) &gt; Internet Datagram Header</i>)<br />
-<div class="outline-text-6" id="text-orgf1950cd">
+<li><a id="org102a798"></a>(<i>Internet Protocol (IP) &gt; Internet Datagram Header</i>)<br />
+<div class="outline-text-6" id="text-org102a798">
 <p>
  0                   1                   2                   3<br />
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1<br />
@@ -723,10 +723,10 @@ The header is usually 24 bytes (well, no one uses the <code>Options</code> field
 </ul>
 </li>
 
-<li><a id="orgd207729"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
+<li><a id="orgab138bc"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
 <ul class="org-ul">
-<li><a id="org3c5d167"></a>(<i>Transmission Control Protocol (TCP) &gt; Mechanisms in TCP that can combat the bad aspects of datagrams:</i>)<br />
-<div class="outline-text-6" id="text-org3c5d167">
+<li><a id="orgff560b6"></a>(<i>Transmission Control Protocol (TCP) &gt; Mechanisms in TCP that can combat the bad aspects of datagrams:</i>)<br />
+<div class="outline-text-6" id="text-orgff560b6">
 <ul class="org-ul">
 <li>packet corruption &#x2013; <a href="#ID-0fabd2ba-5c45-4e37-a080-91ecd8326e9f">checksum</a> ensures that the original data is intact.<br /></li>
 <li>packet lost &#x2013; <a href="#ID-eae17dc8-02cb-4c22-94f3-c4c1f6d21e93">TTL</a> ensures that packets don't wander/cycle for too long, and a timeout triggers the packet to be resent.<br /></li>
@@ -746,15 +746,15 @@ The header is usually 24 bytes (well, no one uses the <code>Options</code> field
 <div class="outline-text-3" id="text-orga5cd2f8">
 </div>
 
-<div id="outline-container-orge2340cb" class="outline-4 references">
-<h4 id="orge2340cb">Links to this node</h4>
-<div class="outline-text-4" id="text-orge2340cb">
+<div id="outline-container-org03eda8d" class="outline-4 references">
+<h4 id="org03eda8d">Links to this node</h4>
+<div class="outline-text-4" id="text-org03eda8d">
 </div>
 <ul class="org-ul">
-<li><a id="orgc639ce1"></a><a href="#ID-ea4c8b49-7937-4e0d-b197-697c0c781ae6">Internet Datagram Header</a><br />
+<li><a id="org8b9a81a"></a><a href="#ID-ea4c8b49-7937-4e0d-b197-697c0c781ae6">Internet Datagram Header</a><br />
 <ul class="org-ul">
-<li><a id="orgf9cc99f"></a>(<i>Internet Protocol (IP) &gt; Internet Datagram Header</i>)<br />
-<div class="outline-text-6" id="text-orgf9cc99f">
+<li><a id="org1872cf0"></a>(<i>Internet Protocol (IP) &gt; Internet Datagram Header</i>)<br />
+<div class="outline-text-6" id="text-org1872cf0">
 <p>
  0                   1                   2                   3<br />
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1<br />
@@ -777,10 +777,10 @@ The header is usually 24 bytes (well, no one uses the <code>Options</code> field
 </ul>
 </li>
 
-<li><a id="org7abfff7"></a><a href="#ID-a2413139-aec2-4c32-9b0d-4a1f996ccd91">User Datagram Protocol (UDP)</a><br />
+<li><a id="org2d0cfb9"></a><a href="#ID-a2413139-aec2-4c32-9b0d-4a1f996ccd91">User Datagram Protocol (UDP)</a><br />
 <ul class="org-ul">
-<li><a id="orgdb4fdf3"></a>(<i>User Datagram Protocol (UDP)</i>)<br />
-<div class="outline-text-6" id="text-orgdb4fdf3">
+<li><a id="orgd4dcc8e"></a>(<i>User Datagram Protocol (UDP)</i>)<br />
+<div class="outline-text-6" id="text-orgd4dcc8e">
 <p>
 Problem: IP addresses only identify a machine. How does that machine know which application/program to deliver the packet to? We need another another layer of <a href="multiplexing.html#ID-e12d4dfd-b03b-4f84-bd5f-458dab82b2c5">multiplexing</a>, so that multiple applications on one computer can share one IP address.<br />
 </p>
@@ -806,15 +806,15 @@ Applications such as Zoom which may not need the strict ordering/reliability of 
 <div class="outline-text-3" id="text-org4cbc5cb">
 </div>
 
-<div id="outline-container-orgcb6b1c4" class="outline-4 references">
-<h4 id="orgcb6b1c4">Links to this node</h4>
-<div class="outline-text-4" id="text-orgcb6b1c4">
+<div id="outline-container-org989878a" class="outline-4 references">
+<h4 id="org989878a">Links to this node</h4>
+<div class="outline-text-4" id="text-org989878a">
 </div>
 <ul class="org-ul">
-<li><a id="orgd005b6c"></a><a href="#ID-ea4c8b49-7937-4e0d-b197-697c0c781ae6">Internet Datagram Header</a><br />
+<li><a id="org2fe2c40"></a><a href="#ID-ea4c8b49-7937-4e0d-b197-697c0c781ae6">Internet Datagram Header</a><br />
 <ul class="org-ul">
-<li><a id="orgfe85df6"></a>(<i>Internet Protocol (IP) &gt; Internet Datagram Header</i>)<br />
-<div class="outline-text-6" id="text-orgfe85df6">
+<li><a id="org468565e"></a>(<i>Internet Protocol (IP) &gt; Internet Datagram Header</i>)<br />
+<div class="outline-text-6" id="text-org468565e">
 <p>
  0                   1                   2                   3<br />
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1<br />
@@ -892,22 +892,22 @@ See <a href="https://www.ietf.org/rfc/rfc793.txt">https://www.ietf.org/rfc/rfc79
 <div class="outline-text-3" id="text-orga55a563">
 </div>
 
-<div id="outline-container-org00d68b5" class="outline-4 references">
-<h4 id="org00d68b5">Links to this node</h4>
-<div class="outline-text-4" id="text-org00d68b5">
+<div id="outline-container-org3fbd9ca" class="outline-4 references">
+<h4 id="org3fbd9ca">Links to this node</h4>
+<div class="outline-text-4" id="text-org3fbd9ca">
 </div>
 <ul class="org-ul">
-<li><a id="orge08cacf"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
+<li><a id="orgd3eef7f"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
 <ul class="org-ul">
-<li><a id="org16daf79"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
+<li><a id="org3eeae68"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
 </ul>
 </li>
 
 
-<li><a id="orge61d601"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
+<li><a id="org38283a8"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
 <ul class="org-ul">
-<li><a id="orgaf19539"></a>(<i>Transmission Control Protocol (TCP) &gt; Mechanisms in TCP that can combat the bad aspects of datagrams:</i>)<br />
-<div class="outline-text-6" id="text-orgaf19539">
+<li><a id="orge545681"></a>(<i>Transmission Control Protocol (TCP) &gt; Mechanisms in TCP that can combat the bad aspects of datagrams:</i>)<br />
+<div class="outline-text-6" id="text-orge545681">
 <ul class="org-ul">
 <li>packet corruption &#x2013; <a href="#ID-0fabd2ba-5c45-4e37-a080-91ecd8326e9f">checksum</a> ensures that the original data is intact.<br /></li>
 <li>packet lost &#x2013; <a href="#ID-eae17dc8-02cb-4c22-94f3-c4c1f6d21e93">TTL</a> ensures that packets don't wander/cycle for too long, and a timeout triggers the packet to be resent.<br /></li>
@@ -927,22 +927,22 @@ See <a href="https://www.ietf.org/rfc/rfc793.txt">https://www.ietf.org/rfc/rfc79
 <div class="outline-text-3" id="text-orgeea9236">
 </div>
 
-<div id="outline-container-org3176909" class="outline-4 references">
-<h4 id="org3176909">Links to this node</h4>
-<div class="outline-text-4" id="text-org3176909">
+<div id="outline-container-org5dd78a8" class="outline-4 references">
+<h4 id="org5dd78a8">Links to this node</h4>
+<div class="outline-text-4" id="text-org5dd78a8">
 </div>
 <ul class="org-ul">
-<li><a id="orgb4a8665"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
+<li><a id="org26da0f1"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
 <ul class="org-ul">
-<li><a id="org5e8aa10"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
+<li><a id="orgeaefb64"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
 </ul>
 </li>
 
 
-<li><a id="org95c2aff"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
+<li><a id="org415f2e4"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
 <ul class="org-ul">
-<li><a id="orgc882e26"></a>(<i>Transmission Control Protocol (TCP) &gt; Mechanisms in TCP that can combat the bad aspects of datagrams:</i>)<br />
-<div class="outline-text-6" id="text-orgc882e26">
+<li><a id="org9c55e04"></a>(<i>Transmission Control Protocol (TCP) &gt; Mechanisms in TCP that can combat the bad aspects of datagrams:</i>)<br />
+<div class="outline-text-6" id="text-org9c55e04">
 <ul class="org-ul">
 <li>packet corruption &#x2013; <a href="#ID-0fabd2ba-5c45-4e37-a080-91ecd8326e9f">checksum</a> ensures that the original data is intact.<br /></li>
 <li>packet lost &#x2013; <a href="#ID-eae17dc8-02cb-4c22-94f3-c4c1f6d21e93">TTL</a> ensures that packets don't wander/cycle for too long, and a timeout triggers the packet to be resent.<br /></li>
@@ -962,22 +962,22 @@ See <a href="https://www.ietf.org/rfc/rfc793.txt">https://www.ietf.org/rfc/rfc79
 <div class="outline-text-3" id="text-org821ebb9">
 </div>
 
-<div id="outline-container-orga22011a" class="outline-4 references">
-<h4 id="orga22011a">Links to this node</h4>
-<div class="outline-text-4" id="text-orga22011a">
+<div id="outline-container-orgf00691a" class="outline-4 references">
+<h4 id="orgf00691a">Links to this node</h4>
+<div class="outline-text-4" id="text-orgf00691a">
 </div>
 <ul class="org-ul">
-<li><a id="org978cfc4"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
+<li><a id="orgd5d9bfc"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
 <ul class="org-ul">
-<li><a id="orge896462"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
+<li><a id="org8fcb80c"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
 </ul>
 </li>
 
 
-<li><a id="orge39c60a"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
+<li><a id="orge66cda1"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
 <ul class="org-ul">
-<li><a id="org79c8bac"></a>(<i>Transmission Control Protocol (TCP) &gt; Client/server 3-way handshake: SYN, SYN/ACK, ACK</i>)<br />
-<div class="outline-text-6" id="text-org79c8bac">
+<li><a id="org2482226"></a>(<i>Transmission Control Protocol (TCP) &gt; Client/server 3-way handshake: SYN, SYN/ACK, ACK</i>)<br />
+<div class="outline-text-6" id="text-org2482226">
 <p>
 In TCP, the two connectors to the byte stream are peers; they <i>both</i> can read/write from the bidirectional byte stream.<br />
 </p>
@@ -1050,10 +1050,10 @@ Could consider this "4-way handshake": SYN, SYN, ACK, ACK. 99% of connections do
 </ul>
 </li>
 
-<li><a id="orga0dc93c"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
+<li><a id="orgf5125f3"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
 <ul class="org-ul">
-<li><a id="org6434c66"></a>(<i>Transmission Control Protocol (TCP) &gt; Client/server 3-way handshake: SYN, SYN/ACK, ACK</i>)<br />
-<div class="outline-text-6" id="text-org6434c66">
+<li><a id="org8529ffb"></a>(<i>Transmission Control Protocol (TCP) &gt; Client/server 3-way handshake: SYN, SYN/ACK, ACK</i>)<br />
+<div class="outline-text-6" id="text-org8529ffb">
 <p>
 In TCP, the two connectors to the byte stream are peers; they <i>both</i> can read/write from the bidirectional byte stream.<br />
 </p>
@@ -1135,22 +1135,22 @@ Could consider this "4-way handshake": SYN, SYN, ACK, ACK. 99% of connections do
 <div class="outline-text-3" id="text-org0239015">
 </div>
 
-<div id="outline-container-org2b357ba" class="outline-4 references">
-<h4 id="org2b357ba">Links to this node</h4>
-<div class="outline-text-4" id="text-org2b357ba">
+<div id="outline-container-org2a2b68a" class="outline-4 references">
+<h4 id="org2a2b68a">Links to this node</h4>
+<div class="outline-text-4" id="text-org2a2b68a">
 </div>
 <ul class="org-ul">
-<li><a id="org2b9a79e"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
+<li><a id="org7309d32"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
 <ul class="org-ul">
-<li><a id="orga19eee1"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
+<li><a id="org479b376"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
 </ul>
 </li>
 
 
-<li><a id="org354d241"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
+<li><a id="org743a5d6"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
 <ul class="org-ul">
-<li><a id="orgd7a92a5"></a>(<i>Transmission Control Protocol (TCP) &gt; Client/server 3-way handshake: SYN, SYN/ACK, ACK</i>)<br />
-<div class="outline-text-6" id="text-orgd7a92a5">
+<li><a id="org6f63494"></a>(<i>Transmission Control Protocol (TCP) &gt; Client/server 3-way handshake: SYN, SYN/ACK, ACK</i>)<br />
+<div class="outline-text-6" id="text-org6f63494">
 <p>
 In TCP, the two connectors to the byte stream are peers; they <i>both</i> can read/write from the bidirectional byte stream.<br />
 </p>
@@ -1223,10 +1223,10 @@ Could consider this "4-way handshake": SYN, SYN, ACK, ACK. 99% of connections do
 </ul>
 </li>
 
-<li><a id="org24a919f"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
+<li><a id="orgda92caf"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
 <ul class="org-ul">
-<li><a id="org9e6127a"></a>(<i>Transmission Control Protocol (TCP) &gt; Client/server 3-way handshake: SYN, SYN/ACK, ACK</i>)<br />
-<div class="outline-text-6" id="text-org9e6127a">
+<li><a id="orge7b08ce"></a>(<i>Transmission Control Protocol (TCP) &gt; Client/server 3-way handshake: SYN, SYN/ACK, ACK</i>)<br />
+<div class="outline-text-6" id="text-orge7b08ce">
 <p>
 In TCP, the two connectors to the byte stream are peers; they <i>both</i> can read/write from the bidirectional byte stream.<br />
 </p>
@@ -1299,10 +1299,10 @@ Could consider this "4-way handshake": SYN, SYN, ACK, ACK. 99% of connections do
 </ul>
 </li>
 
-<li><a id="org5139b77"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
+<li><a id="orgf545276"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
 <ul class="org-ul">
-<li><a id="org2482226"></a>(<i>Transmission Control Protocol (TCP) &gt; Client/server 3-way handshake: SYN, SYN/ACK, ACK</i>)<br />
-<div class="outline-text-6" id="text-org2482226">
+<li><a id="org0dd5378"></a>(<i>Transmission Control Protocol (TCP) &gt; Client/server 3-way handshake: SYN, SYN/ACK, ACK</i>)<br />
+<div class="outline-text-6" id="text-org0dd5378">
 <p>
 In TCP, the two connectors to the byte stream are peers; they <i>both</i> can read/write from the bidirectional byte stream.<br />
 </p>
@@ -1384,14 +1384,14 @@ Could consider this "4-way handshake": SYN, SYN, ACK, ACK. 99% of connections do
 <div class="outline-text-3" id="text-org7e103bc">
 </div>
 
-<div id="outline-container-orgf0921f7" class="outline-4 references">
-<h4 id="orgf0921f7">Links to this node</h4>
-<div class="outline-text-4" id="text-orgf0921f7">
+<div id="outline-container-org1caa5af" class="outline-4 references">
+<h4 id="org1caa5af">Links to this node</h4>
+<div class="outline-text-4" id="text-org1caa5af">
 </div>
 <ul class="org-ul">
-<li><a id="org8a4e909"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
+<li><a id="org9da77fa"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
 <ul class="org-ul">
-<li><a id="org7996c0d"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
+<li><a id="org96fe36d"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
 </ul>
 </li>
 </ul>
@@ -1405,22 +1405,22 @@ Could consider this "4-way handshake": SYN, SYN, ACK, ACK. 99% of connections do
 <div class="outline-text-3" id="text-orged6a125">
 </div>
 
-<div id="outline-container-org9146a3b" class="outline-4 references">
-<h4 id="org9146a3b">Links to this node</h4>
-<div class="outline-text-4" id="text-org9146a3b">
+<div id="outline-container-org1f747f4" class="outline-4 references">
+<h4 id="org1f747f4">Links to this node</h4>
+<div class="outline-text-4" id="text-org1f747f4">
 </div>
 <ul class="org-ul">
-<li><a id="orgd3eef7f"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
+<li><a id="orgf4a87da"></a><a href="#ID-a650418a-b94b-451b-96a7-f6f1725d824c">TCP Header</a><br />
 <ul class="org-ul">
-<li><a id="org3eeae68"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
+<li><a id="org49ad370"></a>(<i>Transmission Control Protocol (TCP) &gt; TCP Header</i>)<br /></li>
 </ul>
 </li>
 
 
-<li><a id="orgab138bc"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
+<li><a id="org856806a"></a><a href="#ID-ec9884b9-b7a5-4a2f-9bb5-9c29e3a975e1">Transmission Control Protocol (TCP)</a><br />
 <ul class="org-ul">
-<li><a id="orgff560b6"></a>(<i>Transmission Control Protocol (TCP) &gt; Mechanisms in TCP that can combat the bad aspects of datagrams:</i>)<br />
-<div class="outline-text-6" id="text-orgff560b6">
+<li><a id="org2bf0ae4"></a>(<i>Transmission Control Protocol (TCP) &gt; Mechanisms in TCP that can combat the bad aspects of datagrams:</i>)<br />
+<div class="outline-text-6" id="text-org2bf0ae4">
 <ul class="org-ul">
 <li>packet corruption &#x2013; <a href="#ID-0fabd2ba-5c45-4e37-a080-91ecd8326e9f">checksum</a> ensures that the original data is intact.<br /></li>
 <li>packet lost &#x2013; <a href="#ID-eae17dc8-02cb-4c22-94f3-c4c1f6d21e93">TTL</a> ensures that packets don't wander/cycle for too long, and a timeout triggers the packet to be resent.<br /></li>
@@ -1518,17 +1518,17 @@ Could consider this "4-way handshake": SYN, SYN, ACK, ACK. 99% of connections do
 </div>
 </div>
 
-<div id="outline-container-orge16c70e" class="outline-3 references">
-<h3 id="orge16c70e">Links to this node</h3>
-<div class="outline-text-3" id="text-orge16c70e">
+<div id="outline-container-org569f2e4" class="outline-3 references">
+<h3 id="org569f2e4">Links to this node</h3>
+<div class="outline-text-3" id="text-org569f2e4">
 </div>
-<div id="outline-container-org2d0cfb9" class="outline-4">
-<h4 id="org2d0cfb9"><a href="#ID-a2413139-aec2-4c32-9b0d-4a1f996ccd91">User Datagram Protocol (UDP)</a></h4>
-<div class="outline-text-4" id="text-org2d0cfb9">
+<div id="outline-container-org157fdb8" class="outline-4">
+<h4 id="org157fdb8"><a href="#ID-a2413139-aec2-4c32-9b0d-4a1f996ccd91">User Datagram Protocol (UDP)</a></h4>
+<div class="outline-text-4" id="text-org157fdb8">
 </div>
 <ul class="org-ul">
-<li><a id="orgd4dcc8e"></a>(<i>User Datagram Protocol (UDP)</i>)<br />
-<div class="outline-text-5" id="text-orgd4dcc8e">
+<li><a id="org3e7e8fd"></a>(<i>User Datagram Protocol (UDP)</i>)<br />
+<div class="outline-text-5" id="text-org3e7e8fd">
 <p>
 Problem: IP addresses only identify a machine. How does that machine know which application/program to deliver the packet to? We need another another layer of <a href="multiplexing.html#ID-e12d4dfd-b03b-4f84-bd5f-458dab82b2c5">multiplexing</a>, so that multiple applications on one computer can share one IP address.<br />
 </p>
@@ -1648,7 +1648,7 @@ Ask the root name server for puffer.stanford.edu. DNS servers cache things.<br /
 <div id="outline-container-org89ae21e" class="outline-3">
 <h3 id="org89ae21e">Old way of networking: circuit switching</h3>
 <div class="outline-text-3" id="text-org89ae21e">
-<pre class="example" id="org938f3b7">
+<pre class="example" id="org1fa9800">
 Person 1                               Person 3
         \                             /
         [Palo Alto] --------- [Austin]
@@ -1698,7 +1698,7 @@ Phone calls can happen over the internet &#x2013; just packets flying around. Vo
 </p>
 
 
-<div id="org07623a5" class="figure">
+<div id="orgac9a8eb" class="figure">
 <p><img src="packetswitching.png" alt="packetswitching.png" /><br />
 </p>
 </div>
@@ -1710,7 +1710,7 @@ Phone calls can happen over the internet &#x2013; just packets flying around. Vo
 <p>
 We want this infrastructure to constantly be in <i>use</i>. This necessitates a "queue" of packets waiting to be sent.<br />
 </p>
-<pre class="example" id="orgd94f1e8">
+<pre class="example" id="orgba4cd46">
 A
  \
   [Router]
@@ -1834,7 +1834,7 @@ TCP provides a <i>flow-controlled</i> bidirectional byte stream. Each sender res
 <p>
 Here's a simplified diagram of the TCP infrastructure:<br />
 </p>
-<pre class="example" id="org45106b1">
+<pre class="example" id="org04331bb">
               [     ]
 TCP Sender =&gt; [Queue] [    Link    ] =&gt; TCP Receiver
               [     ]
@@ -2152,7 +2152,7 @@ Link layer sits at the bottom of the network stack - most often the link layer c
 Recap: packet switch is a generic term for anything that forwards packets hop-by-hop. An Ethernet switch is a different kind of packet switch.<br />
 </p>
 
-<pre class="example" id="orgdeb952c">
+<pre class="example" id="orgecf64a6">
 =&gt; [ Lookup address ][ Update Header ] [ Queue Packet ]=&gt;
      ^
      |
@@ -2162,19 +2162,19 @@ Recap: packet switch is a generic term for anything that forwards packets hop-by
 </div>
 
 
-<div id="outline-container-org636234b" class="outline-4 references">
-<h4 id="org636234b">Links to this node</h4>
-<div class="outline-text-4" id="text-org636234b">
+<div id="outline-container-org9abeab8" class="outline-4 references">
+<h4 id="org9abeab8">Links to this node</h4>
+<div class="outline-text-4" id="text-org9abeab8">
 </div>
 <ul class="org-ul">
-<li><a id="org3629756"></a><a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">🌐 Computer Networking</a><br />
+<li><a id="org125a3bf"></a><a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">🌐 Computer Networking</a><br />
 <ul class="org-ul">
 <li><a id="orge1a992d"></a>(<i>Evolution of the Internet &gt; Level 3: Home Network</i>)<br />
 <div class="outline-text-6" id="text-orge1a992d">
 <p>
 &#x2026;it allows us to connect multiple computers to a modem, given an <a href="#ID-0fdc4dca-33a2-4d33-b3ba-b47bd1bb9f08">Ethernet switch</a>.<br />
 </p>
-<pre class="example" id="org1796c2d">
+<pre class="example" id="org5702d6b">
 [TCP/IP/ computer--\                /--router - (...) -Google (e.g.)
  Ethernet]     [switch]           |
               /  |                |
@@ -2332,7 +2332,7 @@ Problem:<br />
 Now, the computers and modems talk with Ethernet &#x2013; this means it's faster, but also&#x2026;<br />
 </p>
 
-<pre class="example" id="org12f0a48">
+<pre class="example" id="org0ecc229">
 [TCP/IP/ computer--\                /--router - (...) -Google (e.g.)
 Ethernet]           \              /
          [Ethernet] modem ---- modem
@@ -2348,7 +2348,7 @@ Benefit of Ethernet network: multiple computers can connect to the modem.<br />
 <p>
 &#x2026;it allows us to connect multiple computers to a modem, given an <a href="#ID-0fdc4dca-33a2-4d33-b3ba-b47bd1bb9f08">Ethernet switch</a>.<br />
 </p>
-<pre class="example" id="org7e5e1c3">
+<pre class="example" id="orgd591fc5">
 [TCP/IP/ computer--\                /--router - (...) -Google (e.g.)
  Ethernet]     [switch]           |
               /  |                |
@@ -2364,7 +2364,7 @@ Benefit of Ethernet network: multiple computers can connect to the modem.<br />
 <p>
 Same thing, but the switch became wireless.<br />
 </p>
-<pre class="example" id="org40cf2c6">
+<pre class="example" id="org37cf014">
 [TCP/IP/ computer--\               /--router - (...) -Google (e.g.)
  Ethernet]     [WiFI AP]          |
               /  |                |
@@ -2384,7 +2384,7 @@ Problem: as it stands, ISP has to keep track of all these different computers on
 <p>
 Solution: have a <i>home network</i> that hinges on a home router. Thus, rather than remembering each individual device, the ISP's router just needs to know which part of the IP hierarchy corresponds to which home router.<br />
 </p>
-<pre class="example" id="orgc9c40cb">
+<pre class="example" id="org4eda8c3">
 [TCP/IP/ computer--\                /--router - (...) -Google (e.g.)
  Ethernet]     [Wi-Fi AP]           |
                    \                |
@@ -2409,7 +2409,7 @@ So&#x2026;this is a good system, and this is basically how it works: for IPv6! B
 Here's one potential solution: having one single computer that acts as as a <i>proxy</i> for all the home devices. This proxy will make all the TCP connections <i>for</i> us, and it routes stuff to the individual devices using ports.<br />
 </p>
 
-<pre class="example" id="org34ae6df">
+<pre class="example" id="orgb8c9b81">
 [TCP/IP/ computer--\                 /--router - (...) -Google (e.g.)
  Ethernet]     [Wi-Fi AP]            |
                    \                 |
@@ -2431,7 +2431,7 @@ Problem: it's annoying to have to manually configure every device to use that sp
 <p>
 Solution: Make TCP proxy "transparent" / "pretend" to be Google. The proxy acts as a middleman.<br />
 </p>
-<pre class="example" id="orgadb2fa2">
+<pre class="example" id="org6fc59e5">
 [TCP/IP/ computer--\                /--router - (...) -Google (e.g.)
  Ethernet]     [Wi-Fi AP]
                    \
@@ -2456,7 +2456,7 @@ Problem: TCP proxy is burdened with doing non-lightweight TCP stuff, like reasse
 <p>
 NA(P)T <i>doesn't</i> know most of TCP (e.g. reassembling byte stream, ACKs, retransmits) &#x2013; just translates addresses inside TCP segments between local &lt;=&gt; Google.<br />
 </p>
-<pre class="example" id="orgf3468a9">
+<pre class="example" id="org6bb1d42">
 [TCP/IP/ computer--\                /--router - (...) -Google (e.g.)
  Ethernet]     [Wi-Fi AP]           | [DHCP]
                    \                |
@@ -2567,9 +2567,9 @@ There are organizations that "certify" that a certain public key really belongs 
 </div>
 
 
-<div id="outline-container-orgff0a8df" class="outline-2 references">
-<h2 id="orgff0a8df">Links to this node</h2>
-<div class="outline-text-2" id="text-orgff0a8df">
+<div id="outline-container-org4be1c18" class="outline-2 references">
+<h2 id="org4be1c18">Links to this node</h2>
+<div class="outline-text-2" id="text-org4be1c18">
 </div>
 <div id="outline-container-orgb2bc857" class="outline-3">
 <h3 id="orgb2bc857"><a href="cs224w_machine_learning_with_graphs.html#ID-da69965b-ad50-45ad-9e81-b8593e7de09e">Why Graphs?</a></h3>
@@ -2607,6 +2607,7 @@ There are organizations that "certify" that a certain public key really belongs 
 <a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">⤴️ shortcuts</a><br />
 <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a><br />
 <a href="social_psychology.html#ID-3db1ed04-4b29-46cf-9940-1afd30d5d25f">🧠 Social Psychology</a><br />
+<a href="game_of_life.html#ID-918b7900-d37d-4d92-a900-6d6632fd2f47">🔲 Conway's Game of Life</a><br />
 <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">👾 programming</a><br />
 <a href="cs152_trust_and_safety_engineering.html#ID-0e008aa4-63a2-4ae3-8c59-933b3065d721">Trust and Safety Engineering</a><br />
 <a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">🌐 Computer Networking</a><br />

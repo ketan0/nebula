@@ -10,12 +10,10 @@ Using the great implementation of Conway's Game of Life from https://pmav.eu/stu
 <div id="wrapper">
 
   <canvas id="canvas" width="901" height="433"></canvas>
-
   <div class="cl">&nbsp;</div>
   <div class="box">
     <div class="subtitle">Running Information</div>
     <p class="info"><abbr title="Current Generation">Generation</abbr>: <span id="generation"></span> | <abbr title="Number of live cells">Live cells</abbr>: <span id="livecells"></span> | <abbr title="Execution times: Algorithm / Canvas (Algorithm / Canvas Averages)">Step time</abbr>: <span id="steptime"></span> ms </p>
-
     <span id="hint">Hint: hit the <strong>Play</strong> button!</span>
   </div>
 

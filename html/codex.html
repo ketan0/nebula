@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-06 Wed 04:01 -->
+<!-- 2022-04-06 Wed 22:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>codex</title>
@@ -91,14 +91,14 @@ Haha, this one seemed to assume that it was already December. But it was cool th
 
 <span class="org-variable-name">now</span> = datetime.datetime.now()
 
-<span class="org-keyword">print</span>(now.strftime(<span class="org-string">"%A, %B %d, %Y"</span>))
+<span class="org-builtin">print</span>(now.strftime(<span class="org-string">"%A, %B %d, %Y"</span>))
 
 <span class="org-variable-name">today</span> = now.strftime(<span class="org-string">"%m/%d"</span>)
 
 <span class="org-keyword">if</span> today == <span class="org-string">"12/25"</span>:
-    <span class="org-keyword">print</span>(<span class="org-string">"Merry Christmas!"</span>)
+    <span class="org-builtin">print</span>(<span class="org-string">"Merry Christmas!"</span>)
 <span class="org-keyword">else</span>:
-    <span class="org-keyword">print</span>(<span class="org-string">"There are "</span> + <span class="org-builtin">str</span>(<span class="org-highlight-numbers-number">25</span> - <span class="org-builtin">int</span>(today[<span class="org-highlight-numbers-number">3</span>:])) + <span class="org-string">" days until Christmas!"</span>)
+    <span class="org-builtin">print</span>(<span class="org-string">"There are "</span> + <span class="org-builtin">str</span>(<span class="org-highlight-numbers-number">25</span> - <span class="org-builtin">int</span>(today[<span class="org-highlight-numbers-number">3</span>:])) + <span class="org-string">" days until Christmas!"</span>)
 </pre>
 </div>
 
@@ -121,7 +121,7 @@ This&#x2026;this is cool to be able to write math in natural language like this,
 <span class="org-variable-name">n</span> = <span class="org-highlight-numbers-number">5</span>
 <span class="org-variable-name">a</span> = hilbert(n)
 <span class="org-variable-name">b</span> = <span class="org-highlight-numbers-number">1.0</span> / a
-<span class="org-keyword">print</span>(b)
+<span class="org-builtin">print</span>(b)
 </pre>
 </div>
 
@@ -148,8 +148,8 @@ Hah, this is a cute one. I initially only put the first 4 lines in, and it proce
 
 <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-highlight-numbers-number">1</span>,<span class="org-highlight-numbers-number">6</span>):
     <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(i):
-        <span class="org-keyword">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
-    <span class="org-keyword">print</span>()
+        <span class="org-builtin">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
+    <span class="org-builtin">print</span>()
 
 <span class="org-string">"""</span>
 <span class="org-string">*****</span>
@@ -161,12 +161,12 @@ Hah, this is a cute one. I initially only put the first 4 lines in, and it proce
 
 <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-highlight-numbers-number">5</span>,<span class="org-highlight-numbers-number">0</span>,-<span class="org-highlight-numbers-number">1</span>):
     <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(i):
-        <span class="org-keyword">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
-    <span class="org-keyword">print</span>()
+        <span class="org-builtin">print</span>(<span class="org-string">"*"</span>,end=<span class="org-string">""</span>)
+    <span class="org-builtin">print</span>()
 </pre>
 </div>
 
-<pre class="example" id="orge3ec95d">
+<pre class="example" id="org468f6fb">
 *
 **
 ***
@@ -192,7 +192,7 @@ Whoa. This would certainly make using matplotlib a lot easier.<br />
 
 <span class="org-variable-name">now</span> = datetime.now()
 <span class="org-variable-name">delta</span> = timedelta(days=<span class="org-highlight-numbers-number">100</span>)
-<span class="org-keyword">print</span>(now + delta)
+<span class="org-builtin">print</span>(now + delta)
 
 </pre>
 </div>
@@ -203,7 +203,7 @@ Whoa. This would certainly make using matplotlib a lot easier.<br />
 
 
 
-<div id="org69dd32b" class="figure">
+<div id="org56c51f6" class="figure">
 <p><img src="my_plot.png" alt="my_plot.png" /><br />
 </p>
 </div>
@@ -219,7 +219,7 @@ It honored my request to use requests!<br />
 <span class="org-keyword">import</span> requests
 
 <span class="org-variable-name">r</span> = requests.get(<span class="org-string">'http://forecast.weather.gov/MapClick.php?lat=37.4&amp;lon=-122.1&amp;unit=0&amp;lg=english&amp;FcstType=json'</span>)
-<span class="org-variable-name">data</span> = r.json()
+data = r.json()
 
 <span class="org-comment-delimiter"># </span><span class="org-comment">Codex generated these lines, which seem well-intentioned, but incorrect...</span>
 <span class="org-comment-delimiter"># </span><span class="org-comment">(maybe the API changed??)</span>
@@ -228,8 +228,8 @@ It honored my request to use requests!<br />
 
 
 <span class="org-comment-delimiter"># </span><span class="org-comment">I put these lines in</span>
-<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">0</span>])
-<span class="org-keyword">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">1</span>])
+<span class="org-builtin">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">0</span>])
+<span class="org-builtin">print</span>(data[<span class="org-string">'data'</span>][<span class="org-string">'temperature'</span>][<span class="org-highlight-numbers-number">1</span>])
 </pre>
 </div>
 
