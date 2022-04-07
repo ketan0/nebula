@@ -22,8 +22,16 @@ body {
   content: var(--switch-icon);
 }
 
-#nebula-logo {
+#nebula-logo path{
   fill: var(--nebula-logo);
+  -webkit-transition: fill .5s ease;
+  -moz-transition: fill .5s ease;
+  -o-transition: fill .5s ease;
+  transition: fill .5s ease;
+}
+
+#nebula-logo:hover path {
+  fill: #66cc00;
 }
 
 .nebula-svg {

@@ -218,7 +218,6 @@ holding contextual information."
            :publishing-directory "~/garden-simple/html"
            :auto-sitemap t
            :sitemap-title "sitemap"
-           ;; :html-head-include-default-style nil
            :section-numbers nil
            :with-toc nil
            :preserve-breaks t
