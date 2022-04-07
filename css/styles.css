@@ -14,11 +14,6 @@ body {
   display: none;
 }
 
-/* #theme-switcher-label { */
-/*   position: fixed; */
-/*   bottom: 4rem; */
-/*   left: 3rem; } */
-
 #theme-switcher-label {
   cursor: pointer;
 }
