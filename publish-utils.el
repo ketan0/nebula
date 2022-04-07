@@ -30,7 +30,7 @@
                                             (format-time-string "%B %d, %Y")
                                             (concat "\n#+subtitle: Last modified on "))))
       (beginning-of-buffer)
-      (setq case-fold-search t)
+      (setq case-fold-search t) ;; makes re-search-forward case-insensitive
       (when (re-search-forward "#\\+title:" nil t)
         (end-of-line)
         (insert modified-timestamp-subtitle)))))
