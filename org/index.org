@@ -4,7 +4,6 @@
 #+title: Ketan's Nebula
 #+html_head: <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 
-
 * A few starting points:
 [[id:6d2c6f5c-f8c1-4b38-a01a-6adcdbfe8e7a][📒 course notes]]
 [[id:b910e58f-f1fe-4c3f-8efb-69bfa261b191][📚 book notes]]
@@ -20,10 +19,12 @@
 [[id:65b7c2dd-ad4c-465f-b382-4e4d431e0be8][How I made this website]]
 
 #+begin_export html
-<svg class="nebula-svg" style="position:absolute; top: 0px; left: 0px" width="100%" height="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g class="circles">
-  </g>
-</svg>
+<div class="svg-container">
+  <svg class="nebula-svg" style="display:inline-block; position:absolute; top:0px; left:0px" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 100 50">
+    <g class="circles">
+    </g>
+  </svg>
+</div>
 <script src="nebula.js"></script>
 #+end_export
 
