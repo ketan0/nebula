@@ -22,6 +22,7 @@ body {
 #theme-switcher-label::before {
   font-size: 20px;
   content: var(--switch-icon);
+  transition: color .5s ease;
 }
 
 #nebula-logo {
