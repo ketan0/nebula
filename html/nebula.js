@@ -2,8 +2,8 @@ async function pulse_circles() {
   const ARRAY_LENGTH = 50
   const POSSIBLE_COLORS = ['#bb00bb', '#bb0000', '#0000bb']
   const circle_data = Array.from(Array(ARRAY_LENGTH)).map(() => ({
-    'x': (Math.random() * 35) + 5,
-    'y': (Math.random() * 35) + 5,
+    'x': (Math.random() * 40),
+    'y': (Math.random() * 40),
     // 'fill': POSSIBLE_COLORS[Math.floor(POSSIBLE_COLORS.length * Math.random())],
     'fill': '#f4edc6',
   }))
