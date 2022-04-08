@@ -67,20 +67,8 @@ function getInitialColorMode() {
   return 'light';
 }
 
-function setTwitterQuotebackThemes(colorMode) {
-    const tweets = document.getElementsByClassName('twitter-tweet');
-    for (let element of tweets) {
-      element.setAttribute('data-theme', colorMode);
-    }
-    const quotes = document.querySelectorAll('.quoteback');
-    for (let element of quotes) {
-      element.setAttribute('darkmode', colorMode === 'dark' ? 'true' : 'false');
-  }
-}
-
 
 (function () {
   const initialColorMode = getInitialColorMode();
-  setTwitterQuotebackThemes(initialColorMode);
   setCSSProperties(initialColorMode);
 })();
