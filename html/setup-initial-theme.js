@@ -58,7 +58,6 @@ function getInitialColorMode() {
   // If they haven't been explicit, let's check the media
   // query
   const mql = window.matchMedia('(prefers-color-scheme: dark)');
-  mql.addEventListener('change', e => setCSSProperties(e.matches ? 'dark' : 'light'))
   const hasMediaQueryPreference = typeof mql.matches === 'boolean';
   if (hasMediaQueryPreference) {
     return mql.matches ? 'dark' : 'light';
@@ -68,4 +67,20 @@ function getInitialColorMode() {
   return 'light';
 }
 
-setCSSProperties(getInitialColorMode());
+function setTwitterQuotebackThemes(colorMode) {
+    const tweets = document.getElementsByClassName('twitter-tweet');
+    for (let element of tweets) {
+      element.setAttribute('data-theme', colorMode);
+    }
+    const quotes = document.querySelectorAll('.quoteback');
+    for (let element of quotes) {
+      element.setAttribute('darkmode', colorMode === 'dark' ? 'true' : 'false');
+  }
+}
+
+
+(function () {
+  const initialColorMode = getInitialColorMode();
+  setTwitterQuotebackThemes(initialColorMode);
+  setCSSProperties(initialColorMode);
+})();
