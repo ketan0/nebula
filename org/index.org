@@ -4,13 +4,6 @@
 #+title: Ketan's Nebula
 #+html_head: <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 
-#+begin_export html
-<svg class="nebula-svg" display="block" width="100%" height="500px" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g class="circles">
-  </g>
-</svg>
-<script src="nebula.js"></script>
-#+end_export
 
 * A few starting points:
 [[id:6d2c6f5c-f8c1-4b38-a01a-6adcdbfe8e7a][📒 course notes]]
@@ -25,3 +18,15 @@
 [[id:0e008aa4-63a2-4ae3-8c59-933b3065d721][Trust and Safety Engineering]]
 [[id:9908ac8d-fadd-4fe6-a78c-c3471cc36ea1][🌐 Computer Networking]]
 [[id:65b7c2dd-ad4c-465f-b382-4e4d431e0be8][How I made this website]]
+
+#+begin_export html
+<svg class="nebula-svg" style="position:absolute; top: 0px; left: 0px" width="100%" height="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g class="circles">
+  </g>
+</svg>
+<script src="nebula.js"></script>
+#+end_export
+
+#+begin_export html
+<script src="homepage-graph-animation.js"></script>
+#+end_export
