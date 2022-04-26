@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       450e5e87-bf98-45d3-8f4b-483057a0fe61
+:END:
+#+title: LAION
+
+[[id:ef80dd22-3ade-4fd6-98cd-1319eaa454f9][artificial intelligence]]
+
+Results of me playing around with the open-source LAION model.
+
+https://colab.research.google.com/github/multimodalart/latent-diffusion-notebook/blob/main/Latent_Diffusion_LAION_400M_model_text_to_image.ipynb
+
+* A lightbulb in the night sky:
+Hahahah, looks like watermarks make it through from the training data, unfortunately. But still some intriguing artwork.
+#+ATTR_HTML: :alt A lightbulb in the night sky, as created by an AI.
+#+ATTR_HTML: :alt example digits in colored MNIST dataset.
+[[file:lightbulb_nightsky.png]]
+*

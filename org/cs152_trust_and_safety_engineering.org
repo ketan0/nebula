@@ -229,7 +229,7 @@ Advertising, recommendation engines, public impersonal, public personal, private
 [[id:635f82a6-be16-41c7-a1d0-4fddbc9e914a][Amplification <===> Free expression]]
 ** Is it real or ironic? Context is key
 "OK" symbol was co-oped by 4chan trolls, said it was a white power symbol
-** Limits of AI
+** Limits of [[id:ef80dd22-3ade-4fd6-98cd-1319eaa454f9][AI]]
 algorithms are biased against black people
 AI has limited "true" understanding - difficult to distinguish post ABOUT hate speech, rather than hate speech itself
 ** Should we preserve hate speech?

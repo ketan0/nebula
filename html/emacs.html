@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-08 Fri 03:09 -->
+<!-- 2022-04-25 Mon 17:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>♏️ emacs</title>
+<title>♏️  emacs</title>
 <meta name="author" content="Ketan Agrawal" />
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
@@ -69,9 +69,9 @@
 </header>
 </div>
 <div id="content" class="content">
-<h1 class="title">♏️ emacs
+<h1 class="title">♏️  emacs
 <br />
-<span class="subtitle">Last modified on April 06, 2022</span>
+<span class="subtitle">Last modified on April 25, 2022</span>
 </h1>
 <p>
 I started using Emacs in January 2020, and it has undoubtedly changed the way I do work on my computer, and the way I think about computing in general.<br />
@@ -98,7 +98,7 @@ It's completely hackable, which easily leads to an "experimental" mindset. I fee
 <h3 id="orge5cb9cc"><a href="https://gitlab.com/justinekizhak/dotfiles/blob/master/emacs/doom.d/config.org">justinekizhak</a></h3>
 <div class="outline-text-3" id="text-orge5cb9cc">
 <p>
-I like the motivation he gives for why emacs is so damn cool. "Emacs changes how you <i>think</i> about programming." I feel like this has been very true for me. It makes many other applications seem needlessly restrictive. It feels natural to have the entire OS be an introspectable operating system.<br />
+I like the motivation he gives for why emacs is so powerful. "Emacs changes how you <i>think</i> about programming." I feel like this has been very true for me. It makes many other applications seem needlessly restrictive. It feels natural to have the entire OS be an introspectable operating system.<br />
 </p>
 </div>
 </div>
@@ -138,98 +138,32 @@ Really powerful feature that allows one to define domain-specific syntax <i>with
 </div>
 
 
-<div id="outline-container-org4cc327b" class="outline-2 references">
-<h2 id="org4cc327b">Links to this node</h2>
-<div class="outline-text-2" id="text-org4cc327b">
+<div id="outline-container-org8734daa" class="outline-2 references">
+<h2 id="org8734daa">Links to "♏️  emacs"</h2>
+<div class="outline-text-2" id="text-org8734daa">
 </div>
-<div id="outline-container-org2c75de5" class="outline-3">
-<h3 id="org2c75de5"><a href="musings.html#ID-e2ff4d71-a630-4a8d-94d4-66606f321bd4">musings</a></h3>
-</div>
-</div>
-
-<div id="outline-container-org07b9a90" class="outline-2">
-<h2 id="org07b9a90">Computation in brains must be deeply <a href="context.html#ID-8d27adad-158b-4fa4-b31b-5f793d0b8341">context</a>-aware.</h2>
-<div class="outline-text-2" id="text-org07b9a90">
-</div>
-<div id="outline-container-orgea801c7" class="outline-3">
-<h3 id="orgea801c7"><a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
-<div class="outline-text-3" id="text-orgea801c7">
+<div id="outline-container-org151f3cc" class="outline-3">
+<h3 id="org151f3cc"><a href="org_mode.html#ID-b6a1ff64-eae1-4a6f-ab54-01ddfca5353d">org-mode</a></h3>
+<div class="outline-text-3" id="text-org151f3cc">
 <p>
-<a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a><br />
-</p>
-
-<p>
-There are two ways of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a> in Lisp &#x2013; top-down, and bottom-up.<br />
-</p>
-
-<p>
-Top-down = the classic paradigm of divide-and conquer, decomposing the problem hierarchically into smaller problems.<br />
-</p>
-
-<p>
-Bottom-up = defining your own DSL in Lisp, and using those primitives to make something cool.<br />
-</p>
-
-<p>
-Most programming is done top-down, but with the powers of macros you can go bottom-up, creating "little universes" in Lisp&#x2026;<br />
-</p>
-
-<p>
-Personally what comes to mind is the <code>rx</code> macro in emacs. It's like a nice little domain-specific language for writing regular expressions, embedded right into elisp.<br />
-</p>
-
-<p>
-Regexp matching a block comment in C:<br />
-</p>
-<div class="org-src-container">
-<pre class="src src-emacs-lisp" data-language="emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
-    (zero-or-more
-     (<span class="org-keyword">or</span> (not (any <span class="org-string">"*"</span>))          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
-         (seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
-              (not (any <span class="org-string">"/"</span>)))))  <span class="org-comment-delimiter">;  </span><span class="org-comment">non-/</span>
-    (one-or-more <span class="org-string">"*"</span>)             <span class="org-comment-delimiter">; </span><span class="org-comment">At least one star,</span>
-    <span class="org-string">"/"</span>)                          <span class="org-comment-delimiter">; </span><span class="org-comment">and the final /</span>
-</pre>
-</div>
-
-<pre class="example">
-/\*\(?:[^*]\|\*[^/]\)*\*+/
-</pre>
-
-
-<p>
-you redefine <i>the language itself</i> to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It's like "meeting in the middle," so you don't have to build up super complex primitives, and you don't have to decompose down to a super fine-grained level.<br />
-</p>
-
-<p>
-I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there's an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.<br />
-</p>
-
-<p>
-Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it's like, ok cool, what else can I build with these snippets?<br />
+An integral part of <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> .<br />
 </p>
 </div>
 </div>
+
+<div id="outline-container-orgc8fcfa6" class="outline-3">
+<h3 id="orgc8fcfa6"><a href="cool_things.html#ID-d6a0e6b7-2ca2-4955-a6ac-8618fd642b5b">cool things</a></h3>
+<div class="outline-text-3" id="text-orgc8fcfa6">
+<p>
+Idk I think this is just gonna be a connector node for now??<br />
+</p>
+
+<p>
+<a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a><br />
+</p>
+</div>
 </div>
 
-
-<div id="outline-container-org357f963" class="outline-2 references">
-<h2 id="org357f963">Links to this node</h2>
-<div class="outline-text-2" id="text-org357f963">
-</div>
-<div id="outline-container-org5292ab6" class="outline-3">
-<h3 id="org5292ab6"><a href="musings.html#ID-e2ff4d71-a630-4a8d-94d4-66606f321bd4">musings</a></h3>
-<div class="outline-text-3" id="text-org5292ab6">
-</div>
-<div id="outline-container-org75d0142" class="outline-4">
-<h4 id="org75d0142">(<i>had a vision of using emacs as the base, and then stuff gets transported into various satellite systems (twitter, Anki, Spotify, etc.)</i>)</h4>
-</div>
-</div>
-</div>
-<div id="outline-container-orge7c100e" class="outline-2">
-<h2 id="orge7c100e">Computation in brains must be deeply <a href="context.html#ID-8d27adad-158b-4fa4-b31b-5f793d0b8341">context</a>-aware.</h2>
-<div class="outline-text-2" id="text-orge7c100e">
-</div>
 <div id="outline-container-orgfe86a59" class="outline-3">
 <h3 id="orgfe86a59"><a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
 <div class="outline-text-3" id="text-orgfe86a59">
@@ -260,8 +194,8 @@ Personally what comes to mind is the <code>rx</code> macro in emacs. It's like a
 <p>
 Regexp matching a block comment in C:<br />
 </p>
-<div class="org-src-container">
-<pre class="src src-emacs-lisp" data-language="emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
+<div class="org-src-container" data-language="emacs-lisp">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
     (zero-or-more
      (<span class="org-keyword">or</span> (not (any <span class="org-string">"*"</span>))          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
          (seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
@@ -290,90 +224,54 @@ Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emac
 </div>
 </div>
 
-<div id="outline-container-org151f3cc" class="outline-3">
-<h3 id="org151f3cc"><a href="org_mode.html#ID-b6a1ff64-eae1-4a6f-ab54-01ddfca5353d">org-mode</a></h3>
-<div class="outline-text-3" id="text-org151f3cc">
+<div id="outline-container-orgd8abaf4" class="outline-3">
+<h3 id="orgd8abaf4"><a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a></h3>
+<div class="outline-text-3" id="text-orgd8abaf4">
 <p>
-An integral part of <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> .<br />
+I think it can be really good. Fairly related to <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a>. Will have to hash out what I think the difference is there.<br />
+</p>
+
+<p>
+<a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a> gets a lot of its power from its modularity. Packages are just little pieces of code&#x2013; you can add/remove them into your ecosystem as you please. As opposed to proprietary software, where you may be much more limited in the customization that you can do&#x2026;one piece of functionality for Evernote might not carry over to VSCode might not carry over to your web browser. etc.<br />
+</p>
+
+<p>
+^it's beautiful chaos sometimes, though! Modules designed by tens of thousands of independent humans are bound to be overlapping, redundant, and sometimes confusing to "glue together"&#x2026;<br />
+</p>
+
+<blockquote class="quoteback" data-title="Emacs, org, and bibtex as alternative to zotero and calibre" data-author="github-alphapapa" cite="https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Despite%20reading%20explanations,the%20citations%20manually.">
+<p>
+Despite reading explanations and guides occasionally, I've never understood how Org, BibTeX, org-ref, ebib, etc. all work together. I once tried to set them up using BibTeX references in a file, but I wasn't able to figure out how to get citations working. I ran out of time to fiddle with it and had to do all the citations manually. :(<br />
+</p>
+<footer>github-alphapapa<cite><a href="https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Despite%20reading%20explanations,the%20citations%20manually.">https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Despite%20reading%20explanations,the%20citations%20manually.</a></cite></footer></blockquote><script src="dark-themes.js"></script>
+<script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
+
+<blockquote class="quoteback" data-title="Emacs, org, and bibtex as alternative to zotero and calibre" data-author="ftrx" cite="https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Well...%20They%20do,to%20operate%20with.">
+<p>
+Well&#x2026; They do not. It's up to the end users glue them together. Bib(La)TeX only take care of record books&amp;c references in a textual flat-file database, org-ref is mostly a helper to add things to that text db and quickly link a record in an org documents, helm-bibtex or ivy-bibtex are the search-based UI to operate with.<br />
+</p>
+<footer>ftrx<cite><a href="https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Well...%20They%20do,to%20operate%20with.">https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Well...%20They%20do,to%20operate%20with.</a></cite></footer></blockquote><script src="dark-themes.js"></script>
+<script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
+
+
+<p>
+But luckily emacs has a great community that has helped smooth out the rough edges between packages, and even make them work <i>together</i> to make emacs a better place.<br />
+</p>
+
+
+<p>
+But&#x2026;.is the <a href="brain.html#ID-4b0162cb-15ff-42fe-90dd-49d16df9bf44">brain</a> modular? I think it might not <i>quite</i> work that way.<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf1ced53" class="outline-3">
-<h3 id="orgf1ced53"><a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a></h3>
-<div class="outline-text-3" id="text-orgf1ced53">
-</div>
-<div id="outline-container-org77794df" class="outline-4">
-<h4 id="org77794df">(<i>Computation in brains must be deeply context-aware. &gt; Programming Bottom-Up</i>)</h4>
-<div class="outline-text-4" id="text-org77794df">
-<p>
-<a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a><br />
-</p>
-
-<p>
-There are two ways of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a> in Lisp &#x2013; top-down, and bottom-up.<br />
-</p>
-
-<p>
-Top-down = the classic paradigm of divide-and conquer, decomposing the problem hierarchically into smaller problems.<br />
-</p>
-
-<p>
-Bottom-up = defining your own DSL in Lisp, and using those primitives to make something cool.<br />
-</p>
-
-<p>
-Most programming is done top-down, but with the powers of macros you can go bottom-up, creating "little universes" in Lisp&#x2026;<br />
-</p>
-
-<p>
-Personally what comes to mind is the <code>rx</code> macro in emacs. It's like a nice little domain-specific language for writing regular expressions, embedded right into elisp.<br />
-</p>
-
-<p>
-Regexp matching a block comment in C:<br />
-</p>
-<div class="org-src-container">
-<pre class="src src-emacs-lisp" data-language="emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
-    (zero-or-more
-     (<span class="org-keyword">or</span> (not (any <span class="org-string">"*"</span>))          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
-         (seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
-              (not (any <span class="org-string">"/"</span>)))))  <span class="org-comment-delimiter">;  </span><span class="org-comment">non-/</span>
-    (one-or-more <span class="org-string">"*"</span>)             <span class="org-comment-delimiter">; </span><span class="org-comment">At least one star,</span>
-    <span class="org-string">"/"</span>)                          <span class="org-comment-delimiter">; </span><span class="org-comment">and the final /</span>
-</pre>
-</div>
-
-<pre class="example">
-/\*\(?:[^*]\|\*[^/]\)*\*+/
-</pre>
-
-
-<p>
-you redefine <i>the language itself</i> to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It's like "meeting in the middle," so you don't have to build up super complex primitives, and you don't have to decompose down to a super fine-grained level.<br />
-</p>
-
-<p>
-I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there's an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.<br />
-</p>
-
-<p>
-Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it's like, ok cool, what else can I build with these snippets?<br />
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org3c9d2f6" class="outline-3">
-<h3 id="org3c9d2f6"><a href="index.html#ID-23e03a28-48b1-4fa3-9fa3-71a369950c6d">Ketan's Nebula</a></h3>
-<div class="outline-text-3" id="text-org3c9d2f6">
-</div>
-<div id="outline-container-orgb640010" class="outline-4">
-<h4 id="orgb640010">(<i>A few starting points:</i>)</h4>
-<div class="outline-text-4" id="text-orgb640010">
+<div id="outline-container-orge495026" class="outline-3">
+<h3 id="orge495026"><a href="index.html#ID-23e03a28-48b1-4fa3-9fa3-71a369950c6d">Ketan's Nebula</a> <span class="backlinks-outline-path">(<i>A few starting points:</i>)</span></h3>
+<div class="outline-text-3" id="text-orge495026">
 <p>
 <a href="course_notes.html#ID-6d2c6f5c-f8c1-4b38-a01a-6adcdbfe8e7a">📒 course notes</a><br />
 <a href="book_notes.html#ID-b910e58f-f1fe-4c3f-8efb-69bfa261b191">📚 book notes</a><br />
+<a href="paper_notes.html#ID-d4693400-d612-4531-96cb-da0b8d37b4b0">📄 paper notes</a><br />
 <a href="philosophy.html#ID-091329e5-7896-4975-b88b-99b30f4dd482">🧐 philosophy</a><br />
 <a href="rules_of_thumb.html#ID-5df9203d-c7d9-4341-b7dc-ac4236000d8b">👍🏾 rules of thumb</a><br />
 <a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">⤴️ shortcuts</a><br />
@@ -393,9 +291,16 @@ Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emac
   </svg>
 </div>
 <script src="nebula.js"></script>
-
 <script src="homepage-graph-animation.js"></script>
 </div>
+</div>
+
+<div id="outline-container-org3733899" class="outline-3">
+<h3 id="org3733899"><a href="emacs_config.html#ID-ad1d3f2f-a727-4e53-907b-c7215df8d35f">⚡️ emacs config</a></h3>
+<div class="outline-text-3" id="text-org3733899">
+<p>
+<a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a><br />
+</p>
 </div>
 </div>
 </div>
@@ -412,6 +317,7 @@ Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emac
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>
 <script src="setup-theme-switcher.js"></script>
+<script src="insert-intext-citation.js"></script>
 </div>
 </body>
 </html>

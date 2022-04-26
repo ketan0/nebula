@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d4693400-d612-4531-96cb-da0b8d37b4b0
+:END:
+#+title: 📄 paper notes
+
+[[id:12dfdb1e-d4ed-476b-be04-98cae7a3deaf][Towards Causal Representation Learning]]

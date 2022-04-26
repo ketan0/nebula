@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-08 Fri 03:10 -->
+<!-- 2022-04-25 Mon 17:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CS236: Deep Generative Models</title>
@@ -133,9 +133,9 @@ Sampling from \(p\) produces realistic samples<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org0a5e7ee" class="outline-3">
-<h3 id="org0a5e7ee">Discriminative vs. generative</h3>
-<div class="outline-text-3" id="text-org0a5e7ee">
+<div id="outline-container-org1f20a81" class="outline-3">
+<h3 id="org1f20a81">Discriminative vs. generative</h3>
+<div class="outline-text-3" id="text-org1f20a81">
 <p>
 Discriminative model: input \(X\) is given. learns \(P(Y|X)\) (e.g., probability of bedroom given image)<br />
 </p>
@@ -259,9 +259,9 @@ directly estimate the conditionals p(xi|y) from data. =&gt; use those + bayes ru
 </div>
 </div>
 </div>
-<div id="outline-container-org1f20a81" class="outline-3">
-<h3 id="org1f20a81">Discriminative vs. generative</h3>
-<div class="outline-text-3" id="text-org1f20a81">
+<div id="outline-container-org9afba4d" class="outline-3">
+<h3 id="org9afba4d">Discriminative vs. generative</h3>
+<div class="outline-text-3" id="text-org9afba4d">
 <p>
 p(y,x) = p(x|y)p(y) = p(y|x)p(x)<br />
 </p>
@@ -359,15 +359,13 @@ Solution: use masks to disallow certain paths (Germain et al., 2015). Suppose or
 </ol>
 </div>
 
-<div id="outline-container-org0e4707a" class="outline-4 references">
-<h4 id="org0e4707a">Links to this node</h4>
-<div class="outline-text-4" id="text-org0e4707a">
+<div id="outline-container-orgb278fcb" class="outline-4 references">
+<h4 id="orgb278fcb">Links to "Autoregressive Autoencoder: Masked Autoencoder for Distribution Estimation (MADE)"</h4>
+<div class="outline-text-4" id="text-orgb278fcb">
 </div>
 <ul class="org-ul">
-<li><a id="org1f2a87c"></a><a href="#ID-206c8dcd-0059-4704-b1a2-d5f1abdbad07">Masked Autoregressive Flow (MAF)</a><br />
-<ul class="org-ul">
-<li><a id="orgd66f80f"></a>(<i>Normalizing Flow Models &gt; Autoregressive Models as Normalizing Flow Models &gt; Masked Autoregressive Flow (MAF)</i>)<br />
-<div class="outline-text-6" id="text-orgd66f80f">
+<li><a id="orge9d5122"></a><a href="#ID-206c8dcd-0059-4704-b1a2-d5f1abdbad07">Masked Autoregressive Flow (MAF)</a> <span class="backlinks-outline-path">(<i>Normalizing Flow Models &gt; Autoregressive Models as Normalizing Flow Models &gt; Masked Autoregressive Flow (MAF)</i>)</span><br />
+<div class="outline-text-5" id="text-orge9d5122">
 <p>
 Forward mapping from \(z \mapsto x:\)<br />
 </p>
@@ -404,8 +402,6 @@ Jacobian is lower diagonal, hence efficient determinant computation Likelihood e
 Layers with different variable orderings can be stacked<br />
 </p>
 </div>
-</li>
-</ul>
 </li>
 </ul>
 </div>
@@ -900,20 +896,16 @@ Layers with different variable orderings can be stacked<br />
 </div>
 
 <ul class="org-ul">
-<li><a id="org3f2eec8"></a>Links to this node<br />
-<div class="outline-text-5" id="text-org3f2eec8">
+<li><a id="org28f138e"></a>Links to "Masked Autoregressive Flow (MAF)"<br />
+<div class="outline-text-5" id="text-org28f138e">
 </div>
 <ul class="org-ul">
-<li><a id="org06369f9"></a><a href="cs236_deep_generative_models.html#ID-c7f6a833-25e3-4fe0-b506-82ebd2819e87">CS236: Deep Generative Models</a><br />
-<ul class="org-ul">
-<li><a id="org239a60c"></a>(<i>Normalizing Flow Models &gt; Autoregressive Models as Normalizing Flow Models &gt; Inverse Autoregressive Flow (IAF)</i>)<br />
-<div class="outline-text-7" id="text-org239a60c">
+<li><a id="orgd3f357e"></a><a href="cs236_deep_generative_models.html#ID-c7f6a833-25e3-4fe0-b506-82ebd2819e87">CS236: Deep Generative Models</a> <span class="backlinks-outline-path">(<i>Normalizing Flow Models &gt; Autoregressive Models as Normalizing Flow Models &gt; Inverse Autoregressive Flow (IAF)</i>)</span><br />
+<div class="outline-text-6" id="text-orgd3f357e">
 <p>
 Identical to <a href="#ID-206c8dcd-0059-4704-b1a2-d5f1abdbad07">MAF</a>, but change the roles of z and x.<br />
 </p>
 </div>
-</li>
-</ul>
 </li>
 </ul>
 </li>
@@ -1161,6 +1153,7 @@ GANs can be <i>very</i> challenging to train in practice.<br />
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>
 <script src="setup-theme-switcher.js"></script>
+<script src="insert-intext-citation.js"></script>
 </div>
 </body>
 </html>

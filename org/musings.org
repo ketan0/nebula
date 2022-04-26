@@ -8,7 +8,7 @@
 :ID:       34dcb2ae-efa0-4bcb-ab66-4da485cf311f
 :END:
 I also wonder if [[id:7fd55afc-19d5-4f5c-918b-b90a2073b0f0][practice]] is a more applicable frame to the closed-system games...although within any open-system game, there are probably many closed-system games to play that give you non-negligible benefit. E.g. within building software (open game,) there's typing speed (closed game.)
-* had a vision of using [[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][emacs]] as the base, and then stuff gets transported into various satellite systems (twitter, Anki, Spotify, etc.)
+* had a vision of using emacs as the base, and then stuff gets transported into various satellite systems (twitter, Anki, Spotify, etc.)
 * Computation in brains must be deeply [[id:8d27adad-158b-4fa4-b31b-5f793d0b8341][context]]-aware.
 * The best approach to implementing anything this [[id:9648399a-daf3-44a0-8612-a3d84b99d0c1][complex]] is to invent a collection of milestones that advance you toward your final goal. --advice from Jerry Cain
 * Give yourself permission to fail.

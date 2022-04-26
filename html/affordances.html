@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-08 Fri 03:10 -->
+<!-- 2022-04-25 Mon 17:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>affordances</title>
@@ -71,21 +71,50 @@
 <div id="content" class="content">
 <h1 class="title">affordances
 <br />
-<span class="subtitle">Last modified on September 11, 2021</span>
+<span class="subtitle">Last modified on April 22, 2022</span>
 </h1>
+<p>
+Google maps allows you to <i>zooooom</i> into things&#x2026;<br />
+</p>
+<iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAy7wZSSpUFuYHI4vOBCvualbjdLQnfcO4
+    &q=Space+Needle,Seattle+WA">
+</iframe>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<p>
+  vim allows you to
+  <span class="delete-me">(delete surrounding parens)</span> with
+  <button class="delete-button"><code>ds(</code></button>
+  (<button class="undo-button">Undo</button>)
+</p>
+<script>
+function deleteParens() {
+    d3.select(".delete-me").html("delete surrounding parens")
+}
+let deleteBtn = document.querySelector(".delete-button")
+deleteBtn.addEventListener("click", deleteParens)
+
+function insertParens() {
+    d3.select(".delete-me").html("(delete surrounding parens)")
+}
+let undoBtn = document.querySelector(".undo-button")
+undoBtn.addEventListener("click", insertParens)
+</script>
 
 
-<div id="outline-container-org80929ca" class="outline-2 references">
-<h2 id="org80929ca">Links to this node</h2>
-<div class="outline-text-2" id="text-org80929ca">
+<div id="outline-container-orgfbee26e" class="outline-2 references">
+<h2 id="orgfbee26e">Links to "affordances"</h2>
+<div class="outline-text-2" id="text-orgfbee26e">
 </div>
-<div id="outline-container-org49217c3" class="outline-3">
-<h3 id="org49217c3"><a href="towards_causal_representation_learning.html#ID-5b73a108-e867-4b92-9949-832840d52869">Agency to Guide Representation Learning &amp; Disentangling</a></h3>
-<div class="outline-text-3" id="text-org49217c3">
-</div>
-<div id="outline-container-org9801e38" class="outline-4">
-<h4 id="org9801e38">(<i>Agency to Guide Representation Learning &amp; Disentangling</i>)</h4>
-<div class="outline-text-4" id="text-org9801e38">
+<div id="outline-container-org22103f3" class="outline-3">
+<h3 id="org22103f3"><a href="towards_causal_representation_learning.html#ID-5b73a108-e867-4b92-9949-832840d52869">Agency to Guide Representation Learning &amp; Disentangling</a> <span class="backlinks-outline-path">(<i>Agency to Guide Representation Learning &amp; Disentangling</i>)</span></h3>
+<div class="outline-text-3" id="text-org22103f3">
 <p>
 (E. Bengio et al, 2017; V Thomas e al 2017; Kim et al ICML 2019)<br />
 </p>
@@ -105,7 +134,6 @@ Connected to the psychological notion of <a href="affordances.html#ID-0cebd56a-9
 </div>
 </div>
 </div>
-</div>
 <div id="postamble" class="status">
 <footer>
   <p>Made with <span class="heart">♥</span> using
@@ -118,6 +146,7 @@ Connected to the psychological notion of <a href="affordances.html#ID-0cebd56a-9
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>
 <script src="setup-theme-switcher.js"></script>
+<script src="insert-intext-citation.js"></script>
 </div>
 </body>
 </html>

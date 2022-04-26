@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-08 Fri 03:10 -->
+<!-- 2022-04-25 Mon 17:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>🗺 representations</title>
@@ -96,23 +96,19 @@
 </h1>
 
 
-<div id="outline-container-org590714b" class="outline-2 references">
-<h2 id="org590714b">Links to this node</h2>
-<div class="outline-text-2" id="text-org590714b">
+<div id="outline-container-orge8f452f" class="outline-2 references">
+<h2 id="orge8f452f">Links to "🗺 representations"</h2>
+<div class="outline-text-2" id="text-orge8f452f">
 </div>
-<div id="outline-container-org61419b5" class="outline-3">
-<h3 id="org61419b5"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
-<div class="outline-text-3" id="text-org61419b5">
-</div>
-<div id="outline-container-org2990c2d" class="outline-4">
-<h4 id="org2990c2d">(<i>Problem setting:</i>)</h4>
-<div class="outline-text-4" id="text-org2990c2d">
+<div id="outline-container-org31900e3" class="outline-3">
+<h3 id="org31900e3"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a> <span class="backlinks-outline-path">(<i>Problem setting:</i>)</span></h3>
+<div class="outline-text-3" id="text-org31900e3">
 <p>
 We have images \(\mathbf{x}\), and labels \(y\). In generative modeling, it's common to assume that each \(\mathbf{x}\) can be described by some lower-dimensional latent space \(\mathbf{z}\) (e.g. color, shape, etc.) We'd like this latent <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> to be disentangled into several separate, semenatically meaningful factors, so we can control the influence of each on the classifier's decision. Usually in disentangled modeling, these factors are assumed to be statistically independent&#x2013; however, in practice this is a poor assumption. One rather contrived example is found in the colored MNIST dataset:<br />
 </p>
 
 
-<div id="org56f283f" class="figure">
+<div id="orga68a757" class="figure">
 <p><img src="colored_mnist.png" alt="example digits in colored MNIST dataset." /><br />
 </p>
 </div>
@@ -120,56 +116,6 @@ We have images \(\mathbf{x}\), and labels \(y\). In generative modeling, it's co
 <p>
 We might want to disentangle digit shape from color; however, in the train fold, all examples of the same digit are also the same color. (In the test fold, the colors are randomized.) Given this dataset, a "dumb" neural net might learn to do the simplest thing, which is to count how many pixels are a certain color; if a digit is red, it assumes it must be a 0, if it's green, a 1, and so on, completely ignoring the digit's shape.<br />
 </p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org993f5c9" class="outline-3">
-<h3 id="org993f5c9"><a href="towards_causal_representation_learning.html#ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922">What causes changes in distribution?</a></h3>
-<div class="outline-text-3" id="text-org993f5c9">
-</div>
-<div id="outline-container-org735f87e" class="outline-4">
-<h4 id="org735f87e">(<i>What causes changes in distribution?</i>)</h4>
-<div class="outline-text-4" id="text-org735f87e">
-<p>
-hypothesis to replace i.i.d. assumption: changes in distribution = consequence of an <b>intervention</b> on one/few <b>causes</b> /mechanisms. So, not identically distributed, but pretty similar, if you're in the right high-level <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> space. (E.g. if you put shaded glasses on, all the pixels change in basic RGB space &#x2013; but in some high-level semantic space, only one bit changed!)<br />
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orge00dfb2" class="outline-3">
-<h3 id="orge00dfb2"><a href="cs224w_machine_learning_with_graphs.html#ID-da69965b-ad50-45ad-9e81-b8593e7de09e">Why Graphs?</a></h3>
-<div class="outline-text-3" id="text-orge00dfb2">
-</div>
-<div id="outline-container-org9cc21f6" class="outline-4">
-<h4 id="org9cc21f6">(<i>Introduction &gt; Why Graphs?</i>)</h4>
-<div class="outline-text-4" id="text-org9cc21f6">
-<p>
-<a href="graphs.html#ID-5705ba04-b296-4446-824b-3551d7bd8a09">Graphs</a> are a general language for describing and analyzing entities with relationships/interactions. Many domains have a natural relational structure, that lends themselves to a graph <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a>:<br />
-</p>
-<ul class="org-ul">
-<li>Physical roads, bridges, tunnels connecting places. 🚗<br /></li>
-<li>Particles, based on their proximities. ⚛️<br /></li>
-<li>Animals in a food ecosystem. 🕸<br /></li>
-<li><a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">Computer networks</a>. 💻<br /></li>
-<li>Knowledge graphs, scene graphs, code graphs&#x2026;<br /></li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orga8bd567" class="outline-3">
-<h3 id="orga8bd567"><a href="cs224w_machine_learning_with_graphs.html#ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c">Graph Representations</a></h3>
-<div class="outline-text-3" id="text-orga8bd567">
-</div>
-<div id="outline-container-org475d188" class="outline-4">
-<h4 id="org475d188">(<i>Graph Representations</i>)</h4>
-<div class="outline-text-4" id="text-org475d188">
-<p>
-A few different traditional graph representations we can use.<br />
-</p>
-</div>
 </div>
 </div>
 
@@ -202,6 +148,40 @@ Image: Gosper glider gun in <a href="game_of_life.html#ID-918b7900-d37d-4d92-a90
 </ul>
 </div>
 </div>
+
+<div id="outline-container-org779d6c8" class="outline-3">
+<h3 id="org779d6c8"><a href="cs224w_machine_learning_with_graphs.html#ID-da69965b-ad50-45ad-9e81-b8593e7de09e">Why Graphs?</a> <span class="backlinks-outline-path">(<i>Introduction &gt; Why Graphs?</i>)</span></h3>
+<div class="outline-text-3" id="text-org779d6c8">
+<p>
+<a href="graphs.html#ID-5705ba04-b296-4446-824b-3551d7bd8a09">Graphs</a> are a general language for describing and analyzing entities with relationships/interactions. Many domains have a natural relational structure, that lends themselves to a graph <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a>:<br />
+</p>
+<ul class="org-ul">
+<li>Physical roads, bridges, tunnels connecting places. 🚗<br /></li>
+<li>Particles, based on their proximities. ⚛️<br /></li>
+<li>Animals in a food ecosystem. 🕸<br /></li>
+<li><a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">Computer networks</a>. 💻<br /></li>
+<li>Knowledge graphs, scene graphs, code graphs&#x2026;<br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5f29261" class="outline-3">
+<h3 id="org5f29261"><a href="cs224w_machine_learning_with_graphs.html#ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c">Graph Representations</a> <span class="backlinks-outline-path">(<i>Graph Representations</i>)</span></h3>
+<div class="outline-text-3" id="text-org5f29261">
+<p>
+A few different traditional graph representations we can use.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org67fbbe3" class="outline-3">
+<h3 id="org67fbbe3"><a href="towards_causal_representation_learning.html#ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922">What causes changes in distribution?</a> <span class="backlinks-outline-path">(<i>What causes changes in distribution?</i>)</span></h3>
+<div class="outline-text-3" id="text-org67fbbe3">
+<p>
+hypothesis to replace i.i.d. assumption: changes in distribution = consequence of an <b>intervention</b> on one/few <b>causes</b> /mechanisms. So, not identically distributed, but pretty similar, if you're in the right high-level <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> space. (E.g. if you put shaded glasses on, all the pixels change in basic RGB space &#x2013; but in some high-level semantic space, only one bit changed!)<br />
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
@@ -216,6 +196,7 @@ Image: Gosper glider gun in <a href="game_of_life.html#ID-918b7900-d37d-4d92-a90
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>
 <script src="setup-theme-switcher.js"></script>
+<script src="insert-intext-citation.js"></script>
 </div>
 </body>
 </html>

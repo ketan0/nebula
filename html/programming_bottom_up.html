@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-08 Fri 03:10 -->
+<!-- 2022-04-25 Mon 17:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Programming Bottom-Up</title>
@@ -100,8 +100,8 @@ Personally what comes to mind is the <code>rx</code> macro in emacs. It's like a
 <p>
 Regexp matching a block comment in C:<br />
 </p>
-<div class="org-src-container">
-<pre class="src src-emacs-lisp" data-language="emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
+<div class="org-src-container" data-language="emacs-lisp">
+<pre class="src src-emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
     (zero-or-more
      (<span class="org-keyword">or</span> (not (any <span class="org-string">"*"</span>))          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
          (seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
@@ -129,86 +129,16 @@ Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emac
 </p>
 
 
-<div id="outline-container-org8422a3f" class="outline-2 references">
-<h2 id="org8422a3f">Links to this node</h2>
-<div class="outline-text-2" id="text-org8422a3f">
+<div id="outline-container-org1038f7c" class="outline-2 references">
+<h2 id="org1038f7c">Links to "Programming Bottom-Up"</h2>
+<div class="outline-text-2" id="text-org1038f7c">
 </div>
-<div id="outline-container-orgc88fc19" class="outline-3">
-<h3 id="orgc88fc19"><a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a></h3>
-<div class="outline-text-3" id="text-orgc88fc19">
-</div>
-<div id="outline-container-orgec2cfe4" class="outline-4">
-<h4 id="orgec2cfe4">(<i>skills I am learning &gt; lisp macros</i>)</h4>
-<div class="outline-text-4" id="text-orgec2cfe4">
+<div id="outline-container-org83cda09" class="outline-3">
+<h3 id="org83cda09"><a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️  emacs</a> <span class="backlinks-outline-path">(<i>skills I am learning &gt; lisp macros</i>)</span></h3>
+<div class="outline-text-3" id="text-org83cda09">
 <p>
 Really powerful feature that allows one to define domain-specific syntax <i>within</i> Emacs Lisp. Examples I really like include <a href="https://github.com/alphapapa/org-ql">org-ql</a>, <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Rx-Notation.html">rx notation</a>, and so many more that enable someone to write expressive, parsimonious code in a <a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">bottom-up</a> fashion.<br />
 </p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orge390b65" class="outline-3">
-<h3 id="orge390b65"><a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a></h3>
-<div class="outline-text-3" id="text-orge390b65">
-</div>
-<div id="outline-container-org567ba0b" class="outline-4">
-<h4 id="org567ba0b">(<i>Computation in brains must be deeply context-aware. &gt; Programming Bottom-Up</i>)</h4>
-<div class="outline-text-4" id="text-org567ba0b">
-<p>
-<a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a><br />
-</p>
-
-<p>
-There are two ways of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programming</a> in Lisp &#x2013; top-down, and bottom-up.<br />
-</p>
-
-<p>
-Top-down = the classic paradigm of divide-and conquer, decomposing the problem hierarchically into smaller problems.<br />
-</p>
-
-<p>
-Bottom-up = defining your own DSL in Lisp, and using those primitives to make something cool.<br />
-</p>
-
-<p>
-Most programming is done top-down, but with the powers of macros you can go bottom-up, creating "little universes" in Lisp&#x2026;<br />
-</p>
-
-<p>
-Personally what comes to mind is the <code>rx</code> macro in emacs. It's like a nice little domain-specific language for writing regular expressions, embedded right into elisp.<br />
-</p>
-
-<p>
-Regexp matching a block comment in C:<br />
-</p>
-<div class="org-src-container">
-<pre class="src src-emacs-lisp" data-language="emacs-lisp">(<span class="org-keyword">rx</span> <span class="org-string">"/*"</span>                          <span class="org-comment-delimiter">; </span><span class="org-comment">Initial /*</span>
-    (zero-or-more
-     (<span class="org-keyword">or</span> (not (any <span class="org-string">"*"</span>))          <span class="org-comment-delimiter">;  </span><span class="org-comment">Either non-*,</span>
-         (seq <span class="org-string">"*"</span>                 <span class="org-comment-delimiter">;  </span><span class="org-comment">or * followed by</span>
-              (not (any <span class="org-string">"/"</span>)))))  <span class="org-comment-delimiter">;  </span><span class="org-comment">non-/</span>
-    (one-or-more <span class="org-string">"*"</span>)             <span class="org-comment-delimiter">; </span><span class="org-comment">At least one star,</span>
-    <span class="org-string">"/"</span>)                          <span class="org-comment-delimiter">; </span><span class="org-comment">and the final /</span>
-</pre>
-</div>
-
-<pre class="example">
-/\*\(?:[^*]\|\*[^/]\)*\*+/
-</pre>
-
-
-<p>
-you redefine <i>the language itself</i> to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It's like "meeting in the middle," so you don't have to build up super complex primitives, and you don't have to decompose down to a super fine-grained level.<br />
-</p>
-
-<p>
-I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there's an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.<br />
-</p>
-
-<p>
-Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it's like, ok cool, what else can I build with these snippets?<br />
-</p>
-</div>
 </div>
 </div>
 </div>
@@ -225,6 +155,7 @@ Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emac
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>
 <script src="setup-theme-switcher.js"></script>
+<script src="insert-intext-citation.js"></script>
 </div>
 </body>
 </html>

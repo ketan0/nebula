@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-08 Fri 03:09 -->
+<!-- 2022-04-25 Mon 17:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>org-mode</title>
@@ -15,6 +15,27 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -78,10 +99,31 @@ An integral part of <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff"
 </p>
 
 
-<div id="outline-container-org81095d8" class="outline-2 references">
-<h2 id="org81095d8">Links to this node</h2>
-<div class="outline-text-2" id="text-org81095d8">
+<div id="outline-container-orgc1918e5" class="outline-2 references">
+<h2 id="orgc1918e5">Links to "org-mode"</h2>
+<div class="outline-text-2" id="text-orgc1918e5">
 </div>
+<div id="outline-container-orge7596c1" class="outline-3">
+<h3 id="orge7596c1"><a href="rules_of_thumb.html#ID-e18ffcb8-f4cf-4d42-a4d7-8e88f7264f4e">Start simple and workable, and then unfold to something more complex.</a> <span class="backlinks-outline-path">(<i>Start simple and workable, and then unfold to something more complex.</i>)</span></h3>
+<div class="outline-text-3" id="text-orge7596c1">
+<p>
+By induction, if you can progress from complexity \(k\) to \(k + 1\), you can progress infinitely.<br />
+</p>
+
+<p>
+Over time, I've gotten to know the amazing beast that is <a href="org_mode.html#ID-b6a1ff64-eae1-4a6f-ab54-01ddfca5353d">org-mode</a> . It is astounding how much you can do—but perhaps even more impressive is that you can start using it to do interesting things from the first day. You can learn in 5 minutes how to create headlines, expand and collapse nodes, write text, etc. That is not hard. In that way, it is a <a href="simplicity.html#ID-0dc3bc78-df96-4240-a6be-beb71e6074cc">simple</a> tool.<br />
+</p>
+
+<p>
+This, I feel, should be part of my <a href="life_philosophy.html#ID-bc3b4ee4-b1b4-4b1c-a44b-c5785c5cafe5">life philosophy</a>. Wanna start a self-reflective practice? Make it extremely, dead, simple at first. Make it solid. Then, gradually, you can build from there. But you need that foundation to be laid down first, otherwise things are all like the kids who took caffeine or steroids&#x2026;stunted growth, or premature experience.<br />
+</p>
+
+<p>
+Simple life philosophy. Simple running routine. Simple self-reflection routine. To start out with.<br />
+</p>
+</div>
+</div>
+
 <div id="outline-container-org679bde1" class="outline-3">
 <h3 id="org679bde1"><a href="how_i_made_this_website.html#ID-65b7c2dd-ad4c-465f-b382-4e4d431e0be8">How I made this website</a></h3>
 <div class="outline-text-3" id="text-org679bde1">
@@ -96,10 +138,11 @@ An integral part of <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff"
 <li class="off"><code>[&#xa0;]</code> local development setup (org-publish on save, <code>live-server</code>, etc.)<br /></li>
 <li class="off"><code>[&#xa0;]</code> Hovercards w/ Tippy.js<br /></li>
 <li class="off"><code>[&#xa0;]</code> Quotebacks<br /></li>
-<li class="off"><code>[&#xa0;]</code> <p>
-Hello<br />
+<li class="off"><code>[&#xa0;]</code> Zotero (+ Safari extension,) <code>org-cite</code>, <code>citar</code>, etc.<br /></li>
+</ul>
+<p>
+(I guess some of this bleeds into my <a href="emacs_config.html#ID-ad1d3f2f-a727-4e53-907b-c7215df8d35f">⚡️ emacs config</a> )<br />
 </p>
-
 <blockquote class="quoteback" darkmode="" data-title="Quote the web with Quotebacks" data-author="@ness_labs" cite="https://nesslabs.com/quotebacks">
 The ethos behind Quotebacks is one of the reasons why I love the product. Yes, it’s a great addition to my thinking toolkit, allowing me to store quotes without polluting my note-taking and thinking system. But it’s also a tool which aims at making the Internet a more generous place. If you regularly write online, give it a try!
 <footer>@ness_labs<cite> <a href="https://nesslabs.com/quotebacks">https://nesslabs.com/quotebacks</a></cite></footer>
@@ -112,8 +155,7 @@ The ethos behind Quotebacks is one of the reasons why I love the product. Yes, i
     }
   }
 </script>
-<script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script></li>
-</ul>
+<script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
 </div>
 </div>
 </div>
@@ -130,6 +172,7 @@ The ethos behind Quotebacks is one of the reasons why I love the product. Yes, i
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>
 <script src="setup-theme-switcher.js"></script>
+<script src="insert-intext-citation.js"></script>
 </div>
 </body>
 </html>

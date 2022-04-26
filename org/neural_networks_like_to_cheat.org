@@ -2,3 +2,5 @@
 :ID:       412cda14-f385-463d-9a7e-cd9ffe87c0a2
 :END:
 #+title: Neural networks like to "cheat"
+
+[[id:ef80dd22-3ade-4fd6-98cd-1319eaa454f9][artificial intelligence]]

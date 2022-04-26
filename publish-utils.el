@@ -20,7 +20,9 @@
 ;;; Code:
 (setq org-html-htmlize-output-type 'css)
 (setq org-cite-global-bibliography '("/Users/ketanagrawal/zoterocitations.bib"))
-(setq org-cite-export-processors '((t basic)))
+(setq org-cite-csl-styles-dir "~/Zotero/styles")
+(setq org-cite-export-processors '((t . (csl "ieee.csl"))))
+;; use csl for every export backend
 
 ;; add the last modified date as a subtitle
 (defun add-modified-date (backend)
@@ -58,20 +60,24 @@
                                              (- (point) 1) ;; successfully found next
                                            (point-max)))) ;; there was no next
                                      nodes-start-position))
-           ;; sort in order of decreasing end position
-           (nodes-in-file-sorted (->> (-zip nodes-in-file nodes-end-position)
-                                      (--sort (> (cdr it) (cdr other))))))
+           ;; sort in order of decreasing end position (secondary sort: decreasing start position)
+           (nodes-in-file-sorted (->> (-zip nodes-start-position nodes-end-position nodes-in-file)
+                                      (--sort (or (> (nth 1 it) (nth 1 other))
+                                                  (and (= (nth 1 it) (nth 1 other))
+                                                       (> (nth 0 it)) (nth 0 other))))
+                                      (--map (cdr it)))))
       (unless (-some->> (org-roam-node-properties source-node)
                 (assoc "HTML_CONTAINER_CLASS" ) (cdr)
                 (s-contains? "no-backlinks-here"))
-        (dolist (node-and-end nodes-in-file-sorted)
-          (-when-let* (((node . end-position) node-and-end)
+        (dolist (end-and-node nodes-in-file-sorted)
+          (-when-let* (((end-position node) end-and-node)
                        (backlinks (--filter (->> (org-roam-backlink-source-node it)
                                                  (org-roam-node-file)
                                                  (s-contains? "private/") (not))
                                             (org-roam-backlinks-get node)))
-                       (heading (format "\n\n%s Links to this node\n"
-                                        (s-repeat (+ (org-roam-node-level node) 1) "*")))
+                       (heading (format "\n\n%s Links to \"%s\"\n"
+                                        (s-repeat (+ (org-roam-node-level node) 1) "*")
+                                        (org-roam-node-title node)))
                        (properties-drawer ":PROPERTIES:\n:HTML_CONTAINER_CLASS: references\n:END:\n"))
             (goto-char end-position)
             (insert heading)
@@ -83,7 +89,7 @@
                      (outline (when-let ((outline (plist-get properties :outline)))
                                 (when (>= (length outline) 1)
                                   (->> (mapconcat #'org-link-display-format outline " > ")
-                                       (format "%s (/%s/)" (s-repeat (+ (org-roam-node-level node) 3) "*"))))))
+                                       (format " @@html:<span class=\"backlinks-outline-path\">@@(/%s/)@@html:</span>@@")))))
                      (point (org-roam-backlink-point backlink))
                      (text (if (-some->> (org-roam-node-properties source-node)
                                  (assoc "HTML_CONTAINER_CLASS") (cdr)
@@ -92,7 +98,7 @@
                              ;; (s-replace "\n" " " (org-roam-preview-get-contents source-file point))
                              (org-roam-preview-get-contents source-file point)
                                ))
-                     (reference (format "%s [[id:%s][%s]]\n%s\n%s\n\n"
+                     (reference (format "%s [[id:%s][%s]]%s\n%s\n\n"
                                         (s-repeat (+ (org-roam-node-level node) 2) "*")
                                         (org-roam-node-id source-node)
                                         (org-roam-node-title source-node)
@@ -152,7 +158,11 @@ contextual information."
                               (member lang '("javascript" "js"
                                              "ruby" "scheme" "clojure" "php" "html")))))
         (if (not lang) (format "<pre class=\"example\"%s>\n%s</pre>" label code)
-          (format "<div class=\"org-src-container\">\n%s%s\n</div>"
+          (format "<div class=\"org-src-container\" data-language=\"%s\">\n%s%s\n</div>"
+                  ;; CHANGED PORTION - so the code block can display the language - ketan0
+                  ;; programming language, to be used by :before pseudo-element
+                  lang
+                  ;; END CHANGED
                   ;; Build caption.
                   (let ((caption (org-export-get-caption src-block)))
                     (if (not caption) ""
@@ -175,10 +185,8 @@ contextual information."
                                   " data-editor-type=\"html\""
                                 "")
                               code)
-                    ;; CHANGED LINE - so the code block can display the language - ketan0
-                    (format "<pre class=\"src src-%s\" data-language=\"%s\"%s>%s</pre>"
-                    ;; END CHANGED LINE
-                            lang lang label code)))))))
+                    (format "<pre class=\"src src-%s\"%s>%s</pre>"
+                            lang label code)))))))
 
 ;; Modify org quote block export to allow me to use Quotebacks: https://quotebacks.net/
 (defun org-html-quote-block (quote-block contents info)

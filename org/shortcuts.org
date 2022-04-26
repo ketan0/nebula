@@ -18,7 +18,6 @@ inspiration taken from these goku configs:
 :HTML_CONTAINER_CLASS: karabiner-keyboard-container dont-show-content-in-backlinks
 :ID:       7e0b1fcf-cdd2-46eb-8195-c021c498fd1a
 :END:
-# TODO: don't generate backlinks from this node (create a dont-backlink-here prop)
 ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------,
 ❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ - ❘ + ❘ <-    ❘
 ❘---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----❘
@@ -141,6 +140,7 @@ Switch to the previous application with right command/option -- right command hi
 :PROPERTIES:
 :ID:       030d326c-05a7-46c3-8da7-9cf3662fa8f6
 :END:
+This is a really nice mapping -- it simultaneously makes hitting escape much easier, and
 #+begin_src clojure
 [:##caps_lock :left_control nil {:alone :escape}]
 #+end_src
@@ -596,6 +596,7 @@ end tell
 :PROPERTIES:
 :ID:       9c2ae9d6-f08b-4538-ab1a-7674f1c7d2c7
 :END:
+These are super, super useful for navigating text fields, search autosuggestions, etc. Essentially, ~z+{hjkl}~ bindings are replacing the arrow keys, but in a much more convenient (and vim-like) location. ~z+{bw}~ are simulating the word-wise motions in vim. ~z+delete~ isn't necessarily vim-esque, but it's quite useful for deleting typos (much easier to just redo the word, lots of times.) Whenever I use another machine I find myself missing these a lot.
 #+begin_src clojure
 :vim-mode
 [:##h :left_arrow] ;; hjkl navigation everywhere + Shift

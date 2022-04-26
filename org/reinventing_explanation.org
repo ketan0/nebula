@@ -3,7 +3,6 @@
 :ROAM_REFS: https://michaelnielsen.org/reinventing_explanation/ https://michaelnielsen.org/reinventing_explanation/index.html
 :END:
 #+title: Reinventing Explanation
-https://michaelnielsen.org/reinventing_explanation/
 
 #+ATTR_HTML: :class quoteback :data-title Reinventing Explanation :data-author Michael Nielsen :cite https://michaelnielsen.org/reinventing_explanation/#:~:text=Even%20when%20explaining,of%20creating%20them.
 #+begin_quote
@@ -15,3 +14,10 @@ It's about creating an /emotional/ investment in whatever you're learning. Which
 So yes, this has totally motivated me to use my [[id:16db6da7-fbb6-4614-a23c-79ad58a43310][digital laboratory]] as a playground for reinventing explanation. And just autodidacticism in general -- it seems to be the best way. (The problem is, how to get people (myself) to be productive without the oppressive structure of traditional schools and workplaces? It's much easier for people to do stuff when someone else tells them what to do. I guess that was one of my fundamental struggles in my gap quarter.)
 
 And, I feel like people underestimate the importance of this topic. Explanation is fundamentally moving ideas from one mind to another, hopefully in their full grandeur (and then some.) Reinventing explanation is finding ways to increase the throughput between brains.
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@nielsenReinventingExplanation2014]@@html:</sup>@@
+* Bibliography
+#+print_bibliography:

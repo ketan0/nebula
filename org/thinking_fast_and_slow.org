@@ -3,10 +3,32 @@
 :END:
 #+title: Thinking Fast and Slow
 
+Here's some content outside of the headlines.
+
+#+begin_src python :results output
+print('Hello, world!')
+#+end_src
+
+#+RESULTS:
+: Hello, world!
+
 * System 1
 :PROPERTIES:
 :ID:       1a22fb9c-9bc4-4943-9e33-9f08f62409f3
 :END:
+Here's some content.
+
+#+begin_src python :results output
+print('hi')
+#+end_src
+
+#+RESULTS:
+: hi
+
+Here's some content.
+** Hey
+*** Hey
+**** Hey
 * System 2
 :PROPERTIES:
 :ID:       62eeec64-5a77-45d2-b386-54fed57e72e0

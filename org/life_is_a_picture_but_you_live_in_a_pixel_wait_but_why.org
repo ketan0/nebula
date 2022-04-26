@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       612e2ba3-138c-4d8b-860d-b9b1902e512d
+:ROAM_REFS: https://waitbutwhy.com/2013/11/life-is-picture-but-you-live-in-pixel.html
+:END:
+#+title: 🟪🟦 Life is a Picture, But You Live in a Pixel 🟩🟧
+
+#+ATTR_HTML: :class quoteback :data-title Life is a Picture, But You Live in a Pixel :data-author Tim Urban :cite https://waitbutwhy.com/2013/11/life-is-picture-but-you-live-in-pixel.html#:~:text=So%20while%20thousands,his%20actual%20life.
+#+begin_quote
+So while thousands of Jack’s Todays will, to an outsider from far away, begin to look like a complete picture, Jack spends each moment of his actual reality in one unremarkable Today pixel or another. Jack’s error is brushing off his mundane Wednesday and focusing entirely on the big picture, when in fact the mundane Wednesday /is the experience of his actual life./
+#+end_quote

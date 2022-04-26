@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       ebb4c573-a8e7-4891-ac3f-f970332d3a32
+:END:
+#+title: random
+
+* Here's headline
+** Here's another headline
+Link to [[id:b4d948fc-5b53-4211-8a45-a91942ff1e78][test file]]

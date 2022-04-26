@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       5d471455-c654-4779-a130-c07981d71dad
+:ROAM_REFS: http://www.paulgraham.com/head.html @grahamHoldingProgramOne2007
+:END:
+#+title: Holding a Program in One's Head
+#+cite_export: csl ieee.csl
+
+[cite:@grahamHoldingProgramOne2007]
+
+#+print_bibliography:

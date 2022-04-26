@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       23d8df0c-8813-45f4-8c83-acd33a32ac09
+:ROAM_ALIASES: GEB
+:END:
+#+title: Gödel, Escher, Bach: an Eternal Golden Braid
+
+[[id:078c5008-9ef7-4039-9b5c-5ff23f7a339b][Symbols get their meaning when we look at them.]]

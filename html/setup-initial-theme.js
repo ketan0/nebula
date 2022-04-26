@@ -9,7 +9,7 @@ STYLES = {
     ['--references']: '#222',
     ['--code-border']: '#333',
     ['--code']: '#181818',
-    ['--code-label']: '#181818',
+    // ['--code-label']: '#181818',
     ['--code-output']: '#222',
     ['--inline-code']: '#222',
     ['--section-border']: '#222',
@@ -19,6 +19,7 @@ STYLES = {
     ['--tippy-arrow-before']: '#222',
     ['--tippy-arrow-after']: '#222',
     ['--switch-icon']: '\'☼️\'',
+    ['--highlight-color']: '#444',
   },
   light: {
     ['--bg']: '#fff',
@@ -27,7 +28,7 @@ STYLES = {
     ['--references']: '#eee',
     ['--code-border']: '#e6e6e6',
     ['--code']: '#f2f2f2',
-    ['--code-label']: '#f2f2f2',
+    // ['--code-label']: '#f2f2f2',
     ['--code-output']: '#e3e3e3',
     ['--inline-code']: '#eee',
     ['--section-border']: '#e5e7eb',
@@ -37,6 +38,7 @@ STYLES = {
     ['--tippy-arrow-before']: '#fff',
     ['--tippy-arrow-after']: 'rgba(0,8,16,.2)',
     ['--switch-icon']: '\'☽\'',
+    ['--highlight-color']: '#eee',
   }
 }
 

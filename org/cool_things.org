@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       d6a0e6b7-2ca2-4955-a6ac-8618fd642b5b
+:END:
+#+title: cool things
+
+Idk I think this is just gonna be a connector node for now??
+
+[[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][♏️ emacs]]

@@ -4,3 +4,5 @@
 #+title: interactive content
 
 Want to think about this in the context of [[id:4fbbc03b-e5d3-4e88-94d0-a7ea75ca2ab9][Reinventing Explanation]].
+
+Want to make my nebula an [[id:d1c4a029-493c-4fb8-ae18-8de744d83603][interactive digital space]].

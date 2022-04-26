@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       d76f57fc-4a5c-4e9b-9833-bce1ea5a8c63
+:ROAM_REFS: @liuThreebodyProblem2014
+:END:
+#+title: The Three-Body Problem
+
+- Main character: Ye Wenjie
+- Father was an academic who was...struggled against?...during the Cultural Revolution
+- Idk what I want these book notes to be, yet. Do I summarize the plot? Do I write about what I observed, what I 'got out' of reading the book?
+  - I guess it can be anything I want. :)
+
+This imagery feels pretty excruciating, for the death of a tree...
+#+begin_quote
+The trunk was dragged away. Rocks and stumps in the ground broke the bark in more places, wounding the giant body further. In the spot where it once stood, the weight of the fallen tree being dragged left a deep channel in the layers of decomposing leaves that had accumulated over the years. Water quickly filled the ditch. The rotting leaves made the water appear crimson, like blood.
+#+end_quote
+
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@liuThreebodyProblem2014]@@html:</sup>@@
+* Bibliography
+#+print_bibliography:

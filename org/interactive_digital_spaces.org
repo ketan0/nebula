@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       d1c4a029-493c-4fb8-ae18-8de744d83603
+:END:
+#+title: interactive digital spaces
+
+Like, things in the vein of https://numinous.productions/ttft/
+
+* [[https://distill.pub/2020/communicating-with-interactive-articles/][distill.pub]]
+:PROPERTIES:
+:ID:       3eaaf5a0-1ba4-4ac9-8b29-29e72a054900
+:END:
+(meta; has a TON of links to such articles)
+* [[http://biochemical-pathways.com/#/map/1][Biochemical Pathways]] -- a zoomable digital space.
+Giant chart of biochemical processes. Whoa.
+* [[http://probmods.org/][probmods.org]] -- interactive probabilistic programming / Bayesian cognition textbook
+* [[https://distill.pub/2018/building-blocks/][The Building Blocks of Interpretability]]
+this feels like the perfect paper to use the interactive medium on. We want neural networks to be interpretable -- to be played with, interacted with, understood.
+* [[https://jalammar.github.io/visual-interactive-guide-basics-neural-networks/][A Visual and Interactive Guide to the Basics of Neural Networks – Jay Alammar – Visualizing machine learning one concept at a time.]]
+* [[https://github.com/norvig/pytudes][norvig/pytudes]] -- Jupyter notebooks to explain cool things
+pretty beautiful examples of Jupyter as a medium for...learning + experimenting about things.
+* [[http://www.quantum.country][quantum.country]] -- spaced repetition textbook on quantum mechanics
+* [[https://observablehq.com/@ketan0][Observable]] -- d3.js notebooks to explain cool things
+- interactive Javascript notebooks for data viz with D3. Noice.
+* [[http://worrydream.com/#!2/LadderOfAbstraction][Ladder of Abstraction - Bret Victor]] -- explaining a concept at different levels, interactively.
+I just love the ladder + arrow keys thing at the top. You can physically move between the different levels of explanation.

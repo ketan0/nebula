@@ -3,8 +3,9 @@
 :END:
 #+title: 👍🏾 rules of thumb
 
-Things that I have a hunch I should be following.
+Things that are good, I think?
 
+[[id:5d471455-c654-4779-a130-c07981d71dad][Holding a Program in One's Head]]
 [[id:f1284b63-905a-45f8-b649-4eb3d3e6aaeb][Maintain continuity in life]]
 [[id:59af5716-6264-4d91-9fdd-3e9eb383d602][Be part of a good community]]
 [[id:d7d536ea-a7e1-4663-b4a2-f20f7b8c7ebc][Taking notes is good.]]
@@ -15,6 +16,10 @@ Things that I have a hunch I should be following.
 :ID:       8e7296c1-ab28-4f94-a4da-70351fb9a4ff
 :END:
 Like, [[id:dc6ecdde-e6b0-476d-8a4b-932de60062be][structure]] prevents you from spending too much time in the "config layer." Spend more time in the execution layer, [[id:7e73384c-4286-40e7-8d2a-e777d12c2bd1][creating]]. But the perennial question is, "how much structure is too much structure?"
+* Do one major thing per day.
+:PROPERTIES:
+:ID:       5e985fdf-b25a-43a2-bcfe-9f6daff82dab
+:END:
 * Keep It Simple Stupid (KISS)
 :PROPERTIES:
 :ID:       748e3479-cb1f-4bf9-a780-2aad2978a90c
@@ -26,7 +31,7 @@ Related to the idea of constraints supporting creativity--dead [[id:0dc3bc78-df9
 :END:
   By induction, if you can progress from complexity $k$ to $k + 1$, you can progress infinitely.
 
-  Over time, I've gotten to know the amazing beast that is org mode. It is astounding how much you can do—but perhaps even more impressive is that you can start using it to do interesting things from the first day. You can learn in 5 minutes how to create headlines, expand and collapse nodes, write text, etc. That is not hard. In that way, it is a [[id:0dc3bc78-df96-4240-a6be-beb71e6074cc][simple]] tool.
+  Over time, I've gotten to know the amazing beast that is [[id:b6a1ff64-eae1-4a6f-ab54-01ddfca5353d][org-mode]] . It is astounding how much you can do—but perhaps even more impressive is that you can start using it to do interesting things from the first day. You can learn in 5 minutes how to create headlines, expand and collapse nodes, write text, etc. That is not hard. In that way, it is a [[id:0dc3bc78-df96-4240-a6be-beb71e6074cc][simple]] tool.
 
   This, I feel, should be part of my [[id:bc3b4ee4-b1b4-4b1c-a44b-c5785c5cafe5][life philosophy]]. Wanna start a self-reflective practice? Make it extremely, dead, simple at first. Make it solid. Then, gradually, you can build from there. But you need that foundation to be laid down first, otherwise things are all like the kids who took caffeine or steroids...stunted growth, or premature experience.
 
@@ -35,7 +40,7 @@ Simple life philosophy. Simple running routine. Simple self-reflection routine. 
 :PROPERTIES:
 :ID:       50ffa84c-9659-4347-a03a-289ff063a738
 :END:
-This works shockingly well when I'm having a problem, in that it sort of forces me to be rational about things and fully express all the particulars involved (which I may not have actually done in my in-head frustration.) Like imagine sitting with someone very level-headed.
+This works shockingly well when I'm having a problem, in that it sort of forces me to be rational about things and fully express all the particulars involved (which I may not have actually done in my in-head frustration.) Like imagine sitting with someone very level-headed, and explaining your problem to them. You can even do this in text form, writing out an imaginary email to this person.
 * Just go to bed.
 :PROPERTIES:
 :ID:       89a13330-d380-4e34-a177-3aad510bc516

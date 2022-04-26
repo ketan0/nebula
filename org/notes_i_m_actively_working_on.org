@@ -3,6 +3,8 @@
 :END:
 #+title: notes I'm actively working on
 
+Mentally bookmarking these pages -- think there is some interesting "sauce" to be gotten from each of these.
+
 [[id:4bba82cd-9443-4496-8896-81323093ec11][notes I'm actively working on]] (hah, recursive)
 [[id:3f0de91d-119f-4fd2-942e-f3458e60ed40][code comments]]
 [[id:b910e58f-f1fe-4c3f-8efb-69bfa261b191][📚 book notes]]
@@ -12,3 +14,4 @@
 [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][decomposition]]
 [[id:e2a95a21-0e55-4160-a6bb-0d7f87e81516][Don't Repeat Yourself (DRY) works well for code, not people.]]
 [[id:288afdae-8e50-4aa5-b16f-2545baf10967][blog posts]]
+[[id:612e2ba3-138c-4d8b-860d-b9b1902e512d][🟪🟦🟩 Life is a Picture, But You Live in a Pixel — Wait But Why]]

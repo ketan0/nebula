@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       87e83cf3-3dfa-4486-845d-155895a9f6b6
+:END:
+#+title: modularity
+
+I think it can be really good. Fairly related to [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][compositionality]]. Will have to hash out what I think the difference is there.
+
+[[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][♏️ emacs]] gets a lot of its power from its modularity. Packages are just little pieces of code-- you can add/remove them into your ecosystem as you please. As opposed to proprietary software, where you may be much more limited in the customization that you can do...one piece of functionality for Evernote might not carry over to VSCode might not carry over to your web browser. etc.
+
+^it's beautiful chaos sometimes, though! Modules designed by tens of thousands of independent humans are bound to be overlapping, redundant, and sometimes confusing to "glue together"...
+
+#+ATTR_HTML: :class quoteback :data-title Emacs, org, and bibtex as alternative to zotero and calibre :data-author github-alphapapa :cite https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Despite%20reading%20explanations,the%20citations%20manually.
+#+begin_quote
+Despite reading explanations and guides occasionally, I've never understood how Org, BibTeX, org-ref, ebib, etc. all work together. I once tried to set them up using BibTeX references in a file, but I wasn't able to figure out how to get citations working. I ran out of time to fiddle with it and had to do all the citations manually. :(
+#+end_quote
+
+#+ATTR_HTML: :class quoteback :data-title Emacs, org, and bibtex as alternative to zotero and calibre :data-author ftrx :cite https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Well...%20They%20do,to%20operate%20with.
+#+begin_quote
+Well... They do not. It's up to the end users glue them together. Bib(La)TeX only take care of record books&c references in a textual flat-file database, org-ref is mostly a helper to add things to that text db and quickly link a record in an org documents, helm-bibtex or ivy-bibtex are the search-based UI to operate with.
+#+end_quote
+
+
+But luckily emacs has a great community that has helped smooth out the rough edges between packages, and even make them work /together/ to make emacs a better place.
+
+
+But....is the [[id:4b0162cb-15ff-42fe-90dd-49d16df9bf44][brain]] modular? I think it might not /quite/ work that way.

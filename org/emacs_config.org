@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       ad1d3f2f-a727-4e53-907b-c7215df8d35f
+:END:
+#+title: ⚡️ emacs config
+
+[[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][♏️ emacs]]
+
+* TODO transclude doom config here.
