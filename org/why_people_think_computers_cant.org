@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       b7e233f7-62f3-408f-9244-3d486a1e847d
+:ROAM_REFS: https://web.media.mit.edu/~minsky/papers/ComputersCantThink.txt
+:END:
+#+title: Why People Think Computers Can't

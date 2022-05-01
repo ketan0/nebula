@@ -1,4 +1,7 @@
 async function pulse_circles() {
+  if (location.pathname !== '/' &&
+      location.pathname !== '/index.html') return;
+
   const svg = document.querySelector('svg');
 
   const container = document.getElementsByClassName('outline-text-2')[0];

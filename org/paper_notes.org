@@ -4,3 +4,4 @@
 #+title: 📄 paper notes
 
 [[id:12dfdb1e-d4ed-476b-be04-98cae7a3deaf][Towards Causal Representation Learning]]
+[[id:22706d1f-6b5c-4c77-acc2-d8c222b395d5][Counterfactual Generative Networks]]

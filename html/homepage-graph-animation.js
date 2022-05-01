@@ -1,5 +1,7 @@
 // TODO: link force + draw links between connected nodes
 async function homePageGraphAnimation() {
+  if (location.pathname !== '/' &&
+      location.pathname !== '/index.html') return;
   // that way the <a>'s are positioned absolutely, relative to the parent
   // https://css-tricks.com/absolute-positioning-inside-relative-positioning/
   container = d3.select('div[class^=\'outline-text\']')
@@ -15,7 +17,6 @@ async function homePageGraphAnimation() {
                  .style('padding', '2px')
                  .style('position', 'absolute')
                  .end();
-
 
   // start a d3 force simulation where the x/y coords are updated on tick
   const nodes = selection.nodes().map(n => {

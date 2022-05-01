@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       6f481b66-9e37-4fb5-ab24-d6ffcd979651
+:ROAM_REFS: http://pespmc1.vub.ac.be/MANIFESTO.html
+:END:
+#+title: The Cybernetic Manifesto
+
+The way they describe knowledge systems is very similar to the way certain philosophers approach computational systems -- they only have meaning relative to an observer. [[id:078c5008-9ef7-4039-9b5c-5ff23f7a339b][Symbols get their meaning when we look at them.]]
+
+#+ATTR_HTML: :class quoteback :data-title The Cybernetic Manifesto :data-author V. Turchin, C. Joslyn :cite http://pespmc1.vub.ac.be/MANIFESTO.html#:~:text=When%20a%20number,causes%2C%20from%20%22above%22.
+#+begin_quote
+When a number of systems become integrated so that a new level of control emerges, we say that a metasystem has formed. We refer to this process as a metasystem transition.
+
+A metasystem transition is, by definition, a creative act. It cannot be solely directed by the internal structure or logic of a system, but must always comes from outside causes, from "above".
+#+end_quote
+
+Feels related to the "I"-mode and "M"-mode discussion in [[id:23d8df0c-8813-45f4-8c83-acd33a32ac09][Gödel, Escher, Bach: an Eternal Golden Braid 🪢]]

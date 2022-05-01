@@ -68,8 +68,9 @@ def fibonacci_squares_arr(n):
 def fibonacci_squares(n):
     arr = fibonacci_squares_arr(n)
     chars = list('🟥🟫🟦🟧🟨🟪🟩')
-    fib_str = '\n'.join([''.join([chars[(elem - 1) % len(chars)]
-                                  for elem in row]) for row in arr])
+    fib_str = '\n'.join([''.join([
+        chars[(elem - 1) % len(chars)] for elem in row
+    ]) for row in arr])
     return fib_str
 print(fibonacci_squares(6))
 #+end_src

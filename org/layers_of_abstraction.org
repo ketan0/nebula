@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       0506911d-6bec-4f9d-8747-1b338a052b24
+:END:
+#+title: layers of abstraction
+

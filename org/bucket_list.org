@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       c36c1a42-bb5e-4caf-a375-a1b168ea6e20
+:END:
+#+title: bucket list
+
+Some things I want to do before kicking the bucket.
+
+* drive the Dalton Highway to Prudhoe Bay
+* see 2024 solar eclipse

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       232b3810-bef7-47c4-a904-0b4dff47f714
+:ROAM_REFS: https://arxiv.org/abs/1604.00289v1 @lakeBuildingMachinesThat2016
+:END:
+#+title: Building Machines That Learn and Think Like People
+
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@lakeBuildingMachinesThat2016]@@html:</sup>@@

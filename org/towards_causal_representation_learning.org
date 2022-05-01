@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       12dfdb1e-d4ed-476b-be04-98cae7a3deaf
-:ROAM_REFS: @scholkopfCausalRepresentationLearning2021
+:ROAM_REFS: https://arxiv.org/abs/2102.11107 @scholkopfCausalRepresentationLearning2021
 :END:
 #+title: Towards Causal Representation Learning
 Yoshua Bengio [[https://www.youtube.com/watch?v=rKZJ0TJWvTk][talk]]. Also, the associated [[https://arxiv.org/abs/2102.11107][paper]].

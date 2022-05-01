@@ -1,11 +1,8 @@
 :PROPERTIES:
 :ID:       22706d1f-6b5c-4c77-acc2-d8c222b395d5
-:ROAM_REFS: https://arxiv.org/abs/2101.06046
+:ROAM_REFS: https://arxiv.org/abs/2101.06046 @sauerCounterfactualGenerativeNetworks2021
 :END:
 #+title: Counterfactual Generative Networks
-#+cite_export: csl ~/Zotero/styles/apa.csl
-
-[cite:@sauerCounterfactualGenerativeNetworks2021]
 
 [[id:412cda14-f385-463d-9a7e-cd9ffe87c0a2][Neural networks like to "cheat"]] by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object's shape; a classifier might learn that "green grass background" => "cow classification."
 
@@ -25,6 +22,10 @@ where each random variable $S_{j}$ is a function of its parents $\mathbf{P A}_{j
 * Architecture
 #+ATTR_HTML: :alt architecture diagram of the Counterfactual Generative Network (CGN.)
 [[file:cgn_architecture.png]]
-
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@sauerCounterfactualGenerativeNetworks2021]@@html:</sup>@@
 * Bibliography
 #+print_bibliography:

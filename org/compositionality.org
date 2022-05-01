@@ -6,6 +6,8 @@
 
 You have a set of reusable pieces that can be combined to form different, interesting things.
 
+Related: [cite:@lakeBuildingMachinesThat2016]
+
 Decomposition of [[id:0997b060-ee05-458e-beed-3494675c879d][programs]] into modular, reusable unit is one example of this.
 
 #+ATTR_HTML: :alt Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.) :width 250
@@ -19,3 +21,6 @@ A [[id:5b02540a-15ac-4123-86f8-e6ca5420ce27][machine learning]] example of compo
 
 #+ATTR_HTML: :alt progression from low-level to high-level features in a CNN.
 [[file:cnnlayers.jpg]]
+
+* Bibliography
+#+print_bibliography:

@@ -1,0 +1,271 @@
+:PROPERTIES:
+:ID:       543215d5-6bd3-423c-98a9-8374b7e26894
+:END:
+#+TITLE: PSYCH 50: Cognitive Neuroscience
+
+* Course Description:
+How does our brain give rise to our abilities to perceive, act and think? Survey of the basic facts, empirical evidence, theories and methods of study in cognitive neuroscience exploring how cognition is instantiated in neural activity. Representative topics include perceptual and motor processes, decision making, learning and memory, attention, reward processing, reinforcement learning, sensory inference and cognitive control
+* Learning goals
+We are our brains. The overall goal of this class is to introduce you to the scientific study of how our brains work to make us who we are. This class should prepare you to take more specialized upper level classes in specific areas of cognitive neuroscience. 
+
+After taking this course you should be able to...
+
+...demonstrate familiarity with basic anatomy and physiology of the brain. You should gain familiarity with fundamental terminology and basic knowledge about brain systems and functions. You should be able to recognize and understand these terms when you encounter them in reading literature (both popular press and primary) or listening to lectures about cognitive neuroscience. Chapter reading and quizzes will be used to build this knowledge. Examples of basic factual knowledge:
+
+What are neurons and glial cells? What functions do they preform?
+What is an action potential? Why is it important for cognitive function? How do ionic currents make it possible?
+Where is prefrontal cortex? What might happen to someone if they had damage to it?
+What is dopamine? What it is thought to signal in the brain?
+
+...explain how the brain allows us to do everyday behaviors. Cognitive neuroscience aims to provide explanations for how the brain gives rise to behavior. You should be able to take any behavior that you engage in like walking, talking or deciding whether to drink a cup of coffee or eat cheese and be able to discuss what might be going on inside the brain to allow you to preform that behavior. This is not just knowing what parts of the brain are involved in different functions, but being able to apply conceptual models derived from cognitive neuroscience to new situations. We will practice this through weekly thought questions discussed in section. For example: 
+
+I decide to swing at a pitch while playing whiffle ball. How would a diffusion model explain my reaction time and choice?
+I recognize someone I just met, but I can't remember their name. What are the processes in the brain that have and have not worked properly?
+I slowly learn to balance on my new RipStik casterboard. How do I sense balance? Would reinforcement learning provide a good theory for how I have learned to do this? If so, what would my dopamine neurons be doing when I fall off the board?
+* Topics 
+We will not cover everything there is to know about cognitive neuroscience in one quarter. Cognitive neuroscience is a rich field that draws on many disciplines from biology, chemistry, psychology, computer science, engineering, mathematics, philosophy and beyond. The objective is not to be exhaustive (and exhausting!) in what we cover. Instead the goal is to give you basic background and conceptual knowledge as outlined above by going in to depth in a few areas to illustrate the concepts and knowledge that structure the scientific study of cognitive neuroscience. 
+** Input 
+ Our brains have many sensors and systems that allow us to get information about the outside world. For example, touch, smell, balance, etc. We will use the visual system as a canonical system for understanding how information about the world gets into the brain. This will allow us to understand what is meant by bottom-up processing from sensory transduction to cortical streams of processing supporting high-level categorization and sensory inference. 
+** Output 
+ We will next flip our thinking about the brain from something that passively takes in information and processes it to something that generates movement. 
+** Feedback 
+ If the brain can act to contract muscles and make movements it can also act on itself to [[id:afec4613-ac62-4e12-9e1d-70d71791e842][change]] things like sensory processing. We will discuss in depth a canonical system that does just that: attention.
+ Broadcast We will next turn from cognitive processes like attention that offer very specific control of information processing to ones that can distribute information widely and modulate activity across lots of the brain; neuromodulatory systems. We will discuss in-depth the one we know the most about - the dopamine system and its role in reinforcement learning.
+** Memory 
+ Memory will give us a chance to see many of the above concepts put together to explain a cognitive function. It will also show us how neuroscience can inform our understanding of cognition as we see different systems and process underlie different forms of memory.
+ Along the way, various topics will come up - emotion, language, decision-making, consciousness, free-will, psychoactive drugs, disease, mental illness, brain metabolism, brain-machine interfaces, mind-control - we will try to fit these into the above frameworks for thinking about the brain. Undoubtedly, there will be a part of cognitive functioning that we do not cover (hey, why haven’t we talked about why I sneeze when I see a bright light? - you are wired funny. Yes, that’s true. It really happens). You will have opportunities in sections to take the framework that are discussed in lectures and apply them to understanding other things that were not covered. So, for example, in section we might talk about somatosensory or olfactory systems and how they are the same or different from the visual system. 
+** Ethics and morality
+ Some aspects of the material covered in a cognitive neuroscience course may bring up ethical and moral considerations for you that you feel strongly about. For instance, it might challenge your religious beliefs. It might challenge notions of when someone should be culpable for behavior that is abhorrent but for which they might not have control. They may challenge your notions of self, of memory, of personality. All these are extremely important issues since they bear on how we act as a society, how we educate, how we deal with crime and punishment, how we think about who we are and how we act with others. Much foundational work in cognitive science has been done using animal experiments which raise important questions of how we weight humane treatment of animals against the quest for knowledge and betterment of human society and health. 
+
+ We encourage you all to think about these issues openly and frankly as they should be in an academic environment like Stanford. Having said that, we hope that you will come in with as open a mind as possible and not pre-judge what you are learning about. We will have opportunities in sections at the beginning and end of the quarter to discuss issues related to ethical and moral considerations that come out of the study of cognitive neuroscience.
+* Intro
+:PROPERTIES:
+:ID:       1510d124-c70c-4f76-b956-2819316e7df6
+:END:
+/How does our brain allow us to do what we do?/ -- that is, cognitive neuroscience = how cognition is /implemented/ in the brain, whereas cognitive science = how we think and behave.
+
+[[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 1 Study Guide_ Introduction to Cognitive Neuroscience.pdf::3++0.00;;annot-3-0][different "scales" of the same system]] -- genes => intracellular signals => neurotransmitters/receptors => synapses => neurons => local circuits => populations => areas => interacting brains
+
+different processes: input · output · feedback · broadcast
+
+Key framework: [[id:bad51535-4aad-4e2a-b6e5-fff9839e9224][Marr's Levels]]. What goal? What algorithm? What implementation? -- interesting bit from Marr here. We can't study the brain just by looking at neuron implementation -- we need to ask what they're trying to accomplish, and how.
+
+Experiment types: observe brain, add something to brain, remove something from brain. observe is cheaper, but add/remove can establish causality (since you're essentially doing the "wiggle" test.) So, when FB/Twitter/whatever do A/B testing, they're basically doing add/remove (psych not neuro) experiments lol...
+* Hierarchical processing
+Visual cortex is the cleanest example of hierarchical processing. Can draw an analogy to [[id:ff35bb26-6dde-42cd-988c-1c05e13b707f][convolutional neural networks]] in the building up of increasingly complex representations in deeper layers.
+
+LGN => V1: go [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 1 Study Guide_ Introduction to Cognitive Neuroscience.pdf::13++0.00][from circular receptive fields to orientation-selective receptive fields]] (in one synapse!) by just overlaying the circular receptive fields.
+
+V1 simple => V1 complex: similar idea. V1 complex are still orientation-selective, but now position invariant.
+
+(side note, laterality: representations switch sides)
+
+And so on, V2 => V4 ... unlike convnets, though, not all the connections are feedforward. Some go back to previous layers. What do those do, I wonder?
+* Dorsal Visual Pathway
+"where" / action stream
+* Ventral Visual Pathway
+:PROPERTIES:
+:ID:       dd8e3fad-db3f-4fee-9dd9-cca026ceeadd
+:END:
+"what" / perception stream
+
+Vision isn't just about copying the pattern of light in the eyes -- it's about making *meaning* out of that. That semantic meaning isn't at the level of neurons -- i.e. no "grandmother cell" specifically for grandma, but rather a distributed representation. (Ok fine they found this one neuron that's dedicated to Jennifer Aniston LOL, but it def wouldn't be the only/encapsulating neuron for Aniston representation)
+
+Fusiform Face Area (FFA) -- area of ventral cortex that is specifically selective to faces. (Observe: seeing face <=> FFA activity, Add: stimulation leads to distorted perception, Remove: loss of FFA causes prosopagnosia, inability to recognize faces)
+
+* Perceptual Decision Making
+Middle Temporal: needed for motion detection (Remove: lesioning [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 2 Study Guide_ Introduction to Cognitive Neuroscience.pdf::13++0.00][flattens psychometric curve]].) We have "integrator neurons" that [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 2 Study Guide_ Introduction to Cognitive Neuroscience.pdf::20++0.00][sum up the responses from leftward-motion and rightward-motion neurons, and once a threshold is crossed either way make a decision]].
+* Action Potential
+[[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 3 Study Guide_ Introduction to Cognitive Neuroscience.pdf::10++0.00][Chemical basis]]: /resting membrane potential/ is increased by synaptic input from another neuron above threshold potential => Na+ channels open + Na+ enters and depolarizes cell (spike up), Na+ channels close, K+ channels open + K+ leaves cell (spike down), Na+/K+ pump uses ATP to restore resting potential
+
+Myelination + axon width => Action potentials vary in speed in different brain regions (!)
+* Motor Systems
+Why do we have a brain? Simple (evolutionarily): to move. Motion is incredibly complex
+
+This is a pretty interesting thing to think about. Like yes, we have brains to think and plan and all that super intelligent human stuff -- but ultimately all that doesn't really mean anything unless it eventually translates into motor movement (and especially motor movement that leads to viable reproduction LOL.)
+
+[[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 3 Study Guide_ Introduction to Cognitive Neuroscience.pdf::15++0.00][Central pattern generator]] in brainstem/spine can generate rhythmic movements (like walking) with /no cortical input/(!!) -- cortex just flips them on/off like a light switch.
+
+Basal ganglia = gateway, timing, value
+
+Premotor and supplementary motor areas: Planning, movement sequences.
+
+Cerebellum = learning + error correction
+
+Motor cortex = Volitional control. shaped like [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 3 Study Guide_ Introduction to Cognitive Neuroscience.pdf::19++0.00][homunculus]]. This is too simplistic though -- some stimulations generate complex movements with many muscles..
+* Energetics
+How does the brain use energy? + vasculature that supports it
+
+Brain uses a LOT of energy relative to rest of body...yet compared to computers are extremely efficient 😅.
+
+Can measure BOLD (Blood Oxygen use) as a proxy for brain activity => basis for fMRI.
+* Executive Control
+:PROPERTIES:
+:ID:       fefd433d-cc4d-4d5b-9a54-2412b6452b92
+:END:
+Frontal cortex = higher order thinking. Oh god, no lobotomies plz.
+
+Frontal plays a role in /executive control/ -- what are we doing, what rules are we following, etc. Prefrontal cortex might play a role in category judgment.
+
+Possibly a hierarchy of policy abstraction in PFC (i.e., goals on goals on goals.) Makes me wonder tho...cuz at some point in the hierarchy, at least for me, I don't feel like I have the highest-level goals in active memory. Like, they might be stored somewhere, but policy here feels more like "in the moment"...
+
+These stories are vague / simplistic. We really don't know what the hell's going on in the PFC. => level of abstraction that's useful here is /populations/ of neurons performing cognitive functions. Looking at a neuron is like looking at a transistor.
+* Attention
+*overt* attention: you physically move your eyes (or other sensors) to pay attention
+*covert* attention: the attention shift is only mental, not physical (i.e. looking out of the corner of your eyes)
+
+Posner cueing task: Give a cue that's supposed to tell you where the stimulus appears. RTs are faster when the cue is valid, i.e. in the same direction as the stimulus.
+
+Weber -- ability to notice small differences is increased when the cue is valid, as opposed to when the cue is neutral.
+
+Biased competition model -- this one is interesting. Attention /suppresses/ the representation of the things you are not attending to. As if the stimuli are competing for representation, but attention biases the race.
+
+Response gain / sensitivity enhancement -- /improvement/ in the representation due to attention.
+
+Control of Attention: interesting observation is that world "stays stationary" when moving eyes. Hypothesis: whenever you move, an "efference copy" of the command is sent to the visual system to update your representation of the world. Hemholtz did a crazy experiment to test -- paralyzed himself and tried to move his eyes...indeed, he experienced shifting perception.
+
+Frontal Eye Field (FEF): Responsible for voluntary saccades, fires for visual receptive field and motor fields -- but also "delay period" activity...involved in shifting attention / carrying cognitive signals related to working memory. Stimulating monkeys in FEF leads to overt (and at lower levels, covert) attention shift.
+
+So what about the other senses, though? Is there a "Frontal ear field" or something? Cuz sometimes when listening to a podcast or something, I'm totally transfixed on the audio, barely even noticing / suppressing the visual stimuli around me.
+* [[id:3e283aac-0cb5-4e06-b8ab-a742cff41a96][Plasticity]]
+:PROPERTIES:
+:ID:       246f1a64-9247-43da-b8ca-f5fb06c2eb5c
+:END:
+** The brain dynamically reorganizes to match its inputs
+If you're blind, visual cortex gets taken over. If you're an amputee, the "arm" part of the somatosensory cortex gets taken over.
+** The brain distributes resources based on relevance
+What are you /using/? Available resources are dynamically allocated to that. Brain damage? The map just shrinks to the remaining territory (provided it's not /too/ bad). Add an extra eye to a frog? The optic tectum territory gets divided and some is given to the new eye.
+** The brain has a "sensitive period" in early childhood = extreme plasticity -- some preprogrammed stuff, but a lot is "hooks" that are reliant on experience
+It needs (social) input to shape it during that critical period, otherwise you got some feral children on your hands...
+** previous points => brain can accomodate new input streams.
+Cue the tongue cameras and magneto belts and sound => colors and stuff like that.
+* [[id:4fba6fb0-e9cc-48b1-875c-a70e1a2dbc9b][Consciousness]]
+:PROPERTIES:
+:ID:       9cf77233-0337-49d0-82a0-e9072da807bc
+:END:
+Feels like...we're going with a neuroscientist's definition of consciousness here. One that presupposes Identity Theory...
+
+I think he tried to apply the [[id:bad51535-4aad-4e2a-b6e5-fff9839e9224][Marr's Levels]] construct here -- top points are the physical / algorithmic ways consciousness happens, bottom is big picture, what's the purpose of consciousness?
+** [[https://vimeo.com/254775987][Being Conscious with Bill Newsome on Vimeo]]
+Oooohhh, the "consciousness ==> freedom" frame is powerful. Serious Tim Urban / Religion for the Nonreligious vibes. Being conscious / aware of the fog is the first step in getting rid of it.
+** [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/12consciousness.pdf::12++0.00][Consciousness is /constructed/]]
+from the intention to move, the illusion of movement, the actual movement, movement => proprioceptive feedback, movement => sensory input -- each of these has an associated brain area
+** Consciousness is unified
+Despite all these different processes, we feel it like one, unified /experience/. Corpus callosum: connects our two hemispheres. Other connections exist, tho, and if corpus callosum is cut, anterior and posterior commisures show larger volume
+** Consciousness has neural correlates
+Hypothesis: subset of visual neurons are related to conscious perception
+** Consciousness is not an epiphenomenon
+Seems to be some experimental evidence that intention arises before action...but it's not just "froth on the wave," it actually has a causal impact on the future.
+** Consciousness has a function
+Cue Newsome, become more aware/free?
+* Dopamine System
+:PROPERTIES:
+:ID:       29c59046-14ef-4f6b-ba0e-8e56db7ef567
+:END:
+Good example of broadcast system in the brain: [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 7 Study Guide_ Introduction to Cognitive Neuroscience.pdf::4++0.00][broadcasts signals far and wide]] in the brain.
+
+broadcast: neurochemical signals that are sprayed widely over the brain. "Dopamine neurons" in the ventral-tegmental area and substantia nigra pars compacta. Striatum involved in value representation.
+
+dopamine represents perceived /value/ (not pleasure) -- its signal serves as a measure of prediction error. Dopamine = wanting, not liking.
+
+[[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 7 Study Guide_ Introduction to Cognitive Neuroscience.pdf::6++0.00][Pavlovian conditioning]]: stimulus (bell) becomes associated with reward (food.) Thus, the conditioned response (salivation) shifts /backward/ from the time of receiving reward to the time of receiving stimulus (can show causality b/c after conditioning, dogs salivate upon hearing the bell /even when no food is given/.).
+
+drugs hijack dopamine circuitry, motivating drugseeking behavior.
+
+Rescorla-Wagner: value of stimulus is updated by the *difference* between reward and the current value. (cf. gradient descent)
+$V_{pred} += \alpha(R - V_{pred})$
+
+
+TD learning: takes time into account (reward propagates backwards) further and further in time -- like a basic form of [[id:9c86eed7-06ae-4995-b87e-4784e696dd4d][reinforcement learning]]
+$R_{t=n} - (V_{t=n} - V_{t=n+1})$ = 0
+* [[id:7b9258d6-4548-4050-8e5d-b758a7f56b80][Memory]]
+:PROPERTIES:
+:ID:       a5c25295-9184-4df0-a4ac-5703afe74425
+:END:
+** Many Regions + Types of memory
+Frontal Eye Field (FEF) is involved in working memory
+
+[[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Study Guide_ Introduction to Cognitive Neuroscience.pdf::6++0.00][Memory is many different things]] -- many different types of memory, different brain regions involved. Comment: This makes me think that memory is more of a property of neural circuits, rather than an isolated/specialized function.
+
+Double dissociation = establishing separateness of certain kinds of memories by lesioning either area, and seeing the effects on memory tasks.
+
+[[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Study Guide_ Introduction to Cognitive Neuroscience.pdf::8++0.00][See this graph for double dissocation]] --
+parietal lobe lesion in K.F. => impaired working memory, fine declarative memory
+MTL removal in H.M. => impaired declarative memory, fine working memory
+
+Parkinsons => impaired cognitive skill learning, fine declarative memory
+MTL patients => impaired declarative memory, fine cognitive skill learning
+
+Visual cortex damage => impaired perceptual priming, fine declarative memory
+MTL ...
+
+Amygdala damage => impaired fear conditioning, fine declarative memory
+MTL ...
+** Hippocampus (within MTL)
+Very interesting brain structure. As seen from MTL damage, associated with declarative memory...
+
+Hippocampus = memory formation/encoding, and then  cortex = long term storage?
+
+Could perform [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Study Guide_ Introduction to Cognitive Neuroscience.pdf::18++0.00][pattern separation]] -- makes the pattern of activity for different activities as separate as possible (even if they look similar)
+
+Also [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Study Guide_ Introduction to Cognitive Neuroscience.pdf::20++0.00][pattern completion]] -- pull in the whole pattern from just a part.
+
+Interesting note about [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Study Guide_ Introduction to Cognitive Neuroscience.pdf::23++0.00][catastrophic interference]]. So basically hippocampus is for encoding memories separately and quickly, and neocortex is for building generalizations and long-term storage.
+
+/All this talk about memory makes me think...what's the distinction between "data" and "code" in the brain? Like obviously some regions are devoted moreso to storing memories, and some to "code"...but wait yeah that's interesting, because in a sense it's ALL data, including code. It's all just bytes (or whatever it is in the brain, connection strengths??) But perhaps certain ways of "calling" that data, whenever the brain wants to activate a chunk of neurons, turns them into functions. Strong Lisp vibes here -- data and code blend together./
+* Memory, Synapses, Long-Term Potentiation (LTP)
+Going lower-level to the neuronal level ... how are new memories formed + consolidated synaptically?
+** Neurogenesis
+*Lots of neurogenesis in adults in hippocampus/striatum, and we don't know why.* Could be connected to memory/learning. Seems like a random addition to this section, and that's prob cuz the research is still developing LOL
+** Hebbian plasticity
+*could be a fundamental mechanism for learning*
+= neurons that fire together, wire together. More concretely - synapses get stronger when pre- and post- synaptic activity is correlated.
+
+*NMDA receptor* -- [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 9 Study Guide_ Introduction to Cognitive Neuroscience.pdf::6++0.00][could underlie Hebbian plasticity]]. Allows for Ca2+ entry (=> protein synth => LTP) only when /both/ presynaptic and postsynaptic cell are depolarized.
+
+/Meta: I'm using => as "leads to" in this case, but in other cases I use it as the mathematical implication operator. This could lead to some confusion...perhaps I should only use -> for mathematical implication?/
+** Synapses
+[[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 9 Study Guide_ Introduction to Cognitive Neuroscience.pdf::11++0.00][Synaptic consolidation requires protein synthesis]] -- ion channels (made of proteins) needed for activations.
+
+Two types of synapses -- *electrical synapses* (gap junctions) and *chemical synapses*.
+
+Electrical synapses (keep neurons in sync.)
+
+Chemical synapses (neurons can behave differently ... passage of information / perception / thought??)
+* Spatial Cognition
+:PROPERTIES:
+:ID:       293a2e12-7da7-49b2-9e54-718a5a89ed58
+:END:
+*Place cells* in hippocampus fire for location
+*Grid cells* fire regularly depending on where you are in a locale
+*direction cells* = a sort of mental, locale-local compass.
+*border cells* = detect borders of an environment
+* Emotion
+[[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 10 Study Guide_ Introduction to Cognitive Neuroscience.pdf::4++0.00][Oxytocin <=> pair bonding]] (for females)
+increase in trusting behaviors for humans w/ oxytocin inhaled (well...maybe)
+
+[[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 10 Study Guide_ Introduction to Cognitive Neuroscience.pdf::5++0.00][toxoplasmosis]] -- holy crap that's creepy. Mice eat cat poop infected with toxoplasma => become unafraid of cat urine => get eaten by cats => infect another cat with toxoplasma. (Reason: toxoplasma affects/damages the amygdala)
+
+Kluver-Bucy syndrome: loss of fear reactions.
+
+*Endocrine system* also controls emotions. A bunch of hormones in the pituitary gland => stress, pain, reproductive functions, mating behaviors lol...
+
+*Autonomic nervous system*: control bodily responses.
+- Sympathetic system uses norepinephrine (adrenaline) for fight-or-flight signaling
+- Parasympathetic system uses acetylcholine for rest-and-digest signaling
+
+Rabies: virus that takes over central nervous system, makes behavior more aggressive/salivating (perfect for transmission to others). So efficient at spreading through nervous system that scientists use it to trace neural connections(!)
+
+Enteric nervous system: the gut practically has a mind of its own (lots of neurons down there.) Interesting bit -- some bacteria might be producing serotonin + hijacking the enteric system...
+
+Somatic marker hypothesis: instead of emotions => bodily response, bodily response => emotions. see [[pdf:~/Desktop/Misc./Old Classes/PSYCH 50/Week 10 Study Guide_ Introduction to Cognitive Neuroscience.pdf::13++0.00][Iowa gambling task]]: people have a "skin conductance response" whenever hovering over a bad deck, as a bodily "marker" that influences emotion / decision making. (Interesting -- we think with our bodies??)
+* Social Cognition + Autism
+[[https://www.youtube.com/watch?v=VTNmLt7QX8E][video of random shapes moving around]] -- but the (neurotypical) brain sees a social scene, the big triangle bullying the others, the lil circle and square dancing(?) and maybe even in love(?). autistic doesn't see the social construction -- just sees literally.
+
+Neurotypicals' and Autistics' eye patterms are different too -- autistics care less about faces and eyes, social cues, etc.
+
+Theory of mind = theory theory = our ability to reason about others' mental states. Develops in childhood (Remember that whole Mary and Sally story...)
+
+Genes + environment => Autism.
+* Brain-machine interfaces
+Currently, can just replace sensory organs (and kinda badly.) Future...interface with cognitive parts of brain? Cortex? Cue Neuralink

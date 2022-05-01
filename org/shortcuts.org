@@ -27,7 +27,7 @@ inspiration taken from these goku configs:
 ❘------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------❘
 ❘ Shift  ❘ [[id:9c2ae9d6-f08b-4538-ab1a-7674f1c7d2c7][Z]] ❘ [[id:3f159d2c-587f-4cb0-b305-a1beb3aed923][X]] ❘ C ❘ V ❘ B ❘ N ❘ M ❘ [[id:2f839e85-533a-4052-96e8-10c776382f79][,]] ❘ . ❘ / ❘    Shift ❘
 ❘------,-'---',--',--'---'---'---'---'---'-,-'---'--,-------❘
-❘ ctrl ❘ alt  ❘cmd❘                      ❘cmd| alt  ❘       ❘
+❘ ctrl ❘ alt  ❘cmd❘                      ❘[[id:8a5eb4c8-1434-4c3e-83c1-3325061d5d78][cmd]]| alt  ❘       ❘
 '------'------'---'----------------------'---'------'-------'
 * Guide
 For more info on configuring Goku, see the [[https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md][tutorial]].

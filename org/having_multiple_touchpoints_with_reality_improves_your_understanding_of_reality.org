@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       bca63b13-8669-4f1b-8622-cd23e555aab9
+:END:
+#+title: having multiple "touchpoints" with reality improves your understanding of reality
+
+#+ATTR_HTML: :class quoteback :data-title Why People Think Computers Can't :data-author Marvin Minsky :cite https://web.media.mit.edu/~minsky/papers/ComputersCantThink.txt
+#+begin_quote
+Let's go back to what numbers mean. This time, to make things easier, well think about Three. I'm arguing that Three, for us, has no one single, basic definition, but is a web of different processes that each get meaning from the others. Consider all the roles "Three" plays. One way we tell a Three is to recite "One, Two, Three", while pointing to the different things. To do it right, of course, you have to (i) touch each thing once and (ii) not touch any twice. One way to count out loud while you pick up each object and remove it. Children learn to do such things in their heads or, when that's too hard, to use tricks like finger-pointing. Another way to tell a Three is to use some Standard Set of Three things. Then bring ‹set of things to the other set, and match them I one-to-one: if all are matched and none are left, then there were Three. That "standard I Three" need not be things, for words like "one, two, three" work just as well. For Five we have a wider choice. One can think of it as groups of Two and Three, or One and Four. Or, one can think of some familiar shapes -. a pentagon, an X,  a Vee,  a cross, an aeroplane; they all make Fives.
+
+Because each trick works in different situations, our power stems from being able to shift from one trick to another. To ask which meaning is correct - to count, or match, or group - is foolishness. Each has its uses and its ways to support the others. None has much power by itself, but together they make a versatile skill-system. Instead of flimsy links in chain of definitions in the mind, each word we use can activate big webs of different ways to deal of things, to use them, to remember them, to compare them, and so forth. *With multiply-connected knowledge-nets, you can't get stuck. When any sense of meaning fails, you can switch to another. The mathematician's way, once you get into the slightest trouble, you're stuck for good!*
+#+end_quote
+
+(emphasis mine.) In his article [[id:b7e233f7-62f3-408f-9244-3d486a1e847d][Why People Think Computers Can't]], Marvin Minsky talks about this -- while numbers can be defined in formal systems, it's difficult to pin down what numbers really /mean/ to us in one solid definition. Very related to: [[id:05576cdb-6419-4d7b-a7e1-df3cf0bf50d6]["The meaning of a word is its use in language"]]  Rather, we can sort of "define" a number (say, the number Three) in a more oblique way, by connecting it to various concrete concepts -- "[Three] is a web of different processes that each get meaning from the others." It's like...the "common thread" between all of these real-life instances. The real-life instances, the "tricks," form a set of constraints, from which emerges "Three."
+
+
+Related: [[id:5d471455-c654-4779-a130-c07981d71dad][Holding a Program in One's Head]]

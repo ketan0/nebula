@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       1eecc48f-e23a-40be-852d-93b56636cbe4
+:END:
+#+title: Everything happens in a certain context
+
+And when that context is lost, when things are isolated from their original context, we often get big problems.
+
+[[id:bca63b13-8669-4f1b-8622-cd23e555aab9][having multiple "touchpoints" with reality improves your understanding of reality]]. Thus, when trying to understand some object, historical event, piece of technology we have today, it's important to understand the context that surrounds that thing. Because in fact, the "thing" and the "context" aren't really two fundamentally separate things; they are one reality, and we are drawing an arbitrary line in the sand.
+
+That seems like a glaring problem in the way that modern information systems are set up-- things are stripped of their original context. Things must be compressed into textual language. Interactions between people are stripped from the original context that existed in the two people's heads, and displayed for millions of twitter users to see.

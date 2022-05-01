@@ -209,8 +209,7 @@ holding contextual information."
             (if quotebackp (format "<footer>%s<cite><a href=\"%s\">%s</a></cite></footer>"
                                    (or data-author "") (or cite "") (or cite ""))
               "")
-            (if quotebackp "<script src=\"dark-themes.js\"></script>
-<script note=\"\" src=\"https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js\"></script>"
+            (if quotebackp "<script note=\"\" src=\"https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js\"></script>"
               ""))))
 
 (defun file-contents (file)
