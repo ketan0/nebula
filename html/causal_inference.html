@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-25 Mon 18:16 -->
+<!-- 2022-05-01 Sun 15:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>causal inference</title>
@@ -71,38 +71,64 @@
 <div id="content" class="content">
 <h1 class="title">causal inference
 <br />
-<span class="subtitle">Last modified on September 11, 2021</span>
+<span class="subtitle">Last modified on May 01, 2022</span>
 </h1>
 
 <div id="outline-container-ID-d4b17339-7852-4eb6-a399-24e47b354a6c" class="outline-2">
 <h2 id="ID-d4b17339-7852-4eb6-a399-24e47b354a6c">observation</h2>
-<div class="outline-text-2" id="text-orgc83454c">
-</div>
-</div>
-<div id="outline-container-ID-d68c5093-d6d6-43b8-a48d-629ade9293b6" class="outline-2">
-<h2 id="ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</h2>
-<div class="outline-text-2" id="text-orgdffc96a">
+<div class="outline-text-2" id="text-orgb2e6d7f">
 </div>
 
-<div id="outline-container-org4a78c9d" class="outline-3 references">
-<h3 id="org4a78c9d">Links to "intervention"</h3>
-<div class="outline-text-3" id="text-org4a78c9d">
+<div id="outline-container-org26ea41e" class="outline-3 references">
+<h3 id="org26ea41e">Links to &ldquo;observation&rdquo;</h3>
+<div class="outline-text-3" id="text-org26ea41e">
 </div>
-<div id="outline-container-orgafd1473" class="outline-4">
-<h4 id="orgafd1473"><a href="towards_causal_representation_learning.html#ID-ea661fe1-d0f4-4bf8-9678-0cbbe9f73fc5">Independent mechanisms</a> <span class="backlinks-outline-path">(<i>Independent mechanisms</i>)</span></h4>
-<div class="outline-text-4" id="text-orgafd1473">
+<div id="outline-container-org33a08b7" class="outline-4">
+<h4 id="org33a08b7"><a href="artificial_intelligence.html#ID-ef80dd22-3ade-4fd6-98cd-1319eaa454f9">artificial intelligence</a></h4>
+<div class="outline-text-4" id="text-org33a08b7">
+<p>
+In the classic supervised learning / model.fit() setup, we&rsquo;re just on the <a href="#ID-d4b17339-7852-4eb6-a399-24e47b354a6c">observational</a> level of inference.<br />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-ID-d68c5093-d6d6-43b8-a48d-629ade9293b6" class="outline-2">
+<h2 id="ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</h2>
+<div class="outline-text-2" id="text-orgefc158b">
+</div>
+
+<div id="outline-container-org4d27949" class="outline-3 references">
+<h3 id="org4d27949">Links to &ldquo;intervention&rdquo;</h3>
+<div class="outline-text-3" id="text-org4d27949">
+</div>
+<div id="outline-container-orgecdbf0e" class="outline-4">
+<h4 id="orgecdbf0e"><a href="towards_causal_representation_learning.html#ID-ea661fe1-d0f4-4bf8-9678-0cbbe9f73fc5">Independent mechanisms</a> <span class="backlinks-outline-path">(<i>Independent mechanisms</i>)</span></h4>
+<div class="outline-text-4" id="text-orgecdbf0e">
 <p>
 Hypothesis: We can explain the world by the composition of informationally independent pieces/modules/mechanisms. (Note: not statistically independent, but independent s.t. any causal <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a> would affect just one such mechanism.)<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org4af1b88" class="outline-4">
-<h4 id="org4af1b88"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a> <span class="backlinks-outline-path">(<i>Causal induction from interventional data</i>)</span></h4>
-<div class="outline-text-4" id="text-org4af1b88">
+<div id="outline-container-org4753c2c" class="outline-4">
+<h4 id="org4753c2c"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a> <span class="backlinks-outline-path">(<i>Causal induction from interventional data</i>)</span></h4>
+<div class="outline-text-4" id="text-org4753c2c">
 <p>
 How to handle unknown <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a>? <i>infer</i> it.<br />
 </p>
+</div>
+</div>
+
+<div id="outline-container-org0661a9b" class="outline-4">
+<h4 id="org0661a9b"><a href="ablation_studies.html#ID-766f764c-818b-41ff-a7ed-02642696a830">ablation studies</a></h4>
+<div class="outline-text-4" id="text-org0661a9b">
+<p>
+Ablation studies are effectively using <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">interventions</a> (removing parts of your system) to reveal the underlying causal structure of your system. Francois Chollet (creator of Keras) writes about this:<br />
+</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ablation studies are crucial for deep learning research -- can&#39;t stress this enough.<br><br>Understanding causality in your system is the most straightforward way to generate reliable knowledge (the goal of any research). And ablation is a very low-effort way to look into causality.</p>&mdash; François Chollet (@fchollet) <a href="https://twitter.com/fchollet/status/1012721582148550662?ref_src=twsrc%5Etfw">June 29, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
 </div>
@@ -111,44 +137,36 @@ How to handle unknown <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">interve
 
 <div id="outline-container-ID-1f3f1a31-ff89-4c05-8c82-64888887f45e" class="outline-2">
 <h2 id="ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</h2>
-<div class="outline-text-2" id="text-org6e8506e">
+<div class="outline-text-2" id="text-org9d11c03">
 </div>
 
 
-<div id="outline-container-org81b7207" class="outline-3 references">
-<h3 id="org81b7207">Links to "counterfactual"</h3>
-<div class="outline-text-3" id="text-org81b7207">
+<div id="outline-container-org4daf0fb" class="outline-3 references">
+<h3 id="org4daf0fb">Links to &ldquo;counterfactual&rdquo;</h3>
+<div class="outline-text-3" id="text-org4daf0fb">
 </div>
-<div id="outline-container-orgd16a47a" class="outline-4">
-<h4 id="orgd16a47a"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
-<div class="outline-text-4" id="text-orgd16a47a">
+<div id="outline-container-org086ac77" class="outline-4">
+<h4 id="org086ac77"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
+<div class="outline-text-4" id="text-org086ac77">
 <p>
-NO_ITEM_DATA:sauerCounterfactualGenerativeNetworks2021<br />
+<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
 </p>
 
 <p>
-<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to "cheat"</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object's shape; a classifier might learn that "green grass background" =&gt; "cow classification."<br />
-</p>
-
-<p>
-This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
+This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate &ldquo;<a href="#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images&rdquo; to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgaebd39f" class="outline-4">
-<h4 id="orgaebd39f"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
-<div class="outline-text-4" id="text-orgaebd39f">
+<div id="outline-container-org9e868cc" class="outline-4">
+<h4 id="org9e868cc"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
+<div class="outline-text-4" id="text-org9e868cc">
 <p>
-NO_ITEM_DATA:sauerCounterfactualGenerativeNetworks2021<br />
+<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
 </p>
 
 <p>
-<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to "cheat"</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object's shape; a classifier might learn that "green grass background" =&gt; "cow classification."<br />
-</p>
-
-<p>
-This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
+This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate &ldquo;<a href="#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images&rdquo; to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
 </p>
 </div>
 </div>

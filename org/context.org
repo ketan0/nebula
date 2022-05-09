@@ -2,3 +2,5 @@
 :ID:       8d27adad-158b-4fa4-b31b-5f793d0b8341
 :END:
 #+title: context
+
+cc: [[id:1eecc48f-e23a-40be-852d-93b56636cbe4][Everything happens in a certain context]]

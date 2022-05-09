@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       88081c99-b938-450b-8305-c543941f1353
+:ROAM_REFS: https://www.nature.com/articles/s41586-021-03506-2
+:END:
+#+title: High-performance brain-to-text communication via handwriting | Nature
+
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@willettHighperformanceBraintotextCommunication2021]@@html:</sup>@@
+* Bibliography
+#+print_bibliography:

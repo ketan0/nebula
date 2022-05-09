@@ -2,3 +2,5 @@
 :ID:       ef80dd22-3ade-4fd6-98cd-1319eaa454f9
 :END:
 #+title: artificial intelligence
+
+Just gonna link this to [[id:5b02540a-15ac-4123-86f8-e6ca5420ce27][machine learning]] for now.

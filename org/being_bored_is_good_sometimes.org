@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       3076cb7e-56f1-42cc-9ae0-7f1ec548ec76
+:END:
+#+title: being bored is good sometimes.
+
+I think I got this meme from a [[https://www.youtube.com/watch?v=LKPwKFigF8U][veritasium video]]. But in my subjective experience, I find this to be true. I get a lot of interesting and insightful thoughts when doing...nothing. ("Nothing" can mean doing something that doesn't require [[id:4fba6fb0-e9cc-48b1-875c-a70e1a2dbc9b][conscious thought]], like driving a known route, or folding clothes, or walking somewhere.)
+
+cc: [[id:d671771e-c611-4a1c-8ccd-5b21cf5b0b2f][encouraging good patterns of thinking]]

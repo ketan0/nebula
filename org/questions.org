@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       81056afb-8235-4591-b171-99580096fa47
+:END:
+#+TITLE: questions
+(those without easy answers.)
+
+* Should I be pure or applied?
+* [[http://www.catb.org/~esr/faqs/smart-questions.html][how to ask good questions]]
+I see some Gricean Maxims at work here. Be relevant, have the context, be concise. I also see some [[id:6ac23ec1-38c9-4092-8ebb-a6efd4fa1839][Utilitarianism]], in that hackers want public forums to increase the flow of useful information and make it more efficient.
+* what makes a subject "interesting" to a given person?
+Why are some people so fascinated by video games, but it doesn't even ring a bell for others? Why do some people love the taste of pineapple on on pizza, and others hate it? What makes us like something? And how does our "taste" evolve over time -- how should it evolve over time?
+
+Proto-answer: it depends how rich of a [[id:8d27adad-158b-4fa4-b31b-5f793d0b8341][context]] the person in question has for that particular subject. Once you've built up a "history" with a particular thing, it starts to have a lot of context build up, and it naturally becomes more interesting to you.
+
+Proto-answer 2: It depends on the frame you approach it with. I feel like every food that I don't like (provided that a good amount of other people like it,) I just haven't found the right frame with which to approach it yet.
+* What standard of evidence should I demand to update my beliefs about something?
+  In other words, how much of a skeptic should I be?
+* "Flat" design (monorepo) vs. hierarchical?
+  For example, monorepo vs. structured w/ nice neat folders. Monorepo is easier to just scan and find what you want, simply use the power of search, but can get out of control if too large. OTOH, there is a strong argument for decomposition into folders/branches/etc. Also, when making text notes, should I have big, sprawling things like /thoughts/ or small, decomposed things? (Ideal answer: both) 
+* How does someone decide their values?
+* Are binaries valid things?
+* Where are frameworks useful? How much "meta-" is too much?
+* Do aesthetics matter?
+* Are other people smart/headed on the right track when it comes to things?
+* How do I /effectively/ customize my life? That is, taking the default settings that are *important* to change, and changing them.
+* Other people's questions:
+** https://patrickcollison.com/questions

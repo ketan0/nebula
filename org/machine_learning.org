@@ -2,3 +2,5 @@
 :ID:       5b02540a-15ac-4123-86f8-e6ca5420ce27
 :END:
 #+TITLE: machine learning
+
+Supervised learning is an example of [[id:d4b17339-7852-4eb6-a399-24e47b354a6c][observational]] inference -- we're just looking for associations between variables $X$ and $Y$.

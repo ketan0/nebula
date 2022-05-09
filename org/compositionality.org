@@ -22,5 +22,7 @@ A [[id:5b02540a-15ac-4123-86f8-e6ca5420ce27][machine learning]] example of compo
 #+ATTR_HTML: :alt progression from low-level to high-level features in a CNN.
 [[file:cnnlayers.jpg]]
 
+One step towards compositionality is the idea of neuro-symbolic models. Combining logic-based systems with connectionist methods.
+
 * Bibliography
 #+print_bibliography:

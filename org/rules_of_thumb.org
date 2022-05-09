@@ -36,6 +36,8 @@ Related to the idea of constraints supporting creativity--dead [[id:0dc3bc78-df9
   This, I feel, should be part of my [[id:bc3b4ee4-b1b4-4b1c-a44b-c5785c5cafe5][life philosophy]]. Wanna start a self-reflective practice? Make it extremely, dead, simple at first. Make it solid. Then, gradually, you can build from there. But you need that foundation to be laid down first, otherwise things are all like the kids who took caffeine or steroids...stunted growth, or premature experience.
 
 Simple life philosophy. Simple running routine. Simple self-reflection routine. To start out with.
+
+cc: [[id:d671771e-c611-4a1c-8ccd-5b21cf5b0b2f][encouraging good patterns of thinking]]
 * Simulate having a conversation with someone who knows their stuff.
 :PROPERTIES:
 :ID:       50ffa84c-9659-4347-a03a-289ff063a738

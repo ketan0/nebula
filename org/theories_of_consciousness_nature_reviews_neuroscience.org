@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       891dc4b5-889b-401b-ac75-bd79f8e5bb72
+:ROAM_REFS: https://www.nature.com/articles/s41583-022-00587-4 @sethTheoriesCounsciousness2022
+:END:
+#+title: Theories of consciousness | Nature Reviews Neuroscience
+
+cc: [[id:4fba6fb0-e9cc-48b1-875c-a70e1a2dbc9b][consciousness]]
+
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@sethTheoriesConsciousness2022]@@html:</sup>@@
+* Bibliography
+#+print_bibliography:
