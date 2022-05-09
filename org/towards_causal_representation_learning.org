@@ -32,9 +32,6 @@ Most of our knowledge is implicit, and not verbalizable. Same for neural network
 
 Verbalizable knowledge can be explicitly reasoned with, planned with.
 * Independent mechanisms
-:PROPERTIES:
-:ID:       ea661fe1-d0f4-4bf8-9678-0cbbe9f73fc5
-:END:
 Hypothesis: We can explain the world by the composition of informationally independent pieces/modules/mechanisms. (Note: not statistically independent, but independent s.t. any causal [[id:d68c5093-d6d6-43b8-a48d-629ade9293b6][intervention]] would affect just one such mechanism.)
 * Some System 2 inductive priors
 Sparse causal graph of high-level, semantically meaningful variables.

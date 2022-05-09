@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-01 Sun 15:55 -->
+<!-- 2022-05-09 Mon 00:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>causal inference</title>
@@ -15,6 +15,27 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -71,7 +92,7 @@
 <div id="content" class="content">
 <h1 class="title">causal inference
 <br />
-<span class="subtitle">Last modified on May 01, 2022</span>
+<span class="subtitle">Last modified on May 09, 2022</span>
 </h1>
 
 <div id="outline-container-ID-d4b17339-7852-4eb6-a399-24e47b354a6c" class="outline-2">
@@ -83,11 +104,11 @@
 <h3 id="org26ea41e">Links to &ldquo;observation&rdquo;</h3>
 <div class="outline-text-3" id="text-org26ea41e">
 </div>
-<div id="outline-container-org33a08b7" class="outline-4">
-<h4 id="org33a08b7"><a href="artificial_intelligence.html#ID-ef80dd22-3ade-4fd6-98cd-1319eaa454f9">artificial intelligence</a></h4>
-<div class="outline-text-4" id="text-org33a08b7">
+<div id="outline-container-orgcf54d65" class="outline-4">
+<h4 id="orgcf54d65"><a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a></h4>
+<div class="outline-text-4" id="text-orgcf54d65">
 <p>
-In the classic supervised learning / model.fit() setup, we&rsquo;re just on the <a href="#ID-d4b17339-7852-4eb6-a399-24e47b354a6c">observational</a> level of inference.<br />
+Supervised learning is an example of <a href="#ID-d4b17339-7852-4eb6-a399-24e47b354a6c">observational</a> inference &#x2013; we&rsquo;re just looking for associations between variables \(X\) and \(Y\).<br />
 </p>
 </div>
 </div>
@@ -104,9 +125,19 @@ In the classic supervised learning / model.fit() setup, we&rsquo;re just on the 
 <h3 id="org4d27949">Links to &ldquo;intervention&rdquo;</h3>
 <div class="outline-text-3" id="text-org4d27949">
 </div>
-<div id="outline-container-orgecdbf0e" class="outline-4">
-<h4 id="orgecdbf0e"><a href="towards_causal_representation_learning.html#ID-ea661fe1-d0f4-4bf8-9678-0cbbe9f73fc5">Independent mechanisms</a> <span class="backlinks-outline-path">(<i>Independent mechanisms</i>)</span></h4>
-<div class="outline-text-4" id="text-orgecdbf0e">
+<div id="outline-container-org0661a9b" class="outline-4">
+<h4 id="org0661a9b"><a href="ablation_studies.html#ID-766f764c-818b-41ff-a7ed-02642696a830">ablation studies</a></h4>
+<div class="outline-text-4" id="text-org0661a9b">
+<p>
+Ablation studies are effectively using <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">interventions</a> (removing parts of your system) to reveal the underlying causal structure of your system. Francois Chollet (creator of Keras) writes about this:<br />
+</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ablation studies are crucial for deep learning research -- can&#39;t stress this enough.<br><br>Understanding causality in your system is the most straightforward way to generate reliable knowledge (the goal of any research). And ablation is a very low-effort way to look into causality.</p>&mdash; François Chollet (@fchollet) <a href="https://twitter.com/fchollet/status/1012721582148550662?ref_src=twsrc%5Etfw">June 29, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+
+<div id="outline-container-org8a8a20e" class="outline-4">
+<h4 id="org8a8a20e"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a> <span class="backlinks-outline-path">(<i>Independent mechanisms</i>)</span></h4>
+<div class="outline-text-4" id="text-org8a8a20e">
 <p>
 Hypothesis: We can explain the world by the composition of informationally independent pieces/modules/mechanisms. (Note: not statistically independent, but independent s.t. any causal <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a> would affect just one such mechanism.)<br />
 </p>
@@ -119,16 +150,6 @@ Hypothesis: We can explain the world by the composition of informationally indep
 <p>
 How to handle unknown <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a>? <i>infer</i> it.<br />
 </p>
-</div>
-</div>
-
-<div id="outline-container-org0661a9b" class="outline-4">
-<h4 id="org0661a9b"><a href="ablation_studies.html#ID-766f764c-818b-41ff-a7ed-02642696a830">ablation studies</a></h4>
-<div class="outline-text-4" id="text-org0661a9b">
-<p>
-Ablation studies are effectively using <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">interventions</a> (removing parts of your system) to reveal the underlying causal structure of your system. Francois Chollet (creator of Keras) writes about this:<br />
-</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ablation studies are crucial for deep learning research -- can&#39;t stress this enough.<br><br>Understanding causality in your system is the most straightforward way to generate reliable knowledge (the goal of any research). And ablation is a very low-effort way to look into causality.</p>&mdash; François Chollet (@fchollet) <a href="https://twitter.com/fchollet/status/1012721582148550662?ref_src=twsrc%5Etfw">June 29, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
 </div>
@@ -145,9 +166,9 @@ Ablation studies are effectively using <a href="#ID-d68c5093-d6d6-43b8-a48d-629a
 <h3 id="org4daf0fb">Links to &ldquo;counterfactual&rdquo;</h3>
 <div class="outline-text-3" id="text-org4daf0fb">
 </div>
-<div id="outline-container-org086ac77" class="outline-4">
-<h4 id="org086ac77"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
-<div class="outline-text-4" id="text-org086ac77">
+<div id="outline-container-org9e868cc" class="outline-4">
+<h4 id="org9e868cc"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
+<div class="outline-text-4" id="text-org9e868cc">
 <p>
 <a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
 </p>
@@ -158,9 +179,9 @@ This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f
 </div>
 </div>
 
-<div id="outline-container-org9e868cc" class="outline-4">
-<h4 id="org9e868cc"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
-<div class="outline-text-4" id="text-org9e868cc">
+<div id="outline-container-orgfd9ac64" class="outline-4">
+<h4 id="orgfd9ac64"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
+<div class="outline-text-4" id="text-orgfd9ac64">
 <p>
 <a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
 </p>
