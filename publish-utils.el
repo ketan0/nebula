@@ -225,6 +225,7 @@ holding contextual information."
            :publishing-function org-html-publish-to-html
            :publishing-directory "~/garden-simple/html"
            :auto-sitemap t
+           :with-broken-links t
            :sitemap-title "sitemap"
            :section-numbers nil
            :with-toc nil

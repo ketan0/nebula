@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-28 Thu 21:44 -->
+<!-- 2022-05-14 Sat 13:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Counterfactual Generative Networks</title>
@@ -95,34 +95,34 @@
 <span class="subtitle">Last modified on April 28, 2022</span>
 </h1>
 <p>
-<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
+<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to "cheat"</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object's shape; a classifier might learn that "green grass background" =&gt; "cow classification."<br />
 </p>
 
 <p>
-This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate &ldquo;<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images&rdquo; to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
+This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate "<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images" to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
 </p>
 
-<div id="outline-container-org58e2ff6" class="outline-2">
-<h2 id="org58e2ff6">Problem setting:</h2>
-<div class="outline-text-2" id="text-org58e2ff6">
+<div id="outline-container-org9c750b5" class="outline-2">
+<h2 id="org9c750b5">Problem setting:</h2>
+<div class="outline-text-2" id="text-org9c750b5">
 <p>
-We have images \(\mathbf{x}\), and labels \(y\). In generative modeling, it&rsquo;s common to assume that each \(\mathbf{x}\) can be described by some lower-dimensional latent space \(\mathbf{z}\) (e.g. color, shape, etc.) We&rsquo;d like this latent <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> to be disentangled into several separate, semenatically meaningful factors, so we can control the influence of each on the classifier&rsquo;s decision. Usually in disentangled modeling, these factors are assumed to be statistically independent&#x2013; however, in practice this is a poor assumption. One rather contrived example is found in the colored MNIST dataset:<br />
+We have images \(\mathbf{x}\), and labels \(y\). In generative modeling, it's common to assume that each \(\mathbf{x}\) can be described by some lower-dimensional latent space \(\mathbf{z}\) (e.g. color, shape, etc.) We'd like this latent <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> to be disentangled into several separate, semenatically meaningful factors, so we can control the influence of each on the classifier's decision. Usually in disentangled modeling, these factors are assumed to be statistically independent&#x2013; however, in practice this is a poor assumption. One rather contrived example is found in the colored MNIST dataset:<br />
 </p>
 
 
-<div id="orgcfbca2d" class="figure">
+<div id="orgc85fa4c" class="figure">
 <p><img src="colored_mnist.png" alt="example digits in colored MNIST dataset." /><br />
 </p>
 </div>
 
 <p>
-We might want to disentangle digit shape from color; however, in the train fold, all examples of the same digit are also the same color. (In the test fold, the colors are randomized.) Given this dataset, a &ldquo;dumb&rdquo; neural net might learn to do the simplest thing, which is to count how many pixels are a certain color; if a digit is red, it assumes it must be a 0, if it&rsquo;s green, a 1, and so on, completely ignoring the digit&rsquo;s shape.<br />
+We might want to disentangle digit shape from color; however, in the train fold, all examples of the same digit are also the same color. (In the test fold, the colors are randomized.) Given this dataset, a "dumb" neural net might learn to do the simplest thing, which is to count how many pixels are a certain color; if a digit is red, it assumes it must be a 0, if it's green, a 1, and so on, completely ignoring the digit's shape.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgcbb6815" class="outline-2">
-<h2 id="orgcbb6815">Structural Causal Models</h2>
-<div class="outline-text-2" id="text-orgcbb6815">
+<div id="outline-container-orgb0b098c" class="outline-2">
+<h2 id="orgb0b098c">Structural Causal Models</h2>
+<div class="outline-text-2" id="text-orgb0b098c">
 <p>
 An SCM \(\mathfrak{C}\) is defined is a collection of \(d\) structural assignments<br />
 \(S_{j}:=f_{j}\left(\mathbf{P A}_{j}, U_{j}\right), \quad j=1, \ldots, d\)<br />
@@ -130,32 +130,48 @@ where each random variable \(S_{j}\) is a function of its parents \(\mathbf{P A}
 </p>
 </div>
 </div>
-<div id="outline-container-org52c2deb" class="outline-2">
-<h2 id="org52c2deb">Architecture</h2>
-<div class="outline-text-2" id="text-org52c2deb">
+<div id="outline-container-orgad6beef" class="outline-2">
+<h2 id="orgad6beef">Architecture</h2>
+<div class="outline-text-2" id="text-orgad6beef">
 
-<div id="org4a2df2d" class="figure">
+<div id="org27ab551" class="figure">
 <p><img src="cgn_architecture.png" alt="architecture diagram of the Counterfactual Generative Network (CGN.)" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org0b55227" class="outline-2 no-display">
-<h2 id="org0b55227">Link</h2>
-<div class="outline-text-2" id="text-org0b55227">
+<div id="outline-container-org0c4adfb" class="outline-2 no-display">
+<h2 id="org0c4adfb">Link</h2>
+<div class="outline-text-2" id="text-org0c4adfb">
 <p>
 <sup><a href="#citeproc_bib_item_1">[1]</a></sup><br />
 </p>
 </div>
 </div>
-<div id="outline-container-orge3fcb95" class="outline-2">
-<h2 id="orge3fcb95">Bibliography</h2>
-<div class="outline-text-2" id="text-orge3fcb95">
+<div id="outline-container-org954ad61" class="outline-2">
+<h2 id="org954ad61">Bibliography</h2>
+<div class="outline-text-2" id="text-org954ad61">
 <style>.csl-left-margin{float: left; padding-right: 0em;}
  .csl-right-inline{margin: 0 0 0 1em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
     <div class="csl-left-margin">[1]</div><div class="csl-right-inline">A. Sauer and A. Geiger, “Counterfactual Generative Networks,” Jan. 15, 2021. Accessed: Apr. 29, 2022. [Online]. Available: <a href="http://arxiv.org/abs/2101.06046">http://arxiv.org/abs/2101.06046</a></div>
   </div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orga435892" class="outline-2 references">
+<h2 id="orga435892">Links to "Counterfactual Generative Networks"</h2>
+<div class="outline-text-2" id="text-orga435892">
+</div>
+<div id="outline-container-orgaf5584f" class="outline-3">
+<h3 id="orgaf5584f"><a href="paper_notes.html#ID-d4693400-d612-4531-96cb-da0b8d37b4b0">📄 paper notes</a></h3>
+<div class="outline-text-3" id="text-orgaf5584f">
+<p>
+<a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a><br />
+<a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a><br />
+</p>
 </div>
 </div>
 </div>

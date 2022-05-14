@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-25 Mon 18:16 -->
+<!-- 2022-05-14 Sat 13:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>👾 programming</title>
@@ -314,7 +314,7 @@ Hah, this is a cute one. I initially only put the first 4 lines in, and it proce
 </pre>
 </div>
 
-<pre class="example" id="orgc46ecdb">
+<pre class="example" id="org5e679ae">
 *
 **
 ***
@@ -351,7 +351,7 @@ Whoa. This would certainly make using matplotlib a lot easier.<br />
 
 
 
-<div id="orge470df2" class="figure">
+<div id="orgebc0c45" class="figure">
 <p><img src="my_plot.png" alt="my_plot.png" /><br />
 </p>
 </div>
@@ -443,44 +443,6 @@ Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emac
 </div>
 </div>
 
-<div id="outline-container-orga9c082b" class="outline-3">
-<h3 id="orga9c082b"><a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a></h3>
-<div class="outline-text-3" id="text-orga9c082b">
-<p>
-You have a set of reusable pieces that can be combined to form different, interesting things.<br />
-</p>
-
-<p>
-Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programs</a> into modular, reusable unit is one example of this.<br />
-</p>
-
-
-<div id="org9683863" class="figure">
-<p><img src="decomposition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
-</p>
-</div>
-
-<p>
-Some methodical activities, such as making breakfast, decompose well into modular activities as well:<br />
-</p>
-
-<div id="org4688cae" class="figure">
-<p><img src="breakfast.png" alt="tree of the decomposition of making breakfast into &quot;make toast,&quot; &quot;make tea,&quot; etc." /><br />
-</p>
-</div>
-
-<p>
-A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> example of compositionaity is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model's early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
-</p>
-
-
-<div id="orgb40bd9e" class="figure">
-<p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
-</p>
-</div>
-</div>
-</div>
-
 <div id="outline-container-org5a2770e" class="outline-3">
 <h3 id="org5a2770e"><a href="code_comments.html#ID-3f0de91d-119f-4fd2-942e-f3458e60ed40">code comments</a> <span class="backlinks-outline-path">(<i>Why do we comment our programs?</i>)</span></h3>
 <div class="outline-text-3" id="text-org5a2770e">
@@ -507,6 +469,52 @@ If I just had the bare config, it'd be pretty opaque <i>what</i> the code means 
 </div>
 </div>
 
+<div id="outline-container-orga9c082b" class="outline-3">
+<h3 id="orga9c082b"><a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a></h3>
+<div class="outline-text-3" id="text-orga9c082b">
+<p>
+You have a set of reusable pieces that can be combined to form different, interesting things.<br />
+</p>
+
+<p>
+Related: [1]<br />
+</p>
+
+<p>
+Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programs</a> into modular, reusable unit is one example of this.<br />
+</p>
+
+
+<div id="org2a84be9" class="figure">
+<p><img src="decomposition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
+</p>
+</div>
+
+<p>
+Some methodical activities, such as making breakfast, decompose well into modular activities as well:<br />
+</p>
+
+<div id="org1464a4e" class="figure">
+<p><img src="breakfast.png" alt="tree of the decomposition of making breakfast into &quot;make toast,&quot; &quot;make tea,&quot; etc." /><br />
+</p>
+</div>
+
+<p>
+A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> example of compositionaity is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model's early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
+</p>
+
+
+<div id="orgc3d56b7" class="figure">
+<p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
+</p>
+</div>
+
+<p>
+One step towards compositionality is the idea of neuro-symbolic models. Combining logic-based systems with connectionist methods.<br />
+</p>
+</div>
+</div>
+
 <div id="outline-container-orge0e5d7b" class="outline-3">
 <h3 id="orge0e5d7b"><a href="index.html#ID-23e03a28-48b1-4fa3-9fa3-71a369950c6d">Ketan's Nebula</a> <span class="backlinks-outline-path">(<i>A few starting points:</i>)</span></h3>
 <div class="outline-text-3" id="text-orge0e5d7b">
@@ -520,6 +528,7 @@ If I just had the bare config, it'd be pretty opaque <i>what</i> the code means 
 <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a><br />
 <a href="social_psychology.html#ID-3db1ed04-4b29-46cf-9940-1afd30d5d25f">🧠 Social Psychology</a><br />
 <a href="game_of_life.html#ID-918b7900-d37d-4d92-a900-6d6632fd2f47">🔲 Conway's Game of Life</a><br />
+<a href="questions.html#ID-81056afb-8235-4591-b171-99580096fa47">❓ questions</a><br />
 <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">👾 programming</a><br />
 <a href="cs152_trust_and_safety_engineering.html#ID-0e008aa4-63a2-4ae3-8c59-933b3065d721">Trust and Safety Engineering</a><br />
 <a href="cs144_introduction_to_computer_networking.html#ID-9908ac8d-fadd-4fe6-a78c-c3471cc36ea1">🌐 Computer Networking</a><br />

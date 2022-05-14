@@ -14,6 +14,7 @@
 [[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][♏️ emacs]]
 [[id:3db1ed04-4b29-46cf-9940-1afd30d5d25f][🧠 Social Psychology]]
 [[id:918b7900-d37d-4d92-a900-6d6632fd2f47][🔲 Conway's Game of Life]]
+[[id:81056afb-8235-4591-b171-99580096fa47][❓ questions]]
 [[id:0997b060-ee05-458e-beed-3494675c879d][👾 programming]]
 [[id:0e008aa4-63a2-4ae3-8c59-933b3065d721][Trust and Safety Engineering]]
 [[id:9908ac8d-fadd-4fe6-a78c-c3471cc36ea1][🌐 Computer Networking]]

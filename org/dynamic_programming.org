@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       e60c441f-deb9-4eca-8816-73e477b98c29
+:END:
+#+title: dynamic programming

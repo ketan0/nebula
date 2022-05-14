@@ -3,7 +3,7 @@
 :END:
 #+title: metacognition
 
-Feels important.
+Like cognition, but [[id:c244f543-2917-4b32-8bde-883a3e1d5361][meta]].
 
 #+begin_quote
 Why do some people learn so much so well? The simplest hypothesis is
@@ -12,5 +12,3 @@ are little more than tricks of "higher-order" expertise. Just as one child
 learns to re-arrange its building-blocks in clever ways, another child
 might learn to play, inside its head, at re-arranging how it learns! -- Marvin Minsky,  https://web.media.mit.edu/~minsky/papers/ComputersCantThink.txt
 #+end_quote
-
- wl

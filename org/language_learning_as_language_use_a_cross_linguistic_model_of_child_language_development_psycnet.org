@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       8ba4e0bd-82cd-4218-b7cd-ed941e74613e
+:ROAM_REFS: https://psycnet.apa.org/record/2018-67240-001 @mccauleyLanguageLearningLanguage2019
+:END:
+#+title: Language learning as language use: A cross-linguistic model of child language development.
+
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@mccauleyLanguageLearningLanguage2019]@@html:</sup>@@
+* Bibliography
+#+print_bibliography:

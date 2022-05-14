@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-01 Sun 15:58 -->
+<!-- 2022-05-14 Sat 13:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>machine learning</title>
@@ -95,17 +95,17 @@
 <span class="subtitle">Last modified on May 01, 2022</span>
 </h1>
 <p>
-Supervised learning is an example of <a href="causal_inference.html#ID-d4b17339-7852-4eb6-a399-24e47b354a6c">observational</a> inference &#x2013; we&rsquo;re just looking for associations between variables \(X\) and \(Y\).<br />
+Supervised learning is an example of <a href="causal_inference.html#ID-d4b17339-7852-4eb6-a399-24e47b354a6c">observational</a> inference &#x2013; we're just looking for associations between variables \(X\) and \(Y\).<br />
 </p>
 
 
-<div id="outline-container-org931c34d" class="outline-2 references">
-<h2 id="org931c34d">Links to &ldquo;machine learning&rdquo;</h2>
-<div class="outline-text-2" id="text-org931c34d">
+<div id="outline-container-orgae413f1" class="outline-2 references">
+<h2 id="orgae413f1">Links to "machine learning"</h2>
+<div class="outline-text-2" id="text-orgae413f1">
 </div>
-<div id="outline-container-org3208651" class="outline-3">
-<h3 id="org3208651"><a href="machine_learning_interviews_book.html#ID-84128eb6-2328-4d5e-a668-c4ccdab9b913">Machine Learning Interviews Book</a></h3>
-<div class="outline-text-3" id="text-org3208651">
+<div id="outline-container-orga6257fa" class="outline-3">
+<h3 id="orga6257fa"><a href="machine_learning_interviews_book.html#ID-84128eb6-2328-4d5e-a668-c4ccdab9b913">Machine Learning Interviews Book</a></h3>
+<div class="outline-text-3" id="text-orga6257fa">
 <p>
 <a href="https://huyenchip.com/ml-interviews-book/">https://huyenchip.com/ml-interviews-book/</a><br />
 </p>
@@ -115,35 +115,30 @@ This is a book that provides a comprehensive overview of <a href="machine_learni
 </p>
 
 <p>
-Below are my (WIP) answers to some of the <a href="https://huyenchip.com/ml-interviews-book/contents/part-ii.-questions.html">questions</a> in the book. DISCLAIMER: While these answers are accurate to the best of my knowledge, I can&rsquo;t guarantee their correctness.<br />
+Below are my (WIP) answers to some of the <a href="https://huyenchip.com/ml-interviews-book/contents/part-ii.-questions.html">questions</a> in the book. DISCLAIMER: While these answers are accurate to the best of my knowledge, I can't guarantee their correctness.<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgce828f9" class="outline-3">
-<h3 id="orgce828f9"><a href="machine_learning_interviews_book.html#ID-84128eb6-2328-4d5e-a668-c4ccdab9b913">Machine Learning Interviews Book</a> <span class="backlinks-outline-path">(<i>Math &gt; Algebra and (little) calculus &gt; Vectors</i>)</span></h3>
-<div class="outline-text-3" id="text-orgce828f9">
-<ol class="org-ol">
-<li>Dot product<br />
+<div id="outline-container-orgc1ac41f" class="outline-3">
+<h3 id="orgc1ac41f"><a href="machine_learning_interviews_book.html#ID-84128eb6-2328-4d5e-a668-c4ccdab9b913">Machine Learning Interviews Book</a> <span class="backlinks-outline-path">(<i>Math &gt; Algebra and (little) calculus &gt; Vectors</i>)</span></h3>
+<div class="outline-text-3" id="text-orgc1ac41f">
 <ol class="org-ol">
 <li><p>
-[E] <b>What&rsquo;s the geometric interpretation of the dot product of two vectors?</b><br />
-The dot product \(\mathbf{x} \cdot \mathbf{y}\) is the length of the projection of \(\mathbf{x}\) onto the unit vector \(\mathbf{\hat{y}}\); algebraically this is equal to \(\lvert\lvert \mathbf{x} \rvert\rvert \cos(\theta)\), where \(\theta\) is the angle between the vectors. Intuitively, the more the two vectors point in the same direction, the higher the dot product will be, as can be seen from the graphic below (where \(DP\) shows the value of the dot product between \(a\) and \(b\).) When the vectors are orthogonal, the dot product is zero.<br />
+Dot product<br />
+a. [E] <b>What's the geometric interpretation of the dot product of two vectors?</b><br />
+   The dot product \(\mathbf{x} \cdot \mathbf{y}\) is the length of the projection of \(\mathbf{x}\) onto the unit vector \(\mathbf{\hat{y}}\); algebraically this is equal to \(\lvert\lvert \mathbf{x} \rvert\rvert \cos(\theta)\), where \(\theta\) is the angle between the vectors. Intuitively, the more the two vectors point in the same direction, the higher the dot product will be, as can be seen from the graphic below (where \(DP\) shows the value of the dot product between \(a\) and \(b\).) When the vectors are orthogonal, the dot product is zero.<br />
 </p>
 
-
-<div id="orgf515769" class="figure">
-<p><img src="dot_product.gif" alt="dot_product.gif" /><br />
-</p>
-</div></li>
-<li>[E] <b>Given a vector \(u\), find vector \(v\) of unit length such that the dot product of \(u\) and \(v\) is maximum.</b><br />
-This would simply be the unit vector in the direction of \(u\); namely, \(v = \frac{u}{\lvert\lvert u \rvert\rvert}\).<br /></li>
-</ol></li>
-<li>Outer product<br />
-<ol class="org-ol">
+<p>
+   <img src="dot_product.gif" alt="dot_product.gif" /><br />
+b. [E] <b>Given a vector \(u\), find vector \(v\) of unit length such that the dot product of \(u\) and \(v\) is maximum.</b><br />
+   This would simply be the unit vector in the direction of \(u\); namely, \(v = \frac{u}{\lvert\lvert u \rvert\rvert}\).<br />
+</p></li>
 <li><p>
-[E] <b>Given two vectors \(a=[3,2,1]\) and \(b=[−1,0,1]\), calculate the outer product \(a^T b\).</b><br />
-\(a^T b = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 0 & 1 \end{bmatrix} = \begin{bmatrix} -3 & 0 & 3 \\ -2 & 0 & 2 \\ -1 & 0 & 1 \end{bmatrix}\)<br />
+Outer product<br />
+a. [E] <b>Given two vectors \(a=[3,2,1]\) and \(b=[−1,0,1]\), calculate the outer product \(a^T b\).</b><br />
+   \(a^T b = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 0 & 1 \end{bmatrix} = \begin{bmatrix} -3 & 0 & 3 \\ -2 & 0 & 2 \\ -1 & 0 & 1 \end{bmatrix}\)<br />
 </p>
 
 <p>
@@ -161,15 +156,16 @@ We could also calculate this using numpy, like so:<br />
 [[-3  0  3]
  [-2  0  2]
  [-1  0  1]]
-</pre></li>
+</pre>
 
-<li><p>
-[M] Give an example of how the outer product can be useful in ML.<br />
-Potentially&#x2026;in some sort of collaborative filtering system, you&rsquo;d want an outer product between \(m\) user vectors and \(n\) item vectors, to produce a \(m \times n\) similarity matrix?<br />
+
+<p>
+b. [M] Give an example of how the outer product can be useful in ML.<br />
+   Potentially&#x2026;in some sort of collaborative filtering system, you'd want an outer product between \(m\) user vectors and \(n\) item vectors, to produce a \(m \times n\) similarity matrix?<br />
 </p>
 
 <p>
-Many applications seem to use the Kronecker product (generalization of the outer product to tensors) &#x2013; don&rsquo;t quite understand them yet, but here are a few:<br />
+Many applications seem to use the Kronecker product (generalization of the outer product to tensors) &#x2013; don't quite understand them yet, but here are a few:<br />
 </p>
 <ul class="org-ul">
 <li><a href="https://arxiv.org/pdf/1503.05671.pdf">Optimizing Neural Networks with Kronecker-factored Approximate Curvature</a><br /></li>
@@ -177,13 +173,12 @@ Many applications seem to use the Kronecker product (generalization of the outer
 </ul>
 
 <p>
-There has to be something simpler that I&rsquo;m missing.<br />
+There has to be something simpler that I'm missing.<br />
 </p></li>
-</ol></li>
 
 <li><p>
 [E] <b>What does it mean for two vectors to be linearly independent?</b><br />
-A set of vectors is linearly <i>independent</i> if there is no way to nontrivially combine them into the zero vector. What this means is that there should e no way for the vectors to &ldquo;cancel each other out,&rdquo; so to speak; there are no &ldquo;redundant&rdquo; vectors.<br />
+A set of vectors is linearly <i>independent</i> if there is no way to nontrivially combine them into the zero vector. What this means is that there should e no way for the vectors to "cancel each other out," so to speak; there are no "redundant" vectors.<br />
 </p>
 
 <p>
@@ -192,16 +187,15 @@ For only two vectors, this occurs iff (1) neither of them is the zero vector (ot
 
 <li>[M] <b>Given two sets of vectors \(A=a_1,a_2,a_3,...,a_n\)<br />
 and \(B=b_1,b_2,b_3,...,b_m\), How do you check that they share the same basis?</b><br />
-I think more precisely we&rsquo;d want to determine whether the <i>vector spaces</i> spanned by \(A\) and \(B\) share the same basis. But for now, let&rsquo;s just gloss over that minor distinction, and refer to the vector spaces as \(A\) and \(B\) as well. With that understanding, we can find a basis of \(A\) by building a maximal linearly independent set, and then if that basis also spans \(B\), then they share the same basis (in fact, that means that \(A\) and \(B\) span the same vector space.)<br /></li>
+I think more precisely we'd want to determine whether the <i>vector spaces</i> spanned by \(A\) and \(B\) share the same basis. But for now, let's just gloss over that minor distinction, and refer to the vector spaces as \(A\) and \(B\) as well. With that understanding, we can find a basis of \(A\) by building a maximal linearly independent set, and then if that basis also spans \(B\), then they share the same basis (in fact, that means that \(A\) and \(B\) span the same vector space.)<br /></li>
 
 <li><b>Given \(n\) vectors, each of \(d\) dimensions, what is the dimension of their span?</b><br />
-Not enough information. For example, let \(n = 2\) and \(d = 2\). Consider the vector space spanned by \(\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 2 \\ 0 \end{bmatrix}\}\). This vector space is fully spanned by the basis \(\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}\}\), making the dimension of the span \(1\). However, if we consider the vector space spanned by \(\{ \begin{bmatrix} 2 \\ 3 \end{bmatrix}, \begin{bmatrix} 4 \\ 1 \end{bmatrix}\}\), it is fully spanned by the basis \(\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \end{bmatrix}\}\), making the dimension of its span \(2\). So, essentially it depends on the specific values of the vectors, and to what degree they&rsquo;re linearly independent from each other (i.e. the size of the basis.)<br /></li>
+Not enough information. For example, let \(n = 2\) and \(d = 2\). Consider the vector space spanned by \(\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 2 \\ 0 \end{bmatrix}\}\). This vector space is fully spanned by the basis \(\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}\}\), making the dimension of the span \(1\). However, if we consider the vector space spanned by \(\{ \begin{bmatrix} 2 \\ 3 \end{bmatrix}, \begin{bmatrix} 4 \\ 1 \end{bmatrix}\}\), it is fully spanned by the basis \(\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \end{bmatrix}\}\), making the dimension of its span \(2\). So, essentially it depends on the specific values of the vectors, and to what degree they're linearly independent from each other (i.e. the size of the basis.)<br /></li>
 
-<li>Norms and metrics<br />
-<ol class="org-ol">
 <li><p>
-[E] <b>What&rsquo;s a norm? What is \(L_0\), \(L_1\), \(L_2\), \(L_{norm}\)?</b><br />
-Can be thought of as a vector&rsquo;s distance from the origin. This becomes relevant in <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a>, when we want to objectively measure and minimize a scalar distance between the ground truth labels and model predictions.<br />
+Norms and metrics<br />
+a. [E] <b>What's a norm? What is \(L_0\), \(L_1\), \(L_2\), \(L_{norm}\)?</b><br />
+   Can be thought of as a vector's distance from the origin. This becomes relevant in <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a>, when we want to objectively measure and minimize a scalar distance between the ground truth labels and model predictions.<br />
 </p>
 
 <p>
@@ -209,7 +203,7 @@ So first, we get the vector distance between the ground truth and prediction,  w
 </p>
 
 <p>
-\(L_0\) &ldquo;norm&rdquo; is simply the total number of nonzero elements in a vector. If you consider \(0^0 = 0\), then<br />
+\(L_0\) "norm" is simply the total number of nonzero elements in a vector. If you consider \(0^0 = 0\), then<br />
 \[L_0(x) = \left|x_{1}\right|^{0}+\left|x_{2}\right|^{0}+\cdots+\left|x_{n}\right|^{0}\]<br />
 \(L_1\) norm: add up the absolute values of the elements.<br />
 \[L_1(x) = \left|x_{1}\right|^{1}+\left|x_{2}\right|^{1}+\cdots+\left|x_{n}\right|^{1}\]<br />
@@ -221,19 +215,29 @@ So first, we get the vector distance between the ground truth and prediction,  w
 </p>
 
 <p>
-I can&rsquo;t find anything on \(L_{norm}\), so maybe that was a typo?<br />
-</p></li>
+I can't find anything on \(L_{norm}\), so maybe that was a typo?<br />
+</p>
 
-<li>[M] <b>How do norm and metric differ? Given a norm, make a metric. Given a metric, can we make a norm?</b><br />
-My understanding is that a norm is simply a mathematical operation on a vector, whereas a (loss) metric is measuring the distance between two things. Given a norm, let&rsquo;s take the \(L_2\) norm, we can easily make a metric, by plugging in a distance vector between ground truth and prediction, as shown in the previous question, and summing the squares of the components. A norm takes in a single variable (i.e. a vector,) whereas a metric takes in two (i.e. ground truth vector and predictions vector.)<br /></li>
-</ol></li>
+<p>
+b. [M] <b>How do norm and metric differ? Given a norm, make a metric. Given a metric, can we make a norm?</b><br />
+   My understanding is that a norm is simply a mathematical operation on a vector, whereas a (loss) metric is measuring the distance between two things. Given a norm, let's take the \(L_2\) norm, we can easily make a metric, by plugging in a distance vector between ground truth and prediction, as shown in the previous question, and summing the squares of the components. A norm takes in a single variable (i.e. a vector,) whereas a metric takes in two (i.e. ground truth vector and predictions vector.)<br />
+</p></li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-orgecfc1dc" class="outline-3">
-<h3 id="orgecfc1dc"><a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a></h3>
-<div class="outline-text-3" id="text-orgecfc1dc">
+<div id="outline-container-org4e4c071" class="outline-3">
+<h3 id="org4e4c071"><a href="artificial_intelligence.html#ID-ef80dd22-3ade-4fd6-98cd-1319eaa454f9">artificial intelligence</a></h3>
+<div class="outline-text-3" id="text-org4e4c071">
+<p>
+Just gonna link this to <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> for now.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org695b1bb" class="outline-3">
+<h3 id="org695b1bb"><a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a></h3>
+<div class="outline-text-3" id="text-org695b1bb">
 <p>
 You have a set of reusable pieces that can be combined to form different, interesting things.<br />
 </p>
@@ -247,7 +251,7 @@ Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c87
 </p>
 
 
-<div id="orgcff29a9" class="figure">
+<div id="orgf23c74f" class="figure">
 <p><img src="decomposition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
 </p>
 </div>
@@ -256,29 +260,34 @@ Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c87
 Some methodical activities, such as making breakfast, decompose well into modular activities as well:<br />
 </p>
 
-<div id="orgcb3e99b" class="figure">
+<div id="org873b9cb" class="figure">
 <p><img src="breakfast.png" alt="tree of the decomposition of making breakfast into &quot;make toast,&quot; &quot;make tea,&quot; etc." /><br />
 </p>
 </div>
 
 <p>
-A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> example of compositionaity is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model&rsquo;s early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
+A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> example of compositionaity is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model's early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
 </p>
 
 
-<div id="orgf526b78" class="figure">
+<div id="org13f0018" class="figure">
 <p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
 </p>
 </div>
+
+<p>
+One step towards compositionality is the idea of neuro-symbolic models. Combining logic-based systems with connectionist methods.<br />
+</p>
 </div>
 </div>
 
-<div id="outline-container-org267dcdb" class="outline-3">
-<h3 id="org267dcdb"><a href="artificial_intelligence.html#ID-ef80dd22-3ade-4fd6-98cd-1319eaa454f9">artificial intelligence</a></h3>
-<div class="outline-text-3" id="text-org267dcdb">
+<div id="outline-container-orgb6011c7" class="outline-3">
+<h3 id="orgb6011c7"><a href="ablation_studies.html#ID-766f764c-818b-41ff-a7ed-02642696a830">ablation studies</a></h3>
+<div class="outline-text-3" id="text-orgb6011c7">
 <p>
-Just gonna link this to <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> for now.<br />
+Ablation studies are effectively using <a href="causal_inference.html#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">interventions</a> (removing parts of your system) to reveal the underlying causal structure of your system. Francois Chollet (creator of Keras) writes about this being useful in a <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> context:<br />
 </p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ablation studies are crucial for deep learning research -- can&#39;t stress this enough.<br><br>Understanding causality in your system is the most straightforward way to generate reliable knowledge (the goal of any research). And ablation is a very low-effort way to look into causality.</p>&mdash; François Chollet (@fchollet) <a href="https://twitter.com/fchollet/status/1012721582148550662?ref_src=twsrc%5Etfw">June 29, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
 </div>

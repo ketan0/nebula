@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       d70b5661-a3ea-4b12-b67c-ac1c47550b76
+:END:
+#+title: humor
+
+what is humor? things that are unexpected, but in a "humorous" way? Ok, that's tautological. But still. definitely something that I want to think about, [[id:4bba82cd-9443-4496-8896-81323093ec11][notes I'm actively working on]].
+
+As a kind of [[id:c244f543-2917-4b32-8bde-883a3e1d5361][meta]] example, while I'm here writing this note in [[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][emacs]], I found myself naturally laughing at the fact that org-mode interpets the ~+~ signs in the encrypted PGP message in my org-journal files as a +strikethrough+, so parts of the PGP message are struck through. Even though strikethrough and org-crypt are both /bona fide/ features of org, no one really noticed this little harmless, unintended interaction between the two (huh, there's the connection to [[id:87e83cf3-3dfa-4486-845d-155895a9f6b6][modularity]]!). Lmao.
+
+#+ATTR_HTML: :width 400 :alt screenshot of an encrypted journal file, displayed the aforementioned striking-out behavior within the PGP text. Hey, if you figure out how to decrypt it, you can read my journal file for the day!
+#+CAPTION: Hey, if you figure out how to decrypt it, you can read what secrets I told to my journal today!
+[[file:journal_screenshot.png]]

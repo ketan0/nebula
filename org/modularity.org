@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       87e83cf3-3dfa-4486-845d-155895a9f6b6
+:ROAM_ALIASES: modular
 :END:
 #+title: modularity
 

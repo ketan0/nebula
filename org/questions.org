@@ -1,21 +1,37 @@
 :PROPERTIES:
 :ID:       81056afb-8235-4591-b171-99580096fa47
 :END:
-#+TITLE: questions
+#+TITLE: ❓ questions
 (those without easy answers.)
 
 * Should I be pure or applied?
-* [[http://www.catb.org/~esr/faqs/smart-questions.html][how to ask good questions]]
+* how to ask good questions
+:PROPERTIES:
+:ID:       bd7417e8-ae04-47b7-b486-b70ed3188cae
+:END:
+[[http://www.catb.org/~esr/faqs/smart-questions.html][How To Ask Questions The Smart Way - Eric Steven Raymond]]
 I see some Gricean Maxims at work here. Be relevant, have the context, be concise. I also see some [[id:6ac23ec1-38c9-4092-8ebb-a6efd4fa1839][Utilitarianism]], in that hackers want public forums to increase the flow of useful information and make it more efficient.
 * what makes a subject "interesting" to a given person?
+:PROPERTIES:
+:ID:       a6d89b43-5528-47ce-83e7-d4514f547ca8
+:END:
 Why are some people so fascinated by video games, but it doesn't even ring a bell for others? Why do some people love the taste of pineapple on on pizza, and others hate it? What makes us like something? And how does our "taste" evolve over time -- how should it evolve over time?
 
 Proto-answer: it depends how rich of a [[id:8d27adad-158b-4fa4-b31b-5f793d0b8341][context]] the person in question has for that particular subject. Once you've built up a "history" with a particular thing, it starts to have a lot of context build up, and it naturally becomes more interesting to you.
 
 Proto-answer 2: It depends on the frame you approach it with. I feel like every food that I don't like (provided that a good amount of other people like it,) I just haven't found the right frame with which to approach it yet.
+* is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?
+:PROPERTIES:
+:ID:       c2b46716-f6f5-48ee-87b9-c6a85acfb103
+:END:
+thinking about this in relation to [[id:e60c441f-deb9-4eca-8816-73e477b98c29][dynamic programming]] -- I think it serves as a good metaphor for why it can be useful to think about the structure of the problems you're solving, and if there's any overlap / reuse that can occur....seems that this is also related to [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][decomposition]] / [[id:87e83cf3-3dfa-4486-845d-155895a9f6b6][modularity]]
 * What standard of evidence should I demand to update my beliefs about something?
   In other words, how much of a skeptic should I be?
 * "Flat" design (monorepo) vs. hierarchical?
+:PROPERTIES:
+:ID:       deea93db-65e4-425b-8700-fe96117795d1
+:END:
+Aka, is [[id:87e83cf3-3dfa-4486-845d-155895a9f6b6][modularity]] good?
   For example, monorepo vs. structured w/ nice neat folders. Monorepo is easier to just scan and find what you want, simply use the power of search, but can get out of control if too large. OTOH, there is a strong argument for decomposition into folders/branches/etc. Also, when making text notes, should I have big, sprawling things like /thoughts/ or small, decomposed things? (Ideal answer: both) 
 * How does someone decide their values?
 * Are binaries valid things?

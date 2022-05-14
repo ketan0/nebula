@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       9dc9ec18-e8e9-4954-a562-cf5b0846c010
+:END:
+#+title: iteration speed >>>
+
+cc [[id:5df9203d-c7d9-4341-b7dc-ac4236000d8b][👍🏾 rules of thumb]]
