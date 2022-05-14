@@ -5,7 +5,7 @@
 
 Mentally bookmarking these pages -- think there is some interesting "sauce" to be gotten from each of these.
 
-[[id:4bba82cd-9443-4496-8896-81323093ec11][notes I'm actively working on]] (hah, recursive)
+[[id:4bba82cd-9443-4496-8896-81323093ec11][notes I'm actively working on]] (hah, [[id:ca2dd450-e352-43ce-95eb-9fd8e80c646c][recursive]])
 [[id:3f0de91d-119f-4fd2-942e-f3458e60ed40][code comments]]
 [[id:b910e58f-f1fe-4c3f-8efb-69bfa261b191][📚 book notes]]
 [[id:918b7900-d37d-4d92-a900-6d6632fd2f47][🔲 Conway's Game of Life]]
