@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       089327e2-3429-4df9-9fd8-d17b8d6cc66d
+:ROAM_REFS: https://www.sas.upenn.edu/~haroldfs/dravling/grice.html
+:END:
+#+title: Grice's Maxims
+
+* Maxim of Quantity
+Be as informative as possible, but only as informative as needed.
+* Maxim of Quality
+Be truthful / evidence-based.
+* Maxim of Relation
+Be relevant.
+* Maxim of Manner
+Be clear, concise, and orderly.
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@herbertpaulgriceGriceMaxims]@@html:</sup>@@
+* Bibliography
+#+print_bibliography:

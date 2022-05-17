@@ -10,7 +10,7 @@
 :ID:       bd7417e8-ae04-47b7-b486-b70ed3188cae
 :END:
 [[http://www.catb.org/~esr/faqs/smart-questions.html][How To Ask Questions The Smart Way - Eric Steven Raymond]]
-I see some Gricean Maxims at work here. Be relevant, have the context, be concise. I also see some [[id:6ac23ec1-38c9-4092-8ebb-a6efd4fa1839][Utilitarianism]], in that hackers want public forums to increase the flow of useful information and make it more efficient.
+I see some [[id:089327e2-3429-4df9-9fd8-d17b8d6cc66d][Gricean Maxims]] at work here. Be relevant, have the context, be concise. I also see some [[id:6ac23ec1-38c9-4092-8ebb-a6efd4fa1839][Utilitarianism]], in that hackers want public forums to increase the flow of useful information and make it more efficient.
 * what makes a subject "interesting" to a given person?
 :PROPERTIES:
 :ID:       a6d89b43-5528-47ce-83e7-d4514f547ca8

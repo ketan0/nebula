@@ -3,5 +3,8 @@
 :END:
 #+title: 📄 paper notes
 
+# TODO: it'd be cool if this page auto-generated (maybe based off of roam-aliases or something??)
+
 [[id:12dfdb1e-d4ed-476b-be04-98cae7a3deaf][Towards Causal Representation Learning]]
 [[id:22706d1f-6b5c-4c77-acc2-d8c222b395d5][Counterfactual Generative Networks]]
+[[id:8ba4e0bd-82cd-4218-b7cd-ed941e74613e][Language learning as language use: A cross-linguistic model of child language development.]]

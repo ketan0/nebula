@@ -12,6 +12,8 @@
 - [ ] Hovercards w/ Tippy.js
 - [ ] Quotebacks
 - [ ] Zotero (+ Safari extension,) ~org-cite~, ~citar~, etc.
+- [ ] my advice if you want to make a system like this? [[id:e18ffcb8-f4cf-4d42-a4d7-8e88f7264f4e][Start simple and workable, and then unfold to something more complex.]]
+
 (I guess some of this bleeds into my [[id:ad1d3f2f-a727-4e53-907b-c7215df8d35f][⚡️ emacs config]] )
   #+begin_export html
 <blockquote class="quoteback" darkmode="" data-title="Quote the web with Quotebacks" data-author="@ness_labs" cite="https://nesslabs.com/quotebacks">

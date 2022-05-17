@@ -13,11 +13,6 @@ But...what assumption can we replace it with, then?
 
 how does the brain break knowledge apart into "pieces" that can be reused? => [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][compositionality]] (thinking decomposition into helper functions in programming.) Examples of compositionality include
 
-* Link
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: no-display
-:END:
-@@html:<sup>@@[cite:@scholkopfCausalRepresentationLearning2021]@@html:</sup>@@
 * Systematic Generalization
 Current DL methods overfit the training *distribution*. That is, if they encounter OOD data, they will perform poorly.
 ** Conscious processing helps humans deal with OOD settings
@@ -82,6 +77,10 @@ Attention enables us to make /dynamic/ connections to the various different "mod
 :ID:       899d0e14-02e5-4858-8f71-8e61e9f59ffa
 :END:
 Dehaene et al. -- workspace theory of consciousness [cite:@dehaeneConsciousPreconsciousSubliminal2006]
-
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@scholkopfCausalRepresentationLearning2021]@@html:</sup>@@
 * Bibliography
 #+print_bibliography:

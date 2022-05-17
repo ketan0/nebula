@@ -3,4 +3,10 @@
 :END:
 #+TITLE: machine learning
 
-Supervised learning is an example of [[id:d4b17339-7852-4eb6-a399-24e47b354a6c][observational]] inference -- we're just looking for associations between variables $X$ and $Y$.
+Supervised learning is an example of [[id:d4b17339-7852-4eb6-a399-24e47b354a6c][observational]] inference -- we're just looking for associations between variables $X$ and $Y$. Aka, we're just learning $P(Y|X)$.
+
+I feel like this thread captures a really interesting divide / contrast of philosophies in machine learning research:
+#+begin_export html
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Researchers in speech recognition, computer vision, and natural language processing in the 2000s were obsessed with accurate representations of uncertainty. <br>1/N</p>&mdash; Yann LeCun (@ylecun) <a href="https://twitter.com/ylecun/status/1525560489216028677?ref_src=twsrc%5Etfw">May 14, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+#+end_export
+My goal now is to deeply understand the issues at hand in this thread. I found his mention of factor graphs in the shift to reasoning and planning AI was thought-provoking. I feel that causality and factor graphs and Bayesian and all that are very important. I just don't know quite enough to put the pieces together yet.

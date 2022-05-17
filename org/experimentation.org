@@ -2,3 +2,5 @@
 :ID:       1096f874-fab2-4db1-88dc-b90740bf608a
 :END:
 #+title: experimentation
+
+Nick Cammarata talks about a personal framework of experimentation in [[id:f4f07c3a-1d06-4db6-b166-2cc6dedd5050][Pieces of Happy]].

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       699dd25b-e8af-41e5-9dc3-dff87577103a
+:END:
+#+title: optimistic nihilism
+
+#+ATTR_HTML: :width 500 :alt Screenshot of Mr. Peanutbutter from Bojack Horseman saying "The universe is a cruel, uncaring void. The key to being happy isn't a search for meaning. It's to keep yourself busy with unimportant nonsense, and eventually you'll be dead."
+[[file:mr_pb_optimistic_nihilism.jpeg]]
+
+[[yt:MBRqu0YOH14]]
+
+cc: [[id:bc3b4ee4-b1b4-4b1c-a44b-c5785c5cafe5][life philosophy]] [[id:091329e5-7896-4975-b88b-99b30f4dd482][🧐 philosophy]]

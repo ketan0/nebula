@@ -4,6 +4,33 @@
 :END:
 #+title: Language learning as language use: A cross-linguistic model of child language development.
 
+* Notes
+In this model, comprehension and production are two sides of the same coin.
+** Comprehension task
+The model "chunks" the input utterance, incrementing the count of that chunk in the chunkatory.
+#+begin_src python :results output
+chunkatory = dict()
+# for each sentence...
+# TODO: write the pseudocode for chunkify
+
+chunks = chunkify(sentence) # uses running avg. of BTPs
+for chunk in chunks:
+    chunkatory[chunk] += 1
+#+end_src
+** Production task
+Given a "bag of words" derived from a child utterance, model has to figure out how to put it in the right order.
+
+Of the longest chunks, select that with the highest BTP given the previous item.
+#+begin_src python :results output
+# first phase: chunkify the input
+bag_of_words_chunks = # ...
+# second phase: pull out the chunks
+output = ''
+prev_item = '<start>'
+bag_of_words = # { set, of, all, input, words }
+while bag_of_words is not empty:
+    output += get_highest_BTP_chunk(bag_of_words_chunks)
+#+end_src
 * Link
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: no-display

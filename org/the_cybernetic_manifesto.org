@@ -13,4 +13,4 @@ When a number of systems become integrated so that a new level of control emerge
 A metasystem transition is, by definition, a creative act. It cannot be solely directed by the internal structure or logic of a system, but must always comes from outside causes, from "above".
 #+end_quote
 
-Feels related to the "I"-mode and "M"-mode discussion in [[id:23d8df0c-8813-45f4-8c83-acd33a32ac09][Gödel, Escher, Bach: an Eternal Golden Braid 🪢]]
+Feels related to the "I"-mode and "M"-mode discussion in [[id:5c6c75ae-ca8f-4fb6-9584-e65f0d7aad8c][M-mode vs. I-mode.]]

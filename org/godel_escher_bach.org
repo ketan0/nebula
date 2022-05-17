@@ -4,3 +4,9 @@
 :END:
 #+title: Gödel, Escher, Bach: an Eternal Golden Braid 🪢
 TODO: write about the passage where Hofstadter challenges the idea that [[id:078c5008-9ef7-4039-9b5c-5ff23f7a339b][Symbols get their meaning when we look at them.]] -- perhaps if we sent symbols to an alien species and they were able to decipher it, then some symbols could have universal meaning??
+
+* M-mode vs. I-mode.
+:PROPERTIES:
+:ID:       5c6c75ae-ca8f-4fb6-9584-e65f0d7aad8c
+:END:
+Go look up the MU puzzle.

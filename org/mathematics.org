@@ -6,3 +6,9 @@
 So, right now, I don't know what I want to say about mathematics. So in the meantime, here are some formulas I've encountered in various places:
 
 $$h(x) = \theta_0 + \theta_1x_1 + \theta_2x_2$$
+
+[[https://www.quantamagazine.org/the-map-of-mathematics-20200213/][The map of mathematics]]
+
+[[https://www.youtube.com/watch?v=OmJ-4B-mS-Y][Map of Mathematics (video)]]
+
+[[https://www.quantamagazine.org/the-useless-perspective-that-transformed-mathematics-20200609/][Representation theory]]

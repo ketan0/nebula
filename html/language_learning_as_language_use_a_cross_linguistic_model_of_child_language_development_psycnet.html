@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-14 Sat 13:46 -->
+<!-- 2022-05-16 Mon 15:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Language learning as language use: A cross-linguistic model of child language development.</title>
@@ -71,25 +71,95 @@
 <div id="content" class="content">
 <h1 class="title">Language learning as language use: A cross-linguistic model of child language development.
 <br />
-<span class="subtitle">Last modified on May 12, 2022</span>
+<span class="subtitle">Last modified on May 16, 2022</span>
 </h1>
 
-<div id="outline-container-orga5c4050" class="outline-2 no-display">
-<h2 id="orga5c4050">Link</h2>
-<div class="outline-text-2" id="text-orga5c4050">
+<div id="outline-container-orgb8e54e5" class="outline-2">
+<h2 id="orgb8e54e5">Notes</h2>
+<div class="outline-text-2" id="text-orgb8e54e5">
+<p>
+In this model, comprehension and production are two sides of the same coin.<br />
+</p>
+</div>
+<div id="outline-container-orgc1c9365" class="outline-3">
+<h3 id="orgc1c9365">Comprehension task</h3>
+<div class="outline-text-3" id="text-orgc1c9365">
+<p>
+The model &ldquo;chunks&rdquo; the input utterance, incrementing the count of that chunk in the chunkatory.<br />
+</p>
+<div class="org-src-container" data-language="python">
+<pre class="src src-python"><span class="org-variable-name">chunkatory</span> = <span class="org-builtin">dict</span>()
+<span class="org-comment-delimiter"># </span><span class="org-comment">for each sentence...</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment"><span class="org-bold"><span class="org-warning">TODO:</span></span></span><span class="org-comment"> write the pseudocode for chunkify</span>
+
+chunks = chunkify(sentence) <span class="org-comment-delimiter"># </span><span class="org-comment">uses running avg. of BTPs</span>
+<span class="org-keyword">for</span> chunk <span class="org-keyword">in</span> <span class="org-variable-name">chunks</span>:
+    chunkatory[<span class="org-variable-name">chunk</span>] += <span class="org-highlight-numbers-number">1</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org699bbbc" class="outline-3">
+<h3 id="org699bbbc">Production task</h3>
+<div class="outline-text-3" id="text-org699bbbc">
+<p>
+Given a &ldquo;bag of words&rdquo; derived from a child utterance, model has to figure out how to put it in the right order.<br />
+</p>
+
+<p>
+Of the longest chunks, select that with the highest BTP given the previous item.<br />
+</p>
+<div class="org-src-container" data-language="python">
+<pre class="src src-python"><span class="org-comment-delimiter"># </span><span class="org-comment">first phase: chunkify the input</span>
+bag_of_words_chunks = <span class="org-comment-delimiter"># </span><span class="org-comment">...</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">second phase: pull out the chunks</span>
+output = <span class="org-string">''</span>
+<span class="org-variable-name">prev_item</span> = <span class="org-string">'&lt;start&gt;'</span>
+<span class="org-variable-name">bag_of_words</span> = <span class="org-comment-delimiter"># </span><span class="org-comment">{ set, of, all, input, words }</span>
+<span class="org-keyword">while</span> bag_of_words <span class="org-keyword">is</span> <span class="org-keyword">not</span> <span class="org-variable-name">empty</span>:
+    output += get_highest_BTP_chunk(bag_of_words_chunks)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3910d32" class="outline-2 no-display">
+<h2 id="org3910d32">Link</h2>
+<div class="outline-text-2" id="text-org3910d32">
 <p>
 <sup><a href="#citeproc_bib_item_1">[1]</a></sup><br />
 </p>
 </div>
 </div>
-<div id="outline-container-org08edc47" class="outline-2">
-<h2 id="org08edc47">Bibliography</h2>
-<div class="outline-text-2" id="text-org08edc47">
+<div id="outline-container-org6788623" class="outline-2">
+<h2 id="org6788623">Bibliography</h2>
+<div class="outline-text-2" id="text-org6788623">
 <style>.csl-left-margin{float: left; padding-right: 0em;}
  .csl-right-inline{margin: 0 0 0 1em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
     <div class="csl-left-margin">[1]</div><div class="csl-right-inline">S. M. McCauley and M. H. Christiansen, “Language learning as language use: A cross-linguistic model of child language development,” <i>Psychological review</i>, vol. 126, no. 1, pp. 1–51, 2019, doi: <a href="https://doi.org/10.1037/rev0000126">10.1037/rev0000126</a>.</div>
   </div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgfb15fef" class="outline-2 references">
+<h2 id="orgfb15fef">Links to &ldquo;Language learning as language use: A cross-linguistic model of child language development.&rdquo;</h2>
+<div class="outline-text-2" id="text-orgfb15fef">
+</div>
+<div id="outline-container-orgf467b11" class="outline-3">
+<h3 id="orgf467b11"><a href="paper_notes.html#ID-d4693400-d612-4531-96cb-da0b8d37b4b0">📄 paper notes</a></h3>
+<div class="outline-text-3" id="text-orgf467b11">
+<p>
+TODO: it&rsquo;d be cool if this page auto-generated (maybe based off of roam-aliases or something??)<br />
+</p>
+
+<p>
+<a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a><br />
+<a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a><br />
+<a href="language_learning_as_language_use_a_cross_linguistic_model_of_child_language_development_psycnet.html#ID-8ba4e0bd-82cd-4218-b7cd-ed941e74613e">Language learning as language use: A cross-linguistic model of child language development.</a><br />
+</p>
 </div>
 </div>
 </div>
