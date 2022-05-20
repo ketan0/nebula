@@ -3,4 +3,14 @@
 :END:
 #+title: 📚 books i want to read
 
-- Platform for Change - Stafford Beer
+* Authors / People of Interest
+** Ursula K. Le Guin
+** H.G. Wells
+** Vannevar Bush, Doug Engelbart, Alan Kay, Ted Nelson, etc. etc.
+** Octavia Butler
+** Borges
+** Stafford Beer
+* Areas of interest
+** Cybernetics / system-level thinking
+** History of computing
+** Machine learning fundamentals (e.g. textbook)

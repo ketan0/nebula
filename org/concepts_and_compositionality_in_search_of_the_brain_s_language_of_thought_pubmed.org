@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       d77b968f-cd5d-485d-928f-07568642e8ec
+:ROAM_REFS: https://pubmed.ncbi.nlm.nih.gov/31550985/ @franklandConceptsCompositionalitySearch2020
+:END:
+#+title: Concepts and Compositionality: In Search of the Brain's Language of Thought
+
+cc: [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][compositionality]]
+
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@franklandConceptsCompositionalitySearch2020]@@html:</sup>@@
+* Bibliography
+#+print_bibliography:

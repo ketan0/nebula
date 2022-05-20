@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-14 Sat 13:46 -->
+<!-- 2022-05-19 Thu 18:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CS236: Deep Generative Models</title>
@@ -92,29 +92,29 @@
 <div id="content" class="content">
 <h1 class="title">CS236: Deep Generative Models
 <br />
-<span class="subtitle">Last modified on November 04, 2021</span>
+<span class="subtitle">Last modified on May 19, 2022</span>
 </h1>
 
 <div id="outline-container-ID-99509c50-67ff-4b27-b719-4816f8e2ed89" class="outline-2">
 <h2 id="ID-99509c50-67ff-4b27-b719-4816f8e2ed89">Introduction</h2>
-<div class="outline-text-2" id="text-org9f56fb7">
+<div class="outline-text-2" id="text-orgd62018a">
 <p>
-Feynman: "What I cannot create, I do not understand"<br />
-<a href="generative_models.html#ID-94e740e0-9dbb-4f60-99e0-cb1f574fc46f">Generative modeling</a>: "What I understand, I can create"<br />
+Feynman: &ldquo;What I cannot create, I do not understand&rdquo;<br />
+<a href="generative_models.html#ID-94e740e0-9dbb-4f60-99e0-cb1f574fc46f">Generative modeling</a>: &ldquo;What I understand, I can create&rdquo;<br />
 </p>
 </div>
-<div id="outline-container-orgad481b9" class="outline-3">
-<h3 id="orgad481b9">How to generative natural images with a computer?</h3>
-<div class="outline-text-3" id="text-orgad481b9">
+<div id="outline-container-orgf1c24b6" class="outline-3">
+<h3 id="orgf1c24b6">How to generative natural images with a computer?</h3>
+<div class="outline-text-3" id="text-orgf1c24b6">
 <p>
 Generation: High level description =&gt; raw sensory outputs<br />
 Inference: raw sensory outputs =&gt; high level description<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orge032a23" class="outline-3">
-<h3 id="orge032a23">Statistical Generative Models</h3>
-<div class="outline-text-3" id="text-orge032a23">
+<div id="outline-container-org5c9fdbf" class="outline-3">
+<h3 id="org5c9fdbf">Statistical Generative Models</h3>
+<div class="outline-text-3" id="text-org5c9fdbf">
 <p>
 are learned from data. (Priors are necessary, but not as strict as in Graphics)<br />
 </p>
@@ -133,9 +133,9 @@ Sampling from \(p\) produces realistic samples<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org11822ce" class="outline-3">
-<h3 id="org11822ce">Discriminative vs. generative</h3>
-<div class="outline-text-3" id="text-org11822ce">
+<div id="outline-container-org7308f88" class="outline-3">
+<h3 id="org7308f88">Discriminative vs. generative</h3>
+<div class="outline-text-3" id="text-org7308f88">
 <p>
 Discriminative model: input \(X\) is given. learns \(P(Y|X)\) (e.g., probability of bedroom given image)<br />
 </p>
@@ -147,7 +147,7 @@ Discriminative model: input \(X\) is given. learns \(P(Y|X)\) (e.g., probability
 </div>
 <div id="outline-container-ID-2710b5a3-1b64-4e34-883c-86f4b84575ec" class="outline-3">
 <h3 id="ID-2710b5a3-1b64-4e34-883c-86f4b84575ec">Conditional generative models</h3>
-<div class="outline-text-3" id="text-orgc293614">
+<div class="outline-text-3" id="text-org910c5df">
 <p>
 They blur the line between generative and discriminative, because they also condition on some input <a href="features.html#ID-a7203065-7321-4a95-adbe-d38f0d5159c8">features</a>.<br />
 </p>
@@ -166,13 +166,13 @@ Text-to-Image: p(image | caption)<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgac29733" class="outline-2">
-<h2 id="orgac29733">Background</h2>
-<div class="outline-text-2" id="text-orgac29733">
+<div id="outline-container-orgeef0435" class="outline-2">
+<h2 id="orgeef0435">Background</h2>
+<div class="outline-text-2" id="text-orgeef0435">
 </div>
-<div id="outline-container-orgd34f691" class="outline-3">
-<h3 id="orgd34f691">What is a generative model?</h3>
-<div class="outline-text-3" id="text-orgd34f691">
+<div id="outline-container-org604da06" class="outline-3">
+<h3 id="org604da06">What is a generative model?</h3>
+<div class="outline-text-3" id="text-org604da06">
 <p>
 We are given a dataset of examples, e.g. images of cats. \(P_{data}\) is the underlying distribution that generates the samples. We want to get a \(P_\theta\) that is pretty close to \(P_{data}\).  \(\theta\) is learned by a model, e.g. a neural net.<br />
 </p>
@@ -190,9 +190,9 @@ We are given a dataset of examples, e.g. images of cats. \(P_{data}\) is the und
 </p>
 </div>
 </div>
-<div id="outline-container-org85f8484" class="outline-3">
-<h3 id="org85f8484">Structure through independence</h3>
-<div class="outline-text-3" id="text-org85f8484">
+<div id="outline-container-org9bb3fc4" class="outline-3">
+<h3 id="org9bb3fc4">Structure through independence</h3>
+<div class="outline-text-3" id="text-org9bb3fc4">
 <p>
 Consider an input with several components \(X_1, ..., X_n\) (these could be pixels in an image.) If \(X_1, ..., X_n\) are independent, then<br />
 \(p\left(x_{1}, \ldots, x_{n}\right)=p\left(x_{1}\right) p\left(x_{2}\right) \cdots p\left(x_{n}\right)\)<br />
@@ -211,15 +211,15 @@ Chain rule &#x2013; fully general, no assumption on the joint. but the condition
 Need a better simplifying assumption in the middle&#x2026;<br />
 </p>
 </div>
-<div id="outline-container-org3bb6ccb" class="outline-4">
-<h4 id="org3bb6ccb">Conditional independence assumption</h4>
-<div class="outline-text-4" id="text-org3bb6ccb">
+<div id="outline-container-org3239af7" class="outline-4">
+<h4 id="org3239af7">Conditional independence assumption</h4>
+<div class="outline-text-4" id="text-org3239af7">
 <p>
 \(p(x_1)p(x_2|x_1)...p(x_n|x_{n-1})\)<br />
 </p>
 
 <p>
-Actually this is just a special case of Bayes network, where it's like a line of nodes<br />
+Actually this is just a special case of Bayes network, where it&rsquo;s like a line of nodes<br />
 </p>
 
 <p>
@@ -227,9 +227,9 @@ x<sub>1</sub> =&gt; x<sub>2</sub> =&gt; x<sub>3</sub> =&gt; x<sub>n</sub>-1 =&gt
 </p>
 </div>
 </div>
-<div id="outline-container-orgd9cfbe3" class="outline-4">
-<h4 id="orgd9cfbe3">Bayes Network / graphical models:</h4>
-<div class="outline-text-4" id="text-orgd9cfbe3">
+<div id="outline-container-orgf25f6f1" class="outline-4">
+<h4 id="orgf25f6f1">Bayes Network / graphical models:</h4>
+<div class="outline-text-4" id="text-orgf25f6f1">
 <p>
 This is a directed acyclic graph with one node with each random variable, and one conditional probabiliy distribution per node.<br />
 each random variable depends on some parents<br />
@@ -237,7 +237,7 @@ each random variable depends on some parents<br />
 </p>
 
 <p>
-This implies conditional independences between variables that aren't direct parent-child, given their parents(?).<br />
+This implies conditional independences between variables that aren&rsquo;t direct parent-child, given their parents(?).<br />
 </p>
 
 <p>
@@ -245,9 +245,9 @@ Use neural networks to represent the conditional distributions.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgca51179" class="outline-4">
-<h4 id="orgca51179">Naive Bayes:</h4>
-<div class="outline-text-4" id="text-orgca51179">
+<div id="outline-container-orgd8d4bb2" class="outline-4">
+<h4 id="orgd8d4bb2">Naive Bayes:</h4>
+<div class="outline-text-4" id="text-orgd8d4bb2">
 <p>
 Assume that all the inputs are independent conditioned on y. (another special case of a Bayes net)<br />
 </p>
@@ -259,9 +259,9 @@ directly estimate the conditionals p(xi|y) from data. =&gt; use those + bayes ru
 </div>
 </div>
 </div>
-<div id="outline-container-orgbc163ca" class="outline-3">
-<h3 id="orgbc163ca">Discriminative vs. generative</h3>
-<div class="outline-text-3" id="text-orgbc163ca">
+<div id="outline-container-org6bbb92c" class="outline-3">
+<h3 id="org6bbb92c">Discriminative vs. generative</h3>
+<div class="outline-text-3" id="text-org6bbb92c">
 <p>
 p(y,x) = p(x|y)p(y) = p(y|x)p(x)<br />
 </p>
@@ -285,30 +285,35 @@ Using a conditional model is only possible when X is always observed. when some 
 </div>
 </div>
 </div>
-<div id="outline-container-orgcd40bc1" class="outline-2">
-<h2 id="orgcd40bc1">Autoregressive Models</h2>
-<div class="outline-text-2" id="text-orgcd40bc1">
+<div id="outline-container-ID-cb15f12b-6764-4118-a8bb-239333aee169" class="outline-2">
+<h2 id="ID-cb15f12b-6764-4118-a8bb-239333aee169">Autoregressive Models</h2>
+<div class="outline-text-2" id="text-org8040a6b">
 <p>
 Bayes net with modeling assumptions:<br />
 </p>
 <ul class="org-ul">
 <li>model using chain rule (fully general)<br />
-\(p(x) = p(x_1)p(x_2|x_1)p(x_3|x_2)...p(x_n|x_{n-1})\)<br /></li>
-<li>assume the conditionals take functional form (e.g., a logistic regression)<br /></li>
+\(p(x) = p(x_1)p(x_2|x_1)p(x_3|x_1, x_2)...p(x_n|x_1, ..., x_{n-1})\)<br /></li>
+<li><p>
+assume the conditionals take functional form (e.g., a logistic regression)<br />
+</p>
+
+<p>
+Autoregressive Models are often slower than transformers CNNs etc.<br />
+</p></li>
 </ul>
 </div>
-
-<div id="outline-container-org1cf989d" class="outline-3">
-<h3 id="org1cf989d">Fully Visible Sigmoid Belief Network (FVSBN)</h3>
-<div class="outline-text-3" id="text-org1cf989d">
+<div id="outline-container-org8b690e3" class="outline-3">
+<h3 id="org8b690e3">Fully Visible Sigmoid Belief Network (FVSBN)</h3>
+<div class="outline-text-3" id="text-org8b690e3">
 <p>
 \(p\left(X_{i}=1 \mid x_{<i} ; \alpha^{i}\right)=\sigma\left(\alpha_{0}^{i}+\sum_{j=1}^{i-1} \alpha_{j}^{i} x_{j}\right)\)<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgaa5614c" class="outline-3">
-<h3 id="orgaa5614c">Neural Autoregressive Density Estimation (NADE)</h3>
-<div class="outline-text-3" id="text-orgaa5614c">
+<div id="outline-container-orge97f8fc" class="outline-3">
+<h3 id="orge97f8fc">Neural Autoregressive Density Estimation (NADE)</h3>
+<div class="outline-text-3" id="text-orge97f8fc">
 <p>
 simple: model as Bernoulli<br />
 more classes: model as Categorical<br />
@@ -319,7 +324,7 @@ Like FVSBN, but use a 1-hidden-layer neural net:<br />
 </p>
 
 <p>
-Problem: lots of redundant parameters. Solution: "tie" the weights:<br />
+Problem: lots of redundant parameters. Solution: &ldquo;tie&rdquo; the weights:<br />
 Tie weights to reduce the number of parameters and speed up computation (see blue dots in the figure):<br />
 $$<br />
 </p>
@@ -332,9 +337,9 @@ $$<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org500f844" class="outline-3">
-<h3 id="org500f844">RNADE</h3>
-<div class="outline-text-3" id="text-org500f844">
+<div id="outline-container-org2561224" class="outline-3">
+<h3 id="org2561224">RNADE</h3>
+<div class="outline-text-3" id="text-org2561224">
 <p>
 \(p\left(x_{i} \mid x_{1}, \cdots, x_{i-1}\right)=\sum_{j=1}^{K} \frac{1}{K} \mathcal{N}\left(x_{i} ; \mu_{i}^{j}, \sigma_{i}^{j}\right)\)<br />
 \(\mathrm{h}_{i}=\sigma\left(W_{\cdot,<i} \mathrm{x}<i+\mathrm{c}\right)\)<br />
@@ -344,7 +349,7 @@ $$<br />
 </div>
 <div id="outline-container-ID-50bf2de7-e33c-4485-9dcd-b721d7f601a6" class="outline-3">
 <h3 id="ID-50bf2de7-e33c-4485-9dcd-b721d7f601a6">Autoregressive Autoencoder: Masked Autoencoder for Distribution Estimation (MADE)</h3>
-<div class="outline-text-3" id="text-org57a812c">
+<div class="outline-text-3" id="text-org9c4fe85">
 <p>
 Use masks to disallow certain paths in an autoencoder to make it autoregressive.<br />
 </p>
@@ -359,13 +364,13 @@ Solution: use masks to disallow certain paths (Germain et al., 2015). Suppose or
 </ol>
 </div>
 
-<div id="outline-container-orgb278fcb" class="outline-4 references">
-<h4 id="orgb278fcb">Links to "Autoregressive Autoencoder: Masked Autoencoder for Distribution Estimation (MADE)"</h4>
-<div class="outline-text-4" id="text-orgb278fcb">
+<div id="outline-container-org2ee7c40" class="outline-4 references">
+<h4 id="org2ee7c40">Links to &ldquo;Autoregressive Autoencoder: Masked Autoencoder for Distribution Estimation (MADE)&rdquo;</h4>
+<div class="outline-text-4" id="text-org2ee7c40">
 </div>
 <ul class="org-ul">
-<li><a id="orge9d5122"></a><a href="#ID-206c8dcd-0059-4704-b1a2-d5f1abdbad07">Masked Autoregressive Flow (MAF)</a> <span class="backlinks-outline-path">(<i>Normalizing Flow Models &gt; Autoregressive Models as Normalizing Flow Models &gt; Masked Autoregressive Flow (MAF)</i>)</span><br />
-<div class="outline-text-5" id="text-orge9d5122">
+<li><a id="org9d6e1e1"></a><a href="#ID-206c8dcd-0059-4704-b1a2-d5f1abdbad07">Masked Autoregressive Flow (MAF)</a> <span class="backlinks-outline-path">(<i>Normalizing Flow Models &gt; Autoregressive Models as Normalizing Flow Models &gt; Masked Autoregressive Flow (MAF)</i>)</span><br />
+<div class="outline-text-5" id="text-org9d6e1e1">
 <p>
 Forward mapping from \(z \mapsto x:\)<br />
 </p>
@@ -408,25 +413,25 @@ Layers with different variable orderings can be stacked<br />
 </div>
 
 
-<div id="outline-container-orgf0fc47d" class="outline-3">
-<h3 id="orgf0fc47d">RNNs</h3>
-<div class="outline-text-3" id="text-orgf0fc47d">
+<div id="outline-container-org7feaa63" class="outline-3">
+<h3 id="org7feaa63">RNNs</h3>
+<div class="outline-text-3" id="text-org7feaa63">
 <p>
-Challenge: the history for these autoregressive models keeps getting longer and longer. Ideally we'd just have a fixed-size "summary" of the history.<br />
+Challenge: the history for these autoregressive models keeps getting longer and longer. Ideally we&rsquo;d just have a fixed-size &ldquo;summary&rdquo; of the history.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org37344f3" class="outline-3">
-<h3 id="org37344f3">Transformers</h3>
-<div class="outline-text-3" id="text-org37344f3">
+<div id="outline-container-orgead807b" class="outline-3">
+<h3 id="orgead807b">Transformers</h3>
+<div class="outline-text-3" id="text-orgead807b">
 <p>
 masked self-attention preserves autoregressive structure.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org56ed0ae" class="outline-3">
-<h3 id="org56ed0ae">PixelCNN</h3>
-<div class="outline-text-3" id="text-org56ed0ae">
+<div id="outline-container-org3a5446a" class="outline-3">
+<h3 id="org3a5446a">PixelCNN</h3>
+<div class="outline-text-3" id="text-org3a5446a">
 <p>
 Masked convolutions preserve raster scan order.<br />
 </p>
@@ -436,44 +441,44 @@ Lol u can use these for adversarial attacks &#x2013;<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org2aff89f" class="outline-3">
-<h3 id="org2aff89f">WaveNet</h3>
+<div id="outline-container-org680e22f" class="outline-3">
+<h3 id="org680e22f">WaveNet</h3>
 </div>
 </div>
-<div id="outline-container-orgcf6f5ed" class="outline-2">
-<h2 id="orgcf6f5ed">Learning a generative model (Maximum Likelihood)</h2>
-<div class="outline-text-2" id="text-orgcf6f5ed">
+<div id="outline-container-orgf5077ad" class="outline-2">
+<h2 id="orgf5077ad">Learning a generative model (Maximum Likelihood)</h2>
+<div class="outline-text-2" id="text-orgf5077ad">
 <p>
 We are given a dataset \(D\) of \(m\) samples from \(P_{data}\).<br />
 </p>
 
 <p>
-We are given a family of models M, our task is to learn a "good" model M<sub>hat</sub> in M that defines a distribution p<sub>m</sub><sub>hat</sub><br />
+We are given a family of models M, our task is to learn a &ldquo;good&rdquo; model M<sub>hat</sub> in M that defines a distribution p<sub>m</sub><sub>hat</sub><br />
 </p>
 
 <p>
-Can't capture the <b>exact</b> distribution. All we have are samples &#x2013; that's very sparse coverage over the space of all possible samples. (So&#x2026;we need regularization / priors / inductive biases.)<br />
+Can&rsquo;t capture the <b>exact</b> distribution. All we have are samples &#x2013; that&rsquo;s very sparse coverage over the space of all possible samples. (So&#x2026;we need regularization / priors / inductive biases.)<br />
 </p>
 </div>
-<div id="outline-container-org5d86a14" class="outline-3">
-<h3 id="org5d86a14">KL divergence:</h3>
-<div class="outline-text-3" id="text-org5d86a14">
+<div id="outline-container-org4ad5ed3" class="outline-3">
+<h3 id="org4ad5ed3">KL divergence:</h3>
+<div class="outline-text-3" id="text-org4ad5ed3">
 <p>
-"distance" between two distributions, \(p\) and \(q\).<br />
+&ldquo;distance&rdquo; between two distributions, \(p\) and \(q\).<br />
 </p>
 
 <p>
 \(D(p \| q)=\sum_{\mathrm{x}} p(\mathrm{x}) \log \frac{p(\mathrm{x})}{q(\mathrm{x})}\)<br />
-However, it's not quite a "distance," because it's asymmetric. \(D(p \| q) \neq D(q \| p)\)<br />
+However, it&rsquo;s not quite a &ldquo;distance,&rdquo; because it&rsquo;s asymmetric. \(D(p \| q) \neq D(q \| p)\)<br />
 </p>
 
 <p>
-Intuition: we have a known distribution \(q\), and we're trying to minimize the distance to a target distribution \(p\).<br />
+Intuition: we have a known distribution \(q\), and we&rsquo;re trying to minimize the distance to a target distribution \(p\).<br />
 </p>
 </div>
-<div id="outline-container-org4a7c47c" class="outline-4">
-<h4 id="org4a7c47c">Detour: compression</h4>
-<div class="outline-text-4" id="text-org4a7c47c">
+<div id="outline-container-orge0baf75" class="outline-4">
+<h4 id="orge0baf75">Detour: compression</h4>
+<div class="outline-text-4" id="text-orge0baf75">
 <p>
 Generative models are basically compression schemes. Trying to compress the data as well as we can.<br />
 </p>
@@ -489,19 +494,19 @@ KL-divergence: if your data comes from p, but you use a scheme optimized for q, 
 </p>
 </div>
 </div>
-<div id="outline-container-orga28c344" class="outline-4">
-<h4 id="orga28c344">Minimizing KL divergence is equivalent to maximizing the expected log likelihood. =&gt; Maximum Likelihood Estimation</h4>
+<div id="outline-container-orge2b805e" class="outline-4">
+<h4 id="orge2b805e">Minimizing KL divergence is equivalent to maximizing the expected log likelihood. =&gt; Maximum Likelihood Estimation</h4>
 </div>
 </div>
-<div id="outline-container-org3e1433a" class="outline-3">
-<h3 id="org3e1433a">MLE Learning: Stochastic <a href="gradient_descent.html#ID-2a80ce32-c37d-4047-b69b-e0c355d91670">Gradient Descent</a></h3>
+<div id="outline-container-org6f6c0f6" class="outline-3">
+<h3 id="org6f6c0f6">MLE Learning: Stochastic <a href="gradient_descent.html#ID-2a80ce32-c37d-4047-b69b-e0c355d91670">Gradient Descent</a></h3>
 </div>
-<div id="outline-container-org216d5d7" class="outline-3">
-<h3 id="org216d5d7">Empirical risk minimization can easily overfit the data.</h3>
+<div id="outline-container-org12f33b0" class="outline-3">
+<h3 id="org12f33b0">Empirical risk minimization can easily overfit the data.</h3>
 </div>
 <div id="outline-container-ID-c8a6b4f0-1424-43e7-913c-f55593b1792f" class="outline-3">
 <h3 id="ID-c8a6b4f0-1424-43e7-913c-f55593b1792f">Bias-variance trade off:</h3>
-<div class="outline-text-3" id="text-orgb909627">
+<div class="outline-text-3" id="text-orgc6eeda8">
 <p>
 Bias limitation: If the hypothesis space of functions is very limited, we might not be able to represent the data distribution.<br />
 </p>
@@ -511,18 +516,18 @@ Variance limitation: If the hypothesis space is <i>too</i> expressive, it will o
 </p>
 
 <p>
-How to prevent overfitting? Prefer "simpler" models (Occam's razor.) <a href="regularization.html#ID-69cfe558-04ed-41b0-8807-922ead5afde3">Regularization</a> in the objective function. Evaluate on validation set while training.<br />
+How to prevent overfitting? Prefer &ldquo;simpler&rdquo; models (Occam&rsquo;s razor.) <a href="regularization.html#ID-69cfe558-04ed-41b0-8807-922ead5afde3">Regularization</a> in the objective function. Evaluate on validation set while training.<br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org0d77331" class="outline-2">
-<h2 id="org0d77331">Latent Variable Models</h2>
-<div class="outline-text-2" id="text-org0d77331">
+<div id="outline-container-orgfa2fade" class="outline-2">
+<h2 id="orgfa2fade">Latent Variable Models</h2>
+<div class="outline-text-2" id="text-orgfa2fade">
 </div>
-<div id="outline-container-org0f58e5b" class="outline-3">
-<h3 id="org0f58e5b">Motivation</h3>
-<div class="outline-text-3" id="text-org0f58e5b">
+<div id="outline-container-orgabb7a9b" class="outline-3">
+<h3 id="orgabb7a9b">Motivation</h3>
+<div class="outline-text-3" id="text-orgabb7a9b">
 <p>
 There are lots of variability in images due to high-level semantic factors: gender, eye color, pose, etc.<br />
 </p>
@@ -540,9 +545,9 @@ We could identify the factors of variation using these generative models &#x2013
 </p>
 </div>
 </div>
-<div id="outline-container-org81b3cc1" class="outline-3">
-<h3 id="org81b3cc1">Deep Latent Variable Models</h3>
-<div class="outline-text-3" id="text-org81b3cc1">
+<div id="outline-container-org1b807e2" class="outline-3">
+<h3 id="org1b807e2">Deep Latent Variable Models</h3>
+<div class="outline-text-3" id="text-org1b807e2">
 <p>
 \(z \sim \mathcal{N}(0, I)\)<br />
 </p>
@@ -560,9 +565,9 @@ Features computer via \(p(z|x)\)<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org0085506" class="outline-3">
-<h3 id="org0085506">Mixture of Gaussians: a shallow latent variable model</h3>
-<div class="outline-text-3" id="text-org0085506">
+<div id="outline-container-org0beed6a" class="outline-3">
+<h3 id="org0beed6a">Mixture of Gaussians: a shallow latent variable model</h3>
+<div class="outline-text-3" id="text-org0beed6a">
 <p>
 A mixture of \(k\) gaussians:<br />
 \(z \sim \text{Categorical}(1, ..., K)\)<br />
@@ -570,9 +575,9 @@ A mixture of \(k\) gaussians:<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgda0237c" class="outline-3">
-<h3 id="orgda0237c">Variational Autoencoder (VAE)</h3>
-<div class="outline-text-3" id="text-orgda0237c">
+<div id="outline-container-org4cf6011" class="outline-3">
+<h3 id="org4cf6011">Variational Autoencoder (VAE)</h3>
+<div class="outline-text-3" id="text-org4cf6011">
 <p>
 A mixture of an infinite number of gaussians (since z is continuous):<br />
 \(z \sim \mathcal{N}(0, I)\)<br />
@@ -590,16 +595,16 @@ Simple example:<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org7b4c432" class="outline-3">
-<h3 id="org7b4c432">Good stuff about latent variable models:  complex models, natural for unsupervised learning</h3>
+<div id="outline-container-org0ca57b1" class="outline-3">
+<h3 id="org0ca57b1">Good stuff about latent variable models:  complex models, natural for unsupervised learning</h3>
 </div>
-<div id="outline-container-org5a6733d" class="outline-3">
-<h3 id="org5a6733d">Hard stuff about latent variable models: learning in unsupervised manner is very difficult</h3>
+<div id="outline-container-org8d3efc6" class="outline-3">
+<h3 id="org8d3efc6">Hard stuff about latent variable models: learning in unsupervised manner is very difficult</h3>
 </div>
 </div>
-<div id="outline-container-org3485134" class="outline-2">
-<h2 id="org3485134">Normalizing Flow Models</h2>
-<div class="outline-text-2" id="text-org3485134">
+<div id="outline-container-ID-02e70065-3d4a-46c4-912a-b73bbd5214ad" class="outline-2">
+<h2 id="ID-02e70065-3d4a-46c4-912a-b73bbd5214ad">Normalizing Flow Models</h2>
+<div class="outline-text-2" id="text-org4040ce8">
 <p>
 Autoregressive models provide tractable likelihoods but no direct mechanism for learning features.<br />
 </p>
@@ -624,16 +629,16 @@ This is similar to a VAE:<br />
 <li>Start from a simple prior \(z \sim \mathcal{N}(0, I)\)<br /></li>
 <li>Transform the sample via \(p(x|z)\)<br /></li>
 <li>Problem: \(p_{\theta}(\mathrm{x})=\int p_{\theta}(\mathrm{x}, \mathrm{z}) d \mathrm{z}\) is expensive to compute.<br /></li>
-<li>What if we could easily "invert" \(p(x|z)\) and compute \(p(z|x)\) by design? =&gt; we want \(x = f_{\theta}(z)\) to be a <b>deterministic</b> and <b>invertible</b> function.<br /></li>
+<li>What if we could easily &ldquo;invert&rdquo; \(p(x|z)\) and compute \(p(z|x)\) by design? =&gt; we want \(x = f_{\theta}(z)\) to be a <b>deterministic</b> and <b>invertible</b> function.<br /></li>
 </ul>
 
 <p>
 We are going to exploit the <b>Change of Variables formula</b>.<br />
 </p>
 </div>
-<div id="outline-container-orgdcf24cb" class="outline-3">
-<h3 id="orgdcf24cb">Change of variables</h3>
-<div class="outline-text-3" id="text-orgdcf24cb">
+<div id="outline-container-org55ac857" class="outline-3">
+<h3 id="org55ac857">Change of variables</h3>
+<div class="outline-text-3" id="text-org55ac857">
 <p>
 <b>Change of variables (1D case)</b>: If \(X=f(Z)\) and \(f(\cdot)\) is monotone with inverse \(Z=f^{-1}(X)=h(X)\), then:<br />
 \[
@@ -654,7 +659,7 @@ This allows us to change the distribution of \(X\) in interesting ways &#x2013; 
 </p>
 
 <p>
-Intuition: if you're expanding in one direction, you're contracting in the other.<br />
+Intuition: if you&rsquo;re expanding in one direction, you&rsquo;re contracting in the other.<br />
 </p>
 
 <p>
@@ -676,7 +681,7 @@ Note: \(Z\) has to have the <i>same dimensionality</i> as x (so that the mapping
 </p>
 
 <p>
-It's kinda like a VAE, but \(p(x|z)\) is deterministic. And, crucially, we can directly evaluate the marginal likelihood \(p(x)\); no integration<br />
+It&rsquo;s kinda like a VAE, but \(p(x|z)\) is deterministic. And, crucially, we can directly evaluate the marginal likelihood \(p(x)\); no integration<br />
 </p>
 
 <p>
@@ -689,9 +694,9 @@ Note: \(x, z\) need to be continuous and have the same dimension.<br />
 </div>
 </div>
 
-<div id="outline-container-org7d7ca96" class="outline-3">
-<h3 id="org7d7ca96">Flow of transformations</h3>
-<div class="outline-text-3" id="text-org7d7ca96">
+<div id="outline-container-org3cedfa4" class="outline-3">
+<h3 id="org3cedfa4">Flow of transformations</h3>
+<div class="outline-text-3" id="text-org3cedfa4">
 <p>
 A flow of transformations: invertible transformations can be composed together.<br />
 \[\mathrm{z}_{m}=\mathrm{f}_{\theta}^{m} \circ \cdots \circ \mathrm{f}_{\theta}^{1}\left(\mathrm{z}_{0}\right)=\mathrm{f}_{\theta}^{m}\left(\mathrm{f}_{\theta}^{m-1}\left(\cdots\left(\mathrm{f}_{\theta}^{1}\left(\mathrm{z}_{0}\right)\right)\right)\right) \triangleq \mathrm{f}_{\theta}\left(\mathrm{z}_{0}\right)\]<br />
@@ -705,13 +710,13 @@ p_{X}(\mathrm{x} ; \theta)=p_{Z}\left(\mathrm{f}_{\theta}^{-1}(\mathrm{x})\right
 </p>
 
 <p>
-By adding more "layers" in the transformation (i.e. a deeper neural net,) we get something increasingly complexified from the prior.<br />
+By adding more &ldquo;layers&rdquo; in the transformation (i.e. a deeper neural net,) we get something increasingly complexified from the prior.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org905b31b" class="outline-3">
-<h3 id="org905b31b">Desiderata for flow models</h3>
-<div class="outline-text-3" id="text-org905b31b">
+<div id="outline-container-org767a94c" class="outline-3">
+<h3 id="org767a94c">Desiderata for flow models</h3>
+<div class="outline-text-3" id="text-org767a94c">
 <p>
 The prior \(p(z)\) should be simple+efficient; e.g. isotropic Gaussian.<br />
 </p>
@@ -725,7 +730,7 @@ Computing the likelihoods \(p(x)\) and \(p(z)\) require you to evaluate the dete
 </p>
 
 <p>
-<b>Key idea</b>: Choose transformations so that their Jacobians have a "special" structure; e.g. the determinant of a triangular matrix is the product of the diagonals; this is \(O(n)\).<br />
+<b>Key idea</b>: Choose transformations so that their Jacobians have a &ldquo;special&rdquo; structure; e.g. the determinant of a triangular matrix is the product of the diagonals; this is \(O(n)\).<br />
 </p>
 
 <p>
@@ -733,13 +738,13 @@ Computing the likelihoods \(p(x)\) and \(p(z)\) require you to evaluate the dete
 </p>
 <ul class="org-ul">
 <li>Make \(x_i = f_i(z)\) only depend on \(z_{\leq i}\).<br /></li>
-<li>More efficient ways of computing Jacobians that are "close" to the identity matrix (Planar flows paper.)<br /></li>
+<li>More efficient ways of computing Jacobians that are &ldquo;close&rdquo; to the identity matrix (Planar flows paper.)<br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge564bde" class="outline-3">
-<h3 id="orge564bde">Nonlinear Independent Components Estimation (NICE)</h3>
-<div class="outline-text-3" id="text-orge564bde">
+<div id="outline-container-orgd0c3884" class="outline-3">
+<h3 id="orgd0c3884">Nonlinear Independent Components Estimation (NICE)</h3>
+<div class="outline-text-3" id="text-orgd0c3884">
 <p>
 Partition the variables \(z\) into two disjoint subsets: \(z_{1:d}\) and \(z_{d+1:n}\)<br />
 </p>
@@ -795,9 +800,9 @@ J=\operatorname{diag}(\mathrm{s}) \\
 </p>
 </div>
 </div>
-<div id="outline-container-org86df1f1" class="outline-3">
-<h3 id="org86df1f1">Real-NVP: Non-volume preserving extension of NICE.</h3>
-<div class="outline-text-3" id="text-org86df1f1">
+<div id="outline-container-orgb6487f9" class="outline-3">
+<h3 id="orgb6487f9">Real-NVP: Non-volume preserving extension of NICE.</h3>
+<div class="outline-text-3" id="text-orgb6487f9">
 <p>
 Same as NICE, but rescaling happens at each layer.<br />
 </p>
@@ -830,9 +835,9 @@ Non-volume preserving transformation in general since determinant can be less th
 </p>
 </div>
 </div>
-<div id="outline-container-orgd99ebfb" class="outline-3">
-<h3 id="orgd99ebfb">Autoregressive Models as Normalizing Flow Models</h3>
-<div class="outline-text-3" id="text-orgd99ebfb">
+<div id="outline-container-orgb36ae9d" class="outline-3">
+<h3 id="orgb36ae9d">Autoregressive Models as Normalizing Flow Models</h3>
+<div class="outline-text-3" id="text-orgb36ae9d">
 <p>
 We can view autoregressive models as flow models.<br />
 </p>
@@ -857,7 +862,7 @@ Flow interpretation: transforms samples from the standard Gaussian \(\left(z_{1}
 </div>
 <div id="outline-container-ID-206c8dcd-0059-4704-b1a2-d5f1abdbad07" class="outline-4">
 <h4 id="ID-206c8dcd-0059-4704-b1a2-d5f1abdbad07">Masked Autoregressive Flow (MAF)</h4>
-<div class="outline-text-4" id="text-org2d2da99">
+<div class="outline-text-4" id="text-org3942648">
 <p>
 Forward mapping from \(z \mapsto x:\)<br />
 </p>
@@ -896,12 +901,12 @@ Layers with different variable orderings can be stacked<br />
 </div>
 
 <ul class="org-ul">
-<li><a id="org28f138e"></a>Links to "Masked Autoregressive Flow (MAF)"<br />
-<div class="outline-text-5" id="text-org28f138e">
+<li><a id="org94cd86e"></a>Links to &ldquo;Masked Autoregressive Flow (MAF)&rdquo;<br />
+<div class="outline-text-5" id="text-org94cd86e">
 </div>
 <ul class="org-ul">
-<li><a id="orgd3f357e"></a><a href="cs236_deep_generative_models.html#ID-c7f6a833-25e3-4fe0-b506-82ebd2819e87">CS236: Deep Generative Models</a> <span class="backlinks-outline-path">(<i>Normalizing Flow Models &gt; Autoregressive Models as Normalizing Flow Models &gt; Inverse Autoregressive Flow (IAF)</i>)</span><br />
-<div class="outline-text-6" id="text-orgd3f357e">
+<li><a id="orgd0fc86e"></a><a href="#ID-02e70065-3d4a-46c4-912a-b73bbd5214ad">Normalizing Flow Models</a> <span class="backlinks-outline-path">(<i>Normalizing Flow Models &gt; Autoregressive Models as Normalizing Flow Models &gt; Inverse Autoregressive Flow (IAF)</i>)</span><br />
+<div class="outline-text-6" id="text-orgd0fc86e">
 <p>
 Identical to <a href="#ID-206c8dcd-0059-4704-b1a2-d5f1abdbad07">MAF</a>, but change the roles of z and x.<br />
 </p>
@@ -913,18 +918,18 @@ Identical to <a href="#ID-206c8dcd-0059-4704-b1a2-d5f1abdbad07">MAF</a>, but cha
 </div>
 
 
-<div id="outline-container-org3c4f1fd" class="outline-4">
-<h4 id="org3c4f1fd">Inverse Autoregressive Flow (IAF)</h4>
-<div class="outline-text-4" id="text-org3c4f1fd">
+<div id="outline-container-orgba6353b" class="outline-4">
+<h4 id="orgba6353b">Inverse Autoregressive Flow (IAF)</h4>
+<div class="outline-text-4" id="text-orgba6353b">
 <p>
 Identical to <a href="#ID-206c8dcd-0059-4704-b1a2-d5f1abdbad07">MAF</a>, but change the roles of z and x.<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org68d3e8b" class="outline-4">
-<h4 id="org68d3e8b">Computational tradeoffs of MAF vs. IAF</h4>
-<div class="outline-text-4" id="text-org68d3e8b">
+<div id="outline-container-org8fa0beb" class="outline-4">
+<h4 id="org8fa0beb">Computational tradeoffs of MAF vs. IAF</h4>
+<div class="outline-text-4" id="text-org8fa0beb">
 <p>
 MAF: Fast likelihood evaluation, slow sampling<br />
 ^good for training<br />
@@ -936,9 +941,9 @@ IAF: Fast sampling, slow likelihood evaluation<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgb722636" class="outline-4">
-<h4 id="orgb722636">Parallel Wavenet</h4>
-<div class="outline-text-4" id="text-orgb722636">
+<div id="outline-container-org7ad45ce" class="outline-4">
+<h4 id="org7ad45ce">Parallel Wavenet</h4>
+<div class="outline-text-4" id="text-org7ad45ce">
 <p>
 Idea: best of both worlds&#x2026;teacher MAF model, student IAF model. First train MAF model normally. Then train IAF model to minimize divergence with MAF model. Use IAF model at test-time.<br />
 </p>
@@ -965,11 +970,11 @@ All operations above can be implemented efficiently.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-org5dd4211" class="outline-3">
-<h3 id="org5dd4211">Invertible CNNs</h3>
-<div class="outline-text-3" id="text-org5dd4211">
+<div id="outline-container-orgd16f57b" class="outline-3">
+<h3 id="orgd16f57b">Invertible CNNs</h3>
+<div class="outline-text-3" id="text-orgd16f57b">
 <p>
-It's possible to change a convolutional architecture to become invertible.<br />
+It&rsquo;s possible to change a convolutional architecture to become invertible.<br />
 </p>
 
 <p>
@@ -980,18 +985,18 @@ We can use masked convolutions to enforce ordering =&gt; Jacobian is lower trian
 The point is, you can train a ResNet normally, then invert + use as a flow model.<br />
 </p>
 </div>
-<div id="outline-container-org92747f2" class="outline-4">
-<h4 id="org92747f2">MintNet</h4>
-<div class="outline-text-4" id="text-org92747f2">
+<div id="outline-container-org38ae4fe" class="outline-4">
+<h4 id="org38ae4fe">MintNet</h4>
+<div class="outline-text-4" id="text-org38ae4fe">
 <p>
 uses masked/causal convolutions in a way enforces ordering, makes the Jacobian triangular, makes the transformation invertible..<br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org8edabb8" class="outline-3">
-<h3 id="org8edabb8">Gaussianization flows</h3>
-<div class="outline-text-3" id="text-org8edabb8">
+<div id="outline-container-org9afffe8" class="outline-3">
+<h3 id="org9afffe8">Gaussianization flows</h3>
+<div class="outline-text-3" id="text-org9afffe8">
 <p>
 Let \(X=f_{\theta}(Z)\) be a flow model with Gaussian prior \(Z \sim \mathcal{N}(0, I)=p_{Z}\), and let \(\tilde{X} \sim p_{\text {data }}\) be a random vector distributed according to the true data distribution.<br />
 </p>
@@ -1001,37 +1006,37 @@ Flow models are trained with maximum likelihood to minimize the \(\mathrm{KL}\) 
 </p>
 
 <p>
-It can be shown that \(D_{\mathrm{KL}}\left(p_{\tilde{X}} \| p_{X}\right)=D_{\mathrm{KL}}\left(p_{f_{\theta}^{-1}(\tilde{X})} \| p_{f_{\theta}^{-1}(X)}\right)=D_{\mathrm{KL}}\left(p_{f_{\theta}^{-1}(\tilde{X})} \| p_{Z}\right).\)Ideally, data samples transformed through \(f_{\theta}^{-1}\) should be distributed as Gaussian (Hence "Gaussianizing.") Then, we can easily turn it around and efficiently generate new data samples from Gaussian prior. So, how can we achieve this?<br />
+It can be shown that \(D_{\mathrm{KL}}\left(p_{\tilde{X}} \| p_{X}\right)=D_{\mathrm{KL}}\left(p_{f_{\theta}^{-1}(\tilde{X})} \| p_{f_{\theta}^{-1}(X)}\right)=D_{\mathrm{KL}}\left(p_{f_{\theta}^{-1}(\tilde{X})} \| p_{Z}\right).\)Ideally, data samples transformed through \(f_{\theta}^{-1}\) should be distributed as Gaussian (Hence &ldquo;Gaussianizing.&rdquo;) Then, we can easily turn it around and efficiently generate new data samples from Gaussian prior. So, how can we achieve this?<br />
 </p>
 </div>
-<div id="outline-container-org21b8e49" class="outline-4">
-<h4 id="org21b8e49">Inverse CDF trick</h4>
-<div class="outline-text-4" id="text-org21b8e49">
+<div id="outline-container-org649e58f" class="outline-4">
+<h4 id="org649e58f">Inverse CDF trick</h4>
+<div class="outline-text-4" id="text-org649e58f">
 <p>
 Inverse CDF gives you data samples from a distribution. E.g. Inverse Gaussian composed with \(F_{\text{data}}\) can give you gaussian data.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org1c6b142" class="outline-4">
-<h4 id="org1c6b142">Step 1: Dimension-wise Gaussianization</h4>
+<div id="outline-container-org763c478" class="outline-4">
+<h4 id="org763c478">Step 1: Dimension-wise Gaussianization</h4>
 </div>
-<div id="outline-container-orgb316dbc" class="outline-4">
-<h4 id="orgb316dbc">Step 2: apply a rotation matrix to the transformed data</h4>
+<div id="outline-container-org4ccad92" class="outline-4">
+<h4 id="org4ccad92">Step 2: apply a rotation matrix to the transformed data</h4>
 </div>
-<div id="outline-container-org130948b" class="outline-4">
-<h4 id="org130948b">repeat Step 1 and Step 2 ("stack" these models) =&gt; eventually Gaussian.</h4>
+<div id="outline-container-orgedfe76c" class="outline-4">
+<h4 id="orgedfe76c">repeat Step 1 and Step 2 (&ldquo;stack&rdquo; these models) =&gt; eventually Gaussian.</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-org794c3ec" class="outline-2">
-<h2 id="org794c3ec">Generative Adversarial Networks (GANs)</h2>
-<div class="outline-text-2" id="text-org794c3ec">
+<div id="outline-container-orga80adf2" class="outline-2">
+<h2 id="orga80adf2">Generative Adversarial Networks (GANs)</h2>
+<div class="outline-text-2" id="text-orga80adf2">
 <p>
 Autoregressive and VAEs use maximum likelihood training over the marignal likelihood (or an approximation, at least.) But why maximum likelihood? =&gt; higher likelihood = better lossless compression.<br />
 </p>
 
 <p>
-But&#x2026;let's say our goal isn't compression, but high-quality samples. Granted&#x2026;the optimal generative model will maximize <i>both</i> sample quality and log-likelihood. However, in real life, nothing is perfect, and for imperfect models, high likelihood != good sample quality. (Can have great likelihoods, but terrible samples, or terrible likelihoods but great samples.)<br />
+But&#x2026;let&rsquo;s say our goal isn&rsquo;t compression, but high-quality samples. Granted&#x2026;the optimal generative model will maximize <i>both</i> sample quality and log-likelihood. However, in real life, nothing is perfect, and for imperfect models, high likelihood != good sample quality. (Can have great likelihoods, but terrible samples, or terrible likelihoods but great samples.)<br />
 </p>
 
 <p>
@@ -1039,7 +1044,7 @@ But&#x2026;let's say our goal isn't compression, but high-quality samples. Grant
 </p>
 
 <p>
-When we don't have access to likelihood, we can't depend on KL divergence to optimize. Need a new way of quantifying distance.<br />
+When we don&rsquo;t have access to likelihood, we can&rsquo;t depend on KL divergence to optimize. Need a new way of quantifying distance.<br />
 </p>
 
 <p>
@@ -1047,18 +1052,18 @@ Given a finite set of samples from two distributions \(S_{1}=\{\mathbf{x} \sim P
 </p>
 
 <p>
-New objective: train the generative model to minimize a two-sample test objective between \(S_1\) and \(S_2\). But&#x2026;that's hard to directly optimize those two to converge.<br />
+New objective: train the generative model to minimize a two-sample test objective between \(S_1\) and \(S_2\). But&#x2026;that&rsquo;s hard to directly optimize those two to converge.<br />
 </p>
 
 <p>
-But&#x2026;ok in the generative modeling setting, we know that \(S_1\) and \(S_2\) come from different distributions, the data distribution and the model's approximation of that. let's exploit that we know that label and learn a statistic that <i>maximizes</i> a suitable notion of distance between \(S_1\) and \(S_2\).<br />
+But&#x2026;ok in the generative modeling setting, we know that \(S_1\) and \(S_2\) come from different distributions, the data distribution and the model&rsquo;s approximation of that. let&rsquo;s exploit that we know that label and learn a statistic that <i>maximizes</i> a suitable notion of distance between \(S_1\) and \(S_2\).<br />
 </p>
 </div>
-<div id="outline-container-orga46b694" class="outline-3">
-<h3 id="orga46b694">Two-sample test via a Discriminator</h3>
-<div class="outline-text-3" id="text-orga46b694">
+<div id="outline-container-org1f20467" class="outline-3">
+<h3 id="org1f20467">Two-sample test via a Discriminator</h3>
+<div class="outline-text-3" id="text-org1f20467">
 <p>
-A neural net that tries to distinguish "real" from "fake" samples.<br />
+A neural net that tries to distinguish &ldquo;real&rdquo; from &ldquo;fake&rdquo; samples.<br />
 </p>
 
 <p>
@@ -1084,16 +1089,16 @@ D_{G}^{*}(\mathbf{x})=\frac{p_{\mathrm{data}}(\mathbf{x})}{p_{\mathrm{data}}(\ma
 </p>
 
 <p>
-(We don't want to use likelihoods, though.)<br />
+(We don&rsquo;t want to use likelihoods, though.)<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org9e3912c" class="outline-3">
-<h3 id="org9e3912c">GANs are basically a two-player minimax game between a <b>generator</b> and <b>discriminator</b>.</h3>
+<div id="outline-container-org47f72e1" class="outline-3">
+<h3 id="org47f72e1">GANs are basically a two-player minimax game between a <b>generator</b> and <b>discriminator</b>.</h3>
 </div>
-<div id="outline-container-org359bfc2" class="outline-3">
-<h3 id="org359bfc2">Generator</h3>
-<div class="outline-text-3" id="text-org359bfc2">
+<div id="outline-container-org0729d5c" class="outline-3">
+<h3 id="org0729d5c">Generator</h3>
+<div class="outline-text-3" id="text-org0729d5c">
 <p>
 Directed, latent variable model with a deterministic mapping between \(z\) and \(x\), \(G_\theta\).<br />
 Training objective for generator:<br />
@@ -1119,9 +1124,9 @@ Btw, there are other divergences that we can use than Jenson-Shannon Divergence.
 </p>
 </div>
 </div>
-<div id="outline-container-org9158061" class="outline-3">
-<h3 id="org9158061">GAN training algorithm</h3>
-<div class="outline-text-3" id="text-org9158061">
+<div id="outline-container-org4909ec5" class="outline-3">
+<h3 id="org4909ec5">GAN training algorithm</h3>
+<div class="outline-text-3" id="text-org4909ec5">
 <p>
 Sample minibatch of \(m\) training points \(\mathbf{x}^{(1)}, \mathbf{x}^{(2)}, \ldots, \mathbf{x}^{(m)}\) from \(\mathcal{D}\) Sample minibatch of \(m\) noise vectors \(\mathbf{z}^{(1)}, \mathbf{z}^{(2)}, \ldots, \mathbf{z}^{(m)}\) from \(p_{z}\) Update the discriminator parameters \(\phi\) by stochastic gradient ascent<br />
 \[

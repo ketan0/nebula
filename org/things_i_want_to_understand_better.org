@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       677660ca-fc3c-45ef-9944-6fa1fb8a309e
+:END:
+#+title: things i want to understand better
+
+* Flow models (e.g. WaveGlow)
+* GlowTTS
+* Bayesian models

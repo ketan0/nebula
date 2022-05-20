@@ -18,3 +18,18 @@ Vocal tract is basically air moving through a tube, with a certain size/length o
 The goal of chatbots is to produce natural, human-like conversations.
 
 The goal of *dialog systems* is to accomplish a particular task. Naturalness / human-like chat is a "nice to have," but not essential
+* Text-to-speech (TTS)
+:PROPERTIES:
+:ID:       5cf38ce7-fa4a-4f64-9b27-86005cb2cb0c
+:END:
+** Tacotron
+classic encoder decoder model w/ attention
+** FastSpeech
+classic seq2seq transformer -- end-to-end
+** Vocoders (spectrograms => speech)
+** GlowTTS
+Combines a lot of the good things: flexiblity of Tacotron, speed of FastSpeech
+** VITS
+** Generative spoken language modeling
+wav2vec2 + GPT-style transformer = you can have conversations entirely in the audio space! audio-to-audio models (rather than using ASR)
+*** https://speechbot.github.io

@@ -11,6 +11,8 @@
 :END:
 [[http://www.catb.org/~esr/faqs/smart-questions.html][How To Ask Questions The Smart Way - Eric Steven Raymond]]
 I see some [[id:089327e2-3429-4df9-9fd8-d17b8d6cc66d][Gricean Maxims]] at work here. Be relevant, have the context, be concise. I also see some [[id:6ac23ec1-38c9-4092-8ebb-a6efd4fa1839][Utilitarianism]], in that hackers want public forums to increase the flow of useful information and make it more efficient.
+
+But more than that...how do you ask questions that strike at the heart of the matter, and reveal something new and profound to you?
 * what makes a subject "interesting" to a given person?
 :PROPERTIES:
 :ID:       a6d89b43-5528-47ce-83e7-d4514f547ca8
@@ -26,6 +28,9 @@ Proto-answer 2: It depends on the frame you approach it with. I feel like every 
 :END:
 thinking about this in relation to [[id:e60c441f-deb9-4eca-8816-73e477b98c29][dynamic programming]] -- I think it serves as a good metaphor for why it can be useful to think about the structure of the problems you're solving, and if there's any overlap / reuse that can occur....seems that this is also related to [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][decomposition]] / [[id:87e83cf3-3dfa-4486-845d-155895a9f6b6][modularity]]
 * What standard of evidence should I demand to update my beliefs about something?
+:PROPERTIES:
+:ID:       d35035f4-eacb-4aca-a7a1-c48c687af242
+:END:
   In other words, how much of a skeptic should I be?
 * "Flat" design (monorepo) vs. hierarchical?
 :PROPERTIES:
@@ -34,10 +39,28 @@ thinking about this in relation to [[id:e60c441f-deb9-4eca-8816-73e477b98c29][dy
 Aka, is [[id:87e83cf3-3dfa-4486-845d-155895a9f6b6][modularity]] good?
   For example, monorepo vs. structured w/ nice neat folders. Monorepo is easier to just scan and find what you want, simply use the power of search, but can get out of control if too large. OTOH, there is a strong argument for decomposition into folders/branches/etc. Also, when making text notes, should I have big, sprawling things like /thoughts/ or small, decomposed things? (Ideal answer: both) 
 * How does someone decide their values?
+:PROPERTIES:
+:ID:       438cb440-92ec-483f-b48a-984c0bdda4e4
+:END:
 * Are binaries valid things?
+:PROPERTIES:
+:ID:       caeca3fe-67ac-43d3-83b4-7aca8205f781
+:END:
 * Where are frameworks useful? How much "meta-" is too much?
-* Do aesthetics matter?
-* Are other people smart/headed on the right track when it comes to things?
+:PROPERTIES:
+:ID:       62990c5a-b8fa-4be8-8add-d4d14fff40be
+:END:
+* Do aesthetics matter? How much?
+:PROPERTIES:
+:ID:       06b3a480-00c6-4d74-b216-6665c6817691
+:END:
+* Which other people smart/headed on the right track when it comes to things?
+:PROPERTIES:
+:ID:       42ab4227-dae3-4822-8b4f-8ae8fe724e5e
+:END:
 * How do I /effectively/ customize my life? That is, taking the default settings that are *important* to change, and changing them.
+:PROPERTIES:
+:ID:       2dc8f48d-103d-4d77-9a5d-55aebdb27714
+:END:
 * Other people's questions:
 ** https://patrickcollison.com/questions

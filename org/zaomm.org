@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       1ef6d0be-e0f0-4a12-b32e-63abe89c1e6a
+:ROAM_ALIASES: @pirsigZenArtMotorcycle1991
 :END:
 #+title: Zen and the Art of Motorcycle Maintenance
 
@@ -10,3 +11,11 @@ Laws of science, money, government, etc. is all in our imaginations.
 "Groovy" (John) vs. scientific-analytical types (the author.) Two completely different ways of perceiving the world.
 
 Lateral drift: "Moving across a problem, instead of attacking it directly. A change in perspective, can lead to new solutions." ([[https://conservance.wordpress.com/2011/01/16/lateral-drift/][source]])
+
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@pirsigZenArtMotorcycle1991]@@html:</sup>@@
+* Bibliography
+#+print_bibliography:

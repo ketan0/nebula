@@ -88,11 +88,15 @@ E.g. logistic regression. Modeling p(y|x) as a linear combination of the inputs 
 
 Using a conditional model is only possible when X is always observed. when some Xi are unobserved, the generative model allows us to compute p(Y|X_evidence) by marginalizing over unseen.
 * Autoregressive Models
+:PROPERTIES:
+:ID:       cb15f12b-6764-4118-a8bb-239333aee169
+:END:
 Bayes net with modeling assumptions:
 - model using chain rule (fully general)
-  $p(x) = p(x_1)p(x_2|x_1)p(x_3|x_2)...p(x_n|x_{n-1})$
+  $p(x) = p(x_1)p(x_2|x_1)p(x_3|x_1, x_2)...p(x_n|x_1, ..., x_{n-1})$
 - assume the conditionals take functional form (e.g., a logistic regression)
 
+  Autoregressive Models are often slower than transformers CNNs etc.
 ** Fully Visible Sigmoid Belief Network (FVSBN)
 $p\left(X_{i}=1 \mid x_{<i} ; \alpha^{i}\right)=\sigma\left(\alpha_{0}^{i}+\sum_{j=1}^{i-1} \alpha_{j}^{i} x_{j}\right)$
 ** Neural Autoregressive Density Estimation (NADE)
@@ -203,6 +207,9 @@ $\theta = A,B,c,d$
 ** Good stuff about latent variable models:  complex models, natural for unsupervised learning
 ** Hard stuff about latent variable models: learning in unsupervised manner is very difficult
 * Normalizing Flow Models
+:PROPERTIES:
+:ID:       02e70065-3d4a-46c4-912a-b73bbd5214ad
+:END:
 Autoregressive models provide tractable likelihoods but no direct mechanism for learning features.
 
 Variational autoencoders can learn feature representations (via latent variables $z$,) but have intractable marginal likelihoods.
