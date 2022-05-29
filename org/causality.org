@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       6fd5212d-1117-405e-8ea0-a3ece3c40a18
+:END:
+#+title: causality
+
+maybe talk about hill's criteria for causality here

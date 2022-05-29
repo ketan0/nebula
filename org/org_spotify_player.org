@@ -1,0 +1,40 @@
+# -*- org-link-shell-confirm-function: nil; -*-
+:PROPERTIES:
+:ID:       b3ed6592-2547-4d58-8909-d2f219db54bb
+:END:
+#+title: Org Spotify Player
+
+Prerequisites: MacOS & spotify.
+
+NOTE: be careful adding code links -- org-link-shell-confirm-function is set to nil just for this buffer, meaning that links in this buffer will execute without warning once you follow the link. (You can verify the code inside these links is not malicious with =org-toggle-link-display=)
+
+Eventually: want to create a spotify: link type so that u can just do stuff like "album:[ID]"
+
+[[shell:osascript -e 'tell application "Spotify" to previous track'][prev track]] · [[shell:osascript -e 'tell application "Spotify" to playpause'][play/pause]] · [[shell:osascript -e 'tell application "Spotify" to next track'][next track]]
+
+ideas: have just a big list of songs/albums and stuff that I love. Give stuff various tags, like for genre, playlists, Then you can use org-ql, or what have you to filter the music, and voila, you have a dynamically generated playlist.
+
+[[spotify:album:71QyofYesSsRMwFOTafnhB][Coloring Book]]
+
+[[spotify:track:0aMHIW1lqrulVCx0LLlr6a][Cocoa Butter Kisses]]
+
+[[spotify:playlist:37i9dQZF1DXdgnLr18vPvu][Tailgate Party]]
+
+[[spotify:playlist:37i9dQZF1DX1gRalH1mWrP][Summer Hits]]
+
+[[spotify:playlist:4hckm1aSpJtD9CebeTweAB][Energetic Jazz]]
+
+[[spotify:track:7DJsL4jyXA39GDiHFQYQ0t][Mess Around]]
+
+[[spotify:album:1atjqOZTCdrjxjMyCPZc2g][Mr. Morale & The Big Steppers]]
+
+[[spotify:album:1atjqOZTCdrjxjMyCPZc2g][Mr. Morale & The Big Steppers]]
+
+* Water
+:PROPERTIES:
+:SPOTIFY_PLAYLIST_ID: 7vMsIwk4Gg1KUcEsopYfhL
+:END:
+** [[spotify:track:4VtRHZ4tBDHaWltVAytlLY][go]]
+** [[spotify:track:7hfi4ZTfV7akmGINh6qYCF][Be]]
+** [[spotify:track:0EcKn4nTp9tbdVtDsgMi07][Urself]]
+** [[spotify:track:0DwOIUxbtZvWVLlqclMcA9][LOL]]

@@ -1,9 +1,9 @@
 :PROPERTIES:
-:ID:       a0ca561b-5b6c-4584-9fee-d8c8c68839fe
-:ROAM_REFS: https://www.youtube.com/watch?v=Wmg8-EnS-MI @dankaudiostashDesigningFreedomDisregarded2020
+:ID:       d0730d9b-797c-4d9f-9276-413e57462ed9
 :END:
-#+title: Designing Freedom: The Disregarded Tools of Modern Man | Stafford Beer - YouTube
+#+title: Designing Freedom
 
+* The Disregarded Tools of Modern Man
 It's interesting to pin down exactly what is meant by "variety" -- I think I sort of got it from context...it's some measure of the complexity of a system. It also can correspond to the everyday concept of variety in a sense -- variety is simply a lot of diverse things.
 
 The line "computers do not make mistakes" -- it's interesting to think about that in the context of AI that might be said to have some agency/intent. (I don't think we're quite there yet, but some [[id:9c86eed7-06ae-4995-b87e-4784e696dd4d][reinforcement learning]] agents, large language models, etc. are starting to blur the line..)
@@ -14,13 +14,12 @@ The rhetoric of computers not being the problem, though, is definitely something
 The Buddha, the Godhead, resides quite as comfortably in the circuits of a digital computer or the gears of a cycle transmission as he does at the top of the mountain, or in the petals of a flower. To think otherwise is to demean the Buddha - which is to demean oneself.
 #+end_quote
 
-Metacommentary: I loved the computer music at the beginning/end, as well as the visual cues throughout. It feels like this type of multisensory experience should be what computers are all about. Yet, as Beer would say, we've attenuated all that variety into Facebook and the tyranny of sequential news feeds!
-
+Metacommentary: In this video reading, I loved the computer music at the beginning/end, as well as the visual cues throughout. It feels like this type of multisensory experience should be what the web is all about. Yet, as Beer would say, we've attenuated all that variety into Facebook and the tyranny of sequential news feeds!
 
 * Link
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: no-display
 :END:
-@@html:<sup>@@[cite:@dankaudiostashDesigningFreedomDisregarded2020]@@html:</sup>@@
+@@html:<sup>@@[cite:@beerDesigningFreedom1993]@@html:</sup>@@
 * Bibliography
 #+print_bibliography:

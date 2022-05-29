@@ -1,0 +1,78 @@
+:PROPERTIES:
+:ID:       fb920b99-a2b5-4a20-bf7c-875727e6ae58
+:END:
+#+title: Nancy Kanwisher
+
+Talk she gave to the Symbolic systems program on May 27.
+
+* A roadmap for research
+There are many different areas to the brain:
+- face area
+- scene area
+- visual word area (ppl don’t have this response until after they learn to read— and only in languages they know!)
+- auditory speech area
+- language area
+“what is the relationship between language and thought?” => thought != language! two diff. brain regions respond much differently to thought and language. also left-hemisphere stroke patients — they can still think.
+** [[id:6fd5212d-1117-405e-8ea0-a3ece3c40a18][Causal]] role?
+fMRI is nice...but what's the /causal/ role of these regions? We don't just want correlations of brain activations & activities.
+
+We need experiments where we "poke" part of the system -- [[id:d68c5093-d6d6-43b8-a48d-629ade9293b6][intervention]]. Schalk et al.
+
+If he's looking at a face, the face changes. If he's looking at something else, it adds a face to that object.
+
+"Poking the face area" results in weird, weird face stuff happening to brain patient
+
+Stimulated color regions -- he saw a rainbow (wtfff)
+** What other specializations?
+  not their appearance, sensations, etc.
+
+  NOT every region has a highly specific function -- large swaths of brains are "multiple demand" regions.
+
+  3P Social Interactions region -- seeing other people interacting with each other.
+
+  Physics regions -- reasoning about the physical world.
+
+Interesting frame -- data doesn't need to be collected "For" a specific hypothesis -- instead, they collected data while people listened to 165 everyday sounds. Looked at the components of the neural response.
+
+Six "components" of cortical response to sounds
+
+One component: responds to speech.
+Another component: music!
+
+Why do we have music?
+
+Music "co-opts" speech/language mechanisms -- NO. still a mystery.
+
+Lol the textbook picture of the brain is so messy in so many ways -- it's not always neatly divided into left/right hemisphere. Many, many functions are bilateral, whereas others are right- or left-lateralized.
+
+- there’s a pink patch that REALLY selects for thinking about others’ /thinking/
+** Developmental origins?
+Face area takes years to arise, requires visual experience...?? -- interesting question of nature vs. nurture. Actually, Rebecca Saxe found that you can get face responses in INFANTS. Heather Kosakowski scanned 83 awake infants.
+
+^Hyo question: what does the "pretrained" network in the brain look like? A: we don't really know.
+
+My question: where is the supervision "signal" coming from in the brain?
+
+^markman question: can we correlate the actual training regime of NNs with development? A: Seems much more sus.
+
+*congenitally blind* subjects respond to touching faces!!!
+** Evolutionary origins?
+some stuff is shared (common ancestor) --
+
+face-color-place: wtf?? those regions are "sandwiched" together in monkeys and humans.
+** What's [[id:c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff][represented]] and computed in each region?
+Astonishing success of convnets...analogs between them and the brain perception. Model of how vision "might" work in the brain. (Whoa, that's fantastic to hear a NEUROSCIENTIST say that. We can consider them a model of the brain!)
+
+Ratan Murty -- CNN-based models of FFA, PPA, EBA? Concretely -- get CNN activations, and see if you can predict the fusiform face area responses. really really high correlations.
+
+Oh interesting -- then you can test the trained model on all of Imagenet, and see what it responds to...ONLY faces. damn.
+
+LMAO can feed things into GANs too.
+*** Why does the Brain have category-selective regions in the first place?
+Old hypothesis: face specific regions needed, since face recognition needs diff features than object recognition.
+
+Well...the dual-trained network does just as well on both -- they "lesioned" the network and found that the network had spontaneously separated itself into two separate networks -- one for object detection, one for face detection.
+
+There are diff feature spaces necessary for different problems -- brain learns to segregate those into different systems.
+*** Random stuff -- topographical map of number representatoin in parietal cortex.
+* 5/27 talk

@@ -1,12 +1,12 @@
 :PROPERTIES:
 :ID:       ca2dd450-e352-43ce-95eb-9fd8e80c646c
 :END:
-#+TITLE: recursion
+#+spotify_href: spotify:track:6lAwqvAonO39uuQVtmc7lW
+#+title: ♾ recursion
 
-
-#+HTML:<div align=center>
+#+html: <div align=center>
 ${\Large x^{x^{x^{x^{x^{...}}}}}}$
-#+HTML:</div>
+#+html: </div>
 
 TODO: sidenotes-in-sidenotes type stuff...
 TODO: fractals-type stuff....
