@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       80f83e7d-cd8b-4eeb-b8c1-ab8258340c78
+:ROAM_REFS: http://augmentingcognition.com/ltm.html
+:END:
+#+title: Augmenting Long-term Memory

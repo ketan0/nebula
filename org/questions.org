@@ -4,6 +4,13 @@
 #+TITLE: ❓ questions
 (those without easy answers.)
 
+ways for me to use these questions:
+- ask knowledgeable people for their answers to these questions.
+- fill the answers in as I go in life.
+- test these out experimentally
+
+TODO: would be nice to have some structure / categorization other than just a sequential list of questions...
+
 * Should I be pure or applied?
 * how to ask good questions
 :PROPERTIES:
@@ -27,11 +34,16 @@ Proto-answer 2: It depends on the frame you approach it with. I feel like every 
 :ID:       c2b46716-f6f5-48ee-87b9-c6a85acfb103
 :END:
 thinking about this in relation to [[id:e60c441f-deb9-4eca-8816-73e477b98c29][dynamic programming]] -- I think it serves as a good metaphor for why it can be useful to think about the structure of the problems you're solving, and if there's any overlap / reuse that can occur....seems that this is also related to [[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][decomposition]] / [[id:87e83cf3-3dfa-4486-845d-155895a9f6b6][modularity]]
+* what sorts of things should I immerse my brain in, at what times in my life?
+feels like there are so many interesting things to think about, and so little time...I want to like have multiple walkers exploring multiple paths in the knowledge graph at once, but feel limited by the sequentiality of thinking.
 * What standard of evidence should I demand to update my beliefs about something?
 :PROPERTIES:
 :ID:       d35035f4-eacb-4aca-a7a1-c48c687af242
 :END:
   In other words, how much of a skeptic should I be?
+* What should the relationship to past work be?
+* Is it morally okay for my primary motivation in life /not/ to be making the world a better place?
+If I'm being honest- the kinds of things that motivate me the most are the things that I'm most curious about. And those aren't always humanity's most pressing problems-- in fact, if done wrong, some of my interests (e.g. AI) can /contribute/ to humanity's problems. (That said, I do believe AI can also help humanity tremendously...but as I see it, our most pressing problems as things like figuring out how to make human life sustainable, ending world hunger/poverty/disease, ending oppression of marginalized groups, and things of that nature. I think AI can help in some of those cases, but it wouldn't be the primary thing to solve it.)
 * "Flat" design (monorepo) vs. hierarchical?
 :PROPERTIES:
 :ID:       deea93db-65e4-425b-8700-fe96117795d1

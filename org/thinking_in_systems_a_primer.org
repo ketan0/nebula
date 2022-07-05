@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       17863772-5304-4101-8274-320870e93814
+:END:
+#+title: Thinking in Systems: A Primer
+
+* Link
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: no-display
+:END:
+@@html:<sup>@@[cite:@meadowsThinkingSystemsPrimer2008]@@html:</sup>@@
+* what is a [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][system]]?
+
+* Bibliography
+#+print_bibliography:

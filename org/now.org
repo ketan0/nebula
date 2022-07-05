@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       1bec253c-f497-429c-8eaf-087583196229
+:END:
+#+title: now
+
+Want to have a "now" page (similar to other personal websites)
+
+cc: [[id:4bba82cd-9443-4496-8896-81323093ec11][notes I'm actively working on]]

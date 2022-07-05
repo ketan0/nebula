@@ -1,9 +1,9 @@
 :PROPERTIES:
 :ID:       3e676e0c-65d7-44ee-9886-324b82878b28
 :END:
-#+title: spaced repetition
+#+title: 🔁  spaced repetition
 
-Wanna talk about:
+Wanna talk about in this note:
 - quantum.country
 - future of education
 - how to extend this paradigm past flaschard memorization??

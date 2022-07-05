@@ -8,6 +8,6 @@
 :PROPERTIES:
 :ID:       f368ca02-b398-4af9-9f31-cfc0205c271f
 :END:
-I think that optimizing for clear, measurable metrics is a powerful [[id:00c8e647-350b-473d-bd27-8ac4836820b8][frame]]. Dan Luu talks about how one can get better at their craft in https://danluu.com/p95-skill/ -- [[id:7fd55afc-19d5-4f5c-918b-b90a2073b0f0][practice]] in an intentional way. Get feedback from others, and even from your past self by recording yourself and analyzing it.
+I think that optimizing for clear, measurable metrics is a powerful [[id:bf96c1eb-3ce0-4d7a-b2ae-e44f2fbdf240][frame]]. Dan Luu talks about how one can get better at their craft in https://danluu.com/p95-skill/ -- [[id:7fd55afc-19d5-4f5c-918b-b90a2073b0f0][practice]] in an intentional way. Get feedback from others, and even from your past self by recording yourself and analyzing it.
 * Optimizing for good goals
 On the flip side, it's crucial to deeply consider what you're optimizing for, and why. There's been some (rightful) pushback against "optimization mindset" in Silicon Valley. I think it's kind of throwing out the baby with the bathwater to say that "optimization = bad"... that said, their core point holds water, in that lots of tech involves optimizing for objectives without any forethought about /why/ a particular objective was chosen.

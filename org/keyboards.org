@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       2db6d59f-b902-48d6-af4f-e926114aa710
+:END:
+#+title: keyboards
+
+Despite spinning a lot of cycles thinking about [[id:058bef0b-aba6-4ac6-b4ae-b3c7b7e22040][⤴️ shortcuts]] and the like, I've never thought too hard about this input device itself -- the keyboard.
+
+I've been perfectly happy typing away on Macbook keyboards for the last 15+ years (having used a 2015 MBA and 2021 MBP, I managed to completely avoid the butterfly keyboard generation, thank god.) But now, I've been asked by my future employer what kind of keyboard I want, so here's the space I'll think about that in!
+
+After reading the wiki of r/MechanicalKeyboards, I am very intrigued. I might have to go find a Fry's or something and test out some keyboards.
+
+[[https://www.wasdkeyboards.com][WASD keyboards]] in Fremont -- those keyboards look sooooo slick. wowowow. might have to hit that up for personal use 😉
+
+I could imagine making some sort of symsys-y design on my keyboard....that would be really cool. I'd have to think a bit harder about what is meaningful to me.
+
+....also the all-black keyboard is a fucking vibe tho.
+#+ATTR_HTML: :alt all-black mechanical keyboard
+[[file:fp1.jpg]]

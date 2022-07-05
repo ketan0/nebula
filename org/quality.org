@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       a5e0c4a3-6ea6-40f5-bc92-878e88018c85
+:END:
+#+title: Quality
+
+As in [[id:1ef6d0be-e0f0-4a12-b32e-63abe89c1e6a][Zen and the Art of Motorcycle Maintenance]]

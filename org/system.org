@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       4ca02697-506c-4910-bf5e-ce8dcb2da5a5
+:END:
+#+title: system
+
+* Interesting phenomena:
+** Redundancy
+   Everyone has their "own road to Rome." i.e., People in different fields reproduce many of the same algorithms or goals or whatever with different implementations. ([[id:bad51535-4aad-4e2a-b6e5-fff9839e9224][Marr's level]] stuff...)
+* Example Systems
+** Programming languages
+** Human languages
+** Filesystems
+** Emacs packages
+** Societies
+** Twitter circles
+** Biological
+*** Cat
+** Universe

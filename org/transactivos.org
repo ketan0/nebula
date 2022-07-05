@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       b82054c7-06f7-4f4b-a547-68e637468ed7
+:END:
+#+title: transactivos
+
+Meeting with Gui, Breno, and Karen on July 5th, 2022.
+
+* Conversational threads
+** [[id:def74678-76b6-4eae-9908-4a82bad04a0b][🌌 digital nebula]] as a way of "pinching" certain threads in my knowledge graph
+Just the tip of the iceberg in terms of what is possible -- methods of organization of our thoughts, our knowledge. This is like a prototype of a prototype.
+
+technology is imperfect, we're not always capable of [[id:1bdb5bd1-008d-4308-874b-801f25c4a393][expressing]] things that we want to express - have to work within current systems (org-roam, Roam, Anki, etc.) that enable modes of expression.
+
+It's not so much about the tool, but how you use it
+#+ATTR_HTML: :class quoteback :data-title Augmenting Long-term Memory :data-author Michael Nielsen :cite http://augmentingcognition.com/ltm.html#:~:text=95%25%20of%20anki's%20value%20comes%20from%205%25%20of%20the%20features
+#+begin_quote
+95% of Anki's value comes from 5% of the features
+#+end_quote
+** [[id:3e676e0c-65d7-44ee-9886-324b82878b28][🔁  spaced repetition]]: how to intentionally remember things
+can be a Anki-style system, a la [[id:80f83e7d-cd8b-4eeb-b8c1-ab8258340c78][Augmenting Long-term Memory]]
+
+can be a system like this -- node's degree is rough proxy for how much it should be repeated / traversed
+connectivity is very important, in this frame.
+** Random grab-bag of stuff I've been thinking about recently:
+*** Was the cognitive, day-to-day experience of living in the early 2000s a lot different than now? (In other words, how did smartphones (as opposed to personal computers / Internet) change the thought patterns of an entire civilization?)
+specifically angling towards the focusing / attention aspects of cognition...
+
+- phone feels like an extension of my body, a weak form of brain-computer interface
+- hesitate to immediately jump to a "good changes" / "bad changes" frame
+- I am "close" to lots, lots more knowledge than before - friction to connect with people over the Internet is much lower
+  - don't have to boot up a desktop computer to talk to people - more like, oh, let's see what other people are saying in my pocket, or on my wrist
+- probably has changed dopamine / reward circuitry a lot
+  - lots of stimulating content available to us -- crave that kind of content
+  - shortening attention spans
+**** Follow-up question: how can we redesign technology in a way that makes us more thoughtful / attentive / able to follow threads deeply, without getting distracted?
+- notifications seem like they have a huge effect on attention: how could those systems be redesigned (but we still get notified of important things at appropriate times?)
+*** a family (or other social organizational unit) - greater than the sum of its parts. the relationships / interactions between the nodes are very important in reinforcing the emergent concept of "family"
+Interesting to note cultural differences: my girlfriend is Tamil, and the family bonds are very strong (calling/texting parents every day / nearly every day,) whereas I communicate with my parents about once a week on average
+* Conversation

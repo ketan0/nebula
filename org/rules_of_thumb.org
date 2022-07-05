@@ -38,11 +38,17 @@ Related to the idea of constraints supporting creativity--dead [[id:0dc3bc78-df9
 Simple life philosophy. Simple running routine. Simple self-reflection routine. To start out with.
 
 cc: [[id:d671771e-c611-4a1c-8ccd-5b21cf5b0b2f][encouraging good patterns of thinking]]
+* Slow is smooth, smooth is fast.
+:PROPERTIES:
+:ID:       9f5f442e-2188-4560-bc2f-f0ed221c80c4
+:END:
 * Simulate having a conversation with someone who knows their stuff.
 :PROPERTIES:
 :ID:       50ffa84c-9659-4347-a03a-289ff063a738
 :END:
 This works shockingly well when I'm having a problem, in that it sort of forces me to be rational about things and fully express all the particulars involved (which I may not have actually done in my in-head frustration.) Like imagine sitting with someone very level-headed, and explaining your problem to them. You can even do this in text form, writing out an imaginary email to this person.
+
+(alternatively, and maybe this should be your first resort -- actually talk to someone who knows their stuff.)
 * Just go to bed.
 :PROPERTIES:
 :ID:       89a13330-d380-4e34-a177-3aad510bc516

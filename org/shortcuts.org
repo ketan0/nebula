@@ -18,6 +18,8 @@ inspiration taken from these goku configs:
 :HTML_CONTAINER_CLASS: karabiner-keyboard-container dont-show-content-in-backlinks
 :ID:       7e0b1fcf-cdd2-46eb-8195-c021c498fd1a
 :END:
+Hover over a key to see where it leads!
+# TODO: add function row here lol
 ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------,
 ❘ ~ ❘ 1 ❘ 2 ❘ 3 ❘ 4 ❘ 5 ❘ 6 ❘ 7 ❘ 8 ❘ 9 ❘ 0 ❘ - ❘ + ❘ <-    ❘
 ❘---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----❘

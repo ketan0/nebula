@@ -5,8 +5,16 @@
 
 Things I've said I want to do...
 
+Note to self: maybe don't start trying to do all of these things at once...slowly work them in. And even then, we might have to sacrifice some of them, at least for now. Sacrifice is sacred.
+
 - read more books (reading every night before bed, in a pleasant ritualistic kind of way)
+- meditation, breathwork, deeply exploring the nature of my mental states...
+- decorating my lived-in spaces to create a warm, inviting, creative frame.
+  - ideas: posters that inspire me, geometric things that inspire me (origami?), etc.
+- consistent time devoted to note-taking every day
+- contribute to open-source packages
 - read more academic papers (even about non-ML stuff, like nutrition science!) and critically evaluate their claims, discuss with others, write responses, etc.
+- understanding the low-level (weights, nonlinearities, distributions, GPUs, floating point numbers...) constituents of deep learning (a high-level abstraction)
 - write a "How to Live a Life" for myself
 - being ​~ prolific ~ -- high bias to action, creative outputs like blogposts, videos, twitter, projects, etc
 - going for long walks every day

@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       bad51535-4aad-4e2a-b6e5-fff9839e9224
+:END:
+#+TITLE: Marr's Levels
+
+Stole this frame from various classes, most notably [[id:543215d5-6bd3-423c-98a9-8374b7e26894][PSYCH 50: Cognitive Neuroscience]].
+
+Marr's Levels is one example of viewing the system that is the human brain-mind-thing at three different [[id:0506911d-6bec-4f9d-8747-1b338a052b24][layers of abstraction]].
+
+* Computational level
+:PROPERTIES:
+:ID:       6ea64a77-461b-401e-b9d9-438b29c37371
+:END:
+  What is the [[id:0b163a77-6e9b-4b60-bbe5-674cb4125617][goal]]?
+* Algorithmic level
+:PROPERTIES:
+:ID:       d2f3ae36-ec37-464f-ac6b-8f45c9d6ffb4
+:END:
+  What are the representations/[[id:bf96c1eb-3ce0-4d7a-b2ae-e44f2fbdf240][frames]]/ways of thinking/procedures?
+Right now, I'm kind of using this as like the "middleware" between goals and concrete realizations. They are sort of the idea playground, the habit loops, the states of mind, etc.
+* Implementation level
+:PROPERTIES:
+:ID:       38584e6c-9a2a-4bbc-97a8-8c9d3bc729b4
+:END:
+  What are the physical mechanisms that bring about these changes? What are the [[id:a28bca46-bdbe-41d6-8e9f-e8876088fd63][current things I'm doing]]?  
+  See: , [[id:bf96c1eb-3ce0-4d7a-b2ae-e44f2fbdf240][frames]]
+
+I feel like Input systems in the brain ascend Marr's Levels (from physical reality => representations => meaning / goal of perceiving), whereas Output (motor) systems descend them (prefrontal decides a lofty goal, and that gets translated into concrete movement/reality.)
