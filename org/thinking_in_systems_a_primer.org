@@ -3,12 +3,9 @@
 :END:
 #+title: Thinking in Systems: A Primer
 
-* Link
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: no-display
-:END:
-@@html:<sup>@@[cite:@meadowsThinkingSystemsPrimer2008]@@html:</sup>@@
 * what is a [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][system]]?
+#+begin_quote
+So, what is a system? A system is a set of things—people, cells, molecules, or whatever—interconnected in such a way that they produce their own pattern of behavior over time. The system may be buffeted, constricted, triggered, or driven by outside forces. But the system’s response to these forces is characteristic of itself, and that response is seldom simple in the real world.
 
-* Bibliography
-#+print_bibliography:
+Meadows, Donella H.. Thinking in Systems (p. 2). Chelsea Green Publishing. Kindle Edition.
+#+end_quote

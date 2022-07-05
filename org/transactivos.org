@@ -6,6 +6,13 @@
 Meeting with Gui, Breno, and Karen on July 5th, 2022.
 
 * Conversational threads
+** About me
+- really interested in structures of all kinds
+- Symbolic Systems
+- Turing Test /  [[id:b7e233f7-62f3-408f-9244-3d486a1e847d][Why People Think Computers Can't]]: seminal moment for me in thinking about the nature of intelligence (related to [[id:c0cd7676-3ef5-4cb8-8ab9-f351f3ce3dc7][What the fuck is "cognition" after all?]])
+  - studying artificial intelligence was an outgrowth of this inspirational moment
+- 2020-ish: began using Emacs, becoming interested in knowledge graphs, etc.
+- interest in knowledge graphs, emacs, systems, all intertwined
 ** [[id:def74678-76b6-4eae-9908-4a82bad04a0b][🌌 digital nebula]] as a way of "pinching" certain threads in my knowledge graph
 Just the tip of the iceberg in terms of what is possible -- methods of organization of our thoughts, our knowledge. This is like a prototype of a prototype.
 
@@ -21,7 +28,7 @@ can be a Anki-style system, a la [[id:80f83e7d-cd8b-4eeb-b8c1-ab8258340c78][Augm
 
 can be a system like this -- node's degree is rough proxy for how much it should be repeated / traversed
 connectivity is very important, in this frame.
-** Random grab-bag of stuff I've been thinking about recently:
+** 🎒 Random grab-bag of stuff I've been thinking about recently:
 *** Was the cognitive, day-to-day experience of living in the early 2000s a lot different than now? (In other words, how did smartphones (as opposed to personal computers / Internet) change the thought patterns of an entire civilization?)
 specifically angling towards the focusing / attention aspects of cognition...
 
@@ -37,3 +44,15 @@ specifically angling towards the focusing / attention aspects of cognition...
 *** a family (or other social organizational unit) - greater than the sum of its parts. the relationships / interactions between the nodes are very important in reinforcing the emergent concept of "family"
 Interesting to note cultural differences: my girlfriend is Tamil, and the family bonds are very strong (calling/texting parents every day / nearly every day,) whereas I communicate with my parents about once a week on average
 * Conversation
+** What the fuck is "cognition" after all?
+:PROPERTIES:
+:ID:       c0cd7676-3ef5-4cb8-8ab9-f351f3ce3dc7
+:END:
+** In what ways do you feel you are enhancing your own cognition?
+:PROPERTIES:
+:ID:       9246fd69-bc7a-44b2-bb97-6c0913306fc4
+:END:
+** (Meta-question) What are some tools for improving transactivos' shared cognition?
+:PROPERTIES:
+:ID:       9739a88a-1058-44d0-baf4-940536416ac5
+:END:
