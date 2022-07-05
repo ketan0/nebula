@@ -3,26 +3,57 @@
 :END:
 #+title: transactivos
 
-Meeting with Gui, Breno, and Karen on July 5th, 2022.
+Meeting with Gui, Breno, and Karn on July 5th, 2022.
 
 * Conversational threads
-** About me
-- really interested in structures of all kinds
-- Symbolic Systems
+** About me (filtered for this convo)
+- 2016-ish: really interested in structures of all kinds
+- 2017-ish: discovered Symbolic Systems at Stanford - felt that it called to me.
 - Turing Test /  [[id:b7e233f7-62f3-408f-9244-3d486a1e847d][Why People Think Computers Can't]]: seminal moment for me in thinking about the nature of intelligence (related to [[id:c0cd7676-3ef5-4cb8-8ab9-f351f3ce3dc7][What the fuck is "cognition" after all?]])
   - studying artificial intelligence was an outgrowth of this inspirational moment
-- 2020-ish: began using Emacs, becoming interested in knowledge graphs, etc.
-- interest in knowledge graphs, emacs, systems, all intertwined
+- 2018-ish: had the idea for Thoughtset -- being able to subset my thoughts in various ways
+  treating each thought as an "atom" -- can collect the atoms in different organizations
+  - didn't quite have the technical skills to express it yet
+- 2019-ish: got very into vim, keyboard shortcuts, "system config" kind of stuff-- crazy how vim keybindings become subconscious after a certain point 🤯
+- 2020-ish: became aware of roam / org-roam, becoming (more) interested in knowledge graphs, etc.
+  - interest in [[id:40ab35a4-500b-4724-bd65-eb4e0b0b02b6][knowledge graph]]s, [[id:79c8e056-1bea-44c8-8a43-66292cf0bd48][emacs]], [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][systems]], all started to intertwine in this COVID era
+- 2022-ish: meeting Gui, reading Designing Freedom, becoming aware of the societal perspective on systems. or the systems perspective on society?
+- future:
+  - integrating the cybernetics / societal systems perspective that Gui has exposed me to into my work. working to create structures that increase individual freedom
+  - who knows...?
+** "What is cognition?" from a cognitive science perspective.
+Mostly inspired by /Other Minds/ by Peter Godfrey-Smith, Chapter 2: A History of Animals.
+
+Nervous system is a very /costly/ machine -- why do we have one in the first place? two schools:
+*** School 1: Sensorimotor view of nervous system
+The nervous system "bridges the gap" between perception and action.
+*** School 2: Coordination view of nervous system
+We are big, multicellular, multi-system beings. It takes a powerful nervous system to coordinate all of those things
+~ the thousands of "micro-actions" => "macro-actions"
+*** Each frame has its merits -- but perhaps the first frame has been too dominant in cognitive science (and society at large.) viewing us behavioristically, as input-output mechansisms
+This coordination piece is important -- and if we view our internal cognition as analogous to social cognition, then the coordination piece needs to be solved both on an individual level and a societal level.
 ** [[id:def74678-76b6-4eae-9908-4a82bad04a0b][🌌 digital nebula]] as a way of "pinching" certain threads in my knowledge graph
 Just the tip of the iceberg in terms of what is possible -- methods of organization of our thoughts, our knowledge. This is like a prototype of a prototype.
 
-technology is imperfect, we're not always capable of [[id:1bdb5bd1-008d-4308-874b-801f25c4a393][expressing]] things that we want to express - have to work within current systems (org-roam, Roam, Anki, etc.) that enable modes of expression.
+technology is imperfect, we're not always capable of [[id:1bdb5bd1-008d-4308-874b-801f25c4a393][expressing]] things that we want to express - have to work within current systems (org-roam, Roam, Anki, etc.) that enable certain modes of expression.
 
-It's not so much about the tool, but how you use it
+It's not so much about the tool, but how you use it (and if you use it at all! A system that is not used (consistently) isn't very useful)
 #+ATTR_HTML: :class quoteback :data-title Augmenting Long-term Memory :data-author Michael Nielsen :cite http://augmentingcognition.com/ltm.html#:~:text=95%25%20of%20anki's%20value%20comes%20from%205%25%20of%20the%20features
 #+begin_quote
 95% of Anki's value comes from 5% of the features
 #+end_quote
+** uneven distribution of technologies
+[open to convo]
+** drafting vs. publishing stacks
+Seems like the tools for ideation and publishing / conveying to others effectively are quite different.
+
+Current solution (for me) = using org-mode, publishing to HTML, etc..."forever draft" = basically what it is
+
+But it'd be nice to have "finished" pieces too. I can talk a bit about what I /want/ this space to turn into, which is less effective than what it actually is -- but I don't just necessarily want my digital garden to be a random grab-bag of stuff. I'd appreciate if some stuff was "finished," "coherent," "understandable." I guess it's different needs for different things. Notes for myself don't need to be 'finished' per se...but a blog post, or a book written for other people does have some finality to it...
+
+question: is "forever draft" a good thing?
+** [[id:058bef0b-aba6-4ac6-b4ae-b3c7b7e22040][⤴️ shortcuts]] as a worm that has eaten into my habits
+Not sure whether they're good or bad, but they're powerful, that's all I'll say. Reducing the friction to certain actions that I find favorable, to the point where I do them subconsciously, is powerful.
 ** [[id:3e676e0c-65d7-44ee-9886-324b82878b28][🔁  spaced repetition]]: how to intentionally remember things
 can be a Anki-style system, a la [[id:80f83e7d-cd8b-4eeb-b8c1-ab8258340c78][Augmenting Long-term Memory]]
 
@@ -41,8 +72,18 @@ specifically angling towards the focusing / attention aspects of cognition...
   - shortening attention spans
 **** Follow-up question: how can we redesign technology in a way that makes us more thoughtful / attentive / able to follow threads deeply, without getting distracted?
 - notifications seem like they have a huge effect on attention: how could those systems be redesigned (but we still get notified of important things at appropriate times?)
+*** how can we use software to modulate our [[id:2e1955ad-af09-4bcd-8b8d-4a0838e96365][attention]] to various things?
+**** Nota: flashes the point which you jumped to
 *** a family (or other social organizational unit) - greater than the sum of its parts. the relationships / interactions between the nodes are very important in reinforcing the emergent concept of "family"
-Interesting to note cultural differences: my girlfriend is Tamil, and the family bonds are very strong (calling/texting parents every day / nearly every day,) whereas I communicate with my parents about once a week on average
+Interesting to note cultural differences: girlfriend is Tamil, and the family bonds are very strong (calling/texting parents every day / nearly every day,) whereas I communicate with my parents about once a week on average...structures that are very divergent in their interactions can still be called a "family"...
+*** two discrete activities: programming and using a program....
+Related to what Karn was saying about the uneven distribution of technologies, and what sorts of control an individual has over their computer...
+
+Ultimately, this is just a frame on what we're doing with computers. We're all manipulating state of computers -- but only /some/ of us know how to pull certain marionette strings within the computer to make it do certain things...
+
+maybe we can seek to, a la end-user programming, blur the distinction between these two things?
+
+interesting, and maybe esoteric connection: person who doesn't have the pre-requisite knowledge/skills to be an artist can use DALL-E. DALL-E blurs the line between programming and using a program. the "puppet fingers" are more extensive. Could we use DALL-E as a model of how end-users can be afforded more control, in an input language they understand? (GRANTED: still mostly elites using DALL-E, so the irony is not lost on me, lol.)
 * Conversation
 ** What the fuck is "cognition" after all?
 :PROPERTIES:

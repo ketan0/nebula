@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       4ca02697-506c-4910-bf5e-ce8dcb2da5a5
+:ROAM_ALIASES: systems
 :END:
 #+title: system
 

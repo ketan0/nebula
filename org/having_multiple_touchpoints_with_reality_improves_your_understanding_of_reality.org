@@ -12,5 +12,6 @@ Because each trick works in different situations, our power stems from being abl
 
 (emphasis mine.) In his article [[id:b7e233f7-62f3-408f-9244-3d486a1e847d][Why People Think Computers Can't]], Marvin Minsky talks about this -- while numbers can be defined in formal systems, it's difficult to pin down what numbers really /mean/ to us in one solid definition. Very related to: [[id:05576cdb-6419-4d7b-a7e1-df3cf0bf50d6]["The meaning of a word is its use in language"]]  Rather, we can sort of "define" a number (say, the number Three) in a more oblique way, by connecting it to various concrete concepts -- "[Three] is a web of different processes that each get meaning from the others." It's like...the "common thread" between all of these real-life instances. The real-life instances, the "tricks," form a set of constraints, from which emerges "Three."
 
+Hmm...one thing I'd add to this- the tricks are probably generational too. Or certain tricks upon which the meta-tricks of quote-unquote 'supergenius' are built, those tricks are generational. Some people have access to them, and others don't.
 
 Related: [[id:5d471455-c654-4779-a130-c07981d71dad][Holding a Program in One's Head]]
