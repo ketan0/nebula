@@ -4,7 +4,7 @@
 #+title: Ketan's Nebula
 #+html_head: <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 
-Oh hey, you've stumbled on my corner of the web.
+Oh hey, you've stumbled on my corner of the web. This is a a repository for my thoughts, learnings, questions, and connections between those things. Many pages are incomplete / rather discombobulated -- that's because these are working notes, rather than finished 'blog posts' or something like that. Some elements will become more complete / coherent over time. :)
 
 * A few starting points:
 [[id:6d2c6f5c-f8c1-4b38-a01a-6adcdbfe8e7a][📒 course notes]]
