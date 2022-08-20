@@ -4,6 +4,8 @@
 #+title: Ketan's Nebula
 #+html_head: <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 
+Oh hey, you've stumbled on my corner of the web.
+
 * A few starting points:
 [[id:6d2c6f5c-f8c1-4b38-a01a-6adcdbfe8e7a][📒 course notes]]
 [[id:b910e58f-f1fe-4c3f-8efb-69bfa261b191][📚 book notes]]
@@ -17,14 +19,14 @@
 [[id:81056afb-8235-4591-b171-99580096fa47][❓ questions]]
 [[id:ca2dd450-e352-43ce-95eb-9fd8e80c646c][♾ recursion]]
 [[id:0997b060-ee05-458e-beed-3494675c879d][👾 programming]]
-[[id:0e008aa4-63a2-4ae3-8c59-933b3065d721][Trust and Safety Engineering]]
-[[id:9908ac8d-fadd-4fe6-a78c-c3471cc36ea1][🌐 Computer Networking]]
 [[id:65b7c2dd-ad4c-465f-b382-4e4d431e0be8][How I made this website]]
 
 #+begin_export html
 <div class="svg-container">
-  <svg class="nebula-svg" style="display:inline-block; position:absolute; top:0px; left:0px" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 100 50">
+  <svg class="nebula-svg" style="position:absolute; top:0px; left:0px; width:100%; height: 100%" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <g class="circles">
+    </g>
+    <g class="links">
     </g>
   </svg>
 </div>
