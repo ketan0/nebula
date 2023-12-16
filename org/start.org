@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       23e03a28-48b1-4fa3-9fa3-71a369950c6d
+:END:
+#+title: Ketan's Nebula
+#+html_head: <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+
+Oh hey, you've stumbled on my corner of the web. This is a repository for my thoughts, learnings, questions, and connections between those things. Many pages are incomplete / rather discombobulated -- that's because these are working notes, rather than finished 'blog posts' or something like that. Some elements will become more complete / coherent over time. :)
+
+Hello hello hello
+
+* A few starting points:
+[[id:6d2c6f5c-f8c1-4b38-a01a-6adcdbfe8e7a][📒 course notes]]
+[[id:b910e58f-f1fe-4c3f-8efb-69bfa261b191][📚 book notes]]
+[[id:d4693400-d612-4531-96cb-da0b8d37b4b0][📄 paper notes]]
+[[id:091329e5-7896-4975-b88b-99b30f4dd482][🧐 philosophy]]
+[[id:518c0248-c4f1-4dc8-8e01-5e0e59988aec][🟢 my plaintext Spotify playstructure]]
+[[id:5df9203d-c7d9-4341-b7dc-ac4236000d8b][👍🏾 rules of thumb]]
+[[id:058bef0b-aba6-4ac6-b4ae-b3c7b7e22040][⤴️ shortcuts]]
+[[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][♏️ emacs]]
+[[id:3db1ed04-4b29-46cf-9940-1afd30d5d25f][🧠 Social Psychology]]
+[[id:918b7900-d37d-4d92-a900-6d6632fd2f47][🔲 Conway's Game of Life]]
+[[id:81056afb-8235-4591-b171-99580096fa47][❓ questions]]
+[[id:ca2dd450-e352-43ce-95eb-9fd8e80c646c][♾ recursion]]
+[[id:0997b060-ee05-458e-beed-3494675c879d][👾 programming]]
+[[id:65b7c2dd-ad4c-465f-b382-4e4d431e0be8][How I made this website]]
+
+#+begin_export html
+<div class="svg-container">
+  <svg class="nebula-svg" style="position:absolute; top:0px; left:0px; width:100%; height: 100%" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <g class="circles">
+    </g>
+    <g class="links">
+    </g>
+  </svg>
+</div>
+<script src="nebula.js"></script>
+<script src="homepage-graph-animation.js"></script>
+#+end_export
