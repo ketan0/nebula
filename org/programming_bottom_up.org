@@ -30,8 +30,10 @@ Regexp matching a block comment in C:
 #+RESULTS:
 : /\*\(?:[^*]\|\*[^/]\)*\*+/
 
+Personally, I find this to be a much more beautiful (and still somewhat succinct) way of writing regexes than the normal regex syntax.
+
 you redefine /the language itself/ to have the primitives you want it to have, and then you can proceed to build something (perhaps in top-down fashion now.) It's like "meeting in the middle," so you don't have to build up super complex primitives, and you don't have to decompose down to a super fine-grained level.
 
-I wonder what the connection between this bottom-up paradigm and Bret Victor - The Future of Programming is. I feel like maybe there's an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.
+I wonder what the connection between this bottom-up paradigm and [[https://vimeo.com/71278954][Bret Victor - The Future of Programming]] is. I feel like maybe there's an idea that his visual programming playgrounds are like a domain-specific language (albeit not in Lisp.) They give the user a powerful set of primitives to manipulate digital objects, and the user can then build from there to make it come to life.
 
 Also feel like [[id:1999996d-b676-4fc4-894b-caf82f8dd7ff][emacs]] encourages bottom-up programming in some ways, well ofc because of Lisp, but also because of the interactivity of the environment. You write a snippet, and immediately you can evaluate that code and test out your snippet. You get a couple more snippets, try those out, and then it's like, ok cool, what else can I build with these snippets?

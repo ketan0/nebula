@@ -7,10 +7,14 @@
 ** Ursula K. Le Guin
 ** H.G. Wells
 ** Vannevar Bush, Doug Engelbart, Alan Kay, Ted Nelson, etc. etc.
+** Toni Morrison
 ** Octavia Butler
 ** Borges
 ** Stafford Beer
+** Marisa G. Franco
 * Areas of interest
 ** Cybernetics / system-level thinking
+*** Systemic injustices
+** Attachment theory, relationships
 ** History of computing
 ** Machine learning fundamentals (e.g. textbook)

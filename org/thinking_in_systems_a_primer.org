@@ -3,9 +3,117 @@
 :END:
 #+title: Thinking in Systems: A Primer
 
-* what is a [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][system]]?
-#+begin_quote
-So, what is a system? A system is a set of things—people, cells, molecules, or whatever—interconnected in such a way that they produce their own pattern of behavior over time. The system may be buffeted, constricted, triggered, or driven by outside forces. But the system’s response to these forces is characteristic of itself, and that response is seldom simple in the real world.
+* Overall thoughts
+# Still experimenting with how I want to write about books here...
+It's crazy how pervasive systems are in our universe, once you learn how to look for them. It's like they've hiding in plain sight, but I just didn't have the proper [[id:bf96c1eb-3ce0-4d7a-b2ae-e44f2fbdf240][frames]] to see them.
 
-Meadows, Donella H.. Thinking in Systems (p. 2). Chelsea Green Publishing. Kindle Edition.
+This book inspires me to want to get more intuitions for the ways that complex systems work. (I mean, tbh, every person on this earth probably has intuition for a complex system, in one way or another. We come into contact with incredibly complex social, economic, psychological, and physical systems every day, and we have really good mental models of a /lot/ of it. We can predict the future.) But I guess...I want to go beyond the everyday intuitions that we have for systems that we know. I want to have intuitions for broad categories of systems, for the way that the world works.
+
+Are viruses complex systems? On its own, it seems that an individual virus is not very complex -- it's not super resilient, and it doesn't have an apparent hierarchy. but maybe it self-organizes, in that it reproduces...and maybe if we see the evolution of viruses as a system, then that can be said to have more system-like properties...e.g. it's resilient.
+
+The idea that resiliency != stasis really stuck with me.
+* Highlights/annotations
+** Introduction: The Systems Lens
+*** Highlight (yellow) - Page 1 · Location 157
+#+begin_quote
+Managers are not confronted with problems that are independent of each other , but with dynamic situations that consist of complex [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][systems]] of changing problems that interact with each other . I call such situations messes . … Managers do not solve problems , they manage messes .
+#+end_quote
+*** Highlight (yellow) - Page 2 · Location 175
+#+begin_quote
+So , what is a [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][system]] ? A system is a set of things — people , cells , molecules , or whatever — interconnected in such a way that they produce their own pattern of behavior over time . The system may be buffeted , constricted , triggered , or driven by outside forces . But the system’s response to these forces is characteristic of itself , and that response is seldom simple in the real world .
+#+end_quote
+*** Highlight (yellow) - Page 3 · Location 200
+#+begin_quote
+Modern [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][systems]] theory , bound up with computers and equations , hides the fact that it traffics in truths known at some level by everyone . It is often possible , therefore , to make a direct translation from systems jargon to traditional wisdom .
+#+end_quote
+*** Highlight (yellow) - Page 4 · Location 218
+#+begin_quote
+Hunger , poverty , environmental degradation , economic instability , unemployment , chronic disease , drug addiction , and war ,
+#+end_quote
+*** Highlight (yellow) - Page 4 · Location 220
+#+begin_quote
+are intrinsically [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][systems]] problems — undesirable behaviors characteristic of the system structures that produce them . They will yield only as we reclaim our intuition , stop casting blame , see the system as the source of its own problems , and find the courage and wisdom to restructure it .
+#+end_quote
+*** Highlight (yellow) - Page 6 · Location 260
+#+begin_quote
+I don’t think the [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][systems]] way of seeing is better than the reductionist way of thinking . I think it’s complementary , and therefore revealing . You can see some things through the lens of the human eye , other things through the lens of a microscope , others through the lens of a telescope , and still others through the lens of systems theory . Everything seen through each kind of lens is actually there . Each way of seeing allows our knowledge of the wondrous world in which we live to become a little more complete .
+#+end_quote
+*** Highlight (yellow) - Page 7 · Location 282
+#+begin_quote
+a simple lesson but one that we often ignore : The behavior of a [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][system]] cannot be known just by knowing the elements of which the system is made .
+#+end_quote
+** Part One: System Structure and Behavior
+*** Highlight (yellow) - One: The Basics > Page 11 · Location 295
+#+begin_quote
+A [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][system]] * is an interconnected set of elements that is coherently organized in a way that achieves something . If you look at that definition closely for a minute , you can see that a system must consist of three kinds of things : elements , interconnections , and a function or purpose .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 12 · Location 311
+#+begin_quote
+Some people say that an old city neighborhood where people know each other and communicate regularly is a social [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][system]] , and that a new apartment block full of strangers is not — not until new relationships arise and a system forms .
+#+end_quote
+**** Note - One: The Basics > Page 12 · Location 312
++1 for living in an intentional community
+*** Highlight (yellow) - One: The Basics > Page 14 · Location 348
+#+begin_quote
+It’s easier to learn about a [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][system]]’s elements than about its interconnections .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 14 · Location 353
+#+begin_quote
+Information holds [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][systems]] together and plays a great role in determining how they operate .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 14 · Location 361
+#+begin_quote
+If information - based relationships are hard to see , functions or purposes are even harder . A [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][system]]’s function or purpose is not necessarily spoken , written , or expressed explicitly , except through the operation of the system . The best way to deduce the system’s purpose is to watch for a while to see how the system behaves .
+#+end_quote
+**** Note - One: The Basics > Page 14 · Location 363
+system's purpose is what it does
+*** Highlight (yellow) - One: The Basics > Page 15 · Location 374
+#+begin_quote
+An important function of almost every [[id:4ca02697-506c-4910-bf5e-ce8dcb2da5a5][system]] is to ensure its own perpetuation .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 16 · Location 389
+#+begin_quote
+Keeping sub - purposes and overall system purposes in harmony is an essential function of successful systems .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 16 · Location 392
+#+begin_quote
+Changing elements usually has the least effect on the system .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 16 · Location 401
+#+begin_quote
+If the interconnections change , the system may be greatly altered .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 16 · Location 406
+#+begin_quote
+Changes in function or purpose also can be drastic
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 17 · Location 426
+#+begin_quote
+A [[id:25743740-d3dc-4902-8b55-774c90a8c5f3][stock]] is the foundation of any system . Stocks are the elements of the system that you can see , feel , count , or measure at any given time .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 18 · Location 432
+#+begin_quote
+[[id:25743740-d3dc-4902-8b55-774c90a8c5f3][Stocks]] change over time through the actions of a [[id:4aeedf0a-efc6-44fe-acb3-4f5ee160fb2a][flow]] . Flows are filling and draining , births and deaths , purchases and sales , growth and decay , deposits and withdrawals , successes and failures .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 22 · Location 495
+#+begin_quote
+A [[id:25743740-d3dc-4902-8b55-774c90a8c5f3][stock]] can be increased by decreasing its outflow rate as well as by increasing its inflow rate .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 23 · Location 503
+#+begin_quote
+A [[id:25743740-d3dc-4902-8b55-774c90a8c5f3][stock]] takes time to change , because [[id:4aeedf0a-efc6-44fe-acb3-4f5ee160fb2a][flows]] take time to flow . That’s a vital point , a key to understanding why systems behave as they do . Stocks usually change slowly .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 23 · Location 514
+#+begin_quote
+Changes in stocks set the pace of the dynamics of systems .
+#+end_quote
+**** Note - One: The Basics > Page 23 · Location 514
+Interesting that this rhymes with Beer talking about stable vs. unstable systems -- will the wave crash too fast before it can be managed / homeostasis-ed?
+*** Highlight (yellow) - One: The Basics > Page 24 · Location 526
+#+begin_quote
+Stocks allow inflows and outflows to be decoupled and to be independent and temporarily out of balance with each other .
+#+end_quote
+*** Highlight (yellow) - One: The Basics > Page 25 · Location 543
+#+begin_quote
+Systems thinkers see the world as a collection of stocks along with the mechanisms for regulating the levels in the stocks by manipulating flows . That means system thinkers see the world as a collection of “ feedback processes . ”
 #+end_quote

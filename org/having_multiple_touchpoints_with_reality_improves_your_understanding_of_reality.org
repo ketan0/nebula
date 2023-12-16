@@ -14,4 +14,6 @@ Because each trick works in different situations, our power stems from being abl
 
 Hmm...one thing I'd add to this- the tricks are probably generational too. Or certain tricks upon which the meta-tricks of quote-unquote 'supergenius' are built, those tricks are generational. Some people have access to them, and others don't.
 
+Interesting to note that the multiply-connected meaning of Three is resilient.
+
 Related: [[id:5d471455-c654-4779-a130-c07981d71dad][Holding a Program in One's Head]]

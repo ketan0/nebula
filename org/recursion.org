@@ -11,7 +11,6 @@ ${\Large x^{x^{x^{x^{x^{...}}}}}}$
 TODO: sidenotes-in-sidenotes type stuff...
 TODO: fractals-type stuff....
 
-* [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Recursive-Editing.html#Recursive-Editing][*recursive editing]] reminds me of [[id:23d8df0c-8813-45f4-8c83-acd33a32ac09][Hofstadter's]] pushing and popping allegory.
 * I just realized something. If you supposedly go "depth-first" on something, you /don't necessarily/ get stuck in a rabbit hole.
 :PROPERTIES:
 :ID:       b3900c6d-a7f0-44e1-bdd9-3aa36ecf3396
@@ -19,3 +18,5 @@ TODO: fractals-type stuff....
 Because the structure of knowledge isn't just a bunch of separate rabbit holes -- you might enter one tunnel, but then come shooting out some other tunnel, traversing over the graph of ideas, Mariokart style!
 #+CAPTION: woohoo!!
 [[file:rainbow_road.gif]]
+
+* [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Recursive-Editing.html#Recursive-Editing][recursive editing]] reminds me of [[id:23d8df0c-8813-45f4-8c83-acd33a32ac09][Hofstadter's]] pushing and popping allegory.

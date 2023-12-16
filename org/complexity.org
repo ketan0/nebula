@@ -2,3 +2,8 @@
 :ID:       9648399a-daf3-44a0-8612-a3d84b99d0c1
 :END:
 #+title: complexity
+
+* What is complexity?
+I like Kolmogorov -- my computer science teacher in high school introduced me to it.
+* Where does complexity come from?
+* How do you deal with complexity?

@@ -11,6 +11,8 @@ We need some ways of maintaining continuity in our life, keeping re-upping on th
 To be transformed by a book, readers must do more than absorb information: they must bathe in the book’s ideas, relate those ideas to experiences in their lives over weeks and months, try on the book’s mental models like a new hat.
 #+end_quote
 
+I feel like...it takes time to integrate insights. To stitch them into our webs of [[id:3841138e-363a-4bc2-b1c4-f5abbf973a54][meaning]].
+
 This can mean:
 - Doing intellectual work on a more daily basis, rather than in sporadic bursts, in order to be more immersed in that headspace. I feel like the people who are the best at what they do are absolutely immersed in the headspace -- they're the kind of people whose minds wander to think about those problems while they're in the shower.
 - Actively memorizing things through [[id:3e676e0c-65d7-44ee-9886-324b82878b28][spaced repetition]] .

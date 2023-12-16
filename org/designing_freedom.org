@@ -15,7 +15,8 @@ The Buddha, the Godhead, resides quite as comfortably in the circuits of a digit
 #+end_quote
 
 Metacommentary: In this video reading, I loved the computer music at the beginning/end, as well as the visual cues throughout. It feels like this type of multisensory experience should be what the web is all about. Yet, as Beer would say, we've attenuated all that variety into Facebook and the tyranny of sequential news feeds!
-
+* ?
+Beer talked about the balance between [[id:a664bd28-9595-4ed5-b2fb-b62ebbc28e9c][centralization]] and [[id:4119b61f-bfb1-4cf2-8690-3a74f61a034f][decentralization]] in a system.
 * Link
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: no-display

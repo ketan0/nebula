@@ -3,6 +3,8 @@
 :END:
 #+title: things i want to understand better
 
+(5/17/23) this is out of date, todo: update
+
 * Flow models (e.g. WaveGlow)
 * GlowTTS
 * Bayesian models

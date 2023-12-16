@@ -3,7 +3,8 @@
 :END:
 #+title: 📒 course notes
 
-Some notes for select courses that I took in my time at Stanford!
+Some notes for select courses that I took in my time at Stanford.
+
 [[id:3db1ed04-4b29-46cf-9940-1afd30d5d25f][Social Psychology]]
 [[id:9908ac8d-fadd-4fe6-a78c-c3471cc36ea1][Computer Networking]]
 [[id:4785205d-bb3f-4795-9b13-7bc8128e3ae0][CS224u: Natural Language Understanding]]

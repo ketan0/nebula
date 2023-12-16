@@ -1,6 +1,5 @@
 async function pulse_circles() {
-  if (location.pathname !== '/' &&
-      location.pathname !== '/index.html') return;
+  if (location.pathname !== '/start.html') return;
 
   const svg = document.querySelector('svg');
 
@@ -23,19 +22,19 @@ async function pulse_circles() {
     return this[Math.floor(Math.random()*this.length)];
   }
   const circle_data = Array.from(Array(ARRAY_LENGTH)).map(() => ({
-    'x': (Math.random() * 100),
-    'y': (Math.random() * 50),
-    'fill': POSSIBLE_COLORS.sample(),
+    x: (Math.random() * 100),
+    y: (Math.random() * 100),
+    fill: POSSIBLE_COLORS.sample(),
   }))
   while (true) {
     await d3.select(".circles")
             .selectAll('circle')
             .data(circle_data)
             .join("circle")
-            .attr("r", () => Math.random() * 0.25 + 0.125)
-            .attr("cx", d => d['x'])
-            .attr("cy", d => d['y'])
-            .style('fill', d => d['fill'])
+            .attr("r", () => `${Math.random() * 0.25 + 0.125}%`)
+            .attr("cx", d => `${d.x}%`)
+            .attr("cy", d => `${d.y}%`)
+            .style('fill', d => d.fill)
             .attr("opacity", 0)
             .transition()
             .duration(250)

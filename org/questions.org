@@ -11,7 +11,6 @@ ways for me to use these questions:
 
 TODO: would be nice to have some structure / categorization other than just a sequential list of questions...
 
-* Should I be pure or applied?
 * how to ask good questions
 :PROPERTIES:
 :ID:       bd7417e8-ae04-47b7-b486-b70ed3188cae
@@ -42,8 +41,6 @@ feels like there are so many interesting things to think about, and so little ti
 :END:
   In other words, how much of a skeptic should I be?
 * What should the relationship to past work be?
-* Is it morally okay for my primary motivation in life /not/ to be making the world a better place?
-If I'm being honest- the kinds of things that motivate me the most are the things that I'm most curious about. And those aren't always humanity's most pressing problems-- in fact, if done wrong, some of my interests (e.g. AI) can /contribute/ to humanity's problems. (That said, I do believe AI can also help humanity tremendously...but as I see it, our most pressing problems as things like figuring out how to make human life sustainable, ending world hunger/poverty/disease, ending oppression of marginalized groups, and things of that nature. I think AI can help in some of those cases, but it wouldn't be the primary thing to solve it.)
 * "Flat" design (monorepo) vs. hierarchical?
 :PROPERTIES:
 :ID:       deea93db-65e4-425b-8700-fe96117795d1
@@ -66,6 +63,7 @@ Aka, is [[id:87e83cf3-3dfa-4486-845d-155895a9f6b6][modularity]] good?
 :PROPERTIES:
 :ID:       06b3a480-00c6-4d74-b216-6665c6817691
 :END:
+* Should I be pure or applied?
 * Which other people smart/headed on the right track when it comes to things?
 :PROPERTIES:
 :ID:       42ab4227-dae3-4822-8b4f-8ae8fe724e5e

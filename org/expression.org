@@ -1,4 +1,5 @@
 :PROPERTIES:
 :ID:       1bdb5bd1-008d-4308-874b-801f25c4a393
+:ROAM_ALIASES: express expressive
 :END:
 #+title: expression
