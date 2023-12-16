@@ -1,5 +1,8 @@
 async function pulse_circles() {
-  if (location.pathname !== '/start.html') return;
+  if (location.pathname !== '/start' &&
+      location.pathname !== '/start.html') {
+    return;
+  }
 
   const svg = document.querySelector('svg');
 
