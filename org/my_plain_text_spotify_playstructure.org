@@ -21,14 +21,17 @@ I feel like current music-listening interfaces don't encourage [[id:1cf91cd1-222
 ** [[spotify:artist:09hVIj6vWgoCDtT03h8ZCa][A Tribe Called Quest]]
 *** [[spotify:track:3Ti0GdlrotgwsAVBBugv0I][Can I Kick It?]]
 * Some of my playlists:
-Lots of them are 'seedlings' in my garden still! But you may enjoy the fruits of the mature plants :)
+some of these are quite short, even just 1 song! but that song is meant to be a seedling
 # Sidenote: displaying these playlists as plants / trees (scaling their development with the development of the playlist) would be a fantastic visual metaphor for this playlist-growing process, and a microcosm of what I want for my digital garden at large...
-** elevator music, revamped
-** colors melting all around me
-** intimate acoustic
-** glossy
-** dreamt
-** cool sounds
-** living life to the fullest
-** who am i?
-** human-computer colossus
+** [[spotify:playlist:6fJdfr9RqmKLN9n70hzAlG][glossy]]
+** [[spotify:playlist:1egadjeTp9SpeBusIgMjTT][dreamt]]
+** [[spotify:playlist:2iIs22qF7a67W11TQ3SUcR][〰〰〰]]
+** [[spotify:playlist:6s8czjmJFhcuGMBtLlKkkx][colors melting all around me]]
+** [[spotify:playlist:5cXvRtbVoOg6rJp753HXXL][intimate acoustic]]
+** [[spotify:playlist:5rvCvGNgYwuQhODCjhZLkT][SWIM]]
+** [[spotify:playlist:40ktPBWSOHCDAa6mRgLsdl][cool sounds]]
+** [[spotify:playlist:2eQG53cAA5TFMkTyWuHsoR][living life to the fullest]]
+** [[spotify:playlist:01Tq0FIlSMok4IyS0FIhVl][who am i?]]
+** [[spotify:playlist:2OXXCPn5c90SOYzhlxOenF][elevator music, revamped]]
+** [[spotify:playlist:2WDmG6rZJQiYseEpk9vlG8][human-computer colossus]]
+** [[spotify:playlist:47lrnyLT97KHKDx6tUUCwF][uncategorized]]
