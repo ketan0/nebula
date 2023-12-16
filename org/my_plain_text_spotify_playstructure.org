@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       518c0248-c4f1-4dc8-8e01-5e0e59988aec
+:ROAM_ALIASES: playstructure
+:END:
+#+title: 🟢 my plaintext Spotify playstructure
+
+I'm exploring ways to explore music as a space, rather than a linear collection of songs in an album / playlist / whatever... how can we make end-users, the listeners of music, more /[[id:1bdb5bd1-008d-4308-874b-801f25c4a393][expressive]]/ in their ability to choose the vibes that they want? Like, you know when music "hits the spot?" I'd love to be able to hit the exact emotional tenor at the moment that I'm thinking of with a song -- like how a talented artist can realize their mind's eye on a canvas.
+
+I feel like current music-listening interfaces don't encourage [[id:1cf91cd1-2220-4eb0-a345-720d4a00c6b9][play]]. It's not a meadow that you can frolick around in; it's a sequential order that you march through. (Of course, marching through certain paths can be very enjoyable...but what if we had more agency over that path?)
+
+* Sounds I like:
+** [[spotify:playlist:48XdnkcYOAKtnB3gz4Q7b7][Playful Jazz]]
+** [[spotify:artist:4tZwfgrHOc3mvqYlEYSvVi][Daft Punk]]
+*** basically anything from [[spotify:album:2noRn2Aes5aoNVsU6iWThc][Discovery]]
+**** [[spotify:track:1NeLwFETswx8Fzxl2AFl91][Something About Us]]
+**** [[spotify:track:2LD2gT7gwAurzdQDQtILds][Veridis Quo]]
+** [[spotify:artist:5INjqkS1o8h1imAzPqGZBb][Tame Impala]]
+*** [[spotify:album:79dL7FLiJFOO0EoehUHQBv][Currents]], [[spotify:album:31qVWUdRrlb8thMvts0yYL][The Slow Rush]]
+** [[spotify:artist:6XYvaoDGE0VmRt83Jss9Sn][King Gizzard & The Lizard Wizard]]
+***  [[spotify:album:6eD0NNGuIdYPUbEPbUzLnE][Sketches of Brunswick East]]
+** [[spotify:artist:09hVIj6vWgoCDtT03h8ZCa][A Tribe Called Quest]]
+*** [[spotify:track:3Ti0GdlrotgwsAVBBugv0I][Can I Kick It?]]
+* Some of my playlists:
+Lots of them are 'seedlings' in my garden still! But you may enjoy the fruits of the mature plants :)
+# Sidenote: displaying these playlists as plants / trees (scaling their development with the development of the playlist) would be a fantastic visual metaphor for this playlist-growing process, and a microcosm of what I want for my digital garden at large...
+** elevator music, revamped
+** colors melting all around me
+** intimate acoustic
+** glossy
+** dreamt
+** cool sounds
+** living life to the fullest
+** who am i?
+** human-computer colossus
