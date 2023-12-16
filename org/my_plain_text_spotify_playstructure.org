@@ -4,7 +4,9 @@
 :END:
 #+title: 🟢 my plaintext Spotify playstructure
 
-I'm exploring ways to explore music as a space, rather than a linear collection of songs in an album / playlist / whatever... how can we make end-users, the listeners of music, more /[[id:1bdb5bd1-008d-4308-874b-801f25c4a393][expressive]]/ in their ability to choose the vibes that they want? Like, you know when music "hits the spot?" I'd love to be able to hit the exact emotional tenor at the moment that I'm thinking of with a song -- like how a talented artist can realize their mind's eye on a canvas.
+From the word "PLAYLIST," I like the "play" part more than the "list" part.
+
+I'm exploring ways to explore music as a multidimensional space, rather than a linear collection of songs in an album / playlist / whatever... how can we make end-users, the listeners of music, more /[[id:1bdb5bd1-008d-4308-874b-801f25c4a393][expressive]]/ in their ability to choose the vibes that they want? Like, you know when music "hits the spot?" I'd love to be able to hit the exact emotional tenor at the moment that I'm thinking of with a song -- like how a talented artist can realize their mind's eye on a canvas.
 
 I feel like current music-listening interfaces don't encourage [[id:1cf91cd1-2220-4eb0-a345-720d4a00c6b9][play]]. It's not a meadow that you can frolick around in; it's a sequential order that you march through. (Of course, marching through certain paths can be very enjoyable...but what if we had more agency over that path?)
 
