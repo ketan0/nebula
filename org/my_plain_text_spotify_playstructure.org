@@ -22,12 +22,15 @@ I feel like current music-listening interfaces don't encourage [[id:1cf91cd1-222
 ***  [[spotify:album:6eD0NNGuIdYPUbEPbUzLnE][Sketches of Brunswick East]]
 ** [[spotify:artist:09hVIj6vWgoCDtT03h8ZCa][A Tribe Called Quest]]
 *** [[spotify:track:3Ti0GdlrotgwsAVBBugv0I][Can I Kick It?]]
+** [[spotify:artist:29XOeO6KIWxGthejQqn793][Flying Lotus]]
+*** [[spotify:album:0tOVrY13drf4AGBWtSIkgX][Yasuke]]
 * Some of my playlists:
 some of these are quite short, even just 1 song! but that song is meant to be a seedling
 # Sidenote: displaying these playlists as plants / trees (scaling their development with the development of the playlist) would be a fantastic visual metaphor for this playlist-growing process, and a microcosm of what I want for my digital garden at large...
 ** [[spotify:playlist:6fJdfr9RqmKLN9n70hzAlG][glossy]]
 ** [[spotify:playlist:1egadjeTp9SpeBusIgMjTT][dreamt]]
 ** [[spotify:playlist:2iIs22qF7a67W11TQ3SUcR][〰〰〰]]
+** [[spotify:playlist:0CrSWfidf6l5dDI25Bzw2v][odyssey]]
 ** [[spotify:playlist:6s8czjmJFhcuGMBtLlKkkx][colors melting all around me]]
 ** [[spotify:playlist:5cXvRtbVoOg6rJp753HXXL][intimate acoustic]]
 ** [[spotify:playlist:5rvCvGNgYwuQhODCjhZLkT][SWIM]]
@@ -37,3 +40,6 @@ some of these are quite short, even just 1 song! but that song is meant to be a 
 ** [[spotify:playlist:2OXXCPn5c90SOYzhlxOenF][elevator music, revamped]]
 ** [[spotify:playlist:2WDmG6rZJQiYseEpk9vlG8][human-computer colossus]]
 ** [[spotify:playlist:47lrnyLT97KHKDx6tUUCwF][uncategorized]]
+** [[spotify:playlist:28AFaUGyw0jaFsNhOciiRD][The miracle of life]]
+** [[spotify:playlist:6FoJ9dbksS3NeBNA980fRL][something kinda meditative]]
+** [[spotify:playlist:1AI5WAuxULlHmb3wPvwNv5][ethereal]]
