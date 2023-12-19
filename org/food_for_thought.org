@@ -1,0 +1,51 @@
+:PROPERTIES:
+:ID:       3a0c66d3-33f0-4212-ba7b-eadd5665842e
+:END:
+#+TITLE: food for thought
+
+* Life hads a tendency to just happen. But it happens because we make choices. The life you *create and design for yourself* is going to accumulate from the choices you make over time. Sure, there are unexpected things that can derail dreams. But we can control where we put our focus, and if we *choose to put one dream ahead of another.*
+-Gates. Oooh this really hit hard...kind of why I'm trying to institute structure, to guide "zombie" System 1 me down the right paths in the maze of life.
+* I never am really satisfied that I understand anything, because - understand it well as I may - my comprehension can only be an infinitesimal fraction of all I want to understand about the many connections and relations which occur to me: how the matter in question was first thought of or arrived at, etc., etc.
+-Lovelace
+* [[file:principles.org::*Do the thing, and you shall have the power: but they who do not the thing have not the power.][Do the thing, and you shall have the power: but they who do not the thing have not the power.]]
+-Emerson
+Cue visa "Do 100(0) [whatevers] ..."
+* If you're not stubborn, you'll give up on experiments too soon. And if you're not flexible, you'll pound your head against the wall and you won't see a different solution to a problem you're trying to solve.
+-Bezos
+* All men dream, but not equally. Those who dream by night in the dusty recesses of their minds, wake in the day to find that it was vanity: but the dreamers of the day are dangerous men, for they may act on their dreams with open eyes, to make them possible.
+-T.E. Lawrence. This resonates -- feels like my mind spends most of its time thinking about frivolous things, rather than big dreams, Great Thoughts. Want to deeply immerse my brain so that my subconscious is working on the problems constantly.
+* I can only note that the past is beautiful because one never realizes an emotion at the time. It expands later, and thus we don't have complete emotions about the present, only about the past.
+-Virginia Woolf. Interesting different frame than (antidote to?) the usual "we insert nostalgia into the past that didn't exist" etc.
+* If you want to get better, you have to find out what you're avoiding and what you're afraid of. And maybe what you're disgusted by. You have to expose yourself to that voluntarily, and you have to let that change you. It's not a pleasant process. It's a voluntary confrontation of things that make up life's horrors.
+-Peterson
+* "premature optimization is the root of all evil"
+-Knuth
+* “Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.”
+― Edsger W. Dijkstra. Related to [[file:20200227113959_framing.org::*Constraints => creativity][constraints => creativity]]
+* Truth seeking doesn't come naturally to humans. Social cohesion does.
+-Bezos
+* "I think people should do less research before building an idea, not more. It’s much easier to find reasons not to do something, than to find reasons to do it. Too much research will kill the enthusiasm behind any idea, especially the ones that end up changing the world."
+-shl
+  Who cares if people have done it before, if it goes against the spirit of org mode, or whatever. Cue Alexis -- no one cares. Just give it a shot.
+* The reality of things consists in their persistent forcing themselves upon our recognition. If a thing has no such persistence, it is a mere dream. Reality, then, is persistence, is regularity.
+:PROPERTIES:
+:ID:       2bafb942-ab9e-4536-b17c-18c65f45bdca
+:END:
+–C. S. Peirce
+* Once you have tasted flight, you will forever walk the earth with your eyes turned skyward, for there you have been, and there you will always long to return.
+-da Vinci
+* Freethinkers are those who are willing to use their minds without prejudice and without fearing to understand things that clash with their own customs, privileges, or beliefs. This state of mind is not common, but it is essential for right thinking.
+:PROPERTIES:
+:ID:       ae288098-723a-4aee-8e38-9c082e54799b
+:END:
+-Tolstoy
+* The master in the art of living makes little distinction between his work and his play, his labor and his leisure, his mind and his body, his information and his recreation, his love and his religion. He hardly knows which is which. He simply pursues his vision of excellence at whatever he does, leaving others to decide whether he is working or playing. To him he is always doing both.
+-James A. Michener
+* There comes a time and point in your life when, despite all the difficulties, you have to pick yourself up and push yourself outside of your comfort zone as there is nothing more that will help you achieve your best. Good luck and God bless.
+-random person on KeyHero
+* If you don't like where you are, you need to accept your lot. aAnd you need to start improving what's right in front of you, and it doesn't actually take very long. In 6 months you'll be very much ahead if you do that. Imagine a life lived like that, where you stop actively working against yourself and instead do exactly those things that would push you forward: where would you be in a year?
+-Peterson. I know it's basic, but it's like...just think about that time in 6 months. 6 months from now will be grateful for what I've done. (In fact, I am grateful for what I've done in the last 4 months with myself (1/1/2021 today.) I feel like I have changed the course of my life.)
+* You like being busy. You don't have time to think about anything else. Just the task that you were working on. But when you're done for the day and get in your bed to sleep, you're not busy anymore and the mind starts to wander. All those thoughts that you were subconsciously avoiding, they come back.
+-random person on KeyHero
+* The beauty of mathematics only shows itself to more patient followers.
+-Maryam Mirzakhani
