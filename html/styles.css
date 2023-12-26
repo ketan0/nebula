@@ -131,8 +131,8 @@ p + .outline-2:not(.references) {
   border-top: 4px dotted var(--section-border);
 }
 
-.outline-2:not(:last-child) {
-  border-bottom: 4px dotted var(--section-border);
+.outline-2 + .outline-2:not(.references) {
+  border-top: 4px dotted var(--section-border);
 }
 
 /* .outline-2, .outline-3, .outline-4 { */
@@ -146,6 +146,11 @@ p + .outline-2:not(.references) {
   padding: 8px 16px;
   border-radius: 25px;
   /* max-width: 20rem; */
+}
+
+
+.references > .outline-3 + .outline-3:not(.references) {
+  border-top: 4px dotted var(--section-border);
 }
 
 .backlinks-outline-path {
