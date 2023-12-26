@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       65b7c2dd-ad4c-465f-b382-4e4d431e0be8
 :END:
-#+title: How I made this website
+#+title: how I made this website
 
 🚧 TODO 🚧 This is [[id:4bba82cd-9443-4496-8896-81323093ec11][a note I'm actively working on.]]
 

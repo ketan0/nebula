@@ -4,14 +4,17 @@
 #+title: 📚 books i want to read
 
 * Authors / People of Interest
+** Donella Meadows
+** Vannevar Bush
+** Doug Engelbart
+** Alan Kay
+** Ted Nelson
 ** Ursula K. Le Guin
-** H.G. Wells
-** Vannevar Bush, Doug Engelbart, Alan Kay, Ted Nelson, etc. etc.
 ** Toni Morrison
+** H.G. Wells
 ** Octavia Butler
-** Borges
+** Jorge Luis Borges
 ** Stafford Beer
-** Marisa G. Franco
 * Areas of interest
 ** Cybernetics / system-level thinking
 *** Systemic injustices

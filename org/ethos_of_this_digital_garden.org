@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       6179156e-c485-4660-a3d2-efd085138aaf
+:END:
+#+title: ethos of this digital garden
+
+# NOTE: eventually would love to have a section on like, evergreen vs working notes. or blog posts / "finished thoughts" vs unfinished thoughts.
+* i'm working on it
+which might become apparent, when you run into unfinished thoughts, TODOs, dead ends, etc. etc. it's all under construction!
+#+ATTR_HTML: :width 400 :alt prompt was "a complex web of underground holes being dug by groundhogs, with construction signs at dead ends. cartoon style"
+[[file:under_construction.png]]
+* i want to think / work in public
+hopefully this d.g. would be networked with other people's too at some pt
+* traversing it should be like a natural form of spaced repetition
+ideally, with the right graph structure, the most important concepts / nodes should have a lot of ingoing and outgoing links to / fro them. so traversing the garden would naturally lead me to review things i think are important.

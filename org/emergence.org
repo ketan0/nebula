@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       bde5f69f-4acf-48c6-8c0d-566ff282e3cd
+:END:
+#+title: emergence
+
+in short, the whole of a system is more than the sum of its parts.
+
+in long-- TODO

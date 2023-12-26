@@ -3,10 +3,10 @@
 :END:
 #+title:  📚 book notes
 
+[[id:d0730d9b-797c-4d9f-9276-413e57462ed9][Designing Freedom]]
 [[id:17863772-5304-4101-8274-320870e93814][Thinking in Systems: A Primer]]
 [[id:1ef6d0be-e0f0-4a12-b32e-63abe89c1e6a][Zen and the Art of Motorcycle Maintenance]]
 [[id:7e70ddaf-359e-4be2-9110-3a826d314cfb][Thinking Fast and Slow]]
-[[id:3cfaf377-521e-46f4-bef6-31ed6fdbac30][Six Suspects 👥👥👥]]
 [[id:23d8df0c-8813-45f4-8c83-acd33a32ac09][Gödel, Escher, Bach: an Eternal Golden Braid 🪢]]
 [[id:d76f57fc-4a5c-4e9b-9833-bce1ea5a8c63][The Three-Body Problem]]
 

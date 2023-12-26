@@ -2,7 +2,7 @@
 :ID:       518c0248-c4f1-4dc8-8e01-5e0e59988aec
 :ROAM_ALIASES: playstructure
 :END:
-#+title: 🟢 my plaintext Spotify playstructure
+#+title: plaintext spotify playstructure
 
 From the word "PLAYLIST," I like the "play" part more than the "list" part.
 

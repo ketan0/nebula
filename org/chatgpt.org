@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       ee0b4106-5757-441e-9d86-8bb03069e6ac
+:END:
+#+title: ChatGPT
+
+* What makes ChatGPT so powerful?
+** virality
+It went viral because it was a public beta, free for anyone to try.
+** an [[id:3bbfc9f6-83a5-4083-85cc-b8e7da763498][interface]] that we understand
+It's text. It's chatting. Two things that humans have become deeply ingrained with
+** memory
+Reinforcement Learning from Human Feedback (RLHF) seems huge here.

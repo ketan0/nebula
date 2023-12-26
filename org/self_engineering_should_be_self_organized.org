@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       78854d91-9681-42f0-a6bf-46960ff5dcc2
+:END:
+#+title: self-engineering should be self-organized
+
+principle of [[id:be1f557a-7594-4059-9a2a-71b075cf82a3][self-organization]]: you can only commit to a system that is of $n + 1$ complexity compared to where you’re at now. that’s how fractals do it, and that’s how you should self-engineer. self-engineering should be self-organization.
+
+thought i had re: self-engineering, @gui: i’ve been trying to engage in some self-engineering, as you called it, recently, with respect to my daily habits and such.
+
+there’s an impulse to create intricate goals and plans for architecting yourself. i find that if those plans detail a self that is radically different than your current self, they’re very difficult to implement.
+
+instead, imagine your current self, but a little bit different. then mutiply that over time.
+
+your life. those efforts are bound to fall flat on their face.

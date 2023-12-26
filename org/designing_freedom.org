@@ -3,6 +3,8 @@
 :END:
 #+title: Designing Freedom
 
+very influential book by [[id:36055883-48f5-4ef5-a372-ac89cd32a80a][cyberneticist]] Stafford Beer
+
 * The Disregarded Tools of Modern Man
 It's interesting to pin down exactly what is meant by "variety" -- I think I sort of got it from context...it's some measure of the complexity of a system. It also can correspond to the everyday concept of variety in a sense -- variety is simply a lot of diverse things.
 

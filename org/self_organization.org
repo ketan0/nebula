@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       be1f557a-7594-4059-9a2a-71b075cf82a3
+:END:
+#+title: self-organization
+
+Self-organization is the capacity of a system to make its structure more complex.

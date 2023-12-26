@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       a7fa02ef-dd34-4291-ac5a-570afe67c04b
+:END:
+#+title: visual programming
+
+How can we make powerful visual programming tools? (This is currently a stub, / [[id:4bba82cd-9443-4496-8896-81323093ec11][notes I'm actively working on]])
