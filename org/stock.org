@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       25743740-d3dc-4902-8b55-774c90a8c5f3
+:ROAM_ALIASES: stocks
+:END:
+#+title: stock

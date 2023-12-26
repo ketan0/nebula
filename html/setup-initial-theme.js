@@ -12,7 +12,7 @@ STYLES = {
     // ['--code-label']: '#181818',
     ['--code-output']: '#222',
     ['--inline-code']: '#222',
-    ['--section-border']: '#222',
+    ['--section-border']: '#333',
     ['--tippy']: '#222',
     ['--tippy-border']: '#222',
     ['--tippy-shadow']: 'none',

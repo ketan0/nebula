@@ -127,6 +127,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 10px;
 }
 
+p + .outline-2:not(.references) {
+  border-top: 4px dotted var(--section-border);
+}
+
+.outline-2:not(:last-child) {
+  border-bottom: 4px dotted var(--section-border);
+}
+
 /* .outline-2, .outline-3, .outline-4 { */
 /*   padding-left: 10px; */
 /*   padding-right: 10px; */
