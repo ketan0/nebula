@@ -1,4 +1,4 @@
-hey, i'm ketan. i'm a guy who's interested in a wide variety of things- you can [[file:start.org][start here]], and choose your own adventure from that point on.
+hey, i'm ketan.
 
 i work on keeping machine learning safe at [[https://robustintelligence.com/][robust intelligence]].
 
