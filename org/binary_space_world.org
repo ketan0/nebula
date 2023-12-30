@@ -3,7 +3,7 @@
 :END:
 #+title: binary space partitioning the world
 
-the world is divided into 4 quadrants: =00=, =01=, =10=, and =11= (as with the Cartesian plane, we start with the top right and go counter-clockwise.) each of those is divided into 4 quadrants, and so on. we can represent any location on earth as a string of =0='s and =1='s, where each 2 bits represents a quadrant.
+the world is divided into 4 quadrants: =00=, =01=, =10=, and =11= (starting with the top left, then top right, then bottom left, then bottom right.) each of those is divided into 4 quadrants, and so on. we can represent any location on earth as a string of =0='s and =1='s, where each 2 bits represents a quadrant.
 
 for example, my childhood home is at =0011000000111011000000= (last few bits left off for privacy...)
 mt everest is around =011001111101000101=
