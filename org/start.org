@@ -13,7 +13,6 @@ Oh hey, you've stumbled on my corner of the web. This is a repository for my tho
 [[id:5df9203d-c7d9-4341-b7dc-ac4236000d8b][rules of thumb]]
 [[id:81056afb-8235-4591-b171-99580096fa47][questions]]
 [[id:65b7c2dd-ad4c-465f-b382-4e4d431e0be8][how I made this website]]
-[[id:d58b0ba2-c737-43ea-b019-4787a52bd70f][a consistent worldview]]
 
 #+begin_export html
 <div class="svg-container" style="position: absolute; z-index: -1; top: 0px; left: 0px; width: 100%; height: 100%">
