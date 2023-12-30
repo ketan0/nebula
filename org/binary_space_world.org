@@ -1,0 +1,137 @@
+:PROPERTIES:
+:ID:       ce40d31c-2118-41ff-bd48-f1d2a7910a19
+:END:
+#+title: binary space partitioning the world
+
+the world is divided into 4 quadrants: =00=, =01=, =10=, and =11= (as with the [[https://en.wikipedia.org/wiki/Quadrant_(plane_geometry)][Cartesian plane]], we start with the top right and go counter-clockwise.) each of those is divided into 4 quadrants, and so on. we can represent any location on earth as a string of =0='s and =1='s, where each 2 bits represents a quadrant.
+
+for example, my childhood home is at =0111010101111011010101= (last few bits left off for privacy...)
+
+#+begin_export html
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<!-- make these two buttons a flex row -->
+<div style="display: flex; flex-direction: row;">
+  <button id="01Button" class="button">01</button>
+  <button id="00Button" class="button">00</button>
+</div>
+<div style="display: flex; flex-direction: row;">
+  <button id="10Button" class="button">10</button>
+  <button id="11Button" class="button">11</button>
+</div>
+<p id="locationstring">
+  location:&nbsp;
+</p>
+<input type="text" id="locationstring" name="locationstring" value="location:">
+<!-- <p>Current Lat-Long Bounds: <span id="currentMapBounds"></span></p> -->
+<div id="mapid">
+</div>
+
+<script>
+  // Initialize the map to the entire bounds of the world, zoomed to fit
+  var map = L.map('mapid').fitWorld();
+
+  // initial bounds should be the world
+  let south = -90,
+  west = -180,
+  north = 90,
+  east = 180;
+
+  function updateBounds(south, west, north, east) {
+  map.fitBounds([
+  [south, west],
+  [north, east]
+  ]);
+  // add lines for the midpoints of the current map bounds
+  L.polyline([
+  [(south + north) / 2, west],
+  [(south + north) / 2, east]
+  ], {
+  color: 'red'
+  }).addTo(map);
+  L.polyline([
+  [south, (west + east) / 2],
+  [north, (west + east) / 2]
+  ], {
+  color: 'red'
+  }).addTo(map);
+  // document.getElementById('currentMapBounds').innerHTML = `Lat: ${south}, ${north} Long: ${west}, ${east}`
+  }
+  updateBounds(south, west, north, east);
+
+
+  // Set up the OSM layer
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  minZoom: 1,
+  attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+  console.log(`INIT bounds: ${south}, ${west}, ${north}, ${east}`);
+  // update the current map bounds
+
+  document.getElementById('01Button').onclick = function () {
+  console.log(`00 bounds: ${south}, ${west}, ${north}, ${east}`);
+  south = (south + north) / 2
+  east = (east + west) / 2
+  map.fitBounds([
+  [south, west],
+  [north, east]
+  ]);
+  document.getElementById('locationstring').innerHTML += "01";
+  updateBounds(south, west, north, east);
+  };
+
+  document.getElementById('00Button').onclick = function () {
+  console.log(`01 bounds: ${south}, ${west}, ${north}, ${east}`);
+  south = (south + north) / 2
+  west = (east + west) / 2
+  map.fitBounds([
+  [south, west],
+  [north, east]
+  ]);
+  document.getElementById('locationstring').innerHTML += "00";
+  updateBounds(south, west, north, east);
+  };
+
+  document.getElementById('10Button').onclick = function () {
+  console.log(`10 bounds: ${south}, ${west}, ${north}, ${east}`);
+  north = (south + north) / 2
+  east = (east + west) / 2
+  map.fitBounds([
+  [south, west],
+  [north, east]
+  ]);
+  document.getElementById('locationstring').innerHTML += "10";
+  updateBounds(south, west, north, east);
+  };
+
+
+  document.getElementById('11Button').onclick = function () {
+  console.log(`11 bounds: ${south}, ${west}, ${north}, ${east}`);
+  north = (south + north) / 2
+  west = (east + west) / 2
+  map.fitBounds([
+  [south, west],
+  [north, east]
+  ]);
+  document.getElementById('locationstring').innerHTML += "11";
+  updateBounds(south, west, north, east);
+  };
+</script>
+#+end_export
+
+have at it~ inspired by the [[https://www.youtube.com/watch?v=pUF5esTscZI][CGP Grep A4 paper video]]
+metanote; while i was writing this note, copilot gave me the following suggestion:
+
+#+ATTR_HTML: :width 600px
+[[file:copilot_creepy.png]]
+
+Which...not only is a valid youtube video, but *it's a [[https://www.youtube.com/watch?v=gB9n2gHsHN4][3blue1brown video on the very topic of fractals]].* Before I'd even written the word fractal, or self-similar,  or anything in this document. Kinda crazy, right?
+
+* fun observations / thoughts
+- If you live in two different places, what's your Last Common Ancestor in the binary tree?
+- presumably different ways we could do this-- just have to map a different fractal onto the world. e.g. we could do hexagons and probably end up with something cool
+- the world is about 2^34 larger than my house.
