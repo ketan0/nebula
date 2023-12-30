@@ -270,6 +270,9 @@ code {
   color: rgb(229, 126, 58)
 }
 
+#mapid {
+    height: 400px;
+}
 
 /* tippy stuff */
 .tippy-content {

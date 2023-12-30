@@ -127,10 +127,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 10px;
 }
 
+/*dotted lines in between top-level content sections*/
 p + .outline-2:not(.references) {
   border-top: 4px dotted var(--section-border);
 }
-
 .outline-2 + .outline-2:not(.references) {
   border-top: 4px dotted var(--section-border);
 }
@@ -149,7 +149,11 @@ p + .outline-2:not(.references) {
 }
 
 
+/*dotted lines in between reference sections*/
 .references > .outline-3 + .outline-3:not(.references) {
+  border-top: 4px dotted var(--section-border);
+}
+.references > .outline-4 + .outline-4:not(.references) {
   border-top: 4px dotted var(--section-border);
 }
 
@@ -266,6 +270,9 @@ code {
   color: rgb(229, 126, 58)
 }
 
+#mapid {
+    height: 400px;
+}
 
 /* tippy stuff */
 .tippy-content {

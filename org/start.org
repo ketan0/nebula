@@ -2,7 +2,7 @@
 :ID:       23e03a28-48b1-4fa3-9fa3-71a369950c6d
 :ROAM_ALIASES: start
 :END:
-#+title: Ketan's Nebula
+#+title: garden
 #+html_head: <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 
 Oh hey, you've stumbled on my corner of the web. This is a repository for my thoughts, learnings, questions, and connections between those things. Many pages are incomplete / rather discombobulated -- that's because these are working notes, rather than finished 'blog posts' or something like that. Some elements will become more complete / coherent over time. :)

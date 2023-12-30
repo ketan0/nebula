@@ -4,9 +4,9 @@ async function pulse_circles() {
     return;
   }
 
-  const svg = document.querySelector('svg');
+  const svg = document.getElementsByClassName('nebula-svg')[0];
 
-  const container = document.getElementsByClassName('svg-container')[0];
+  const container = svg.parentElement;
 
   let { width, height } = container.getBoundingClientRect();
   svg.setAttribute('viewBox', "0 0 " + width + " " + height);
