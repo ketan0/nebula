@@ -57,16 +57,20 @@ function getInitialColorMode() {
   if (hasPersistedPreference) {
     return persistedColorPreference;
   }
-  // If they haven't been explicit, let's check the media
-  // query
-  const mql = window.matchMedia('(prefers-color-scheme: dark)');
-  const hasMediaQueryPreference = typeof mql.matches === 'boolean';
-  if (hasMediaQueryPreference) {
-    return mql.matches ? 'dark' : 'light';
-  }
-  // If they are using a browser/OS that doesn't support
-  // color themes, let's default to 'light'.
-  return 'light';
+
+  // gonna ignore the fancier logic below for now - i prefer my garden in dark by default
+  return 'dark'
+
+  // * // If they haven't been explicit, let's check the media
+  // // query
+  // const mql = window.matchMedia('(prefers-color-scheme: dark)');
+  // const hasMediaQueryPreference = typeof mql.matches === 'boolean';
+  // if (hasMediaQueryPreference) {
+  //   return mql.matches ? 'dark' : 'light';
+  // }
+  // // If they are using a browser/OS that doesn't support
+  // // color themes, let's default to 'light'.
+  // return 'light';
 }
 
 
