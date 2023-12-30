@@ -2,6 +2,7 @@
 :ID:       218284cc-e1be-4544-85a4-4c610e1bda10
 :END:
 #+title: systems and cybernetics hub
+🚧
 
 [[id:36055883-48f5-4ef5-a372-ac89cd32a80a][cybernetics]]
 [[id:be1f557a-7594-4059-9a2a-71b075cf82a3][self-organization]]
