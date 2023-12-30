@@ -4,6 +4,10 @@ async function homePageGraphAnimation() {
       location.pathname !== '/start.html') {
     return;
   }
+  // if on mobile, don't do this
+  if (window.innerWidth < 768) {
+    return;
+  }
   // that way the <a>'s are positioned absolutely, relative to the parent
   // https://css-tricks.com/absolute-positioning-inside-relative-positioning/
   const container = d3.select('div[class^=\'outline-text\']')
