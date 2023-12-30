@@ -3,9 +3,10 @@
 :END:
 #+title: binary space partitioning the world
 
-the world is divided into 4 quadrants: =00=, =01=, =10=, and =11= (as with the [[https://en.wikipedia.org/wiki/Quadrant_(plane_geometry)][Cartesian plane]], we start with the top right and go counter-clockwise.) each of those is divided into 4 quadrants, and so on. we can represent any location on earth as a string of =0='s and =1='s, where each 2 bits represents a quadrant.
+the world is divided into 4 quadrants: =00=, =01=, =10=, and =11= (as with the Cartesian plane, we start with the top right and go counter-clockwise.) each of those is divided into 4 quadrants, and so on. we can represent any location on earth as a string of =0='s and =1='s, where each 2 bits represents a quadrant.
 
-for example, my childhood home is at =0111010101111011010101= (last few bits left off for privacy...)
+for example, my childhood home is at =0011000000111011000000= (last few bits left off for privacy...)
+mt everest is around =011001111101000101=
 
 #+begin_export html
 <!-- Leaflet CSS -->
@@ -15,123 +16,171 @@ for example, my childhood home is at =0111010101111011010101= (last few bits lef
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <!-- make these two buttons a flex row -->
 <div style="display: flex; flex-direction: row;">
-  <button id="01Button" class="button">01</button>
-  <button id="00Button" class="button">00</button>
+    <button id="00Button" class="button">00</button>
+    <button id="01Button" class="button">01</button>
 </div>
 <div style="display: flex; flex-direction: row;">
-  <button id="10Button" class="button">10</button>
-  <button id="11Button" class="button">11</button>
+    <button id="10Button" class="button">10</button>
+    <button id="11Button" class="button">11</button>
 </div>
-<p id="locationstring">
-  location:&nbsp;
-</p>
-<input type="text" id="locationstring" name="locationstring" value="location:">
+<form id="locationform">
+    <p>
+        location:&nbsp; <input type="text" id="locationstring" name="locationstring" value=""
+            style="width: 300px;" />
+        <button type="submit" class="button">go there</button>
+    </p>
+</form>
+
 <!-- <p>Current Lat-Long Bounds: <span id="currentMapBounds"></span></p> -->
-<div id="mapid">
+<div id="mapid" style="height: 500px; width: 500px;">
 </div>
 
 <script>
-  // Initialize the map to the entire bounds of the world, zoomed to fit
-  var map = L.map('mapid').fitWorld();
+    // Initialize the map to the entire bounds of the world, zoomed to fit
+    var map = L.map('mapid').fitWorld();
 
-  // initial bounds should be the world
-  let south = -90,
-  west = -180,
-  north = 90,
-  east = 180;
+    // initial bounds should be the world
+    let south = -90,
+        west = -180,
+        north = 90,
+        east = 180;
 
-  function updateBounds(south, west, north, east) {
-  map.fitBounds([
-  [south, west],
-  [north, east]
-  ]);
-  // add lines for the midpoints of the current map bounds
-  L.polyline([
-  [(south + north) / 2, west],
-  [(south + north) / 2, east]
-  ], {
-  color: 'red'
-  }).addTo(map);
-  L.polyline([
-  [south, (west + east) / 2],
-  [north, (west + east) / 2]
-  ], {
-  color: 'red'
-  }).addTo(map);
-  // document.getElementById('currentMapBounds').innerHTML = `Lat: ${south}, ${north} Long: ${west}, ${east}`
-  }
-  updateBounds(south, west, north, east);
+    function updateBounds(south, west, north, east) {
+        map.fitBounds([
+            [south, west],
+            [north, east]
+        ]);
+        // add lines for the midpoints of the current map bounds
+        L.polyline([
+            [(south + north) / 2, west],
+            [(south + north) / 2, east]
+        ], {
+            color: 'red'
+        }).addTo(map);
+        L.polyline([
+            [south, (west + east) / 2],
+            [north, (west + east) / 2]
+        ], {
+            color: 'red'
+        }).addTo(map);
+        // document.getElementById('currentMapBounds').innerHTML = `Lat: ${south}, ${north} Long: ${west}, ${east}`
+    }
+    updateBounds(south, west, north, east);
 
+    function goThere() {
+        // get the location string from the input field
+        let locationstring = document.getElementById('locationstring').value;
+        // reset the map bounds
+        south = -90,
+            west = -180,
+            north = 90,
+            east = 180;
+        // iterate through the location string
+        for (let i = 0; i < locationstring.length; i++) {
+            // if the current bit is 0, we go west
+            if (i % 2 == 0) {
+                if (locationstring[i] == "0") {
+                    south = (south + north) / 2;
+                } else {
+                    north = (south + north) / 2;
+                }
+            } else {
+                if (locationstring[i] == "0") {
+                    east = (east + west) / 2;
+                } else {
+                    // otherwise, we go east
+                    west = (east + west) / 2;
+                }
+            }
+        }
+        // update the map bounds
+        updateBounds(south, west, north, east);
+        // center the map on the new bounds
+        map.fitBounds([
+            [south, west],
+            [north, east]
+        ]);
+    }
 
-  // Set up the OSM layer
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  minZoom: 1,
-  attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
-  console.log(`INIT bounds: ${south}, ${west}, ${north}, ${east}`);
-  // update the current map bounds
-
-  document.getElementById('01Button').onclick = function () {
-  console.log(`00 bounds: ${south}, ${west}, ${north}, ${east}`);
-  south = (south + north) / 2
-  east = (east + west) / 2
-  map.fitBounds([
-  [south, west],
-  [north, east]
-  ]);
-  document.getElementById('locationstring').innerHTML += "01";
-  updateBounds(south, west, north, east);
-  };
-
-  document.getElementById('00Button').onclick = function () {
-  console.log(`01 bounds: ${south}, ${west}, ${north}, ${east}`);
-  south = (south + north) / 2
-  west = (east + west) / 2
-  map.fitBounds([
-  [south, west],
-  [north, east]
-  ]);
-  document.getElementById('locationstring').innerHTML += "00";
-  updateBounds(south, west, north, east);
-  };
-
-  document.getElementById('10Button').onclick = function () {
-  console.log(`10 bounds: ${south}, ${west}, ${north}, ${east}`);
-  north = (south + north) / 2
-  east = (east + west) / 2
-  map.fitBounds([
-  [south, west],
-  [north, east]
-  ]);
-  document.getElementById('locationstring').innerHTML += "10";
-  updateBounds(south, west, north, east);
-  };
+    // when the form is submitted, go to the location
+    document.getElementById('locationform').onsubmit = function (event) {
+        event.preventDefault();
+        goThere();
+        return false;
+    };
 
 
-  document.getElementById('11Button').onclick = function () {
-  console.log(`11 bounds: ${south}, ${west}, ${north}, ${east}`);
-  north = (south + north) / 2
-  west = (east + west) / 2
-  map.fitBounds([
-  [south, west],
-  [north, east]
-  ]);
-  document.getElementById('locationstring').innerHTML += "11";
-  updateBounds(south, west, north, east);
-  };
+    // Set up the OSM layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        minZoom: 1,
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+    console.log(`INIT bounds: ${south}, ${west}, ${north}, ${east}`);
+    // update the current map bounds
+
+    document.getElementById('00Button').onclick = function () {
+        console.log(`00 bounds: ${south}, ${west}, ${north}, ${east}`);
+        south = (south + north) / 2
+        east = (east + west) / 2
+        map.fitBounds([
+            [south, west],
+            [north, east]
+        ]);
+        // append 01 to the input field
+        document.getElementById('locationstring').value += "00";
+        updateBounds(south, west, north, east);
+    };
+
+    document.getElementById('01Button').onclick = function () {
+        console.log(`01 bounds: ${south}, ${west}, ${north}, ${east}`);
+        south = (south + north) / 2
+        west = (east + west) / 2
+        map.fitBounds([
+            [south, west],
+            [north, east]
+        ]);
+        document.getElementById('locationstring').value += "01";
+        updateBounds(south, west, north, east);
+    };
+
+    document.getElementById('10Button').onclick = function () {
+        console.log(`10 bounds: ${south}, ${west}, ${north}, ${east}`);
+        north = (south + north) / 2
+        east = (east + west) / 2
+        map.fitBounds([
+            [south, west],
+            [north, east]
+        ]);
+        document.getElementById('locationstring').value += "10";
+        updateBounds(south, west, north, east);
+    };
+
+
+    document.getElementById('11Button').onclick = function () {
+        console.log(`11 bounds: ${south}, ${west}, ${north}, ${east}`);
+        north = (south + north) / 2
+        west = (east + west) / 2
+        map.fitBounds([
+            [south, west],
+            [north, east]
+        ]);
+        document.getElementById('locationstring').value += "11";
+        updateBounds(south, west, north, east);
+    };
 </script>
 #+end_export
 
-have at it~ inspired by the [[https://www.youtube.com/watch?v=pUF5esTscZI][CGP Grep A4 paper video]]
+have at it~ inspired by the [[https://www.youtube.com/watch?v=pUF5esTscZI][CGP Grey A4 paper video]]
 metanote; while i was writing this note, copilot gave me the following suggestion:
 
-#+ATTR_HTML: :width 600px
+#+ATTR_HTML: :width 600px :alt copilot's suggestion to me
 [[file:copilot_creepy.png]]
 
 Which...not only is a valid youtube video, but *it's a [[https://www.youtube.com/watch?v=gB9n2gHsHN4][3blue1brown video on the very topic of fractals]].* Before I'd even written the word fractal, or self-similar,  or anything in this document. Kinda crazy, right?
 
 * fun observations / thoughts
+- the world is in the order of magnitude 2^34 larger than my house.
+- you can really see how messed up the Mercator is by the shapes of the quadrants in the far north
+- many different ways we could do this-- just have to map a different fractal onto a different projection. e.g. we could do Sierpinski fractals on top of Buckminster Fuller's [[https://en.wikipedia.org/wiki/Dymaxion_map][Dymaxion map]], or hexagons, because, you know, they're the bestagons (@cgpgrey).
 - If you live in two different places, what's your Last Common Ancestor in the binary tree?
-- presumably different ways we could do this-- just have to map a different fractal onto the world. e.g. we could do hexagons and probably end up with something cool
-- the world is about 2^34 larger than my house.

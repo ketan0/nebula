@@ -5,7 +5,7 @@
 
 # NOTE: eventually would love to have a section on like, evergreen vs working notes. or blog posts / "finished thoughts" vs unfinished thoughts.
 * i'm working on it
-which might become apparent, when you run into unfinished thoughts, TODOs, dead ends, etc. etc. it's all under construction!
+which might become apparent, when you run into unfinished thoughts, TODOs, dead ends, etc. etc. many things are under construction!
 #+ATTR_HTML: :width 400 :alt prompt was "a complex web of underground holes being dug by groundhogs, with construction signs at dead ends. cartoon style"
 [[file:under_construction.png]]
 * i want to think / work in public

@@ -1,5 +1,7 @@
-hey, i'm ketan.
+Hey! I'm Ketan.
 
-i work on keeping machine learning safe at [[https://robustintelligence.com/][robust intelligence]].
+I work on keeping machine learning safe at [[https://robustintelligence.com/][Robust Intelligence]].
 
-i'm also pretty interested in cybernetics. if you'd like to learn more, check out [[https://metasystemic.com/][metasystemic]].
+I'm pretty interested in cybernetics. If you'd like to learn more, check out [[https://metasystemic.com/][metasystemic]].
+
+I'm also interested in other various things, for which you can check out my [[file:start.org][garden]].

@@ -9,7 +9,7 @@ async function homePageGraphAnimation() {
   const container = d3.select('div[class^=\'outline-text\']')
                 .style('position', 'relative');
   // select <a> nodes, get their x/y coords
-  const selection = d3.selectAll('a:not([href^="http"],[href="/"],[href="/start.html"])')
+  const selection = d3.selectAll('.outline-text-2 a:not([href^="http"],[href="/"],[href="/start.html"])')
 
   // convert to absolute position
   await selection.transition()

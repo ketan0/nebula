@@ -5,7 +5,7 @@
 #+title: garden
 #+html_head: <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 
-Oh hey, you've stumbled on my corner of the web. This is a repository for my thoughts, learnings, questions, and connections between those things. Many pages are incomplete / rather discombobulated -- that's because these are working notes, rather than finished 'blog posts' or something like that. Some elements will become more complete / coherent over time. :)
+Oh hey, you've stumbled on my corner of the web. This is a repository for my thoughts, learnings, questions, and connections between those things. Many pages are incomplete / rather discombobulated -- that's [[id:6179156e-c485-4660-a3d2-efd085138aaf][to be expected.]]
 
 * A few starting points:
 [[id:218284cc-e1be-4544-85a4-4c610e1bda10][systems and cybernetics hub]]
