@@ -2,6 +2,6 @@ Hey! I'm Ketan.
 
 I work on creating safeguards for generative AI at [[https://robustintelligence.com/][Robust Intelligence]].
 
-Cybernetics is cool! If you'd like to learn more, check out [[https://metasystemic.com/][metasystemic]].
+Cybernetics is cool again! If you'd like to learn more, check out [[https://metasystemic.com/][metasystemic]].
 
 I'm also interested in other various things, for which you can check out my [[file:start.org][garden]].
