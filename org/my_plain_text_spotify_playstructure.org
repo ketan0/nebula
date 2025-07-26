@@ -1,6 +1,5 @@
 :PROPERTIES:
 :ID:       518c0248-c4f1-4dc8-8e01-5e0e59988aec
-:ROAM_ALIASES: playstructure
 :END:
 #+title: plaintext spotify playstructure
 
@@ -24,6 +23,8 @@ I feel like current music-listening interfaces don't encourage [[id:1cf91cd1-222
 *** [[spotify:track:3Ti0GdlrotgwsAVBBugv0I][Can I Kick It?]]
 ** [[spotify:artist:29XOeO6KIWxGthejQqn793][Flying Lotus]]
 *** [[spotify:album:0tOVrY13drf4AGBWtSIkgX][Yasuke]]
+** smino
+** mac miller
 * Some of my playlists:
 some of these are quite short, even just 1 song! but that song is meant to be a seedling
 # Sidenote: displaying these playlists as plants / trees (scaling their development with the development of the playlist) would be a fantastic visual metaphor for this playlist-growing process, and a microcosm of what I want for my digital garden at large...

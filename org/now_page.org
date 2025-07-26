@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       1bec253c-f497-429c-8eaf-087583196229
+:END:
+#+title: now page
+
+* wondering about [[id:218284cc-e1be-4544-85a4-4c610e1bda10][systems and cybernetics]]
+:PROPERTIES:
+:ID:       f47b0875-eb80-489b-b545-df877c22a0b0
+:END:
+i think a super underappreciated lens for the world is that of systems and cybernetics.
+* trying to navigate musical spaces
+:PROPERTIES:
+:ID:       2a8eb99f-9659-4fb0-8ac6-a8382e28eb5a
+:END:
+i used to play the violin more actively, but now as a mostly-listener of music, i want to have more of a hand in [[id:518c0248-c4f1-4dc8-8e01-5e0e59988aec][shaping and guiding my experience with it]].
+* obsessed with geography..maps..? what do you call it
+:PROPERTIES:
+:ID:       1ae1a865-4cf6-4c01-bb1c-804b6bd8975a
+:END:
+for that reason, i love trawling wikipedia pages about the extremes of the earth, zooming in on random spots on google earth, watching cgp grey videos on the matter, and creating lil experiments such as one [[id:ce40d31c-2118-41ff-bd48-f1d2a7910a19][locating yourself anywhere in the world with a binary number]].
+
+i made an experiment which allows you to recursively divide up the world into binary spaces and locate yourself.
+* what is this page?
+see: https://sive.rs/nowff

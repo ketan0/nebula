@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       729f454a-3d66-44f4-bc6e-ec8a21a26ac9
+:END:
+#+title: posts
+
+[[id:2e5f0c3e-ff4c-4e83-9e3f-758716d370b8][emacs as a playground]]

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       c2f2647a-36ab-4c48-a0a0-dd9192b8e449
+:END:
+#+title: thought set
+
+thought set
+what is the set of all sets ... does it contain itself? -> self-reference, GEB, strange loops, etc.
+self = construction = paradox? what's the relation to emptiness and/or impermanence thing -- at the 'ultimate' level of reality, self doesn't exist? or something like that
+inspiration digital garden
+cool visual of graph stuff

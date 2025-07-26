@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       9bb11df4-61fd-417c-aac9-6f00fcc4dc3b
+:END:
+#+title: Brain-to-text project
+
+* [[id:763d83c1-d085-4e9c-b6fc-56dec3555d77][Lab Notebook]]
+** Jul 12
+Refamiliarizing myself with where I was at...probably could just look at our poster / final report rq??

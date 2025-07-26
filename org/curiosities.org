@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       03afdac5-692d-43b5-b224-fe6b94de3b57
+:END:
+#+title: curiosities
+
+* how does learning work in the brain?
+* how do neurons work / connect with each other / change their edge strengths etc.
+* how does neuroplasticity / "brain molds itself to what is relevant", david eagleman style, actually work?
+* how does the immune system /really/ work
+* how do operating systems really work

@@ -1,0 +1,120 @@
+:PROPERTIES:
+:ID:       122f1b4b-3e61-49b5-afb4-05a9d45bdeec
+:END:
+#+title: accessing books and stuff
+
+books, videos, etc. etc. -- want anything i've read to get indexed into this thing and be recallable.
+
+
+question -> answer + link to the spot in the book or video (i guess this is essentially perplexity ... but fuck it lol)
+
+
+question about "how does the japanese maglev train work" -> answer, + link to the relevant spot in the video
+
+follow-up questions can go deeper and deeper into the physics of things -> prerequisites for understanding the content in that video
+
+personalized for me
+
+what do i want out of this? i guess... a couple things that could be cool:
+
+- personalized reviews of what i just read (e.g., just finished a chapter, give me a summary of what i read, make it hyperlinked to further reading, connect it to my past readings(?))
+  - maybe i can define what i thought was cool and important from what i just read / watched, and then it generates the question matter based on that?
+
+- research papers: arxiv html
+
+- advice-posts i thought were good can all be searchable:
+  - you and your research,
+  - michael nielsen effective research,
+  - john schulman
+  - twitter bookmarks
+
+     -- whenever i feel like i'm struggling, can turn to querying this curated list of posts
+
+*why*: I want to selectively remember things i read that i deem important.
+- i want the knowledge i learn to compound upon itself.
+
+
+what MVP should do:
+- store books, papers, articles, youtube videos
+- repeatedly quiz me on the same knowledge, with some spacing intervals
+
+MVP TODOS:
+- [X] collect 4-5 pieces of content - try to vary it up a bit, maybe?
+- [ ] index those contents into RAG system, w/metadata of page number
+- [X] function for generating review questions based on a given piece of content
+- [X] function for grading correctness of an answer to a review question based on the answer (or: just self-grade, like anki)
+- [ ] function that strings together text -> [question gen] -> review questions -> [input()] -> review answer -> [grader] -> grade + commentary -> [display to user, input()] -> whether we got it correct or not
+- [ ] function that, given a db of user highlights & their position withiin the book, generates questions based on those highlights
+- [X] function for calculating the next time delay, based on the previous time delay + correctness(?)
+- [X] flashcard dataclass
+- [ ] json that stores:
+  - flashcard deck
+  - for each flashcard:
+    - gen'ed questions
+    - for each question
+      - autograde, user grade, commentary
+    - prev. time delay
+    - next time it's scheduled for
+- [X] refactor generate_review_questions to take in a flashcard snippet instead of a text
+- [ ] initial_setup:
+  - [ ] populate flashcards with results of generate_review_questions
+  - [ ] schedule them all for today
+  - [ ] re-save them to the db
+- [ ] daily_review:
+  - [ ] gathers flashcards due <= today, for each flashcard:
+  - [ ] does the review w/ the next generated question
+  - [ ] updates time delays + reschedules flashcard based on grade, prev time delay
+
+later:
+- actually - now realizing i want the ability to easily create manual review questions. i think that would be particularly useful in learning prompt design, as andy calls it.
+- linking to the original content (hmm... easier if our nodes in the index have timestamp / page number metadata ... ok let's do that from the start then! that's fine)
+- more opinionated on what types of questions i want it to ask. i think flashcard-y questions are nice, as opposed to long response, because they're low-effort to answer. basically just tell it to ask questions which can be answered in a concise sentence or less. short answer, so to speak.
+  - also: cloze, whatever else Anki does (TODO: what are the common anki question formats?)
+
+- can continue to have a conversation in the context of your doc + question + answer, ask follow-up questions, etc.
+- incorporating my own notes / color commentary on a source (e.g.: what is the intuition for what self-attn is doing)
+- interacting with visual content (gpt vision?)
+- ideally: modular (swap out your own review-notification system, your own data store for the content, own spaced rep. algorithm, own LLM, etc.)
+- fancy SR algorithms
+- selectively choose which chapter(s) / concept(s) from a book to injest
+- write code to do [x] prompts -- e.g. write a transformer layer from scratch. autogrades you
+- nice-to-have: LLM content fixing step (pypdf messes spacing up sometimes)
+- nice-to-have: "ni" for "not important" -> don't ask this question (or questions about that content matter) anymore
+- how can we achieve optimal elaborative encoding of a concept? elaborative encoding michael nielsen
+- how can we achieve 'distributed practice', as mnielsen says, in more fun ways? different media? etc
+  - can be text on screen, can be voice readout, can be a projection on my bedroom wall, etc.
+  - can be triggered by other relevant acts of knowledge work (e.g., reading a book that is conceptually related)
+
+
+content ideas
+- GEB
+- ai research paper ... hm maybe like context vectors? or something different ... something more fundamental ... like all you need is attention? uhh ahh idk. hmm.
+- philosophy paper - let's choose a fun one. or maybe something from cybernetics, e.g. von Foerster's argument that self-organized systems don't exist
+- Japanese maglev video
+- you and your research - Richard Hamming
+
+  wait a sec.. how exactly would i get the review questions? it's easy to throw the whole context into llm, but like... what if the book's too large for the context? how do i decide on review questions?
+
+  well.. i mean we have access to long context llms now, right..
+
+  a1: given split into medium chunks (i.e. chapters?) ask for review questions
+
+  a2: have some "concepts" stored in the system, and RAG-query for chunks with the concept, and ask review questions about the concepts
+
+  a3: keep all my documents short-ish, and feed whole thing into llm. then we don't even need a vector index, at least for coming up with review questions...
+
+  okay, let's go with a3 😛
+
+  let's see ~how many tokens the chapter comes out to ...
+
+  how do we reuse the review questions? / direct them
+
+  ok, still some remaining questions ...
+  - how do we choose what source texts to ask users questions from?
+    hmm so there is no analogous problem in anki - it just starts with a static set of flashcards which is the whole material you're trying to learn, and then you go forth from there ...
+
+    here's an idea: we still retain static flashcards, in a way. but what stays static is the /material/ tested, not the specific question
+
+    these could be user-specified- they specify the content they want to be tested, maybe even providing the sub-nugget of context directly (highlight?), and optionally some sort of color commentary about what specifically they want to remember from that part, and then given that, we generate fresh questions upon each review. and we can still maintain some sense of how "mastered" a concept/material flashcard is.
+
+    given the user's highlight, perhaps what we save is a slightly expanded context around the user's highlight (maybe + / - 1 page or so?)

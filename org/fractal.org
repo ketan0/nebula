@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       b69aca49-550a-44c8-8038-198e4443368d
+:END:
+#+title: fractal

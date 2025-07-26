@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       ac551afe-61fd-44eb-9894-dde48ff1491d
+:END:
+#+title: experiments
+
+# TODO: would love to have this page be tiled, like the gallery view on notion
+[[id:ce40d31c-2118-41ff-bd48-f1d2a7910a19][binary space partitioning the world]]

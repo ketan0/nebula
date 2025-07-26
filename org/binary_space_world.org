@@ -8,6 +8,8 @@ the world is divided into 4 quadrants: =00=, =01=, =10=, and =11= (starting with
 for example, my childhood home is at =0011000000111011000000= (last few bits left off for privacy...)
 mt everest is around =011001111101000101=
 
+i encourage you to go down the rabbit-hole to your home, workplace, or a favorite spot in the world.  then, once you get to the bottom, zoom back out to see the [[id:e3e07623-0c5d-4889-bd88-8cc1bcbf9b2a][fractal]] you've created.
+
 #+begin_export html
 <!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />

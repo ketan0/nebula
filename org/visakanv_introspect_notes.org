@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       fd929a2a-c2fa-4172-b42b-302658a16ce1
+:END:
+#+title: visakanv introspect notes
+
+* 0. Introduction
+- fog bad
+  - avoiding "ugh fields" = fog
+  - social bloatware = fog
+  - lack of source of meaning / nihilism = fog
+* ACT I. The Call to Adventure
+[WAIT: read entire chapter, then let's come back here and write things. flow is good]
+
+fundamentally when visa is talking about imprisonment, he's talking about the same thing stafford beer talks about with imprisonment by the metasystem. you're being made the metasystem's bitch.
+* ACT II. The Call to Adventure
+* ACT III. The Call to Adventure
+* ACT IV. The Call to Adventure
+* ACT V. The Call to Adventure
+* Appendix

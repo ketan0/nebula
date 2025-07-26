@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       23e03a28-48b1-4fa3-9fa3-71a369950c6d
+:END:
+#+title: garden
+#+html_head: <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+
+Gardening some thoughts. Mind you, there are some baby plants here.
+
+* A few starting points:
+[[id:1bec253c-f497-429c-8eaf-087583196229][now]]
+[[id:518c0248-c4f1-4dc8-8e01-5e0e59988aec][plaintext spotify playstructure]]

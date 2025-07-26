@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       d8975414-3591-4ebd-bb46-53ddeedda7ba
+:END:
+#+title: protocols
+
+what is a protocol?
+
+in my own words... something that is followed / agreed to by a set of parties.
+
+Internet Protocol
+idk what else

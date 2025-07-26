@@ -8,18 +8,6 @@
 (pop argv) ; $0
 (setq force (string= "-f" (pop argv)))
 
-(unless (bound-and-true-p doom-init-p)
-  (setq gc-cons-threshold 16777216
-        gcmh-high-cons-threshold 16777216)
-  ;; (setq org-src-fontify-natively t)
-  ;; (setq doom-disabled-packages '(doom-themes))
-  (load (expand-file-name "core/core.el" user-emacs-directory) nil t)
-  (require 'core-cli)
-  (doom-initialize)
-  (load (expand-file-name "core/core-ui.el" user-emacs-directory) nil t)
-  (require 'core-ui)
-  (load-theme 'doom-opera-light t))
-
 (require 'find-lisp)
 (require 'dash)
 (require 's)
@@ -51,7 +39,7 @@
 (advice-add 'recentf-mode :override #'ignore)
 (advice-add 'recentf-cleanup :override #'ignore)
 
-(section! "Initializing")
+;; (section! "Initializing")
 
 (setq org-html-htmlize-output-type 'css)
 (setq org-roam-directory "~/garden-simple/org/")
@@ -59,7 +47,8 @@
 
 (load-file "~/garden-simple/publish-utils.el")
 
-(section! "Publishing files")
+;; (section! "Publishing files")
+(setq force nil)
 (when force
   (warn! "Force flag set"))
 

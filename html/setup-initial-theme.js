@@ -3,6 +3,8 @@
 
 STYLES = {
   dark: {
+    ['--title-font']: '"Fira Sans", sans-serif',
+    ['--font']: '"Lato", sans-serif',
     ['--bg']: '#181818',
     ['--text']: '#efefef',
     ['--nebula-logo']: '#fff',
@@ -22,6 +24,8 @@ STYLES = {
     ['--highlight-color']: '#444',
   },
   light: {
+    ['--title-font']: '"Fira Sans", sans-serif',
+    ['--font']: '"Lato", sans-serif',
     ['--bg']: '#fff',
     ['--text']: '#2b2b2b',
     ['--nebula-logo']: '#000',

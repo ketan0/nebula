@@ -25,17 +25,23 @@
 ;; use csl for every export backend
 
 ;; add the last modified date as a subtitle
+(defvar files-to-skip-modified-date
+  '("index.org" "blog.org")
+  "List of files to skip adding modified date to.")
+
 (defun add-modified-date (backend)
   (when (equal backend 'html)
-    (let ((modified-timestamp-subtitle (->> (buffer-file-name) (file-attributes)
-                                            (file-attribute-modification-time)
-                                            (format-time-string "%B %d, %Y")
-                                            (concat "\n#+subtitle: Last modified on "))))
-      (beginning-of-buffer)
-      (setq case-fold-search t) ;; makes re-search-forward case-insensitive
-      (when (re-search-forward "#\\+title:" nil t)
-        (end-of-line)
-        (insert modified-timestamp-subtitle)))))
+    (let ((filename (file-name-nondirectory (buffer-file-name))))
+      (unless (member filename files-to-skip-modified-date)
+        (let ((modified-timestamp-subtitle (->> (buffer-file-name) (file-attributes)
+                                                (file-attribute-modification-time)
+                                                (format-time-string "%B %d, %Y")
+                                                (concat "\n#+subtitle: Last tended to on "))))
+          (beginning-of-buffer)
+          (setq case-fold-search t) ;; makes re-search-forward case-insensitive
+          (when (re-search-forward "#\\+title:" nil t)
+            (end-of-line)
+            (insert modified-timestamp-subtitle)))))))
 (add-hook 'org-export-before-processing-hook 'add-modified-date)
 
 ;; modified from https://org-roam.discourse.group/t/export-backlinks-on-org-export/1756

@@ -1,0 +1,5 @@
+#+title: blog
+
+* Posts
+[[id:2e5f0c3e-ff4c-4e83-9e3f-758716d370b8][emacs as a playground]] - Jan 25
+** 2024

@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       68946239-95cd-4769-bfbc-61eec5b87efe
+:END:
+#+title: garden workspace
+
+
+strange loops, GEB
+‘Goals’, ‘purpose’
+Self-reference
+Feedback
+Homoiconicity
+Lisp distinguish between talking about the symbol and talking about its referent with ‘ quote — homoiconicity,
+
+Are symbols real? A la Strange Loop
+In-depth yet concise exploration of Godel's proof
+Is anything real? A la anatman
+Buddhism, spirituality, [[id:1ef6d0be-e0f0-4a12-b32e-63abe89c1e6a][Zen and the Art of Motorcycle Maintenance]]
+taoism
+map is not the territory
+Systems societies etc. are all “map” on the territory…but these maps seem to help us learn and navigate and predict? They’re predictive. That’s what’s useful about them.

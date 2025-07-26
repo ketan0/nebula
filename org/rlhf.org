@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       23056d3f-9738-48eb-9860-920b9d7f8be6
+:END:
+#+title: safety alignment
+
+* training
+** pretraining
+*** next token prediction
+** sft for dialogue

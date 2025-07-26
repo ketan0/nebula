@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       e3e07623-0c5d-4889-bd88-8cc1bcbf9b2a
+:END:
+#+title: fractals
+
+are objects which have some aspect of self-similarity to them (though this doesn't have to be perfect self-similarity -- as 3blue1brown explains, the broader definition of fractals includes all shapes whose "roughness" stays the same, no matter how much you zoom in.)

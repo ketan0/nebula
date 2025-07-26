@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       47fb52de-1a93-4698-91ee-f0d0cea08b10
+:END:
+#+title: spotify vector space interface
+
+* components
+** music data
+*** audio
+*** lyrics
+*** genre
+*** related artists
+*** other hand-crafted spotify features
+** music embedding model

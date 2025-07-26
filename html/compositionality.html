@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:35 -->
+<!-- 2024-10-13 Sun 14:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>compositionality</title>
+<title>composability</title>
 <meta name="author" content="Ketan Agrawal" />
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
@@ -20,21 +20,23 @@
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">Ketan Agrawal</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/posts.html">posts</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">{thoughts}</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">experiments</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
-<h1 class="title">compositionality
+<h1 class="title">composability
 <br />
-<span class="subtitle">Last modified on May 19, 2022</span>
+<span class="subtitle">Last modified on October 13, 2024</span>
 </h1>
 <p>
 You have a set of reusable pieces that can be combined to form different, interesting things.<br />
@@ -44,7 +46,7 @@ You have a set of reusable pieces that can be combined to form different, intere
 <h2 id="org3d04b83">Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programs</a> into modular, reusable unit is one example of this.</h2>
 <div class="outline-text-2" id="text-org3d04b83">
 
-<div id="org0a57bd0" class="figure">
+<div id="org8cad8ec" class="figure">
 <p><img src="decomposition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
 </p>
 </div>
@@ -55,7 +57,7 @@ You have a set of reusable pieces that can be combined to form different, intere
 <h2 id="org34ae8b7">Some methodical activities, such as making breakfast, decompose well into modular activities as well:</h2>
 <div class="outline-text-2" id="text-org34ae8b7">
 
-<div id="org6d49426" class="figure">
+<div id="org42c104e" class="figure">
 <p><img src="breakfast.png" alt="tree of the decomposition of making breakfast into &quot;make toast,&quot; &quot;make tea,&quot; etc." /><br />
 </p>
 </div>
@@ -70,7 +72,7 @@ is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668"
 </p>
 
 
-<div id="org9b895e3" class="figure">
+<div id="orgd33c5f7" class="figure">
 <p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
 </p>
 </div>
@@ -99,7 +101,6 @@ Related: <a href="#citeproc_bib_item_1">[1]</a><br />
 </p>
 </div>
 </div>
-
 <div id="outline-container-orgc561ec8" class="outline-2">
 <h2 id="orgc561ec8">Bibliography</h2>
 <div class="outline-text-2" id="text-orgc561ec8">
@@ -113,13 +114,13 @@ Related: <a href="#citeproc_bib_item_1">[1]</a><br />
 </div>
 
 
-<div id="outline-container-orgccda517" class="outline-2 references">
-<h2 id="orgccda517">Links to &ldquo;compositionality&rdquo;</h2>
-<div class="outline-text-2" id="text-orgccda517">
+<div id="outline-container-org03912ca" class="outline-2 references">
+<h2 id="org03912ca">Links to &ldquo;composability&rdquo;</h2>
+<div class="outline-text-2" id="text-org03912ca">
 </div>
-<div id="outline-container-org11edffe" class="outline-3">
-<h3 id="org11edffe"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
-<div class="outline-text-3" id="text-org11edffe">
+<div id="outline-container-org80259e7" class="outline-3">
+<h3 id="org80259e7"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-org80259e7">
 <p>
 <a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
 </p>
@@ -130,9 +131,9 @@ This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f
 </div>
 </div>
 
-<div id="outline-container-orgf7236f6" class="outline-3">
-<h3 id="orgf7236f6"><a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a></h3>
-<div class="outline-text-3" id="text-orgf7236f6">
+<div id="outline-container-orgc1d8303" class="outline-3">
+<h3 id="orgc1d8303"><a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a></h3>
+<div class="outline-text-3" id="text-orgc1d8303">
 <p>
 I think it can be really good. Fairly related to <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a>. Will have to hash out what I think the difference is there.<br />
 </p>
@@ -169,18 +170,18 @@ But&#x2026;.is the <a href="brain.html#ID-4b0162cb-15ff-42fe-90dd-49d16df9bf44">
 </div>
 </div>
 
-<div id="outline-container-org3c085a0" class="outline-3">
-<h3 id="org3c085a0"><a href="concepts_and_compositionality_in_search_of_the_brain_s_language_of_thought_pubmed.html#ID-d77b968f-cd5d-485d-928f-07568642e8ec">Concepts and Compositionality: In Search of the Brain&rsquo;s Language of Thought</a></h3>
-<div class="outline-text-3" id="text-org3c085a0">
+<div id="outline-container-orgb4000aa" class="outline-3">
+<h3 id="orgb4000aa"><a href="concepts_and_compositionality_in_search_of_the_brain_s_language_of_thought_pubmed.html#ID-d77b968f-cd5d-485d-928f-07568642e8ec">Concepts and Compositionality: In Search of the Brain&rsquo;s Language of Thought</a></h3>
+<div class="outline-text-3" id="text-orgb4000aa">
 <p>
 cc: <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgce6e0b3" class="outline-3">
-<h3 id="orgce6e0b3"><a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I&rsquo;m actively working on</a></h3>
-<div class="outline-text-3" id="text-orgce6e0b3">
+<div id="outline-container-orgc6e1c00" class="outline-3">
+<h3 id="orgc6e1c00"><a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I&rsquo;m actively working on</a></h3>
+<div class="outline-text-3" id="text-orgc6e1c00">
 <p>
 Mentally bookmarking these pages &#x2013; think there is some interesting &ldquo;sauce&rdquo; to be gotten from each of these.<br />
 </p>
@@ -200,9 +201,9 @@ Mentally bookmarking these pages &#x2013; think there is some interesting &ldquo
 </div>
 </div>
 
-<div id="outline-container-orga5a5793" class="outline-3">
-<h3 id="orga5a5793"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
-<div class="outline-text-3" id="text-orga5a5793">
+<div id="outline-container-org60a2c53" class="outline-3">
+<h3 id="org60a2c53"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
+<div class="outline-text-3" id="text-org60a2c53">
 <p>
 Yoshua Bengio <a href="https://www.youtube.com/watch?v=rKZJ0TJWvTk">talk</a>. Also, the associated <a href="https://arxiv.org/abs/2102.11107">paper</a>.<br />
 </p>
@@ -225,148 +226,52 @@ how does the brain break knowledge apart into &ldquo;pieces&rdquo; that can be r
 </div>
 </div>
 
-<div id="outline-container-org81172c3" class="outline-3">
-<h3 id="org81172c3"><a href="questions.html#ID-c2b46716-f6f5-48ee-87b9-c6a85acfb103">is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</a> <span class="backlinks-outline-path">(<i>is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</i>)</span></h3>
-<div class="outline-text-3" id="text-org81172c3">
+<div id="outline-container-orgd7b0337" class="outline-3">
+<h3 id="orgd7b0337"><a href="questions.html#ID-c2b46716-f6f5-48ee-87b9-c6a85acfb103">is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</a> <span class="backlinks-outline-path">(<i>is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</i>)</span></h3>
+<div class="outline-text-3" id="text-orgd7b0337">
 <p>
 thinking about this in relation to <a href="dynamic_programming.html#ID-e60c441f-deb9-4eca-8816-73e477b98c29">dynamic programming</a> &#x2013; I think it serves as a good metaphor for why it can be useful to think about the structure of the problems you&rsquo;re solving, and if there&rsquo;s any overlap / reuse that can occur&#x2026;.seems that this is also related to <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposition</a> / <a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a><br />
 </p>
 </div>
 </div>
-</div>
 
-
-
-<div id="outline-container-org72bce52" class="outline-2 references">
-<h2 id="org72bce52">Links to &ldquo;decomposition&rdquo;</h2>
-<div class="outline-text-2" id="text-org72bce52">
-</div>
-<div id="outline-container-org8770245" class="outline-3">
-<h3 id="org8770245"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
-<div class="outline-text-3" id="text-org8770245">
+<div id="outline-container-org8d3e7a4" class="outline-3">
+<h3 id="org8d3e7a4"><a href="emacs_as_a_playground.html#ID-2e5f0c3e-ff4c-4e83-9e3f-758716d370b8">emacs as a playground</a> <span class="backlinks-outline-path">(<i>emacs provides an powerful set of primitives for editing text</i>)</span></h3>
+<div class="outline-text-3" id="text-org8d3e7a4">
 <p>
-<a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
+so, one reason i like emacs is that it provides an incredibly powerful set of primitives for editing text. these primitives are not just confined to the &rsquo;writing app&rsquo; or the &rsquo;coding app&rsquo; (though there is not really such a thing as an ‘app’ in emacs), but rather they are present throughout the whole system. kinda like how cmd-C and cmd-V work in every app, but generalized.<br />
 </p>
 
 <p>
-This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate &ldquo;<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images&rdquo; to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgd39250e" class="outline-3">
-<h3 id="orgd39250e"><a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a></h3>
-<div class="outline-text-3" id="text-orgd39250e">
-<p>
-I think it can be really good. Fairly related to <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a>. Will have to hash out what I think the difference is there.<br />
+examples:<br />
 </p>
 
 <p>
-<a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a> gets a lot of its power from its modularity. Packages are just little pieces of code&#x2013; you can add/remove them into your ecosystem as you please. As opposed to proprietary software, where you may be much more limited in the customization that you can do&#x2026;one piece of functionality for Evernote might not carry over to VSCode might not carry over to your web browser. etc.<br />
+you have primitives for things like deleting, uppercasing, highlighting, jumping up and down, creating a new line, recording a sequence of actions and replaying those back later…all the things that would be useful when editing text. and each of these primitives can be applied dynamically to a range of characters<br />
 </p>
 
 <p>
-^it&rsquo;s beautiful chaos sometimes, though! Modules designed by tens of thousands of independent humans are bound to be overlapping, redundant, and sometimes confusing to &ldquo;glue together&rdquo;&#x2026;<br />
+but then, perhaps even cooler, is that these primitives are like LEGO blocks, or maybe more aptly described like Play-Doh. they can be molded, composed, replaced, or extended into anything the end-user.<br />
 </p>
 
-<blockquote class="quoteback" data-title="Emacs, org, and bibtex as alternative to zotero and calibre" data-author="github-alphapapa" cite="https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Despite%20reading%20explanations,the%20citations%20manually.">
-<p>
-Despite reading explanations and guides occasionally, I&rsquo;ve never understood how Org, BibTeX, org-ref, ebib, etc. all work together. I once tried to set them up using BibTeX references in a file, but I wasn&rsquo;t able to figure out how to get citations working. I ran out of time to fiddle with it and had to do all the citations manually. :(<br />
-</p>
-<footer>github-alphapapa<cite><a href="https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Despite%20reading%20explanations,the%20citations%20manually.">https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Despite%20reading%20explanations,the%20citations%20manually.</a></cite></footer></blockquote><script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
-
-<blockquote class="quoteback" data-title="Emacs, org, and bibtex as alternative to zotero and calibre" data-author="ftrx" cite="https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Well...%20They%20do,to%20operate%20with.">
-<p>
-Well&#x2026; They do not. It&rsquo;s up to the end users glue them together. Bib(La)TeX only take care of record books&amp;c references in a textual flat-file database, org-ref is mostly a helper to add things to that text db and quickly link a record in an org documents, helm-bibtex or ivy-bibtex are the search-based UI to operate with.<br />
-</p>
-<footer>ftrx<cite><a href="https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Well...%20They%20do,to%20operate%20with.">https://www.reddit.com/r/emacs/comments/cxu0qg/emacs_org_and_bibtex_as_alternative_to_zotero_and/eyqe4vq/#:~:text=Well...%20They%20do,to%20operate%20with.</a></cite></footer></blockquote><script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
+<ul class="org-ul">
+<li>don&rsquo;t like the default keybindings? (like vim&rsquo;s better, as i do?) you can change them.<br /></li>
+<li>you can set up a primitive that calls any external API, too. one example i like is github copilot, the AI code completion engine that i use. since everything in emacs is text, and copilot is an engine for text completion, by simply setting up copilot, we automagically get copilot in our code files, in our note files, in our terminal shell, and anywhere else we want it.<br /></li>
+</ul>
 
 
 <p>
-But luckily emacs has a great community that has helped smooth out the rough edges between packages, and even make them work <i>together</i> to make emacs a better place.<br />
-</p>
-
-
-<p>
-But&#x2026;.is the <a href="brain.html#ID-4b0162cb-15ff-42fe-90dd-49d16df9bf44">brain</a> modular? I think it might not <i>quite</i> work that way.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orged535bd" class="outline-3">
-<h3 id="orged535bd"><a href="concepts_and_compositionality_in_search_of_the_brain_s_language_of_thought_pubmed.html#ID-d77b968f-cd5d-485d-928f-07568642e8ec">Concepts and Compositionality: In Search of the Brain&rsquo;s Language of Thought</a></h3>
-<div class="outline-text-3" id="text-orged535bd">
-<p>
-cc: <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a><br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgfca8c5d" class="outline-3">
-<h3 id="orgfca8c5d"><a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I&rsquo;m actively working on</a></h3>
-<div class="outline-text-3" id="text-orgfca8c5d">
-<p>
-Mentally bookmarking these pages &#x2013; think there is some interesting &ldquo;sauce&rdquo; to be gotten from each of these.<br />
-</p>
-
-<p>
-<a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I&rsquo;m actively working on</a> (hah, <a href="recursion.html#ID-ca2dd450-e352-43ce-95eb-9fd8e80c646c">recursive</a>)<br />
-<a href="code_comments.html#ID-3f0de91d-119f-4fd2-942e-f3458e60ed40">code comments</a><br />
-<a href="book_notes.html#ID-b910e58f-f1fe-4c3f-8efb-69bfa261b191">📚 book notes</a><br />
-<a href="game_of_life.html#ID-918b7900-d37d-4d92-a900-6d6632fd2f47">🔲 Conway&rsquo;s Game of Life</a><br />
-<a href="philosophy.html#ID-091329e5-7896-4975-b88b-99b30f4dd482">🧐 philosophy</a><br />
-<a href="rules_of_thumb.html#ID-5df9203d-c7d9-4341-b7dc-ac4236000d8b">rules of thumb</a><br />
-<a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposition</a><br />
-<a href="don_t_repeat_yourself_dry_works_well_for_code_not_people.html#ID-e2a95a21-0e55-4160-a6bb-0d7f87e81516">Don&rsquo;t Repeat Yourself (DRY) works well for code, not people.</a><br />
-<a href="blog_posts.html#ID-288afdae-8e50-4aa5-b16f-2545baf10967">blog posts</a><br />
-<a href="life_is_a_picture_but_you_live_in_a_pixel_wait_but_why.html#ID-612e2ba3-138c-4d8b-860d-b9b1902e512d">🟪🟦🟩 Life is a Picture, But You Live in a Pixel — Wait But Why</a><br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-org5c90337" class="outline-3">
-<h3 id="org5c90337"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
-<div class="outline-text-3" id="text-org5c90337">
-<p>
-Yoshua Bengio <a href="https://www.youtube.com/watch?v=rKZJ0TJWvTk">talk</a>. Also, the associated <a href="https://arxiv.org/abs/2102.11107">paper</a>.<br />
-</p>
-
-<p>
-causal representation learning: the discovery of high-level causal variables from low-level observations.<br />
-</p>
-
-<p>
-In practice, i.i.d. is a bad assumption. Things don&rsquo;t stay the same distribution as train. Current DL systems are brittle.<br />
-</p>
-
-<p>
-But&#x2026;what assumption can we replace it with, then?<br />
-</p>
-
-<p>
-how does the brain break knowledge apart into &ldquo;pieces&rdquo; that can be reused? =&gt; <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a> (thinking decomposition into helper functions in programming.) Examples of compositionality include<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgb271fb4" class="outline-3">
-<h3 id="orgb271fb4"><a href="questions.html#ID-c2b46716-f6f5-48ee-87b9-c6a85acfb103">is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</a> <span class="backlinks-outline-path">(<i>is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</i>)</span></h3>
-<div class="outline-text-3" id="text-orgb271fb4">
-<p>
-thinking about this in relation to <a href="dynamic_programming.html#ID-e60c441f-deb9-4eca-8816-73e477b98c29">dynamic programming</a> &#x2013; I think it serves as a good metaphor for why it can be useful to think about the structure of the problems you&rsquo;re solving, and if there&rsquo;s any overlap / reuse that can occur&#x2026;.seems that this is also related to <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposition</a> / <a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a><br />
+<a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a><br />
+<a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a><br />
+composability <a href="decomposition">decomposition</a><br />
 </p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

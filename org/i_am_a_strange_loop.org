@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       42db3f37-dba9-46ce-b4c3-730135a7e4df
+:END:
+#+title: I am a Strange Loop

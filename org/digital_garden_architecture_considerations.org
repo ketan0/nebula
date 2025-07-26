@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       b46d54be-88bf-41bd-a0fc-0acee0e315cb
+:END:
+#+title: digital garden architecture considerations
+
+* how can we move beyond having to explictly link nodes?
+obvious answer is to use some sort of semantic similarity to find similar notes -- but these links will probably be fairly obvious connections...
+
+the cool part would be to find the true, but non-obvious connections between notes.
+* how can we utilize transclusion more powerfully? i.e. having strong "atoms" / building blocks that i can transpose in a lot of other contexts, the way that visakanv does by QTing his evergreen tweets ([[https://x.com/visakanv/status/1443196315970670598?s=20][ayy lmao]], [[https://x.com/visakanv/status/1095744739410759680?s=20][fuckable > fucked]], etc.) i think those koan-like atoms are super duper powerful. and it's spaced repetition!

@@ -1,0 +1,11 @@
+#+title: self
+
+* intuitive exercises to get better understanding of 'self'
+- notice when an urge comes up to do something that 'you' think is bad for you. Well, 'you' are the one having the urge, aren't you? this generalizes to all instances of inner conflict.
+- decide to wiggle either your finger or your toe in the next 10 seconds from ... where did the decision come from? was there a coherent 'you' that made it, which you can point to?
+
+* marginalia
+things i wanna draw on:
+# I would really like to make the rag wisdom app at a time like this to be able to query + dynamically pull up chunks from stuff like this.
+ref: Joan Tollifson, Addictions.
+[[id:42db3f37-dba9-46ce-b4c3-730135a7e4df][I am a Strange Loop]]

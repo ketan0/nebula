@@ -76,3 +76,11 @@ Well...the dual-trained network does just as well on both -- they "lesioned" the
 There are diff feature spaces necessary for different problems -- brain learns to segregate those into different systems.
 *** Random stuff -- topographical map of number representatoin in parietal cortex.
 * 5/27 talk
+Kanwisher talk
+- face area
+- scene area
+- visual word area (ppl don’t have this response until after they learn to read— and only in languages they know!)
+- auditory speech area
+- language area
+“what is the relationship between language and thought?” => thought != language! two diff. brain regions respond much differently to thought and language. also left-hemisphere stroke patients — they can still think.
+- there’s a pink patch that REALLY selects for thinking about others’ thinking

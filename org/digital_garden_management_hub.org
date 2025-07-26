@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       229e9539-2d59-45cd-9253-23836f541cc8
+:END:
+#+title: digital garden management hub
+
+[[id:b46d54be-88bf-41bd-a0fc-0acee0e315cb][digital garden architecture considerations]]

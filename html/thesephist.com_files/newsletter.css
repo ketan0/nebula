@@ -1,0 +1,88 @@
+body {
+    --paper-foreground: var(--foreground-default);
+    --paper-accent: var(--accent);
+}
+
+input.paper,
+button.paper {
+    -webkit-appearance: none;
+    font-family: var(--font-serif);
+    padding: .4em .8em;
+}
+
+.newsletter-form {
+    margin: 1em 0 2em 0;
+    width: 100%;
+}
+
+.name-slot,
+.newsletter-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.slot {
+    flex-grow: 1;
+    margin-right: .8em;
+    display: flex;
+    flex-direction: column;
+}
+
+.slot.required label::after {
+    content: ' *';
+    color: var(--accent);
+}
+
+input,
+.submitButton {
+    font-size: 1em;
+    white-space: nowrap;
+}
+
+label {
+    margin-bottom: .3em;
+    color: var(--foreground-light);
+}
+
+input {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    .name-slot,
+    .slot.extended {
+        width: 0;
+    }
+    .name-slot {
+        flex-grow: 4;
+    }
+
+    .slot.extended {
+        flex-grow: 3;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+    .name-slot,
+    .slot.extended {
+        width: 100%;
+    }
+    .slot {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: .8em;
+    }
+    .name-slot .slot:first-child {
+        margin-right: .8em;
+    }
+    .submitButton {
+        margin-top: 1em;
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       b1a70508-e5d4-4b47-978b-37c551a7cae8
+:END:
+#+ATTR_HTML: :width 200 :alt headshot of me, ketan
+[[file:ketan.png]]

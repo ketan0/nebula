@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       2e5f0c3e-ff4c-4e83-9e3f-758716d370b8
+:END:
+#+title: emacs as a playground
+
+i think emacs presents an alternative vision of an operating system. one in which 'apps'—these siloes of functionality that are bundled together & don't really talk to each other— are not the dominant abstraction. right now, on our desktops, we have separate apps for writing code, writing messages to people, writing essays....when fundamentally each of these tasks has to do with manipulating text.
+
+* emacs provides an powerful set of primitives for editing text
+so, one reason i like emacs is that it provides an incredibly powerful set of primitives for editing text. these primitives are not just confined to the 'writing app' or the 'coding app' (though there is not really such a thing as an ‘app’ in emacs), but rather they are present throughout the whole system. kinda like how cmd-C and cmd-V work in every app, but generalized.
+
+examples:
+
+you have primitives for things like deleting, uppercasing, highlighting, jumping up and down, creating a new line, recording a sequence of actions and replaying those back later…all the things that would be useful when editing text. and each of these primitives can be applied dynamically to a range of characters
+
+but then, perhaps even cooler, is that these primitives are like LEGO blocks, or maybe more aptly described like Play-Doh. they can be molded, composed, replaced, or extended into anything the end-user.
+
+- don't like the default keybindings? (like vim's better, as i do?) you can change them.
+- you can set up a primitive that calls any external API, too. one example i like is github copilot, the AI code completion engine that i use. since everything in emacs is text, and copilot is an engine for text completion, by simply setting up copilot, we automagically get copilot in our code files, in our note files, in our terminal shell, and anywhere else we want it.
+
+
+[[id:b6fafba6-8e57-400d-962c-bf7cc892a41f][compositionality]]
+[[id:87e83cf3-3dfa-4486-845d-155895a9f6b6][modularity]]
+[[id:650a6bb7-c7de-44ef-a328-ddc79a562a9e][decomposition]]
+# TODO: tbh these should all kind of be one note. they seem to be very similar concepts
+* emacs is self-documenting
+similar to hit inspect in browsers, kinda -- except better
+
+it's self-documenting. you can hover over anything and figure out what it means. type in any keybind and figure out what it does.
+
+[screengrab of checking out what a given keybind does.]
+* the beauty of emacs lisp
+emacs lisp, the language you extend emacs with, is quite a beautiful programming language. this is another topic for an entirely separate blog post. one weird and meta experience you can have— you can write, execute, and experience the effects of a snippet of code, even on that snippet itself, all in the same file.
+* limits of emacs
+As to its limitations, there are many.
+
+- to start, emacs is an archaic text editor, created in 1976, and it has essentially evolved directly from that lineage since then. because of that, it has some architectural baggage; it doesn’t do multi-threading, some things can be slow, and some features of elisp are rather arcane / don’t match modern programming patterns. the remote development experience is bad. etc.
+- the learning curve is much, much higher than other editors like vscode. but then again, i’d argue emacs isn’t even the same type of thing as vscode…so maybe it’s appropriate that the learning curve is higher. that said, i think there are things they could do immediately that would mitigate this steep learning curve.
+- it’s bad at doing anything that doesn’t strictly involve text. so when i say it’s an operating system, don’t take me super literally— it’s more of a vision of what an OS *could* be as opposed to a self-contained, fully-functional OS in its current state.
+- AI features still lacking -- for sure things that I prefer to use cursor for.
+
+  so…back to the question at hand…how has emacs helped me? to be honest, i can’t say that it’s made me ‘more productive’ than my peers— quite the opposite sometimes, as it provides endless distractions and fun things to try out. org-mode has certainly helped me organize me life. but it’s helped me gain an appreciation for the above^, that software could feel more like a playground than strictly a siloed set of tools for getting specific things done. rather than having to go top-down and create a whole new app (starting with some annoying template like `create-react-app`), you can start bottom-up, and write a single line of elisp. that in itself is a functional and useful addition to emacs!

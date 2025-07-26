@@ -5,13 +5,17 @@
 
 * Life hads a tendency to just happen. But it happens because we make choices. The life you *create and design for yourself* is going to accumulate from the choices you make over time. Sure, there are unexpected things that can derail dreams. But we can control where we put our focus, and if we *choose to put one dream ahead of another.*
 -Gates. Oooh this really hit hard...kind of why I'm trying to institute structure, to guide "zombie" System 1 me down the right paths in the maze of life.
+* Nobody should start to undertake a large project. You start with a small trivial project, and you should never expect it to get large. If you do, you'll just overdesign and generally think it is more important than it likely is at that stage. Or worse, you might be scared away by the sheer size of the work you envision.
+-Torvalds
 * I never am really satisfied that I understand anything, because - understand it well as I may - my comprehension can only be an infinitesimal fraction of all I want to understand about the many connections and relations which occur to me: how the matter in question was first thought of or arrived at, etc., etc.
 -Lovelace
 * [[file:principles.org::*Do the thing, and you shall have the power: but they who do not the thing have not the power.][Do the thing, and you shall have the power: but they who do not the thing have not the power.]]
 -Emerson
 Cue visa "Do 100(0) [whatevers] ..."
 * If you're not stubborn, you'll give up on experiments too soon. And if you're not flexible, you'll pound your head against the wall and you won't see a different solution to a problem you're trying to solve.
--Bezos
+-Bezos. This gets at the dynamism of problem-solving that I stumbled upon that summer of 2019 doing research in Mike's lab; sometimes I'd give up too soon / flip between 10 different approaches impatiently, and on the other hand sometimes I would bang my head trying to get a particular solution to work. so...what's the cause here?
+
+i think first of all, immaturity in the field played a big role. but also, i think as you go on, there's just this 'awareness' / metacognitive skill you develop to be able to dig yourself out of things.
 * All men dream, but not equally. Those who dream by night in the dusty recesses of their minds, wake in the day to find that it was vanity: but the dreamers of the day are dangerous men, for they may act on their dreams with open eyes, to make them possible.
 -T.E. Lawrence. This resonates -- feels like my mind spends most of its time thinking about frivolous things, rather than big dreams, Great Thoughts. Want to deeply immerse my brain so that my subconscious is working on the problems constantly.
 * I can only note that the past is beautiful because one never realizes an emotion at the time. It expands later, and thus we don't have complete emotions about the present, only about the past.
@@ -49,3 +53,5 @@ Cue visa "Do 100(0) [whatevers] ..."
 -random person on KeyHero
 * The beauty of mathematics only shows itself to more patient followers.
 -Maryam Mirzakhani
+* Your world is a living expression of how you are using—and have used—your mind.
+Earl Nightingale

@@ -1,0 +1,408 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --font-serif: 'IBM Plex Serif', 'Times New Roman', serif;
+    --font-mono: 'Menlo', 'Monaco', monospace;
+
+    /* default light-mode colors */
+    --foreground-default: #222;
+    --foreground-light: #778;
+    --foreground-visited: #99a;
+    --background-default: #f8f8f8;
+    --background-block: #eee;
+    --background-hero: #222;
+    --accent: #11b6a5;
+}
+
+.inverted,
+.type-page header {
+    --foreground-default: #f8f8f8;
+    --foreground-light: #d8d8d8;
+    --background-default: #222;
+    --background-block: #555;
+    --background-hero: #eee;
+}
+
+html {
+    /* adjust rem for page */
+    font-size: 18px;
+}
+
+body {
+    font-family: var(--font-serif);
+    color: var(--foreground-default);
+    background: var(--background-default);
+
+    border-bottom: 8px solid var(--foreground-default);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+/* hack for this special case, so that on platforms with overscroll (macOS
+ * touch, iOS), the overscroll matches hero/bottom border color */
+body.type-page {
+    background: var(--background-hero);
+}
+
+header,
+main,
+footer {
+    background: var(--background-default);
+}
+
+a {
+    color: var(--foreground-default)
+}
+
+.overlay {
+    max-width: unset;
+    width: calc(100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+    line-height: 1.325em;
+    color: var(--foreground-default);
+    margin: 2em 0 1em 0;
+}
+
+.hero h1 {
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+.type-home h1 {
+    margin-top: 1em;
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+p, li {
+    font-size: 1rem;
+    line-height: 1.625em;
+    margin: 1em 0;
+}
+
+article h2,
+article h3,
+article h4 {
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.0625em;
+    transition: text-decoration-color .2s;
+}
+
+main a:hover {
+    text-decoration-color: var(--foreground-light);
+}
+
+/* PROJECTS PAGE */
+
+main.projects h3 {
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+}
+
+main.projects h3 + p {
+    margin-top: 0;
+}
+
+/* POSTS PAGE */
+
+.postlist-year {
+    border-bottom: 0;
+}
+
+.postlist-year:first-of-type {
+    /* don't display the current year */
+    display: none;
+}
+
+.postlist p {
+    margin: .75em 0;
+}
+
+.postlist p.starred {
+    /* anchor for starred icon */
+    position: relative;
+}
+
+.postlist p.starred a::before {
+    content: '✱';
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: -1.25em;
+    color: var(--accent);
+    line-height: inherit;
+}
+
+/* just for .postlist p.starred a::before */
+@media only screen and (max-width: 800px) {
+    .postlist p.starred a::before {
+        position: static;
+        margin-right: 0.5em;
+    }
+}
+
+.postlist p a {
+    text-decoration: none;
+}
+
+.postlist p a:visited {
+    color: var(--foreground-visited);
+}
+
+.dateprefix {
+    font-size: .8em;
+    font-style: italic;
+    color: var(--foreground-light);
+    margin-left: .25em;
+    white-space: nowrap;
+}
+
+/* DESKTOP UI */
+
+.desktop {
+    display: none !important;
+}
+
+@media only screen and (min-width: 600px) {
+    .overlay {
+        max-width: 700px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    .desktop {
+        display: initial !important;
+    }
+
+    .mobile {
+        display: none !important;
+    }
+}
+
+/* HEADER */
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header .overlay,
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+header {
+    background: var(--background-default);
+    height: 100px;
+}
+
+.home {
+    font-weight: bold;
+    margin-right: 24px;
+}
+
+nav a {
+    margin-right: 12px;
+}
+
+nav a.fade {
+    color: var(--foreground-light);
+}
+
+/* FOOTER */
+
+.prevInSection {
+    text-align: left;
+}
+
+.nextInSection {
+    text-align: right;
+}
+
+footer .overlay {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 32px;
+}
+
+footer .left {
+    font-style: italic;
+}
+
+footer .right {
+    height: 1em;
+}
+
+footer .right .square {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    background: var(--foreground-default);
+}
+
+/* LANDING */
+
+.type-home h1,
+.type-home h2 {
+    font-weight: bold;
+    border-bottom: 0;
+}
+
+.type-home h1 {
+    font-size: 1.5em;
+}
+
+.type-home h2 {
+    font-size: 1em;
+}
+
+/* SINGLETON */
+
+main {
+    overflow: hidden;
+}
+
+.hero {
+    background: var(--background-default);
+    padding-top: 32px;
+    margin-bottom: 36px;
+}
+
+.type-page .hero {
+    padding-bottom: 32px;
+}
+
+.meta {
+    color: var(--foreground-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.meta-item {
+    flex-grow: 1;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+p img {
+    margin: 1.5em 0;
+    width: 100%;
+    max-width: 700px;
+}
+
+p img.blend-multiply {
+    mix-blend-mode: multiply;
+}
+
+@media only screen and (max-width: 600px) {
+    p img {
+        width: 100vw;
+        max-width: unset;
+        position: relative;
+        top: 0;
+        left: -16px;
+    }
+}
+
+pre, code {
+    font-family: var(--font-mono);
+}
+
+pre {
+    display: block;
+    margin: 1.5em 0;
+    background: var(--background-block);
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+pre > code {
+    line-height: 1.5em;
+    flex-shrinK: 0;
+    display: block;
+    padding: 1em;
+}
+
+code {
+    background: var(--background-block);
+}
+
+li code,
+p code {
+    padding: 3px 5px;
+}

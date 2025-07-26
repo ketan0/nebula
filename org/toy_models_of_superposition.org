@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       ec9586c9-532f-456a-b310-ee2cc9b49b45
+:END:
+#+title: toy models of superposition

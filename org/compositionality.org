@@ -1,8 +1,7 @@
 :PROPERTIES:
 :ID:       b6fafba6-8e57-400d-962c-bf7cc892a41f
-:ROAM_ALIASES: decomposition
 :END:
-#+title: compositionality
+#+title: composability
 
 You have a set of reusable pieces that can be combined to form different, interesting things.
 
@@ -33,6 +32,6 @@ One step towards compositionality is the idea of neuro-symbolic models. Combinin
 how do our brains combine simple concepts into more complex ones? Even though the input we receive is noisy and finite, we can (in theory) produce an unbounded number of sentences. [[https://reddit.com/r/BrandNewSentence][r/BrandNewSentence]] is an entertaining example of this.
 
 Related: [cite:@lakeBuildingMachinesThat2016]
-
+# TODO: tie-in to SAEs -- decomposing feature space
 * Bibliography
 #+print_bibliography:

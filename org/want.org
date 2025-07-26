@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       c590b9fb-2fb5-498f-a652-2159e333f82b
+:END:
+#+title: want
+
+this is a root node for everything i want.
+
+[[id:4792b551-44e5-4b1c-b97e-79e86e500464][things I've said I want to do (but am not embodying yet)]]
+[[id:7feafff3-4116-463d-abf1-ddb28d156760][things I want to buy]]
+[[id:0be7979d-d523-4567-ac06-d6a01f12216d][things i want to try in my digital garden]]
+[[id:677660ca-fc3c-45ef-9944-6fa1fb8a309e][things i want to understand better]]
+[[id:afe01425-50ed-4b5a-94a1-ce4122aa5357][📚 books i want to read]]
+[[id:7503d904-4191-4e13-b1a2-71f1537c3d4e][goals (brainstorm)]]
+[[id:0b163a77-6e9b-4b60-bbe5-674cb4125617][goals (old)]]
+[[id:e920d751-215a-484a-8863-bd765f8d0e04][goals 2023]]
+[[id:76f168a0-12b1-49c3-9a52-0386cf6a4a1e][summer 2022]]

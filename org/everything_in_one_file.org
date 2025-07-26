@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       adbc7d3c-56df-432b-a072-435361483e84
+:END:
+#+title: everything in one file
+
+everything is here and now. memories of the past, plans for the future... the impressions of those things are all happening now.

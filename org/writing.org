@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       224555c0-d055-4c6b-a219-649d6ddd5da7
+:END:
+#+title: writing
+
+I kinda want to get back into longform writing. Right now, my digital garden is a sort of 'junkyard' of interesting nodes, but nothing super...coherent. There are some really exemplary blog posts, by people like Michael Nielsen, that I'd like to emulate.
+
+I'd also love to get feedback on my writing from others. I feel that could be pretty useful.

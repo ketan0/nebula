@@ -6,7 +6,7 @@ html {
 
 body {
   background-color: var(--bg);
-  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: var(--font);
   color: var(--text);
   font-size: 15px;
   line-height: 28px;
@@ -98,18 +98,23 @@ span.todo {
 .underline { text-decoration: underline; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  font-family: var(--title-font);
   font-weight: 400;
   /* color: black; */
 }
 
 #preamble {
+  font-family: var(--title-font);
   padding: 5px 10px;
-  border-bottom: 1px solid var(--section-border);
+  margin: auto;
+  max-width: 50rem;
+  /* border-bottom: 1px solid var(--section-border); */
 }
 
 #postamble {
-  margin-top: 20px;
+  margin: auto;
+  max-width: 50rem;
+  /* padding-top: 10px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -119,12 +124,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #content {
   margin: auto;
+  padding: 5px 10px;
   max-width: 50rem;
 }
 
 #content > * {
-  margin-left: 10px;
-  margin-right: 10px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
 }
 
 /*dotted lines in between top-level content sections*/
@@ -143,7 +149,7 @@ p + .outline-2:not(.references) {
 
 .references {
   background-color: var(--references);
-  padding: 8px 16px;
+  padding: 1px 16px;
   border-radius: 25px;
   /* max-width: 20rem; */
 }
@@ -243,26 +249,24 @@ blockquote {
 }
 
 a {
-  color: #0a84ff;
-  text-decoration: none;
-  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #0a84ff;
+  color: var(--text);
+  /* font-weight: 700; */
 }
 
-a:visited {
-  color: #af52de;
-}
+/* a:visited { */
+/*   color: #af52de; */
+/* } */
 
 a:not([href^="http"],[href="/"]) {
-  color: #66cc00;
-}
-
-
-a:not([href^="http"],[href="/"]):visited {
-  color: #01a049;
+  text-decoration: underline;
+  text-decoration-color: #00b8cc;
 }
 
 a:hover {
   text-decoration: underline;
+  text-decoration-color: #ccc
 }
 
 code {
@@ -281,7 +285,7 @@ code {
 }
 .tippy-box[data-theme~=light-border]{
   white-space: normal;
-  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: var(--font);
   text-align: left;
   color: var(--text);
   background-color: var(--tippy);

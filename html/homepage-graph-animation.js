@@ -30,7 +30,7 @@ async function homePageGraphAnimation() {
   let containerRect = container.node().getBoundingClientRect();
   const simulation = d3.forceSimulation(nodes)
     .force('x', d3.forceX(50))
-    .force('y', d3.forceY(50).strength(0.2))
+    .force('y', d3.forceY(50).strength(0.1))
     .force('collide', d3.forceCollide().radius(d => d.width / containerRect.width / 2 * 100 + 1))
     .force('charge', d3.forceManyBody().strength(-20))
     .on('tick', function () {

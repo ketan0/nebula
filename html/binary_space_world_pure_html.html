@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Binary Space Partitioning of the World</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <style>
+        #mapid {
+            height: 400px;
+        }
+
+        .button {
+            /* position: absolute;
+            top: 20px; */
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 6px;
+        }
+
+        #IButton {
+            /* I: 50px; */
+        }
+
+        #IIButton {
+            /* I: 110px; */
+        }
+    </style>
+</head>
+
+<body>
+    <button id="00Button" class="button">00</button>
+    <button id="01Button" class="button">01</button>
+    <button id="10Button" class="button">10</button>
+    <button id="11Button" class="button">11</button>
+    <p id="locationstring">
+        location:&nbsp;
+    </p>
+    <p>Current Lat-Long Bounds: <span id="currentMapBounds"></span></p>
+    <div id="mapid">
+    </div>
+
+    <script>
+        // Initialize the map to the entire bounds of the world, zoomed to fit
+        var map = L.map('mapid').fitWorld();
+
+        // initial bounds should be the world
+        let south = -90,
+            west = -180,
+            north = 90,
+            east = 180;
+
+        function updateBounds(south, west, north, east) {
+            // remove all existing lines
+            // map.eachLayer(function (layer) {
+            //     if (layer instanceof L.Polyline) {
+            //         map.removeLayer(layer);
+            //     }
+            // });
+            // fit the map to the new bounds
+            map.fitBounds([
+                [south, west],
+                [north, east]
+            ]);
+            // add lines for the current north/south and east/west bounds, as well as the midpoints
+            L.polyline([
+                [south, west],
+                [north, west]
+            ], {
+                color: 'red'
+            }).addTo(map);
+            L.polyline([
+                [south, east],
+                [north, east]
+            ], {
+                color: 'red'
+            }).addTo(map);
+            L.polyline([
+                [south, west],
+                [south, east]
+            ], {
+                color: 'red'
+            }).addTo(map);
+            L.polyline([
+                [north, west],
+                [north, east]
+            ], {
+                color: 'red'
+            }).addTo(map);
+            L.polyline([
+                [(south + north) / 2, west],
+                [(south + north) / 2, east]
+            ], {
+                color: 'red'
+            }).addTo(map);
+            L.polyline([
+                [south, (west + east) / 2],
+                [north, (west + east) / 2]
+            ], {
+                color: 'red'
+            }).addTo(map);
+        }
+        updateBounds(south, west, north, east);
+
+
+        // Set up the OSM layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            minZoom: 1,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        console.log(`INIT bounds: ${south}, ${west}, ${north}, ${east}`);
+        // update the current map bounds
+        document.getElementById('currentMapBounds').innerHTML = `Lat: ${south}, ${north} Long: ${west}, ${east}`
+
+        document.getElementById('00Button').onclick = function () {
+            console.log(`00 bounds: ${south}, ${west}, ${north}, ${east}`);
+            south = (south + north) / 2
+            east = (east + west) / 2
+            map.fitBounds([
+                [south, west],
+                [north, east]
+            ]);
+            document.getElementById('locationstring').innerHTML += "00";
+            document.getElementById('currentMapBounds').innerHTML = `Lat: ${south}, ${north} Long: ${west}, ${east}`
+            updateBounds(south, west, north, east);
+        };
+
+        document.getElementById('01Button').onclick = function () {
+            console.log(`01 bounds: ${south}, ${west}, ${north}, ${east}`);
+            south = (south + north) / 2
+            west = (east + west) / 2
+            map.fitBounds([
+                [south, west],
+                [north, east]
+            ]);
+            document.getElementById('locationstring').innerHTML += "01";
+            document.getElementById('currentMapBounds').innerHTML = `Lat: ${south}, ${north} Long: ${west}, ${east}`
+            updateBounds(south, west, north, east);
+        };
+
+        document.getElementById('10Button').onclick = function () {
+            console.log(`10 bounds: ${south}, ${west}, ${north}, ${east}`);
+            north = (south + north) / 2
+            east = (east + west) / 2
+            map.fitBounds([
+                [south, west],
+                [north, east]
+            ]);
+            document.getElementById('locationstring').innerHTML += "10";
+            document.getElementById('currentMapBounds').innerHTML = `Lat: ${south}, ${north} Long: ${west}, ${east}`
+            updateBounds(south, west, north, east);
+        };
+
+
+        document.getElementById('11Button').onclick = function () {
+            console.log(`11 bounds: ${south}, ${west}, ${north}, ${east}`);
+            north = (south + north) / 2
+            west = (east + west) / 2
+            map.fitBounds([
+                [south, west],
+                [north, east]
+            ]);
+            document.getElementById('locationstring').innerHTML += "11";
+            document.getElementById('currentMapBounds').innerHTML = `Lat: ${south}, ${north} Long: ${west}, ${east}`
+            updateBounds(south, west, north, east);
+        };
+    </script>
+</body>
+
+</html>
