@@ -1,2 +1,9 @@
-#+title: hi!
+#+title: Ketan Agrawal
+
+#+begin_export html
+<div style="text-align: center;">
+#+end_export
 Hey! I'm [[id:b1a70508-e5d4-4b47-978b-37c551a7cae8][Ketan]]. You've landed in my corner of the internet.
+#+begin_export html
+</div>
+#+end_export
