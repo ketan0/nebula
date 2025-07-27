@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:35 -->
+<!-- 2025-07-26 Sat 11:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Machine Learning Interviews Book</title>
@@ -11,51 +11,67 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">Machine Learning Interviews Book
 <br />
-<span class="subtitle">Last modified on November 07, 2021</span>
+<span class="subtitle">Last tended to on November 07, 2021</span>
 </h1>
 <p>
 <a href="https://huyenchip.com/ml-interviews-book/">https://huyenchip.com/ml-interviews-book/</a><br />
@@ -68,18 +84,17 @@ This is a book that provides a comprehensive overview of <a href="machine_learni
 <p>
 Below are my (WIP) answers to some of the <a href="https://huyenchip.com/ml-interviews-book/contents/part-ii.-questions.html">questions</a> in the book. DISCLAIMER: While these answers are accurate to the best of my knowledge, I can&rsquo;t guarantee their correctness.<br />
 </p>
-
-<div id="outline-container-orgfe8e3b5" class="outline-2">
-<h2 id="orgfe8e3b5">Math</h2>
-<div class="outline-text-2" id="text-orgfe8e3b5">
+<div id="outline-container-org37ee58d" class="outline-2">
+<h2 id="org37ee58d">Math</h2>
+<div class="outline-text-2" id="text-org37ee58d">
 </div>
-<div id="outline-container-orgf2d3681" class="outline-3">
-<h3 id="orgf2d3681">Algebra and (little) calculus</h3>
-<div class="outline-text-3" id="text-orgf2d3681">
+<div id="outline-container-orga7341e1" class="outline-3">
+<h3 id="orga7341e1">Algebra and (little) calculus</h3>
+<div class="outline-text-3" id="text-orga7341e1">
 </div>
-<div id="outline-container-org31bbc13" class="outline-4">
-<h4 id="org31bbc13">Vectors</h4>
-<div class="outline-text-4" id="text-org31bbc13">
+<div id="outline-container-org22229d3" class="outline-4">
+<h4 id="org22229d3">Vectors</h4>
+<div class="outline-text-4" id="text-org22229d3">
 <ol class="org-ol">
 <li>Dot product<br />
 <ol class="org-ol">
@@ -89,7 +104,7 @@ The dot product \(\mathbf{x} \cdot \mathbf{y}\) is the length of the projection 
 </p>
 
 
-<div id="orgf128886" class="figure">
+<div id="org7b11b60" class="figure">
 <p><img src="dot_product.gif" alt="dot_product.gif" /><br />
 </p>
 </div></li>
@@ -107,10 +122,10 @@ This would simply be the unit vector in the direction of \(u\); namely, \(v = \f
 We could also calculate this using numpy, like so:<br />
 </p>
 <div class="org-src-container" data-language="python">
-<pre class="src src-python"><span class="org-tree-sitter-hl-faceXkeyword">import</span> numpy <span class="org-tree-sitter-hl-faceXkeyword">as</span> np
-<span class="org-tree-sitter-hl-faceXvariable">a</span> <span class="org-tree-sitter-hl-faceXoperator">=</span> np.<span class="org-tree-sitter-hl-faceXproperty"><span class="org-tree-sitter-hl-faceXmethodXcall">array</span></span>([<span class="org-tree-sitter-hl-faceXnumber">3</span>,<span class="org-tree-sitter-hl-faceXnumber">2</span>,<span class="org-tree-sitter-hl-faceXnumber">1</span>])
-<span class="org-tree-sitter-hl-faceXvariable">b</span> <span class="org-tree-sitter-hl-faceXoperator">=</span> np.<span class="org-tree-sitter-hl-faceXproperty"><span class="org-tree-sitter-hl-faceXmethodXcall">array</span></span>([<span class="org-tree-sitter-hl-faceXoperator">-</span><span class="org-tree-sitter-hl-faceXnumber">1</span>,<span class="org-tree-sitter-hl-faceXnumber">0</span>,<span class="org-tree-sitter-hl-faceXnumber">1</span>])
-<span class="org-tree-sitter-hl-faceXfunctionXcall"><span class="org-tree-sitter-hl-faceXfunctionXbuiltin">print</span></span>(np.<span class="org-tree-sitter-hl-faceXproperty"><span class="org-tree-sitter-hl-faceXmethodXcall">outer</span></span>(a, b))
+<pre class="src src-python"><span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-variable-name">a</span> <span class="org-operator">=</span> np.array([<span class="org-highlight-numbers-number">3</span>,<span class="org-highlight-numbers-number">2</span>,<span class="org-highlight-numbers-number">1</span>])
+<span class="org-variable-name">b</span> <span class="org-operator">=</span> np.array([<span class="org-operator">-</span><span class="org-highlight-numbers-number">1</span>,<span class="org-highlight-numbers-number">0</span>,<span class="org-highlight-numbers-number">1</span>])
+<span class="org-builtin">print</span>(np.outer(a, b))
 </pre>
 </div>
 
@@ -187,9 +202,9 @@ My understanding is that a norm is simply a mathematical operation on a vector, 
 </ol>
 </div>
 </div>
-<div id="outline-container-org19b9aee" class="outline-4">
-<h4 id="org19b9aee">Matrices</h4>
-<div class="outline-text-4" id="text-org19b9aee">
+<div id="outline-container-org8ae30e9" class="outline-4">
+<h4 id="org8ae30e9">Matrices</h4>
+<div class="outline-text-4" id="text-org8ae30e9">
 <ol class="org-ol">
 <li>[E] <b>Why do we say that matrices are linear transformations?</b><br />
 If you take a matrix \(A\) and multiply by a vector \(x\), you get another vector \(b = Ax\), where \(b\) is just a linear transformation of \(x\). One way to think about this is that a matrix is a vector of vectors, and when we multiply the matrix by a vector, we get a linear combination of those vectors in \(A\) multiplied by the scalars in \(x\)<br /></li>
@@ -222,17 +237,17 @@ Without explicitly using the equation for calculating determinants, what can we 
 </div>
 </div>
 </div>
-<div id="outline-container-org78c1404" class="outline-3">
-<h3 id="org78c1404">Probability and statistics</h3>
+<div id="outline-container-org1cb285f" class="outline-3">
+<h3 id="org1cb285f">Probability and statistics</h3>
 </div>
 </div>
-<div id="outline-container-org90ba7d2" class="outline-2">
-<h2 id="org90ba7d2">Machine learning workflows</h2>
-<div class="outline-text-2" id="text-org90ba7d2">
+<div id="outline-container-org832d1e8" class="outline-2">
+<h2 id="org832d1e8">Machine learning workflows</h2>
+<div class="outline-text-2" id="text-org832d1e8">
 </div>
-<div id="outline-container-org72ef516" class="outline-3">
-<h3 id="org72ef516">Empirical risk minimization</h3>
-<div class="outline-text-3" id="text-org72ef516">
+<div id="outline-container-orgd0fc041" class="outline-3">
+<h3 id="orgd0fc041">Empirical risk minimization</h3>
+<div class="outline-text-3" id="text-orgd0fc041">
 <p>
 s<br />
 </p>
@@ -241,13 +256,8 @@ s<br />
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

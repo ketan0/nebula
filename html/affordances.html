@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-29 Fri 17:19 -->
+<!-- 2025-07-26 Sat 11:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>affordances</title>
@@ -11,6 +11,9 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -20,21 +23,23 @@
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">affordances
 <br />
-<span class="subtitle">Last modified on December 29, 2023</span>
+<span class="subtitle">Last tended to on December 29, 2023</span>
 </h1>
 <p>
 Google maps allows you to <i>zooooom</i> into things&#x2026;<br />
@@ -69,15 +74,13 @@ function insertParens() {
 let undoBtn = document.querySelector(".undo-button")
 undoBtn.addEventListener("click", insertParens)
 </script>
-
-
-<div id="outline-container-org0a0169a" class="outline-2 references">
-<h2 id="org0a0169a">Links to &ldquo;affordances&rdquo;</h2>
-<div class="outline-text-2" id="text-org0a0169a">
+<div id="outline-container-orgce1ab87" class="outline-2 references">
+<h2 id="orgce1ab87">Links to &ldquo;affordances&rdquo;</h2>
+<div class="outline-text-2" id="text-orgce1ab87">
 </div>
-<div id="outline-container-org50554e9" class="outline-3">
-<h3 id="org50554e9"><a href="towards_causal_representation_learning.html#ID-5b73a108-e867-4b92-9949-832840d52869">Agency to Guide Representation Learning &amp; Disentangling</a> <span class="backlinks-outline-path">(<i>Agency to Guide Representation Learning &amp; Disentangling</i>)</span></h3>
-<div class="outline-text-3" id="text-org50554e9">
+<div id="outline-container-org4ed4198" class="outline-3">
+<h3 id="org4ed4198"><a href="towards_causal_representation_learning.html#ID-5b73a108-e867-4b92-9949-832840d52869">Agency to Guide Representation Learning &amp; Disentangling</a> <span class="backlinks-outline-path">(<i>Agency to Guide Representation Learning &amp; Disentangling</i>)</span></h3>
+<div class="outline-text-3" id="text-org4ed4198">
 <p>
 (E. Bengio et al, 2017; V Thomas e al 2017; Kim et al ICML 2019)<br />
 </p>
@@ -98,6 +101,8 @@ Connected to the psychological notion of <a href="affordances.html#ID-0cebd56a-9
 </div>
 </div>
 <div id="postamble" class="status">
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

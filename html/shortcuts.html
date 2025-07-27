@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:32 -->
+<!-- 2025-07-26 Sat 11:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>⤴️ shortcuts</title>
@@ -11,6 +11,9 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -20,21 +23,23 @@
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">⤴️ shortcuts
 <br />
-<span class="subtitle">Last modified on June 01, 2022</span>
+<span class="subtitle">Last tended to on June 01, 2022</span>
 </h1>
 <p>
 This is my literate config for <a href="https://github.com/yqrashawn/GokuRakuJoudo">goku</a>. It is a succint, powerful way to define keyboard shortcuts in macOS.<br />
@@ -48,11 +53,9 @@ inspiration taken from these goku configs:<br />
 <li><a href="https://github.com/nikitavoloboev/dotfiles/blob/master/karabiner/karabiner.edn">nikitavoloboev</a><br /></li>
 <li><a href="https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126">kaushikgopal</a><br /></li>
 </ul>
-
-
 <div id="outline-container-ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a" class="outline-2 karabiner-keyboard-container dont-show-content-in-backlinks">
 <h2 id="ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</h2>
-<div class="outline-text-2" id="text-orgea08c8b">
+<div class="outline-text-2" id="text-orgc93c09f">
 <p>
 Hover over a key to see where it leads!<br />
 </p>
@@ -72,9 +75,9 @@ Hover over a key to see where it leads!<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgfb8761d" class="outline-2">
-<h2 id="orgfb8761d">Guide</h2>
-<div class="outline-text-2" id="text-orgfb8761d">
+<div id="outline-container-orgf500233" class="outline-2">
+<h2 id="orgf500233">Guide</h2>
+<div class="outline-text-2" id="text-orgf500233">
 <p>
 For more info on configuring Goku, see the <a href="https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md">tutorial</a>.<br />
 Guide lifted from <a href="https://gist.github.com/kaushikgopal/ff7a92bbc887e59699c804b59074a126">kaushikgopal</a>. To understand better how modifiers work in karabiner, see the karabiner definition of mandatory and optional: <a href="https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/from/modifiers/#frommodifiersoptional%20%20%20">karabiner modifiers documentation</a><br />
@@ -162,9 +165,9 @@ Guide lifted from <a href="https://gist.github.com/kaushikgopal/ff7a92bbc887e596
 </table>
 </div>
 </div>
-<div id="outline-container-orgc9bd507" class="outline-2">
-<h2 id="orgc9bd507">Profiles</h2>
-<div class="outline-text-2" id="text-orgc9bd507">
+<div id="outline-container-org2171ab0" class="outline-2">
+<h2 id="org2171ab0">Profiles</h2>
+<div class="outline-text-2" id="text-org2171ab0">
 <div class="org-src-container" data-language="clojure">
 <pre class="src src-clojure"><span class="org-rainbow-delimiters-depth-1">{</span><span class="org-comment-delimiter">;;</span><span class="org-comment">beginning bracket for whole data structure -- don't delete!</span>
 
@@ -185,10 +188,9 @@ Guide lifted from <a href="https://gist.github.com/kaushikgopal/ff7a92bbc887e596
 </div>
 </div>
 </div>
-
-<div id="outline-container-orge68ea60" class="outline-2">
-<h2 id="orge68ea60">Templates</h2>
-<div class="outline-text-2" id="text-orge68ea60">
+<div id="outline-container-org2d3a937" class="outline-2">
+<h2 id="org2d3a937">Templates</h2>
+<div class="outline-text-2" id="text-org2d3a937">
 <div class="org-src-container" data-language="clojure">
 <pre class="src src-clojure"><span class="org-clojure-keyword">:templates</span> <span class="org-rainbow-delimiters-depth-1">{</span>
             <span class="org-clojure-keyword">:km</span> <span class="org-string">"osascript -e 'tell application </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">Keyboard Maestro Engine</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string"> to do script </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">%s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string"> with parameter </span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">%s</span><span class="org-string"><span class="org-bold">\"</span></span><span class="org-string">'"</span>
@@ -208,10 +210,9 @@ Guide lifted from <a href="https://gist.github.com/kaushikgopal/ff7a92bbc887e596
 </div>
 </div>
 </div>
-
-<div id="outline-container-orge319bb1" class="outline-2">
-<h2 id="orge319bb1">Layers &amp; Simlayers</h2>
-<div class="outline-text-2" id="text-orge319bb1">
+<div id="outline-container-org3f655f2" class="outline-2">
+<h2 id="org3f655f2">Layers &amp; Simlayers</h2>
+<div class="outline-text-2" id="text-org3f655f2">
 <div class="org-src-container" data-language="clojure">
 <pre class="src src-clojure"><span class="org-clojure-keyword">:layers</span> <span class="org-rainbow-delimiters-depth-1">{</span>
 
@@ -246,14 +247,13 @@ Guide lifted from <a href="https://gist.github.com/kaushikgopal/ff7a92bbc887e596
 </div>
 </div>
 </div>
-
-<div id="outline-container-org064cbfd" class="outline-2">
-<h2 id="org064cbfd">Main</h2>
-<div class="outline-text-2" id="text-org064cbfd">
+<div id="outline-container-org9de5c81" class="outline-2">
+<h2 id="org9de5c81">Main</h2>
+<div class="outline-text-2" id="text-org9de5c81">
 </div>
 <div id="outline-container-ID-f40c5408-e269-411c-b02a-a2054e452ed3" class="outline-3">
 <h3 id="ID-f40c5408-e269-411c-b02a-a2054e452ed3">begin main</h3>
-<div class="outline-text-3" id="text-orga4329d8">
+<div class="outline-text-3" id="text-org9f27e70">
 <div class="org-src-container" data-language="clojure">
 <pre class="src src-clojure"><span class="org-clojure-keyword">:main</span> <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-rainbow-delimiters-depth-2">{</span>
         <span class="org-clojure-keyword">:des</span> <span class="org-string">"see karabiner.org for documentation."</span>,
@@ -264,7 +264,7 @@ Guide lifted from <a href="https://gist.github.com/kaushikgopal/ff7a92bbc887e596
 </div>
 <div id="outline-container-ID-8a5eb4c8-1434-4c3e-83c1-3325061d5d78" class="outline-3">
 <h3 id="ID-8a5eb4c8-1434-4c3e-83c1-3325061d5d78">right cmd/option =&gt; previous app</h3>
-<div class="outline-text-3" id="text-org9d888d3">
+<div class="outline-text-3" id="text-orgb7ea259">
 <p>
 Switch to the previous application with right command/option -- right command hides the current app, right option doesn&rsquo;t.<br />
 </p>
@@ -274,22 +274,18 @@ Switch to the previous application with right command/option -- right command hi
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org4a24bdc" class="outline-4 references">
-<h4 id="org4a24bdc">Links to &ldquo;right cmd/option =&gt; previous app&rdquo;</h4>
-<div class="outline-text-4" id="text-org4a24bdc">
+<div id="outline-container-org8a554f3" class="outline-4 references">
+<h4 id="org8a554f3">Links to &ldquo;right cmd/option =&gt; previous app&rdquo;</h4>
+<div class="outline-text-4" id="text-org8a554f3">
 </div>
 <ul class="org-ul">
-<li><a id="orgd7e95ef"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
+<li><a id="orga8e16ed"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
 </ul>
 </div>
 </div>
-
-
-
 <div id="outline-container-ID-030d326c-05a7-46c3-8da7-9cf3662fa8f6" class="outline-3">
 <h3 id="ID-030d326c-05a7-46c3-8da7-9cf3662fa8f6">caps lock alone = escape, with other keys = ctrl</h3>
-<div class="outline-text-3" id="text-orgd245b22">
+<div class="outline-text-3" id="text-org77b33a9">
 <p>
 This is a really nice mapping -- it simultaneously makes hitting escape much easier, and<br />
 </p>
@@ -298,22 +294,18 @@ This is a really nice mapping -- it simultaneously makes hitting escape much eas
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org28514c2" class="outline-4 references">
-<h4 id="org28514c2">Links to &ldquo;caps lock alone = escape, with other keys = ctrl&rdquo;</h4>
-<div class="outline-text-4" id="text-org28514c2">
+<div id="outline-container-org54804a6" class="outline-4 references">
+<h4 id="org54804a6">Links to &ldquo;caps lock alone = escape, with other keys = ctrl&rdquo;</h4>
+<div class="outline-text-4" id="text-org54804a6">
 </div>
 <ul class="org-ul">
-<li><a id="org4285fe8"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
+<li><a id="orge9dee54"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
 </ul>
 </div>
 </div>
-
-
-
-<div id="outline-container-orgd38a0b9" class="outline-3">
-<h3 id="orgd38a0b9">function keys</h3>
-<div class="outline-text-3" id="text-orgd38a0b9">
+<div id="outline-container-org0fc7c33" class="outline-3">
+<h3 id="org0fc7c33">function keys</h3>
+<div class="outline-text-3" id="text-org0fc7c33">
 <p>
 Brightness controls (matching the default mappings in macOS):<br />
 </p>
@@ -382,7 +374,7 @@ Brightness controls (matching the default mappings in macOS):<br />
 </div>
 <div id="outline-container-ID-3462dbc5-e696-41ba-9ff4-c8b693f09017" class="outline-3">
 <h3 id="ID-3462dbc5-e696-41ba-9ff4-c8b693f09017">yabai-move-mode (tab + w + {hjkl})</h3>
-<div class="outline-text-3" id="text-orga72bb23">
+<div class="outline-text-3" id="text-org32bb43f">
 <p>
 Move the current window directionally in the yabai tiling setup.<br />
 </p>
@@ -410,10 +402,9 @@ Move the current window directionally in the yabai tiling setup.<br />
 </div>
 </div>
 </div>
-
 <div id="outline-container-ID-7da7aa7e-0111-4717-84ea-a58ee9b6741d" class="outline-3">
 <h3 id="ID-7da7aa7e-0111-4717-84ea-a58ee9b6741d">yabai-focus-mode (tab + f + {hjkl})</h3>
-<div class="outline-text-3" id="text-orgd3c04be">
+<div class="outline-text-3" id="text-orgd7c3b2b">
 <p>
 Move focus to the left/top/bottom/right of the current window.<br />
 </p>
@@ -429,10 +420,9 @@ Move focus to the left/top/bottom/right of the current window.<br />
 </div>
 </div>
 </div>
-
 <div id="outline-container-ID-8ccd4df9-2f31-459c-8bea-2f6ea5649e5a" class="outline-3">
 <h3 id="ID-8ccd4df9-2f31-459c-8bea-2f6ea5649e5a">yabai-display-mode (currently unused)</h3>
-<div class="outline-text-3" id="text-orgb62ad7f">
+<div class="outline-text-3" id="text-org788014e">
 <div class="org-src-container" data-language="clojure">
 <pre class="src src-clojure"><span class="org-clojure-keyword">:yabai-display-mode</span>
 <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-clojure-keyword">:h</span> <span class="org-rainbow-delimiters-depth-2">[</span><span class="org-clojure-keyword">:yabai</span> <span class="org-string">"display --focus prev"</span><span class="org-rainbow-delimiters-depth-2">]</span><span class="org-rainbow-delimiters-depth-1">]</span>
@@ -443,7 +433,7 @@ Move focus to the left/top/bottom/right of the current window.<br />
 </div>
 <div id="outline-container-ID-7d38a8d6-813e-417b-898e-0d023f996dca" class="outline-3">
 <h3 id="ID-7d38a8d6-813e-417b-898e-0d023f996dca">yabai-adjust-mode (tab + d + {hl})</h3>
-<div class="outline-text-3" id="text-orgd7e9750">
+<div class="outline-text-3" id="text-orgdbe6670">
 <div class="org-src-container" data-language="clojure">
 <pre class="src src-clojure"><span class="org-clojure-keyword">:yabai-adjust-mode</span>
 <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-clojure-keyword">:h</span> <span class="org-rainbow-delimiters-depth-2">[</span><span class="org-clojure-keyword">:yabai</span> <span class="org-string">"window --ratio rel:-0.02"</span><span class="org-rainbow-delimiters-depth-2">]</span><span class="org-rainbow-delimiters-depth-1">]</span>
@@ -454,10 +444,9 @@ Move focus to the left/top/bottom/right of the current window.<br />
 </div>
 </div>
 </div>
-
 <div id="outline-container-ID-3954c336-fc50-49d1-a7a3-9e78eed760dd" class="outline-3">
 <h3 id="ID-3954c336-fc50-49d1-a7a3-9e78eed760dd">chrome-history-mode (tab + g + {hl})</h3>
-<div class="outline-text-3" id="text-org53d3ebf">
+<div class="outline-text-3" id="text-orge80e6ce">
 <p>
 Move backward/forward in Chrome history.<br />
 </p>
@@ -471,7 +460,7 @@ Move backward/forward in Chrome history.<br />
 </div>
 <div id="outline-container-ID-957c4af0-e25f-4889-a062-4aec0aadac7f" class="outline-3">
 <h3 id="ID-957c4af0-e25f-4889-a062-4aec0aadac7f">chrome-movement-mode (tab + t + {hl})</h3>
-<div class="outline-text-3" id="text-orge671b1f">
+<div class="outline-text-3" id="text-org6afdd5d">
 <p>
 Move to the tab left/right of the current tab.<br />
 </p>
@@ -485,7 +474,7 @@ Move to the tab left/right of the current tab.<br />
 </div>
 <div id="outline-container-ID-ce23046b-7c9c-47a5-ba39-ac951d43e157" class="outline-3">
 <h3 id="ID-ce23046b-7c9c-47a5-ba39-ac951d43e157">chrome-rearrange-tab-mode (tab + r + {hl})</h3>
-<div class="outline-text-3" id="text-org2bc8010">
+<div class="outline-text-3" id="text-orgf1cc837">
 <p>
 Move current tab left/right. Need <a href="https://chrome.google.com/webstore/detail/rearrange-tabs/ccnnhhnmpoffieppjjkhdakcoejcpbga">this Chrome extension</a> for this to work.<br />
 </p>
@@ -499,7 +488,7 @@ Move current tab left/right. Need <a href="https://chrome.google.com/webstore/de
 </div>
 <div id="outline-container-ID-8ba2437c-ba0d-4bc6-983e-bb5dbf026e95" class="outline-3">
 <h3 id="ID-8ba2437c-ba0d-4bc6-983e-bb5dbf026e95">tab-mode (tab)</h3>
-<div class="outline-text-3" id="text-org4646cbe">
+<div class="outline-text-3" id="text-orgb563e95">
 <p>
 Mostly for opening apps, and some other convenient shortcuts like toggling dark mode and emojis.<br />
 </p>
@@ -541,22 +530,18 @@ Toggle system dark mode, as well as the emacs theme. (See <a href="https://githu
 </pre>
 </div>
 </div>
-
-<div id="outline-container-orge86e878" class="outline-4 references">
-<h4 id="orge86e878">Links to &ldquo;tab-mode (tab)&rdquo;</h4>
-<div class="outline-text-4" id="text-orge86e878">
+<div id="outline-container-orgdc54ea3" class="outline-4 references">
+<h4 id="orgdc54ea3">Links to &ldquo;tab-mode (tab)&rdquo;</h4>
+<div class="outline-text-4" id="text-orgdc54ea3">
 </div>
 <ul class="org-ul">
-<li><a id="org9fdc951"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
+<li><a id="org0a7b0cf"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
 </ul>
 </div>
 </div>
-
-
-
 <div id="outline-container-ID-641cd7e8-71f4-4911-ac7b-85685593a9df" class="outline-3">
 <h3 id="ID-641cd7e8-71f4-4911-ac7b-85685593a9df">q-key-mode (q)</h3>
-<div class="outline-text-3" id="text-org983e4bc">
+<div class="outline-text-3" id="text-orgd4c88c3">
 <div class="org-src-container" data-language="clojure">
 <pre class="src src-clojure"><span class="org-clojure-keyword">:q-key-mode</span>
 <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-clojure-keyword">:grave_accent_and_tilde</span> <span class="org-rainbow-delimiters-depth-2">[</span><span class="org-clojure-keyword">:km</span> <span class="org-string">"Open Stickies"</span><span class="org-rainbow-delimiters-depth-2">]</span><span class="org-rainbow-delimiters-depth-1">]</span>
@@ -574,22 +559,18 @@ Toggle system dark mode, as well as the emacs theme. (See <a href="https://githu
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org4986817" class="outline-4 references">
-<h4 id="org4986817">Links to &ldquo;q-key-mode (q)&rdquo;</h4>
-<div class="outline-text-4" id="text-org4986817">
+<div id="outline-container-orgf06f8f9" class="outline-4 references">
+<h4 id="orgf06f8f9">Links to &ldquo;q-key-mode (q)&rdquo;</h4>
+<div class="outline-text-4" id="text-orgf06f8f9">
 </div>
 <ul class="org-ul">
-<li><a id="orge79c6a4"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
+<li><a id="org8c2cd01"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
 </ul>
 </div>
 </div>
-
-
-
 <div id="outline-container-ID-3f159d2c-587f-4cb0-b305-a1beb3aed923" class="outline-3">
 <h3 id="ID-3f159d2c-587f-4cb0-b305-a1beb3aed923">x-key-mode (x)</h3>
-<div class="outline-text-3" id="text-orgba1fd78">
+<div class="outline-text-3" id="text-orgf27ead0">
 <div class="org-src-container" data-language="js">
 <pre class="src src-js">app = Application.currentApplication()
 app.includeStandardAdditions = <span class="org-constant">true</span>
@@ -616,22 +597,18 @@ app.openLocation(<span class="org-string">`org-protocol://roam-ref?template=r&am
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org291c5e8" class="outline-4 references">
-<h4 id="org291c5e8">Links to &ldquo;x-key-mode (x)&rdquo;</h4>
-<div class="outline-text-4" id="text-org291c5e8">
+<div id="outline-container-orge8d48b6" class="outline-4 references">
+<h4 id="orge8d48b6">Links to &ldquo;x-key-mode (x)&rdquo;</h4>
+<div class="outline-text-4" id="text-orge8d48b6">
 </div>
 <ul class="org-ul">
-<li><a id="org4e399f0"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
+<li><a id="org1ce81f2"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
 </ul>
 </div>
 </div>
-
-
-
 <div id="outline-container-ID-7a27feb4-076c-43ee-abfd-3add04f4f472" class="outline-3">
 <h3 id="ID-7a27feb4-076c-43ee-abfd-3add04f4f472">tilde-mode</h3>
-<div class="outline-text-3" id="text-org9364d12">
+<div class="outline-text-3" id="text-org4590f7f">
 <p>
 Using this mode to &ldquo;focus&rdquo; / &ldquo;unfocus&rdquo; with the <a href="https://heyfocus.com/">Focus</a> app for MacOS.<br />
 </p>
@@ -685,10 +662,9 @@ Also, toggle Do Not Disturb.<br />
 </div>
 </div>
 </div>
-
 <div id="outline-container-ID-2f839e85-533a-4052-96e8-10c776382f79" class="outline-3">
 <h3 id="ID-2f839e85-533a-4052-96e8-10c776382f79">comma-mode</h3>
-<div class="outline-text-3" id="text-org7041438">
+<div class="outline-text-3" id="text-org8cf96b5">
 <p>
 Just some like random stuff. Open notes, zoom links, twitter, typing tests.<br />
 </p>
@@ -858,22 +834,18 @@ Download a video from youtube with one keyboard shortcut, using the wonderful <c
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org28fd75f" class="outline-4 references">
-<h4 id="org28fd75f">Links to &ldquo;comma-mode&rdquo;</h4>
-<div class="outline-text-4" id="text-org28fd75f">
+<div id="outline-container-orga5d9dd8" class="outline-4 references">
+<h4 id="orga5d9dd8">Links to &ldquo;comma-mode&rdquo;</h4>
+<div class="outline-text-4" id="text-orga5d9dd8">
 </div>
 <ul class="org-ul">
-<li><a id="orge5451ab"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
+<li><a id="orgc79b167"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
 </ul>
 </div>
 </div>
-
-
-
 <div id="outline-container-ID-0a217b5a-4bca-46bf-9482-affde5df2652" class="outline-3">
 <h3 id="ID-0a217b5a-4bca-46bf-9482-affde5df2652">wallpaper-mode</h3>
-<div class="outline-text-3" id="text-org5cc15d0">
+<div class="outline-text-3" id="text-org186fb21">
 <div class="org-src-container" data-language="clojure">
 <pre class="src src-clojure"><span class="org-clojure-keyword">:wallpaper-mode</span>
 <span class="org-rainbow-delimiters-depth-1">[</span><span class="org-clojure-keyword">:g</span> <span class="org-rainbow-delimiters-depth-2">[</span><span class="org-clojure-keyword">:wallpaper</span> <span class="org-string">"/System/Library/Desktop Pictures/Solar Gradients.heic"</span><span class="org-rainbow-delimiters-depth-2">]</span><span class="org-rainbow-delimiters-depth-1">]</span>
@@ -887,7 +859,7 @@ Download a video from youtube with one keyboard shortcut, using the wonderful <c
 </div>
 <div id="outline-container-ID-9c2ae9d6-f08b-4538-ab1a-7674f1c7d2c7" class="outline-3">
 <h3 id="ID-9c2ae9d6-f08b-4538-ab1a-7674f1c7d2c7">vim-mode (z)</h3>
-<div class="outline-text-3" id="text-org96e384e">
+<div class="outline-text-3" id="text-orgfbc190f">
 <p>
 These are super, super useful for navigating text fields, search autosuggestions, etc. Essentially, <code>z+{hjkl}</code> bindings are replacing the arrow keys, but in a much more convenient (and vim-like) location. <code>z+{bw}</code> are simulating the word-wise motions in vim. <code>z+delete</code> isn&rsquo;t necessarily vim-esque, but it&rsquo;s quite useful for deleting typos (much easier to just redo the word, lots of times.) Whenever I use another machine I find myself missing these a lot.<br />
 </p>
@@ -903,22 +875,18 @@ These are super, super useful for navigating text fields, search autosuggestions
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org8b5e2df" class="outline-4 references">
-<h4 id="org8b5e2df">Links to &ldquo;vim-mode (z)&rdquo;</h4>
-<div class="outline-text-4" id="text-org8b5e2df">
+<div id="outline-container-org547e836" class="outline-4 references">
+<h4 id="org547e836">Links to &ldquo;vim-mode (z)&rdquo;</h4>
+<div class="outline-text-4" id="text-org547e836">
 </div>
 <ul class="org-ul">
-<li><a id="orgbd6c260"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
+<li><a id="org5ba939d"></a><a href="#ID-7e0b1fcf-cdd2-46eb-8195-c021c498fd1a">Interactive Keyboard Layout</a> <span class="backlinks-outline-path">(<i>Interactive Keyboard Layout</i>)</span><br /></li>
 </ul>
 </div>
 </div>
-
-
-
 <div id="outline-container-ID-6d6e59dc-0a07-462f-bcf2-0da725ebb0a6" class="outline-3">
 <h3 id="ID-6d6e59dc-0a07-462f-bcf2-0da725ebb0a6">end main</h3>
-<div class="outline-text-3" id="text-org947765b">
+<div class="outline-text-3" id="text-orgaba0366">
 <div class="org-src-container" data-language="clojure">
 <pre class="src src-clojure"><span class="org-rainbow-delimiters-unmatched">]}]</span> <span class="org-comment-delimiter">;;</span><span class="org-comment">end main</span>
 </pre>
@@ -926,10 +894,9 @@ These are super, super useful for navigating text fields, search autosuggestions
 </div>
 </div>
 </div>
-
-<div id="outline-container-org6f7e125" class="outline-2">
-<h2 id="org6f7e125">Applications</h2>
-<div class="outline-text-2" id="text-org6f7e125">
+<div id="outline-container-orge310467" class="outline-2">
+<h2 id="orge310467">Applications</h2>
+<div class="outline-text-2" id="text-orge310467">
 <div class="org-src-container" data-language="clojure">
 <pre class="src src-clojure"><span class="org-clojure-keyword">:applications</span> <span class="org-rainbow-delimiters-depth-1">[</span>
 
@@ -943,15 +910,13 @@ These are super, super useful for navigating text fields, search autosuggestions
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org0ca4cd3" class="outline-2 references">
-<h2 id="org0ca4cd3">Links to &ldquo;⤴️ shortcuts&rdquo;</h2>
-<div class="outline-text-2" id="text-org0ca4cd3">
+<div id="outline-container-orgf1a58ad" class="outline-2 references">
+<h2 id="orgf1a58ad">Links to &ldquo;⤴️ shortcuts&rdquo;</h2>
+<div class="outline-text-2" id="text-orgf1a58ad">
 </div>
-<div id="outline-container-org3727924" class="outline-3">
-<h3 id="org3727924"><a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">👾 programming</a></h3>
-<div class="outline-text-3" id="text-org3727924">
+<div id="outline-container-orgd15a69e" class="outline-3">
+<h3 id="orgd15a69e"><a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">👾 programming</a></h3>
+<div class="outline-text-3" id="text-orgd15a69e">
 <p>
 Hey! These are some snippets of various languages that can be run straight out of org mode.<br />
 </p>
@@ -961,7 +926,7 @@ connected to a lot of these things is my <a href="shortcuts.html#ID-058bef0b-aba
 </p>
 
 <div class="org-src-container" data-language="python">
-<pre class="src src-python"><span class="org-tree-sitter-hl-faceXfunctionXcall"><span class="org-tree-sitter-hl-faceXfunctionXbuiltin">print</span></span>(<span class="org-tree-sitter-hl-faceXstring">'Hello, world!'</span>)
+<pre class="src src-python"><span class="org-builtin">print</span>(<span class="org-string">'Hello, world!'</span>)
 </pre>
 </div>
 
@@ -970,10 +935,9 @@ Hello, world!
 </pre>
 </div>
 </div>
-
-<div id="outline-container-orge03610e" class="outline-3">
-<h3 id="orge03610e"><a href="reduce_friction_to_getting_to_the_things_you_really_want.html#ID-31fbca3c-7467-43a5-a32c-80b4fcc04ca9">Reduce friction to getting to the things you really want.</a></h3>
-<div class="outline-text-3" id="text-orge03610e">
+<div id="outline-container-orgc97dc00" class="outline-3">
+<h3 id="orgc97dc00"><a href="reduce_friction_to_getting_to_the_things_you_really_want.html#ID-31fbca3c-7467-43a5-a32c-80b4fcc04ca9">Reduce friction to getting to the things you really want.</a></h3>
+<div class="outline-text-3" id="text-orgc97dc00">
 <p>
 Talk about <a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">⤴️ shortcuts</a> -- want to get shortcuts to things that I want to encourage.<br />
 </p>
@@ -987,10 +951,9 @@ Good <a href="rules_of_thumb.html#ID-5df9203d-c7d9-4341-b7dc-ac4236000d8b">rule 
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgf59ac48" class="outline-3">
-<h3 id="orgf59ac48"><a href="keyboards.html#ID-2db6d59f-b902-48d6-af4f-e926114aa710">keyboards</a></h3>
-<div class="outline-text-3" id="text-orgf59ac48">
+<div id="outline-container-org68f1054" class="outline-3">
+<h3 id="org68f1054"><a href="keyboards.html#ID-2db6d59f-b902-48d6-af4f-e926114aa710">keyboards</a></h3>
+<div class="outline-text-3" id="text-org68f1054">
 <p>
 Despite spinning a lot of cycles thinking about <a href="shortcuts.html#ID-058bef0b-aba6-4ac6-b4ae-b3c7b7e22040">⤴️ shortcuts</a> and the like, I&rsquo;ve never thought too hard about this input device itself -- the keyboard.<br />
 </p>
@@ -1015,31 +978,17 @@ I could imagine making some sort of symsys-y design on my keyboard....that would
 ....also the all-black keyboard is a fucking vibe tho.<br />
 </p>
 
-<div id="org3371548" class="figure">
+<div id="org022bc01" class="figure">
 <p><img src="fp1.jpg" alt="all-black mechanical keyboard" /><br />
 </p>
 </div>
 </div>
 </div>
-
-<div id="outline-container-orga39837d" class="outline-3">
-<h3 id="orga39837d"><a href="transactivos.html#ID-b82054c7-06f7-4f4b-a547-68e637468ed7">transactivos</a> <span class="backlinks-outline-path">(<i>Conversational threads &gt; ⤴️ shortcuts as a worm that has eaten into my habits</i>)</span></h3>
-<div class="outline-text-3" id="text-orga39837d">
-<p>
-Not sure whether they&rsquo;re good or bad, but they&rsquo;re powerful, that&rsquo;s all I&rsquo;ll say. Reducing the friction to certain actions that I find favorable, to the point where I do them subconsciously, is powerful.<br />
-</p>
-</div>
-</div>
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

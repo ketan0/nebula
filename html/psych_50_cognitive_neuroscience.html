@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:37 -->
+<!-- 2025-07-26 Sat 11:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>PSYCH 50: Cognitive Neuroscience</title>
@@ -11,64 +11,79 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">PSYCH 50: Cognitive Neuroscience
 <br />
-<span class="subtitle">Last modified on May 14, 2022</span>
+<span class="subtitle">Last tended to on May 14, 2022</span>
 </h1>
-
-<div id="outline-container-org0f4cf0b" class="outline-2">
-<h2 id="org0f4cf0b">Course Description:</h2>
-<div class="outline-text-2" id="text-org0f4cf0b">
+<div id="outline-container-org672d19f" class="outline-2">
+<h2 id="org672d19f">Course Description:</h2>
+<div class="outline-text-2" id="text-org672d19f">
 <p>
 How does our brain give rise to our abilities to perceive, act and think? Survey of the basic facts, empirical evidence, theories and methods of study in cognitive neuroscience exploring how cognition is instantiated in neural activity. Representative topics include perceptual and motor processes, decision making, learning and memory, attention, reward processing, reinforcement learning, sensory inference and cognitive control<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org77c6cb2" class="outline-2">
-<h2 id="org77c6cb2">Learning goals</h2>
-<div class="outline-text-2" id="text-org77c6cb2">
+<div id="outline-container-org6052818" class="outline-2">
+<h2 id="org6052818">Learning goals</h2>
+<div class="outline-text-2" id="text-org6052818">
 <p>
 We are our brains. The overall goal of this class is to introduce you to the scientific study of how our brains work to make us who we are. This class should prepare you to take more specialized upper level classes in specific areas of cognitive neuroscience.<br />
 </p>
@@ -99,50 +114,50 @@ I slowly learn to balance on my new RipStik casterboard. How do I sense balance?
 </p>
 </div>
 </div>
-<div id="outline-container-orgfba74d3" class="outline-2">
-<h2 id="orgfba74d3">Topics</h2>
-<div class="outline-text-2" id="text-orgfba74d3">
+<div id="outline-container-orgc6739d5" class="outline-2">
+<h2 id="orgc6739d5">Topics</h2>
+<div class="outline-text-2" id="text-orgc6739d5">
 <p>
 We will not cover everything there is to know about cognitive neuroscience in one quarter. Cognitive neuroscience is a rich field that draws on many disciplines from biology, chemistry, psychology, computer science, engineering, mathematics, philosophy and beyond. The objective is not to be exhaustive (and exhausting!) in what we cover. Instead the goal is to give you basic background and conceptual knowledge as outlined above by going in to depth in a few areas to illustrate the concepts and knowledge that structure the scientific study of cognitive neuroscience.<br />
 </p>
 </div>
-<div id="outline-container-orgee44b57" class="outline-3">
-<h3 id="orgee44b57">Input</h3>
-<div class="outline-text-3" id="text-orgee44b57">
+<div id="outline-container-org339cd67" class="outline-3">
+<h3 id="org339cd67">Input</h3>
+<div class="outline-text-3" id="text-org339cd67">
 <p>
 Our brains have many sensors and systems that allow us to get information about the outside world. For example, touch, smell, balance, etc. We will use the visual system as a canonical system for understanding how information about the world gets into the brain. This will allow us to understand what is meant by bottom-up processing from sensory transduction to cortical streams of processing supporting high-level categorization and sensory inference.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org352afbd" class="outline-3">
-<h3 id="org352afbd">Output</h3>
-<div class="outline-text-3" id="text-org352afbd">
+<div id="outline-container-orgb93e43b" class="outline-3">
+<h3 id="orgb93e43b">Output</h3>
+<div class="outline-text-3" id="text-orgb93e43b">
 <p>
 We will next flip our thinking about the brain from something that passively takes in information and processes it to something that generates movement.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orga7f8b01" class="outline-3">
-<h3 id="orga7f8b01">Feedback</h3>
-<div class="outline-text-3" id="text-orga7f8b01">
+<div id="outline-container-org0633b1e" class="outline-3">
+<h3 id="org0633b1e">Feedback</h3>
+<div class="outline-text-3" id="text-org0633b1e">
 <p>
 If the brain can act to contract muscles and make movements it can also act on itself to <a href="private/20200328053448-change.html#ID-afec4613-ac62-4e12-9e1d-70d71791e842">change</a> things like sensory processing. We will discuss in depth a canonical system that does just that: attention.<br />
 Broadcast We will next turn from cognitive processes like attention that offer very specific control of information processing to ones that can distribute information widely and modulate activity across lots of the brain; neuromodulatory systems. We will discuss in-depth the one we know the most about - the dopamine system and its role in reinforcement learning.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org7c8e7cb" class="outline-3">
-<h3 id="org7c8e7cb">Memory</h3>
-<div class="outline-text-3" id="text-org7c8e7cb">
+<div id="outline-container-org937f0ff" class="outline-3">
+<h3 id="org937f0ff">Memory</h3>
+<div class="outline-text-3" id="text-org937f0ff">
 <p>
 Memory will give us a chance to see many of the above concepts put together to explain a cognitive function. It will also show us how neuroscience can inform our understanding of cognition as we see different systems and process underlie different forms of memory.<br />
 Along the way, various topics will come up - emotion, language, decision-making, consciousness, free-will, psychoactive drugs, disease, mental illness, brain metabolism, brain-machine interfaces, mind-control - we will try to fit these into the above frameworks for thinking about the brain. Undoubtedly, there will be a part of cognitive functioning that we do not cover (hey, why haven’t we talked about why I sneeze when I see a bright light? - you are wired funny. Yes, that’s true. It really happens). You will have opportunities in sections to take the framework that are discussed in lectures and apply them to understanding other things that were not covered. So, for example, in section we might talk about somatosensory or olfactory systems and how they are the same or different from the visual system.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org233ccc9" class="outline-3">
-<h3 id="org233ccc9">Ethics and morality</h3>
-<div class="outline-text-3" id="text-org233ccc9">
+<div id="outline-container-orgafe7e76" class="outline-3">
+<h3 id="orgafe7e76">Ethics and morality</h3>
+<div class="outline-text-3" id="text-orgafe7e76">
 <p>
 Some aspects of the material covered in a cognitive neuroscience course may bring up ethical and moral considerations for you that you feel strongly about. For instance, it might challenge your religious beliefs. It might challenge notions of when someone should be culpable for behavior that is abhorrent but for which they might not have control. They may challenge your notions of self, of memory, of personality. All these are extremely important issues since they bear on how we act as a society, how we educate, how we deal with crime and punishment, how we think about who we are and how we act with others. Much foundational work in cognitive science has been done using animal experiments which raise important questions of how we weight humane treatment of animals against the quest for knowledge and betterment of human society and health.<br />
 </p>
@@ -155,13 +170,13 @@ We encourage you all to think about these issues openly and frankly as they shou
 </div>
 <div id="outline-container-ID-1510d124-c70c-4f76-b956-2819316e7df6" class="outline-2">
 <h2 id="ID-1510d124-c70c-4f76-b956-2819316e7df6">Intro</h2>
-<div class="outline-text-2" id="text-org0ca43f6">
+<div class="outline-text-2" id="text-org9f424da">
 <p>
 <i>How does our brain allow us to do what we do?</i> &#x2013; that is, cognitive neuroscience = how cognition is <i>implemented</i> in the brain, whereas cognitive science = how we think and behave.<br />
 </p>
 
 <p>
-<a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 1 Study Guide_ Introduction to Cognitive Neuroscience.pdf::3++0.00;;annot-3-0">different &ldquo;scales&rdquo; of the same system</a> &#x2013; genes =&gt; intracellular signals =&gt; neurotransmitters/receptors =&gt; synapses =&gt; neurons =&gt; local circuits =&gt; populations =&gt; areas =&gt; interacting brains<br />
+<a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%201%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::3++0.00;;annot-3-0">different &ldquo;scales&rdquo; of the same system</a> &#x2013; genes =&gt; intracellular signals =&gt; neurotransmitters/receptors =&gt; synapses =&gt; neurons =&gt; local circuits =&gt; populations =&gt; areas =&gt; interacting brains<br />
 </p>
 
 <p>
@@ -177,15 +192,15 @@ Experiment types: observe brain, add something to brain, remove something from b
 </p>
 </div>
 </div>
-<div id="outline-container-org31638b5" class="outline-2">
-<h2 id="org31638b5">Hierarchical processing</h2>
-<div class="outline-text-2" id="text-org31638b5">
+<div id="outline-container-org4bb0eec" class="outline-2">
+<h2 id="org4bb0eec">Hierarchical processing</h2>
+<div class="outline-text-2" id="text-org4bb0eec">
 <p>
 Visual cortex is the cleanest example of hierarchical processing. Can draw an analogy to <a href="private/20200924211448-convolutional_neural_networks.html#ID-ff35bb26-6dde-42cd-988c-1c05e13b707f">convolutional neural networks</a> in the building up of increasingly complex representations in deeper layers.<br />
 </p>
 
 <p>
-LGN =&gt; V1: go <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 1 Study Guide_ Introduction to Cognitive Neuroscience.pdf::13++0.00">from circular receptive fields to orientation-selective receptive fields</a> (in one synapse!) by just overlaying the circular receptive fields.<br />
+LGN =&gt; V1: go <a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%201%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::13++0.00">from circular receptive fields to orientation-selective receptive fields</a> (in one synapse!) by just overlaying the circular receptive fields.<br />
 </p>
 
 <p>
@@ -201,9 +216,9 @@ And so on, V2 =&gt; V4 &#x2026; unlike convnets, though, not all the connections
 </p>
 </div>
 </div>
-<div id="outline-container-org4987839" class="outline-2">
-<h2 id="org4987839">Dorsal Visual Pathway</h2>
-<div class="outline-text-2" id="text-org4987839">
+<div id="outline-container-orgc546237" class="outline-2">
+<h2 id="orgc546237">Dorsal Visual Pathway</h2>
+<div class="outline-text-2" id="text-orgc546237">
 <p>
 &ldquo;where&rdquo; / action stream<br />
 </p>
@@ -211,7 +226,7 @@ And so on, V2 =&gt; V4 &#x2026; unlike convnets, though, not all the connections
 </div>
 <div id="outline-container-ID-dd8e3fad-db3f-4fee-9dd9-cca026ceeadd" class="outline-2">
 <h2 id="ID-dd8e3fad-db3f-4fee-9dd9-cca026ceeadd">Ventral Visual Pathway</h2>
-<div class="outline-text-2" id="text-org06e8205">
+<div class="outline-text-2" id="text-org1a4a84d">
 <p>
 &ldquo;what&rdquo; / perception stream<br />
 </p>
@@ -225,20 +240,19 @@ Fusiform Face Area (FFA) &#x2013; area of ventral cortex that is specifically se
 </p>
 </div>
 </div>
-
-<div id="outline-container-org4dcf72c" class="outline-2">
-<h2 id="org4dcf72c">Perceptual Decision Making</h2>
-<div class="outline-text-2" id="text-org4dcf72c">
+<div id="outline-container-org4e35fad" class="outline-2">
+<h2 id="org4e35fad">Perceptual Decision Making</h2>
+<div class="outline-text-2" id="text-org4e35fad">
 <p>
-Middle Temporal: needed for motion detection (Remove: lesioning <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 2 Study Guide_ Introduction to Cognitive Neuroscience.pdf::13++0.00">flattens psychometric curve</a>.) We have &ldquo;integrator neurons&rdquo; that <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 2 Study Guide_ Introduction to Cognitive Neuroscience.pdf::20++0.00">sum up the responses from leftward-motion and rightward-motion neurons, and once a threshold is crossed either way make a decision</a>.<br />
+Middle Temporal: needed for motion detection (Remove: lesioning <a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%202%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::13++0.00">flattens psychometric curve</a>.) We have &ldquo;integrator neurons&rdquo; that <a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%202%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::20++0.00">sum up the responses from leftward-motion and rightward-motion neurons, and once a threshold is crossed either way make a decision</a>.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org283b597" class="outline-2">
-<h2 id="org283b597">Action Potential</h2>
-<div class="outline-text-2" id="text-org283b597">
+<div id="outline-container-org255d365" class="outline-2">
+<h2 id="org255d365">Action Potential</h2>
+<div class="outline-text-2" id="text-org255d365">
 <p>
-<a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 3 Study Guide_ Introduction to Cognitive Neuroscience.pdf::10++0.00">Chemical basis</a>: <i>resting membrane potential</i> is increased by synaptic input from another neuron above threshold potential =&gt; Na+ channels open + Na+ enters and depolarizes cell (spike up), Na+ channels close, K+ channels open + K+ leaves cell (spike down), Na+/K+ pump uses ATP to restore resting potential<br />
+<a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%203%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::10++0.00">Chemical basis</a>: <i>resting membrane potential</i> is increased by synaptic input from another neuron above threshold potential =&gt; Na+ channels open + Na+ enters and depolarizes cell (spike up), Na+ channels close, K+ channels open + K+ leaves cell (spike down), Na+/K+ pump uses ATP to restore resting potential<br />
 </p>
 
 <p>
@@ -246,9 +260,9 @@ Myelination + axon width =&gt; Action potentials vary in speed in different brai
 </p>
 </div>
 </div>
-<div id="outline-container-org5356dd1" class="outline-2">
-<h2 id="org5356dd1">Motor Systems</h2>
-<div class="outline-text-2" id="text-org5356dd1">
+<div id="outline-container-orgfbded05" class="outline-2">
+<h2 id="orgfbded05">Motor Systems</h2>
+<div class="outline-text-2" id="text-orgfbded05">
 <p>
 Why do we have a brain? Simple (evolutionarily): to move. Motion is incredibly complex<br />
 </p>
@@ -258,7 +272,7 @@ This is a pretty interesting thing to think about. Like yes, we have brains to t
 </p>
 
 <p>
-<a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 3 Study Guide_ Introduction to Cognitive Neuroscience.pdf::15++0.00">Central pattern generator</a> in brainstem/spine can generate rhythmic movements (like walking) with /no cortical input/(!!) &#x2013; cortex just flips them on/off like a light switch.<br />
+<a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%203%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::15++0.00">Central pattern generator</a> in brainstem/spine can generate rhythmic movements (like walking) with /no cortical input/(!!) &#x2013; cortex just flips them on/off like a light switch.<br />
 </p>
 
 <p>
@@ -274,13 +288,13 @@ Cerebellum = learning + error correction<br />
 </p>
 
 <p>
-Motor cortex = Volitional control. shaped like <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 3 Study Guide_ Introduction to Cognitive Neuroscience.pdf::19++0.00">homunculus</a>. This is too simplistic though &#x2013; some stimulations generate complex movements with many muscles..<br />
+Motor cortex = Volitional control. shaped like <a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%203%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::19++0.00">homunculus</a>. This is too simplistic though &#x2013; some stimulations generate complex movements with many muscles..<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgac1fb68" class="outline-2">
-<h2 id="orgac1fb68">Energetics</h2>
-<div class="outline-text-2" id="text-orgac1fb68">
+<div id="outline-container-org3a06623" class="outline-2">
+<h2 id="org3a06623">Energetics</h2>
+<div class="outline-text-2" id="text-org3a06623">
 <p>
 How does the brain use energy? + vasculature that supports it<br />
 </p>
@@ -296,7 +310,7 @@ Can measure BOLD (Blood Oxygen use) as a proxy for brain activity =&gt; basis fo
 </div>
 <div id="outline-container-ID-fefd433d-cc4d-4d5b-9a54-2412b6452b92" class="outline-2">
 <h2 id="ID-fefd433d-cc4d-4d5b-9a54-2412b6452b92">Executive Control</h2>
-<div class="outline-text-2" id="text-org446c521">
+<div class="outline-text-2" id="text-org024cdf7">
 <p>
 Frontal cortex = higher order thinking. Oh god, no lobotomies plz.<br />
 </p>
@@ -314,9 +328,9 @@ These stories are vague / simplistic. We really don&rsquo;t know what the hell&r
 </p>
 </div>
 </div>
-<div id="outline-container-orgcfc39f9" class="outline-2">
-<h2 id="orgcfc39f9">Attention</h2>
-<div class="outline-text-2" id="text-orgcfc39f9">
+<div id="outline-container-orgd67d168" class="outline-2">
+<h2 id="orgd67d168">Attention</h2>
+<div class="outline-text-2" id="text-orgd67d168">
 <p>
 <b>overt</b> attention: you physically move your eyes (or other sensors) to pay attention<br />
 <b>covert</b> attention: the attention shift is only mental, not physical (i.e. looking out of the corner of your eyes)<br />
@@ -353,35 +367,35 @@ So what about the other senses, though? Is there a &ldquo;Frontal ear field&rdqu
 </div>
 <div id="outline-container-ID-246f1a64-9247-43da-b8ca-f5fb06c2eb5c" class="outline-2">
 <h2 id="ID-246f1a64-9247-43da-b8ca-f5fb06c2eb5c"><a href="private/20201001131603-plasticity.html#ID-3e283aac-0cb5-4e06-b8ab-a742cff41a96">Plasticity</a></h2>
-<div class="outline-text-2" id="text-orga2cbb3c">
+<div class="outline-text-2" id="text-orgdacbef1">
 </div>
-<div id="outline-container-org5db14a1" class="outline-3">
-<h3 id="org5db14a1">The brain dynamically reorganizes to match its inputs</h3>
-<div class="outline-text-3" id="text-org5db14a1">
+<div id="outline-container-orgea73cd2" class="outline-3">
+<h3 id="orgea73cd2">The brain dynamically reorganizes to match its inputs</h3>
+<div class="outline-text-3" id="text-orgea73cd2">
 <p>
 If you&rsquo;re blind, visual cortex gets taken over. If you&rsquo;re an amputee, the &ldquo;arm&rdquo; part of the somatosensory cortex gets taken over.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org856c4e2" class="outline-3">
-<h3 id="org856c4e2">The brain distributes resources based on relevance</h3>
-<div class="outline-text-3" id="text-org856c4e2">
+<div id="outline-container-org3e4b58f" class="outline-3">
+<h3 id="org3e4b58f">The brain distributes resources based on relevance</h3>
+<div class="outline-text-3" id="text-org3e4b58f">
 <p>
 What are you <i>using</i>? Available resources are dynamically allocated to that. Brain damage? The map just shrinks to the remaining territory (provided it&rsquo;s not <i>too</i> bad). Add an extra eye to a frog? The optic tectum territory gets divided and some is given to the new eye.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgf0e8961" class="outline-3">
-<h3 id="orgf0e8961">The brain has a &ldquo;sensitive period&rdquo; in early childhood = extreme plasticity &#x2013; some preprogrammed stuff, but a lot is &ldquo;hooks&rdquo; that are reliant on experience</h3>
-<div class="outline-text-3" id="text-orgf0e8961">
+<div id="outline-container-org74b9421" class="outline-3">
+<h3 id="org74b9421">The brain has a &ldquo;sensitive period&rdquo; in early childhood = extreme plasticity &#x2013; some preprogrammed stuff, but a lot is &ldquo;hooks&rdquo; that are reliant on experience</h3>
+<div class="outline-text-3" id="text-org74b9421">
 <p>
 It needs (social) input to shape it during that critical period, otherwise you got some feral children on your hands&#x2026;<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org2c358aa" class="outline-3">
-<h3 id="org2c358aa">previous points =&gt; brain can accomodate new input streams.</h3>
-<div class="outline-text-3" id="text-org2c358aa">
+<div id="outline-container-orgdb10caa" class="outline-3">
+<h3 id="orgdb10caa">previous points =&gt; brain can accomodate new input streams.</h3>
+<div class="outline-text-3" id="text-orgdb10caa">
 <p>
 Cue the tongue cameras and magneto belts and sound =&gt; colors and stuff like that.<br />
 </p>
@@ -390,7 +404,7 @@ Cue the tongue cameras and magneto belts and sound =&gt; colors and stuff like t
 </div>
 <div id="outline-container-ID-9cf77233-0337-49d0-82a0-e9072da807bc" class="outline-2">
 <h2 id="ID-9cf77233-0337-49d0-82a0-e9072da807bc"><a href="consciousness.html#ID-4fba6fb0-e9cc-48b1-875c-a70e1a2dbc9b">Consciousness</a></h2>
-<div class="outline-text-2" id="text-org5d784c6">
+<div class="outline-text-2" id="text-org011d92c">
 <p>
 Feels like&#x2026;we&rsquo;re going with a neuroscientist&rsquo;s definition of consciousness here. One that presupposes Identity Theory&#x2026;<br />
 </p>
@@ -399,49 +413,49 @@ Feels like&#x2026;we&rsquo;re going with a neuroscientist&rsquo;s definition of 
 I think he tried to apply the <a href="marrslevels.html#ID-bad51535-4aad-4e2a-b6e5-fff9839e9224">Marr&rsquo;s Levels</a> construct here &#x2013; top points are the physical / algorithmic ways consciousness happens, bottom is big picture, what&rsquo;s the purpose of consciousness?<br />
 </p>
 </div>
-<div id="outline-container-orged889b3" class="outline-3">
-<h3 id="orged889b3"><a href="https://vimeo.com/254775987">Being Conscious with Bill Newsome on Vimeo</a></h3>
-<div class="outline-text-3" id="text-orged889b3">
+<div id="outline-container-orgbc76a51" class="outline-3">
+<h3 id="orgbc76a51"><a href="https://vimeo.com/254775987">Being Conscious with Bill Newsome on Vimeo</a></h3>
+<div class="outline-text-3" id="text-orgbc76a51">
 <p>
 Oooohhh, the &ldquo;consciousness ==&gt; freedom&rdquo; frame is powerful. Serious Tim Urban / Religion for the Nonreligious vibes. Being conscious / aware of the fog is the first step in getting rid of it.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org6d5bb61" class="outline-3">
-<h3 id="org6d5bb61"><a href="~/Desktop/Misc./Old Classes/PSYCH 50/12consciousness.pdf::12++0.00">Consciousness is <i>constructed</i></a></h3>
-<div class="outline-text-3" id="text-org6d5bb61">
+<div id="outline-container-orgbf97b96" class="outline-3">
+<h3 id="orgbf97b96"><a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/12consciousness.pdf::12++0.00">Consciousness is <i>constructed</i></a></h3>
+<div class="outline-text-3" id="text-orgbf97b96">
 <p>
 from the intention to move, the illusion of movement, the actual movement, movement =&gt; proprioceptive feedback, movement =&gt; sensory input &#x2013; each of these has an associated brain area<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgd86af7f" class="outline-3">
-<h3 id="orgd86af7f">Consciousness is unified</h3>
-<div class="outline-text-3" id="text-orgd86af7f">
+<div id="outline-container-orge438d59" class="outline-3">
+<h3 id="orge438d59">Consciousness is unified</h3>
+<div class="outline-text-3" id="text-orge438d59">
 <p>
 Despite all these different processes, we feel it like one, unified <i>experience</i>. Corpus callosum: connects our two hemispheres. Other connections exist, tho, and if corpus callosum is cut, anterior and posterior commisures show larger volume<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orge3dad7a" class="outline-3">
-<h3 id="orge3dad7a">Consciousness has neural correlates</h3>
-<div class="outline-text-3" id="text-orge3dad7a">
+<div id="outline-container-orgc6cffaa" class="outline-3">
+<h3 id="orgc6cffaa">Consciousness has neural correlates</h3>
+<div class="outline-text-3" id="text-orgc6cffaa">
 <p>
 Hypothesis: subset of visual neurons are related to conscious perception<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org878baaf" class="outline-3">
-<h3 id="org878baaf">Consciousness is not an epiphenomenon</h3>
-<div class="outline-text-3" id="text-org878baaf">
+<div id="outline-container-org8a1e2b9" class="outline-3">
+<h3 id="org8a1e2b9">Consciousness is not an epiphenomenon</h3>
+<div class="outline-text-3" id="text-org8a1e2b9">
 <p>
 Seems to be some experimental evidence that intention arises before action&#x2026;but it&rsquo;s not just &ldquo;froth on the wave,&rdquo; it actually has a causal impact on the future.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org252ecc8" class="outline-3">
-<h3 id="org252ecc8">Consciousness has a function</h3>
-<div class="outline-text-3" id="text-org252ecc8">
+<div id="outline-container-org116e51d" class="outline-3">
+<h3 id="org116e51d">Consciousness has a function</h3>
+<div class="outline-text-3" id="text-org116e51d">
 <p>
 Cue Newsome, become more aware/free?<br />
 </p>
@@ -450,9 +464,9 @@ Cue Newsome, become more aware/free?<br />
 </div>
 <div id="outline-container-ID-29c59046-14ef-4f6b-ba0e-8e56db7ef567" class="outline-2">
 <h2 id="ID-29c59046-14ef-4f6b-ba0e-8e56db7ef567">Dopamine System</h2>
-<div class="outline-text-2" id="text-org11876fa">
+<div class="outline-text-2" id="text-org9e1cb6a">
 <p>
-Good example of broadcast system in the brain: <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 7 Study Guide_ Introduction to Cognitive Neuroscience.pdf::4++0.00">broadcasts signals far and wide</a> in the brain.<br />
+Good example of broadcast system in the brain: <a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%207%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::4++0.00">broadcasts signals far and wide</a> in the brain.<br />
 </p>
 
 <p>
@@ -464,7 +478,7 @@ dopamine represents perceived <i>value</i> (not pleasure) &#x2013; its signal se
 </p>
 
 <p>
-<a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 7 Study Guide_ Introduction to Cognitive Neuroscience.pdf::6++0.00">Pavlovian conditioning</a>: stimulus (bell) becomes associated with reward (food.) Thus, the conditioned response (salivation) shifts <i>backward</i> from the time of receiving reward to the time of receiving stimulus (can show causality b/c after conditioning, dogs salivate upon hearing the bell <i>even when no food is given</i>.).<br />
+<a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%207%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::6++0.00">Pavlovian conditioning</a>: stimulus (bell) becomes associated with reward (food.) Thus, the conditioned response (salivation) shifts <i>backward</i> from the time of receiving reward to the time of receiving stimulus (can show causality b/c after conditioning, dogs salivate upon hearing the bell <i>even when no food is given</i>.).<br />
 </p>
 
 <p>
@@ -485,17 +499,17 @@ TD learning: takes time into account (reward propagates backwards) further and f
 </div>
 <div id="outline-container-ID-a5c25295-9184-4df0-a4ac-5703afe74425" class="outline-2">
 <h2 id="ID-a5c25295-9184-4df0-a4ac-5703afe74425"><a href="private/20201005215940-memory.html#ID-7b9258d6-4548-4050-8e5d-b758a7f56b80">Memory</a></h2>
-<div class="outline-text-2" id="text-org709af23">
+<div class="outline-text-2" id="text-org0fb1ecd">
 </div>
-<div id="outline-container-orgfc9aff0" class="outline-3">
-<h3 id="orgfc9aff0">Many Regions + Types of memory</h3>
-<div class="outline-text-3" id="text-orgfc9aff0">
+<div id="outline-container-orgbf58718" class="outline-3">
+<h3 id="orgbf58718">Many Regions + Types of memory</h3>
+<div class="outline-text-3" id="text-orgbf58718">
 <p>
 Frontal Eye Field (FEF) is involved in working memory<br />
 </p>
 
 <p>
-<a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Study Guide_ Introduction to Cognitive Neuroscience.pdf::6++0.00">Memory is many different things</a> &#x2013; many different types of memory, different brain regions involved. Comment: This makes me think that memory is more of a property of neural circuits, rather than an isolated/specialized function.<br />
+<a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%208%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::6++0.00">Memory is many different things</a> &#x2013; many different types of memory, different brain regions involved. Comment: This makes me think that memory is more of a property of neural circuits, rather than an isolated/specialized function.<br />
 </p>
 
 <p>
@@ -503,7 +517,7 @@ Double dissociation = establishing separateness of certain kinds of memories by 
 </p>
 
 <p>
-<a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Study Guide_ Introduction to Cognitive Neuroscience.pdf::8++0.00">See this graph for double dissocation</a> &#x2013;<br />
+<a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%208%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::8++0.00">See this graph for double dissocation</a> &#x2013;<br />
 parietal lobe lesion in K.F. =&gt; impaired working memory, fine declarative memory<br />
 MTL removal in H.M. =&gt; impaired declarative memory, fine working memory<br />
 </p>
@@ -524,9 +538,9 @@ MTL &#x2026;<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org675acb9" class="outline-3">
-<h3 id="org675acb9">Hippocampus (within MTL)</h3>
-<div class="outline-text-3" id="text-org675acb9">
+<div id="outline-container-orge02e673" class="outline-3">
+<h3 id="orge02e673">Hippocampus (within MTL)</h3>
+<div class="outline-text-3" id="text-orge02e673">
 <p>
 Very interesting brain structure. As seen from MTL damage, associated with declarative memory&#x2026;<br />
 </p>
@@ -536,15 +550,15 @@ Hippocampus = memory formation/encoding, and then  cortex = long term storage?<b
 </p>
 
 <p>
-Could perform <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Study Guide_ Introduction to Cognitive Neuroscience.pdf::18++0.00">pattern separation</a> &#x2013; makes the pattern of activity for different activities as separate as possible (even if they look similar)<br />
+Could perform <a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%208%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::18++0.00">pattern separation</a> &#x2013; makes the pattern of activity for different activities as separate as possible (even if they look similar)<br />
 </p>
 
 <p>
-Also <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Study Guide_ Introduction to Cognitive Neuroscience.pdf::20++0.00">pattern completion</a> &#x2013; pull in the whole pattern from just a part.<br />
+Also <a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%208%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::20++0.00">pattern completion</a> &#x2013; pull in the whole pattern from just a part.<br />
 </p>
 
 <p>
-Interesting note about <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Study Guide_ Introduction to Cognitive Neuroscience.pdf::23++0.00">catastrophic interference</a>. So basically hippocampus is for encoding memories separately and quickly, and neocortex is for building generalizations and long-term storage.<br />
+Interesting note about <a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%208%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::23++0.00">catastrophic interference</a>. So basically hippocampus is for encoding memories separately and quickly, and neocortex is for building generalizations and long-term storage.<br />
 </p>
 
 <p>
@@ -553,31 +567,31 @@ Interesting note about <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 8 Stud
 </div>
 </div>
 </div>
-<div id="outline-container-org4100327" class="outline-2">
-<h2 id="org4100327">Memory, Synapses, Long-Term Potentiation (LTP)</h2>
-<div class="outline-text-2" id="text-org4100327">
+<div id="outline-container-org6064a2a" class="outline-2">
+<h2 id="org6064a2a">Memory, Synapses, Long-Term Potentiation (LTP)</h2>
+<div class="outline-text-2" id="text-org6064a2a">
 <p>
 Going lower-level to the neuronal level &#x2026; how are new memories formed + consolidated synaptically?<br />
 </p>
 </div>
-<div id="outline-container-org674c9b2" class="outline-3">
-<h3 id="org674c9b2">Neurogenesis</h3>
-<div class="outline-text-3" id="text-org674c9b2">
+<div id="outline-container-org94cdf8c" class="outline-3">
+<h3 id="org94cdf8c">Neurogenesis</h3>
+<div class="outline-text-3" id="text-org94cdf8c">
 <p>
 <b>Lots of neurogenesis in adults in hippocampus/striatum, and we don&rsquo;t know why.</b> Could be connected to memory/learning. Seems like a random addition to this section, and that&rsquo;s prob cuz the research is still developing LOL<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orga52b2e5" class="outline-3">
-<h3 id="orga52b2e5">Hebbian plasticity</h3>
-<div class="outline-text-3" id="text-orga52b2e5">
+<div id="outline-container-org8913b21" class="outline-3">
+<h3 id="org8913b21">Hebbian plasticity</h3>
+<div class="outline-text-3" id="text-org8913b21">
 <p>
 <b>could be a fundamental mechanism for learning</b><br />
 = neurons that fire together, wire together. More concretely - synapses get stronger when pre- and post- synaptic activity is correlated.<br />
 </p>
 
 <p>
-<b>NMDA receptor</b> &#x2013; <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 9 Study Guide_ Introduction to Cognitive Neuroscience.pdf::6++0.00">could underlie Hebbian plasticity</a>. Allows for Ca2+ entry (=&gt; protein synth =&gt; LTP) only when <i>both</i> presynaptic and postsynaptic cell are depolarized.<br />
+<b>NMDA receptor</b> &#x2013; <a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%209%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::6++0.00">could underlie Hebbian plasticity</a>. Allows for Ca2+ entry (=&gt; protein synth =&gt; LTP) only when <i>both</i> presynaptic and postsynaptic cell are depolarized.<br />
 </p>
 
 <p>
@@ -585,11 +599,11 @@ Going lower-level to the neuronal level &#x2026; how are new memories formed + c
 </p>
 </div>
 </div>
-<div id="outline-container-org874f1c1" class="outline-3">
-<h3 id="org874f1c1">Synapses</h3>
-<div class="outline-text-3" id="text-org874f1c1">
+<div id="outline-container-org36144cb" class="outline-3">
+<h3 id="org36144cb">Synapses</h3>
+<div class="outline-text-3" id="text-org36144cb">
 <p>
-<a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 9 Study Guide_ Introduction to Cognitive Neuroscience.pdf::11++0.00">Synaptic consolidation requires protein synthesis</a> &#x2013; ion channels (made of proteins) needed for activations.<br />
+<a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%209%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::11++0.00">Synaptic consolidation requires protein synthesis</a> &#x2013; ion channels (made of proteins) needed for activations.<br />
 </p>
 
 <p>
@@ -608,7 +622,7 @@ Chemical synapses (neurons can behave differently &#x2026; passage of informatio
 </div>
 <div id="outline-container-ID-293a2e12-7da7-49b2-9e54-718a5a89ed58" class="outline-2">
 <h2 id="ID-293a2e12-7da7-49b2-9e54-718a5a89ed58">Spatial Cognition</h2>
-<div class="outline-text-2" id="text-org8af787b">
+<div class="outline-text-2" id="text-org6ade522">
 <p>
 <b>Place cells</b> in hippocampus fire for location<br />
 <b>Grid cells</b> fire regularly depending on where you are in a locale<br />
@@ -617,16 +631,16 @@ Chemical synapses (neurons can behave differently &#x2026; passage of informatio
 </p>
 </div>
 </div>
-<div id="outline-container-org86e99d7" class="outline-2">
-<h2 id="org86e99d7">Emotion</h2>
-<div class="outline-text-2" id="text-org86e99d7">
+<div id="outline-container-orga587786" class="outline-2">
+<h2 id="orga587786">Emotion</h2>
+<div class="outline-text-2" id="text-orga587786">
 <p>
-<a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 10 Study Guide_ Introduction to Cognitive Neuroscience.pdf::4++0.00">Oxytocin &lt;=&gt; pair bonding</a> (for females)<br />
+<a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%2010%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::4++0.00">Oxytocin &lt;=&gt; pair bonding</a> (for females)<br />
 increase in trusting behaviors for humans w/ oxytocin inhaled (well&#x2026;maybe)<br />
 </p>
 
 <p>
-<a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 10 Study Guide_ Introduction to Cognitive Neuroscience.pdf::5++0.00">toxoplasmosis</a> &#x2013; holy crap that&rsquo;s creepy. Mice eat cat poop infected with toxoplasma =&gt; become unafraid of cat urine =&gt; get eaten by cats =&gt; infect another cat with toxoplasma. (Reason: toxoplasma affects/damages the amygdala)<br />
+<a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%2010%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::5++0.00">toxoplasmosis</a> &#x2013; holy crap that&rsquo;s creepy. Mice eat cat poop infected with toxoplasma =&gt; become unafraid of cat urine =&gt; get eaten by cats =&gt; infect another cat with toxoplasma. (Reason: toxoplasma affects/damages the amygdala)<br />
 </p>
 
 <p>
@@ -654,13 +668,13 @@ Enteric nervous system: the gut practically has a mind of its own (lots of neuro
 </p>
 
 <p>
-Somatic marker hypothesis: instead of emotions =&gt; bodily response, bodily response =&gt; emotions. see <a href="~/Desktop/Misc./Old Classes/PSYCH 50/Week 10 Study Guide_ Introduction to Cognitive Neuroscience.pdf::13++0.00">Iowa gambling task</a>: people have a &ldquo;skin conductance response&rdquo; whenever hovering over a bad deck, as a bodily &ldquo;marker&rdquo; that influences emotion / decision making. (Interesting &#x2013; we think with our bodies??)<br />
+Somatic marker hypothesis: instead of emotions =&gt; bodily response, bodily response =&gt; emotions. see <a href="pdf:~/Desktop/Misc./Old%20Classes/PSYCH%2050/Week%2010%20Study%20Guide_%20Introduction%20to%20Cognitive%20Neuroscience.pdf::13++0.00">Iowa gambling task</a>: people have a &ldquo;skin conductance response&rdquo; whenever hovering over a bad deck, as a bodily &ldquo;marker&rdquo; that influences emotion / decision making. (Interesting &#x2013; we think with our bodies??)<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgc983c9e" class="outline-2">
-<h2 id="orgc983c9e">Social Cognition + Autism</h2>
-<div class="outline-text-2" id="text-orgc983c9e">
+<div id="outline-container-org0270ef2" class="outline-2">
+<h2 id="org0270ef2">Social Cognition + Autism</h2>
+<div class="outline-text-2" id="text-org0270ef2">
 <p>
 <a href="https://www.youtube.com/watch?v=VTNmLt7QX8E">video of random shapes moving around</a> &#x2013; but the (neurotypical) brain sees a social scene, the big triangle bullying the others, the lil circle and square dancing(?) and maybe even in love(?). autistic doesn&rsquo;t see the social construction &#x2013; just sees literally.<br />
 </p>
@@ -678,23 +692,21 @@ Genes + environment =&gt; Autism.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgb50214a" class="outline-2">
-<h2 id="orgb50214a">Brain-machine interfaces</h2>
-<div class="outline-text-2" id="text-orgb50214a">
+<div id="outline-container-org932592d" class="outline-2">
+<h2 id="org932592d">Brain-machine interfaces</h2>
+<div class="outline-text-2" id="text-org932592d">
 <p>
 Currently, can just replace sensory organs (and kinda badly.) Future&#x2026;interface with cognitive parts of brain? Cortex? Cue Neuralink<br />
 </p>
 </div>
 </div>
-
-
-<div id="outline-container-org2710391" class="outline-2 references">
-<h2 id="org2710391">Links to &ldquo;PSYCH 50: Cognitive Neuroscience&rdquo;</h2>
-<div class="outline-text-2" id="text-org2710391">
+<div id="outline-container-orgd3a81d2" class="outline-2 references">
+<h2 id="orgd3a81d2">Links to &ldquo;PSYCH 50: Cognitive Neuroscience&rdquo;</h2>
+<div class="outline-text-2" id="text-orgd3a81d2">
 </div>
-<div id="outline-container-org30c23f0" class="outline-3">
-<h3 id="org30c23f0"><a href="marrslevels.html#ID-bad51535-4aad-4e2a-b6e5-fff9839e9224">Marr&rsquo;s Levels</a></h3>
-<div class="outline-text-3" id="text-org30c23f0">
+<div id="outline-container-org8872e83" class="outline-3">
+<h3 id="org8872e83"><a href="marrslevels.html#ID-bad51535-4aad-4e2a-b6e5-fff9839e9224">Marr&rsquo;s Levels</a></h3>
+<div class="outline-text-3" id="text-org8872e83">
 <p>
 Stole this frame from various classes, most notably <a href="psych_50_cognitive_neuroscience.html#ID-543215d5-6bd3-423c-98a9-8374b7e26894">PSYCH 50: Cognitive Neuroscience</a>.<br />
 </p>
@@ -704,10 +716,9 @@ Marr&rsquo;s Levels is one example of viewing the system that is the human brain
 </p>
 </div>
 </div>
-
-<div id="outline-container-org4d43f07" class="outline-3">
-<h3 id="org4d43f07"><a href="course_notes.html#ID-6d2c6f5c-f8c1-4b38-a01a-6adcdbfe8e7a">📒 course notes</a></h3>
-<div class="outline-text-3" id="text-org4d43f07">
+<div id="outline-container-org0abe2fc" class="outline-3">
+<h3 id="org0abe2fc"><a href="course_notes.html#ID-6d2c6f5c-f8c1-4b38-a01a-6adcdbfe8e7a">📒 course notes</a></h3>
+<div class="outline-text-3" id="text-org0abe2fc">
 <p>
 Some notes for select courses that I took in my time at Stanford.<br />
 </p>
@@ -723,13 +734,8 @@ Some notes for select courses that I took in my time at Stanford.<br />
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

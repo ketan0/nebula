@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:38 -->
+<!-- 2025-07-26 Sat 11:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>🗺 representations</title>
@@ -11,67 +11,81 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">🗺 representations
 <br />
-<span class="subtitle">Last modified on May 27, 2022</span>
+<span class="subtitle">Last tended to on May 27, 2022</span>
 </h1>
-
-
-<div id="outline-container-org5e84f43" class="outline-2 references">
-<h2 id="org5e84f43">Links to &ldquo;🗺 representations&rdquo;</h2>
-<div class="outline-text-2" id="text-org5e84f43">
+<div id="outline-container-org5274fcd" class="outline-2 references">
+<h2 id="org5274fcd">Links to &ldquo;🗺 representations&rdquo;</h2>
+<div class="outline-text-2" id="text-org5274fcd">
 </div>
-<div id="outline-container-org77d0d09" class="outline-3">
-<h3 id="org77d0d09"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a> <span class="backlinks-outline-path">(<i>Problem setting:</i>)</span></h3>
-<div class="outline-text-3" id="text-org77d0d09">
+<div id="outline-container-orge28b83c" class="outline-3">
+<h3 id="orge28b83c"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a> <span class="backlinks-outline-path">(<i>Problem setting:</i>)</span></h3>
+<div class="outline-text-3" id="text-orge28b83c">
 <p>
 We have images \(\mathbf{x}\), and labels \(y\). In generative modeling, it&rsquo;s common to assume that each \(\mathbf{x}\) can be described by some lower-dimensional latent space \(\mathbf{z}\) (e.g. color, shape, etc.) We&rsquo;d like this latent <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> to be disentangled into several separate, semenatically meaningful factors, so we can control the influence of each on the classifier&rsquo;s decision. Usually in disentangled modeling, these factors are assumed to be statistically independent&#x2013; however, in practice this is a poor assumption. One rather contrived example is found in the colored MNIST dataset:<br />
 </p>
 
 
-<div id="org3ad92d2" class="figure">
+<div id="orgd9088e8" class="figure">
 <p><img src="colored_mnist.png" alt="example digits in colored MNIST dataset." /><br />
 </p>
 </div>
@@ -81,31 +95,9 @@ We might want to disentangle digit shape from color; however, in the train fold,
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgfb31f8c" class="outline-3">
-<h3 id="orgfb31f8c"><a href="nancy_kanwisher.html#ID-fb920b99-a2b5-4a20-bf7c-875727e6ae58">Nancy Kanwisher</a> <span class="backlinks-outline-path">(<i>A roadmap for research &gt; What&rsquo;s represented and computed in each region?</i>)</span></h3>
-<div class="outline-text-3" id="text-orgfb31f8c">
-<p>
-Astonishing success of convnets&#x2026;analogs between them and the brain perception. Model of how vision &ldquo;might&rdquo; work in the brain. (Whoa, that&rsquo;s fantastic to hear a NEUROSCIENTIST say that. We can consider them a model of the brain!)<br />
-</p>
-
-<p>
-Ratan Murty &#x2013; CNN-based models of FFA, PPA, EBA? Concretely &#x2013; get CNN activations, and see if you can predict the fusiform face area responses. really really high correlations.<br />
-</p>
-
-<p>
-Oh interesting &#x2013; then you can test the trained model on all of Imagenet, and see what it responds to&#x2026;ONLY faces. damn.<br />
-</p>
-
-<p>
-LMAO can feed things into GANs too.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgfddc78b" class="outline-3">
-<h3 id="orgfddc78b"><a href="philosophy.html#ID-091329e5-7896-4975-b88b-99b30f4dd482">🧐 philosophy</a></h3>
-<div class="outline-text-3" id="text-orgfddc78b">
+<div id="outline-container-orga1fd6a1" class="outline-3">
+<h3 id="orga1fd6a1"><a href="philosophy.html#ID-091329e5-7896-4975-b88b-99b30f4dd482">🧐 philosophy</a></h3>
+<div class="outline-text-3" id="text-orga1fd6a1">
 <blockquote>
 <p>
 The aim of philosophy, abstractly formulated, is to understand how things in the broadest possible sense of the term hang together in the broadest possible sense of the term.<br />
@@ -133,10 +125,9 @@ Image: Gosper glider gun in <a href="game_of_life.html#ID-918b7900-d37d-4d92-a90
 </ul>
 </div>
 </div>
-
-<div id="outline-container-orgdf3125e" class="outline-3">
-<h3 id="orgdf3125e"><a href="cs224w_machine_learning_with_graphs.html#ID-da69965b-ad50-45ad-9e81-b8593e7de09e">Why Graphs?</a> <span class="backlinks-outline-path">(<i>Introduction &gt; Why Graphs?</i>)</span></h3>
-<div class="outline-text-3" id="text-orgdf3125e">
+<div id="outline-container-orgd8b8f9a" class="outline-3">
+<h3 id="orgd8b8f9a"><a href="cs224w_machine_learning_with_graphs.html#ID-da69965b-ad50-45ad-9e81-b8593e7de09e">Why Graphs?</a> <span class="backlinks-outline-path">(<i>Introduction &gt; Why Graphs?</i>)</span></h3>
+<div class="outline-text-3" id="text-orgd8b8f9a">
 <p>
 <a href="graphs.html#ID-5705ba04-b296-4446-824b-3551d7bd8a09">Graphs</a> are a general language for describing and analyzing entities with relationships/interactions. Many domains have a natural relational structure, that lends themselves to a graph <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a>:<br />
 </p>
@@ -149,34 +140,47 @@ Image: Gosper glider gun in <a href="game_of_life.html#ID-918b7900-d37d-4d92-a90
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org8641e06" class="outline-3">
-<h3 id="org8641e06"><a href="cs224w_machine_learning_with_graphs.html#ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c">Graph Representations</a> <span class="backlinks-outline-path">(<i>Graph Representations</i>)</span></h3>
-<div class="outline-text-3" id="text-org8641e06">
+<div id="outline-container-org6d32aa1" class="outline-3">
+<h3 id="org6d32aa1"><a href="cs224w_machine_learning_with_graphs.html#ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c">Graph Representations</a> <span class="backlinks-outline-path">(<i>Graph Representations</i>)</span></h3>
+<div class="outline-text-3" id="text-org6d32aa1">
 <p>
 A few different traditional graph representations we can use.<br />
 </p>
 </div>
 </div>
-
-<div id="outline-container-org9ce5669" class="outline-3">
-<h3 id="org9ce5669"><a href="towards_causal_representation_learning.html#ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922">What causes changes in distribution?</a> <span class="backlinks-outline-path">(<i>What causes changes in distribution?</i>)</span></h3>
-<div class="outline-text-3" id="text-org9ce5669">
+<div id="outline-container-org3a9831f" class="outline-3">
+<h3 id="org3a9831f"><a href="towards_causal_representation_learning.html#ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922">What causes changes in distribution?</a> <span class="backlinks-outline-path">(<i>What causes changes in distribution?</i>)</span></h3>
+<div class="outline-text-3" id="text-org3a9831f">
 <p>
 hypothesis to replace i.i.d. assumption: changes in distribution = consequence of an <b>intervention</b> on one/few <b>causes</b> /mechanisms. So, not identically distributed, but pretty similar, if you&rsquo;re in the right high-level <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> space. (E.g. if you put shaded glasses on, all the pixels change in basic RGB space &#x2013; but in some high-level semantic space, only one bit changed!)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org9ac48a7" class="outline-3">
+<h3 id="org9ac48a7"><a href="nancy_kanwisher.html#ID-fb920b99-a2b5-4a20-bf7c-875727e6ae58">Nancy Kanwisher</a> <span class="backlinks-outline-path">(<i>A roadmap for research &gt; What&rsquo;s represented and computed in each region?</i>)</span></h3>
+<div class="outline-text-3" id="text-org9ac48a7">
+<p>
+Astonishing success of convnets&#x2026;analogs between them and the brain perception. Model of how vision &ldquo;might&rdquo; work in the brain. (Whoa, that&rsquo;s fantastic to hear a NEUROSCIENTIST say that. We can consider them a model of the brain!)<br />
+</p>
+
+<p>
+Ratan Murty &#x2013; CNN-based models of FFA, PPA, EBA? Concretely &#x2013; get CNN activations, and see if you can predict the fusiform face area responses. really really high correlations.<br />
+</p>
+
+<p>
+Oh interesting &#x2013; then you can test the trained model on all of Imagenet, and see what it responds to&#x2026;ONLY faces. damn.<br />
+</p>
+
+<p>
+LMAO can feed things into GANs too.<br />
 </p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

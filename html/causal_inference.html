@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:32 -->
+<!-- 2025-07-26 Sat 11:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>causal inference</title>
@@ -11,65 +11,79 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">causal inference
 <br />
-<span class="subtitle">Last modified on May 09, 2022</span>
+<span class="subtitle">Last tended to on May 09, 2022</span>
 </h1>
-
 <div id="outline-container-ID-d4b17339-7852-4eb6-a399-24e47b354a6c" class="outline-2">
 <h2 id="ID-d4b17339-7852-4eb6-a399-24e47b354a6c">observation</h2>
-<div class="outline-text-2" id="text-org45a66e1">
+<div class="outline-text-2" id="text-orga2eb1d1">
 </div>
-
-<div id="outline-container-orgce9df65" class="outline-3 references">
-<h3 id="orgce9df65">Links to &ldquo;observation&rdquo;</h3>
-<div class="outline-text-3" id="text-orgce9df65">
+<div id="outline-container-orgf5e0a49" class="outline-3 references">
+<h3 id="orgf5e0a49">Links to &ldquo;observation&rdquo;</h3>
+<div class="outline-text-3" id="text-orgf5e0a49">
 </div>
-<div id="outline-container-org7351a40" class="outline-4">
-<h4 id="org7351a40"><a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a></h4>
-<div class="outline-text-4" id="text-org7351a40">
+<div id="outline-container-org31915d2" class="outline-4">
+<h4 id="org31915d2"><a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a></h4>
+<div class="outline-text-4" id="text-org31915d2">
 <p>
 Supervised learning is an example of <a href="#ID-d4b17339-7852-4eb6-a399-24e47b354a6c">observational</a> inference &#x2013; we&rsquo;re just looking for associations between variables \(X\) and \(Y\). Aka, we&rsquo;re just learning \(P(Y|X)\).<br />
 </p>
@@ -85,30 +99,42 @@ My goal now is to deeply understand the issues at hand in this thread. I found h
 </div>
 </div>
 </div>
-
-
 <div id="outline-container-ID-d68c5093-d6d6-43b8-a48d-629ade9293b6" class="outline-2">
 <h2 id="ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</h2>
-<div class="outline-text-2" id="text-org03d00f7">
+<div class="outline-text-2" id="text-orgcb25fd4">
 </div>
-
-<div id="outline-container-org3f83f41" class="outline-3 references">
-<h3 id="org3f83f41">Links to &ldquo;intervention&rdquo;</h3>
-<div class="outline-text-3" id="text-org3f83f41">
+<div id="outline-container-org0b670c0" class="outline-3 references">
+<h3 id="org0b670c0">Links to &ldquo;intervention&rdquo;</h3>
+<div class="outline-text-3" id="text-org0b670c0">
 </div>
-<div id="outline-container-org969cc26" class="outline-4">
-<h4 id="org969cc26"><a href="ablation_studies.html#ID-766f764c-818b-41ff-a7ed-02642696a830">ablation studies</a></h4>
-<div class="outline-text-4" id="text-org969cc26">
+<div id="outline-container-org8142daf" class="outline-4">
+<h4 id="org8142daf"><a href="ablation_studies.html#ID-766f764c-818b-41ff-a7ed-02642696a830">ablation studies</a></h4>
+<div class="outline-text-4" id="text-org8142daf">
 <p>
 Ablation studies are effectively using <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">interventions</a> (removing parts of your system) to reveal the underlying causal structure of your system. Francois Chollet (creator of Keras) writes about this being useful in a <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> context:<br />
 </p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ablation studies are crucial for deep learning research -- can&#39;t stress this enough.<br><br>Understanding causality in your system is the most straightforward way to generate reliable knowledge (the goal of any research). And ablation is a very low-effort way to look into causality.</p>&mdash; François Chollet (@fchollet) <a href="https://twitter.com/fchollet/status/1012721582148550662?ref_src=twsrc%5Etfw">June 29, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
-
-<div id="outline-container-org5a83538" class="outline-4">
-<h4 id="org5a83538"><a href="nancy_kanwisher.html#ID-fb920b99-a2b5-4a20-bf7c-875727e6ae58">Nancy Kanwisher</a> <span class="backlinks-outline-path">(<i>A roadmap for research &gt; Causal role?</i>)</span></h4>
-<div class="outline-text-4" id="text-org5a83538">
+<div id="outline-container-org4ff2aef" class="outline-4">
+<h4 id="org4ff2aef"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a> <span class="backlinks-outline-path">(<i>Independent mechanisms</i>)</span></h4>
+<div class="outline-text-4" id="text-org4ff2aef">
+<p>
+Hypothesis: We can explain the world by the composition of informationally independent pieces/modules/mechanisms. (Note: not statistically independent, but independent s.t. any causal <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a> would affect just one such mechanism.)<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orge1bdf28" class="outline-4">
+<h4 id="orge1bdf28"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a> <span class="backlinks-outline-path">(<i>Causal induction from interventional data</i>)</span></h4>
+<div class="outline-text-4" id="text-orge1bdf28">
+<p>
+How to handle unknown <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a>? <i>infer</i> it.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org16dae08" class="outline-4">
+<h4 id="org16dae08"><a href="nancy_kanwisher.html#ID-fb920b99-a2b5-4a20-bf7c-875727e6ae58">Nancy Kanwisher</a> <span class="backlinks-outline-path">(<i>A roadmap for research &gt; Causal role?</i>)</span></h4>
+<div class="outline-text-4" id="text-org16dae08">
 <p>
 fMRI is nice&#x2026;but what&rsquo;s the <i>causal</i> role of these regions? We don&rsquo;t just want correlations of brain activations &amp; activities.<br />
 </p>
@@ -130,41 +156,19 @@ Stimulated color regions &#x2013; he saw a rainbow (wtfff)<br />
 </p>
 </div>
 </div>
-
-<div id="outline-container-org62f2d02" class="outline-4">
-<h4 id="org62f2d02"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a> <span class="backlinks-outline-path">(<i>Independent mechanisms</i>)</span></h4>
-<div class="outline-text-4" id="text-org62f2d02">
-<p>
-Hypothesis: We can explain the world by the composition of informationally independent pieces/modules/mechanisms. (Note: not statistically independent, but independent s.t. any causal <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a> would affect just one such mechanism.)<br />
-</p>
 </div>
 </div>
-
-<div id="outline-container-orgd7fe2cd" class="outline-4">
-<h4 id="orgd7fe2cd"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a> <span class="backlinks-outline-path">(<i>Causal induction from interventional data</i>)</span></h4>
-<div class="outline-text-4" id="text-orgd7fe2cd">
-<p>
-How to handle unknown <a href="#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a>? <i>infer</i> it.<br />
-</p>
-</div>
-</div>
-</div>
-</div>
-
-
 <div id="outline-container-ID-1f3f1a31-ff89-4c05-8c82-64888887f45e" class="outline-2">
 <h2 id="ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</h2>
-<div class="outline-text-2" id="text-orgbf4c680">
+<div class="outline-text-2" id="text-org835f9ce">
 </div>
-
-
-<div id="outline-container-org43d26a0" class="outline-3 references">
-<h3 id="org43d26a0">Links to &ldquo;counterfactual&rdquo;</h3>
-<div class="outline-text-3" id="text-org43d26a0">
+<div id="outline-container-org1f3dffe" class="outline-3 references">
+<h3 id="org1f3dffe">Links to &ldquo;counterfactual&rdquo;</h3>
+<div class="outline-text-3" id="text-org1f3dffe">
 </div>
-<div id="outline-container-org91679d6" class="outline-4">
-<h4 id="org91679d6"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
-<div class="outline-text-4" id="text-org91679d6">
+<div id="outline-container-org8f634a9" class="outline-4">
+<h4 id="org8f634a9"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
+<div class="outline-text-4" id="text-org8f634a9">
 <p>
 <a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
 </p>
@@ -174,10 +178,9 @@ This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f
 </p>
 </div>
 </div>
-
-<div id="outline-container-org6b89e1f" class="outline-4">
-<h4 id="org6b89e1f"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
-<div class="outline-text-4" id="text-org6b89e1f">
+<div id="outline-container-orged58bdb" class="outline-4">
+<h4 id="orged58bdb"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h4>
+<div class="outline-text-4" id="text-orged58bdb">
 <p>
 <a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
 </p>
@@ -191,13 +194,8 @@ This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

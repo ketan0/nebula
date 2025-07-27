@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:33 -->
+<!-- 2025-07-26 Sat 11:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>simplicity</title>
@@ -11,51 +11,67 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">simplicity
 <br />
-<span class="subtitle">Last modified on September 01, 2021</span>
+<span class="subtitle">Last tended to on September 01, 2021</span>
 </h1>
 <blockquote>
 <p>
@@ -66,24 +82,21 @@ Simplicity is a great virtue, but it requires hard work to achieve it and educat
 <p>
 It seems like as life goes on, <a href="complexity.html#ID-9648399a-daf3-44a0-8612-a3d84b99d0c1">complexity</a> just kinda accumulates sometimes. In some cases it might be unavoidable &#x2013; we grow older and have more responsibilities, a codebase matures and takes on more functionality, etc. But it seems like simplicity is a good ideal to strive for, in certain ways.<br />
 </p>
-
-
-<div id="outline-container-org634b83e" class="outline-2 references">
-<h2 id="org634b83e">Links to &ldquo;simplicity&rdquo;</h2>
-<div class="outline-text-2" id="text-org634b83e">
+<div id="outline-container-orgbd453e5" class="outline-2 references">
+<h2 id="orgbd453e5">Links to &ldquo;simplicity&rdquo;</h2>
+<div class="outline-text-2" id="text-orgbd453e5">
 </div>
-<div id="outline-container-orge1e28e1" class="outline-3">
-<h3 id="orge1e28e1"><a href="rules_of_thumb.html#ID-748e3479-cb1f-4bf9-a780-2aad2978a90c">Keep It Simple Stupid (KISS)</a> <span class="backlinks-outline-path">(<i>Keep It Simple Stupid (KISS)</i>)</span></h3>
-<div class="outline-text-3" id="text-orge1e28e1">
+<div id="outline-container-org357b913" class="outline-3">
+<h3 id="org357b913"><a href="rules_of_thumb.html#ID-748e3479-cb1f-4bf9-a780-2aad2978a90c">Keep It Simple Stupid (KISS)</a> <span class="backlinks-outline-path">(<i>Keep It Simple Stupid (KISS)</i>)</span></h3>
+<div class="outline-text-3" id="text-org357b913">
 <p>
 Related to the idea of constraints supporting creativity&#x2013;dead <a href="simplicity.html#ID-0dc3bc78-df96-4240-a6be-beb71e6074cc">simple</a> things, done <i>again and again</i> are extremely powerful.<br />
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgdbfe5ba" class="outline-3">
-<h3 id="orgdbfe5ba"><a href="rules_of_thumb.html#ID-e18ffcb8-f4cf-4d42-a4d7-8e88f7264f4e">Start simple and workable, and then unfold to something more complex.</a> <span class="backlinks-outline-path">(<i>Start simple and workable, and then unfold to something more complex.</i>)</span></h3>
-<div class="outline-text-3" id="text-orgdbfe5ba">
+<div id="outline-container-orgf0f4d46" class="outline-3">
+<h3 id="orgf0f4d46"><a href="rules_of_thumb.html#ID-e18ffcb8-f4cf-4d42-a4d7-8e88f7264f4e">Start simple and workable, and then unfold to something more complex.</a> <span class="backlinks-outline-path">(<i>Start simple and workable, and then unfold to something more complex.</i>)</span></h3>
+<div class="outline-text-3" id="text-orgf0f4d46">
 <p>
 By induction, if you can progress from complexity \(k\) to \(k + 1\), you can progress infinitely.<br />
 </p>
@@ -105,10 +118,9 @@ cc: <a href="encouraging_good_patterns_of_thinking.html#ID-d671771e-c611-4a1c-8c
 </p>
 </div>
 </div>
-
-<div id="outline-container-org4327039" class="outline-3">
-<h3 id="org4327039"><a href="life_philosophy.html#ID-bc3b4ee4-b1b4-4b1c-a44b-c5785c5cafe5">life philosophy</a></h3>
-<div class="outline-text-3" id="text-org4327039">
+<div id="outline-container-orge931c1d" class="outline-3">
+<h3 id="orge931c1d"><a href="life_philosophy.html#ID-bc3b4ee4-b1b4-4b1c-a44b-c5785c5cafe5">life philosophy</a></h3>
+<div class="outline-text-3" id="text-orge931c1d">
 <p>
 Thinking about the <a href="philosophy.html#ID-091329e5-7896-4975-b88b-99b30f4dd482">philosophy</a> of how we should live our lives.<br />
 </p>
@@ -120,21 +132,23 @@ Some guiding principles:<br />
 <ul class="org-ul">
 <li><a href="simplicity.html#ID-0dc3bc78-df96-4240-a6be-beb71e6074cc">simplicity</a><br /></li>
 <li>joy<br /></li>
-<li>following curiosities deeply<br /></li>
-<li>active/outward kindess<br /></li>
+<li>truly &rsquo;following my nose&rsquo; / letting bottom-up curiosity take me places<br /></li>
+<li>focus your time and energy on what you want to see more of<br /></li>
+<li><p>
+active/outward kindess<br />
+</p>
+
+<p>
+hmm ok i think this is related to <a href="wisdom.html#ID-bacd35cd-fbfe-4e43-ad6a-cee53e0bffe0">modern wisdom</a><br />
+</p></li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

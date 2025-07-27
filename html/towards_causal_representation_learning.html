@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:37 -->
+<!-- 2025-07-26 Sat 11:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Towards Causal Representation Learning</title>
@@ -11,6 +11,9 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -20,21 +23,23 @@
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">Towards Causal Representation Learning
 <br />
-<span class="subtitle">Last modified on May 16, 2022</span>
+<span class="subtitle">Last tended to on May 16, 2022</span>
 </h1>
 <p>
 Yoshua Bengio <a href="https://www.youtube.com/watch?v=rKZJ0TJWvTk">talk</a>. Also, the associated <a href="https://arxiv.org/abs/2102.11107">paper</a>.<br />
@@ -55,26 +60,25 @@ But&#x2026;what assumption can we replace it with, then?<br />
 <p>
 how does the brain break knowledge apart into &ldquo;pieces&rdquo; that can be reused? =&gt; <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a> (thinking decomposition into helper functions in programming.) Examples of compositionality include<br />
 </p>
-
-<div id="outline-container-orge94e691" class="outline-2">
-<h2 id="orge94e691">Systematic Generalization</h2>
-<div class="outline-text-2" id="text-orge94e691">
+<div id="outline-container-org1fe6986" class="outline-2">
+<h2 id="org1fe6986">Systematic Generalization</h2>
+<div class="outline-text-2" id="text-org1fe6986">
 <p>
 Current DL methods overfit the training <b>distribution</b>. That is, if they encounter OOD data, they will perform poorly.<br />
 </p>
 </div>
-<div id="outline-container-org6f0c967" class="outline-3">
-<h3 id="org6f0c967">Conscious processing helps humans deal with OOD settings</h3>
-<div class="outline-text-3" id="text-org6f0c967">
+<div id="outline-container-org03e33f0" class="outline-3">
+<h3 id="org03e33f0">Conscious processing helps humans deal with OOD settings</h3>
+<div class="outline-text-3" id="text-org03e33f0">
 <p>
 We are <i>agents</i>, and agents face a dynamic environment &#x2013; particularly because there are other agents! We want our knowledge to generalize across different places, times, input modalities, goals, etc.<br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org5f6153c" class="outline-2">
-<h2 id="org5f6153c">System 1 vs. System 2</h2>
-<div class="outline-text-2" id="text-org5f6153c">
+<div id="outline-container-org0bce7b5" class="outline-2">
+<h2 id="org0bce7b5">System 1 vs. System 2</h2>
+<div class="outline-text-2" id="text-org0bce7b5">
 <p>
 <b>System 1</b>: Intuitive, fast, unconscious, parallel, non-linguistic, habitual<br />
 <b>System 2</b>: Slow, logical, sequential, conscious, linguistic, algorithmic, planning, reasoning<br />
@@ -85,9 +89,9 @@ Current deep learning systems excel at <a href="thinking_fast_and_slow.html#ID-1
 </p>
 </div>
 </div>
-<div id="outline-container-orgfb6f6f1" class="outline-2">
-<h2 id="orgfb6f6f1">Implicit vs. verbalizable knowledge</h2>
-<div class="outline-text-2" id="text-orgfb6f6f1">
+<div id="outline-container-org3410344" class="outline-2">
+<h2 id="org3410344">Implicit vs. verbalizable knowledge</h2>
+<div class="outline-text-2" id="text-org3410344">
 <p>
 Most of our knowledge is implicit, and not verbalizable. Same for neural networks.<br />
 </p>
@@ -97,22 +101,22 @@ Verbalizable knowledge can be explicitly reasoned with, planned with.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org1ea31b2" class="outline-2">
-<h2 id="org1ea31b2">Independent mechanisms</h2>
-<div class="outline-text-2" id="text-org1ea31b2">
+<div id="outline-container-orgf3355a2" class="outline-2">
+<h2 id="orgf3355a2">Independent mechanisms</h2>
+<div class="outline-text-2" id="text-orgf3355a2">
 <p>
 Hypothesis: We can explain the world by the composition of informationally independent pieces/modules/mechanisms. (Note: not statistically independent, but independent s.t. any causal <a href="causal_inference.html#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a> would affect just one such mechanism.)<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org88f4011" class="outline-2">
-<h2 id="org88f4011">Some System 2 inductive priors</h2>
-<div class="outline-text-2" id="text-org88f4011">
+<div id="outline-container-org7a7a275" class="outline-2">
+<h2 id="org7a7a275">Some System 2 inductive priors</h2>
+<div class="outline-text-2" id="text-org7a7a275">
 <p>
 Sparse causal graph of high-level, semantically meaningful variables.<br />
 </p>
 
-<div id="orgda4af09" class="figure">
+<div id="org7444120" class="figure">
 <p><img src="origin_image.png" alt="Sparse factor graph." /><br />
 </p>
 </div>
@@ -142,9 +146,9 @@ Causal chains to explain things are short. (Interesting: connection to <a href="
 </p>
 </div>
 </div>
-<div id="outline-container-org270680f" class="outline-2">
-<h2 id="org270680f">What should the causal variables be?</h2>
-<div class="outline-text-2" id="text-org270680f">
+<div id="outline-container-org78906b0" class="outline-2">
+<h2 id="org78906b0">What should the causal variables be?</h2>
+<div class="outline-text-2" id="text-org78906b0">
 <p>
 Position and momentum of every particle: computationally intractable.<br />
 </p>
@@ -156,7 +160,7 @@ Take inspiration from scientists (and humans in general): we invent <i>high-leve
 </div>
 <div id="outline-container-ID-5b73a108-e867-4b92-9949-832840d52869" class="outline-2">
 <h2 id="ID-5b73a108-e867-4b92-9949-832840d52869">Agency to Guide Representation Learning &amp; Disentangling</h2>
-<div class="outline-text-2" id="text-orgec70b8e">
+<div class="outline-text-2" id="text-orgaab16f5">
 <p>
 (E. Bengio et al, 2017; V Thomas e al 2017; Kim et al ICML 2019)<br />
 </p>
@@ -176,23 +180,23 @@ Connected to the psychological notion of <a href="affordances.html#ID-0cebd56a-9
 </div>
 <div id="outline-container-ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922" class="outline-2">
 <h2 id="ID-b4821df4-68e3-43b1-a4f1-c212f0b8d922">What causes changes in distribution?</h2>
-<div class="outline-text-2" id="text-orgfa9daba">
+<div class="outline-text-2" id="text-org0c56cc4">
 <p>
 hypothesis to replace i.i.d. assumption: changes in distribution = consequence of an <b>intervention</b> on one/few <b>causes</b> /mechanisms. So, not identically distributed, but pretty similar, if you&rsquo;re in the right high-level <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> space. (E.g. if you put shaded glasses on, all the pixels change in basic RGB space &#x2013; but in some high-level semantic space, only one bit changed!)<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgd6ddfd6" class="outline-2">
-<h2 id="orgd6ddfd6">Causal induction from interventional data</h2>
-<div class="outline-text-2" id="text-orgd6ddfd6">
+<div id="outline-container-orgbeffc3e" class="outline-2">
+<h2 id="orgbeffc3e">Causal induction from interventional data</h2>
+<div class="outline-text-2" id="text-orgbeffc3e">
 <p>
 How to handle unknown <a href="causal_inference.html#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">intervention</a>? <i>infer</i> it.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org08d2b5d" class="outline-2">
-<h2 id="org08d2b5d">Thoughts, Consciousness, Language</h2>
-<div class="outline-text-2" id="text-org08d2b5d">
+<div id="outline-container-orgfffbf55" class="outline-2">
+<h2 id="orgfffbf55">Thoughts, Consciousness, Language</h2>
+<div class="outline-text-2" id="text-orgfffbf55">
 <p>
 If we want better NLP/NLU, we need to ground language in higher-level concepts.<br />
 </p>
@@ -202,9 +206,9 @@ If we want better NLP/NLU, we need to ground language in higher-level concepts.<
 </p>
 </div>
 </div>
-<div id="outline-container-org270fe93" class="outline-2">
-<h2 id="org270fe93">Core ingredient for conscious processing: <a href="attention.html#ID-2e1955ad-af09-4bcd-8b8d-4a0838e96365">attention</a></h2>
-<div class="outline-text-2" id="text-org270fe93">
+<div id="outline-container-orga721bae" class="outline-2">
+<h2 id="orga721bae">Core ingredient for conscious processing: <a href="attention.html#ID-2e1955ad-af09-4bcd-8b8d-4a0838e96365">attention</a></h2>
+<div class="outline-text-2" id="text-orga721bae">
 <p>
 Attention enables us to make <i>dynamic</i> connections to the various different &ldquo;modules&rdquo; in the brain. Creates competition between the modules for which deserves attention.<br />
 </p>
@@ -212,23 +216,23 @@ Attention enables us to make <i>dynamic</i> connections to the various different
 </div>
 <div id="outline-container-ID-899d0e14-02e5-4858-8f71-8e61e9f59ffa" class="outline-2">
 <h2 id="ID-899d0e14-02e5-4858-8f71-8e61e9f59ffa">Going from attention to <a href="consciousness.html#ID-4fba6fb0-e9cc-48b1-875c-a70e1a2dbc9b">consciousness</a></h2>
-<div class="outline-text-2" id="text-org53490d4">
+<div class="outline-text-2" id="text-org71bee77">
 <p>
 Dehaene et al. &#x2013; workspace theory of consciousness <a href="#citeproc_bib_item_1">[1]</a><br />
 </p>
 </div>
 </div>
-<div id="outline-container-org0dc8ab7" class="outline-2 no-display">
-<h2 id="org0dc8ab7">Link</h2>
-<div class="outline-text-2" id="text-org0dc8ab7">
+<div id="outline-container-org93413df" class="outline-2 no-display">
+<h2 id="org93413df">Link</h2>
+<div class="outline-text-2" id="text-org93413df">
 <p>
 <sup><a href="#citeproc_bib_item_2">[2]</a></sup><br />
 </p>
 </div>
 </div>
-<div id="outline-container-org01f5a76" class="outline-2">
-<h2 id="org01f5a76">Bibliography</h2>
-<div class="outline-text-2" id="text-org01f5a76">
+<div id="outline-container-orga7841f0" class="outline-2">
+<h2 id="orga7841f0">Bibliography</h2>
+<div class="outline-text-2" id="text-orga7841f0">
 <style>.csl-left-margin{float: left; padding-right: 0em;}
  .csl-right-inline{margin: 0 0 0 1em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
@@ -240,15 +244,13 @@ Dehaene et al. &#x2013; workspace theory of consciousness <a href="#citeproc_bib
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-orgbdc2f3f" class="outline-2 references">
-<h2 id="orgbdc2f3f">Links to &ldquo;Towards Causal Representation Learning&rdquo;</h2>
-<div class="outline-text-2" id="text-orgbdc2f3f">
+<div id="outline-container-org11154f5" class="outline-2 references">
+<h2 id="org11154f5">Links to &ldquo;Towards Causal Representation Learning&rdquo;</h2>
+<div class="outline-text-2" id="text-org11154f5">
 </div>
-<div id="outline-container-org53dd649" class="outline-3">
-<h3 id="org53dd649"><a href="paper_notes.html#ID-d4693400-d612-4531-96cb-da0b8d37b4b0">📄 paper notes</a></h3>
-<div class="outline-text-3" id="text-org53dd649">
+<div id="outline-container-org8fe3dd0" class="outline-3">
+<h3 id="org8fe3dd0"><a href="paper_notes.html#ID-d4693400-d612-4531-96cb-da0b8d37b4b0">📄 paper notes</a></h3>
+<div class="outline-text-3" id="text-org8fe3dd0">
 <p>
 <a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a><br />
 <a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a><br />
@@ -259,13 +261,8 @@ Dehaene et al. &#x2013; workspace theory of consciousness <a href="#citeproc_bib
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:32 -->
+<!-- 2025-07-26 Sat 11:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>This Page is Designed to Last: A Manifesto for Preserving Content on the Web</title>
@@ -11,6 +11,9 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -20,81 +23,82 @@
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">This Page is Designed to Last: A Manifesto for Preserving Content on the Web
 <br />
-<span class="subtitle">Last modified on March 02, 2022</span>
+<span class="subtitle">Last tended to on March 02, 2022</span>
 </h1>
 <p>
 <a href="https://jeffhuang.com/designed_to_last/">https://jeffhuang.com/designed_to_last/</a><br />
 </p>
-
-<div id="outline-container-orga547030" class="outline-2">
-<h2 id="orga547030">Is this site designed to last? <code>[71%]</code></h2>
-<div class="outline-text-2" id="text-orga547030">
+<div id="outline-container-org2d5f3d6" class="outline-2">
+<h2 id="org2d5f3d6">Is this site designed to last? <code>[71%]</code></h2>
+<div class="outline-text-2" id="text-org2d5f3d6">
 </div>
-<div id="outline-container-orge35e470" class="outline-3">
-<h3 id="orge35e470"><span class="done DONE">DONE</span> vanilla HTML/CSS</h3>
-<div class="outline-text-3" id="text-orge35e470">
+<div id="outline-container-orge3a036f" class="outline-3">
+<h3 id="orge3a036f"><span class="done DONE">DONE</span> vanilla HTML/CSS</h3>
+<div class="outline-text-3" id="text-orge3a036f">
 <p>
 Yup. 100%. (static site generated from org files.) I usually try and check MDN to see if the CSS I&rsquo;m using is kosher across browsers.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org5a82122" class="outline-3">
-<h3 id="org5a82122"><span class="done DONE">DONE</span> Don&rsquo;t minimize HTML</h3>
-<div class="outline-text-3" id="text-org5a82122">
+<div id="outline-container-org4a2bc85" class="outline-3">
+<h3 id="org4a2bc85"><span class="done DONE">DONE</span> Don&rsquo;t minimize HTML</h3>
+<div class="outline-text-3" id="text-org4a2bc85">
 <p>
 Yup.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orge50cd59" class="outline-3">
-<h3 id="orge50cd59"><span class="todo TODO">TODO</span> prefer one page over several</h3>
-<div class="outline-text-3" id="text-orge50cd59">
+<div id="outline-container-org2768e5e" class="outline-3">
+<h3 id="org2768e5e"><span class="todo TODO">TODO</span> prefer one page over several</h3>
+<div class="outline-text-3" id="text-org2768e5e">
 <p>
 Well&#x2026;.that would kind of defeat the purpose of a digital garden. So I haven&rsquo;t really done this one.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org5016a81" class="outline-3">
-<h3 id="org5016a81"><span class="done DONE">DONE</span> End all forms of hotlinking</h3>
-<div class="outline-text-3" id="text-org5016a81">
+<div id="outline-container-orgdda0379" class="outline-3">
+<h3 id="orgdda0379"><span class="done DONE">DONE</span> End all forms of hotlinking</h3>
+<div class="outline-text-3" id="text-orgdda0379">
 <p>
 On the rare occasion I insert a <a href="mathematics.html#ID-7b8a4962-28ca-48e5-95a7-d347292a6dca">math</a> snippet, MathJax is used to render that, served from a Cloudflare CDN, as is default for org =&gt; html export. Also the occasional tweet embed. Other than that, downloaded all the necessary JS/CSS. (Minimal JS anyways; mainly used for tippy&rsquo;s).<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org04b0894" class="outline-3">
-<h3 id="org04b0894"><span class="done DONE">DONE</span> Stick with native fonts</h3>
-<div class="outline-text-3" id="text-org04b0894">
+<div id="outline-container-org636cbe4" class="outline-3">
+<h3 id="org636cbe4"><span class="done DONE">DONE</span> Stick with native fonts</h3>
+<div class="outline-text-3" id="text-org636cbe4">
 <p>
 Switched to a <a href="https://systemfontstack.com/">system font stack.</a><br />
 </p>
 </div>
 </div>
-<div id="outline-container-org04613ca" class="outline-3">
-<h3 id="org04613ca"><span class="done DONE">DONE</span> Obsessively compress your images</h3>
-<div class="outline-text-3" id="text-org04613ca">
+<div id="outline-container-orgc58bc9f" class="outline-3">
+<h3 id="orgc58bc9f"><span class="done DONE">DONE</span> Obsessively compress your images</h3>
+<div class="outline-text-3" id="text-orgc58bc9f">
 <p>
 I mean, I don&rsquo;t really have many images on the site right now, lol. I want to have more visual imagery though, so potentially I can come back to this later.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org9bf78d8" class="outline-3">
-<h3 id="org9bf78d8"><span class="todo TODO">TODO</span> Eliminate broken URL risk</h3>
-<div class="outline-text-3" id="text-org9bf78d8">
+<div id="outline-container-orgc8b1371" class="outline-3">
+<h3 id="orgc8b1371"><span class="todo TODO">TODO</span> Eliminate broken URL risk</h3>
+<div class="outline-text-3" id="text-orgc8b1371">
 <p>
 Meh. I mean, hopefully I should be active enough with this website that I shouldn&rsquo;t have to care too much. That being said&#x2026;maybe I should think about this for future projects.<br />
 </p>
@@ -103,13 +107,8 @@ Meh. I mean, hopefully I should be active enough with this website that I should
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

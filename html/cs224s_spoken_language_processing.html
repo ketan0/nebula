@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:38 -->
+<!-- 2025-07-26 Sat 11:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CS224s: Spoken Language Processing</title>
@@ -11,6 +11,9 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -20,32 +23,33 @@
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">CS224s: Spoken Language Processing
 <br />
-<span class="subtitle">Last modified on May 19, 2022</span>
+<span class="subtitle">Last tended to on May 19, 2022</span>
 </h1>
-
-<div id="outline-container-org980b813" class="outline-2">
-<h2 id="org980b813">Phonetics</h2>
-<div class="outline-text-2" id="text-org980b813">
+<div id="outline-container-org886aa7a" class="outline-2">
+<h2 id="org886aa7a">Phonetics</h2>
+<div class="outline-text-2" id="text-org886aa7a">
 </div>
-<div id="outline-container-org4bb6ce4" class="outline-3">
-<h3 id="org4bb6ce4">How do we form sounds?</h3>
-<div class="outline-text-3" id="text-org4bb6ce4">
+<div id="outline-container-orga066106" class="outline-3">
+<h3 id="orga066106">How do we form sounds?</h3>
+<div class="outline-text-3" id="text-orga066106">
 
-<div id="org1a66ea3" class="figure">
+<div id="org53c885e" class="figure">
 <p><img src="voice_tract.png" alt="voice_tract.png" width="400px" /><br />
 </p>
 </div>
@@ -55,28 +59,28 @@ Things depend on the positioning of the (tip/back) of tongue, lips<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org9f06e13" class="outline-3">
-<h3 id="org9f06e13">ARPAbet</h3>
-<div class="outline-text-3" id="text-org9f06e13">
+<div id="outline-container-orgd8bb74b" class="outline-3">
+<h3 id="orgd8bb74b">ARPAbet</h3>
+<div class="outline-text-3" id="text-orgd8bb74b">
 
-<div id="org158875e" class="figure">
+<div id="org4f6231f" class="figure">
 <p><img src="arpabet.png" alt="arpabet.png" width="500px" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orga5367dd" class="outline-3">
-<h3 id="orga5367dd">Sound waves are Longitudinal waves</h3>
-<div class="outline-text-3" id="text-orga5367dd">
+<div id="outline-container-orgf285202" class="outline-3">
+<h3 id="orgf285202">Sound waves are Longitudinal waves</h3>
+<div class="outline-text-3" id="text-orgf285202">
 <p>
 Vocal tract is basically air moving through a tube, with a certain size/length of the tube.<br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org7874863" class="outline-2">
-<h2 id="org7874863">Chatbots vs. Dialog systems</h2>
-<div class="outline-text-2" id="text-org7874863">
+<div id="outline-container-orge8277db" class="outline-2">
+<h2 id="orge8277db">Chatbots vs. Dialog systems</h2>
+<div class="outline-text-2" id="text-orge8277db">
 <p>
 The goal of chatbots is to produce natural, human-like conversations.<br />
 </p>
@@ -88,59 +92,54 @@ The goal of <b>dialog systems</b> is to accomplish a particular task. Naturalnes
 </div>
 <div id="outline-container-ID-5cf38ce7-fa4a-4f64-9b27-86005cb2cb0c" class="outline-2">
 <h2 id="ID-5cf38ce7-fa4a-4f64-9b27-86005cb2cb0c">Text-to-speech (TTS)</h2>
-<div class="outline-text-2" id="text-org81e34b6">
+<div class="outline-text-2" id="text-org699ee83">
 </div>
-<div id="outline-container-org4b6c51b" class="outline-3">
-<h3 id="org4b6c51b">Tacotron</h3>
-<div class="outline-text-3" id="text-org4b6c51b">
+<div id="outline-container-org585ccf6" class="outline-3">
+<h3 id="org585ccf6">Tacotron</h3>
+<div class="outline-text-3" id="text-org585ccf6">
 <p>
 classic encoder decoder model w/ attention<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgf201d44" class="outline-3">
-<h3 id="orgf201d44">FastSpeech</h3>
-<div class="outline-text-3" id="text-orgf201d44">
+<div id="outline-container-org610bfee" class="outline-3">
+<h3 id="org610bfee">FastSpeech</h3>
+<div class="outline-text-3" id="text-org610bfee">
 <p>
 classic seq2seq transformer &#x2013; end-to-end<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org06d7a38" class="outline-3">
-<h3 id="org06d7a38">Vocoders (spectrograms =&gt; speech)</h3>
+<div id="outline-container-orgb832fd4" class="outline-3">
+<h3 id="orgb832fd4">Vocoders (spectrograms =&gt; speech)</h3>
 </div>
-<div id="outline-container-orgfe7e19b" class="outline-3">
-<h3 id="orgfe7e19b">GlowTTS</h3>
-<div class="outline-text-3" id="text-orgfe7e19b">
+<div id="outline-container-org2affa11" class="outline-3">
+<h3 id="org2affa11">GlowTTS</h3>
+<div class="outline-text-3" id="text-org2affa11">
 <p>
 Combines a lot of the good things: flexiblity of Tacotron, speed of FastSpeech<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org00f06c7" class="outline-3">
-<h3 id="org00f06c7">VITS</h3>
+<div id="outline-container-org7ea2b75" class="outline-3">
+<h3 id="org7ea2b75">VITS</h3>
 </div>
-<div id="outline-container-orgf8a030b" class="outline-3">
-<h3 id="orgf8a030b">Generative spoken language modeling</h3>
-<div class="outline-text-3" id="text-orgf8a030b">
+<div id="outline-container-orgf7178b8" class="outline-3">
+<h3 id="orgf7178b8">Generative spoken language modeling</h3>
+<div class="outline-text-3" id="text-orgf7178b8">
 <p>
 wav2vec2 + GPT-style transformer = you can have conversations entirely in the audio space! audio-to-audio models (rather than using ASR)<br />
 </p>
 </div>
-<div id="outline-container-org166ef38" class="outline-4">
-<h4 id="org166ef38"><a href="https://speechbot.github.io">https://speechbot.github.io</a></h4>
+<div id="outline-container-org61875a6" class="outline-4">
+<h4 id="org61875a6"><a href="https://speechbot.github.io">https://speechbot.github.io</a></h4>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

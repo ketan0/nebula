@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-13 Sun 14:22 -->
+<!-- 2025-07-26 Sat 11:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>composability</title>
@@ -11,6 +11,9 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -21,11 +24,11 @@
 <header>
     <script src="setup-initial-theme.js"></script>
     <nav style="display: flex; justify-content: space-between; align-items: center;">
-        <a href="/" style="color: inherit; text-decoration: none;">Ketan Agrawal</a>
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
         <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
-            <li style="margin-left: 1rem;"><a href="/posts.html">posts</a></li>
-            <li style="margin-left: 1rem;"><a href="/thoughts.html">{thoughts}</a></li>
-            <li style="margin-left: 1rem;"><a href="/experiments.html">experiments</a></li>
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
             <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
                 <label id="theme-switcher-label" for="theme-switcher"></label>
             </li>
@@ -36,43 +39,40 @@
 <div id="content" class="content">
 <h1 class="title">composability
 <br />
-<span class="subtitle">Last modified on October 13, 2024</span>
+<span class="subtitle">Last tended to on October 13, 2024</span>
 </h1>
 <p>
 You have a set of reusable pieces that can be combined to form different, interesting things.<br />
 </p>
+<div id="outline-container-org729a121" class="outline-2">
+<h2 id="org729a121">Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programs</a> into modular, reusable unit is one example of this.</h2>
+<div class="outline-text-2" id="text-org729a121">
 
-<div id="outline-container-org3d04b83" class="outline-2">
-<h2 id="org3d04b83">Decomposition of <a href="programming.html#ID-0997b060-ee05-458e-beed-3494675c879d">programs</a> into modular, reusable unit is one example of this.</h2>
-<div class="outline-text-2" id="text-org3d04b83">
-
-<div id="org8cad8ec" class="figure">
+<div id="org1836c6f" class="figure">
 <p><img src="decomposition.jpg" alt="Static, Dynamic, and Requirements Models for Systems Partition (as an example of decomposition in programming.)" width="250" /><br />
 </p>
 </div>
 </div>
 </div>
+<div id="outline-container-org4d8d576" class="outline-2">
+<h2 id="org4d8d576">Some methodical activities, such as making breakfast, decompose well into modular activities as well:</h2>
+<div class="outline-text-2" id="text-org4d8d576">
 
-<div id="outline-container-org34ae8b7" class="outline-2">
-<h2 id="org34ae8b7">Some methodical activities, such as making breakfast, decompose well into modular activities as well:</h2>
-<div class="outline-text-2" id="text-org34ae8b7">
-
-<div id="org42c104e" class="figure">
+<div id="orgd368aec" class="figure">
 <p><img src="breakfast.png" alt="tree of the decomposition of making breakfast into &quot;make toast,&quot; &quot;make tea,&quot; etc." /><br />
 </p>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org9c82eea" class="outline-2">
-<h2 id="org9c82eea">A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> example of compositionality</h2>
-<div class="outline-text-2" id="text-org9c82eea">
+<div id="outline-container-org07346a0" class="outline-2">
+<h2 id="org07346a0">A <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> example of compositionality</h2>
+<div class="outline-text-2" id="text-org07346a0">
 <p>
 is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model&rsquo;s early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
 </p>
 
 
-<div id="orgd33c5f7" class="figure">
+<div id="orgde879e9" class="figure">
 <p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
 </p>
 </div>
@@ -88,10 +88,9 @@ One step towards compositionality is the idea of neuro-symbolic models. Combinin
 </p>
 </div>
 </div>
-
-<div id="outline-container-orga3cc1f2" class="outline-2">
-<h2 id="orga3cc1f2">compositionality in the human mind</h2>
-<div class="outline-text-2" id="text-orga3cc1f2">
+<div id="outline-container-orgab9c522" class="outline-2">
+<h2 id="orgab9c522">compositionality in the human mind</h2>
+<div class="outline-text-2" id="text-orgab9c522">
 <p>
 how do our brains combine simple concepts into more complex ones? Even though the input we receive is noisy and finite, we can (in theory) produce an unbounded number of sentences. <a href="https://reddit.com/r/BrandNewSentence">r/BrandNewSentence</a> is an entertaining example of this.<br />
 </p>
@@ -101,9 +100,9 @@ Related: <a href="#citeproc_bib_item_1">[1]</a><br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgc561ec8" class="outline-2">
-<h2 id="orgc561ec8">Bibliography</h2>
-<div class="outline-text-2" id="text-orgc561ec8">
+<div id="outline-container-orgb4057d5" class="outline-2">
+<h2 id="orgb4057d5">Bibliography</h2>
+<div class="outline-text-2" id="text-orgb4057d5">
 <style>.csl-left-margin{float: left; padding-right: 0em;}
  .csl-right-inline{margin: 0 0 0 1em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
@@ -112,15 +111,13 @@ Related: <a href="#citeproc_bib_item_1">[1]</a><br />
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org03912ca" class="outline-2 references">
-<h2 id="org03912ca">Links to &ldquo;composability&rdquo;</h2>
-<div class="outline-text-2" id="text-org03912ca">
+<div id="outline-container-orgf287990" class="outline-2 references">
+<h2 id="orgf287990">Links to &ldquo;composability&rdquo;</h2>
+<div class="outline-text-2" id="text-orgf287990">
 </div>
-<div id="outline-container-org80259e7" class="outline-3">
-<h3 id="org80259e7"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
-<div class="outline-text-3" id="text-org80259e7">
+<div id="outline-container-orgd60fea2" class="outline-3">
+<h3 id="orgd60fea2"><a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a></h3>
+<div class="outline-text-3" id="text-orgd60fea2">
 <p>
 <a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
 </p>
@@ -130,10 +127,9 @@ This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgc1d8303" class="outline-3">
-<h3 id="orgc1d8303"><a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a></h3>
-<div class="outline-text-3" id="text-orgc1d8303">
+<div id="outline-container-org6e8c3af" class="outline-3">
+<h3 id="org6e8c3af"><a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a></h3>
+<div class="outline-text-3" id="text-org6e8c3af">
 <p>
 I think it can be really good. Fairly related to <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a>. Will have to hash out what I think the difference is there.<br />
 </p>
@@ -169,19 +165,17 @@ But&#x2026;.is the <a href="brain.html#ID-4b0162cb-15ff-42fe-90dd-49d16df9bf44">
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgb4000aa" class="outline-3">
-<h3 id="orgb4000aa"><a href="concepts_and_compositionality_in_search_of_the_brain_s_language_of_thought_pubmed.html#ID-d77b968f-cd5d-485d-928f-07568642e8ec">Concepts and Compositionality: In Search of the Brain&rsquo;s Language of Thought</a></h3>
-<div class="outline-text-3" id="text-orgb4000aa">
+<div id="outline-container-org4bbac0a" class="outline-3">
+<h3 id="org4bbac0a"><a href="concepts_and_compositionality_in_search_of_the_brain_s_language_of_thought_pubmed.html#ID-d77b968f-cd5d-485d-928f-07568642e8ec">Concepts and Compositionality: In Search of the Brain&rsquo;s Language of Thought</a></h3>
+<div class="outline-text-3" id="text-org4bbac0a">
 <p>
 cc: <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a><br />
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgc6e1c00" class="outline-3">
-<h3 id="orgc6e1c00"><a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I&rsquo;m actively working on</a></h3>
-<div class="outline-text-3" id="text-orgc6e1c00">
+<div id="outline-container-org25de6db" class="outline-3">
+<h3 id="org25de6db"><a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I&rsquo;m actively working on</a></h3>
+<div class="outline-text-3" id="text-org25de6db">
 <p>
 Mentally bookmarking these pages &#x2013; think there is some interesting &ldquo;sauce&rdquo; to be gotten from each of these.<br />
 </p>
@@ -200,10 +194,9 @@ Mentally bookmarking these pages &#x2013; think there is some interesting &ldquo
 </p>
 </div>
 </div>
-
-<div id="outline-container-org60a2c53" class="outline-3">
-<h3 id="org60a2c53"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
-<div class="outline-text-3" id="text-org60a2c53">
+<div id="outline-container-orgeaafac8" class="outline-3">
+<h3 id="orgeaafac8"><a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a></h3>
+<div class="outline-text-3" id="text-orgeaafac8">
 <p>
 Yoshua Bengio <a href="https://www.youtube.com/watch?v=rKZJ0TJWvTk">talk</a>. Also, the associated <a href="https://arxiv.org/abs/2102.11107">paper</a>.<br />
 </p>
@@ -225,19 +218,17 @@ how does the brain break knowledge apart into &ldquo;pieces&rdquo; that can be r
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgd7b0337" class="outline-3">
-<h3 id="orgd7b0337"><a href="questions.html#ID-c2b46716-f6f5-48ee-87b9-c6a85acfb103">is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</a> <span class="backlinks-outline-path">(<i>is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</i>)</span></h3>
-<div class="outline-text-3" id="text-orgd7b0337">
+<div id="outline-container-org44a6ff1" class="outline-3">
+<h3 id="org44a6ff1"><a href="questions.html#ID-c2b46716-f6f5-48ee-87b9-c6a85acfb103">is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</a> <span class="backlinks-outline-path">(<i>is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</i>)</span></h3>
+<div class="outline-text-3" id="text-org44a6ff1">
 <p>
 thinking about this in relation to <a href="dynamic_programming.html#ID-e60c441f-deb9-4eca-8816-73e477b98c29">dynamic programming</a> &#x2013; I think it serves as a good metaphor for why it can be useful to think about the structure of the problems you&rsquo;re solving, and if there&rsquo;s any overlap / reuse that can occur&#x2026;.seems that this is also related to <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposition</a> / <a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a><br />
 </p>
 </div>
 </div>
-
-<div id="outline-container-org8d3e7a4" class="outline-3">
-<h3 id="org8d3e7a4"><a href="emacs_as_a_playground.html#ID-2e5f0c3e-ff4c-4e83-9e3f-758716d370b8">emacs as a playground</a> <span class="backlinks-outline-path">(<i>emacs provides an powerful set of primitives for editing text</i>)</span></h3>
-<div class="outline-text-3" id="text-org8d3e7a4">
+<div id="outline-container-orgba6bce7" class="outline-3">
+<h3 id="orgba6bce7"><a href="emacs_as_a_playground.html#ID-2e5f0c3e-ff4c-4e83-9e3f-758716d370b8">emacs as a playground</a> <span class="backlinks-outline-path">(<i>emacs provides an powerful set of primitives for editing text</i>)</span></h3>
+<div class="outline-text-3" id="text-orgba6bce7">
 <p>
 so, one reason i like emacs is that it provides an incredibly powerful set of primitives for editing text. these primitives are not just confined to the &rsquo;writing app&rsquo; or the &rsquo;coding app&rsquo; (though there is not really such a thing as an ‘app’ in emacs), but rather they are present throughout the whole system. kinda like how cmd-C and cmd-V work in every app, but generalized.<br />
 </p>
@@ -263,7 +254,7 @@ but then, perhaps even cooler, is that these primitives are like LEGO blocks, o
 <p>
 <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a><br />
 <a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a><br />
-composability <a href="decomposition">decomposition</a><br />
+<a href="private/20200228175006_decomposition.html#ID-650a6bb7-c7de-44ef-a328-ddc79a562a9e">decomposition</a><br />
 </p>
 </div>
 </div>

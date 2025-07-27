@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:33 -->
+<!-- 2025-07-26 Sat 11:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>♏️  emacs</title>
@@ -11,6 +11,9 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -20,103 +23,101 @@
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">♏️  emacs
 <br />
-<span class="subtitle">Last modified on May 16, 2022</span>
+<span class="subtitle">Last tended to on May 16, 2022</span>
 </h1>
 <p>
 I started using Emacs in January 2020, and it has undoubtedly changed the way I do work on my computer, and the way I think about computing in general.<br />
 </p>
-
-<div id="outline-container-orgbbb377a" class="outline-2">
-<h2 id="orgbbb377a">Things I really like about emacs</h2>
-<div class="outline-text-2" id="text-orgbbb377a">
+<div id="outline-container-org1182a4f" class="outline-2">
+<h2 id="org1182a4f">Things I really like about emacs</h2>
+<div class="outline-text-2" id="text-org1182a4f">
 </div>
-<div id="outline-container-org4800e3e" class="outline-3">
-<h3 id="org4800e3e">Emacs enables a personal framework of <a href="experimentation.html#ID-1096f874-fab2-4db1-88dc-b90740bf608a">experimentation</a>.</h3>
-<div class="outline-text-3" id="text-org4800e3e">
+<div id="outline-container-orgc3e35a0" class="outline-3">
+<h3 id="orgc3e35a0">Emacs enables a personal framework of <a href="experimentation.html#ID-1096f874-fab2-4db1-88dc-b90740bf608a">experimentation</a>.</h3>
+<div class="outline-text-3" id="text-orgc3e35a0">
 <p>
 It&rsquo;s completely hackable, which easily leads to an &ldquo;experimental&rdquo; mindset. I feel like people don&rsquo;t really try tweaking the default settings of things in important ways. Granted, you can get lost in customization, and tweaking every little aesthetic and all that&#x2026;but I believe that there have been several important ways that I&rsquo;ve been able to customize my workflow due to Emacs and the OSS that has built many different extensions for it.<br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org21d839b" class="outline-2">
-<h2 id="org21d839b">Cool configs</h2>
-<div class="outline-text-2" id="text-org21d839b">
+<div id="outline-container-org56d314d" class="outline-2">
+<h2 id="org56d314d">Cool configs</h2>
+<div class="outline-text-2" id="text-org56d314d">
 </div>
-<div id="outline-container-orge4df86f" class="outline-3">
-<h3 id="orge4df86f"><a href="https://gitlab.com/justinekizhak/dotfiles/blob/master/emacs/doom.d/config.org">justinekizhak</a></h3>
-<div class="outline-text-3" id="text-orge4df86f">
+<div id="outline-container-org2d34f21" class="outline-3">
+<h3 id="org2d34f21"><a href="https://gitlab.com/justinekizhak/dotfiles/blob/master/emacs/doom.d/config.org">justinekizhak</a></h3>
+<div class="outline-text-3" id="text-org2d34f21">
 <p>
 I like the motivation he gives for why emacs is so powerful. &ldquo;Emacs changes how you <i>think</i> about programming.&rdquo; I feel like this has been very true for me. It makes many other applications seem needlessly restrictive. It feels natural to have the entire OS be an introspectable operating system.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org19a7f11" class="outline-3">
-<h3 id="org19a7f11"><a href="https://github.com/larstvei/dot-emacs">larstvei</a></h3>
+<div id="outline-container-orge114549" class="outline-3">
+<h3 id="orge114549"><a href="https://github.com/larstvei/dot-emacs">larstvei</a></h3>
 </div>
-<div id="outline-container-org514e393" class="outline-3">
-<h3 id="org514e393"><a href="https://github.com/danielmai/.emacs.d/blob/master/config.org">danielmai</a></h3>
+<div id="outline-container-orga653554" class="outline-3">
+<h3 id="orga653554"><a href="https://github.com/danielmai/.emacs.d/blob/master/config.org">danielmai</a></h3>
 </div>
-<div id="outline-container-org9665da5" class="outline-3">
-<h3 id="org9665da5"><a href="https://tecosaur.github.io/emacs-config/config.html">tecosaur</a></h3>
+<div id="outline-container-org7fdbb40" class="outline-3">
+<h3 id="org7fdbb40"><a href="https://tecosaur.github.io/emacs-config/config.html">tecosaur</a></h3>
 </div>
-<div id="outline-container-org16b189a" class="outline-3">
-<h3 id="org16b189a"><a href="https://github.com/jethrokuan/dots/blob/master/.doom.d/config.el">jethro</a></h3>
+<div id="outline-container-org442ee45" class="outline-3">
+<h3 id="org442ee45"><a href="https://github.com/jethrokuan/dots/blob/master/.doom.d/config.el">jethro</a></h3>
 </div>
 </div>
-<div id="outline-container-org5200114" class="outline-2">
-<h2 id="org5200114">skills I am learning</h2>
-<div class="outline-text-2" id="text-org5200114">
+<div id="outline-container-orgafe8074" class="outline-2">
+<h2 id="orgafe8074">skills I am learning</h2>
+<div class="outline-text-2" id="text-orgafe8074">
 </div>
 <div id="outline-container-ID-d4ae4b67-706b-4977-9299-d3667eb940ed" class="outline-3">
 <h3 id="ID-d4ae4b67-706b-4977-9299-d3667eb940ed">become a master of <a href="debugging.html#ID-2baa1991-e3c3-4b37-8703-296cda53a9a0">debugging</a> in emacs</h3>
-<div class="outline-text-3" id="text-org6bf38d4">
+<div class="outline-text-3" id="text-orga31eebb">
 <p>
 Something crashing? Use <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Edebug.html">Edebug</a> to debug it. Something slow? You can easily <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Profiling.html">profile</a> it.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org808c992" class="outline-3">
-<h3 id="org808c992">lisp macros</h3>
-<div class="outline-text-3" id="text-org808c992">
+<div id="outline-container-orgc6252cf" class="outline-3">
+<h3 id="orgc6252cf">lisp macros</h3>
+<div class="outline-text-3" id="text-orgc6252cf">
 <p>
 Really powerful feature that allows one to define domain-specific syntax <i>within</i> Emacs Lisp. Examples I really like include <a href="https://github.com/alphapapa/org-ql">org-ql</a>, <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Rx-Notation.html">rx notation</a>, and so many more that enable someone to write expressive, parsimonious code in a <a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">bottom-up</a> fashion.<br />
 </p>
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org5a7e66f" class="outline-2 references">
-<h2 id="org5a7e66f">Links to &ldquo;♏️  emacs&rdquo;</h2>
-<div class="outline-text-2" id="text-org5a7e66f">
+<div id="outline-container-orgba07935" class="outline-2 references">
+<h2 id="orgba07935">Links to &ldquo;♏️  emacs&rdquo;</h2>
+<div class="outline-text-2" id="text-orgba07935">
 </div>
-<div id="outline-container-orge9d19f7" class="outline-3">
-<h3 id="orge9d19f7"><a href="org_mode.html#ID-b6a1ff64-eae1-4a6f-ab54-01ddfca5353d">org-mode</a></h3>
-<div class="outline-text-3" id="text-orge9d19f7">
+<div id="outline-container-org047330e" class="outline-3">
+<h3 id="org047330e"><a href="org_mode.html#ID-b6a1ff64-eae1-4a6f-ab54-01ddfca5353d">org-mode</a></h3>
+<div class="outline-text-3" id="text-org047330e">
 <p>
 An integral part of <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emacs</a> .<br />
 </p>
 </div>
 </div>
-
-<div id="outline-container-org57bb26b" class="outline-3">
-<h3 id="org57bb26b"><a href="cool_things.html#ID-d6a0e6b7-2ca2-4955-a6ac-8618fd642b5b">cool things</a></h3>
-<div class="outline-text-3" id="text-org57bb26b">
+<div id="outline-container-org0beab47" class="outline-3">
+<h3 id="org0beab47"><a href="cool_things.html#ID-d6a0e6b7-2ca2-4955-a6ac-8618fd642b5b">cool things</a></h3>
+<div class="outline-text-3" id="text-org0beab47">
 <p>
 Idk I think this is just gonna be a connector node for now??<br />
 </p>
@@ -126,10 +127,9 @@ Idk I think this is just gonna be a connector node for now??<br />
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgf462465" class="outline-3">
-<h3 id="orgf462465"><a href="humor.html#ID-d70b5661-a3ea-4b12-b67c-ac1c47550b76">humor</a></h3>
-<div class="outline-text-3" id="text-orgf462465">
+<div id="outline-container-org446cbc2" class="outline-3">
+<h3 id="org446cbc2"><a href="humor.html#ID-d70b5661-a3ea-4b12-b67c-ac1c47550b76">humor</a></h3>
+<div class="outline-text-3" id="text-org446cbc2">
 <p>
 what is humor? things that are unexpected, but in a &ldquo;humorous&rdquo; way? Ok, that&rsquo;s tautological. But still. definitely something that I want to think about, <a href="notes_i_m_actively_working_on.html#ID-4bba82cd-9443-4496-8896-81323093ec11">notes I&rsquo;m actively working on</a>.<br />
 </p>
@@ -139,17 +139,16 @@ As a kind of <a href="meta.html#ID-c244f543-2917-4b32-8bde-883a3e1d5361">meta</a
 </p>
 
 
-<div id="orgd85c298" class="figure">
+<div id="org87ae6eb" class="figure">
 <p><img src="journal_screenshot.png" alt="screenshot of an encrypted journal file, displayed the aforementioned striking-out behavior within the PGP text. Hey, if you figure out how to decrypt it, you can read my journal file for the day!" width="400" /><br />
 </p>
 <p><span class="figure-number">Figure 1: </span>Hey, if you figure out how to decrypt it, you can read what secrets I told to my journal today!</p>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org3694c72" class="outline-3">
-<h3 id="org3694c72"><a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a></h3>
-<div class="outline-text-3" id="text-org3694c72">
+<div id="outline-container-org507414c" class="outline-3">
+<h3 id="org507414c"><a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a></h3>
+<div class="outline-text-3" id="text-org507414c">
 <p>
 I think it can be really good. Fairly related to <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a>. Will have to hash out what I think the difference is there.<br />
 </p>
@@ -185,19 +184,17 @@ But&#x2026;.is the <a href="brain.html#ID-4b0162cb-15ff-42fe-90dd-49d16df9bf44">
 </p>
 </div>
 </div>
-
-<div id="outline-container-org7f887a7" class="outline-3">
-<h3 id="org7f887a7"><a href="emacs_config.html#ID-ad1d3f2f-a727-4e53-907b-c7215df8d35f">⚡️ emacs config</a></h3>
-<div class="outline-text-3" id="text-org7f887a7">
+<div id="outline-container-org9969a71" class="outline-3">
+<h3 id="org9969a71"><a href="emacs_config.html#ID-ad1d3f2f-a727-4e53-907b-c7215df8d35f">⚡️ emacs config</a></h3>
+<div class="outline-text-3" id="text-org9969a71">
 <p>
 <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">♏️ emacs</a><br />
 </p>
 </div>
 </div>
-
-<div id="outline-container-org459d439" class="outline-3">
-<h3 id="org459d439"><a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
-<div class="outline-text-3" id="text-org459d439">
+<div id="outline-container-orgbcc789c" class="outline-3">
+<h3 id="orgbcc789c"><a href="programming_bottom_up.html#ID-95ff3fb3-f886-41df-9f4f-5f9223b4ca4e">Programming Bottom-Up</a></h3>
+<div class="outline-text-3" id="text-orgbcc789c">
 <p>
 <a href="http://www.paulgraham.com/progbot.html">http://www.paulgraham.com/progbot.html</a><br />
 </p>
@@ -261,13 +258,8 @@ Also feel like <a href="emacs.html#ID-1999996d-b676-4fc4-894b-caf82f8dd7ff">emac
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

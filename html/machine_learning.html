@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:32 -->
+<!-- 2025-07-26 Sat 11:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>machine learning</title>
@@ -11,51 +11,67 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">machine learning
 <br />
-<span class="subtitle">Last modified on May 15, 2022</span>
+<span class="subtitle">Last tended to on May 15, 2022</span>
 </h1>
 <p>
 Supervised learning is an example of <a href="causal_inference.html#ID-d4b17339-7852-4eb6-a399-24e47b354a6c">observational</a> inference &#x2013; we&rsquo;re just looking for associations between variables \(X\) and \(Y\). Aka, we&rsquo;re just learning \(P(Y|X)\).<br />
@@ -68,59 +84,30 @@ I feel like this thread captures a really interesting divide / contrast of philo
 <p>
 My goal now is to deeply understand the issues at hand in this thread. I found his mention of factor graphs in the shift to reasoning and planning AI was thought-provoking. I feel that causality and factor graphs and Bayesian and all that are very important. I just don&rsquo;t know quite enough to put the pieces together yet.<br />
 </p>
-
-
-<div id="outline-container-org0a95b96" class="outline-2 references">
-<h2 id="org0a95b96">Links to &ldquo;machine learning&rdquo;</h2>
-<div class="outline-text-2" id="text-org0a95b96">
+<div id="outline-container-org4283c57" class="outline-2 references">
+<h2 id="org4283c57">Links to &ldquo;machine learning&rdquo;</h2>
+<div class="outline-text-2" id="text-org4283c57">
 </div>
-<div id="outline-container-org459b389" class="outline-3">
-<h3 id="org459b389"><a href="artificial_intelligence.html#ID-ef80dd22-3ade-4fd6-98cd-1319eaa454f9">artificial intelligence</a></h3>
-<div class="outline-text-3" id="text-org459b389">
+<div id="outline-container-orga0d6533" class="outline-3">
+<h3 id="orga0d6533"><a href="artificial_intelligence.html#ID-ef80dd22-3ade-4fd6-98cd-1319eaa454f9">artificial intelligence</a></h3>
+<div class="outline-text-3" id="text-orga0d6533">
 <p>
 Just gonna link this to <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> for now.<br />
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgb97b045" class="outline-3">
-<h3 id="orgb97b045"><a href="ablation_studies.html#ID-766f764c-818b-41ff-a7ed-02642696a830">ablation studies</a></h3>
-<div class="outline-text-3" id="text-orgb97b045">
+<div id="outline-container-orgd30b15b" class="outline-3">
+<h3 id="orgd30b15b"><a href="ablation_studies.html#ID-766f764c-818b-41ff-a7ed-02642696a830">ablation studies</a></h3>
+<div class="outline-text-3" id="text-orgd30b15b">
 <p>
 Ablation studies are effectively using <a href="causal_inference.html#ID-d68c5093-d6d6-43b8-a48d-629ade9293b6">interventions</a> (removing parts of your system) to reveal the underlying causal structure of your system. Francois Chollet (creator of Keras) writes about this being useful in a <a href="machine_learning.html#ID-5b02540a-15ac-4123-86f8-e6ca5420ce27">machine learning</a> context:<br />
 </p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ablation studies are crucial for deep learning research -- can&#39;t stress this enough.<br><br>Understanding causality in your system is the most straightforward way to generate reliable knowledge (the goal of any research). And ablation is a very low-effort way to look into causality.</p>&mdash; François Chollet (@fchollet) <a href="https://twitter.com/fchollet/status/1012721582148550662?ref_src=twsrc%5Etfw">June 29, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
-
-<div id="outline-container-org034d2bf" class="outline-3">
-<h3 id="org034d2bf"><a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">compositionality</a> <span class="backlinks-outline-path">(<i>A machine learning example of compositionality</i>)</span></h3>
-<div class="outline-text-3" id="text-org034d2bf">
-<p>
-is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model&rsquo;s early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
-</p>
-
-
-<div id="orgbd23a5d" class="figure">
-<p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
-</p>
-</div>
-
-<p>
-But ultimately the ways in which machine learning models, at the moment, can &ldquo;intelligently&rdquo; combine different pieces and parts is limited. See the tweet about DALL-E trying to stack blocks, bless its heart:<br />
-</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The ways in which <a href="https://twitter.com/hashtag/dalle?src=hash&amp;ref_src=twsrc%5Etfw">#dalle</a> is so incredible (and it is) really put a fine point on the ways in which compositionality is so hard <a href="https://t.co/I6DC4g53MK">pic.twitter.com/I6DC4g53MK</a></p>&mdash; David Madras (@david_madras) <a href="https://twitter.com/david_madras/status/1512573390896480267?ref_src=twsrc%5Etfw">April 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<p>
-One step towards compositionality is the idea of neuro-symbolic models. Combining logic-based systems with connectionist methods.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgbfba273" class="outline-3">
-<h3 id="orgbfba273"><a href="machine_learning_interviews_book.html#ID-84128eb6-2328-4d5e-a668-c4ccdab9b913">Machine Learning Interviews Book</a></h3>
-<div class="outline-text-3" id="text-orgbfba273">
+<div id="outline-container-orgff12bc1" class="outline-3">
+<h3 id="orgff12bc1"><a href="machine_learning_interviews_book.html#ID-84128eb6-2328-4d5e-a668-c4ccdab9b913">Machine Learning Interviews Book</a></h3>
+<div class="outline-text-3" id="text-orgff12bc1">
 <p>
 <a href="https://huyenchip.com/ml-interviews-book/">https://huyenchip.com/ml-interviews-book/</a><br />
 </p>
@@ -134,10 +121,9 @@ Below are my (WIP) answers to some of the <a href="https://huyenchip.com/ml-inte
 </p>
 </div>
 </div>
-
-<div id="outline-container-org11a4c55" class="outline-3">
-<h3 id="org11a4c55"><a href="machine_learning_interviews_book.html#ID-84128eb6-2328-4d5e-a668-c4ccdab9b913">Machine Learning Interviews Book</a> <span class="backlinks-outline-path">(<i>Math &gt; Algebra and (little) calculus &gt; Vectors</i>)</span></h3>
-<div class="outline-text-3" id="text-org11a4c55">
+<div id="outline-container-orgeee4f78" class="outline-3">
+<h3 id="orgeee4f78"><a href="machine_learning_interviews_book.html#ID-84128eb6-2328-4d5e-a668-c4ccdab9b913">Machine Learning Interviews Book</a> <span class="backlinks-outline-path">(<i>Math &gt; Algebra and (little) calculus &gt; Vectors</i>)</span></h3>
+<div class="outline-text-3" id="text-orgeee4f78">
 <ol class="org-ol">
 <li>Dot product<br />
 <ol class="org-ol">
@@ -147,7 +133,7 @@ The dot product \(\mathbf{x} \cdot \mathbf{y}\) is the length of the projection 
 </p>
 
 
-<div id="org1de018d" class="figure">
+<div id="orgb30152f" class="figure">
 <p><img src="dot_product.gif" alt="dot_product.gif" /><br />
 </p>
 </div></li>
@@ -165,10 +151,10 @@ This would simply be the unit vector in the direction of \(u\); namely, \(v = \f
 We could also calculate this using numpy, like so:<br />
 </p>
 <div class="org-src-container" data-language="python">
-<pre class="src src-python"><span class="org-tree-sitter-hl-faceXkeyword">import</span> numpy <span class="org-tree-sitter-hl-faceXkeyword">as</span> np
-<span class="org-tree-sitter-hl-faceXvariable">a</span> <span class="org-tree-sitter-hl-faceXoperator">=</span> np.<span class="org-tree-sitter-hl-faceXproperty"><span class="org-tree-sitter-hl-faceXmethodXcall">array</span></span>([<span class="org-tree-sitter-hl-faceXnumber">3</span>,<span class="org-tree-sitter-hl-faceXnumber">2</span>,<span class="org-tree-sitter-hl-faceXnumber">1</span>])
-<span class="org-tree-sitter-hl-faceXvariable">b</span> <span class="org-tree-sitter-hl-faceXoperator">=</span> np.<span class="org-tree-sitter-hl-faceXproperty"><span class="org-tree-sitter-hl-faceXmethodXcall">array</span></span>([<span class="org-tree-sitter-hl-faceXoperator">-</span><span class="org-tree-sitter-hl-faceXnumber">1</span>,<span class="org-tree-sitter-hl-faceXnumber">0</span>,<span class="org-tree-sitter-hl-faceXnumber">1</span>])
-<span class="org-tree-sitter-hl-faceXfunctionXcall"><span class="org-tree-sitter-hl-faceXfunctionXbuiltin">print</span></span>(np.<span class="org-tree-sitter-hl-faceXproperty"><span class="org-tree-sitter-hl-faceXmethodXcall">outer</span></span>(a, b))
+<pre class="src src-python"><span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-variable-name">a</span> <span class="org-operator">=</span> np.array([<span class="org-highlight-numbers-number">3</span>,<span class="org-highlight-numbers-number">2</span>,<span class="org-highlight-numbers-number">1</span>])
+<span class="org-variable-name">b</span> <span class="org-operator">=</span> np.array([<span class="org-operator">-</span><span class="org-highlight-numbers-number">1</span>,<span class="org-highlight-numbers-number">0</span>,<span class="org-highlight-numbers-number">1</span>])
+<span class="org-builtin">print</span>(np.outer(a, b))
 </pre>
 </div>
 
@@ -245,16 +231,35 @@ My understanding is that a norm is simply a mathematical operation on a vector, 
 </ol>
 </div>
 </div>
+<div id="outline-container-org24fe4da" class="outline-3">
+<h3 id="org24fe4da"><a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">composability</a> <span class="backlinks-outline-path">(<i>A machine learning example of compositionality</i>)</span></h3>
+<div class="outline-text-3" id="text-org24fe4da">
+<p>
+is that a <a href="computer_vision.html#ID-27d08270-d161-4bb1-8b39-50f28b1ab668">computer vision</a> model&rsquo;s early layers will implement an edge detector, curve detector, etc., which are modular pieces that are then combined in various ways by higher-level layers to form dog detectors, car detectors, etc.<br />
+</p>
+
+
+<div id="org15709c4" class="figure">
+<p><img src="cnnlayers.jpg" alt="progression from low-level to high-level features in a CNN." /><br />
+</p>
+</div>
+
+<p>
+But ultimately the ways in which machine learning models, at the moment, can &ldquo;intelligently&rdquo; combine different pieces and parts is limited. See the tweet about DALL-E trying to stack blocks, bless its heart:<br />
+</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The ways in which <a href="https://twitter.com/hashtag/dalle?src=hash&amp;ref_src=twsrc%5Etfw">#dalle</a> is so incredible (and it is) really put a fine point on the ways in which compositionality is so hard <a href="https://t.co/I6DC4g53MK">pic.twitter.com/I6DC4g53MK</a></p>&mdash; David Madras (@david_madras) <a href="https://twitter.com/david_madras/status/1512573390896480267?ref_src=twsrc%5Etfw">April 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>
+One step towards compositionality is the idea of neuro-symbolic models. Combining logic-based systems with connectionist methods.<br />
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

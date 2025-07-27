@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:36 -->
+<!-- 2025-07-26 Sat 11:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>multiplexing</title>
@@ -11,61 +11,75 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">multiplexing
 <br />
-<span class="subtitle">Last modified on December 08, 2021</span>
+<span class="subtitle">Last tended to on December 08, 2021</span>
 </h1>
-
-
-<div id="outline-container-org9170f91" class="outline-2 references">
-<h2 id="org9170f91">Links to &ldquo;multiplexing&rdquo;</h2>
-<div class="outline-text-2" id="text-org9170f91">
+<div id="outline-container-org4ee0ee3" class="outline-2 references">
+<h2 id="org4ee0ee3">Links to &ldquo;multiplexing&rdquo;</h2>
+<div class="outline-text-2" id="text-org4ee0ee3">
 </div>
-<div id="outline-container-org9e2f0ea" class="outline-3">
-<h3 id="org9e2f0ea"><a href="cs144_introduction_to_computer_networking.html#ID-d0406c1d-0467-415e-829c-0615fb54391c">How does the Internet work?</a> <span class="backlinks-outline-path">(<i>How does the Internet work? &gt; IP addresses</i>)</span></h3>
-<div class="outline-text-3" id="text-org9e2f0ea">
+<div id="outline-container-orgd88a44d" class="outline-3">
+<h3 id="orgd88a44d"><a href="cs144_introduction_to_computer_networking.html#ID-d0406c1d-0467-415e-829c-0615fb54391c">How does the Internet work?</a> <span class="backlinks-outline-path">(<i>How does the Internet work? &gt; IP addresses</i>)</span></h3>
+<div class="outline-text-3" id="text-orgd88a44d">
 <p>
 Every computer is given an address that&rsquo;s 32 bits* long. This is known as its IP address.<br />
 </p>
@@ -83,7 +97,7 @@ E.g. the IP address <code>104.196.238.229</code> simply represents a 32-bit numb
 </p>
 
 <div class="org-src-container" data-language="python">
-<pre class="src src-python"><span class="org-tree-sitter-hl-faceXfunctionXcall"><span class="org-tree-sitter-hl-faceXfunctionXbuiltin">print</span></span>(<span class="org-tree-sitter-hl-faceXstring">'{0:b}'</span>.<span class="org-tree-sitter-hl-faceXproperty"><span class="org-tree-sitter-hl-faceXmethodXcall">format</span></span>((<span class="org-tree-sitter-hl-faceXnumber">104</span> <span class="org-tree-sitter-hl-faceXoperator">&lt;&lt;</span> <span class="org-tree-sitter-hl-faceXnumber">24</span>) <span class="org-tree-sitter-hl-faceXoperator">+</span> (<span class="org-tree-sitter-hl-faceXnumber">196</span> <span class="org-tree-sitter-hl-faceXoperator">&lt;&lt;</span> <span class="org-tree-sitter-hl-faceXnumber">16</span>) <span class="org-tree-sitter-hl-faceXoperator">+</span> (<span class="org-tree-sitter-hl-faceXnumber">238</span> <span class="org-tree-sitter-hl-faceXoperator">&lt;&lt;</span> <span class="org-tree-sitter-hl-faceXnumber">8</span>) <span class="org-tree-sitter-hl-faceXoperator">+</span> <span class="org-tree-sitter-hl-faceXnumber">229</span>))
+<pre class="src src-python"><span class="org-builtin">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">104</span> <span class="org-operator">&lt;&lt;</span> <span class="org-highlight-numbers-number">24</span>) <span class="org-operator">+</span> (<span class="org-highlight-numbers-number">196</span> <span class="org-operator">&lt;&lt;</span> <span class="org-highlight-numbers-number">16</span>) <span class="org-operator">+</span> (<span class="org-highlight-numbers-number">238</span> <span class="org-operator">&lt;&lt;</span> <span class="org-highlight-numbers-number">8</span>) <span class="org-operator">+</span> <span class="org-highlight-numbers-number">229</span>))
 </pre>
 </div>
 
@@ -96,7 +110,7 @@ E.g. the IP address <code>104.196.238.229</code> simply represents a 32-bit numb
 Here&rsquo;s <code>127.0.0.1</code>, aka <code>localhost</code>, in binary:<br />
 </p>
 <div class="org-src-container" data-language="python">
-<pre class="src src-python"><span class="org-tree-sitter-hl-faceXfunctionXcall"><span class="org-tree-sitter-hl-faceXfunctionXbuiltin">print</span></span>(<span class="org-tree-sitter-hl-faceXstring">'{0:b}'</span>.<span class="org-tree-sitter-hl-faceXproperty"><span class="org-tree-sitter-hl-faceXmethodXcall">format</span></span>((<span class="org-tree-sitter-hl-faceXnumber">127</span> <span class="org-tree-sitter-hl-faceXoperator">&lt;&lt;</span> <span class="org-tree-sitter-hl-faceXnumber">24</span>) <span class="org-tree-sitter-hl-faceXoperator">+</span> (<span class="org-tree-sitter-hl-faceXnumber">0</span> <span class="org-tree-sitter-hl-faceXoperator">&lt;&lt;</span> <span class="org-tree-sitter-hl-faceXnumber">16</span>) <span class="org-tree-sitter-hl-faceXoperator">+</span> (<span class="org-tree-sitter-hl-faceXnumber">0</span> <span class="org-tree-sitter-hl-faceXoperator">&lt;&lt;</span> <span class="org-tree-sitter-hl-faceXnumber">8</span>) <span class="org-tree-sitter-hl-faceXoperator">+</span> <span class="org-tree-sitter-hl-faceXnumber">1</span>))
+<pre class="src src-python"><span class="org-builtin">print</span>(<span class="org-string">'{0:b}'</span>.<span class="org-builtin">format</span>((<span class="org-highlight-numbers-number">127</span> <span class="org-operator">&lt;&lt;</span> <span class="org-highlight-numbers-number">24</span>) <span class="org-operator">+</span> (<span class="org-highlight-numbers-number">0</span> <span class="org-operator">&lt;&lt;</span> <span class="org-highlight-numbers-number">16</span>) <span class="org-operator">+</span> (<span class="org-highlight-numbers-number">0</span> <span class="org-operator">&lt;&lt;</span> <span class="org-highlight-numbers-number">8</span>) <span class="org-operator">+</span> <span class="org-highlight-numbers-number">1</span>))
 </pre>
 </div>
 
@@ -105,10 +119,9 @@ Here&rsquo;s <code>127.0.0.1</code>, aka <code>localhost</code>, in binary:<br /
 </pre>
 </div>
 </div>
-
-<div id="outline-container-org8f09bf5" class="outline-3">
-<h3 id="org8f09bf5"><a href="cs144_introduction_to_computer_networking.html#ID-a2413139-aec2-4c32-9b0d-4a1f996ccd91">User Datagram Protocol (UDP)</a> <span class="backlinks-outline-path">(<i>User Datagram Protocol (UDP)</i>)</span></h3>
-<div class="outline-text-3" id="text-org8f09bf5">
+<div id="outline-container-orgadde342" class="outline-3">
+<h3 id="orgadde342"><a href="cs144_introduction_to_computer_networking.html#ID-a2413139-aec2-4c32-9b0d-4a1f996ccd91">User Datagram Protocol (UDP)</a> <span class="backlinks-outline-path">(<i>User Datagram Protocol (UDP)</i>)</span></h3>
+<div class="outline-text-3" id="text-orgadde342">
 <p>
 Problem: IP addresses only identify a machine. How does that machine know which application/program to deliver the packet to? We need another another layer of <a href="multiplexing.html#ID-e12d4dfd-b03b-4f84-bd5f-458dab82b2c5">multiplexing</a>, so that multiple applications on one computer can share one IP address.<br />
 </p>
@@ -125,13 +138,8 @@ Applications such as Zoom which may not need the strict ordering/reliability of 
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

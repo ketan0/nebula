@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:36 -->
+<!-- 2025-07-26 Sat 11:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CS224W: Machine Learning with Graphs</title>
@@ -11,63 +11,78 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">CS224W: Machine Learning with Graphs
 <br />
-<span class="subtitle">Last modified on March 02, 2022</span>
+<span class="subtitle">Last tended to on March 02, 2022</span>
 </h1>
 <p>
 (I dropped this class a few lectures in, so the notes are incomplete. Nonetheless, it contains some interesting connections with graphs/networks, so I leave it in my knowledge graph.)<br />
 </p>
-
-<div id="outline-container-orgcce21ea" class="outline-2">
-<h2 id="orgcce21ea">Introduction</h2>
-<div class="outline-text-2" id="text-orgcce21ea">
+<div id="outline-container-org8bf8419" class="outline-2">
+<h2 id="org8bf8419">Introduction</h2>
+<div class="outline-text-2" id="text-org8bf8419">
 </div>
 <div id="outline-container-ID-da69965b-ad50-45ad-9e81-b8593e7de09e" class="outline-3">
 <h3 id="ID-da69965b-ad50-45ad-9e81-b8593e7de09e">Why Graphs?</h3>
-<div class="outline-text-3" id="text-org4bc76f4">
+<div class="outline-text-3" id="text-org13c3746">
 <p>
 <a href="graphs.html#ID-5705ba04-b296-4446-824b-3551d7bd8a09">Graphs</a> are a general language for describing and analyzing entities with relationships/interactions. Many domains have a natural relational structure, that lends themselves to a graph <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a>:<br />
 </p>
@@ -82,7 +97,7 @@
 </div>
 <div id="outline-container-ID-7a085a3d-41ac-46d4-911c-a88ed5dc7caf" class="outline-3">
 <h3 id="ID-7a085a3d-41ac-46d4-911c-a88ed5dc7caf">Distinction between Networks and Graphs</h3>
-<div class="outline-text-3" id="text-org33f39f3">
+<div class="outline-text-3" id="text-org8f3bebe">
 <p>
 <a href="networks.html#ID-84dca4ab-9e04-45d9-89e3-7205eb591698">Networks</a> = &ldquo;natural graphs.&rdquo; (social networks, electronic networks, genetic pathrways, brain connections)<br />
 Graphs = a mathematical object representing/modeling the underlying data.<br />
@@ -93,17 +108,17 @@ Graphs = a mathematical object representing/modeling the underlying data.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org3badd31" class="outline-3">
-<h3 id="org3badd31">Today&rsquo;s ML toolbox is good at processing grids (images) and sequences (speech/text.)</h3>
-<div class="outline-text-3" id="text-org3badd31">
+<div id="outline-container-org1a37cb4" class="outline-3">
+<h3 id="org1a37cb4">Today&rsquo;s ML toolbox is good at processing grids (images) and sequences (speech/text.)</h3>
+<div class="outline-text-3" id="text-org1a37cb4">
 <p>
 However, not everything is best represented as a sequence or grid.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org4e4f480" class="outline-3">
-<h3 id="org4e4f480">Why is Graph Deep Learning hard?</h3>
-<div class="outline-text-3" id="text-org4e4f480">
+<div id="outline-container-orgf5aee3c" class="outline-3">
+<h3 id="orgf5aee3c">Why is Graph Deep Learning hard?</h3>
+<div class="outline-text-3" id="text-orgf5aee3c">
 <ul class="org-ul">
 <li>arbitrary size, topological structure<br /></li>
 <li>no fixed node ordering, reference point<br /></li>
@@ -111,15 +126,15 @@ However, not everything is best represented as a sequence or grid.<br />
 </ul>
 
 
-<div id="orgee68f71" class="figure">
+<div id="orge25a2bb" class="figure">
 <p><img src="network_vs_image.png" alt="network_vs_image.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orge9f3c99" class="outline-3">
-<h3 id="orge9f3c99">Representation learning</h3>
-<div class="outline-text-3" id="text-orge9f3c99">
+<div id="outline-container-orga0e0fd6" class="outline-3">
+<h3 id="orga0e0fd6">Representation learning</h3>
+<div class="outline-text-3" id="text-orga0e0fd6">
 <p>
 We can learn directly on graphs, rather than feature engineering.<br />
 </p>
@@ -129,9 +144,9 @@ General strategy: map nodes to \(d\)-dimensional embeddings such that similar no
 </p>
 </div>
 </div>
-<div id="outline-container-org1fabb98" class="outline-3">
-<h3 id="org1fabb98">Applications of Graph ML</h3>
-<div class="outline-text-3" id="text-org1fabb98">
+<div id="outline-container-orgc115f21" class="outline-3">
+<h3 id="orgc115f21">Applications of Graph ML</h3>
+<div class="outline-text-3" id="text-orgc115f21">
 <p>
 Different tasks we can do:<br />
 </p>
@@ -147,27 +162,27 @@ Different tasks we can do:<br />
 <li>evolution<br /></li>
 </ul>
 </div>
-<div id="outline-container-org3e639fb" class="outline-4">
-<h4 id="org3e639fb">Node-level: AlphaFold</h4>
-<div class="outline-text-4" id="text-org3e639fb">
+<div id="outline-container-org487b541" class="outline-4">
+<h4 id="org487b541">Node-level: AlphaFold</h4>
+<div class="outline-text-4" id="text-org487b541">
 <p>
 Nodes = amino acids, Edges = proximity between amino acids<br />
 Key idea: &ldquo;spatial graph&rdquo;<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org8cb3b48" class="outline-4">
-<h4 id="org8cb3b48">Edge-level: Recommender Systems</h4>
-<div class="outline-text-4" id="text-org8cb3b48">
+<div id="outline-container-orgffa519d" class="outline-4">
+<h4 id="orgffa519d">Edge-level: Recommender Systems</h4>
+<div class="outline-text-4" id="text-orgffa519d">
 <p>
 Nodes = users and items, edges = user-item interactions<br />
 Link prediction: Goal is to predict &ldquo;missing&rdquo; edges.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org568b06c" class="outline-4">
-<h4 id="org568b06c">Edge-level: Drug Side Effects</h4>
-<div class="outline-text-4" id="text-org568b06c">
+<div id="outline-container-orgaf9f7b0" class="outline-4">
+<h4 id="orgaf9f7b0">Edge-level: Drug Side Effects</h4>
+<div class="outline-text-4" id="text-orgaf9f7b0">
 <p>
 Nodes = drugs, edges = side effects<br />
 Given a pair of drugs, predict adverse side effects.<br />
@@ -175,12 +190,12 @@ Link prediction task.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org9e53f4e" class="outline-4">
-<h4 id="org9e53f4e">Subgraph-level: Traffic Prediction</h4>
+<div id="outline-container-org23a730e" class="outline-4">
+<h4 id="org23a730e">Subgraph-level: Traffic Prediction</h4>
 </div>
-<div id="outline-container-orgb423ca2" class="outline-4">
-<h4 id="orgb423ca2">Graph-level: Drug Discovery</h4>
-<div class="outline-text-4" id="text-orgb423ca2">
+<div id="outline-container-org0f2d59c" class="outline-4">
+<h4 id="org0f2d59c">Graph-level: Drug Discovery</h4>
+<div class="outline-text-4" id="text-org0f2d59c">
 <p>
 Nodes = atoms, edges = bonds<br />
 Predict promising molecules from a pool of condidates<br />
@@ -188,9 +203,9 @@ Generate novel molecules with high &ldquo;score&rdquo;<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org0d16acf" class="outline-4">
-<h4 id="org0d16acf">Graph evolution: Physics Simulation</h4>
-<div class="outline-text-4" id="text-org0d16acf">
+<div id="outline-container-org6deba6f" class="outline-4">
+<h4 id="org6deba6f">Graph evolution: Physics Simulation</h4>
+<div class="outline-text-4" id="text-org6deba6f">
 <p>
 Nodes = particles, edges = interactions between particles<br />
 </p>
@@ -200,14 +215,14 @@ Nodes = particles, edges = interactions between particles<br />
 </div>
 <div id="outline-container-ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c" class="outline-2 headlines-grid-container">
 <h2 id="ID-bbfdd10c-6d9c-4249-98b0-ce97d889b92c"><a href="graphs.html#ID-5705ba04-b296-4446-824b-3551d7bd8a09">Graph</a> <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">Representations</a></h2>
-<div class="outline-text-2" id="text-orgc54312e">
+<div class="outline-text-2" id="text-orge933215">
 <p>
 A few different traditional graph representations we can use.<br />
 </p>
 </div>
-<div id="outline-container-org49d3b69" class="outline-3">
-<h3 id="org49d3b69">Adjacency matrix</h3>
-<div class="outline-text-3" id="text-org49d3b69">
+<div id="outline-container-orgb9d0361" class="outline-3">
+<h3 id="orgb9d0361">Adjacency matrix</h3>
+<div class="outline-text-3" id="text-orgb9d0361">
 <p>
 Problem: real-world graphs are <b>sparse</b>. I.e., the adjancency matrix would be filled with zeros, a highly inefficient representation.<br />
 </p>
@@ -285,9 +300,9 @@ Problem: real-world graphs are <b>sparse</b>. I.e., the adjancency matrix would 
 </table>
 </div>
 </div>
-<div id="outline-container-orgaa7837b" class="outline-3">
-<h3 id="orgaa7837b">Edge list</h3>
-<div class="outline-text-3" id="text-orgaa7837b">
+<div id="outline-container-org26f06bb" class="outline-3">
+<h3 id="org26f06bb">Edge list</h3>
+<div class="outline-text-3" id="text-org26f06bb">
 <ul class="org-ul">
 <li>(2, 3)<br /></li>
 <li>(2, 4)<br /></li>
@@ -299,9 +314,9 @@ Problem: real-world graphs are <b>sparse</b>. I.e., the adjancency matrix would 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd2296b4" class="outline-3">
-<h3 id="orgd2296b4">Adjacency list</h3>
-<div class="outline-text-3" id="text-orgd2296b4">
+<div id="outline-container-org9b69e49" class="outline-3">
+<h3 id="org9b69e49">Adjacency list</h3>
+<div class="outline-text-3" id="text-org9b69e49">
 <ul class="org-ul">
 <li>1:<br /></li>
 <li>2: 3, 4<br /></li>
@@ -311,18 +326,18 @@ Problem: real-world graphs are <b>sparse</b>. I.e., the adjancency matrix would 
 </ul>
 </div>
 </div>
-<div id="outline-container-orgabe9d14" class="outline-3">
-<h3 id="orgabe9d14">More types of graphs</h3>
-<div class="outline-text-3" id="text-orgabe9d14">
+<div id="outline-container-org4d607b4" class="outline-3">
+<h3 id="org4d607b4">More types of graphs</h3>
+<div class="outline-text-3" id="text-org4d607b4">
 <p>
 Self-edges: nodes that loop to themselves<br />
 Multigraph: allows multiple edges between the same two nodes<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgcf0b807" class="outline-3">
-<h3 id="orgcf0b807">Connectivity</h3>
-<div class="outline-text-3" id="text-orgcf0b807">
+<div id="outline-container-orga0cecf0" class="outline-3">
+<h3 id="orga0cecf0">Connectivity</h3>
+<div class="outline-text-3" id="text-orga0cecf0">
 <p>
 Strongly connected: path from each node to every other node<br />
 Weakly connected: strongly connected if we disregard edge directions<br />
@@ -330,9 +345,9 @@ Weakly connected: strongly connected if we disregard edge directions<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgbc38078" class="outline-2">
-<h2 id="orgbc38078">Traditional Graph ML Methods</h2>
-<div class="outline-text-2" id="text-orgbc38078">
+<div id="outline-container-org2568998" class="outline-2">
+<h2 id="org2568998">Traditional Graph ML Methods</h2>
+<div class="outline-text-2" id="text-org2568998">
 <p>
 Three major types of tasks: <b>node-level</b> prediction, <b>link-level</b> prediction, and <b>graph-level</b> prediction.<br />
 The traditional graph ML pipeline: design features for nodes/links/graphs, obtain said features<br />
@@ -340,45 +355,45 @@ The traditional graph ML pipeline: design features for nodes/links/graphs, obtai
 </div>
 <div id="outline-container-ID-399d9298-4382-40ef-9a1e-11f9bd7b3206" class="outline-3">
 <h3 id="ID-399d9298-4382-40ef-9a1e-11f9bd7b3206">Node-level <a href="features.html#ID-a7203065-7321-4a95-adbe-d38f0d5159c8">Features</a></h3>
-<div class="outline-text-3" id="text-orgb22209b">
+<div class="outline-text-3" id="text-org2669df5">
 <p>
 Different ways to model centrality:<br />
 </p>
 </div>
-<div id="outline-container-org5102470" class="outline-4">
-<h4 id="org5102470">Node degree</h4>
-<div class="outline-text-4" id="text-org5102470">
+<div id="outline-container-org63b02d1" class="outline-4">
+<h4 id="org63b02d1">Node degree</h4>
+<div class="outline-text-4" id="text-org63b02d1">
 <p>
 node degree \(k_v\) of the node \(v\) is the number of outgoing edges<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgbcebc3f" class="outline-4">
-<h4 id="orgbcebc3f">Centrality</h4>
-<div class="outline-text-4" id="text-orgbcebc3f">
+<div id="outline-container-org36c0e85" class="outline-4">
+<h4 id="org36c0e85">Centrality</h4>
+<div class="outline-text-4" id="text-org36c0e85">
 <p>
 Node centrality: how important is a given node to the structure of the network?<br />
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="org1efac81"></a>Eigenvector centrality<br />
-<div class="outline-text-5" id="text-org1efac81">
+<li><a id="org5ccdb08"></a>Eigenvector centrality<br />
+<div class="outline-text-5" id="text-org5ccdb08">
 <p>
 A node v is important if surrounded by important neighboring nodes \(u \in N(v)\).<br />
 \[c_v = \frac{1}{\lambda} \sum_{u \in N(v)} c_u\]<br />
 </p>
 </div>
 </li>
-<li><a id="orgfcd5f58"></a>Betweenness centrality<br />
-<div class="outline-text-5" id="text-orgfcd5f58">
+<li><a id="org045f58d"></a>Betweenness centrality<br />
+<div class="outline-text-5" id="text-org045f58d">
 <p>
 A node is important if it lies on many shortest paths between other nodes.<br />
 \[c_{v}=\sum_{s \neq v \neq t} \frac{\#(\text { shortest paths betwen } s \text { and } t \text { that contain } v)}{\#(\text { shortest paths between } s \text { and } t)}\]<br />
 </p>
 </div>
 </li>
-<li><a id="org09b6a07"></a>Clustering coefficient<br />
-<div class="outline-text-5" id="text-org09b6a07">
+<li><a id="orgecdd485"></a>Clustering coefficient<br />
+<div class="outline-text-5" id="text-orgecdd485">
 <p>
 How connected \(v\)&rsquo;s neighboring nodes are:<br />
 \[e_v = \frac{\text{\#(edges among neighboring nodes)}}{\binom{k_v}{2}}\]<br />
@@ -387,15 +402,15 @@ How connected \(v\)&rsquo;s neighboring nodes are:<br />
 </li>
 </ul>
 </div>
-<div id="outline-container-org84f9ccc" class="outline-4">
-<h4 id="org84f9ccc">Graphlet</h4>
-<div class="outline-text-4" id="text-org84f9ccc">
+<div id="outline-container-orgb2f5ccd" class="outline-4">
+<h4 id="orgb2f5ccd">Graphlet</h4>
+<div class="outline-text-4" id="text-orgb2f5ccd">
 <p>
 Small subgraphs that describe the structure of a node neighborhood.<br />
 </p>
 
 
-<div id="org1dc3580" class="figure">
+<div id="orga37b1e5" class="figure">
 <p><img src="graphlets.png" alt="all graphlets of up to 5 nodes" width="300" /><br />
 </p>
 </div>
@@ -412,22 +427,22 @@ Small subgraphs that describe the structure of a node neighborhood.<br />
 </div>
 <div id="outline-container-ID-968e752d-b121-4822-92c5-57f29181e914" class="outline-3">
 <h3 id="ID-968e752d-b121-4822-92c5-57f29181e914">Link-level <a href="features.html#ID-a7203065-7321-4a95-adbe-d38f0d5159c8">Features</a></h3>
-<div class="outline-text-3" id="text-org321a6af">
+<div class="outline-text-3" id="text-org5ef2532">
 <p>
 These can be used in link prediction tasks &#x2013; i.e., whether two nodes should be connected / will be connected in the future.<br />
 </p>
 </div>
-<div id="outline-container-orgb018449" class="outline-4">
-<h4 id="orgb018449">Distance-based features</h4>
-<div class="outline-text-4" id="text-orgb018449">
+<div id="outline-container-orgafdb495" class="outline-4">
+<h4 id="orgafdb495">Distance-based features</h4>
+<div class="outline-text-4" id="text-orgafdb495">
 <p>
 Use the shortest path length between two nodes.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org1e13ccd" class="outline-4">
-<h4 id="org1e13ccd">Local neighborhood overlap</h4>
-<div class="outline-text-4" id="text-org1e13ccd">
+<div id="outline-container-orgf150ee9" class="outline-4">
+<h4 id="orgf150ee9">Local neighborhood overlap</h4>
+<div class="outline-text-4" id="text-orgf150ee9">
 <p>
 Capture how many neighboring nodes are shared by two nodes.<br />
 </p>
@@ -439,9 +454,9 @@ Adamic-Amar index: \(\sum_{u \in N\left(v_{1}\right) \cap N\left(v_{2}\right)} \
 </p>
 </div>
 </div>
-<div id="outline-container-org86cb83e" class="outline-4">
-<h4 id="org86cb83e">Global neighborhood overlap</h4>
-<div class="outline-text-4" id="text-org86cb83e">
+<div id="outline-container-org6d7d243" class="outline-4">
+<h4 id="org6d7d243">Global neighborhood overlap</h4>
+<div class="outline-text-4" id="text-org6d7d243">
 <p>
 Count the number of paths of all lengths between the two nodes.<br />
 </p>
@@ -455,7 +470,7 @@ Katz index matrix:<br />
 </div>
 <div id="outline-container-ID-c36de436-5329-4b0d-8250-e706ae9a5306" class="outline-3">
 <h3 id="ID-c36de436-5329-4b0d-8250-e706ae9a5306">Graph-level <a href="features.html#ID-a7203065-7321-4a95-adbe-d38f0d5159c8">Features</a></h3>
-<div class="outline-text-3" id="text-org458b747">
+<div class="outline-text-3" id="text-org97ade57">
 <p>
 Goal: we want features that characterize the structure of an entire graph.<br />
 </p>
@@ -468,24 +483,18 @@ Goal: we want features that characterize the structure of an entire graph.<br />
 That is, we want some graph feature vector \(\phi(G)\). Basically, bag-of-words for a graph, in that each node has some features, but the ordering / relation between nodes isn&rsquo;t considered.<br />
 </p>
 </div>
-
-<div id="outline-container-org685505d" class="outline-4">
-<h4 id="org685505d">Graphlet Kernels</h4>
+<div id="outline-container-org2e6986e" class="outline-4">
+<h4 id="org2e6986e">Graphlet Kernels</h4>
 </div>
-<div id="outline-container-orgb7ef9f9" class="outline-4">
-<h4 id="orgb7ef9f9">Weisfeiler-Lehman Kernel</h4>
+<div id="outline-container-orgf1c5bbc" class="outline-4">
+<h4 id="orgf1c5bbc">Weisfeiler-Lehman Kernel</h4>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:45 -->
+<!-- 2025-07-26 Sat 11:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>❓ questions</title>
@@ -11,6 +11,9 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -20,21 +23,23 @@
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">❓ questions
 <br />
-<span class="subtitle">Last modified on December 16, 2023</span>
+<span class="subtitle">Last tended to on December 16, 2023</span>
 </h1>
 <p>
 (those without easy answers.)<br />
@@ -52,10 +57,9 @@ ways for me to use these questions:<br />
 <p>
 TODO: would be nice to have some structure / categorization other than just a sequential list of questions&#x2026;<br />
 </p>
-
 <div id="outline-container-ID-bd7417e8-ae04-47b7-b486-b70ed3188cae" class="outline-2">
 <h2 id="ID-bd7417e8-ae04-47b7-b486-b70ed3188cae">how to ask good questions</h2>
-<div class="outline-text-2" id="text-org620db43">
+<div class="outline-text-2" id="text-org718962f">
 <p>
 <a href="http://www.catb.org/~esr/faqs/smart-questions.html">How To Ask Questions The Smart Way - Eric Steven Raymond</a><br />
 I see some <a href="grice_s_maxims.html#ID-089327e2-3429-4df9-9fd8-d17b8d6cc66d">Gricean Maxims</a> at work here. Be relevant, have the context, be concise. I also see some <a href="private/utilitarianism.html#ID-6ac23ec1-38c9-4092-8ebb-a6efd4fa1839">Utilitarianism</a>, in that hackers want public forums to increase the flow of useful information and make it more efficient.<br />
@@ -68,7 +72,7 @@ But more than that&#x2026;how do you ask questions that strike at the heart of t
 </div>
 <div id="outline-container-ID-a6d89b43-5528-47ce-83e7-d4514f547ca8" class="outline-2">
 <h2 id="ID-a6d89b43-5528-47ce-83e7-d4514f547ca8">what makes a subject &ldquo;interesting&rdquo; to a given person?</h2>
-<div class="outline-text-2" id="text-org9747a56">
+<div class="outline-text-2" id="text-org81cef71">
 <p>
 Why are some people so fascinated by video games, but it doesn&rsquo;t even ring a bell for others? Why do some people love the taste of pineapple on on pizza, and others hate it? What makes us like something? And how does our &ldquo;taste&rdquo; evolve over time &#x2013; how should it evolve over time?<br />
 </p>
@@ -84,15 +88,15 @@ Proto-answer 2: It depends on the frame you approach it with. I feel like every 
 </div>
 <div id="outline-container-ID-c2b46716-f6f5-48ee-87b9-c6a85acfb103" class="outline-2">
 <h2 id="ID-c2b46716-f6f5-48ee-87b9-c6a85acfb103">is it always optimal to compartmentalize / solve one problem at a time? Are there times when we might want to solve multiple problems simultaneously?</h2>
-<div class="outline-text-2" id="text-org714d5ee">
+<div class="outline-text-2" id="text-orgdafb95f">
 <p>
 thinking about this in relation to <a href="dynamic_programming.html#ID-e60c441f-deb9-4eca-8816-73e477b98c29">dynamic programming</a> &#x2013; I think it serves as a good metaphor for why it can be useful to think about the structure of the problems you&rsquo;re solving, and if there&rsquo;s any overlap / reuse that can occur&#x2026;.seems that this is also related to <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposition</a> / <a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a><br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgf75a201" class="outline-2">
-<h2 id="orgf75a201">what sorts of things should I immerse my brain in, at what times in my life?</h2>
-<div class="outline-text-2" id="text-orgf75a201">
+<div id="outline-container-orgdaae0f6" class="outline-2">
+<h2 id="orgdaae0f6">what sorts of things should I immerse my brain in, at what times in my life?</h2>
+<div class="outline-text-2" id="text-orgdaae0f6">
 <p>
 feels like there are so many interesting things to think about, and so little time&#x2026;I want to like have multiple walkers exploring multiple paths in the knowledge graph at once, but feel limited by the sequentiality of thinking.<br />
 </p>
@@ -100,18 +104,18 @@ feels like there are so many interesting things to think about, and so little ti
 </div>
 <div id="outline-container-ID-d35035f4-eacb-4aca-a7a1-c48c687af242" class="outline-2">
 <h2 id="ID-d35035f4-eacb-4aca-a7a1-c48c687af242">What standard of evidence should I demand to update my beliefs about something?</h2>
-<div class="outline-text-2" id="text-orgcf5abae">
+<div class="outline-text-2" id="text-org429107e">
 <p>
 In other words, how much of a skeptic should I be?<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgbcaedbe" class="outline-2">
-<h2 id="orgbcaedbe">What should the relationship to past work be?</h2>
+<div id="outline-container-orgefcfca4" class="outline-2">
+<h2 id="orgefcfca4">What should the relationship to past work be?</h2>
 </div>
 <div id="outline-container-ID-deea93db-65e4-425b-8700-fe96117795d1" class="outline-2">
 <h2 id="ID-deea93db-65e4-425b-8700-fe96117795d1">&ldquo;Flat&rdquo; design (monorepo) vs. hierarchical?</h2>
-<div class="outline-text-2" id="text-org47ed9b8">
+<div class="outline-text-2" id="text-org4b26f73">
 <p>
 Aka, is <a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modularity</a> good?<br />
   For example, monorepo vs. structured w/ nice neat folders. Monorepo is easier to just scan and find what you want, simply use the power of search, but can get out of control if too large. OTOH, there is a strong argument for decomposition into folders/branches/etc. Also, when making text notes, should I have big, sprawling things like <i>thoughts</i> or small, decomposed things? (Ideal answer: both)<br />
@@ -120,54 +124,49 @@ Aka, is <a href="modularity.html#ID-87e83cf3-3dfa-4486-845d-155895a9f6b6">modula
 </div>
 <div id="outline-container-ID-438cb440-92ec-483f-b48a-984c0bdda4e4" class="outline-2">
 <h2 id="ID-438cb440-92ec-483f-b48a-984c0bdda4e4">How does someone decide their values?</h2>
-<div class="outline-text-2" id="text-org6493688">
+<div class="outline-text-2" id="text-org7cb0a05">
 </div>
 </div>
 <div id="outline-container-ID-caeca3fe-67ac-43d3-83b4-7aca8205f781" class="outline-2">
 <h2 id="ID-caeca3fe-67ac-43d3-83b4-7aca8205f781">Are binaries valid things?</h2>
-<div class="outline-text-2" id="text-org28b4fc8">
+<div class="outline-text-2" id="text-orgc21a6e3">
 </div>
 </div>
 <div id="outline-container-ID-62990c5a-b8fa-4be8-8add-d4d14fff40be" class="outline-2">
 <h2 id="ID-62990c5a-b8fa-4be8-8add-d4d14fff40be">Where are frameworks useful? How much &ldquo;meta-&rdquo; is too much?</h2>
-<div class="outline-text-2" id="text-orga823c57">
+<div class="outline-text-2" id="text-orgfa74ab5">
 </div>
 </div>
 <div id="outline-container-ID-06b3a480-00c6-4d74-b216-6665c6817691" class="outline-2">
 <h2 id="ID-06b3a480-00c6-4d74-b216-6665c6817691">Do aesthetics matter? How much?</h2>
-<div class="outline-text-2" id="text-orgad95b3a">
+<div class="outline-text-2" id="text-org6d7ef3e">
 </div>
 </div>
-<div id="outline-container-org9f4a83b" class="outline-2">
-<h2 id="org9f4a83b">Should I be pure or applied?</h2>
+<div id="outline-container-org3c78cf1" class="outline-2">
+<h2 id="org3c78cf1">Should I be pure or applied?</h2>
 </div>
 <div id="outline-container-ID-42ab4227-dae3-4822-8b4f-8ae8fe724e5e" class="outline-2">
 <h2 id="ID-42ab4227-dae3-4822-8b4f-8ae8fe724e5e">Which other people smart/headed on the right track when it comes to things?</h2>
-<div class="outline-text-2" id="text-orgaf99766">
+<div class="outline-text-2" id="text-org7ca7bf9">
 </div>
 </div>
 <div id="outline-container-ID-2dc8f48d-103d-4d77-9a5d-55aebdb27714" class="outline-2">
 <h2 id="ID-2dc8f48d-103d-4d77-9a5d-55aebdb27714">How do I <i>effectively</i> customize my life? That is, taking the default settings that are <b>important</b> to change, and changing them.</h2>
-<div class="outline-text-2" id="text-orga665f96">
+<div class="outline-text-2" id="text-org2d56031">
 </div>
 </div>
-<div id="outline-container-org1cd1cc4" class="outline-2">
-<h2 id="org1cd1cc4">Other people&rsquo;s questions:</h2>
-<div class="outline-text-2" id="text-org1cd1cc4">
+<div id="outline-container-orgc90d0d7" class="outline-2">
+<h2 id="orgc90d0d7">Other people&rsquo;s questions:</h2>
+<div class="outline-text-2" id="text-orgc90d0d7">
 </div>
-<div id="outline-container-org93dbd50" class="outline-3">
-<h3 id="org93dbd50"><a href="https://patrickcollison.com/questions">https://patrickcollison.com/questions</a></h3>
+<div id="outline-container-orgaa93ef3" class="outline-3">
+<h3 id="orgaa93ef3"><a href="https://patrickcollison.com/questions">https://patrickcollison.com/questions</a></h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

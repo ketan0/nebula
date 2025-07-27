@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-12-16 Sat 01:34 -->
+<!-- 2025-07-26 Sat 11:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Counterfactual Generative Networks</title>
@@ -11,51 +11,67 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
 <header>
     <script src="setup-initial-theme.js"></script>
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-        <a style="color: inherit; text-decoration: none" href="/">
-            ketan agrawal
-        </a>
-        <div>
-            <input type="checkbox" id="theme-switcher">
-            <label id="theme-switcher-label" for="theme-switcher"></label>
-        </div>
-    </div>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
+        <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
+            <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
+                <label id="theme-switcher-label" for="theme-switcher"></label>
+            </li>
+        </ul>
+    </nav>
 </header>
 </div>
 <div id="content" class="content">
 <h1 class="title">Counterfactual Generative Networks
 <br />
-<span class="subtitle">Last modified on April 28, 2022</span>
+<span class="subtitle">Last tended to on April 28, 2022</span>
 </h1>
 <p>
 <a href="neural_networks_like_to_cheat.html#ID-412cda14-f385-463d-9a7e-cd9ffe87c0a2">Neural networks like to &ldquo;cheat&rdquo;</a> by using simple correlations that fail to generalize. E.g., image classifiers can learn spurious correlations with texture in the background, rather than the actual object&rsquo;s shape; a classifier might learn that &ldquo;green grass background&rdquo; =&gt; &ldquo;cow classification.&rdquo;<br />
@@ -64,16 +80,15 @@
 <p>
 This work <a href="compositionality.html#ID-b6fafba6-8e57-400d-962c-bf7cc892a41f">decomposes</a> the image generation process into three independent causal mechanisms &#x2013; shape, texture, and background. Thus, one can generate &ldquo;<a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactual</a> images&rdquo; to improve OOD robustness, e.g. by placing a cow on a swimming pool background. Related: <a href="private/20200928215821-psych_204.html#ID-8e87ac0e-1002-474e-b4e7-778d908270a6">generative models</a> <a href="causal_inference.html#ID-1f3f1a31-ff89-4c05-8c82-64888887f45e">counterfactuals</a><br />
 </p>
-
-<div id="outline-container-org81b9111" class="outline-2">
-<h2 id="org81b9111">Problem setting:</h2>
-<div class="outline-text-2" id="text-org81b9111">
+<div id="outline-container-org270a62a" class="outline-2">
+<h2 id="org270a62a">Problem setting:</h2>
+<div class="outline-text-2" id="text-org270a62a">
 <p>
 We have images \(\mathbf{x}\), and labels \(y\). In generative modeling, it&rsquo;s common to assume that each \(\mathbf{x}\) can be described by some lower-dimensional latent space \(\mathbf{z}\) (e.g. color, shape, etc.) We&rsquo;d like this latent <a href="representations.html#ID-c7ba956c-67ad-4b8e-9c7f-f18bc1b2b4ff">representation</a> to be disentangled into several separate, semenatically meaningful factors, so we can control the influence of each on the classifier&rsquo;s decision. Usually in disentangled modeling, these factors are assumed to be statistically independent&#x2013; however, in practice this is a poor assumption. One rather contrived example is found in the colored MNIST dataset:<br />
 </p>
 
 
-<div id="org5c13dd0" class="figure">
+<div id="org6106b05" class="figure">
 <p><img src="colored_mnist.png" alt="example digits in colored MNIST dataset." /><br />
 </p>
 </div>
@@ -83,9 +98,9 @@ We might want to disentangle digit shape from color; however, in the train fold,
 </p>
 </div>
 </div>
-<div id="outline-container-orga7d4f39" class="outline-2">
-<h2 id="orga7d4f39">Structural Causal Models</h2>
-<div class="outline-text-2" id="text-orga7d4f39">
+<div id="outline-container-orgbb708fa" class="outline-2">
+<h2 id="orgbb708fa">Structural Causal Models</h2>
+<div class="outline-text-2" id="text-orgbb708fa">
 <p>
 An SCM \(\mathfrak{C}\) is defined is a collection of \(d\) structural assignments<br />
 \(S_{j}:=f_{j}\left(\mathbf{P A}_{j}, U_{j}\right), \quad j=1, \ldots, d\)<br />
@@ -93,27 +108,27 @@ where each random variable \(S_{j}\) is a function of its parents \(\mathbf{P A}
 </p>
 </div>
 </div>
-<div id="outline-container-org4172937" class="outline-2">
-<h2 id="org4172937">Architecture</h2>
-<div class="outline-text-2" id="text-org4172937">
+<div id="outline-container-orgea5397a" class="outline-2">
+<h2 id="orgea5397a">Architecture</h2>
+<div class="outline-text-2" id="text-orgea5397a">
 
-<div id="org039ea59" class="figure">
+<div id="org9303af6" class="figure">
 <p><img src="cgn_architecture.png" alt="architecture diagram of the Counterfactual Generative Network (CGN.)" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org7a20bed" class="outline-2 no-display">
-<h2 id="org7a20bed">Link</h2>
-<div class="outline-text-2" id="text-org7a20bed">
+<div id="outline-container-org074e8e3" class="outline-2 no-display">
+<h2 id="org074e8e3">Link</h2>
+<div class="outline-text-2" id="text-org074e8e3">
 <p>
 <sup><a href="#citeproc_bib_item_1">[1]</a></sup><br />
 </p>
 </div>
 </div>
-<div id="outline-container-org3b617f3" class="outline-2">
-<h2 id="org3b617f3">Bibliography</h2>
-<div class="outline-text-2" id="text-org3b617f3">
+<div id="outline-container-org45bdd0b" class="outline-2">
+<h2 id="org45bdd0b">Bibliography</h2>
+<div class="outline-text-2" id="text-org45bdd0b">
 <style>.csl-left-margin{float: left; padding-right: 0em;}
  .csl-right-inline{margin: 0 0 0 1em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>
@@ -122,15 +137,13 @@ where each random variable \(S_{j}\) is a function of its parents \(\mathbf{P A}
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org277da17" class="outline-2 references">
-<h2 id="org277da17">Links to &ldquo;Counterfactual Generative Networks&rdquo;</h2>
-<div class="outline-text-2" id="text-org277da17">
+<div id="outline-container-org90f22d8" class="outline-2 references">
+<h2 id="org90f22d8">Links to &ldquo;Counterfactual Generative Networks&rdquo;</h2>
+<div class="outline-text-2" id="text-org90f22d8">
 </div>
-<div id="outline-container-orge072e4d" class="outline-3">
-<h3 id="orge072e4d"><a href="paper_notes.html#ID-d4693400-d612-4531-96cb-da0b8d37b4b0">📄 paper notes</a></h3>
-<div class="outline-text-3" id="text-orge072e4d">
+<div id="outline-container-org4695893" class="outline-3">
+<h3 id="org4695893"><a href="paper_notes.html#ID-d4693400-d612-4531-96cb-da0b8d37b4b0">📄 paper notes</a></h3>
+<div class="outline-text-3" id="text-org4695893">
 <p>
 <a href="towards_causal_representation_learning.html#ID-12dfdb1e-d4ed-476b-be04-98cae7a3deaf">Towards Causal Representation Learning</a><br />
 <a href="counterfactual_generative_networks.html#ID-22706d1f-6b5c-4c77-acc2-d8c222b395d5">Counterfactual Generative Networks</a><br />
@@ -141,13 +154,8 @@ where each random variable \(S_{j}\) is a function of its parents \(\mathbf{P A}
 </div>
 </div>
 <div id="postamble" class="status">
-<footer style="font-size: 0.75rem;">
-    <p>Made with <span class="heart">♥</span> using
-        <a href="https://orgmode.org/">org-mode</a>.
-        Source code is available
-        <a href="https://github.com/ketan0/digital-laboratory">here</a>.
-    </p>
-</footer>
+<!-- copyright Ketan agrawal - on line below-->
+<p>&copy; Ketan Agrawal, 2024. <a href="https://x.com/_ketan0">@_ketan0</a>.</p>
 <script src="popper.min.js"></script>
 <script src="tippy-bundle.umd.min.js"></script>
 <script src="tooltips.js"></script>

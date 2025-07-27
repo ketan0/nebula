@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-13 Sun 17:59 -->
+<!-- 2025-07-26 Sat 11:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>emacs as a playground</title>
@@ -11,6 +11,9 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="syntax.css" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -21,11 +24,11 @@
 <header>
     <script src="setup-initial-theme.js"></script>
     <nav style="display: flex; justify-content: space-between; align-items: center;">
-        <a href="/" style="color: inherit; text-decoration: none;">Ketan Agrawal</a>
+        <a href="/" style="color: inherit; text-decoration: none;">ketan.me</a>
         <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
-            <li style="margin-left: 1rem;"><a href="/posts.html">posts</a></li>
-            <li style="margin-left: 1rem;"><a href="/thoughts.html">{thoughts}</a></li>
-            <li style="margin-left: 1rem;"><a href="/experiments.html">experiments</a></li>
+            <li style="margin-left: 1rem;"><a href="/blog.html">blog</a></li>
+            <li style="margin-left: 1rem;"><a href="/thoughts.html">thoughts</a></li>
+            <li style="margin-left: 1rem;"><a href="/experiments.html">garden</a></li>
             <li style="margin-left: 1rem;"><input type="checkbox" id="theme-switcher">
                 <label id="theme-switcher-label" for="theme-switcher"></label>
             </li>
@@ -36,15 +39,14 @@
 <div id="content" class="content">
 <h1 class="title">emacs as a playground
 <br />
-<span class="subtitle">Last modified on October 13, 2024</span>
+<span class="subtitle">Last tended to on October 13, 2024</span>
 </h1>
 <p>
 i think emacs presents an alternative vision of an operating system. one in which &rsquo;apps&rsquo;—these siloes of functionality that are bundled together &amp; don&rsquo;t really talk to each other— are not the dominant abstraction. right now, on our desktops, we have separate apps for writing code, writing messages to people, writing essays&#x2026;.when fundamentally each of these tasks has to do with manipulating text.<br />
 </p>
-
-<div id="outline-container-org4d56b53" class="outline-2">
-<h2 id="org4d56b53">emacs provides an powerful set of primitives for editing text</h2>
-<div class="outline-text-2" id="text-org4d56b53">
+<div id="outline-container-org26a5273" class="outline-2">
+<h2 id="org26a5273">emacs provides an powerful set of primitives for editing text</h2>
+<div class="outline-text-2" id="text-org26a5273">
 <p>
 so, one reason i like emacs is that it provides an incredibly powerful set of primitives for editing text. these primitives are not just confined to the &rsquo;writing app&rsquo; or the &rsquo;coding app&rsquo; (though there is not really such a thing as an ‘app’ in emacs), but rather they are present throughout the whole system. kinda like how cmd-C and cmd-V work in every app, but generalized.<br />
 </p>
@@ -74,9 +76,9 @@ but then, perhaps even cooler, is that these primitives are like LEGO blocks, o
 </p>
 </div>
 </div>
-<div id="outline-container-orgb646f79" class="outline-2">
-<h2 id="orgb646f79">emacs is self-documenting</h2>
-<div class="outline-text-2" id="text-orgb646f79">
+<div id="outline-container-orgb4f2e54" class="outline-2">
+<h2 id="orgb4f2e54">emacs is self-documenting</h2>
+<div class="outline-text-2" id="text-orgb4f2e54">
 <p>
 similar to hit inspect in browsers, kinda &#x2013; except better<br />
 </p>
@@ -90,17 +92,17 @@ it&rsquo;s self-documenting. you can hover over anything and figure out what it 
 </p>
 </div>
 </div>
-<div id="outline-container-org8c8c5da" class="outline-2">
-<h2 id="org8c8c5da">the beauty of emacs lisp</h2>
-<div class="outline-text-2" id="text-org8c8c5da">
+<div id="outline-container-org53839e7" class="outline-2">
+<h2 id="org53839e7">the beauty of emacs lisp</h2>
+<div class="outline-text-2" id="text-org53839e7">
 <p>
 emacs lisp, the language you extend emacs with, is quite a beautiful programming language. this is another topic for an entirely separate blog post. one weird and meta experience you can have— you can write, execute, and experience the effects of a snippet of code, even on that snippet itself, all in the same file.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org31b3eac" class="outline-2">
-<h2 id="org31b3eac">limits of emacs</h2>
-<div class="outline-text-2" id="text-org31b3eac">
+<div id="outline-container-orga662b22" class="outline-2">
+<h2 id="orga662b22">limits of emacs</h2>
+<div class="outline-text-2" id="text-orga662b22">
 <p>
 As to its limitations, there are many.<br />
 </p>
@@ -119,15 +121,13 @@ so…back to the question at hand…how has emacs helped me? to be honest, i can
 </ul>
 </div>
 </div>
-
-
-<div id="outline-container-orgbbf5adc" class="outline-2 references">
-<h2 id="orgbbf5adc">Links to &ldquo;emacs as a playground&rdquo;</h2>
-<div class="outline-text-2" id="text-orgbbf5adc">
+<div id="outline-container-org7aad772" class="outline-2 references">
+<h2 id="org7aad772">Links to &ldquo;emacs as a playground&rdquo;</h2>
+<div class="outline-text-2" id="text-org7aad772">
 </div>
-<div id="outline-container-orgc2819ea" class="outline-3">
-<h3 id="orgc2819ea"><a href="posts.html#ID-729f454a-3d66-44f4-bc6e-ec8a21a26ac9">posts</a></h3>
-<div class="outline-text-3" id="text-orgc2819ea">
+<div id="outline-container-orgfe48e04" class="outline-3">
+<h3 id="orgfe48e04"><a href="posts.html#ID-729f454a-3d66-44f4-bc6e-ec8a21a26ac9">posts</a></h3>
+<div class="outline-text-3" id="text-orgfe48e04">
 <p>
 <a href="emacs_as_a_playground.html#ID-2e5f0c3e-ff4c-4e83-9e3f-758716d370b8">emacs as a playground</a><br />
 </p>
